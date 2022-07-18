@@ -10862,19 +10862,19 @@ public class Abstractos {
 
             case 2:
                 ps1 = "yo me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I " + vnb[v] + " myself";
+                ps1eng = "I " + vnb[v] + " myself ";
 
                 ps2 = "tú te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you " + vnb[v] + " yourself" ;
+                ps2eng = "you " + vnb[v] + " yourself " ;
 
                 ps3 = "él se " + vnb3[v]+ " a si mismo " ;
-                ps3eng = "he " + vn3[v]+ " himself";
+                ps3eng = "he " + vn3[v]+ " himself ";
 
                 ps3ella = "ella se " + vnb3[v]+ " a si misma ";
-                ps3she = "she " + vnb3[v] + " herself";
+                ps3she = "she " + vnb3[v] + " herself ";
 
                 ps3eso = "eso se " + vnb3[v]+ " a si mismo ";
-                ps3it = "it " + vnb3[v] + " itself";
+                ps3it = "it " + vnb3[v] + " itself ";
 
                 ps4 = "ellos se " + vn4[v] + " a si mismos ";
                 ps4eng = "they " + vnb[v] + " themselves ";
@@ -10931,19 +10931,19 @@ public class Abstractos {
 
             case 5:
                 ps1 = "no me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I don't " + vnb[v] + " myself";
+                ps1eng = "I don't " + vnb[v] + " myself ";
 
                 ps2 = "no te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you don't " + vnb[v] + " yourself" ;
+                ps2eng = "you don't " + vnb[v] + " yourself " ;
 
                 ps3 = "él no se " + vnb3[v]+ " a si mismo " ;
-                ps3eng = "he doesn't " + vnb[v] + " himself";
+                ps3eng = "he doesn't " + vnb[v] + " himself ";
 
                 ps3ella = "ella no se " + vnb3[v]+ " a si misma ";
-                ps3she = "she doesn't " + vnb[v] + " herself";
+                ps3she = "she doesn't " + vnb[v] + " herself ";
 
                 ps3eso = "eso no se " + vnb3[v]+ " a si mismo ";
-                ps3it = "it doesn't " + vnb[v] + " itself";
+                ps3it = "it doesn't " + vnb[v] + " itself ";
 
                 ps4 = "ellos no se " + vn4[v] + " a si mismos ";
                 ps4eng = "they don't " + vnb[v] + " themselves ";

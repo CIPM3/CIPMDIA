@@ -48,7 +48,7 @@ public class Nobles2 {
     //vnb verbos nobles top 100  quinta persona esp nosotros
     String vn5[] = {"reemplazamos ", "enviamos ", "olemos ", "atraemos ", "arrojamos ", "adquirimos ",
             "incorporamos ", "organizamos ", "establecemos ", "aprobamos ", "usamos ", "disfrutamos ",
-            "protegemos ", "desarrollamos ", "recordamos ", "escogemos ", "olvidamos", "aceptamos "
+            "protegemos ", "desarrollamos ", "recordamos ", "escogemos ", "olvidamos ", "aceptamos "
     };
 
     //pasados (agregado wish SV 060422)
@@ -135,7 +135,7 @@ public class Nobles2 {
             "el disco ", "el camino ", "el rol ", "el éxito ", "el departamento ", "el momento ", "el evento ", "a el estudiante ",
             "el entretenimiento ", "a el presidente ", "el cigarro ", "el contexto ", "el desempeño ", "a el conductor ", "el vuelo ",
             "a el distribuidor ", "el debate ", "el hallazgo ", "el lago ", "a el miembro ", "el mensaje ", "el teléfono ", "el concepto ",
-            "a el cliente ", "el consejo ", "el esfuerzo ", "el pago ", "el país ", "el estado ", "el corazón ", "el estudio"
+            "a el cliente ", "el consejo ", "el esfuerzo ", "el pago ", "el país ", "el estado ", "el corazón ", "el estudio "
     };
 
     // nouns nobles espa F
@@ -431,7 +431,7 @@ public class Nobles2 {
     // verbos nobles cuarta persona would
     String vn4w[] = {"reemplazarían ", "enviarían ", "olerían ", "atraerían ", "arrojarían ",
             "adquirirían ", "incorporarían ", "organizarían ", "establecerían ", "aprobarían ",
-            "usarían ", "disfrutarían ", "protegerían ", "desarrollarían ", "recordarían",
+            "usarían ", "disfrutarían ", "protegerían ", "desarrollarían ", "recordarían ",
             "escogerían ", "olvidarían ", "aceptarían "
     };
 
@@ -439,7 +439,7 @@ public class Nobles2 {
     // verbos nobles quinta persona would
     String vn5w[] = {"reemplazaríamos ", "enviaríamos ", "oleríamos ", "atraeríamos ", "arrojaríamos ",
             "adquiriríamos ", "incorporaríamos ", "organizaríamos ", "estableceríamos ", "aprobaríamos ",
-            "usaríamos ", "disfrutaríamos ", "protegeríamos ", "desarrollaríamos ", "recordaríamos",
+            "usaríamos ", "disfrutaríamos ", "protegeríamos ", "desarrollaríamos ", "recordaríamos ",
             "escogeríamos ", "olvidaríamos ", "aceptaríamos "
     };
 
@@ -451,7 +451,7 @@ public class Nobles2 {
     //vnb verbos nobles top 100  primera persona  y tercera, esp subjuntivos
     String vn1y3subj[] = {"reemplace ", "envíe ", "huela ", "atraiga ", "arroje ", "adquiera ",
             "incorpore ", "organice ", "establezca ", "apruebe ", "use ", "disfrute ", "proteja ",
-            "desarrolle ", "recuerde", "escoja ", "olvide ", "acepte "
+            "desarrolle ", "recuerde ", "escoja ", "olvide ", "acepte "
     };
 
     // verbos nobles segunda persona subjuntivo
@@ -11098,19 +11098,19 @@ public class Nobles2 {
 
             case 2:
                 ps1 = "yo me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I " + vnb[v] + " myself";
+                ps1eng = "I " + vnb[v] + " myself ";
 
                 ps2 = "tú te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you " + vnb[v] + " yourself" ;
+                ps2eng = "you " + vnb[v] + " yourself " ;
 
                 ps3 = "él se " + vn3[v] + " a si mismo " ;
-                ps3eng = "he " + vnb3[v] + " himself";
+                ps3eng = "he " + vnb3[v] + " himself ";
 
                 ps3ella = "ella se " + vn3[v]+ " a si misma ";
-                ps3she = "she " + vnb3[v] + " herself";
+                ps3she = "she " + vnb3[v] + " herself ";
 
                 ps3eso = "eso se " + vn3[v] + " a si mismo ";
-                ps3it = "it " + vnb3[v] + " itself";
+                ps3it = "it " + vnb3[v] + " itself ";
 
                 ps4 = "ellos se " + vn4[v] + " a si mismos ";
                 ps4eng = "they " + vnb[v] + " themselves ";
@@ -11167,19 +11167,19 @@ public class Nobles2 {
 
             case 5:
                 ps1 = "no me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I don't " + vnb[v] + " myself";
+                ps1eng = "I don't " + vnb[v] + " myself ";
 
                 ps2 = "no te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you don't " + vnb[v] + " yourself" ;
+                ps2eng = "you don't " + vnb[v] + " yourself " ;
 
                 ps3 = "él no se " + vn3[v] + " a si mismo " ;
-                ps3eng = "he doesn't " + vnb[v] + " himself";
+                ps3eng = "he doesn't " + vnb[v] + " himself ";
 
                 ps3ella = "ella no se " + vn3[v]+ " a si misma ";
-                ps3she = "she doesn't " + vnb[v] + " herself";
+                ps3she = "she doesn't " + vnb[v] + " herself ";
 
                 ps3eso = "eso no se " + vn3[v] + " a si mismo ";
-                ps3it = "it doesn't " + vnb[v] + " itself";
+                ps3it = "it doesn't " + vnb[v] + " itself ";
 
                 ps4 = "ellos no se " + vn4[v] + " a si mismos ";
                 ps4eng = "they don't " + vnb[v] + " themselves ";

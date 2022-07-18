@@ -216,7 +216,7 @@ public class People2 {
     // objetos persona
     String nnobles[] = {"the audience ", "the marriage ", "the teacher ", "the student ",
             "the population ", "the president ", "the driver ", "the dealer ", "the member ",
-            "the customer", "the woman ", "the grandmother ", "the user ", "the nation ", "the city ",
+            "the customer ", "the woman ", "the grandmother ", "the user ", "the nation ", "the city ",
             "the county ", "the estate ", "the foundation "
     };
 
@@ -227,7 +227,7 @@ public class People2 {
     };
 
     String nnoblesM[] = {"the marriage ", "the teacher ", "the student ", "the president ", "the driver ",
-            "the dealer ", "the member ", "the customer", "the user ", "the county ", "the estate "
+            "the dealer ", "the member ", "the customer ", "the user ", "the county ", "the estate "
     };
 
     String nnoblesF[] = {"the audience ", "the population ", "the woman ", "the grandmother ", "the nation ",
@@ -10941,19 +10941,19 @@ public class People2 {
 
             case 2:
                 ps1 = "yo me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I " + vnb[v] + " myself";
+                ps1eng = "I " + vnb[v] + " myself ";
 
                 ps2 = "tú te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you " + vnb[v] + " yourself" ;
+                ps2eng = "you " + vnb[v] + " yourself " ;
 
                 ps3 = "él se " + vnb3[v] + " a si mismo " ;
-                ps3eng = "he " + vn3[v] + " himself";
+                ps3eng = "he " + vn3[v] + " himself ";
 
                 ps3ella = "ella se " + vnb3[v]+ " a si misma ";
-                ps3she = "she " + vn3[v] + " herself";
+                ps3she = "she " + vn3[v] + " herself ";
 
                 ps3eso = "eso se " + vnb3[v] + " a si mismo ";
-                ps3it = "it " + vn3[v] + " itself";
+                ps3it = "it " + vn3[v] + " itself ";
 
                 ps4 = "ellos se " + vn4[v] + " a si mismos ";
                 ps4eng = "they " + vnb[v] + " themselves ";
@@ -11010,19 +11010,19 @@ public class People2 {
 
             case 5:
                 ps1 = "no me " + vn1[v] + " a mi mismo " ;
-                ps1eng = "I don't " + vnb[v] + " myself";
+                ps1eng = "I don't " + vnb[v] + " myself ";
 
                 ps2 = "no te " + vn2[v] +" a ti mismo ";
-                ps2eng = "you don't " + vnb[v] + " yourself" ;
+                ps2eng = "you don't " + vnb[v] + " yourself " ;
 
                 ps3 = "él no se " + vnb3[v] + " a si mismo " ;
-                ps3eng = "he doesn't " + vn3[v] + " himself";
+                ps3eng = "he doesn't " + vn3[v] + " himself ";
 
                 ps3ella = "ella no se " + vnb3[v]+ " a si misma ";
-                ps3she = "she doesn't " + vn3[v] + " herself";
+                ps3she = "she doesn't " + vn3[v] + " herself ";
 
                 ps3eso = "eso no se " + vnb3[v] + " a si mismo ";
-                ps3it = "it doesn't " + vn3[v] + " itself";
+                ps3it = "it doesn't " + vn3[v] + " itself ";
 
                 ps4 = "ellos no se " + vn4[v] + " a si mismos ";
                 ps4eng = "they don't " + vnb[v] + " themselves ";
