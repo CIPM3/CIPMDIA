@@ -32587,7 +32587,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
 
@@ -32628,7 +32628,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
                         break;
@@ -32668,7 +32668,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
                         break;
@@ -32707,7 +32707,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
                         break;
@@ -32746,7 +32746,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp3eso;
                         gene = s.sp3it;
                         break;
@@ -32784,7 +32784,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
@@ -32822,7 +32822,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassSimp1();
+                        s.GenPastSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
@@ -32868,7 +32868,7 @@ public class Generator3 {
                         break;
                     case 3:
                         Special3 s = new Special3();  // el objeto que hace la accion
-                        s.GenPassCont1();  //esta es la accion
+                        s.GenPastCont1();  //esta es la accion
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
@@ -32908,7 +32908,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();  // el objeto que hace la accion
-                        s.GenPassCont1();  //esta es la accion
+                        s.GenPastCont1();  //esta es la accion
                         gens = s.sp2;
                         gene = s.eng2;
 
@@ -32948,7 +32948,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassCont1();
+                        s.GenPastCont1();
                         gens = s.sp3;
                         gene = s.eng3;
 
@@ -32988,7 +32988,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassCont1();
+                        s.GenPastCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
 
@@ -33028,7 +33028,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassCont1();
+                        s.GenPastCont1();
                         gens = s.sp3eso;
                         gene = s.sp3it;
                         break;
@@ -33066,7 +33066,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassCont1();
+                        s.GenPastCont1();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
@@ -33104,7 +33104,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassCont1();
+                        s.GenPastCont1();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
@@ -33150,7 +33150,7 @@ public class Generator3 {
                         break;
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
 
@@ -33191,7 +33191,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
 
@@ -33231,7 +33231,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
 
@@ -33271,7 +33271,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
 
@@ -33311,7 +33311,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp3eso;
                         gene = s.sp3it;
 
@@ -33350,7 +33350,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
 
@@ -33389,7 +33389,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerf1();
+                        s.GenPastPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
 
@@ -33436,7 +33436,7 @@ public class Generator3 {
                         break;
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
 
@@ -33477,7 +33477,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
 
@@ -33519,7 +33519,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
 
@@ -33559,7 +33559,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
 
@@ -33599,7 +33599,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp3eso;
                         gene = s.sp3it;
 
@@ -33638,7 +33638,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
 
@@ -33677,7 +33677,7 @@ public class Generator3 {
 
                     case 3:
                         Special3 s = new Special3();
-                        s.GenPassPerfCont1();
+                        s.GenPastPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
 
