@@ -3609,30 +3609,22 @@ public class estructura_nuevo extends AppCompatActivity {
         r = 1;
 
         switch (selection) {
-            //debugeado
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        gen.GenPresSimp2();
-                        answerinp.setText("");
-                        sptx.setText(gen.gens);
-                        txteng.setText(gen.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -3640,36 +3632,32 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPresSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
-
                             }
                         });
                         break;
 
                     case "100 a 200":
-                        Generator2 gen1 = new Generator2();
-                        gen1.GenPresSimp2();
-                        answerinp.setText("");
-                        sptx.setText(gen1.gens);
-                        txteng.setText(gen1.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -3677,16 +3665,52 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator2 gen1 = new Generator2();
+                                    gen1.GenPresSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
+                            }
+                        });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
                             }
                         });
                         break;
                 }
                 break;
-            //debugeado
             case "Present Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -3754,6 +3778,39 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
             case "Present Perfect":
@@ -3794,6 +3851,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -3828,6 +3886,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -3907,8 +3998,45 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
+                                }
+
+                            }
+
+                        });
+                        break;
                 }
                 break;
+
             case "Past Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -3946,7 +4074,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -3984,11 +4111,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Past Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4064,10 +4222,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -4143,9 +4332,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Past Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4219,6 +4440,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -4300,10 +4554,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4379,10 +4664,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -4458,10 +4774,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4537,8 +4884,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Would Simple":
@@ -4616,10 +4995,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Would Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4657,7 +5067,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -4695,11 +5104,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Would Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -4775,9 +5215,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Would Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -4853,8 +5325,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Could Simple":
@@ -4932,10 +5436,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5011,10 +5546,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -5090,8 +5656,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
             case "Could Perfect Continuous":
                 switch (selection2) {
@@ -5168,8 +5766,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Might Simple":
@@ -5247,10 +5877,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5288,7 +5949,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -5326,11 +5986,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Might Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -5406,10 +6097,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5485,8 +6207,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Should Simple":
@@ -5564,10 +6318,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Should Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5643,9 +6428,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Should Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -5683,7 +6500,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -5721,11 +6537,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Should Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5801,9 +6648,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerfCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
+
             case "Can Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -5877,6 +6757,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -5956,8 +6869,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
+
             case "Must Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -5996,6 +6943,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -6030,6 +6978,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -6109,6 +7090,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
 
@@ -6148,6 +7162,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -6182,15 +7197,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "En Desarrollo", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWantYouTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "For To":
                 switch (selection2) {
                     case "0 a 100":
@@ -6227,6 +7273,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -6261,15 +7308,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenForTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
 
             case "Supposed To Present":
                 switch (selection2) {
@@ -6307,18 +7385,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedToPresente2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Supposed To Past":
                 switch (selection2) {
                     case "0 a 100":
@@ -6355,12 +7465,45 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedTopasado2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -6403,18 +7546,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastSimple2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -6451,18 +7627,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Would":
                 switch (selection2) {
                     case "0 a 100":
@@ -6499,12 +7707,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishWould2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -6547,18 +7789,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenUsedTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Be Used To":
                 switch (selection2) {
                     case "0 a 100":
@@ -6595,12 +7869,45 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenBeUsedTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -6618,30 +7925,22 @@ public class estructura_nuevo extends AppCompatActivity {
         mostrar_layout();
         r = 2;
         switch (selection) {
-            //debugeado
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        gen.GenPresSimp3();
-                        answerinp.setText("");
-                        sptx.setText(gen.gens);
-                        txteng.setText(gen.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -6649,36 +7948,32 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPresSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
-
                             }
                         });
                         break;
 
                     case "100 a 200":
-                        Generator2 gen1 = new Generator2();
-                        gen1.GenPresSimp3();
-                        answerinp.setText("");
-                        sptx.setText(gen1.gens);
-                        txteng.setText(gen1.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -6686,16 +7981,52 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator2 gen1 = new Generator2();
+                                    gen1.GenPresSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
+                            }
+                        });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
                             }
                         });
                         break;
                 }
                 break;
-            //debugeado
             case "Present Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -6763,6 +8094,39 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
             case "Present Perfect":
@@ -6803,6 +8167,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -6829,6 +8194,42 @@ public class estructura_nuevo extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
 
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
+                                }
+
+                            }
+
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -6916,8 +8317,45 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
+                                }
+
+                            }
+
+                        });
+                        break;
                 }
                 break;
+
             case "Past Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -6955,7 +8393,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -6993,11 +8430,60 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+
+                                    if(gen1.gens == null){
+                                        Generator3 gennb = new Generator3();
+                                        gennb.GenPassSimp3();
+                                        sptx.setText(gennb.gens);
+                                        txteng.setText(gennb.gene);
+                                        answerinp.setText("");
+                                        if(gennb.gens == null){
+                                            gen1.GenPassSimp3();
+                                            sptx.setText(gen1.gens);
+                                            txteng.setText(gen1.gene);
+                                            answerinp.setText("");
+                                        }
+                                    }else{
+                                        sptx.setText(gen1.gens);
+                                        txteng.setText(gen1.gene);
+                                        answerinp.setText("");
+                                    }
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Past Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7073,10 +8559,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -7152,9 +8669,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Past Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7230,8 +8779,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Future Simple":
@@ -7309,10 +8890,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7388,10 +9000,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -7467,10 +9110,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7546,8 +9220,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Would Simple":
@@ -7625,10 +9331,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Would Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7666,7 +9403,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -7704,11 +9440,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Would Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -7784,9 +9551,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Would Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -7862,8 +9661,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Could Simple":
@@ -7941,10 +9772,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -8020,10 +9882,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -8099,8 +9992,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
             case "Could Perfect Continuous":
                 switch (selection2) {
@@ -8177,8 +10102,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Might Simple":
@@ -8256,10 +10213,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -8297,7 +10285,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -8335,11 +10322,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Might Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -8415,10 +10433,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -8494,8 +10543,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Should Simple":
@@ -8573,10 +10654,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Should Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -8652,9 +10764,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Should Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -8692,7 +10836,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -8730,11 +10873,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Should Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -8810,9 +10984,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerfCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
+
             case "Can Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -8886,6 +11093,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -8965,8 +11205,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
+
             case "Must Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -9005,6 +11279,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -9039,6 +11314,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustSimp3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -9118,6 +11426,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustCont3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
 
@@ -9157,6 +11498,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -9191,15 +11533,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "En Desarrollo", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWantYouTo1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "For To":
                 switch (selection2) {
                     case "0 a 100":
@@ -9236,6 +11609,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -9270,15 +11644,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenForTo1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
 
             case "Supposed To Present":
                 switch (selection2) {
@@ -9316,18 +11721,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedToPresente3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Supposed To Past":
                 switch (selection2) {
                     case "0 a 100":
@@ -9364,12 +11801,45 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedTopasado3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -9412,18 +11882,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastSimple3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -9460,18 +11963,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastPerf3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Would":
                 switch (selection2) {
                     case "0 a 100":
@@ -9508,12 +12044,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishWould3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -9556,18 +12126,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenUsedTo3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Be Used To":
                 switch (selection2) {
                     case "0 a 100":
@@ -9604,18 +12207,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenBeUsedTo3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
 
         }
     }
@@ -9627,30 +12263,22 @@ public class estructura_nuevo extends AppCompatActivity {
         mostrar_layout();
         r = 3;
         switch (selection) {
-            //debugeado
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        gen.GenPresSimp4();
-                        answerinp.setText("");
-                        sptx.setText(gen.gens);
-                        txteng.setText(gen.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -9658,36 +12286,32 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPresSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
-
                             }
                         });
                         break;
 
                     case "100 a 200":
-                        Generator2 gen1 = new Generator2();
-                        gen1.GenPresSimp4();
-                        answerinp.setText("");
-                        sptx.setText(gen1.gens);
-                        txteng.setText(gen1.gene);
-
-                        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                                         @Override
                                         public void onStart(String s) {
                                         }
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-
                                             // iniciarentradavoz();
                                         }
 
@@ -9695,16 +12319,52 @@ public class estructura_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    Generator2 gen1 = new Generator2();
+                                    gen1.GenPresSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
+                            }
+                        });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
                             }
                         });
                         break;
                 }
                 break;
-            //debugeado
             case "Present Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -9772,6 +12432,39 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
             case "Present Perfect":
@@ -9812,6 +12505,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -9838,6 +12532,42 @@ public class estructura_nuevo extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
 
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
+                                }
+
+                            }
+
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -9925,8 +12655,45 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPresPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
+                                }
+
+                            }
+
+                        });
+                        break;
                 }
                 break;
+
             case "Past Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -9964,7 +12731,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -10002,11 +12768,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener()  {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Past Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10082,10 +12879,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -10161,9 +12989,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Past Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10239,8 +13099,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenPassPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Future Simple":
@@ -10318,10 +13210,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10397,10 +13320,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -10476,10 +13430,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Future Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10555,8 +13540,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenFutPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Would Simple":
@@ -10634,10 +13651,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Would Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10675,7 +13723,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -10713,11 +13760,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Would Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -10793,9 +13871,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Would Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -10871,8 +13981,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWouldPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Could Simple":
@@ -10950,10 +14092,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -11029,10 +14202,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Could Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -11108,8 +14312,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
             case "Could Perfect Continuous":
                 switch (selection2) {
@@ -11186,8 +14422,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCouldPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Might Simple":
@@ -11265,10 +14533,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -11306,7 +14605,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -11344,11 +14642,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Might Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -11424,10 +14753,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Might Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -11503,8 +14863,40 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMightPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
 
             case "Should Simple":
@@ -11582,10 +14974,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
-
                 break;
-
             case "Should Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -11661,9 +15084,41 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
-
             case "Should Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -11701,7 +15156,6 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
-
                         break;
 
                     case "100 a 200":
@@ -11739,11 +15193,42 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
                         break;
                 }
                 break;
-
             case "Should Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -11819,9 +15304,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
-                }
 
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenShouldPerfCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                }
                 break;
+
             case "Can Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -11895,6 +15413,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -11974,8 +15525,42 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenCanCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
+
             case "Must Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -12014,6 +15599,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -12048,6 +15634,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                             }
 
+                        });
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustSimp4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
                         });
                         break;
                 }
@@ -12127,6 +15746,39 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         });
                         break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenMustCont4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
                 }
                 break;
 
@@ -12166,6 +15818,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -12192,7 +15845,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWantYouTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
@@ -12200,15 +15852,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "En Desarrollo", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWantYouTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "For To":
                 switch (selection2) {
                     case "0 a 100":
@@ -12245,6 +15928,7 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
@@ -12279,15 +15963,46 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenForTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
 
             case "Supposed To Present":
                 switch (selection2) {
@@ -12317,7 +16032,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenSupposedToPresente4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
@@ -12325,18 +16039,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedToPresente4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Supposed To Past":
                 switch (selection2) {
                     case "0 a 100":
@@ -12373,12 +16119,45 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenSupposedTopasado4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -12413,6 +16192,44 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWishPastSimple4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastSimple4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -12421,18 +16238,12 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
@@ -12469,18 +16280,50 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishPastPerf4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Wish Would":
                 switch (selection2) {
                     case "0 a 100":
@@ -12517,12 +16360,45 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenWishWould4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
@@ -12565,18 +16441,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenUsedTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
             case "Be Used To":
                 switch (selection2) {
                     case "0 a 100":
@@ -12613,18 +16522,51 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case "100 a 200":
                         Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
                         break;
+
                     case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator3 gen1 = new Generator3();
+                                    gen1.GenBeUsedTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
+
                     default:
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 break;
-
 
         }
     }

@@ -9745,7 +9745,7 @@ public class Generator3 {
     }
 
     //supposed to dif 2
-    public void supposedtopresente2() {
+    public void GenSupposedToPresente2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
         String temp = pronombres[rand];
@@ -9942,7 +9942,7 @@ public class Generator3 {
         }
     } //DBG SV 050422
 
-    public void supposedtopasado2() {
+    public void GenSupposedTopasado2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
         String temp = pronombres[rand];
