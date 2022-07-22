@@ -85,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intento = new Intent(this, Culture.class);
         startActivity(intento);
     }
-    public void Test(View vista) {
+   /* public void Test(View vista) {
         Intent intento = new Intent(this, MainTesting.class);
         startActivity(intento);
     }
-
+*/
     public void ConInt(View vista) {
         Intent intento = new Intent(this, rachel.class);
         startActivity(intento);
