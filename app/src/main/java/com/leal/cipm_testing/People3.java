@@ -1958,14 +1958,25 @@ public class People3 {
     //adverbios de frequencia o manera, también las frases
     //preposicionales , incluso tal vez para dif 4
 //these should go right after the subject
-    String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
-            "generalmente ",
-            "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
-            "regularmente ", "regularmente ", "usualmente "
+    String advfrequ[] = {
+            "siempre ", "constantemente ", "frecuentemente ",
+            "generalmente ", "normalmente ", "ocasionalmente ",
+            "seguido ", "raramente ", "regularmente ",
+            "usualmente ", "felizmente ", "temprano ",
+            "tarde ", "diariamente ", "perfectamente ",
+            "fácilmente ", "cuidadosamente ", "abiertamente ",
+            "finalmente ", "peligrosamente ", "desesperadamente ",
+            "ocasionalmente ", "seguido ", "calmadamente "
     };
-    String frequadv[] = {"always ", "constantly ", "frequently ", "generally ",
-            "normally ", "occasionally ", "often ", "rarely ",
-            "regularly ", "regularly ", "usually "
+    String frequadv[] = {
+            "always ", "constantly ", "frequently ",
+            "generally ", "normally ", "occasionally ",
+            "often ", "rarely ", "regularly ",
+            "usually ", "happily ", "early ",
+            "late ", "daily ", "perfectly ",
+            "easily ", "carefully ", "openly ",
+            "finally ", "dangerouslly ", "desperately ",
+            "occasionally ", "often ", "calmly "
     };
     String ps1eng2;
     String ps2eng2;

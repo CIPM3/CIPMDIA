@@ -4,43 +4,45 @@ public class Nobles3 {
 
 
     //vnb verbos nobles top 100
-    String vnb[] = {"have ", "use ","change ","show ","check ","guard ",
+    String vnb[] = {
+            "have ", "use ","change ","show ","check ",
             "pick ","hold ","stop "
     };
 
 
     // verbos nobles base spanish
-    String vnbs[] = {"tener", "usar", "cambiar", "mostrar", "verificar", "proteger",
+    String vnbs[] = {
+            "tener", "usar", "cambiar", "mostrar", "verificar",
             "elegir", "mantener", "parar"
     };
 
     //vnb verbos nobles top 100  tercera persona inglés
     String vnb3[] = {
-            "has ","uses ","changes ","shows ","checks ","guards ",
+            "has ","uses ","changes ","shows ","checks ",
             "picks ","holds ","stops "
     };
 
     //vnb verbos nobles top 100  primera persona esp
     String vn1[] = {
-            "tengo ","uso ","cambio ","muestro ","controlo ","protejo ",
+            "tengo ","uso ","cambio ","muestro ","controlo ",
             "elijo ","sostengo ","detengo "
     };
 
     //vnb verbos nobles top 100  segunda persona esp
     String vn2[] = {
-            "tienes ","usas ","cambias ","muestras ","controlas ","proteges ",
+            "tienes ","usas ","cambias ","muestras ","controlas ",
             "elijes ","sostienes ","detienes "
     };
 
     //vnb verbos nobles top 100  tercera persona esp
     String vn3[] = {
-            "tiene ","usa ","cambia ","muestra ","controla ","protege ",
+            "tiene ","usa ","cambia ","muestra ","controla ",
             "elije ","sostiene ","detiene "
     };
 
     //vnb verbos nobles top 100  cuarta persona esp ellos
     String vn4[] = {
-            "tienen ","usan ","cambian ","muestran ","controlan ","protegen ",
+            "tienen ","usan ","cambian ","muestran ","controlan ",
             "elijen ","sostienen ","detienen "
     };
 
@@ -48,29 +50,29 @@ public class Nobles3 {
     //vnb verbos nobles top 100  quinta persona esp nosotros
     String vn5[] = {
             "tenemos ","usamos ","cambiamos ","mostramos ","controlamos ",
-            "protegemos ","elejimos ","sostenemos ","detenemos "
+            "elejimos ","sostenemos ","detenemos "
     };
 
     //pasados (agregado wish SV 060422)
     String ps1wish[] = {
             "tuviera ","usara ","cambiara ","mostrara ","controlara ",
-            "protegiera ","elijiera ","sostuviera ","detuviera "
+            "elijiera ","sostuviera ","detuviera "
     };
     String ps2wish[] = {
             "tuvieras ","usaras ","cambiaras ","mostraras ","controlaras ",
-            "protegieras ","elijieras ","sostuvieras ","detuvieras "
+            "elijieras ","sostuvieras ","detuvieras "
     };
     String ps3wish[] = {
             "tuviera ","usara ","cambiara ","mostrara ","controlara ",
-            "protegiera ","elijiera ","sostuviera ","detuviera "
+            "elijiera ","sostuviera ","detuviera "
     };
     String ps4wish[] = {
             "tuvieran ","usaran ","cambiaran ","mostraran ","controlaran ",
-            "protegieran ","elijieran ","sostivieran ","detuvieran "
+            "elijieran ","sostivieran ","detuvieran "
     };
     String ps5wish[] = {
             "tuvieramos ","usuaramos ","cambiaramos ","mostraramos ",
-            "controlaramos ","protegieramos ","elijieramos ",
+            "controlaramos ","elijieramos ",
             "sostuvieramos ","detuvieramos "
     };
 
@@ -197,93 +199,93 @@ public class Nobles3 {
     //vnb verbos nobles top 100 in past
     String vnbp[] = {
             "had ","used ","changed ","showed ","checked ",
-            "guarded ", "picked ","holded ","stopped "
+            "picked ","holded ","stopped "
     };
 
     String ps1pre[]={
             "tuve ","use ","cambie ","mostre ","verifique ",
-            "protegi ","elegi ","retuve ","detuve "
+            "elegi ","retuve ","detuve "
     };
 
     String ps1imp[]={
             "tenía ","usaba ","cambiaba ","mostraba ","verificaba ",
-            "protegia ","elegia ","retenia ","detenia "
+            "elegia ","retenia ","detenia "
     };
 
     String ps2pre[]={
             "tuviste ","usaste ","cambiaste ","mostraste ","verificaste ",
-            "protegiste ","elegiste ","retuviste ","detuviste "
+            "elegiste ","retuviste ","detuviste "
     };
 
     String ps2imp[]={
             "tenias ","usabas ","cambiabas ","mostrabas ","verificabas ",
-            "protegias ","elegias ","retenias ","detenias "
+            "elegias ","retenias ","detenias "
     };
 
     String ps3p[]={
             "tuvo ","uso ","cambio ","mostro ","verifico ",
-            "protegio ","eligio ","retuvo ","detuvo "
+            "eligio ","retuvo ","detuvo "
     };
 
     String ps3imp[]={
             "tenia ","usaba ","cambiaba ","mostraba ","verificaba ",
-            "protegia ","elegia ","retenia ","detenia "
+            "elegia ","retenia ","detenia "
     };
 
     String vn4p[]={
             "tuvieron ","usaron ","cambiaron ","mostraron ","verificaron ",
-            "protegieron ","eligieron ","retuvieron ","detuvieron "
+            "eligieron ","retuvieron ","detuvieron "
     };
 
     String vn4imp[]={
             "tenian ","usaban ","cambiaban ","mostraban ","verificaban ",
-            "protegian ","elegian ","retenian ","detenian "
+            "elegian ","retenian ","detenian "
     };
 
     String vn5p[]={
             "tuvimos ","usamos ","cambiamos ","mostramos ","verificamos ",
-            "protegimos ","elegimos ","retuvimos ","detuvimos "
+            "elegimos ","retuvimos ","detuvimos "
     };
 
     String vn5imp[]={
             "teniamos ","usabamos ","cambiabamos ","mostrabamos ",
-            "verificabamos ","protegiamos ","elegiamos ","reteniamos ",
+            "verificabamos ","elegiamos ","reteniamos ",
             "deteniamos "
     };
 
     String vpeng[]={
-            "had ","used ","changed ","shown ","checked ","guarded ",
+            "had ","used ","changed ","shown ","checked ",
             "chosen ","held ","stopped "
     };
 
     String vpengF[]={
-            "had ","used ","changed ","shown ","checked ","guarded ",
+            "had ","used ","changed ","shown ","checked ",
             "chosen ","held ","stopped "
     };
 
     String vpsp[]={
             "tenido ", "usado ", "cambiado ", "mostrado ", "revisado ",
-            "protegido ", "elegido ", "retenido ", "detenido "
+            "elegido ", "retenido ", "detenido "
     };
 
     String vpspM[]={
             "tenido ", "usado ", "cambiado ", "mostrado ", "revisado ",
-            "protegido ", "elegido ", "retenido ", "detenido "
+            "elegido ", "retenido ", "detenido "
     };
 
     String vpspF[]={
             "tenida ", "usada ", "cambiada ", "mostrada ", "revisada ",
-            "protegida ", "elegida ", "retenida ", "detenida "
+            "elegida ", "retenida ", "detenida "
     };
 
     String vnbc[]={
             "having ","using ","changing ","showing ","checking ",
-            "guarding ","chosing ","holding ","stoping "
+            "chosing ","holding ","stoping "
     };
 
     String vnbcs[]={
             "teniendo ","usando ","cambiando ","mostrando ",
-            "verificando ","protegiendo ","eligiendo ","reteniendo ",
+            "verificando ","eligiendo ","reteniendo ",
             "deteniendo "
     };
 
@@ -291,27 +293,27 @@ public class Nobles3 {
     // verbos nobles primera persona futuro
     String vn1f[]={
             "tendré ","usaré ","cambiaré ","mostraré ","verificaré ",
-            "protegeré ","eligiré ","retendré ","detendré "
+            "eligiré ","retendré ","detendré "
     };
 
     String vn2f[]={
             "tendrás ","usarás ","cambiarás ","mostrarás ","verificarás ",
-            "protegerás ","eligirás ","retendrás ","detendrás "
+            "eligirás ","retendrás ","detendrás "
     };
 
     String vn3f[]={
             "tendrá ","usará ","cambiará ","mostrará ","verificará ",
-            "protegerá ","eligirá ","retendrá ","detendrá "
+            "eligirá ","retendrá ","detendrá "
     };
 
     String vn4f[]={
             "tendrán ","usarán ","cambiarán ","mostrarán ","verificarán ",
-            "protegerán ","eligirán ","retendrán ","detendrán "
+            "eligirán ","retendrán ","detendrán "
     };
 
     String vn5f[]={
             "tendremos ","usaremos ","cambiaremos ","mostraremos ",
-            "verificaremos ","protegeremos ","elegiremos ",
+            "verificaremos ","elegiremos ",
             "retendremos ","detendremos "
     };
 
@@ -368,22 +370,24 @@ public class Nobles3 {
             "elijamos ","retengamos ","detengamos "
     };
 
-    String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
-            "generalmente ",
-            "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
-            "regularmente ",
-            "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
-            "perfectamente ", "facilmente ", "cuidadosamente ", "abiertamente ",
-            "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
-            "seguido ", "calmadamente "
+    String advfrequ[] = {
+            "siempre ", "constantemente ", "frecuentemente ",
+            "generalmente ", "normalmente ", "ocasionalmente ",
+            "seguido ", "raramente ", "regularmente ",
+            "usualmente ", "felizmente ", "temprano ",
+            "tarde ", "diariamente ", "perfectamente ",
+            "fácilmente ", "cuidadosamente ", "abiertamente ",
+            "finalmente ", "peligrosamente ", "desesperadamente ",
+            "ocasionalmente ", "seguido ", "calmadamente "
     };
     String frequadv[] = {
-            "always ", "constantly ", "frequently ", "generally ",
-            "normally ", "occasionally ", "often ", "rarely ", "regularly ",
-            "regularly ",
-            "usually ", "happily ", "early ", "late ", "daily ",
-            "perfectly ", "easily ", "carefully ",
-            "openly ", "finally ", "dangerouslly ", "desperately ",
+            "always ", "constantly ", "frequently ",
+            "generally ", "normally ", "occasionally ",
+            "often ", "rarely ", "regularly ",
+            "usually ", "happily ", "early ",
+            "late ", "daily ", "perfectly ",
+            "easily ", "carefully ", "openly ",
+            "finally ", "dangerouslly ", "desperately ",
             "occasionally ", "often ", "calmly "
     };
 
@@ -1683,25 +1687,25 @@ public class Nobles3 {
                 ps5eng = "we " + "might " + vnb[v] + nnobles[n];
                 break;
             case 1:
-                ps1 = "yo no " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
+                ps1 = "yo " + "quizá no " + vn1y3subj[v] + nnoblesesp[n];
                 ps1eng = "I " + "might not " + vnb[v] + nnobles[n];
 
-                ps2 = "tú no " + "quizá " + vn2subj[v] + nnoblesesp[n];
+                ps2 = "tú " + "quizá no " + vn2subj[v] + nnoblesesp[n];
                 ps2eng = "you " + "might not " + vnb[v] + nnobles[n];
 
-                ps3 = "él no " + "quizá" + vn1y3subj[v] + nnoblesesp[n];
+                ps3 = "él " + "quizá no " + vn1y3subj[v] + nnoblesesp[n];
                 ps3eng = "he " + "might not " + vnb[v] + nnobles[n];
 
-                ps3ella = "ella no " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
+                ps3ella = "ella " + "quizá no " + vn1y3subj[v] + nnoblesesp[n];
                 ps3she = "she " + "might not " + vnb[v] + nnobles[n];
 
-                ps3eso = "eso no " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
+                ps3eso = "eso " + "quizá no " + vn1y3subj[v] + nnoblesesp[n];
                 ps3it = "it " + "might not " + vnb[v] + nnobles[n];
 
-                ps4 = "ellos no " + "quizá " + vn4subj[v] + nnoblesesp[n];
+                ps4 = "ellos " + "quizá no " + vn4subj[v] + nnoblesesp[n];
                 ps4eng = "they " + "might not " + vnb[v] + nnobles[n];
 
-                ps5 = "nosotros no " + "quizá " + vn5subj[v] + nnoblesesp[n];
+                ps5 = "nosotros " + "quizá no " + vn5subj[v] + nnoblesesp[n];
                 ps5eng = "we " + "might not " + vnb[v] + nnobles[n];
                 break;
         }
