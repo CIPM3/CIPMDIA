@@ -15,19 +15,19 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
-            android:name=".TutorialGeneral"
+            android:name=".StructureResults"
             android:exported="false" />
         <activity
             android:name=".MainTesting"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialGeneral"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".StoreActivity"
-            android:exported="false" />
-        <activity
-            android:name=".StructureResults"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -96,16 +96,13 @@
             android:name=".vocabulary"
             android:exported="false" />
 
-        <service android:name=".PushNotificationService" android:exported="false">
-             <intent-filter>
-                 <action android:name="com.google.firebase.MESSAGING_EVENT">
-
-                 </action>
-
-             </intent-filter>
-
-         </service>
-
+        <service
+            android:name=".PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
