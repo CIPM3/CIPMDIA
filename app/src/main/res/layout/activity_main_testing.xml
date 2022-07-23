@@ -25,21 +25,6 @@
             android:text="Start" />
 
         <Button
-            android:id="@+id/submitbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="submitbtn"
-            android:text="submit" />
-
-        <Button
-            android:id="@+id/idkbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="IDK" />
-
-        <Button
             android:id="@+id/sendinfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

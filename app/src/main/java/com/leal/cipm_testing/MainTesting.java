@@ -116,6 +116,11 @@ public class MainTesting extends AppCompatActivity {
     }
     public void StartComplete(){
         // number=whatever we get from database
+        if(!texteng.getText().toString().trim().equals("TextView")){
+            submitbtn();
+
+        }
+
         switch (number){
             case 0:
                 answerinput.setText("");
@@ -219,7 +224,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
 
-
     }
     public void startAuto(){
         // number=whatever we get from database
@@ -227,7 +231,8 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    public void submitbtn(View vista){
+
+    public void submitbtn(){
         int cpp=0;
         int cnn=0;
         inputxt=answerinput.getText().toString().trim();
@@ -266,7 +271,11 @@ public class MainTesting extends AppCompatActivity {
 
     }
     private void TurnTrue(int number) {
-
+        // if number goes over the amount of structures we have, we return it to 0
+        if(number>100){
+            Toast.makeText(this,"esas son todas las estructuras", Toast.LENGTH_SHORT);
+            number=0;
+        }
         switch (number){
             case 0:
                 ps=true;
