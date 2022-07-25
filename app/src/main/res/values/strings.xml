@@ -160,6 +160,7 @@
     <string-array name="rangoPremium">
         <item>0 a 100</item>
         <item>100 a 200</item>
+        <item>200 a 300</item>
 
     </string-array>
 

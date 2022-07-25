@@ -663,6 +663,9 @@ public class estructura_nuevo extends AppCompatActivity {
         r = 0;
 
         switch (selection){
+            case "Tutorial":
+                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
+                break;
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -4969,6 +4972,9 @@ public class estructura_nuevo extends AppCompatActivity {
         r = 1;
 
         switch (selection) {
+            case "Tutorial":
+                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
+                break;
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -9285,6 +9291,9 @@ public class estructura_nuevo extends AppCompatActivity {
         mostrar_layout();
         r = 2;
         switch (selection) {
+            case "Tutorial":
+                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
+                break;
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -13623,6 +13632,9 @@ public class estructura_nuevo extends AppCompatActivity {
         mostrar_layout();
         r = 3;
         switch (selection) {
+            case "Tutorial":
+                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
+                break;
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":

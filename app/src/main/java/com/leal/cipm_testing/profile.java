@@ -28,4 +28,10 @@ public class profile extends AppCompatActivity {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);
     }
+
+    public void change(View v){
+        Intent intent= new Intent(this,StructureResults.class);
+        startActivity(intent);
+
+    }
 }

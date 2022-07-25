@@ -38,7 +38,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
-    boolean ps,pc,pp,ppc,pas,pac,pap,papc,fs,fc,fp,fpc,ws,wc,wp,wpc,cs,cc,ccp,cpc,ss,sc,sp,spc,mis,mic,mip,mipc
+    boolean ps,pc,pp,ppc, pas,pac,pap,papc,fs,fc,fp,fpc,ws,wc,wp,wpc,cs,cc,ccp,cpc,ss,sc,sp,spc,mis,mic,mip,mipc
             ,ms,mc,mp,mpc,cans,canc,pvpp,vj,pregunta,get,thereis,goingto,haveto,usedto,reflx,supp,wyt,wish,comp,superl,formeto
             ;
     DatabaseReference myDbRef= FirebaseDatabase.getInstance().getReference().child("UserName");
@@ -222,6 +222,171 @@ public class MainTesting extends AppCompatActivity {
                     }
                 });
                 break;
+            case 3:
+                answerinput.setText("");
+                gen.GenPresPerfCont2();
+                text.setText(gen.gens);
+                texteng.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
+                        }
+
+                    }
+                });
+                break;
+            case 4:
+                answerinput.setText("");
+                gen.GenPastSimp2();
+                text.setText(gen.gens);
+                texteng.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
+                        }
+
+                    }
+                });
+                break;
+            case 5:
+                answerinput.setText("");
+                gen.GenPastCont2();
+                text.setText(gen.gens);
+                texteng.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
+                        }
+
+                    }
+                });
+                break;
+            case 6:
+                answerinput.setText("");
+                gen.GenPastPerf2();
+                text.setText(gen.gens);
+                texteng.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
+                        }
+
+                    }
+                });
+                break;
+            case 7:
+                answerinput.setText("");
+                gen.GenPastPerfCont2();
+                text.setText(gen.gens);
+                texteng.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
+                        }
+
+                    }
+                });
+                break;
         }
 
     }
@@ -231,7 +396,6 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     public void submitbtn(){
         int cpp=0;
         int cnn=0;
@@ -299,7 +463,7 @@ public class MainTesting extends AppCompatActivity {
         name=answerinput.getText().toString().trim();
 
         ArrayList<Student> students = new ArrayList<>();
-        Student student = new Student(name,ps,pc,pp);
+        Student student = new Student(name,ps,pc,pp,ppc,  pas,pac,pap,papc );
         students.add(student);
         myDbRef.setValue(students);
         save.setVisibility(View.INVISIBLE);

@@ -46,8 +46,17 @@ public class StructureResults extends AppCompatActivity {
                         };
                         ArrayList<Student> students = snapshot.getValue(t);
                         //String value = String.valueOf(students.get(0).presentsimple);
-                        estructuras = new String[]{"Presente Simple "+": "+ String.valueOf(students.get(0).presentsimple), "Presente Continuo"+": "+
-                                String.valueOf(students.get(0).presenteContinuo)};
+                        estructuras = new String[]
+                                {       "Presente Simple "+": "+ String.valueOf(students.get(0).presentsimple),
+                                        "Presente Continuo"+": "+ String.valueOf(students.get(0).presenteContinuo),
+                                        "Presente Perfecto"+": "+ String.valueOf(students.get(0).presenteperfecto),
+                                        "Presente Perfecto Continuo"+": "+ String.valueOf(students.get(0).presentepp),
+                                        "Pasado Simple "+": "+ String.valueOf(students.get(0).pasadosimple),
+                                        "Pasado Continuo"+": "+ String.valueOf(students.get(0).pasadocontinuo),
+                                        "Pasado Perfecto"+": "+ String.valueOf(students.get(0).pasadoperfecto),
+                                        "Pasado Perfecto Continuo"+": "+ String.valueOf(students.get(0).pasadopp)
+
+                                };
 
                         ArrayAdapter<String> adapter = new ArrayAdapter<String>(StructureResults.this,
                                 R.layout.list,estructuras
