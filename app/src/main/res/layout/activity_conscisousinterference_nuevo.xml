@@ -1061,10 +1061,10 @@
                 android:paddingHorizontal="30dp"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical"
-                android:onClick="checkA"
                 >
 
                 <LinearLayout
+                    android:onClick="checkA"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
@@ -1092,6 +1092,7 @@
                 >
 
                 <LinearLayout
+                    android:onClick="showAnswers"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center"
@@ -1100,7 +1101,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mostrar tu respuestas"
+                        android:text="Mostrar Respuestas"
                         android:textColor="@color/azul"
                         android:textSize="16dp"/>
                 </LinearLayout>

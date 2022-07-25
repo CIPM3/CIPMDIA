@@ -26,6 +26,10 @@
         <item>Might Continuous</item>
         <item>Might Perfect</item>
         <item>Might Perfect Continuous</item>
+        <item>Can Simple</item>
+        <item>Can Continuous</item>
+        <item>Must Simple</item>
+        <item>Must Continuous</item>
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
@@ -150,7 +154,8 @@
     phrases
     <string-array name="rango">
         <item>0 a 100</item>
-
+        <item>100 a 200</item>
+        <item>200 a 300</item>
     </string-array>
     <string-array name="rangoPremium">
         <item>0 a 100</item>

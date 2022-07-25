@@ -395,26 +395,12 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
 
     public void showAnswers(View view) {
-        switch (control) {
-            case 1:
-                ai1.setText(r1);
-                break;
-
-            case 2:
-                ai2.setText(r2);
-                break;
-
-            case 3:
-                ai3.setText(r3);
-                break;
-
-            case 4:
-                ai4.setText(r4);
-                break;
-
-            case 5:
-                ai5.setText(r5);
-                break;
+        if(vv.isPlaying()){
+            ai1.setText(r1);
+            ai2.setText(r2);
+            ai3.setText(r3);
+            ai4.setText(r4);
+            ai5.setText(r5);
         }
     }
 
@@ -458,115 +444,97 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
     public void checkA(View view) {
 
+        temp1 = ai1.getText().toString();
+        if (temp1.equalsIgnoreCase(r1)) {
+            ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            pass_1.setVisibility(View.VISIBLE);
 
-        switch (control){
-            case 1:
-                temp1 = ai1.getText().toString();
-                if (temp1.equalsIgnoreCase(r1)) {
-                    ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_1.setVisibility(View.VISIBLE);
+            inc_1.setVisibility(View.GONE);
+            mic_1.setVisibility(View.GONE);
 
-                    inc_1.setVisibility(View.GONE);
-                    mic_1.setVisibility(View.GONE);
+            lay_resp_1.setVisibility(View.GONE);
+        } else {
+            ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            pass_1.setVisibility(View.GONE);
 
-                    lay_resp_1.setVisibility(View.GONE);
-                } else {
-                    ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_1.setVisibility(View.GONE);
+            inc_1.setVisibility(View.VISIBLE);
+            mic_1.setVisibility(View.GONE);
 
-                    inc_1.setVisibility(View.VISIBLE);
-                    mic_1.setVisibility(View.GONE);
-
-                    lay_resp_1.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 2:
-                temp2 = ai2.getText().toString();
-                if (temp2.equalsIgnoreCase(r2)) {
-                    ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_2.setVisibility(View.VISIBLE);
-
-                    inc_2.setVisibility(View.GONE);
-                    mic_2.setVisibility(View.GONE);
-
-                    lay_resp_2.setVisibility(View.GONE);
-                } else {
-                    ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_2.setVisibility(View.GONE);
-
-                    inc_2.setVisibility(View.VISIBLE);
-                    mic_2.setVisibility(View.GONE);
-
-                    lay_resp_2.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 3:
-                temp3 = ai3.getText().toString();
-                if (temp3.equalsIgnoreCase(r3)) {
-                    ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_3.setVisibility(View.VISIBLE);
-
-                    inc_3.setVisibility(View.GONE);
-                    mic_3.setVisibility(View.GONE);
-
-                    lay_resp_3.setVisibility(View.GONE);
-                } else {
-                    ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_3.setVisibility(View.GONE);
-
-                    inc_3.setVisibility(View.VISIBLE);
-                    mic_3.setVisibility(View.GONE);
-
-                    lay_resp_3.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 4:
-                temp4 = ai4.getText().toString();
-                if (temp4.equalsIgnoreCase(r4)) {
-                    ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_4.setVisibility(View.VISIBLE);
-
-                    inc_4.setVisibility(View.GONE);
-                    mic_4.setVisibility(View.GONE);
-
-                    lay_resp_4.setVisibility(View.GONE);
-                } else {
-                    ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_4.setVisibility(View.GONE);
-
-                    inc_4.setVisibility(View.VISIBLE);
-                    mic_4.setVisibility(View.GONE);
-
-                    lay_resp_4.setVisibility(View.VISIBLE);
-                }
-
-                break;
-
-            case 5:
-                temp5 = ai5.getText().toString();
-                if (temp5.equalsIgnoreCase(r5)) {
-                    ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_5.setVisibility(View.VISIBLE);
-
-                    inc_5.setVisibility(View.GONE);
-                    mic_5.setVisibility(View.GONE);
-
-                    lay_resp_5.setVisibility(View.GONE);
-                } else {
-                    ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_5.setVisibility(View.GONE);
-
-                    inc_5.setVisibility(View.VISIBLE);
-                    mic_5.setVisibility(View.GONE);
-
-                    lay_resp_5.setVisibility(View.VISIBLE);
-                }
-
-                break;
+            lay_resp_1.setVisibility(View.VISIBLE);
         }
+        temp2 = ai2.getText().toString();
+        if (temp2.equalsIgnoreCase(r2)) {
+            ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            pass_2.setVisibility(View.VISIBLE);
+
+            inc_2.setVisibility(View.GONE);
+            mic_2.setVisibility(View.GONE);
+
+            lay_resp_2.setVisibility(View.GONE);
+        } else {
+            ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            pass_2.setVisibility(View.GONE);
+
+            inc_2.setVisibility(View.VISIBLE);
+            mic_2.setVisibility(View.GONE);
+
+            lay_resp_2.setVisibility(View.VISIBLE);
+        }
+        temp3 = ai3.getText().toString();
+        if (temp3.equalsIgnoreCase(r3)) {
+            ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            pass_3.setVisibility(View.VISIBLE);
+
+            inc_3.setVisibility(View.GONE);
+            mic_3.setVisibility(View.GONE);
+
+            lay_resp_3.setVisibility(View.GONE);
+        } else {
+            ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            pass_3.setVisibility(View.GONE);
+
+            inc_3.setVisibility(View.VISIBLE);
+            mic_3.setVisibility(View.GONE);
+
+            lay_resp_3.setVisibility(View.VISIBLE);
+        }
+        temp4 = ai4.getText().toString();
+        if (temp4.equalsIgnoreCase(r4)) {
+            ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            pass_4.setVisibility(View.VISIBLE);
+
+            inc_4.setVisibility(View.GONE);
+            mic_4.setVisibility(View.GONE);
+
+            lay_resp_4.setVisibility(View.GONE);
+        } else {
+            ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            pass_4.setVisibility(View.GONE);
+
+            inc_4.setVisibility(View.VISIBLE);
+            mic_4.setVisibility(View.GONE);
+
+            lay_resp_4.setVisibility(View.VISIBLE);
+        }
+        temp5 = ai5.getText().toString();
+        if (temp5.equalsIgnoreCase(r5)) {
+            ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            pass_5.setVisibility(View.VISIBLE);
+
+            inc_5.setVisibility(View.GONE);
+            mic_5.setVisibility(View.GONE);
+
+            lay_resp_5.setVisibility(View.GONE);
+        } else {
+            ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            pass_5.setVisibility(View.GONE);
+
+            inc_5.setVisibility(View.VISIBLE);
+            mic_5.setVisibility(View.GONE);
+
+            lay_resp_5.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override
