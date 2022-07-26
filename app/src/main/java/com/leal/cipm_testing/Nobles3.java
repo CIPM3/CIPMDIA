@@ -24,55 +24,55 @@ public class Nobles3 {
 
     //vnb verbos nobles top 100  primera persona esp
     String vn1[] = {
-            "tengo ","uso ","cambio ","muestro ","controlo ",
+            "tengo ","uso ","cambio ","muestro ","verifico ",
             "elijo ","sostengo ","detengo "
     };
 
     //vnb verbos nobles top 100  segunda persona esp
     String vn2[] = {
-            "tienes ","usas ","cambias ","muestras ","controlas ",
+            "tienes ","usas ","cambias ","muestras ","verificas ",
             "elijes ","sostienes ","detienes "
     };
 
     //vnb verbos nobles top 100  tercera persona esp
     String vn3[] = {
-            "tiene ","usa ","cambia ","muestra ","controla ",
+            "tiene ","usa ","cambia ","muestra ","verifica ",
             "elije ","sostiene ","detiene "
     };
 
     //vnb verbos nobles top 100  cuarta persona esp ellos
     String vn4[] = {
-            "tienen ","usan ","cambian ","muestran ","controlan ",
+            "tienen ","usan ","cambian ","muestran ","verifican ",
             "elijen ","sostienen ","detienen "
     };
 
 
     //vnb verbos nobles top 100  quinta persona esp nosotros
     String vn5[] = {
-            "tenemos ","usamos ","cambiamos ","mostramos ","controlamos ",
+            "tenemos ","usamos ","cambiamos ","mostramos ","verificamos ",
             "elejimos ","sostenemos ","detenemos "
     };
 
     //pasados (agregado wish SV 060422)
     String ps1wish[] = {
-            "tuviera ","usara ","cambiara ","mostrara ","controlara ",
+            "tuviera ","usara ","cambiara ","mostrara ","verificara ",
             "elijiera ","sostuviera ","detuviera "
     };
     String ps2wish[] = {
-            "tuvieras ","usaras ","cambiaras ","mostraras ","controlaras ",
+            "tuvieras ","usaras ","cambiaras ","mostraras ","verificaras ",
             "elijieras ","sostuvieras ","detuvieras "
     };
     String ps3wish[] = {
-            "tuviera ","usara ","cambiara ","mostrara ","controlara ",
+            "tuviera ","usara ","cambiara ","mostrara ","verificara ",
             "elijiera ","sostuviera ","detuviera "
     };
     String ps4wish[] = {
-            "tuvieran ","usaran ","cambiaran ","mostraran ","controlaran ",
+            "tuvieran ","usaran ","cambiaran ","mostraran ","verificaran ",
             "elijieran ","sostivieran ","detuvieran "
     };
     String ps5wish[] = {
             "tuvieramos ","usuaramos ","cambiaramos ","mostraramos ",
-            "controlaramos ","elijieramos ",
+            "verificaramos ","elijieramos ",
             "sostuvieramos ","detuvieramos "
     };
 

@@ -4392,8 +4392,8 @@ public class Oo3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she want ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -5103,8 +5103,8 @@ public class Oo3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she wants ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -9122,8 +9122,8 @@ public class Oo3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she wants ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -12707,8 +12707,8 @@ public class Oo3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he wants ", "she wants ", "it wants ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't wants ", "she doesn't wants ", "it doesn't wants "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};

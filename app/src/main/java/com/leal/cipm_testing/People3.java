@@ -313,13 +313,13 @@ public class People3 {
                 ps2eng = "you " + vnb[v] + nnobles[n];
 
                 ps3 = "él " + vnb3[v] + nnoblesesp[n];
-                ps3eng = "he " + vnb[v] + nnobles[n];
+                ps3eng = "he " + vn3[v] + nnobles[n];
 
                 ps3ella = "ella " + vnb3[v] + nnoblesesp[n];
-                ps3she = "she " + vnb[v] + nnobles[n];
+                ps3she = "she " + vn3[v] + nnobles[n];
 
                 ps3eso = "eso " + vnb3[v] + nnoblesesp[n];
-                ps3it = "it " + vnb[v] + nnobles[n];
+                ps3it = "it " + vn3[v] + nnobles[n];
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + vnb[v] + nnobles[n];
@@ -2002,15 +2002,15 @@ public class People3 {
                 ps2eng2 = "you " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él " + vnb3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3eng = "he " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he " + vn3[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella " + vnb3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3she = "she " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she = "she " + vn3[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso " + vnb3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3it = "it " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it = "it " + vn3[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n] + advfrequ[r] ;
@@ -4419,8 +4419,8 @@ public class People3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she want ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -5874,8 +5874,8 @@ public class People3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she wants ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -7355,15 +7355,15 @@ public class People3 {
                 ps2eng2 = "you " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3 = "él " + vnb3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3eng = "he " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3eng = "he " + vn3[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3eng2 = "he " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3ella = "ella " + vnb3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3she = "she " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3she = "she " + vn3[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3she2 = "she " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3eso = "eso " + vnb3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3it = "it " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3it = "it " + vn3[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3iteng2 = "it " + vnb[v] + nnobles[n] +prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
@@ -9893,8 +9893,8 @@ public class People3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he want ", "she wants ", "it want ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
@@ -11637,13 +11637,13 @@ public class People3 {
                 ps2eng =  vnb[v] + objyou[y];
 
                 ps3 = "él " + objel[e] + vnb3[v] ;
-                ps3eng = "he " + vnb[v] + objhe[e];
+                ps3eng = "he " + vn3[v] + objhe[e];
 
                 ps3ella = "ella " +objella[ell] + vnb3[v];
-                ps3she = "she " + vnb[v] + objshe[ell];
+                ps3she = "she " + vn3[v] + objshe[ell];
 
                 ps3eso = "eso " + objeso[it] +vnb3[v] ;
-                ps3it = "it " + vnb[v] + objit[it];
+                ps3it = "it " + vn3[v] + objit[it];
 
                 ps4 =objellos[th] + vn4[v] ;
                 ps4eng = "they " + vnb[v] + objthem[th];
@@ -11734,13 +11734,13 @@ public class People3 {
                 ps2eng = "you " + vnb[v] + " yourself" ;
 
                 ps3 = "él se " + vnb3[v] + " a si mismo " ;
-                ps3eng = "he " + vnb[v] + " himself";
+                ps3eng = "he " + vn3[v] + " himself";
 
                 ps3ella = "ella se " + vnb3[v]+ " a si misma ";
-                ps3she = "she " + vnb[v] + " herself";
+                ps3she = "she " + vn3[v] + " herself";
 
                 ps3eso = "eso se " + vnb3[v] + " a si mismo ";
-                ps3it = "it " + vnb[v] + " itself";
+                ps3it = "it " + vn3[v] + " itself";
 
                 ps4 = "ellos se " + vn4[v] + " a si mismos ";
                 ps4eng = "they " + vnb[v] + " themselves ";
@@ -11865,13 +11865,13 @@ public class People3 {
                 ps2eng = "you " + vnb[v];
 
                 ps3 = "él " + vnb3[v];
-                ps3eng = "he " + vnb[v];
+                ps3eng = "he " + vn3[v];
 
                 ps3ella = "ella " + vnb3[v];
-                ps3she = "she " + vnb[v];
+                ps3she = "she " + vn3[v];
 
                 ps3eso = "eso " + vnb3[v];
-                ps3it = "it " + vnb[v];
+                ps3it = "it " + vn3[v];
 
                 ps4 = "ellos " + vn4[v];
                 ps4eng = "they " + vnb[v];
@@ -13478,8 +13478,8 @@ public class People3 {
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he wants ", "she wants ", "it wants ", "we want ", "they want "};
         //want to subject negative
-        String wtsjn[] = {"I don't want ", "you doesn't want ", "he doesn't wants ", "she doesn't wants ", "it doesn't wants "
-                , "we doesn't want ", "they doesn't want "};
+        String wtsjn[] = {"I don't want ", "you don't want ", "he doesn't want ", "she doesn't want ", "it doesn't want "
+                , "we don't want ", "they don't want "};
         //want to object
         String wtobj1[] = {"you to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
         String wtobj2[] = {"me to " + vnb[v], "him to " + vnb[v], "her to " + vnb[v], "it to " + vnb[v], "us to " + vnb[v], "them to " + vnb[v]};
