@@ -118,7 +118,8 @@
         <item>Sangre Por Sangre Foodline Clip 4</item>
         <item>Sangre Por Sangre Watch El Paisaje Explanation 5</item>
         <item>Sangre Por Sangre Watch El Paisaje Clip 5</item>
-
+        <item>Kings of the Hills Drugs Explanation 14</item>
+        <item>Kings of the Hills Drugs Clip 14</item>
     </string-array>
     <string-array name="culturaPremium">
         <item>Tutorial</item>
@@ -148,6 +149,8 @@
         <item>Boys in the Hood Clip 12</item>
         <item>Cultura y Fonética Explanation 13</item>
         <item>Cultura y Fonética Clip 13</item>
+        <item>Kings of the Hills Drugs Explanation 14</item>
+        <item>Kings of the Hills Drugs Clip 14</item>
 
     </string-array>
     // quite el otro rango por que special no jala, problema de que hay objetos donde debe ir prep
@@ -167,7 +170,7 @@
     <string-array name="rachel">
         <item>Tutorial</item>
         <item>Steve Jobs 1</item>
-        <item>Steve Jobs 2</item>
+        <item>Kot Fishing 1</item>
 
     </string-array>
 

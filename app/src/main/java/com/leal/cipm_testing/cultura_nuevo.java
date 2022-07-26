@@ -400,6 +400,26 @@ public class cultura_nuevo extends AppCompatActivity {
                 vv.start();
 
                 break;
+
+            case "Kings of the Hills Drugs Explanation 14":
+                clip=false;
+                Uri uri14 = Uri.parse("https://adrianlealcaldera.com/kingofthehilldrugsExp.mp4");
+                vv.setVideoURI(uri14);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+
+                break;
+
+            case "Kings of the Hills Drugs Clip 14":
+                clip=true;
+                Uri uri14catorce = Uri.parse("https://adrianlealcaldera.com/kingofthehilldrugseditedClip.mp4");
+                vv.setVideoURI(uri14catorce);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+
+                break;
         }
 
         if(clip){
@@ -2541,6 +2561,92 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
 
                 break;
+            case "Kings of the Hills Drugs Clip 14":
+                //what do you want✓
+                if(clip){
+                    int g=  vv.getCurrentPosition();
+                    if(g>11000 && g<13000){
+                        String txt1 = "what do you want";
+                        text1.setVisibility(View.VISIBLE);
+                        text1.setText(txt1);
+                        SpannableString ss= new SpannableString(txt1);
+                        ClickableSpan txtone= new ClickableSpan() {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                vv.seekTo(11000);
+
+                            }
+                        };
+                        ss.setSpan(txtone,0,16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                        text1.setText(ss);
+                        text1.setMovementMethod(LinkMovementMethod.getInstance());
+                    }
+
+                }
+                //Are you looking to✓
+                if(clip){
+                    int g=  vv.getCurrentPosition();
+                    if(g>14000  && g<16000){
+                        String txt2 = "Are you looking to";
+                        text2.setVisibility(View.VISIBLE);
+                        text2.setText(txt2);
+                        SpannableString ss2= new SpannableString(txt2);
+                        ClickableSpan txtTwo= new ClickableSpan() {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                vv.seekTo(14000);
+
+                            }
+                        };
+                        ss2.setSpan(txtTwo,0,18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                        text2.setText(ss2);
+                        text2.setMovementMethod(LinkMovementMethod.getInstance());
+                    }
+
+                }
+                //I have been thinking about✓
+                if(clip){
+                    int g=  vv.getCurrentPosition();
+                    if(g>22000 && g<24000){
+                        String txt3 = "I have been thinking about";
+                        text3.setVisibility(View.VISIBLE);
+                        text3.setText(txt3);
+                        SpannableString ss3= new SpannableString(txt3);
+                        ClickableSpan txtThree= new ClickableSpan() {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                vv.seekTo(22000);
+
+                            }
+                        };
+                        ss3.setSpan(txtThree,0,26, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                        text3.setText(ss3);
+                        text3.setMovementMethod(LinkMovementMethod.getInstance());
+                    }
+
+                }
+                //What do you need✓
+                if(clip){
+                    int g=  vv.getCurrentPosition();
+                    if(g>24000 && g<26000){
+                        String txt4 = "What do you need";
+                        text4.setVisibility(View.VISIBLE);
+                        text4.setText(txt4);
+                        SpannableString ss4= new SpannableString(txt4);
+                        ClickableSpan txtFour= new ClickableSpan() {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                vv.seekTo(24000);
+
+                            }
+                        };
+                        ss4.setSpan(txtFour,0,16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                        text4.setText(ss4);
+                        text4.setMovementMethod(LinkMovementMethod.getInstance());
+                    }
+
+                }
+                break;
         }
     }
 
@@ -4065,6 +4171,71 @@ public class cultura_nuevo extends AppCompatActivity {
                     text10.setText(ss10);
                     text10.setMovementMethod(LinkMovementMethod.getInstance());
 
+                }
+                break;
+
+            case "Kings of the Hills Drugs Clip 14":
+                if(clip) {
+                    //what do you want✓
+                    String txt1 = "what do you want";
+                    text1.setVisibility(View.VISIBLE);
+                    text1.setText(txt1);
+                    SpannableString ss = new SpannableString(txt1);
+                    ClickableSpan txtone = new ClickableSpan() {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            vv.seekTo(11000);
+
+                        }
+                    };
+                    ss.setSpan(txtone, 0, 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    text1.setText(ss);
+                    text1.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    String txt2 = "Are you looking to";
+                    text2.setVisibility(View.VISIBLE);
+                    text2.setText(txt2);
+                    SpannableString ss2= new SpannableString(txt2);
+                    ClickableSpan txtTwo= new ClickableSpan() {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            vv.seekTo(14000);
+
+                        }
+                    };
+                    ss2.setSpan(txtTwo,0,18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                    text2.setText(ss2);
+                    text2.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    String txt3 = "I have been thinking about";
+                    text3.setVisibility(View.VISIBLE);
+                    text3.setText(txt3);
+                    SpannableString ss3= new SpannableString(txt3);
+                    ClickableSpan txtThree= new ClickableSpan() {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            vv.seekTo(22000);
+
+                        }
+                    };
+                    ss3.setSpan(txtThree,0,26, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                    text3.setText(ss3);
+                    text3.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    String txt4 = "What do you need";
+                    text4.setVisibility(View.VISIBLE);
+                    text4.setText(txt4);
+                    SpannableString ss4= new SpannableString(txt4);
+                    ClickableSpan txtFour= new ClickableSpan() {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            vv.seekTo(24000);
+
+                        }
+                    };
+                    ss4.setSpan(txtFour,0,16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                    text4.setText(ss4);
+                    text4.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 break;
 

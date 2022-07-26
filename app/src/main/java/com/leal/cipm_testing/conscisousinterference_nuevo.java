@@ -160,6 +160,20 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 //clickbb1();
                 break;
 
+                //PD
+            case "Kot Fishing 1":
+                // video completo con los 5 diferentes temas
+                Uri urik1 = Uri.parse("http://adrianlealcaldera.com/kotfishing1Clip.mp4");
+                vv.setVideoURI(urik1);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+
+                //clickbb1();
+                break;
+
+                //LUIS
+
         }
     }
 
@@ -182,6 +196,14 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r4 = "Prueba 4";
                 r5 = "Prueba 5";
                 break;
+
+            case "Kot Fishing 1":
+                r1 = "Come on frank fish or get off the pot";
+                r2 = "just a second how the heck does jack fish with this stuff";
+                r3 = "i like beer don't you like beek i mean i love beer";
+                r4 = "I just got one sweet jean vicent, i'm back";
+                r5 = "that was quick talking about hank's the man damn go fishing magician";
+                break;
         }
 
         eng_1.setText(r1);
@@ -189,138 +211,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         eng_3.setText(r3);
         eng_4.setText(r4);
         eng_5.setText(r5);
-    }
-
-    public void hablar1(View vista){
-        control = 1;
-        iniciarentradavoz();
-    }
-    public void hablar2(View vista){
-        control = 2;
-        iniciarentradavoz();
-    }
-    public void hablar3(View vista){
-        control = 3;
-        iniciarentradavoz();
-    }
-    public void hablar4(View vista){
-        control = 4;
-        iniciarentradavoz();
-    }
-    public void hablar5(View vista){
-        control = 5;
-        iniciarentradavoz();
-    }
-
-    private void iniciarentradavoz() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        try {
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
-        } catch (ActivityNotFoundException e) {
-        }
-    }
-
-
-    public void show_aud_1(View vista){
-        control = 1;
-        show_aud();
-    }
-    public void show_aud_2(View vista){
-        control = 2;
-        show_aud();
-    }
-    public void show_aud_3(View vista){
-        control = 3;
-        show_aud();
-    }
-    public void show_aud_4(View vista){
-        control = 4;
-        show_aud();
-    }
-    public void show_aud_5(View vista){
-        control = 5;
-        show_aud();
-    }
-
-    public void show_aud(){
-        switch (selection){
-            case "Tutorial":
-                break;
-            case "Steve Jobs 1":
-                switch (control){
-                    case 1:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri1 = Uri.parse("http://adrianlealcaldera.com/bb1.mp4");
-                        vv.setVideoURI(uri1);
-                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 2:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri2 = Uri.parse("http://adrianlealcaldera.com/bb2.mp4");
-                        vv.setVideoURI(uri2);
-                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 3:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri3 = Uri.parse("http://adrianlealcaldera.com/bb3.mp4");
-                        vv.setVideoURI(uri3);
-                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 4:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri4 = Uri.parse("http://adrianlealcaldera.com/bb4.mp4");
-                        vv.setVideoURI(uri4);
-                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 5:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri5 = Uri.parse("http://adrianlealcaldera.com/bb5.mp4");
-                        vv.setVideoURI(uri5);
-                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                }
-                break;
-            case "Steve Jobs 2":
-                break;
-        }
-    }
-
-
-    public void showexp1(View vista){
-        control = 1;
-        showExp();
-    }
-
-    public void showexp2(View vista){
-        control = 2;
-        showExp();
-    }
-
-    public void showexp3(View vista){
-        control = 3;
-        showExp();
-    }
-
-    public void showexp4(View vista){
-        control = 4;
-        showExp();
-    }
-
-    public void showexp5(View vista){
-        control = 5;
-        showExp();
     }
 
     public void showExp() {
@@ -370,29 +260,52 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
+            case "Kot Fishing 1":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp1.mp4");
+                        vv.setVideoURI(uri);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri5 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp5.mp4");
+                        vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
         }
     }
-
-    public void speak1(View vista){
-        tts.speak(r1, TextToSpeech.QUEUE_ADD, null);
-    }
-
-    public void speak2(View vista){
-        tts.speak(r2, TextToSpeech.QUEUE_ADD, null);
-    }
-
-    public void speak3(View vista){
-        tts.speak(r3, TextToSpeech.QUEUE_ADD, null);
-    }
-
-    public void speak4(View vista){
-        tts.speak(r4, TextToSpeech.QUEUE_ADD, null);
-    }
-
-    public void speak5(View vista){
-        tts.speak(r5, TextToSpeech.QUEUE_ADD, null);
-    }
-
 
     public void showAnswers(View view) {
         if(vv.isPlaying()){
@@ -402,44 +315,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             ai4.setText(r4);
             ai5.setText(r5);
         }
-    }
-
-    public void limpiar_inputs(){
-        ai1.setText("");
-        ai2.setText("");
-        ai3.setText("");
-        ai4.setText("");
-        ai5.setText("");
-
-        ai1.setBackgroundColor(Color.WHITE);
-        ai2.setBackgroundColor(Color.WHITE);
-        ai3.setBackgroundColor(Color.WHITE);
-        ai4.setBackgroundColor(Color.WHITE);
-        ai5.setBackgroundColor(Color.WHITE);
-
-        pass_1.setVisibility(View.GONE);
-        pass_2.setVisibility(View.GONE);
-        pass_3.setVisibility(View.GONE);
-        pass_4.setVisibility(View.GONE);
-        pass_5.setVisibility(View.GONE);
-
-        inc_1.setVisibility(View.GONE);
-        inc_2.setVisibility(View.GONE);
-        inc_3.setVisibility(View.GONE);
-        inc_4.setVisibility(View.GONE);
-        inc_5.setVisibility(View.GONE);
-
-        mic_1.setVisibility(View.VISIBLE);
-        mic_2.setVisibility(View.VISIBLE);
-        mic_3.setVisibility(View.VISIBLE);
-        mic_4.setVisibility(View.VISIBLE);
-        mic_5.setVisibility(View.VISIBLE);
-
-        lay_resp_1.setVisibility(View.GONE);
-        lay_resp_2.setVisibility(View.GONE);
-        lay_resp_3.setVisibility(View.GONE);
-        lay_resp_4.setVisibility(View.GONE);
-        lay_resp_5.setVisibility(View.GONE);
     }
 
     public void checkA(View view) {
@@ -535,6 +410,120 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             lay_resp_5.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    public void hablar1(View vista){
+        control = 1;
+        iniciarentradavoz();
+    }
+    public void hablar2(View vista){
+        control = 2;
+        iniciarentradavoz();
+    }
+    public void hablar3(View vista){
+        control = 3;
+        iniciarentradavoz();
+    }
+    public void hablar4(View vista){
+        control = 4;
+        iniciarentradavoz();
+    }
+    public void hablar5(View vista){
+        control = 5;
+        iniciarentradavoz();
+    }
+
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException e) {
+        }
+    }
+    
+    public void showexp1(View vista){
+        control = 1;
+        showExp();
+    }
+
+    public void showexp2(View vista){
+        control = 2;
+        showExp();
+    }
+
+    public void showexp3(View vista){
+        control = 3;
+        showExp();
+    }
+
+    public void showexp4(View vista){
+        control = 4;
+        showExp();
+    }
+
+    public void showexp5(View vista){
+        control = 5;
+        showExp();
+    }
+
+    public void speak1(View vista){
+        tts.speak(r1, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void speak2(View vista){
+        tts.speak(r2, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void speak3(View vista){
+        tts.speak(r3, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void speak4(View vista){
+        tts.speak(r4, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void speak5(View vista){
+        tts.speak(r5, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void limpiar_inputs(){
+        ai1.setText("");
+        ai2.setText("");
+        ai3.setText("");
+        ai4.setText("");
+        ai5.setText("");
+
+        ai1.setBackgroundColor(Color.WHITE);
+        ai2.setBackgroundColor(Color.WHITE);
+        ai3.setBackgroundColor(Color.WHITE);
+        ai4.setBackgroundColor(Color.WHITE);
+        ai5.setBackgroundColor(Color.WHITE);
+
+        pass_1.setVisibility(View.GONE);
+        pass_2.setVisibility(View.GONE);
+        pass_3.setVisibility(View.GONE);
+        pass_4.setVisibility(View.GONE);
+        pass_5.setVisibility(View.GONE);
+
+        inc_1.setVisibility(View.GONE);
+        inc_2.setVisibility(View.GONE);
+        inc_3.setVisibility(View.GONE);
+        inc_4.setVisibility(View.GONE);
+        inc_5.setVisibility(View.GONE);
+
+        mic_1.setVisibility(View.VISIBLE);
+        mic_2.setVisibility(View.VISIBLE);
+        mic_3.setVisibility(View.VISIBLE);
+        mic_4.setVisibility(View.VISIBLE);
+        mic_5.setVisibility(View.VISIBLE);
+
+        lay_resp_1.setVisibility(View.GONE);
+        lay_resp_2.setVisibility(View.GONE);
+        lay_resp_3.setVisibility(View.GONE);
+        lay_resp_4.setVisibility(View.GONE);
+        lay_resp_5.setVisibility(View.GONE);
     }
 
     @Override
