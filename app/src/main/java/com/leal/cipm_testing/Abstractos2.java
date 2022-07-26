@@ -30,26 +30,25 @@ public class Abstractos2 {
     //verbos base en pasado
     String vnbp[] = {"proved ", "reflected ", "implied ", "pursued ", "specified "};
     //pasados (agregado wish SV 060422)
-    String ps1pre[] = {"supe ", "aprendí ", "entendí ", "consideré ", "mantuve ", "expliqué ", "enfaticé "};
-    String ps1imp[] = {"sabía ", "aprendía ", "entendía ", "consideraba ", "mantenía ", "explicaba ", "enfatizaba "};
-    String ps1wish[] = {"supiera ", "aprendiera ", "entendiera ", "considerara ", "mantuviera ",
-            "explicara ", "enfatizara "};
-    String ps2pre[] = {"supiste ", "aprendiste ", "entendiste ", "consideraste ", "mantuviste ", "explicaste ", "enfatizaste "};
-    String ps2imp[] = {"sabías ", "aprendías ", "entendías ", "considerabas ", "mantenías ", "explicabas ", "enfatizabas "};
-    String ps2wish[] = {"supieras ", "aprendieras ", "entendieras ", "consideraras ", "mantuvieras ",
-            "explicaras ", "enfatizaras "};
-    String ps3p[] = {"supo ", "aprendió ", "entendio ", "consideró ", "mantuvo ", "explicó ", "enfatizó "};
-    String ps3imp[] = {"sabía ", "aprendía ", "entendía ", "consideraba ", "mantenía ", "explicaba ", "enfatizaba "};
-    String ps3wish[] = {"supiera ", "aprendiera ", "entendiera ", "considerara ", "mantuviera ",
-            "explicara ", "enfatizara "};
-    String vn4p[] = {"supieron ", "aprendieron ", "entendieron ", "consideraron ", "mantuvieron ", "explicaron ", "enfatizaron "};
-    String vn4imp[] = {"sabían ", "aprendían ", "entendían ", "consideraban ", "mantenían ", "explicaban ", "enfatizaban "};
-    String ps4wish[] = {"supieran ", "aprendieran ", "entendieran ", "considerarán ", "mantuvieran ",
-            "explicaran ", "enfatizaran "};
-    String vn5p[] = {"supimos ", "aprendimos ", "entendimos ", "consideramos ", "mantuvimos ", "explicamos ", "enfatizamos "};
-    String vn5imp[] = {"sabíamos ", "aprendíamos ", "entendíamos ", "considerábamos ", "manteníamos ", "explicábamos ", "enfatizábamos "};
-    String ps5wish[] = {"supiéramos ", "aprendiéramos ", "entendiéramos ", "consideráramos ", "mantuviéramos ",
-            "explicáramos ", "enfatizáramos "};
+    String ps1pre[] = {"prové ", "reflejé ", "impliqué ", "persuadí ", "especifiqué "};
+    String ps1imp[] = {"probaba ", "reflejaba ", "implicaba ", "persuadía ", "especificaba "};
+    String ps1wish[] = {"probara ", "reflejara ", "implicara ", "persuadiera ", "especificara "};
+
+    String ps2pre[] = {"provaste ", "reflejaste ", "implicaste ", "persuadiste ", "especificaste "};
+    String ps2imp[] = {"probabas ", "reflejabas ", "implicabas ", "persuadias ", "especificabas "};
+    String ps2wish[] = {"probaras ", "reflejaras ", "implicaras ", "persuadieras ", "especificaras "};
+
+    String ps3p[] = {"provó ", "reflejó ", "implicó ",  "persuadió ", "especificó "};
+    String ps3imp[] = {"probaba ", "reflejaba ", "implicaba ", "persuadía ", "especificaba "};
+    String ps3wish[] = {"probara ", "reflejara ", "implicara ", "persuadiera ", "especificara "};
+
+    String vn4p[] = {"provaron ", "reflejaron ", "implicaron ", "persuadieron ", "especificaron "};
+    String vn4imp[] = {"probaban ", "reflejaban ", "implicaban ", "persuadían ", "especificaban "};
+    String ps4wish[] = {"probaran ", "reflejaran ", "implicaran ", "persuadieran ", "especificaran "};
+
+    String vn5p[] = {"provamos ", "refjlejamos ", "implicamos ", "persuadimos ", "especificamos "};
+    String vn5imp[] = {"probabamos ", "reflejabamos ", "implicabamos ", "persuadíamos ", "especificabamos "};
+    String ps5wish[] = {"probaramos ", "reflejaramos ", "implicaramos ", "persuadieramos ", "especificaramos "};
     //futuro
     String vn1f[] = {"probaré ", "reflejaré ", "explicaré ", "perseguiré ", "especificaré "};
     String vn2f[] = {"probarás ", "reflejarás ", "implicarás ", "perseguirás ", "especificarás "};
@@ -85,23 +84,7 @@ public class Abstractos2 {
             "la habilidad ", "la riqueza ", "la profundidad "
     };
 
-    String nnoblesM[] = {"the growth ", "the meaning ", "the success ", "the performance ",
-            "the concept ", "the advice ", "the entertainment "
-    };
 
-    String nnoblesF[] = {"the philosophy ", "the energy ", "the appearance ", "the death ",
-            "the opinion ", "the reality ", "the perspective ", "the medicine ", "the decision ",
-            "the responsability ", "the skill ", "the wealth ", "the depth "
-    };
-
-    String nnoblesespM[] = {"el crecimiento ", "el significado ", "el éxito ", "el desempeño ",
-            "el concepto ", "el consejo ", "el entretenimiento "
-    };
-
-    String nnoblesespF[] = {"la filosofía ", "la energía ", "la apariencia ", "la muerte ",
-            "la opinión ", "la realidad ", "la perspectiva ", "la medicina ", "la decisión ",
-            "la responsabilidad ", "la habilidad ", "la riqueza ", "la profundidad "
-    };
 
     String ps1;
     String ps1eng;
