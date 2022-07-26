@@ -13922,7 +13922,7 @@ public class Generator2 {
     //PASADOS
     public void GenPastSimp3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        int verb = (int) (Math.random() * 4);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -25952,7 +25952,7 @@ public class Generator2 {
     //PASADOS
     public void GenPastSimp4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        int verb = (int) (Math.random() * 4);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
