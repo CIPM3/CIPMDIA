@@ -12,8 +12,8 @@ public class Nobles3 {
 
     // verbos nobles base spanish
     String vnbs[] = {
-            "tener", "usar", "cambiar", "mostrar", "verificar",
-            "elegir", "mantener", "parar"
+            "tener ", "usar ", "cambiar ", "mostrar ", "verificar ",
+            "elegir ", "mantener ", "parar "
     };
 
     //vnb verbos nobles top 100  tercera persona inglés
@@ -141,7 +141,7 @@ public class Nobles3 {
             ,"el alcohol ","el argumento ","el contrato ","el bistec ",
             "el acuerdo ","el empleo ","el ingeniero ","el límite "
             ,"el asiento ","el virus ", "el actor ","el aula "
-            ,"el dispositivo ","el drama ","el motor ","el guía",
+            ,"el dispositivo ","el drama ","el motor ","el guía ",
             "el hotel ","el propietario ","el pan ", "el clima ",
             "el ascensor ","el empleado ","el empleador ","el invitado ",
             "el liderazgo ","el centro comercial ","el gerente ","el respeto ",
@@ -430,13 +430,13 @@ public class Nobles3 {
                 ps2eng = "you " + vnb[v] + nnobles[n];
 
                 ps3 = "él " + vn3[v] + nnoblesesp[n];
-                ps3eng = "he " + vnb[v] + nnobles[n];
+                ps3eng = "he " + vnb3[v] + nnobles[n];
 
                 ps3ella = "ella " + vn3[v] + nnoblesesp[n];
-                ps3she = "she " + vnb[v] + nnobles[n];
+                ps3she = "she " + vnb3[v] + nnobles[n];
 
                 ps3eso = "eso " + vn3[v] + nnoblesesp[n];
-                ps3it = "it " + vnb[v] + nnobles[n];
+                ps3it = "it " + vnb3[v] + nnobles[n];
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + vnb[v] + nnobles[n];
@@ -2087,15 +2087,15 @@ public class Nobles3 {
                 ps2eng2 = "you " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3eng = "he " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3she = "she " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she = "she " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3it = "it " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it = "it " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + vnb[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n] + advfrequ[r] ;
@@ -4646,750 +4646,7 @@ public class Nobles3 {
         }
     }
 
-    //there be Simple
-    public void ThereBe2(){
-        Intrans it = new Intrans();
-
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there is ","there are ",
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "hay ", "hay ",
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there is no ","there are no ",
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no hay ", "no hay ",
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome] + "para " + nnoblesesp[n];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome] + "to " + nnobles[n];
-
-                ps2 = tbsjs[1] + it.poms[rnpome] + "para " + nnoblesesp[n];
-                ps2eng = tbsj[1] + it.pome[rnpome] + "to " + nnobles[n];
-
-
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome] + "para " + nnoblesesp[n];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome] + "to " + nnobles[n];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome] + "para " + nnoblesesp[n];
-                ps2eng = tbsjn[1] + it.pome[rnpome] + "to " + nnobles[n];
-
-
-                break;
-        }
-
-    }//PD 25/03/2022
-
-    //there be pasado
-    public void ThereBePast2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there was ","there were "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "había ","había "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there was no ","there were no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no había ","no había "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[1] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[1] + it.pome[rnpome];
-                break;
-        }
-
-
-    }//PD 04/04/2022
-
-    //there be past perf
-    public void ThereBePastPerf2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there has to be ","there have to be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "tiene que haber ","tiene que haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there has to be no ","there have to be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no tiene que haber ","no tiene que haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[1] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[1] + it.pome[rnpome];
-                break;
-        }
-    }//PD 04/04/2022
-
-    //there be Continous
-    public void ThereBeContinuous2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there is going to be ","there are going to be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "va a haber ","van a haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there is going to be no ","there are going to be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no va a haber ","no van a haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[1] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[1] + it.pome[rnpome];
-                break;
-        }
-    }//PD 05/04/2022
-
-    //there be Past Continous
-    public void ThereBePastContinuous2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there was going to be ","there were going to be  "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "iba a haber ","iban a haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there was going to be no ","there were going to be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no iba a haber ","no iban a haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[1] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[1] + it.pome[rnpome];
-                break;
-        }
-    }//PD 05/04/2022
-
-    //there be Could
-    public void ThereCouldBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there could be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "podría haber ","podrían haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there could be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no podría haber ","no podrían haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 05/04/2022
-
-    //there be Should
-    public void ThereShouldBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there should be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "debería haber ","deberían haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there should be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no debería haber ","no deberían haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 06/04/2022
-
-    //there be Would
-    public void ThereWouldBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there would be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "habría ","habrían "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there would be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no habría ","no habrían "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 06/04/2022
-
-    //there be Will 7
-    public void ThereWillBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there will be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "habrá ","habrán "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there will be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no habrá ","no habrán "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 06/04/2022
-
-    //there must be
-    public void ThereMustBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there must be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "debe haber ","deben haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there must be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no debe haber ","no deben haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 07/04/2022
-
-    //there can be
-    public void ThereCanBe2(){
-        Intrans it = new Intrans();
-        int rnsome = (int) (Math.random() * it.some.length);
-        int rnpome = (int) (Math.random() * it.pome.length);
-        int neg = (int) (Math.random() * 2);
-
-        //subject in eng
-        String tbsj[] = {
-                "there can be "
-        };
-
-        //subject in spanish
-        String tbsjs[] = {
-                "pudo haber ","pueden haber "
-        };
-
-        //subject in eng negative
-        String tbsjn[] = {
-                "there can be no "
-        };
-
-        //subject in spanish negative
-        String tbsjsn[] = {
-                "no pudo haber ","no pueden haber "
-        };
-
-        switch (neg){
-            case 0:
-                ps1 = tbsjs[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsj[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjs[1] + it.poms[rnpome];
-                ps2eng = tbsj[0] + it.pome[rnpome];
-                break;
-            case 1:
-                ps1 = tbsjsn[0] + "un " + it.soms[rnsome];
-                ps1eng = tbsjn[0] + "a " + it.some[rnsome];
-
-                ps2 = tbsjsn[1] + it.poms[rnpome];
-                ps2eng = tbsjn[0] + it.pome[rnpome];
-                break;
-        }
-    }//PD 07/04/2022
-
-    //pasive causitive simple
-    public void PasiveCause2() {
-        int neg = (int) (Math.random() * 4);
-        int nesp = (int) (Math.random() * nnoblesM.length);
-        int nesp2 = (int) (Math.random() * nnoblesM.length);
-        int nvpspm = (int) (Math.random() * vpspM.length);
-        int nvpspf = (int) (Math.random() * vpspF.length);
-        int nvpengf = (int) (Math.random() * vpengF.length);
-        int cCeng = (int) (Math.random() * 2);
-
-        //Pasive Cause subject esp
-        String pcsj[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
-
-        //Pasive Cause subject eng
-        String pcsjeng[] = {"I ", "you ", "he ", "she ", "it ", "they ", "we "};
-
-        //Pasive Cause Cause eng
-        String pcCeng[] = {"have ", "get "};
-
-        //Pasive Cause Cause eng
-        String pcCesp[] = {"hago que ", "haces que ","hace que ","hace que ","hace que "
-                ,"hacen que ","hacemos que "};
-
-
-        switch (neg) {
-            //Masculino Positivo
-            case 0:
-                ps1 = pcsj[0] + pcCesp[0] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps1eng = pcsjeng[0] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps2 = pcsj[1] + pcCesp[1] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps2eng = pcsjeng[1] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3 = pcsj[2] + pcCesp[2] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3eng = pcsjeng[2] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3ella = pcsj[3] + pcCesp[3] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3she = pcsjeng[3] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3eso = pcsj[4] + pcCesp[4] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3it = pcsjeng[4] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps4 = pcsj[5] + pcCesp[5] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps4eng = pcsjeng[5] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps5 = pcsj[6] + pcCesp[6] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps5eng = pcsjeng[6] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-                break;
-            //Masculino Negativo
-            case 1:
-                ps1 = pcsj[0] + "no " + pcCesp[0] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por " + nnoblesespM[nesp2];
-                ps1eng = pcsjeng[0] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps2 = pcsj[1] + "no " + pcCesp[1] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps2eng = pcsjeng[1] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3 = pcsj[2] + "no " + pcCesp[2] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3eng = pcsjeng[2] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3ella = pcsj[3] + "no " + pcCesp[3] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3she = pcsjeng[3] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3eso = pcsj[4] + "no " + pcCesp[4] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3it = pcsjeng[4] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps4 = pcsj[5] + "no " + pcCesp[5] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps4eng = pcsjeng[5] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps5 = pcsj[6] + "no " + pcCesp[6] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps5eng = pcsjeng[6] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-                break;
-            //Femenino Positivo
-            case 2:
-                ps1 = pcsj[0] + pcCesp[0] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps1eng = pcsjeng[0] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps2 = pcsj[1] + pcCesp[1] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps2eng = pcsjeng[1] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3 = pcsj[2] + pcCesp[2] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3eng = pcsjeng[2] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3ella = pcsj[3] + pcCesp[3] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3she = pcsjeng[3] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3eso = pcsj[4] + pcCesp[4] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3it = pcsjeng[4] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps4 = pcsj[5] + pcCesp[5] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps4eng = pcsjeng[5] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps5 = pcsj[6] + pcCesp[6] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps5eng = pcsjeng[6] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-                break;
-            //Femenino Negativo
-            case 3:
-                ps1 = pcsj[0] + "no " + pcCesp[0] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps1eng = pcsjeng[0] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps2 = pcsj[1] + "no " + pcCesp[1] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps2eng = pcsjeng[1] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3 = pcsj[2] + "no " + pcCesp[2] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3eng = pcsjeng[2] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3ella = pcsj[3] + "no " + pcCesp[3] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3she = pcsjeng[3] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3eso = pcsj[4] + "no " + pcCesp[4] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3it = pcsjeng[4] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps4 = pcsj[5] + "no " + pcCesp[5] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps4eng = pcsjeng[5] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps5 = pcsj[6] + "no " + pcCesp[6] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps5eng = pcsjeng[6] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-                break;
-
-        }
-    }//PD 08/04/2022
-
-    //pasive causitive past
-    public void PasiveCausePast2(){
-        int neg = (int) (Math.random() * 4);
-        int nesp = (int) (Math.random() * nnoblesM.length);
-        int nesp2 = (int) (Math.random() * nnoblesM.length);
-        int nvpspm = (int) (Math.random() * vpspM.length);
-        int nvpspf = (int) (Math.random() * vpspF.length);
-        int nvpengf = (int) (Math.random() * vpengF.length);
-        int cCeng = (int) (Math.random() * 2);
-
-        //Pasive Cause subject esp
-        String pcsj[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
-
-        //Pasive Cause subject eng
-        String pcsjeng[] = {"I ", "you ", "he ", "she ", "it ", "they ", "we "};
-
-        //Pasive Cause Cause eng
-        String pcCeng[] = {"had ", "got "};
-
-        //Pasive Cause Cause eng
-        String pcCesp[] = {"hice que ", "hiciste que ","hizo que ","hizo que ","hizo que "
-                ,"hicieron que ","hicimos que "};
-
-        switch (neg) {
-            //Masculino Positivo
-            case 0:
-                ps1 = pcsj[0] + pcCesp[0] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps1eng = pcsjeng[0] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps2 = pcsj[1] + pcCesp[1] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps2eng = pcsjeng[1] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3 = pcsj[2] + pcCesp[2] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3eng = pcsjeng[2] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3ella = pcsj[3] + pcCesp[3] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3she = pcsjeng[3] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3eso = pcsj[4] + pcCesp[4] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3it = pcsjeng[4] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps4 = pcsj[5] + pcCesp[5] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps4eng = pcsjeng[5] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps5 = pcsj[6] + pcCesp[6] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps5eng = pcsjeng[6] + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-                break;
-            //Masculino Negativo
-            case 1:
-                ps1 = pcsj[0] + "no " + pcCesp[0] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por " + nnoblesespM[nesp2];
-                ps1eng = pcsjeng[0] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps2 = pcsj[1] + "no " + pcCesp[1] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps2eng = pcsjeng[1] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3 = pcsj[2] + "no " + pcCesp[2] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3eng = pcsjeng[2] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3ella = pcsj[3] + "no " + pcCesp[3] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3she = pcsjeng[3] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps3eso = pcsj[4] + "no " + pcCesp[4] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps3it = pcsjeng[4] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps4 = pcsj[5] + "no " + pcCesp[5] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps4eng = pcsjeng[5] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-
-                ps5 = pcsj[6] + "no " + pcCesp[6] + nnoblesespM[nesp] + "sea " + " " + vpspM[nvpspm] + "por "+ nnoblesespM[nesp2];
-                ps5eng = pcsjeng[6] + "don't " + " " + pcCeng[cCeng] + nnoblesM[nesp] + vpeng[v] + "by " + nnoblesM[nesp2];
-                break;
-            //Femenino Positivo
-            case 2:
-                ps1 = pcsj[0] + pcCesp[0] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps1eng = pcsjeng[0] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps2 = pcsj[1] + pcCesp[1] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps2eng = pcsjeng[1] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3 = pcsj[2] + pcCesp[2] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3eng = pcsjeng[2] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3ella = pcsj[3] + pcCesp[3] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3she = pcsjeng[3] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3eso = pcsj[4] + pcCesp[4] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3it = pcsjeng[4] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps4 = pcsj[5] + pcCesp[5] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps4eng = pcsjeng[5] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps5 = pcsj[6] + pcCesp[6] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps5eng = pcsjeng[6] + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-                break;
-            //Femenino Negativo
-            case 3:
-                ps1 = pcsj[0] + "no " + pcCesp[0] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps1eng = pcsjeng[0] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps2 = pcsj[1] + "no " + pcCesp[1] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps2eng = pcsjeng[1] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3 = pcsj[2] + "no " + pcCesp[2] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3eng = pcsjeng[2] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3ella = pcsj[3] + "no " + pcCesp[3] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3she = pcsjeng[3] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps3eso = pcsj[4] + "no " + pcCesp[4] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps3it = pcsjeng[4] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps4 = pcsj[5] + "no " + pcCesp[5] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps4eng = pcsjeng[5] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-
-                ps5 = pcsj[6] + "no " + pcCesp[6] + nnoblesespF[nesp] + "sea " + " " + vpspF[nvpspf] + "por "+ nnoblesespF[nesp2];
-                ps5eng = pcsjeng[6] + "don't " + " " + pcCeng[cCeng] + nnoblesF[nesp] + vpengF[nvpengf] + "by " + nnoblesF[nesp2];
-                break;
-
-        }
-    }//PD 11/04/2022
-
+   //quite los there be y causativos
     // Supposed to
     // se supone que tiene que pasar cases 2 y 3
     // se supone que va a pasar cases 4 y 5
@@ -7532,15 +6789,15 @@ public class Nobles3 {
                 ps2eng2 = "you " + vnb[v] + nnobles[n] +prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3 = "él " + vn3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3eng = "he " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3eng = "he " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3eng2 = "he " + vnb[v] + nnobles[n] +prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3ella = "ella " + vn3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3she = "she " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3she = "she " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3she2 = "she " + vnb[v] + nnobles[n] +prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps3eso = "eso " + vn3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
-                ps3it = "it " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
+                ps3it = "it " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3iteng2 = "it " + vnb[v] + nnobles[n] +prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
                 ps4 = "ellos " + vn4[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];;
@@ -11609,13 +10866,13 @@ public class Nobles3 {
                 ps2eng = "you " + vnb[v] + nnobles[n];
 
                 ps3 = vn3[v] + nnoblesesp[n];
-                ps3eng = "he " + vnb[v] + nnobles[n];
+                ps3eng = "he " + vnb3[v] + nnobles[n];
 
                 ps3ella = vn3[v] + nnoblesesp[n];
-                ps3she = "she " + vnb[v] + nnobles[n];
+                ps3she = "she " + vnb3[v] + nnobles[n];
 
                 ps3eso = vn3[v] + nnoblesesp[n];
-                ps3it = "it " + vnb[v] + nnobles[n];
+                ps3it = "it " + vnb3[v] + nnobles[n];
 
                 ps4 = vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + vnb[v] + nnobles[n];
@@ -11660,13 +10917,13 @@ public class Nobles3 {
                 ps2eng = "you " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps3 =prep.noblesspecial[p][p2] + vn3[v] + nnoblesesp[n];
-                ps3eng = "he " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
+                ps3eng = "he " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps3ella = prep.noblesspecial[p][p2] + vn3[v] + nnoblesesp[n];
-                ps3she = "she " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
+                ps3she = "she " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps3eso = prep.noblesspecial[p][p2] +vn3[v] + nnoblesesp[n];
-                ps3it = "it " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
+                ps3it = "it " + vnb3[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps4 = prep.noblesspecial[p][p2] +vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
@@ -11716,13 +10973,13 @@ public class Nobles3 {
                 ps2eng = "you "+ vnb[v] + objyou[y];
 
                 ps3 = "él " + objel[e] + vn3[v] ;
-                ps3eng = "he " + vnb[v] + objhe[e];
+                ps3eng = "he " + vnb3[v] + objhe[e];
 
                 ps3ella = "ella " +objella[ell] + vn3[v];
-                ps3she = "she " + vnb[v] + objshe[ell];
+                ps3she = "she " + vnb3[v] + objshe[ell];
 
                 ps3eso = "eso " + objeso[it] +vn3[v] ;
-                ps3it = "it " + vnb[v] + objit[it];
+                ps3it = "it " + vnb3[v] + objit[it];
 
                 ps4 =objellos[th] + vn4[v] ;
                 ps4eng = "they " + vnb[v] + objthem[th];
@@ -11813,13 +11070,13 @@ public class Nobles3 {
                 ps2eng = "you " + vnb[v] + " yourself" ;
 
                 ps3 = "él se " + vn3[v] + " a si mismo " ;
-                ps3eng = "he " + vnb[v] + " himself";
+                ps3eng = "he " + vnb3[v] + " himself";
 
                 ps3ella = "ella se " + vn3[v]+ " a si misma ";
-                ps3she = "she " + vnb[v] + " herself";
+                ps3she = "she " + vnb3[v] + " herself";
 
                 ps3eso = "eso se " + vn3[v] + " a si mismo ";
-                ps3it = "it " + vnb[v] + " itself";
+                ps3it = "it " + vnb3[v] + " itself";
 
                 ps4 = "ellos se " + vn4[v] + " a si mismos ";
                 ps4eng = "they " + vnb[v] + " themselves ";
@@ -11908,9 +11165,9 @@ public class Nobles3 {
             case 0:
 
                 ps3 = "se " + vn3[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2];
-                ps3eng = "he " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
-                ps3she = "she " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
-                ps3it = "it " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
+                ps3eng = "he " + vnb3[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
+                ps3she = "she " + vnb3[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
+                ps3it = "it " + vnb3[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
                 ps4eng = "they " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
                 ps1eng= "one " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
                 ps5eng="we " + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2];
@@ -11944,13 +11201,13 @@ public class Nobles3 {
                 ps2eng = "you " + vnb[v];
 
                 ps3 = "él " + vn3[v];
-                ps3eng = "he " + vnb[v];
+                ps3eng = "he " + vnb3[v];
 
                 ps3ella = "ella " + vn3[v];
-                ps3she = "she " + vnb[v];
+                ps3she = "she " + vnb3[v];
 
                 ps3eso = "eso " + vn3[v];
-                ps3it = "it " + vnb[v];
+                ps3it = "it " + vnb3[v];
 
                 ps4 = "ellos " + vn4[v];
                 ps4eng = "they " + vnb[v];

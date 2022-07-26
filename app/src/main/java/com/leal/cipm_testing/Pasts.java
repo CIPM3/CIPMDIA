@@ -6,7 +6,7 @@ public class Pasts {
     }
 
     //verbos base intrans
-    String vib[] = {"go ", "think ", "come ", "look ", "work ",
+    String[] vib = {"go ", "think ", "come ", "look ", "work ",
             "play ", "talk ",
             "run ", "move ", "live ",
             "sit ", "stand ", "understand ",
@@ -16,7 +16,7 @@ public class Pasts {
     };
 
     //verbos intransitivos infinitivos esp
-    String viis[] = {"ir ", "pensar ", "venir ", "mirar ", "trabajar ",
+    String[] viis = {"ir ", "pensar ", "venir ", "mirar ", "trabajar ",
             "jugar ", "platicar ",
             "correr ", "mover ", "vivir ",
             "sentar ", "parar ", "entender ",
@@ -26,7 +26,7 @@ public class Pasts {
     };
 
     //intrans base past
-    String vibpast[] = {"went ", "thought ", "came ", "looked ", "worked ",
+    String[] vibpast = {"went ", "thought ", "came ", "looked ", "worked ",
             "played ", "talked ",
             "ran ", "moved ", "lived ",
             "sat ", "stood ", "understood ",
@@ -37,7 +37,7 @@ public class Pasts {
 
 
     //intrans base past primera persona imperfecto (aba iba)
-    String vibp1[] = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
+    String[] vibp1 = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
             "jugaba ", "platicaba ",
             "corría ", "me movía ", "vivía ",
             "me sentaba ", "me paraba ", "entendía ",
@@ -46,7 +46,7 @@ public class Pasts {
 
     };
     //intrans base past primera persona preterito
-    String vibp1pr[] = {"fui ", "pensé ", "vine ", "miré ", "trabajé ",
+    String[] vibp1pr = {"fui ", "pensé ", "vine ", "miré ", "trabajé ",
             "jugué ", "platiqué ",
             "corrí ", "me moví ", "viví ",
             "me senté ", "me paré ", "entendí ",
@@ -55,7 +55,7 @@ public class Pasts {
 
     };
     //intrans base past segunda persona imperfecto (aba iba)
-    String vibp2[] = {"ibas ", "pensabas ", "venías ", "mirabas ", "trabajabas ",
+    String[] vibp2 = {"ibas ", "pensabas ", "venías ", "mirabas ", "trabajabas ",
             "jugabas ", "platicabas ",
             "corrías ", "te movías ", "vivías ",
             "te sentabas ", "te parabas ", "entendías ",
@@ -65,7 +65,7 @@ public class Pasts {
     };
 
     //intrans base past segunda persona preterito
-    String vibp2pr[] = {"fuiste ", "pensaste ", "veniste ", "miraste ", "trabajaste ",
+    String[] vibp2pr = {"fuiste ", "pensaste ", "veniste ", "miraste ", "trabajaste ",
             "jugaste ", "platicaste ",
             "corriste ", "te moviste ", "viviste ",
             "te sentaste ", "te paraste ", "entendiste ",
@@ -75,7 +75,7 @@ public class Pasts {
     };
 
     //intrans base past tercer persona imperfecto (aba iba)
-    String vibp3[] = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
+    String[] vibp3 = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
             "jugaba ", "platicaba ",
             "corría ", "se movía ", "vivía ",
             "se sentaba ", "se paraba ", "entendía ",
@@ -84,7 +84,7 @@ public class Pasts {
 
     };
     //intrans base past tercer persona preterito
-    String vibp3pr[] = {"fue ", "pensó ", "vino ", "miró ", "trabajó ",
+    String[] vibp3pr = {"fue ", "pensó ", "vino ", "miró ", "trabajó ",
             "jugó ", "platicó ",
             "corrió ", "se movió ", "vivió ",
             "se sentó ", "se paró ", "entendió ",
@@ -94,7 +94,7 @@ public class Pasts {
     };
 
     //intrans base past cuarta persona imperfecto (aba iba)
-    String vibp4[] = {"iban ", "pensaban ", "venían ", "miraban ", "trabajaban ",
+    String[] vibp4 = {"iban ", "pensaban ", "venían ", "miraban ", "trabajaban ",
             "jugaban ", "platicaban ",
             "corrían ", "se movían ", "vivían ",
             "se sentaban ", "se paraban ", "entendían ",
@@ -104,7 +104,7 @@ public class Pasts {
     };
 
     //intrans base past cuarta persona preterito
-    String vibp4pr[] = {"fueron ", "pensaron ", "vinieron ", "miraron ", "trabajaron ",
+    String[] vibp4pr = {"fueron ", "pensaron ", "vinieron ", "miraron ", "trabajaron ",
             "jugaron ", "platicaron ",
             "corrieron ", "se movieron ", "vivieron ",
             "se sentaron ", "se pararon ", "entendieron ",
@@ -113,7 +113,7 @@ public class Pasts {
 
     };
     //intrans base past nosotros 5ta persona imperfecto (aba iba)
-    String vibp5[] = {"ibamos ", "pensabamos ", "veníamos ", "mirabamos ", "trabajabamos ",
+    String[] vibp5 = {"ibamos ", "pensabamos ", "veníamos ", "mirabamos ", "trabajabamos ",
             "jugabamos ", "platicabamos ",
             "corríamos ", "nos movíamos ", "vivíamos ",
             "nos sentabamos ", "nos parabamos ", "entendíamos ",
@@ -122,7 +122,7 @@ public class Pasts {
 
     };
     //intrans base past nosotros 5ta persona preterito
-    String vibp5pr[] = {"fuimos ", "pensamos ", "venimos ", "miramos ", "trabajamos ",
+    String[] vibp5pr = {"fuimos ", "pensamos ", "venimos ", "miramos ", "trabajamos ",
             "jugamos ", "platicamos ",
             "corrimos ", "nos movimos ", "vivimos ",
             "nos sentamos ", "nos paramos ", "entendimos ",
@@ -132,7 +132,7 @@ public class Pasts {
     };
 
     // verbos transitivos base
-    String vtb[] = {"have ", "do ", "say ", "get ", "make ", "know ", "take ", "see ",
+    String[] vtb = {"have ", "do ", "say ", "get ", "make ", "know ", "take ", "see ",
             "want ", "use ", "find ", "give ", "tell ", "call ", "try ", "ask ", "need ", "feel ",
             "leave ", "put ", "keep ", "begin ", "help ", "turn ", "start ", "show ", "hear ",
             "play ", "move ", "believe ", "hold ", "bring ", "write ", "provide ", "lose ", "pay ",
@@ -144,7 +144,7 @@ public class Pasts {
 
 
     // verbos transitivos infinitivos spanish
-    String vtis[] = {"tener ", "hacer ", "decir ", "obtener ", "hacer (make) ", "saber ", "tomar ", "ver ",
+    String[] vtis = {"tener ", "hacer ", "decir ", "obtener ", "hacer (make) ", "saber ", "tomar ", "ver ",
             "querer ", "usar ", "encontrar ", "dar ", "comentar ", "llamar ", "intentar ", "preguntar ", "necesitar ", "sentir ",
             "dejar ", "poner ", "mantener ", "comenzar ", "ayudar ", "voltear ", "comenzar ", "mostrar ", "oir ",
             "jugar ", "mover ", "creer ", "sostener ", "traer ", "escribir ", "proveer ", "perder ", "pagar ",
@@ -154,7 +154,7 @@ public class Pasts {
             "construir ", "cortar ", "matar "
     };
     // verbos transitivos base past
-    String vtbpast[] = {"had ", "did ", "said ", "got ", "made ", "knew ", "took ", "saw ",
+    String[] vtbpast = {"had ", "did ", "said ", "got ", "made ", "knew ", "took ", "saw ",
             "wanted ", "used ", "found ", "gave ", "told ", "called ", "tried ", "asked ", "needed ", "felt ",
             "left ", "put ", "kept ", "begun ", "helped ", "turned ", "started ", "showed ", "heard ",
             "played ", "moved ", "believed ", "held ", "brought ", "wrote ", "provided ", "lost ", "paid ",
@@ -165,7 +165,7 @@ public class Pasts {
     };
 
     // verbos transitivos past primera persona imperfecto
-    String vtbp1[] = {"tenía ", "hacia ", "decía ", "obtenía ", "hacia ", "sabía ", "tomaba ", "veía ",
+    String[] vtbp1 = {"tenía ", "hacia ", "decía ", "obtenía ", "hacia ", "sabía ", "tomaba ", "veía ",
             "quería ", "usaba ", "encontraba ", "daba ", "comentaba ", "llamaba ", "intentaba ", "preguntaba ", "necesitaba ",
             "sentía ",
             "dejaba ", "ponía ", "mantenía ", "comenzaba ", "ayudaba ", "volteaba ", "empezaba ", "mostraba ", "oía ",
@@ -176,7 +176,7 @@ public class Pasts {
             "construía ", "cortaba ", "mataba "
     };
     // verbos transitivos past primera persona preterito
-    String vtbp1pr[] = {"tuve ", "hice ", "dije ", "obtuve ", "hice ", "supe ", "tomé ", "ví ",
+    String[] vtbp1pr = {"tuve ", "hice ", "dije ", "obtuve ", "hice ", "supe ", "tomé ", "ví ",
             "quise ", "usé ", "encontré ", "dí ", "comenté ", "llamé ", "intenté ", "pregunté ", "necesité ",
             "sentí ",
             "dejé ", "puse ", "mantuve ", "comenzé ", "ayudé ", "volteé ", "empezé ", "mostré ", "oí ",
@@ -188,7 +188,7 @@ public class Pasts {
     };
 
     // verbos transitivos past segunda persona imperfecto
-    String vtbp2[] = {"tenías ", "hacias ", "decías ", "obtenías ", "hacias ", "sabías ", "tomabas ", "veías ",
+    String[] vtbp2 = {"tenías ", "hacias ", "decías ", "obtenías ", "hacias ", "sabías ", "tomabas ", "veías ",
             "querías ", "usabas ", "encontrabas ", "dabas ", "comentabas ", "llamabas ", "intentabas ", "preguntabas ", "necesitabas ",
             "sentías ",
             "dejabas ", "ponías ", "mantenías ", "comenzabas ", "ayudabas ", "volteabas ", "empezabas ", "mostrabas ", "oías ",
@@ -200,7 +200,7 @@ public class Pasts {
     };
 
     // verbos transitivos past segunda persona preterito
-    String vtbp2pr[] = {"tuviste ", "hiciste ", "dijiste ", "obtuviste ", "hiciste ", "supiste ", "tomaste ", "víste ",
+    String[] vtbp2pr = {"tuviste ", "hiciste ", "dijiste ", "obtuviste ", "hiciste ", "supiste ", "tomaste ", "víste ",
             "quisiste ", "usaste ", "encontraste ", "díste ", "comentaste ", "llamaste ", "intentaste ", "preguntaste ", "necesitaste ",
             "sentíste ",
             "dejaste ", "pusiste ", "mantuviste ", "comenzaste ", "ayudaste ", "volteaste ", "empezaste ", "mostraste ", "oíste ",
@@ -213,7 +213,7 @@ public class Pasts {
 
 
     // verbos transitivos past tercera persona imperfecto
-    String vtbp3[] = {"tenía ", "hacia ", "decía ", "obtenía ", "hacia ", "sabía ", "tomaba ", "veía ",
+    String[] vtbp3 = {"tenía ", "hacia ", "decía ", "obtenía ", "hacia ", "sabía ", "tomaba ", "veía ",
             "quería ", "usaba ", "encontraba ", "daba ", "comentaba ", "llamaba ", "intentaba ", "preguntaba ", "necesitaba ",
             "sentía ",
             "dejaba ", "ponía ", "mantenía ", "comenzaba ", "ayudaba ", "volteaba ", "empezaba ", "mostraba ", "oía ",
@@ -225,7 +225,7 @@ public class Pasts {
     };
 
     // verbos transitivos past tercera persona preterito
-    String vtbp3pr[] = {"tuvo ", "hizo ", "dijo ", "obtuvo ", "hizo ", "supo ", "tomó ", "vío ",
+    String[] vtbp3pr = {"tuvo ", "hizo ", "dijo ", "obtuvo ", "hizo ", "supo ", "tomó ", "vío ",
             "quiso ", "usó ", "encontró ", "dio ", "comentó ", "llamó ", "intentó ", "preguntó ", "necesitó ",
             "sintió ",
             "dejó ", "puso ", "mantuvo ", "comenzo ", "ayudó ", "volteo ", "empezó ", "mostró ", "oyó ",
@@ -237,7 +237,7 @@ public class Pasts {
     };
 
     // verbos transitivos past ellos , 4ta persona imperfecto
-    String vtbp4[] = {"tenían ", "hacian ", "decían ", "obtenían ", "hacian ", "sabían ", "tomaban ", "veían ",
+    String[] vtbp4 = {"tenían ", "hacian ", "decían ", "obtenían ", "hacian ", "sabían ", "tomaban ", "veían ",
             "querían ", "usaban ", "encontraban ", "daban ", "comentaban ", "llamaban ", "intentaban ", "preguntaban ", "necesitaban ",
             "sentían ",
             "dejaban ", "ponían ", "mantenían ", "comenzaban ", "ayudaban ", "volteaban ", "empezaban ", "mostraban ", "oían ",
@@ -250,7 +250,7 @@ public class Pasts {
 
 
     // verbos transitivos past 4ta persona preterito
-    String vtbp4pr[] = {"tuvieron ", "hicieron ", "dijeron ", "obtuvieron ", "hicieron ", "supieron ", "tomaron ", "vieron ",
+    String[] vtbp4pr = {"tuvieron ", "hicieron ", "dijeron ", "obtuvieron ", "hicieron ", "supieron ", "tomaron ", "vieron ",
             "querían ", "usaron ", "encontraron ", "dieron ", "comentaron ", "llamaron ", "intentaron ", "preguntaron ", "necesitaron ",
             "sintieron ",
             "dejaron ", "pusieron ", "mantuvieron ", "comenzaron ", "ayudaron ", "voltearon ", "empezaron ", "mostraron ", "oyeron ",
@@ -262,7 +262,7 @@ public class Pasts {
     };
 
     // verbos transitivos past nosotros , 5ta persona imperfecto
-    String vtbp5[] = {"teníamos ", "hacíamos ", "decíamos ", "obteníamos ", "hacíamos ", "sabíamos ", "tomabamos ", "veíamos ",
+    String[] vtbp5 = {"teníamos ", "hacíamos ", "decíamos ", "obteníamos ", "hacíamos ", "sabíamos ", "tomabamos ", "veíamos ",
             "queríamos ", "usabamos ", "encontrabamos ", "dabamos ", "comentabamos ", "llamabamos ", "intentabamos ", "preguntabamos ", "necesitabamos ",
             "sentíamos ",
             "dejabamos ", "poníamos ", "manteníamos ", "comenzabamos ", "ayudabamos ", "volteabamos ", "empezabamos ", "mostrabamos ", "oíamos ",
@@ -275,7 +275,7 @@ public class Pasts {
 
 
     // verbos transitivos past 5ta nosotros persona preterito
-    String vtbp5pr[] = {"tuvimos ", "hicimos ", "dijimos ", "obtuvimos ", "hicimos ", "supimos ", "tomamos ", "vimos ",
+    String[] vtbp5pr = {"tuvimos ", "hicimos ", "dijimos ", "obtuvimos ", "hicimos ", "supimos ", "tomamos ", "vimos ",
             "quisimos ", "usamos ", "encontramos ", "dimos ", "comentamos ", "llamamos ", "intentamos ", "preguntamos ", "necesitamos ",
             "sentimos ",
             "dejamos ", "pusimos ", "mantuvimos ", "comenzamos ", "ayudamos ", "volteamos ", "empezamos ", "mostramos ", "oímos ",
@@ -288,7 +288,7 @@ public class Pasts {
 
 
     //verbos base intrans future primera pesrona
-    String vibf1[] = {"iré ", "pensaré ", "vendré ", "miraré ", "trabajaré ",
+    String[] vibf1 = {"iré ", "pensaré ", "vendré ", "miraré ", "trabajaré ",
             "jugaré ", "platicaré ",
             "correré ", "moveré ", "viviré ",
             "me sentaré ", "me pararé ", "entenderé ",
@@ -297,7 +297,7 @@ public class Pasts {
     };
 
     //verbos base intrans future segunda pesrona
-    String vibf2[] = {"irás ", "pensarás ", "vendrás ", "mirarás ", "trabajarás ",
+    String[] vibf2 = {"irás ", "pensarás ", "vendrás ", "mirarás ", "trabajarás ",
             "jugarás ", "platicarás ",
             "correrás ", "moverás ", "vivirás ",
             "te sentarás ", "te pararás ", "entenderás ",
@@ -306,7 +306,7 @@ public class Pasts {
     };
 
     //verbos base intrans future tercera pesrona
-    String vibf3[] = {"irá ", "pensará ", "vendrá ", "mirará ", "trabajará ",
+    String[] vibf3 = {"irá ", "pensará ", "vendrá ", "mirará ", "trabajará ",
             "jugará ", "platicará ",
             "correrá ", "moverá ", "vivirá ",
             "se sentará ", "se parará ", "entenderá ",
@@ -314,7 +314,7 @@ public class Pasts {
             "se quedará ", "se caerá ",
     };
     //verbos base intrans future cuarta, ellos
-    String vibf4[] = {"irán ", "pensarán ", "vendrán ", "mirarán ", "trabajarán ",
+    String[] vibf4 = {"irán ", "pensarán ", "vendrán ", "mirarán ", "trabajarán ",
             "jugarán ", "platicarán ",
             "correrán ", "moverán ", "vivirán ",
             "se sentarán ", "se pararán ", "entenderán ",
@@ -323,7 +323,7 @@ public class Pasts {
     };
 
     //verbos base intrans future quinta, nosotros
-    String vibf5[] = {"iremos ", "pensaremos ", "vendremos ", "miraremos ", "trabajaremos ",
+    String[] vibf5 = {"iremos ", "pensaremos ", "vendremos ", "miraremos ", "trabajaremos ",
             "jugaremos ", "platicaremos ",
             "correremos ", "moveremos ", "viviremos ",
             "nos sentaremos ", "nos pararemos ", "entenderemos ",
@@ -332,7 +332,7 @@ public class Pasts {
     };
 
     // verbos transitivos base futuro primera persona
-    String vtbf1[] = {"tendré ", "haré ", "diré ", "obtendré ", "haré ", "sabré ", "tomaré ", "veré ",
+    String[] vtbf1 = {"tendré ", "haré ", "diré ", "obtendré ", "haré ", "sabré ", "tomaré ", "veré ",
             "querré ", "usaré ", "encontraré ", "daré ", "comentaré ", "llamaré ", "intentaré ", "preguntaré ", "necesitaré ",
             "sentiré ",
             "dejaré ", "pondré ", "mantendré ", "empezaré ", "ayudaré ", "voltearé ", "empezaré ", "mostraré ", "oiré ",
@@ -344,7 +344,7 @@ public class Pasts {
     };
 
     // verbos transitivos base futuro primera persona
-    String vtbf2[] = {"tendrás ", "harás ", "dirás ", "obtendrás ", "harás ", "sabrás ", "tomarás ", "verás ",
+    String[] vtbf2 = {"tendrás ", "harás ", "dirás ", "obtendrás ", "harás ", "sabrás ", "tomarás ", "verás ",
             "querrás ", "usarás ", "encontrarás ", "darás ", "comentarás ", "llamarás ", "intentarás ", "preguntarás ",
             "necesitarás ",
             "sentirás ",
@@ -357,7 +357,7 @@ public class Pasts {
     };
 
     // verbos transitivos base futuro tercera persona
-    String vtbf3[] = {"tendrá ", "hará ", "dirá ", "obtendrá ", "hará ", "sabrá ", "tomará ", "verá ",
+    String[] vtbf3 = {"tendrá ", "hará ", "dirá ", "obtendrá ", "hará ", "sabrá ", "tomará ", "verá ",
             "querrá ", "usará ", "encontrará ", "dará ", "comentará ", "llamará ", "intentará ", "preguntará ",
             "necesitará ",
             "sentirá ",
@@ -370,7 +370,7 @@ public class Pasts {
     };
 
     // verbos transitivos base futuro cuarta persona
-    String vtbf4[] = {"tendrán ", "harán ", "dirán ", "obtendrán ", "harán ", "sabrán ", "tomarán ", "verán ",
+    String[] vtbf4 = {"tendrán ", "harán ", "dirán ", "obtendrán ", "harán ", "sabrán ", "tomarán ", "verán ",
             "querrán ", "usarán ", "encontrarán ", "darán ", "comentarán ", "llamarán ", "intentarán ", "preguntarán ",
             "necesitarán ",
             "sentirán ",
@@ -382,7 +382,7 @@ public class Pasts {
             "construirán ", "cortarán ", "matarán "
     };
     // verbos transitivos base quinta  persona
-    String vtbf5[] = {"tendrán ", "harán ", "dirán ", "obtendrán ", "harán ", "sabrán ", "tomarán ", "verán ",
+    String[] vtbf5 = {"tendrán ", "harán ", "dirán ", "obtendrán ", "harán ", "sabrán ", "tomarán ", "verán ",
             "querrán ", "usarán ", "encontrarán ", "darán ", "comentarán ", "llamarán ", "intentarán ", "preguntarán ",
             "necesitarán ",
             "sentirán ",
@@ -394,7 +394,7 @@ public class Pasts {
             "construirán ", "cortarán ", "matarán "
     };
     // verbos transitivos base sexta  persona
-    String vtbf6[] = {"tendremos ", "haremos ", "diremos ", "obtendremos ", "haremos ", "sabremos ", "tomaremos ", "veremos ",
+    String[] vtbf6 = {"tendremos ", "haremos ", "diremos ", "obtendremos ", "haremos ", "sabremos ", "tomaremos ", "veremos ",
             "querremos ", "usaremos ", "encontraremos ", "daremos ", "comentaremos ", "llamaremos ", "intentaremos ", "preguntaremos ",
             "necesitaremos ", "sentiremos ",
             "dejaremos ", "pondremos ", "mantendremos ", "empezaremos ", "ayudaremos ", "voltearemos ", "empezaremos ", "mostraremos ", "oiremos ",
@@ -407,7 +407,7 @@ public class Pasts {
 
 
     //verbos base intrans would primera pesrona
-    String vibw1[] = {"iría ", "pensaría ", "vendría ", "miraria ", "trabajaría ",
+    String[] vibw1 = {"iría ", "pensaría ", "vendría ", "miraria ", "trabajaría ",
             "jugaría ", "platicaría ",
             "correría ", "movería ", "viviría ",
             "me sentaría ", "me pararía ", "entendería ",
@@ -416,7 +416,7 @@ public class Pasts {
     };
 
     //verbos base intrans would primera pesrona
-    String vibw2[] = {"irías ", "pensarías ", "vendrías ", "mirarias ", "trabajarías ",
+    String[] vibw2 = {"irías ", "pensarías ", "vendrías ", "mirarias ", "trabajarías ",
             "jugarías ", "platicarías ",
             "correrías ", "moverías ", "vivirías ",
             "te sentarías ", "te pararías ", "entenderías ",
@@ -425,7 +425,7 @@ public class Pasts {
     };
 
     //verbos base intrans would tercera pesrona
-    String vibw3[] = {"iría ", "pensaría ", "vendría ", "miraria ", "trabajaría ",
+    String[] vibw3 = {"iría ", "pensaría ", "vendría ", "miraria ", "trabajaría ",
             "jugaría ", "platicaría ",
             "correría ", "movería ", "viviría ",
             "se sentaría ", "se pararía ", "entendería ",
@@ -433,7 +433,7 @@ public class Pasts {
             "se quedaría ", "se caería ",
     };
     //verbos base intrans would cuarta pesrona
-    String vibw4[] = {"irían ", "pensarían ", "vendrían ", "mirarian ", "trabajarían ",
+    String[] vibw4 = {"irían ", "pensarían ", "vendrían ", "mirarian ", "trabajarían ",
             "jugarían ", "platicarían ",
             "correrían ", "moverían ", "vivirían ",
             "se sentarían ", "se pararían ", "entenderían ",
@@ -442,7 +442,7 @@ public class Pasts {
     };
 
     //verbos base intrans would quinta pesrona
-    String vibw5[] = {"iríamos ", "pensaríamos ", "vendríamos ", "mirariamos ", "trabajaríamos ",
+    String[] vibw5 = {"iríamos ", "pensaríamos ", "vendríamos ", "mirariamos ", "trabajaríamos ",
             "jugaríamos ", "platicaríamos ",
             "correríamos ", "moveríamos ", "viviríamos ",
             "nos sentaríamos ", "nos pararíamos ", "entenderíamos ",
@@ -451,7 +451,7 @@ public class Pasts {
     };
 
     // verbos transitivos base would primera persona
-    String vtbw1y3[] = {"tendría ", "haría ", "diría ", "obtendría ", "haría ", "sabría ", "tomaría ", "vería ",
+    String[] vtbw1y3 = {"tendría ", "haría ", "diría ", "obtendría ", "haría ", "sabría ", "tomaría ", "vería ",
             "querría ", "usaría ", "encontraría ", "daría ", "comentaría ", "llamaría ", "intentaría ", "preguntaría ", "necesitaría ",
             "sentiría ",
             "dejaría ", "pondría ", "mantendría ", "empezaría ", "ayudaría ", "voltearía ", "empezaría ", "mostraría ", "oiría ",
@@ -463,7 +463,7 @@ public class Pasts {
     };
 
     // verbos transitivos base would segunda persona
-    String vtbw2[] = {"tendrías ", "harías ", "dirías ", "obtendrías ", "harías ", "sabrías ", "tomarías ", "verías ",
+    String[] vtbw2 = {"tendrías ", "harías ", "dirías ", "obtendrías ", "harías ", "sabrías ", "tomarías ", "verías ",
             "querrías ", "usarías ", "encontrarías ", "darías ", "comentarías ", "llamarías ", "intentarías ", "preguntarías ", "necesitarías ",
             "sentirías ",
             "dejarías ", "pondrías ", "mantendrías ", "empezarías ", "ayudarías ", "voltearías ", "empezarías ", "mostrarías ", "oirías ",
@@ -474,7 +474,7 @@ public class Pasts {
             "construirías ", "cortarías ", "matarías "
     };
     // verbos transitivos base would cuarta persona
-    String vtbw4[] = {"tendrían ", "harían ", "dirían ", "obtendrían ", "harían ", "sabrían ", "tomarían ", "verían ",
+    String[] vtbw4 = {"tendrían ", "harían ", "dirían ", "obtendrían ", "harían ", "sabrían ", "tomarían ", "verían ",
             "querrían ", "usarían ", "encontrarían ", "darían ", "comentarían ", "llamarían ", "intentarían ", "preguntarían ", "necesitarían ",
             "sentirían ",
             "dejarían ", "pondrían ", "mantendrían ", "empezarían ", "ayudarían ", "voltearían ", "empezarían ", "mostrarían ", "oirían ",
@@ -486,7 +486,7 @@ public class Pasts {
     };
 
     // verbos transitivos base would cuarta persona
-    String vtbw5[] = {"tendríamos ", "haríamos ", "diríamos ", "obtendríamos ", "haríamos ", "sabríamos ", "tomaríamos ", "veríamos ",
+    String[] vtbw5 = {"tendríamos ", "haríamos ", "diríamos ", "obtendríamos ", "haríamos ", "sabríamos ", "tomaríamos ", "veríamos ",
             "querríamos ", "usaríamos ", "encontraríamos ", "daríamos ", "comentaríamos ", "llamaríamos ", "intentaríamos ", "preguntaríamos ", "necesitaríamos ",
             "sentiríamos ",
             "dejaríamos ", "pondríamos ", "mantendríamos ", "empezaríamos ", "ayudaríamos ", "voltearíamos ", "empezaríamos ", "mostraríamos ", "oiríamos ",
@@ -500,7 +500,7 @@ public class Pasts {
     // aqui abajo vamos a poner los subjuntivos
 
     //verbos intransitivos subjuntivos primera persona
-    String vis1[] = {"vaya ", "piense ", "venga ", "mire ", "trabaje ",
+    String[] vis1 = {"vaya ", "piense ", "venga ", "mire ", "trabaje ",
             "juege ", "platique ",
             "corra ", "mueva ", "viva ",
             "me siente ", "me pare ", "entienda ",
@@ -509,7 +509,7 @@ public class Pasts {
 
     };
     //verbos intransitivos subjuntivos segunda persona
-    String vis2[] = {"vayas ", "pienses ", "vengas ", "mires ", "trabajes ",
+    String[] vis2 = {"vayas ", "pienses ", "vengas ", "mires ", "trabajes ",
             "jueges ", "platiques ",
             "corras ", "muevas ", "vivas ",
             "te sientes ", "te pares ", "entiendas ",
@@ -520,7 +520,7 @@ public class Pasts {
 
 
     //verbos intransitivos subjuntivos tercera
-    String vis3[] = {"vaya ", "piense ", "venga ", "mire ", "trabaje ",
+    String[] vis3 = {"vaya ", "piense ", "venga ", "mire ", "trabaje ",
             "juege ", "platique ",
             "corra ", "mueva ", "viva ",
             "se siente ", "se pare ", "entienda ",
@@ -529,7 +529,7 @@ public class Pasts {
 
     };
     //verbos intransitivos subjuntivos cuarta
-    String vis4[] = {"vayan ", "piensen ", "vengan ", "miren ", "trabajen ",
+    String[] vis4 = {"vayan ", "piensen ", "vengan ", "miren ", "trabajen ",
             "juegen ", "platiquen ",
             "corran ", "muevan ", "vivan ",
             "se sienten ", "se paren ", "entiendan ",
@@ -538,7 +538,7 @@ public class Pasts {
 
     };
     //verbos intransitivos subjuntivos quinta
-    String vis5[] = {"vayamos ", "pensemos ", "vengamos ", "miremos ", "trabajemos ",
+    String[] vis5 = {"vayamos ", "pensemos ", "vengamos ", "miremos ", "trabajemos ",
             "jugemos ", "platiquemos ",
             "corramos ", "movamos ", "vivamos ",
             "nos sentemos ", "nos paremos ", "entendamos ",
@@ -549,7 +549,7 @@ public class Pasts {
 
 
     // verbos transitivos subjuntivos primera persona
-    String vts1[] = {"tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
+    String[] vts1 = {"tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
             "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
             "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
             "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
@@ -560,7 +560,7 @@ public class Pasts {
     };
 
     // verbos transitivos subjuntivos segunda persona
-    String vts2[] = {"tengas ", "hagas ", "digas ", "obtengas ", "hagas (make) ", "sepas ", "tomes ", "veas ",
+    String[] vts2 = {"tengas ", "hagas ", "digas ", "obtengas ", "hagas (make) ", "sepas ", "tomes ", "veas ",
             "quieras ", "uses ", "encuentres ", "des ", "comentes ", "llames ", "intentes ", "preguntes ", "necesites ", "sientas ",
             "dejes (abandonar) ", "pongas ", "mantengas ", "comiences ", "ayudes ", "voltees ", "empieces ", "muestres ", "oigas ",
             "jueges ", "muevas ", "creas ", "sostengas ", "traigas ", "escribas ", "proveas ", "pierdas ", "pagues ",
@@ -571,7 +571,7 @@ public class Pasts {
     };
 
     // verbos transitivos subjuntivos tercera persona
-    String vts3[] = {"tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
+    String[] vts3 = {"tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
             "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
             "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
             "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
@@ -581,7 +581,7 @@ public class Pasts {
             "construya ", "corte ", "mate "
     };
     // verbos transitivos subjuntivos cuarta persona
-    String vts4[] = {"tengan ", "hagan ", "digan ", "obtengan ", "hagan (make) ", "sepan ", "tomen ", "vean ",
+    String[] vts4 = {"tengan ", "hagan ", "digan ", "obtengan ", "hagan (make) ", "sepan ", "tomen ", "vean ",
             "quieran ", "usen ", "encuentren ", "den ", "comenten ", "llamen ", "intenten ", "pregunten ", "necesiten ", "sientan ",
             "dejen (abandonar) ", "pongan ", "mantengan ", "comiencen ", "ayuden ", "volteen ", "empiecen ", "muestren ", "oigan ",
             "juegen ", "muevan ", "crean ", "sostengan ", "traigan ", "escriban ", "provean ", "pierdan ", "paguen ",
@@ -593,7 +593,7 @@ public class Pasts {
 
 
     // verbos transitivos subjuntivos quinta persona
-    String vts5[] = {"tengamos ", "hagamos ", "digamos ", "obtengamos ", "hagamos (make) ", "sepamos ", "tomemos ", "veamos ",
+    String[] vts5 = {"tengamos ", "hagamos ", "digamos ", "obtengamos ", "hagamos (make) ", "sepamos ", "tomemos ", "veamos ",
             "quieramos ", "usemos ", "encontremos ", "demos ", "comentemos ", "llamemos ", "intentemos ", "preguntemos ", "necesitemos ", "sintamos ",
             "dejemos (abandonar) ", "pongamos ", "mantengamos ", "comiencemos ", "ayudemos ", "volteemos ", "empecemos ", "mostremos ", "oigamos ",
             "jugemos ", "movamos ", "creemos ", "sostengamos ", "traigamos ", "escribamos ", "proveamos ", "perdamos ", "paguemos ",
