@@ -32,14 +32,14 @@ public class Oo3 {
     // verbos orientados a objetos
 
     String vnb[] = {"make ", "keep ", "lift ", "hit ", "shoot ", "move ", "buy ", "display ",
-            "search for", "remove ", "sell ", "reserve ", "break ", "cover "
+            "search for ", "remove ", "sell ", "reserve ", "break ", "cover "
     };
     String vnbs[] = {"hacer ", "guardar ", "levantar ", "golpear ", "disparar ",
             "moverte ", "comprar ", "mostrar ", "buscar ", "quitar ", "vender ",
             "reservar ", "romper ", "cubrir "
     };
     String vn3[] = {"makes ", "keeps ", "lifts ", "hits ", "shoots ", "moves ", "buys ",
-            "displays ", "searches for", "removes ", "sells ", "reserves ", "breaks ",
+            "displays ", "searches for ", "removes ", "sells ", "reserves ", "breaks ",
             "covers "
     };
 
@@ -65,7 +65,7 @@ public class Oo3 {
     };
 
     String vnbc[] = {"making ", "keeping ", "lifting ", "hitting ", "shooting ", "moving ",
-            "buying ", "displaying ", "searching for", "removing ", "selling ", "reserving ",
+            "buying ", "displaying ", "searching for ", "removing ", "selling ", "reserving ",
             "breaking ", "covering "
     };
     String vnbcs[] = {"haciendo ", "guardando ", "levantando ", "golpeando ", "disparando ",
@@ -75,15 +75,15 @@ public class Oo3 {
 
     // verbos participio inglés
     String vpeng[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for", "removed ", "sold ", "reserved ", "broken ", "covered "
+            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
     };
     // verbos participio inglés Masculino
     String vpengM[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for", "removed ", "sold ", "reserved ", "broken ", "covered "
+            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
     };
     // verbos participio inglés Femenino
     String vpengF[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for", "removed ", "sold ", "reserved ", "broken ", "covered "
+            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
     };
 
     // participios esp
@@ -103,7 +103,7 @@ public class Oo3 {
     };
 
     String vnbp[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for", "removed ", "sold ", "reserved ", "broken ", "covered "
+            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
     };
 
     String ps1pre[] = {"hice ", "guardé ", "levanté ", "golpeé ", "disparé ",
