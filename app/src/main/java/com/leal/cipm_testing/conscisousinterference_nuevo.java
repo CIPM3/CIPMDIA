@@ -172,6 +172,16 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 //clickbb1();
                 break;
 
+            case "Kot Fishing 2":
+                // video completo con los 5 diferentes temas
+                Uri urik2 = Uri.parse("https://adrianlealcaldera.com/kotfishing2Clip.mp4");
+                vv.setVideoURI(urik2);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+
+                //clickbb1();
+                break;
                 //LUIS
 
         }
@@ -203,6 +213,14 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r3 = "i like beer don't you like beek i mean i love beer";
                 r4 = "I just got one sweet jean vicent, i'm back";
                 r5 = "that was quick talking about hank's the man damn go fishing magician";
+                break;
+
+            case "Kot Fishing 2":
+                r1 = "looks like they're hungry for worms today pass me one, will you hank";
+                r2 = "what's the matter batteries go dead on your electric spinner";
+                r3 = "Wo hank what you got there, blood dough balls";
+                r4 = "hank only fishes with worms why anything else would be cheating";
+                r5 = "";
                 break;
         }
 
@@ -298,6 +316,43 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
                         Uri uri5 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp5.mp4");
                         vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+
+            case "Kot Fishing 2":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp1.mp4");
+                        vv.setVideoURI(uri);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp4.mp4");
+                        vv.setVideoURI(uri4);
                         vv.setMediaController(new MediaController(this));
                         vv.requestFocus();
                         vv.start();
