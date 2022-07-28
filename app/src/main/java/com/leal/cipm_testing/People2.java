@@ -7,7 +7,7 @@ public class People2 {
 
     //with, at, during,through, in,behind, beyond,
     //estos frases preposicionales van con este tipo de verbo
-    String vnbs[] = {"alentar ", "reconocer ", "introducir ", "asegurar ", "justificar ", "consultar ",
+    String vnbs[] = {"alentar ", "reconocer ", "introducir ", "asegurar ", "consultar ", "justificar ",
             "convencer ", "ignorar ", "advertir ", "acusar ", "admirar ", "criticar ", "informar ",
             "persuadir ", "recordar ", "ayudar "
     };
@@ -15,200 +15,186 @@ public class People2 {
 
     String vnb[] = {"encourage ", "recognize ", "introduce ", "assure ", "consult ", "justify ",
             "convince ", "ignore ", "warn ", "accuse ", "admire ", "criticize ", "inform ",
-            "persuade ", "remind ", "help "
+            "persuade ", "remember ", "help "
     };
     String vn3[] = {"encourages ", "recognizes ", "introduces ", "assures ", "consults ", "justifies ",
             "convinces ", "ignores ", "warns ", "accuses ", "admires ", "criticizes ", "informs ",
-            "persuades ", "reminds ", "helps "
+            "persuades ", "remembers ", "helps "
     };
 
-    String vn1[] = {"aliento ", "reconozco ", "introduzco ", "aseguro ", "justifico ", "consulto ",
+    String vn1[] = {"aliento ", "reconozco ", "introduzco ", "aseguro ", "consulto ", "justifico ",
             "convenzo ", "ignoro ", "advierto ", "acuso ", "admiro ", "critico ", "informo ",
             "persuado ", "recuerdo ", "ayudo "
     };
-    String vn2[] = {"alientas ", "reconoces ", "introduces ", "aseguras ", "justificas ", "consultas ",
+    String vn2[] = {"alientas ", "reconoces ", "introduces ", "aseguras ", "consultas ", "justificas ",
             "convences ", "ignoras ", "adviertes ", "acusas ", "admiras ", "criticas ", "informas ",
             "persuades ", "recuerdas ", "ayudas "
     };
-    String vnb3[] = {"alienta ", "reconoce ", "introduce ", "asegura ", "justifica ", "consulta ",
+    String vnb3[] = {"alienta ", "reconoce ", "introduce ", "asegura ", "consulta ", "justifica ",
             "convence ", "ignora ", "advierte ", "acusa ", "admira ", "critica ", "informa ",
             "persuade ", "recuerda ", "ayuda "
     };
-    String vn4[] = {"alientan ", "reconocen ", "introducen ", "aseguran ", "justifican ", "consultan ",
+    String vn4[] = {"alientan ", "reconocen ", "introducen ", "aseguran ", "consultan ", "justifican ",
             "convencen ", "ignoran ", "advierten ", "acusan ", "admiran ", "critican ", "informan ",
             "persuaden ", "recuerdan ", "ayudan "
     };
-    String vn5[] = {"alentamos ", "reconocemos ", "introducimos ", "aseguramos ", "justificamos ",
-            "consultamos ", "convencemos ", "ignoramos ", "advertimos ", "acusamos ", "admiramos ",
+    String vn5[] = {"alentamos ", "reconocemos ", "introducimos ", "aseguramos ", "consultamos ",
+            "justificamos ", "convencemos ", "ignoramos ", "advertimos ", "acusamos ", "admiramos ",
             "criticamos ", "informamos ", "persuadimos ", "recordamos ", "ayudamos "
     };
 
-    String vnbcs[] = {"alentando ", "reconociendo ", "introduciendo ", "asegurando ", "justificando ",
-            "consultando ", "convenciendo ", "ignorando ", "advirtiendo ", "acusando ", "admirando ",
+    String vnbcs[] = {"alentando ", "reconociendo ", "introduciendo ", "asegurando ", "consultando ",
+            "justificando ", "convenciendo ", "ignorando ", "advirtiendo ", "acusando ", "admirando ",
             "criticando ", "informando ", "persuadiendo ", "recordando ", "ayudando "
     };
-    String vnbc[] = {"encouraging ", "recongnizing ", "introducing ", "assuring ", "justifying ",
-            "consulting ", "convincing ", "ignoring ", "warning ", "accusing ", "admiring ",
-            "criticizing ", "informing ", "persuading ", "reminding ", "helping "
+    String vnbc[] = {"encouraging ", "recongnizing ", "introducing ", "assuring ", "consulting ",
+            "justifying ", "convincing ", "ignoring ", "warning ", "accusing ", "admiring ",
+            "criticizing ", "informing ", "persuading ", "remembering ", "helping "
     };
 
     // verbos participio esp
-    String vpsp[] = {"alentado ", "reconocido ", "introducido ", "asegurado ", "justificado ",
-            "consultado ", "convencido ", "ignorado ", "advertido ", "acusado ", "admirado ",
+    String vpsp[] = {"alentado ", "reconocido ", "introducido ", "asegurado ", "consultado ",
+            "justificado ", "convencido ", "ignorado ", "advertido ", "acusado ", "admirado ",
             "criticado ", "informado ", "persuadido ", "recordado ", "ayudado "
-    };
-    String vpspM[] = {"alentado ", "reconocido ", "introducido ", "asegurado ", "justificado ",
-            "consultado ", "convencido ", "ignorado ", "advertido ", "acusado ", "admirado ",
-            "criticado ", "informado ", "persuadido ", "recordado ", "ayudado "
-    };
-    String vpspF[] = {"alentada ", "reconocida ", "introducida ", "asegurada ", "justificada ",
-            "consultada ", "convencida ", "ignorada ", "advertida ", "acusada ", "admirada ",
-            "criticada ", "informada ", "persuadida ", "recordada ", "ayudada "
     };
 
-    String vpeng[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "justified ",
-            "consulted ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
-            "criticized ", "informed ", "persuaded ", "reminded ", "helped "
+
+    String vpeng[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "consulted ",
+            "justified ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
+            "criticized ", "informed ", "persuaded ", "remembered ", "helped "
     };
-    String vpengM[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "justified ",
-            "consulted ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
-            "criticized ", "informed ", "persuaded ", "reminded ", "helped "
-    };
-    String vpengF[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "justified ",
-            "consulted ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
-            "criticized ", "informed ", "persuaded ", "reminded ", "helped "
-    };
+
 
     //verbos base en pasado
-    String vnbp[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "justified ",
-            "consulted ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
-            "criticized ", "informed ", "persuaded ", "reminded ", "helped "
+    String vnbp[] = {"encouraged ", "recongnized ", "introduced ", "assured ", "consulted ",
+            "justified ", "convinced ", "ignored ", "warned ", "accused ", "admired ",
+            "criticized ", "informed ", "persuaded ", "remembered ", "helped "
     };
 
 
     //pasados
-    String ps1pre[] = {"alenté ", "reconocí ", "introduje ", "aseguré ", "justifiqué ",
-            "consulté ", "convencí ", "ignoré ", "advertí ", "acusé ", "admiré ",
+    String ps1pre[] = {"alenté ", "reconocí ", "introduje ", "aseguré ", "consulté ",
+            "justifiqué ", "convencí ", "ignoré ", "advertí ", "acusé ", "admiré ",
             "critiqué ", "informé ", "persuadí ", "recordé ", "ayudé "
     };
-    String ps1imp[] = {"alentaba ", "reconocía ", "introducía ", "aseguraba ", "justificaba ",
-            "consultaba ", "convencía ", "ignoraba ", "advertía ", "acusaba ", "admiraba ",
+    String ps1imp[] = {"alentaba ", "reconocía ", "introducía ", "aseguraba ", "consultaba ",
+            "justificaba ", "convencía ", "ignoraba ", "advertía ", "acusaba ", "admiraba ",
             "criticaba ", "informaba ", "persuadía ", "recordaba ", "ayudaba "
     };
-    String ps2pre[] = {"alentaste ", "reconociste ", "introduciste ", "aseguraste ", "justificaste ",
-            "consultaste ", "convenciste ", "ignoraste ", "advertiste ", "acusaste ", "admiraste ",
+    String ps2pre[] = {"alentaste ", "reconociste ", "introduciste ", "aseguraste ", "consultaste ",
+            "justificaste ", "convenciste ", "ignoraste ", "advertiste ", "acusaste ", "admiraste ",
             "criticaste ", "informaste ", "persuadiste ", "recordaste ", "ayudaste "
     };
-    String ps2imp[] = {"alentabas ", "reconocías ", "introducías ", "asegurabas ", "justificabas ",
-            "consultabas ", "convencías ", "ignorabas ", "advertías ", "acusabas ", "admirabas ",
+    String ps2imp[] = {"alentabas ", "reconocías ", "introducías ", "asegurabas ", "consultabas ",
+            "justificabas ", "convencías ", "ignorabas ", "advertías ", "acusabas ", "admirabas ",
             "criticabas ", "informabas ", "persuadías ", "recordabas ", "ayudabas "
     };
-    String ps3p[] = {"alentó ", "reconoció ", "introdujo ", "aseguró ", "justificó ",
-            "consultó ", "convenció ", "ignoró ", "advirtió ", "acusó ", "admiró ",
+    String ps3p[] = {"alentó ", "reconoció ", "introdujo ", "aseguró ", "consultó ",
+            "justificó ", "convenció ", "ignoró ", "advirtió ", "acusó ", "admiró ",
             "criticó ", "informó ", "persuadió ", "recordó ", "ayudó "
     };
-    String ps3imp[] = {"alentaba ", "reconocía ", "introducía ", "aseguraba ", "justificaba ",
-            "consultaba ", "convencía ", "ignoraba ", "advertía ", "acusaba ", "admiraba ",
+    String ps3imp[] = {"alentaba ", "reconocía ", "introducía ", "aseguraba ", "consultaba ",
+            "justificaba ", "convencía ", "ignoraba ", "advertía ", "acusaba ", "admiraba ",
             "criticaba ", "informaba ", "persuadía ", "recordaba ", "ayudaba "
     };
-    String vn4p[] = {"alentaron ", "reconocieron ", "introdujeron ", "aseguraron ", "justificaron ",
-            "consultaron ", "convencieron ", "ignoraron ", "advirtieron ", "acusaron ", "admiraron ",
+    String vn4p[] = {"alentaron ", "reconocieron ", "introdujeron ", "aseguraron ", "consultaron ",
+            "justificaron ", "convencieron ", "ignoraron ", "advirtieron ", "acusaron ", "admiraron ",
             "criticaron ", "informaron ", "persuadieron ", "recordaron ", "ayudaron "
     };
-    String vn4imp[] = {"alentaban ", "reconocían ", "introducían ", "aseguraban ", "justificaban ",
-            "consultaban ", "convencían ", "ignoraban ", "advertían ", "acusaban ", "admiraban ",
+    String vn4imp[] = {"alentaban ", "reconocían ", "introducían ", "aseguraban ", "consultaban ",
+            "justificaban ", "convencían ", "ignoraban ", "advertían ", "acusaban ", "admiraban ",
             "criticaban ", "informaban ", "persuadían ", "recordaban ", "ayudaban "
     };
-    String vn5p[] = {"alentamos ", "reconocimos ", "introdujimos ", "aseguramos ", "justificamos ",
-            "consultamos ", "convencimos ", "ignoramos ", "advertimos ", "acusamos ", "admiramos ",
+    String vn5p[] = {"alentamos ", "reconocimos ", "introdujimos ", "aseguramos ", "consultamos ",
+            "justificamos ", "convencimos ", "ignoramos ", "advertimos ", "acusamos ", "admiramos ",
             "criticamos ", "informamos ", "persuadimos ", "recordamos ", "ayudamos "
     };
     String vn5imp[] = {"alentábamos ", "reconocíamos ", "introducíamos ", "asegurábamos ",
-            "justificábamos ", "consultábamos ", "convencíamos ", "ignorábamos ", "advertíamos ",
+            "consultábamos ", "justificábamos ", "convencíamos ", "ignorábamos ", "advertíamos ",
             "acusábamos ", "admirábamos ", "criticábamos ", "informábamos ", "persuadíamos ",
             "recordábamos ", "ayudábamos "
     };
     //pasados (agregado wish SV 060422)
-    String ps1wish[] = {"alentara ", "reconociera ", "introdujera ", "asegurara ", "justificara ",
-            "consultara ", "convenciera ", "ignorara ", "advirtiera ", "acusara ", "admirara ",
+    String ps1wish[] = {"alentara ", "reconociera ", "introdujera ", "asegurara ", "consultara ",
+            "justificara ", "convenciera ", "ignorara ", "advirtiera ", "acusara ", "admirara ",
             "criticara ", "informara ", "persuadiera ", "recordara ", "ayudara "
     };
-    String ps2wish[] = {"alentaras ", "reconocieras ", "introdujeras ", "aseguraras ", "justificaras ",
-            "consultaras ", "convencieras ", "ignoraras ", "advirtieras ", "acusaras ", "admiraras ",
+    String ps2wish[] = {"alentaras ", "reconocieras ", "introdujeras ", "aseguraras ", "consultarás ",
+            "justificarás ", "convencieras ", "ignoraras ", "advirtieras ", "acusaras ", "admiraras ",
             "criticaras ", "informaras ", "persuadieras ", "recordaras ", "ayudaras "
     };
-    String ps3wish[] = {"alentara ", "reconociera ", "introdujera ", "asegurara ", "justificara ",
-            "consultara ", "convenciera ", "ignorara ", "advirtiera ", "acusara ", "admirara ",
+    String ps3wish[] = {"alentara ", "reconociera ", "introdujera ", "asegurara ", "consultara ",
+            "justificara ", "convenciera ", "ignorara ", "advirtiera ", "acusara ", "admirara ",
             "criticara ", "informara ", "persuadiera ", "recordara ", "ayudara "
     };
-    String ps4wish[] = {"alentaran ", "reconocieran ", "introdujeran ", "aseguraran ", "justificaran ",
-            "consultaran ", "convencieran ", "ignoraran ", "advirtieran ", "acusaran ", "admiraran ",
+    String ps4wish[] = {"alentaran ", "reconocieran ", "introdujeran ", "aseguraran ", "consultaran ",
+            "justificaran ", "convencieran ", "ignoraran ", "advirtieran ", "acusaran ", "admiraran ",
             "criticaran ", "informaran ", "persuadieran ", "recordaran ", "ayudaran "
     };
-    String ps5wish[] = {"alentaramos ", "reconocieramos ", "introdujeramos ", "aseguraramos ", "justificaramos ",
-            "consultaramos ", "convencieramos ", "ignoraramos ", "advirtieramos ", "acusaramos ", "admiraramos ",
+    String ps5wish[] = {"alentaramos ", "reconocieramos ", "introdujeramos ", "aseguraramos ", "consultaramos ",
+            "justificaramos ", "convencieramos ", "ignoraramos ", "advirtieramos ", "acusaramos ", "admiraramos ",
             "criticaramos ", "informaramos ", "persuadieramos ", "recordaramos ", "ayudaramos "
     };
 
     //futuro
-    String vn1f[] = {"alentaré ", "reconoceré ", "introduciré ", "aseguraré ", "justificaré ",
-            "consultaré ", "convenceré ", "ignoraré ", "advertiré ", "acusaré ", "admiraré ",
+    String vn1f[] = {"alentaré ", "reconoceré ", "introduciré ", "aseguraré ", "consultaré ",
+            "justificaré ", "convenceré ", "ignoraré ", "advertiré ", "acusaré ", "admiraré ",
             "criticaré ", "informaré ", "persuadiré ", "recordaré ", "ayudaré "
     };
-    String vn2f[] = {"alentarás ", "reconocerás ", "introducirás ", "asegurarás ", "justificarás ",
-            "consultarás ", "convencerás ", "ignorarás ", "advertirás ", "acusarás ", "admirarás ",
+    String vn2f[] = {"alentarás ", "reconocerás ", "introducirás ", "asegurarás ", "consultarás ",
+            "justificarás ", "convencerás ", "ignorarás ", "advertirás ", "acusarás ", "admirarás ",
             "criticarás ", "informarás ", "persuadirás ", "recordarás ", "ayudarás "
     };
-    String vn3f[] = {"alentará ", "reconocerá ", "introducirá ", "asegurará ", "justificará ",
-            "consultará ", "convencerá ", "ignorará ", "advertirá ", "acusará ", "admirará ",
+    String vn3f[] = {"alentará ", "reconocerá ", "introducirá ", "asegurará ", "consultara ",
+            "justificará ", "convencerá ", "ignorará ", "advertirá ", "acusará ", "admirará ",
             "criticará ", "informará ", "persuadirá ", "recordará ", "ayudará "
     };
-    String vn4f[] = {"alentarán ", "reconocerán ", "introducirán ", "asegurarán ", "justificarán ",
-            "consultarán ", "convencerán ", "ignorarán ", "advertirán ", "acusarán ", "admirarán ",
+    String vn4f[] = {"alentarán ", "reconocerán ", "introducirán ", "asegurarán ", "consultarán ",
+            "justificarán ", "convencerán ", "ignorarán ", "advertirán ", "acusarán ", "admirarán ",
             "criticarán ", "informarán ", "persuadirán ", "recordarán ", "ayudarán "
     };
-    String vn5f[] = {"alentaremos ", "reconoceremos ", "introduciremos ", "aseguraremos ", "justificaremos ",
-            "consultaremos ", "convenceremos ", "ignoraremos ", "advertiremos ", "acusaremos ", "admiraremos ",
+    String vn5f[] = {"alentaremos ", "reconoceremos ", "introduciremos ", "aseguraremos ", "consultaremos ",
+            "justificaremos ", "convenceremos ", "ignoraremos ", "advertiremos ", "acusaremos ", "admiraremos ",
             "criticaremos ", "informaremos ", "persuadiremos ", "recordaremos ", "ayudaremos "
     };
     //would
-    String vn1w[] = {"alentaría ", "reconocería ", "introduciría ", "aseguraría ", "justificaría ",
-            "consultaría ", "convencería ", "ignoraría ", "advertiría ", "acusaría ", "admiraría ",
+    String vn1w[] = {"alentaría ", "reconocería ", "introduciría ", "aseguraría ", "consultaría ",
+            "justificaría ", "convencería ", "ignoraría ", "advertiría ", "acusaría ", "admiraría ",
             "criticaría ", "informaría ", "persuadiría ", "recordaría ", "ayudaría "
     };
-    String vn2w[] = {"alentarías ", "reconocerías ", "introducirías ", "asegurarías ", "justificarías ",
-            "consultarías ", "convencerías ", "ignorarías ", "advertirías ", "acusarías ", "admirarías ",
+    String vn2w[] = {"alentarías ", "reconocerías ", "introducirías ", "asegurarías ", "consultarías ",
+            "justificarías ", "convencerías ", "ignorarías ", "advertirías ", "acusarías ", "admirarías ",
             "criticarías ", "informarías ", "persuadirías ", "recordarías ", "ayudarías "
     };
-    String vn3w[] = {"alentaría ", "reconocería ", "introduciría ", "aseguraría ", "justificaría ",
-            "consultaría ", "convencería ", "ignoraría ", "advertiría ", "acusaría ", "admiraría ",
+    String vn3w[] = {"alentaría ", "reconocería ", "introduciría ", "aseguraría ", "consultaría ",
+            "justificaría ", "convencería ", "ignoraría ", "advertiría ", "acusaría ", "admiraría ",
             "criticaría ", "informaría ", "persuadiría ", "recordaría ", "ayudaría "
     };
-    String vn4w[] = {"alentarían ", "reconocerían ", "introducirían ", "asegurarían ", "justificarían ",
-            "consultarían ", "convencerían ", "ignorarían ", "advertirían ", "acusarían ", "admirarían ",
+    String vn4w[] = {"alentarían ", "reconocerían ", "introducirían ", "asegurarían ", "consultarían ",
+            "justificarían ", "convencerían ", "ignorarían ", "advertirían ", "acusarían ", "admirarían ",
             "criticarían ", "informarían ", "persuadirían ", "recordarían ", "ayudarían "
     };
     String vn5w[] = {"alentaríamos ", "reconoceríamos ", "introduciríamos ", "aseguraríamos ",
-            "justificaríamos ", "consultaríamos ", "convenceríamos ", "ignoraríamos ",
+            "consultaríamos ", "justificaríamos ", "convenceríamos ", "ignoraríamos ",
             "advertiríamos ", "acusaríamos ", "admiraríamos ", "criticaríamos ", "informaríamos ",
             "persuadiríamos ", "recordaríamos ", "ayudaríamos "
     };
 
     //subjunctive
-    String vn1y3subj[] = {"aliente ", "reconozca ", "introduzca ", "asegure ", "justifique ",
-            "consulte ", "convenza ", "ignore ", "advierta ", "acuse ", "admire ", "critique ",
+    String vn1y3subj[] = {"aliente ", "reconozca ", "introduzca ", "asegure ", "consulte ",
+            "justifique ", "convenza ", "ignore ", "advierta ", "acuse ", "admire ", "critique ",
             "informe ", "persuada ", "recuerde ", "ayude "
     };
-    String vn2subj[] = {"alientes ", "reconozcas ", "introduzcas ", "asegures ", "justifiques ",
-            "consultes ", "convenzas ", "ignores ", "adviertas ", "acuses ", "admires ", "critiques ",
+    String vn2subj[] = {"alientes ", "reconozcas ", "introduzcas ", "asegures ", "consultes ",
+            "justifiques ", "convenzas ", "ignores ", "adviertas ", "acuses ", "admires ", "critiques ",
             "informes ", "persuadas ", "recuerdes ", "ayudes "
     };
-    String vn4subj[] = {"alienten ", "reconozcan ", "introduzcan ", "aseguren ", "justifiquen ",
-            "consulten ", "convenzan ", "ignoren ", "adviertan ", "acusen ", "admiren ", "critiquen ",
+    String vn4subj[] = {"alienten ", "reconozcan ", "introduzcan ", "aseguren ", "consulten ",
+            "justifiquen ", "convenzan ", "ignoren ", "adviertan ", "acusen ", "admiren ", "critiquen ",
             "informen ", "persuadan ", "recuerden ", "ayuden "
     };
-    String vn5subj[] = {"alentemos ", "reconozcamos ", "introduzcamos ", "aseguremos ", "justifiquemos ",
-            "consultemos ", "convenzamos ", "ignoremos ", "advirtamos ", "acusemos ", "admiremos ",
+    String vn5subj[] = {"alentemos ", "reconozcamos ", "introduzcamos ", "aseguremos ", "consultemos ",
+            "justifiquemos ", "convenzamos ", "ignoremos ", "advirtamos ", "acusemos ", "admiremos ",
             "critiquemos ", "informemos ", "persuadamos ", "recordemos ", "ayudemos "
     };
 
