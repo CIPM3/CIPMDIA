@@ -97,7 +97,7 @@ public class Nobles2 {
 
     // nouns nobles espa;ol top 100
     String nnoblesesp[] = {"noticias ", "las noticias ", "el crecimiento ", "el matrimonio ", "a el usuario ", "la combinación ", "el fracaso ",
-            "el significado ", "la medicina ", "la filosofía ", "el maestro ", "la comunciación ", "la noche ", "la quimica ",
+            "el significado ", "la medicina ", "la filosofía ", "el maestro ", "la comunicación ", "la noche ", "la quimica ",
             "la enfermedad ", "el disco ", "la energia ", "la nación ", "el camino ", "el rol ", "la sopa ", "la ubicación ", "el éxito ",
             "la suma ", "el departamento ", "la educación ", "las matematicas ", "el momento ", "la pintura ", "la atención ",
             "la desición ", "el evento ", "la propiedad ", "a el estudiante ", "la madera ", "la comptetencia ", "la distribución ",
@@ -139,7 +139,7 @@ public class Nobles2 {
     };
 
     // nouns nobles espa F
-    String nnoblesespF[] ={"las noticias ", "la combinación ", "la medicina ", "la filosofía ", "la comunciación ", "la noche ", "la quimica ",
+    String nnoblesespF[] ={"las noticias ", "la combinación ", "la medicina ", "la filosofía ", "la comunicación ", "la noche ", "la quimica ",
             "la enfermedad ", "la energia ", "la nación ", "la sopa ", "la ubicación ", "la suma ", "la educación ", "las matematicas ",
             "la pintura ", "la atención ", "la desición ", "la propiedad ", "la madera ", "la comptetencia ", "la distribución ","la oficina ",
             "a la población ", "la unidad ", "la categoría ", "la introducción ", "la oportunidad ", "la longitud ", "la revista ",
