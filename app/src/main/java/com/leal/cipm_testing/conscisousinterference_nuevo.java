@@ -33,6 +33,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             , mic_3,pass_3,inc_3, mic_4,pass_4,inc_4
             , mic_5,pass_5,inc_5;
     LinearLayout lay_resp_1,lay_resp_2,lay_resp_3,lay_resp_4,lay_resp_5;
+    LinearLayout layR5;
     LinearLayout respescu_1,respescu_2,respescu_3,respescu_4,respescu_5;
     EditText eng_1,eng_2,eng_3,eng_4,eng_5;
     String selection;
@@ -86,6 +87,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         lay_resp_3 = findViewById(R.id.lay_resp_3);
         lay_resp_4 = findViewById(R.id.lay_resp_4);
         lay_resp_5 = findViewById(R.id.lay_resp_5);
+        layR5 = findViewById(R.id.layR5);
 
         eng_1 = findViewById(R.id.eng_1);
         eng_2 = findViewById(R.id.eng_2);
@@ -168,7 +170,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
-
+                
                 //clickbb1();
                 break;
 
@@ -179,7 +181,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
-
+                
+                
                 //clickbb1();
                 break;
 
@@ -191,7 +194,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
-
+                
                 //clickbb1();
                 break;
 
@@ -202,7 +205,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
-
+                
                 //clickbb1();
                 break;
 
@@ -213,6 +216,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
         switch (selection){
             case "Tutorial":
+                pr5();
                 break;
             case "Steve Jobs 1":
                 r1 = "actually nerd jesus died in the last year right steve jobs";
@@ -220,6 +224,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r3 = "i know you sad";
                 r4 = "I didn't get it";
                 r5 = "I didn't get the big deal they made about that guy";
+                pr5();
                 break;
 
             case "Steve Jobs 2":
@@ -228,6 +233,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r3 = "Prueba 3";
                 r4 = "Prueba 4";
                 r5 = "Prueba 5";
+                pr5();
                 break;
 
             case "Kot Fishing 1":
@@ -236,6 +242,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r3 = "i like beer don't you like beek i mean i love beer";
                 r4 = "I just got one sweet jean vicent, i'm back";
                 r5 = "that was quick talking about hank's the man damn go fishing magician";
+                pr5();
                 break;
 
             case "Kot Fishing 2":
@@ -244,6 +251,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r3 = "Wo hank what you got there, blood dough balls";
                 r4 = "hank only fishes with worms why anything else would be cheating";
                 r5 = "";
+                qr5();
                 break;
 
             //LUIS
@@ -252,6 +260,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r2 = "Hands the business off to his son, the American dream. “I built it up for 30 years. Here you go, son. Make the family and the family name proud.” ”All right, Dad, I love you.”";
                 r3 = "All right? This poor kid, five days in, he’s supposed to give a tour to a couple, only the dude shows up.";
                 r4 = "The kid thought it was weird, but he’s like, “I need the money. I gotta give him a tour.” Right? So he takes this guy up. Ten minutes into the tour, the dude fucking jumped out.";
+                qr5();
                 break;
 
             case "Helicoptero 2":
@@ -259,6 +268,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r2 = "Five fucking days later, this kid, he probably barely had the speech down. Just sitting there, flying the helicopter.";
                 r3 = "All right, if you look out the left side of the aircraft, that’s Orange County. There’s over 27 miles of beaches there. Put your seatbelt back on, 27 miles of beaches.";
                 r4 = "Was established as a county in 1903. Sir, please don’t open the door. Sir, what are you doing? Sir, no, no. Don’t";
+                qr5();
                 break;
         }
 
@@ -577,6 +587,15 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             lay_resp_5.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    public void pr5(){
+        layR5.setVisibility(View.VISIBLE);
+    }
+
+    public void qr5(){
+        layR5.setVisibility(View.GONE);
+        lay_resp_5.setVisibility(View.GONE);
     }
 
     public void hablar1(View vista){
