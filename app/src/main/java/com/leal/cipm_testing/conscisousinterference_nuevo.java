@@ -38,7 +38,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     String selection;
     TextView txt1;
     Spinner spin;
-    TextView tv1, tv2, tv3, tv4, tv5;
     EditText ai1, ai2, ai3, ai4, ai5;
     String r1, r2, r3, r4, r5;
     String temp1 ,temp2, temp3, temp4, temp5;
@@ -160,52 +159,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 //clickbb1();
                 break;
 
-                //PD
-            case "Kot Fishing 1":
-                // video completo con los 5 diferentes temas
-                Uri urik1 = Uri.parse("http://adrianlealcaldera.com/kotfishing1Clip.mp4");
-                vv.setVideoURI(urik1);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-
-                //clickbb1();
-                break;
-
-            case "Kot Fishing 2":
-                // video completo con los 5 diferentes temas
-                Uri urik2 = Uri.parse("https://adrianlealcaldera.com/kotfishing2Clip.mp4");
-                vv.setVideoURI(urik2);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-
-                //clickbb1();
-                break;
-
-                //LUIS
-            case "Helicoptero 1":
-                // video completo con los 5 diferentes temas
-                Uri urik3 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip.mp4");
-                vv.setVideoURI(urik3);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-
-                //clickbb1();
-                break;
-
-            case "Helicoptero 2":
-                // video completo con los 5 diferentes temas
-                Uri urik4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Clip.mp4");
-                vv.setVideoURI(urik4);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-
-                //clickbb1();
-                break;
-
         }
     }
 
@@ -221,44 +174,12 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 r4 = "I didn't get it";
                 r5 = "I didn't get the big deal they made about that guy";
                 break;
-
             case "Steve Jobs 2":
                 r1 = "Prueba";
                 r2 = "Prueba 2";
                 r3 = "Prueba 3";
                 r4 = "Prueba 4";
                 r5 = "Prueba 5";
-                break;
-
-            case "Kot Fishing 1":
-                r1 = "Come on frank fish or get off the pot";
-                r2 = "just a second how the heck does jack fish with this stuff";
-                r3 = "i like beer don't you like beek i mean i love beer";
-                r4 = "I just got one sweet jean vicent, i'm back";
-                r5 = "that was quick talking about hank's the man damn go fishing magician";
-                break;
-
-            case "Kot Fishing 2":
-                r1 = "looks like they're hungry for worms today pass me one, will you hank";
-                r2 = "what's the matter batteries go dead on your electric spinner";
-                r3 = "Wo hank what you got there, blood dough balls";
-                r4 = "hank only fishes with worms why anything else would be cheating";
-                r5 = "";
-                break;
-
-            //LUIS
-            case "Helicoptero 1":
-                r1 = "I saw this story down in Orange County, Orange County, California in the sky. This guy gave helicopter your for 30 years, 30 years without incident.";
-                r2 = "Hands the business off to his son, the American dream. “I built it up for 30 years. Here you go, son. Make the family and the family name proud.” ”All right, Dad, I love you.”";
-                r3 = "All right? This poor kid, five days in, he’s supposed to give a tour to a couple, only the dude shows up.";
-                r4 = "The kid thought it was weird, but he’s like, “I need the money. I gotta give him a tour.” Right? So he takes this guy up. Ten minutes into the tour, the dude fucking jumped out.";
-                break;
-
-            case "Helicoptero 2":
-                r1 = "Yeah, five days in. Five days in from the balloons and the cake. “We love you, son. Keep the family tree going. The traditional line.”";
-                r2 = "Five fucking days later, this kid, he probably barely had the speech down. Just sitting there, flying the helicopter.";
-                r3 = "All right, if you look out the left side of the aircraft, that’s Orange County. There’s over 27 miles of beaches there. Put your seatbelt back on, 27 miles of beaches.";
-                r4 = "Was established as a county in 1903. Sir, please don’t open the door. Sir, what are you doing? Sir, no, no. Don’t";
                 break;
         }
 
@@ -267,6 +188,180 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         eng_3.setText(r3);
         eng_4.setText(r4);
         eng_5.setText(r5);
+    }
+
+    public void hablar1(View vista){
+        control = 1;
+        iniciarentradavoz();
+    }
+    public void hablar2(View vista){
+        control = 2;
+        iniciarentradavoz();
+    }
+    public void hablar3(View vista){
+        control = 3;
+        iniciarentradavoz();
+    }
+    public void hablar4(View vista){
+        control = 4;
+        iniciarentradavoz();
+    }
+    public void hablar5(View vista){
+        control = 5;
+        iniciarentradavoz();
+    }
+
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException e) {
+        }
+    }
+
+
+    public void show_aud_1(View vista){
+        control = 1;
+        show_aud();
+    }
+    public void show_aud_2(View vista){
+        control = 2;
+        show_aud();
+    }
+    public void show_aud_3(View vista){
+        control = 3;
+        show_aud();
+    }
+    public void show_aud_4(View vista){
+        control = 4;
+        show_aud();
+    }
+    public void show_aud_5(View vista){
+        control = 5;
+        show_aud();
+    }
+
+    public void show_aud(){
+        switch (selection){
+            case "Tutorial":
+                break;
+            case "Steve Jobs 1":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("http://adrianlealcaldera.com/bb1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("http://adrianlealcaldera.com/bb2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("http://adrianlealcaldera.com/bb3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("http://adrianlealcaldera.com/bb4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri5 = Uri.parse("http://adrianlealcaldera.com/bb5.mp4");
+                        vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+            case "Steve Jobs Helicopter":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("http://adrianlealcaldera.com/bb1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("http://adrianlealcaldera.com/bb2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("http://adrianlealcaldera.com/bb3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("http://adrianlealcaldera.com/bb4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri5 = Uri.parse("http://adrianlealcaldera.com/bb5.mp4");
+                        vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(conscisousinterference_nuevo.this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+        }
+    }
+
+
+    public void showexp1(View vista){
+        control = 1;
+        showExp();
+    }
+
+    public void showexp2(View vista){
+        control = 2;
+        showExp();
+    }
+
+    public void showexp3(View vista){
+        control = 3;
+        showExp();
+    }
+
+    public void showexp4(View vista){
+        control = 4;
+        showExp();
+    }
+
+    public void showexp5(View vista){
+        control = 5;
+        showExp();
     }
 
     public void showExp() {
@@ -316,336 +411,52 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
-
-            case "Kot Fishing 1":
-                switch (control){
-                    case 1:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp1.mp4");
-                        vv.setVideoURI(uri);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 2:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp2.mp4");
-                        vv.setVideoURI(uri2);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 3:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp3.mp4");
-                        vv.setVideoURI(uri3);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 4:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp4.mp4");
-                        vv.setVideoURI(uri4);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 5:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri5 = Uri.parse("https://adrianlealcaldera.com/kotfishing1Exp5.mp4");
-                        vv.setVideoURI(uri5);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                }
-                break;
-            case "Kot Fishing 2":
-                switch (control){
-                    case 1:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp1.mp4");
-                        vv.setVideoURI(uri);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 2:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp2.mp4");
-                        vv.setVideoURI(uri2);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 3:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp3.mp4");
-                        vv.setVideoURI(uri3);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 4:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/kotfishing2exp4.mp4");
-                        vv.setVideoURI(uri4);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                }
-                break;
-
-                //LUIS
-            case "Helicoptero 1":
-                switch (control){
-                    case 1:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Exp1.mp4");
-                        vv.setVideoURI(uri);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 2:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Exp2.mp4");
-                        vv.setVideoURI(uri2);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 3:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Exp3.mp4");
-                        vv.setVideoURI(uri3);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 4:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Exp4.mp4");
-                        vv.setVideoURI(uri4);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                }
-                break;
-            case "Helicoptero 2":
-                switch (control){
-                    case 1:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Exp1.mp4");
-                        vv.setVideoURI(uri);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 2:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Exp2.mp4");
-                        vv.setVideoURI(uri2);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 3:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Exp3.mp4");
-                        vv.setVideoURI(uri3);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                    case 4:
-                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
-                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Exp4.mp4");
-                        vv.setVideoURI(uri4);
-                        vv.setMediaController(new MediaController(this));
-                        vv.requestFocus();
-                        vv.start();
-                        break;
-                }
-                break;
         }
-    }
-
-    public void showAnswers(View view) {
-        if(vv.isPlaying()){
-            ai1.setText(r1);
-            ai2.setText(r2);
-            ai3.setText(r3);
-            ai4.setText(r4);
-            ai5.setText(r5);
-        }
-    }
-
-    public void checkA(View view) {
-
-        temp1 = ai1.getText().toString();
-        if (temp1.equalsIgnoreCase(r1)) {
-            ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            pass_1.setVisibility(View.VISIBLE);
-
-            inc_1.setVisibility(View.GONE);
-            mic_1.setVisibility(View.GONE);
-
-            lay_resp_1.setVisibility(View.GONE);
-        } else {
-            ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            pass_1.setVisibility(View.GONE);
-
-            inc_1.setVisibility(View.VISIBLE);
-            mic_1.setVisibility(View.GONE);
-
-            lay_resp_1.setVisibility(View.VISIBLE);
-        }
-        temp2 = ai2.getText().toString();
-        if (temp2.equalsIgnoreCase(r2)) {
-            ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            pass_2.setVisibility(View.VISIBLE);
-
-            inc_2.setVisibility(View.GONE);
-            mic_2.setVisibility(View.GONE);
-
-            lay_resp_2.setVisibility(View.GONE);
-        } else {
-            ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            pass_2.setVisibility(View.GONE);
-
-            inc_2.setVisibility(View.VISIBLE);
-            mic_2.setVisibility(View.GONE);
-
-            lay_resp_2.setVisibility(View.VISIBLE);
-        }
-        temp3 = ai3.getText().toString();
-        if (temp3.equalsIgnoreCase(r3)) {
-            ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            pass_3.setVisibility(View.VISIBLE);
-
-            inc_3.setVisibility(View.GONE);
-            mic_3.setVisibility(View.GONE);
-
-            lay_resp_3.setVisibility(View.GONE);
-        } else {
-            ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            pass_3.setVisibility(View.GONE);
-
-            inc_3.setVisibility(View.VISIBLE);
-            mic_3.setVisibility(View.GONE);
-
-            lay_resp_3.setVisibility(View.VISIBLE);
-        }
-        temp4 = ai4.getText().toString();
-        if (temp4.equalsIgnoreCase(r4)) {
-            ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            pass_4.setVisibility(View.VISIBLE);
-
-            inc_4.setVisibility(View.GONE);
-            mic_4.setVisibility(View.GONE);
-
-            lay_resp_4.setVisibility(View.GONE);
-        } else {
-            ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            pass_4.setVisibility(View.GONE);
-
-            inc_4.setVisibility(View.VISIBLE);
-            mic_4.setVisibility(View.GONE);
-
-            lay_resp_4.setVisibility(View.VISIBLE);
-        }
-        temp5 = ai5.getText().toString();
-        if (temp5.equalsIgnoreCase(r5)) {
-            ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            pass_5.setVisibility(View.VISIBLE);
-
-            inc_5.setVisibility(View.GONE);
-            mic_5.setVisibility(View.GONE);
-
-            lay_resp_5.setVisibility(View.GONE);
-        } else {
-            ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            pass_5.setVisibility(View.GONE);
-
-            inc_5.setVisibility(View.VISIBLE);
-            mic_5.setVisibility(View.GONE);
-
-            lay_resp_5.setVisibility(View.VISIBLE);
-        }
-
-    }
-
-    public void hablar1(View vista){
-        control = 1;
-        iniciarentradavoz();
-    }
-    public void hablar2(View vista){
-        control = 2;
-        iniciarentradavoz();
-    }
-    public void hablar3(View vista){
-        control = 3;
-        iniciarentradavoz();
-    }
-    public void hablar4(View vista){
-        control = 4;
-        iniciarentradavoz();
-    }
-    public void hablar5(View vista){
-        control = 5;
-        iniciarentradavoz();
-    }
-
-    private void iniciarentradavoz() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        try {
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
-        } catch (ActivityNotFoundException e) {
-        }
-    }
-    
-    public void showexp1(View vista){
-        control = 1;
-        showExp();
-    }
-    public void showexp2(View vista){
-        control = 2;
-        showExp();
-    }
-    public void showexp3(View vista){
-        control = 3;
-        showExp();
-    }
-    public void showexp4(View vista){
-        control = 4;
-        showExp();
-    }
-    public void showexp5(View vista){
-        control = 5;
-        showExp();
     }
 
     public void speak1(View vista){
-
         tts.speak(r1, TextToSpeech.QUEUE_ADD, null);
     }
+
     public void speak2(View vista){
         tts.speak(r2, TextToSpeech.QUEUE_ADD, null);
     }
+
     public void speak3(View vista){
         tts.speak(r3, TextToSpeech.QUEUE_ADD, null);
     }
+
     public void speak4(View vista){
         tts.speak(r4, TextToSpeech.QUEUE_ADD, null);
     }
+
     public void speak5(View vista){
         tts.speak(r5, TextToSpeech.QUEUE_ADD, null);
+    }
+
+
+    public void showAnswers(View view) {
+        switch (control) {
+            case 1:
+                ai1.setText(r1);
+                break;
+
+            case 2:
+                ai2.setText(r2);
+                break;
+
+            case 3:
+                ai3.setText(r3);
+                break;
+
+            case 4:
+                ai4.setText(r4);
+                break;
+
+            case 5:
+                ai5.setText(r5);
+                break;
+        }
     }
 
     public void limpiar_inputs(){
@@ -686,6 +497,120 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         lay_resp_5.setVisibility(View.GONE);
     }
 
+    public void checkA(View view) {
+        switch (control){
+            case 1:
+                temp1 = ai1.getText().toString();
+                if (temp1.equalsIgnoreCase(r1)) {
+                    ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_1.setVisibility(View.VISIBLE);
+
+                    inc_1.setVisibility(View.GONE);
+                    mic_1.setVisibility(View.GONE);
+
+                    lay_resp_1.setVisibility(View.GONE);
+                } else {
+                    ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_1.setVisibility(View.GONE);
+
+                    inc_1.setVisibility(View.VISIBLE);
+                    mic_1.setVisibility(View.GONE);
+
+                    lay_resp_1.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 2:
+                temp2 = ai2.getText().toString();
+                if (temp2.equalsIgnoreCase(r2)) {
+                    ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_2.setVisibility(View.VISIBLE);
+
+                    inc_2.setVisibility(View.GONE);
+                    mic_2.setVisibility(View.GONE);
+
+                    lay_resp_2.setVisibility(View.GONE);
+                } else {
+                    ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_2.setVisibility(View.GONE);
+
+                    inc_2.setVisibility(View.VISIBLE);
+                    mic_2.setVisibility(View.GONE);
+
+                    lay_resp_2.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 3:
+                temp3 = ai3.getText().toString();
+                if (temp3.equalsIgnoreCase(r3)) {
+                    ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_3.setVisibility(View.VISIBLE);
+
+                    inc_3.setVisibility(View.GONE);
+                    mic_3.setVisibility(View.GONE);
+
+                    lay_resp_3.setVisibility(View.GONE);
+                } else {
+                    ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_3.setVisibility(View.GONE);
+
+                    inc_3.setVisibility(View.VISIBLE);
+                    mic_3.setVisibility(View.GONE);
+
+                    lay_resp_3.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 4:
+                temp4 = ai4.getText().toString();
+                if (temp4.equalsIgnoreCase(r4)) {
+                    ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_4.setVisibility(View.VISIBLE);
+
+                    inc_4.setVisibility(View.GONE);
+                    mic_4.setVisibility(View.GONE);
+
+                    lay_resp_4.setVisibility(View.GONE);
+                } else {
+                    ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_4.setVisibility(View.GONE);
+
+                    inc_4.setVisibility(View.VISIBLE);
+                    mic_4.setVisibility(View.GONE);
+
+                    lay_resp_4.setVisibility(View.VISIBLE);
+                }
+
+                break;
+
+            case 5:
+                temp5 = ai5.getText().toString();
+                if (temp5.equalsIgnoreCase(r5)) {
+                    ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_5.setVisibility(View.VISIBLE);
+
+                    inc_5.setVisibility(View.GONE);
+                    mic_5.setVisibility(View.GONE);
+
+                    lay_resp_5.setVisibility(View.GONE);
+                } else {
+                    ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_5.setVisibility(View.GONE);
+
+                    inc_5.setVisibility(View.VISIBLE);
+                    mic_5.setVisibility(View.GONE);
+
+                    lay_resp_5.setVisibility(View.VISIBLE);
+                }
+
+                break;
+        }
+    }
+
+
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -721,17 +646,14 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         }
 
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);

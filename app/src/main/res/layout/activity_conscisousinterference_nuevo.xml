@@ -219,9 +219,9 @@
                             >
 
                             <TextView
-                                android:onClick="showexp1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:onClick="show_aud_1"
                                 android:text="1"
                                 android:textColor="@color/azul"
                                 android:textSize="22dp"
@@ -327,14 +327,13 @@
 
                                     <EditText
                                         android:id="@+id/eng_1"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="193dp"
                                         android:layout_height="wrap_content"
-                                        android:textSize="12dp"
                                         android:layout_marginLeft="2dp"
-                                        android:textColor="@color/azul"
                                         android:layout_weight="1"
                                         android:text="Eng"
-                                        />
+                                        android:textColor="@color/azul"
+                                        android:textSize="12dp" />
                                 </LinearLayout>
 
                                 <!-- Escuchar-->
@@ -389,7 +388,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp2"
+                                android:onClick="show_aud_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2"
@@ -559,7 +558,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp3"
+                                android:onClick="show_aud_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3"
@@ -729,7 +728,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp4"
+                                android:onClick="show_aud_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4"
@@ -899,7 +898,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp5"
+                                android:onClick="show_aud_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5"
@@ -1061,10 +1060,10 @@
                 android:paddingHorizontal="30dp"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical"
+                android:onClick="checkA"
                 >
 
                 <LinearLayout
-                    android:onClick="checkA"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
@@ -1092,7 +1091,6 @@
                 >
 
                 <LinearLayout
-                    android:onClick="showAnswers"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center"
@@ -1101,7 +1099,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mostrar Respuestas"
+                        android:text="Mostrar tu respuestas"
                         android:textColor="@color/azul"
                         android:textSize="16dp"/>
                 </LinearLayout>
