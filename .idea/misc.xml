@@ -5,11 +5,10 @@
       <map>
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_hut.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_chose_vocab.xml" value="0.13496376811594202" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_main_testing.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_structure_results.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_vocabulary_nuevo.xml" value="0.13496376811594202" />
-        <entry key="app/src/main/res/layout/activity_chose_conscisousinterference.xml" value="0.25625" />
-        <entry key="app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.25625" />
       </map>
     </option>
   </component>

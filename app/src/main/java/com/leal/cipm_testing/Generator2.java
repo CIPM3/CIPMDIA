@@ -211,7 +211,7 @@ public class Generator2 {
 
     public void GenPresSimp2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -223,11 +223,12 @@ public class Generator2 {
                         gene = n.ps1eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp1;
-                        gene = s.eng1;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
                         break;
+
                     case 2:
                         Intrans2 i = new Intrans2();
                         i.GenPresSimp2();
@@ -249,12 +250,6 @@ public class Generator2 {
                         gene = o.ps1eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
 
                 }
                 break;
@@ -267,10 +262,10 @@ public class Generator2 {
                         gene = n.ps2eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -293,12 +288,7 @@ public class Generator2 {
                         gene = o.ps2eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
+
 
                 }
                 break;
@@ -311,11 +301,12 @@ public class Generator2 {
                         gene = n.ps3eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
                         break;
+
                     case 2:
                         Intrans2 i = new Intrans2();
                         i.GenPresSimp2();
@@ -337,12 +328,7 @@ public class Generator2 {
                         gene = o.ps3eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
+
                 }
                 break;
             case "ella ":
@@ -354,10 +340,10 @@ public class Generator2 {
                         gene = n.ps3she;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
                         break;
                     case 2:
 
@@ -381,12 +367,7 @@ public class Generator2 {
                         gene = o.ps3she;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
+
                 }
                 break;
             case "eso ":
@@ -398,10 +379,10 @@ public class Generator2 {
                         gene = n.ps3it;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
                         break;
                     case 2:
 
@@ -425,12 +406,7 @@ public class Generator2 {
                         gene = o.ps3it;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
+
                 }
                 break;
             case "ellos ":
@@ -442,10 +418,10 @@ public class Generator2 {
                         gene = n.ps4eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
                         break;
                     case 2:
 
@@ -469,12 +445,7 @@ public class Generator2 {
                         gene = o.ps4eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
+
                 }
                 break;
             case "nosotros ":
@@ -486,10 +457,10 @@ public class Generator2 {
                         gene = n.ps5eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp2();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
                         break;
                     case 2:
 
@@ -513,12 +484,7 @@ public class Generator2 {
                         gene = o.ps5eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
+
                 }
                 break;
         }
@@ -12416,7 +12382,7 @@ public class Generator2 {
     // presentes
     public void GenPresSimp3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -12429,10 +12395,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp1;
-                        gene = s.eng1;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
                         break;
 
                     case 2:
@@ -12456,12 +12422,7 @@ public class Generator2 {
                         gene = o.ps1eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
+
 
                 }
                 break;
@@ -12475,10 +12436,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
                         break;
 
                     case 2:
@@ -12502,12 +12463,7 @@ public class Generator2 {
                         gene = o.ps2eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
+
 
                 }
                 break;
@@ -12521,10 +12477,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
                         break;
 
                     case 2:
@@ -12548,12 +12504,7 @@ public class Generator2 {
                         gene = o.ps3eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
+
                 }
                 break;
             case "ella ":
@@ -12566,10 +12517,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
                         break;
 
                     case 2:
@@ -12593,12 +12544,7 @@ public class Generator2 {
                         gene = o.ps3she;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
+
                 }
                 break;
             case "eso ":
@@ -12611,10 +12557,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
                         break;
 
                     case 2:
@@ -12638,12 +12584,7 @@ public class Generator2 {
                         gene = o.ps3it;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
+
                 }
                 break;
             case "ellos ":
@@ -12656,10 +12597,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
                         break;
 
                     case 2:
@@ -12683,12 +12624,7 @@ public class Generator2 {
                         gene = o.ps4eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
+
                 }
                 break;
             case "nosotros ":
@@ -12701,10 +12637,10 @@ public class Generator2 {
                         break;
 
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp3();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
                         break;
 
                     case 2:
@@ -12728,12 +12664,7 @@ public class Generator2 {
                         gene = o.ps5eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp3();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
+
                 }
                 break;
         }
@@ -24624,7 +24555,7 @@ public class Generator2 {
     // PRESENTES
     public void GenPresSimp4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        int verb = (int) (Math.random() * 4);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -24636,10 +24567,10 @@ public class Generator2 {
                         gene = n.ps1eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp1;
-                        gene = s.eng1;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
                         break;
 
                     case 2:
@@ -24656,12 +24587,7 @@ public class Generator2 {
                         gene = o.ps1eng;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
+
 
                 }
                 break;
@@ -24674,10 +24600,10 @@ public class Generator2 {
                         gene = n.ps2eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
                         break;
 
 
@@ -24695,12 +24621,7 @@ public class Generator2 {
                         gene = o.ps2eng;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
+
 
                 }
                 break;
@@ -24713,10 +24634,10 @@ public class Generator2 {
                         gene = n.ps3eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
                         break;
 
 
@@ -24734,12 +24655,7 @@ public class Generator2 {
                         gene = o.ps3eng;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
+
                 }
                 break;
             case "ella ":
@@ -24751,12 +24667,11 @@ public class Generator2 {
                         gene = n.ps3she;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
                         break;
-
 
                     case 2:
                         People2 p = new People2();
@@ -24772,12 +24687,7 @@ public class Generator2 {
                         gene = o.ps3she;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
+
                 }
                 break;
             case "eso ":
@@ -24789,12 +24699,11 @@ public class Generator2 {
                         gene = n.ps3it;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
                         break;
-
 
                     case 2:
                         People2 p = new People2();
@@ -24810,12 +24719,7 @@ public class Generator2 {
                         gene = o.ps3it;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
+
                 }
                 break;
             case "ellos ":
@@ -24827,12 +24731,11 @@ public class Generator2 {
                         gene = n.ps4eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
                         break;
-
 
                     case 2:
                         People2 p = new People2();
@@ -24848,12 +24751,7 @@ public class Generator2 {
                         gene = o.ps4eng;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
+
                 }
                 break;
             case "nosotros ":
@@ -24865,12 +24763,11 @@ public class Generator2 {
                         gene = n.ps5eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp4();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
                         break;
-
 
                     case 2:
                         People2 p = new People2();
@@ -24886,12 +24783,7 @@ public class Generator2 {
                         gene = o.ps5eng;
                         break;
 
-                    case 4:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp4();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
+
                 }
                 break;
         }
@@ -35694,7 +35586,7 @@ public class Generator2 {
     //PRESENTES
     public void GenPresSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 1);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -35706,10 +35598,10 @@ public class Generator2 {
                         gene = n.ps1eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp1;
-                        gene = s.eng1;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -35732,12 +35624,7 @@ public class Generator2 {
                         gene = o.ps1eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
+
 
                 }
                 break;
@@ -35750,10 +35637,10 @@ public class Generator2 {
                         gene = n.ps2eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -35776,12 +35663,7 @@ public class Generator2 {
                         gene = o.ps2eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
+
 
                 }
                 break;
@@ -35794,10 +35676,10 @@ public class Generator2 {
                         gene = n.ps3eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -35820,12 +35702,7 @@ public class Generator2 {
                         gene = o.ps3eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
+
                 }
                 break;
             case "ella ":
@@ -35837,10 +35714,10 @@ public class Generator2 {
                         gene = n.ps3she;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
                         break;
                     case 2:
 
@@ -35864,12 +35741,7 @@ public class Generator2 {
                         gene = o.ps3she;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
+
                 }
                 break;
             case "eso ":
@@ -35881,10 +35753,10 @@ public class Generator2 {
                         gene = n.ps3it;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
                         break;
                     case 2:
 
@@ -35908,12 +35780,7 @@ public class Generator2 {
                         gene = o.ps3it;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
+
                 }
                 break;
             case "ellos ":
@@ -35925,10 +35792,10 @@ public class Generator2 {
                         gene = n.ps4eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
                         break;
                     case 2:
 
@@ -35952,12 +35819,7 @@ public class Generator2 {
                         gene = o.ps4eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
+
                 }
                 break;
             case "nosotros ":
@@ -35969,10 +35831,10 @@ public class Generator2 {
                         gene = n.ps5eng;
                         break;
                     case 1:
-                        Special2 s = new Special2();
-                        s.GenPresSimp1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenPresSimp1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
                         break;
                     case 2:
 
@@ -35996,12 +35858,7 @@ public class Generator2 {
                         gene = o.ps5eng;
                         break;
 
-                    case 5:
-                        Abstractos2 ab = new Abstractos2();
-                        ab.GenPresSimp1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
+
                 }
                 break;
         }

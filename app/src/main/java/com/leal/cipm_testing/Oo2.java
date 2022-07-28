@@ -33,7 +33,7 @@ public class Oo2 {
     };
 
 
-    String vn1[] = {"poseo ", "retengo ", "negocío ", "peso ", "merezco ", "destruyó ",
+    String vn1[] = {"poseo ", "retengo ", "negocío ", "peso ", "merezco ", "destruyo ",
             "manufacturo ", "expando ", "habilitó ", "operó ", "distribuyo "
     };
 
