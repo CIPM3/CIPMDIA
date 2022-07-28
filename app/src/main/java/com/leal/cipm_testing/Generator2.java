@@ -267,6 +267,7 @@ public class Generator2 {
                         gens = ab.ps2;
                         gene = ab.ps2eng;
                         break;
+
                     case 2:
                         Intrans2 i = new Intrans2();
                         i.GenPresSimp2();
@@ -24606,7 +24607,6 @@ public class Generator2 {
                         gene = ab.ps2eng;
                         break;
 
-
                     case 2:
                         People2 p = new People2();
                         p.GenPresSimp4();
@@ -24639,7 +24639,6 @@ public class Generator2 {
                         gens = ab.ps3;
                         gene = ab.ps3eng;
                         break;
-
 
                     case 2:
                         People2 p = new People2();

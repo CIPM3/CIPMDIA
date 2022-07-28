@@ -474,6 +474,93 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         }
     }
 
+    public void show_aud(){
+        switch (selection){
+            case "Tutorial":
+                break;
+            case "Steve Jobs 1":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("http://adrianlealcaldera.com/bb1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("http://adrianlealcaldera.com/bb2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("http://adrianlealcaldera.com/bb3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("http://adrianlealcaldera.com/bb4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri5 = Uri.parse("http://adrianlealcaldera.com/bb5.mp4");
+                        vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+            case "Helicoptero 1":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+        }
+    }
+
     public void showAnswers(View view) {
         if(vv.isPlaying()){
             ai1.setText(r1);
@@ -609,7 +696,28 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
-    
+
+    public void show_aud_1(View vista){
+        control = 1;
+        show_aud();
+    }
+    public void show_aud_2(View vista){
+        control = 2;
+        show_aud();
+    }
+    public void show_aud_3(View vista){
+        control = 3;
+        show_aud();
+    }
+    public void show_aud_4(View vista){
+        control = 4;
+        show_aud();
+    }
+    public void show_aud_5(View vista){
+        control = 5;
+        show_aud();
+    }
+
     public void showexp1(View vista){
         control = 1;
         showExp();

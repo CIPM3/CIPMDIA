@@ -389,7 +389,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp2"
+                                android:onClick="show_aud_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2"
@@ -559,7 +559,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp3"
+                                android:onClick="show_aud_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3"
@@ -729,7 +729,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp4"
+                                android:onClick="show_aud_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4"
@@ -899,7 +899,7 @@
                             >
 
                             <TextView
-                                android:onClick="showexp5"
+                                android:onClick="show_aud_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5"
