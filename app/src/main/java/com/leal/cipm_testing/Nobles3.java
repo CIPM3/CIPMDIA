@@ -134,67 +134,6 @@ public class Nobles3 {
             "la caridad ", "el primo "
     };
 
-    String nnoblesespM[]={
-            "el estudio ","el tema ","el porcentaje ","el recurso ",
-            "el anuncio "
-            ,"el aspecto ", "el director ","el almacenamiento "
-            ,"el alcohol ","el argumento ","el contrato ","el bistec ",
-            "el acuerdo ","el empleo ","el ingeniero ","el límite "
-            ,"el asiento ","el virus ", "el actor ","el aula "
-            ,"el dispositivo ","el drama ","el motor ","el guía ",
-            "el hotel ","el propietario ","el pan ", "el clima ",
-            "el ascensor ","el empleado ","el empleador ","el invitado ",
-            "el liderazgo ","el centro comercial ","el gerente ","el respeto ",
-            "el transporte ","el primo "
-    };
-
-
-    String nnoblesM[]={
-            "studio ","topic ", "percentage ","resource ","ad ","aspect "
-            ,"director ","storage ","alcohol ","argument ","contract "
-            ,"steak ","agreement ","employment ","engineer ","limit "
-            ,"seat ","virus ","actor ","classroom ","device ","drama "
-            ,"engine ","guidande ","hotel ","owner ","bread ","climate "
-            ,"elevator ","employee ","employer ","guest "
-            ,"leadership ","mall ","manager ","respect ","transportation "
-            ,"cousin "
-
-    };
-
-    // nouns nobles espa;ol top 100
-    String nnoblesespF[] = {
-            "la colección ", "la imaginación ", "la pasión ",
-            "la configuración ", "la agencia ", "la universidad ",
-            "la conexión ", "la crítica ", "la deuda ", "la descripción ",
-            "la memoria ", "la paciencia ", "la secretaria ", "la solución ",
-            "la administración ", "la actitud ", "la personalidad ", "la psicología ",
-            "la recomendación ", "la respuesta ", "la selección ", "la versión ",
-            "la queja ", "la carretera ", "la pérdida ", "la afiliación ",
-            "la posesión ", "la preparación ", "la unión ", "la moneda ", "la interacción ",
-            "la mezcla ", "la preferencia ", "la región ", "la república ",
-            "la tradición ", "la entrega ", "la dificultad ", "la elección ",
-            "la prioridad ", "la sugerencia ", "la tensión ", "la variación ",
-            "la ansiedad ", "la atmósfera ", "la conciencia ", "la comparación ",
-            "la confusión ", "la construcción ", "la emoción ", "la altura ",
-            "la operación ", "la grabación ", "la muestra ", "la caridad "
-    };
-
-    String nnoblesF[]={
-            "collection ","imagination ","passion ",
-            "setting ","agency ", "college ","connection ",
-            "criticism ","debt ","description ",
-            "memory ","patience ","secretary ","solution ",
-            "administration ","attitude ", "personality ",
-            "psychology ","recommendation ","response ",
-            "selection ","version ", "complaint ","highway ",
-            "loss ","membership ", "possession ","preparation ","union ",
-            "currency ","interaction ", "mixture ","preference ",
-            "region ","republic ", "tradition ","delivery "
-            ,"difficulty ","election ","priority ","suggestion ",
-            "tension ","variation ","anxiety ","atmosphere ",
-            "awareness ", "comparison ","confusion ", "construction ","emotion ",
-            "height ", "operation ","recording ","sample ", "charity "
-    };
 
     //vnb verbos nobles top 100 in past
     String vnbp[] = {
@@ -258,24 +197,10 @@ public class Nobles3 {
             "chosen ","held ","stopped "
     };
 
-    String vpengF[]={
-            "had ","used ","changed ","displayn ","checked ",
-            "chosen ","held ","stopped "
-    };
 
     String vpsp[]={
             "tenido ", "usado ", "cambiado ", "mostrado ", "revisado ",
             "elegido ", "retenido ", "detenido "
-    };
-
-    String vpspM[]={
-            "tenido ", "usado ", "cambiado ", "mostrado ", "revisado ",
-            "elegido ", "retenido ", "detenido "
-    };
-
-    String vpspF[]={
-            "tenida ", "usada ", "cambiada ", "mostrada ", "revisada ",
-            "elegida ", "retenida ", "detenida "
     };
 
     String vnbc[]={
