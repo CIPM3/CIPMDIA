@@ -51,7 +51,7 @@ public class Oo3 {
             "compras ", "muestras ", "buscas ", "quitas ", "vendes ", "reservas ",
             "rompes ", "cubres "
     };
-    String vnb3[] = {"hace ", "guarda ", "levantas ", "golpea ", "dispara ", "mueve ",
+    String vnb3[] = {"hace ", "guarda ", "levanta ", "golpea ", "dispara ", "mueve ",
             "compra ", "muestra ", "busca ", "quita ", "vende ", "reserva ",
             "rompe ", "cubre "
     };
@@ -59,6 +59,7 @@ public class Oo3 {
             "compran ", "muestran ", "buscan ", "quitan ", "venden ", "reservan ",
             "rompen ", "cubren "
     };
+
     String vn5[] = {"hacemos ", "guardamos ", "levantamos ", "golpeamos ", "disparamos ",
             "movemos ", "compramos ", "mostramos ", "buscamos ", "quitamos ", "vendemos ",
             "reservamos ", "rompemos ", "cubrimos "
@@ -77,29 +78,12 @@ public class Oo3 {
     String vpeng[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
             "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
     };
-    // verbos participio inglés Masculino
-    String vpengM[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
-    };
-    // verbos participio inglés Femenino
-    String vpengF[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",
-            "searched for ", "removed ", "sold ", "reserved ", "broken ", "covered "
-    };
+
 
     // participios esp
     String vpsp[] = {"hecho ", "guardado ", "levantado ", "golpeado ", "disparado ",
-            "movido ", "comprado ", "demostrado ", "buscada ", "quitada ", "vendido ",
+            "movido ", "comprado ", "demostrado ", "buscado ", "quitado ", "vendido ",
             "reservado ", "roto ", "cubierto "
-    };
-    // participios esp masculino
-    String vpspM[] = {"hecho ", "guardado ", "levantado ", "golpeado ", "disparado ",
-            "movido ", "comprado ", "demostrado ", "buscada ", "quitada ", "vendido ",
-            "reservado ", "roto ", "cubierto "
-    };
-    // participios esp femenino
-    String vpspF[] = {"hecha ", "guardada ", "levantada ", "golpeada ", "disparada ",
-            "movida ", "comprada ", "demostrada ", "buscada ", "quitada ", "vendida ",
-            "reservada ", "rota ", "cubierta "
     };
 
     String vnbp[] = {"made ", "kept ", "lifted ", "hit ", "shot ", "moved ", "bought ", "displayed ",

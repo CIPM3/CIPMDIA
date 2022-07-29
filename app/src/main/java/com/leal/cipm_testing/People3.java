@@ -247,35 +247,7 @@ public class People3 {
             "a la empleadora "
     };
 
-    // objetos persona
-    String nnobles1[] = {"the cousin ", "the engineer ", "the psychologist ", "the secretary ",
-            "the agency ", "the union ", "the member ", "the personality ", "the republic ",
-            "the tradition ", "the virus ", "the director ", "the employee ", "the charity ",
-            "the employer "
-    };
 
-    String nnoblesesp1[] = { "la prima ", "el ingeniero ", "la psicóloga ", "el secretario ",
-            "la agencia ", "la unión ", "el miembro ", "la personalidad ", "la republica ",
-            "la tradición ", "el virus ", "la directora ", "el empleado ", "la caridad ",
-            "la empleadora "
-    };
-
-    String nnoblesM[]={
-            "the engineer ", "the secretary ", "the member ", "the virus ", "the employee ",
-    };
-
-    String nnoblesespM[]={
-            "el ingeniero ", "el secretario ", "el miembro ", "el virus ", "el empleado ",
-    };
-    String nnoblesF[]={
-            "the cousin ", "the psychologist ", "the agency ", "the union ", "the personality ",
-            "the republic ", "the tradition ", "the director ", "the charity ", "the employer "
-    };
-
-    String nnoblesespF[]={
-            "la prima ", "la psicóloga ", "la agencia ", "la unión ", "la personalidad ",
-            "la republica ", "la tradición ", "la directora ", "la caridad ", "la empleadora "
-    };
 
 
     String ps1;
