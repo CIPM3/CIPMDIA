@@ -2565,7 +2565,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 //what do you want✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
-                    if(g>11000 && g<13000){
+                    if(g>12000 && g<14000){
                         String txt1 = "what do you want";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2573,7 +2573,7 @@ public class cultura_nuevo extends AppCompatActivity {
                         ClickableSpan txtone= new ClickableSpan() {
                             @Override
                             public void onClick(@NonNull View view) {
-                                vv.seekTo(11000);
+                                vv.seekTo(12000);
 
                             }
                         };
@@ -2586,7 +2586,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 //Are you looking to✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
-                    if(g>14000  && g<16000){
+                    if(g>15000  && g<17000){
                         String txt2 = "Are you looking to";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2594,7 +2594,7 @@ public class cultura_nuevo extends AppCompatActivity {
                         ClickableSpan txtTwo= new ClickableSpan() {
                             @Override
                             public void onClick(@NonNull View view) {
-                                vv.seekTo(14000);
+                                vv.seekTo(16000);
 
                             }
                         };
@@ -4180,15 +4180,15 @@ public class cultura_nuevo extends AppCompatActivity {
                     String txt1 = "what do you want";
                     text1.setVisibility(View.VISIBLE);
                     text1.setText(txt1);
-                    SpannableString ss = new SpannableString(txt1);
-                    ClickableSpan txtone = new ClickableSpan() {
+                    SpannableString ss= new SpannableString(txt1);
+                    ClickableSpan txtone= new ClickableSpan() {
                         @Override
                         public void onClick(@NonNull View view) {
-                            vv.seekTo(11000);
+                            vv.seekTo(12000);
 
                         }
                     };
-                    ss.setSpan(txtone, 0, 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ss.setSpan(txtone,0,16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
                     text1.setText(ss);
                     text1.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -4199,7 +4199,7 @@ public class cultura_nuevo extends AppCompatActivity {
                     ClickableSpan txtTwo= new ClickableSpan() {
                         @Override
                         public void onClick(@NonNull View view) {
-                            vv.seekTo(14000);
+                            vv.seekTo(15000);
 
                         }
                     };
