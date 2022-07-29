@@ -193,7 +193,7 @@ public class Nobles3 {
     };
 
     String vpeng[]={
-            "had ","used ","changed ","displayn ","checked ",
+            "had ","used ","changed ","displayed ","checked ",
             "chosen ","held ","stopped "
     };
 

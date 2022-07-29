@@ -5888,24 +5888,24 @@ public class People3 {
                 ps2eng2 = "you are " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3 = "él " + "está " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3eng = "he is " + vnbc[v] + nnobles[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3eng = "he is " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
                 ps3eng2 = "he is " + vnbc[v] + nnobles[n]  + prep.noblesspecial[p][p2] + advfrequ[r];
 
                 ps3ella = "ella " + "está " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she = "she is " + vnbc[v] + nnobles[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she2 = "she is " + vnbc[v] + nnobles[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3she = "she is " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
+                ps3she2 = "she is " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
 
                 ps3eso = "eso " + "está " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3it = "it is " + vnbc[v] + nnobles[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3iteng2 = "it is " + vnbc[v] + nnobles[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3it = "it is " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
+                ps3iteng2 = "it is " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
 
                 ps4 = "ellos " + "están " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps4eng = "they are " + vnbc[v] + nnobles[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps4eng2 = "they are " + vnbc[v] + nnobles[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps4eng = "they are " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
+                ps4eng2 = "they are " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
 
                 ps5 = "nosotros " + "estamos " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps5eng = "we are " + vnbc[v] + nnobles[n]+ prep.noblesspecial[p][p2] + advfrequ[r];
-                ps5eng2 = "we are " + vnbc[v] + nnobles[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps5eng = "we are " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
+                ps5eng2 = "we are " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + advfrequ[r];
 
                 break;
             case 1:
