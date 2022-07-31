@@ -2565,7 +2565,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 //what do you want✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
-                    if(g>12000 && g<14000){
+                    if(g>10900 && g<11200){
                         String txt1 = "what do you want";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);

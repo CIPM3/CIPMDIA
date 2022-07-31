@@ -6925,37 +6925,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps1eng = "I " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps2eng = "you " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps3eng = "he " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps3she = "she " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps3it = "it " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps4eng = "they " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps5eng = "we " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7028,7 +7028,7 @@ public class Nobles3 {
                 ps4eng = "they wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] ;
+                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
                 ps5eng = "we wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
