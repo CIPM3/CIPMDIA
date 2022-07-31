@@ -70,7 +70,7 @@ public class Oo3 {
             "breaking ", "covering "
     };
     String vnbcs[] = {"haciendo ", "guardando ", "levantando ", "golpeando ", "disparando ",
-            "movindo ", "comprando ", "mostrando ", "buscando ", "quitando ", "vendiendo ",
+            "moviendo ", "comprando ", "mostrando ", "buscando ", "quitando ", "vendiendo ",
             "reservando ", "rompiendo ", "cubriendo "
     };
 
