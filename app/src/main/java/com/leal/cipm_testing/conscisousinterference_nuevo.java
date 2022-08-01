@@ -522,6 +522,52 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
+
+            case "Kot Fishing 1":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("https://adrianlealcaldera.com/KothFishing1Clip1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/KothFishing1Clip2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/KothFishing1Clip3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/KothFishing1Clip4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri5 = Uri.parse("https://adrianlealcaldera.com/KothFishing1Clip5.mp4");
+                        vv.setVideoURI(uri5);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                }
+                break;
+
             case "Helicoptero 1":
                 switch (control){
                     case 1:
@@ -551,6 +597,46 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     case 4:
                         Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
                         Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero1Clip4.mp4");
+                        vv.setVideoURI(uri4);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 5:
+                        Toast.makeText(this, "Aqui ya no hay nada solo 4 clips", Toast.LENGTH_SHORT).show();
+
+                        break;
+                }
+                break;
+            case "Helicoptero 2":
+                switch (control){
+                    case 1:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri1 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Clip1.mp4");
+                        vv.setVideoURI(uri1);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 2:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Clip2.mp4");
+                        vv.setVideoURI(uri2);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 3:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri3 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Clip3.mp4");
+                        vv.setVideoURI(uri3);
+                        vv.setMediaController(new MediaController(this));
+                        vv.requestFocus();
+                        vv.start();
+                        break;
+                    case 4:
+                        Toast.makeText(this, "Cargando video porfavor espere", Toast.LENGTH_SHORT).show();
+                        Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Helicoptero2Clip4.mp4");
                         vv.setVideoURI(uri4);
                         vv.setMediaController(new MediaController(this));
                         vv.requestFocus();
