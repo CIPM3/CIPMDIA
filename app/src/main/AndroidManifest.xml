@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".SpanishInt_nuevo"
+            android:exported="false" />
+        <activity
             android:name=".ActivityProfile"
             android:exported="false" />
         <activity

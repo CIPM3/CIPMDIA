@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chose_spa_int(View vista) {
-        Intent intento = new Intent(this, SpanishInt.class);
+        Intent intento = new Intent(this, SpanishInt_nuevo.class);
         startActivity(intento);
     }
 

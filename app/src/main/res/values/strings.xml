@@ -120,7 +120,7 @@
         <item>Sangre Por Sangre Watch El Paisaje Clip 5</item>
 
         // vamos a quitar estos dos, las frases estan muy pegadas y no funcoina bien el get position
-      <!--  <item>Kings of the Hills Drugs Explanation 14</item>
+        <!--  <item>Kings of the Hills Drugs Explanation 14</item>
         <item>Kings of the Hills Drugs Clip 14</item>-->
     </string-array>
     <string-array name="culturaPremium">
