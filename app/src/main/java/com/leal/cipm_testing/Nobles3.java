@@ -2003,61 +2003,61 @@ public class Nobles3 {
     public void GenPresSimp3() {
         switch (negg) {
             case 0:
-                ps1 = "yo " + vn1[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + vn1[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú " + vn2[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + vn2[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + vnb3[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos " + vn4[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + vn4[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros " + vn5[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + vn5[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + vnb[v] + nnobles[n] + frequadv[r];
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "no " + vn1[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú " + "no " + vn2[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "no " + vn2[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "no " + vn3[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "doesn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos " + "no " + vn4[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "no " + vn4[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros " + "no " + vn5[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "no " + vn5[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "don't " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -2100,31 +2100,31 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "estoy " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "estoy " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I'm not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I'm not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú no " + "estás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "estás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you're not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you're not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he's not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he's not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she's not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she's not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it's not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it's not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they're not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they're not " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we're not "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we're not " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2167,33 +2167,33 @@ public class Nobles3 {
                 break;
             case 1:
 
-                ps1 = "yo no " + "he " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "he " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I haven't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I haven't " + vpeng[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú no " + "has " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "has " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you haven't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you haven't " + vpeng[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he hasn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hasn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she hasn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she hasn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "ha " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it hasn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it hasn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "han " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "han " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they haven't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they haven't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "hemos " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "hemos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we haven't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we haven't " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -2213,7 +2213,7 @@ public class Nobles3 {
                 ps2eng = "you have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él "  + "ha estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he has "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he has " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2235,31 +2235,31 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "he estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "he estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I haven't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I haven't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú no " + "has estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "has estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you haven't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you haven't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "ha estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they haven't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they haven't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no " + "hemos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "hemos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we haven't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we haven't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 break;
@@ -2425,37 +2425,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I wasn't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "estabas " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "estabas " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you weren't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you weren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he wasn't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she wasn't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "estaba " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it wasn't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they weren't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they weren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "estábamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "estábamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we weren't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we weren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2496,37 +2496,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "habías " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "habías " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "habían " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "habían " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "habíamos " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "habíamos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we hadn't "  + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -2549,7 +2549,7 @@ public class Nobles3 {
                 ps2eng2 = "you had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "había estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2574,31 +2574,31 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú no " + "habías estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "habías estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "había estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no " + "habían estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "habían estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no " + "habíamos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "habíamos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2646,37 +2646,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "no " + vn1f[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú " + "no " + vn2f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "no " + vn2f[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "no " + vn3f[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos " + "no " + vn4f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "no " + vn4f[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros " + "no " + vn5f[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "no " + vn5f[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "won't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "won't " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -2708,7 +2708,7 @@ public class Nobles3 {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos "  + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos "  + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they will "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2719,35 +2719,35 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "estaré " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "estaré " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú no " + "estarás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "estarás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "estará " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "estaremos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "estaremos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2794,37 +2794,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "habré " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "habré " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "habrás " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "habrás " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "habrá " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "habrán " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "habrán " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "habremos " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "habremos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we won't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we won't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -2845,7 +2845,7 @@ public class Nobles3 {
                 ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he will have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2872,37 +2872,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "habré estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "habré estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "habrás estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "habrás estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "habrán estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "habrán estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "habremos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "habremos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2946,37 +2946,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "wouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "wouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -3016,36 +3016,36 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "estarías " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "estarías " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "estaría " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estarían " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estarían " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we wouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we wouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3091,38 +3091,38 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "hubieras " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "hubieras " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng = "you wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "hubiera " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "hubieran " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "hubieran " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "hubieramos " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "hubieramos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we wouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng = "we wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -3142,7 +3142,7 @@ public class Nobles3 {
                 ps2eng2 = "you would have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he would have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he would have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3168,37 +3168,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "hubieras estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "hubieras estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "hubieran estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "hubieran estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "hubieramos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "hubieramos estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3210,73 +3210,73 @@ public class Nobles3 {
     public void GenCouldSimp3() {
         switch (negg) {
             case 0:
-                ps1 = "yo podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú podrías " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú podrías " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos podrían " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos podrían " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they could " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros podríamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros podríamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we could " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we could " + vnb[v] + nnobles[n] + frequadv[r];
 
                 break;
             case 1:
-                ps1 = "yo " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú " + "no podrías " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "no podrías " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "no podría " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos " + "no podrían " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "no podrían " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros " + "no podríamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "no podríamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "couldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -3322,37 +3322,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no podrías " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no podrías " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no podría " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no podrían " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no podrían " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no podríamos " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no podríamos " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we couldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we couldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3362,72 +3362,72 @@ public class Nobles3 {
     public void GenCouldPerf3() {
         switch (negg) {
             case 0:
-                ps1 = "yo pude " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo pude " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú pudiste " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú pudiste " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos pudieron " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos pudieron " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros pudimos  " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros pudimos  " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
                 break;
             case 1:
-                ps1 = "yo no pude " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no pude " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no pudiste " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no pudiste " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no pudieron " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no pudieron " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no pudimos " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no pudimos " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we couldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -3473,37 +3473,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "pude haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "pude haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "pudiste haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "pudiste haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "pudo haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "pudieron haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "pudieron haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "we couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "we couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "pudimos haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "pudimos haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "they couldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "they couldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3550,31 +3550,31 @@ public class Nobles3 {
                 ps5eng2 = "we should " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
             case 1:
-                ps1 = "yo " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps2 = "tú " + "no deberías " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "no deberías " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "no debería " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos " + "no deberían " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "no deberían " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros " + "no deberíamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "no deberíamos " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "shouldn't "  + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "shouldn't " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
@@ -3619,32 +3619,32 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no deberías " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no deberías " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3ella = "ella no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3eso = "eso no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no debería " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no deberían " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no deberían " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no deberíamos " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no deberíamos " + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we shouldn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we shouldn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3690,37 +3690,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no debí " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no debí " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no debiste " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no debiste " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no debió " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no debieron " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no debieron " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no debimos " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no debimos " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we shouldn't "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we shouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -3766,37 +3766,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo no " + "debí haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo no " + "debí haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú no " + "debiste haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú no " + "debiste haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso no " + "debió haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "debieron haber estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "debieron haber estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros no " + "debimos haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros no " + "debimos haber estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we shouldn't "  + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we shouldn't " + "have been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3808,73 +3808,73 @@ public class Nobles3 {
     public void GenMightSimp3() {
         switch (negg) {
             case 0:
-                ps1 = "yo quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú quizá " + vn2subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú quizá " + vn2subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos quizá " + vn4subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos quizá " + vn4subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros quizá " + vn5subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros quizá " + vn5subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we might " + vnb[v] + nnobles[n] + frequadv[r];
 
                 break;
             case 1:
-                ps1 = "yo " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú " + "quizá no " + vn2subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú " + "quizá no " + vn2subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos " + "quizá no " + vn4subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos " + "quizá no " + vn4subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros " + "quizá no " + vn5subj[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros " + "quizá no " + vn5subj[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -6109,33 +6109,33 @@ public class Nobles3 {
                 break;
             case 1:
 
-                ps1 = "yo no " + "he " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps1 = "yo no " + "he " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps1eng = "I haven't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps1eng2 = "I haven't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
-                ps2 = "tú no " + "has " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps2 = "tú no " + "has " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps2eng = "you haven't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps2eng2 = "you haven't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
-                ps3 = "él no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps3 = "él no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he hasn't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3eng2 = "he hasn't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
-                ps3ella = "ella no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps3ella = "ella no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3she = "she hasn't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3she2 = "she hasn't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
-                ps3eso = "eso no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps3eso = "eso no " + "ha " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3it = "it hasn't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps3iteng2 = "it hasn't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
 
-                ps4 = "ellos no " + "han " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps4 = "ellos no " + "han " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they haven't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps4eng2 = "they haven't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
 
-                ps5 = "nosotros no " + "hemos " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                ps5 = "nosotros no " + "hemos " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps5eng = "we haven't " + vpeng[v] + nnobles[n]+prep.noblesspecialeng[p][p2] + frequadv[r] ;
                 ps5eng2 = "we haven't " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r] ;
 
@@ -6158,7 +6158,7 @@ public class Nobles3 {
                 ps2eng = "you have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you have " + "been " + vnbc[v] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él " + "ha estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "ha estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he has " + "been " + vnbc[v] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6263,7 +6263,7 @@ public class Nobles3 {
                     ps2eng = "you " + vnbp[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                    ps3 = "él " + ps3imp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r] ;
+                    ps3 = "él " + ps3imp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                     ps3eng = "he " + vnbp[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                     ps3eng = "he " + vnbp[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6512,7 +6512,7 @@ public class Nobles3 {
                 ps2eng2 = "you had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él " + "había estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6545,7 +6545,7 @@ public class Nobles3 {
                 ps2eng = "you hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él no " + "había estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6677,7 +6677,7 @@ public class Nobles3 {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "estarán " + vnbc[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "estarán " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they will " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6711,7 +6711,7 @@ public class Nobles3 {
                 ps3iteng2 = "it won't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estarán " + vnbc[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos no " + "estarán " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they won't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they won't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6820,7 +6820,7 @@ public class Nobles3 {
                 ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he will have " + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6857,7 +6857,7 @@ public class Nobles3 {
                 ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él no " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6925,37 +6925,37 @@ public class Nobles3 {
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps1eng = "I " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps2eng = "you " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3she = "she " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3it = "it " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps5eng = "we " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we " + "wouldn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7028,7 +7028,7 @@ public class Nobles3 {
                 ps4eng = "they wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv] ;
+                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps5eng = "we wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7133,7 +7133,7 @@ public class Nobles3 {
                 ps2eng2 = "you would have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él "  + "hubiera estdo " + vnbcs[v] + nnoblesesp[n];
+                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n];
                 ps3eng = "he would have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he would have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7169,7 +7169,7 @@ public class Nobles3 {
                 ps2eng2 = "you wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él no " + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] ;
+                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] ;
                 ps3eng = "he wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
