@@ -422,13 +422,13 @@ public class People2 {
                 ps2eng = "you " + "haven't been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "has not been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "has not been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "has not been " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "haven't been " + vnbc[v] + nnobles[n];
@@ -9646,13 +9646,13 @@ public class People2 {
                 ps2eng = "you " + "haven't been " + vnbc[v];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v];
-                ps3eng = "he " + "has not been " + vnbc[v];
+                ps3eng = "he " + "hasn't been " + vnbc[v];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v];
-                ps3she = "she " + "has not been " + vnbc[v];
+                ps3she = "she " + "hasn't been " + vnbc[v];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v];
-                ps3it = "it " + "has not been " + vnbc[v];
+                ps3it = "it " + "hasn't been " + vnbc[v];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v];
                 ps4eng = "they " + "haven't been " + vnbc[v];

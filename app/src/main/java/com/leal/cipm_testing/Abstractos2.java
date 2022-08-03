@@ -70,14 +70,14 @@ public class Abstractos2 {
 
 
     // objetos abstractos
-    String nnobles[] = {"growth ", "the growth ", "the meaning ", "the philosophy ",
+    String nnobles[] = {"the growth ", "the growth ", "the meaning ", "the philosophy ",
             "the energy ", "the success ", "the performance ", "the appearance ",
             "the concept ", "the death ", "the advice ", "the opinion ", "the reality ",
             "the perspective ", "the medicine ", "the decision ", "the entertainment ",
             "the responsability ", "the skill ", "the wealth ", "the depth "
     };
 
-    String nnoblesesp[] = {"crecimiento ", "el crecimiento ", "el significado ", "la filosofía ",
+    String nnoblesesp[] = {"el crecimiento ", "el crecimiento ", "el significado ", "la filosofía ",
             "la energía ", "el éxito ", "el desempeño ", "la apariencia ", "el concepto ",
             "la muerte ", "el consejo ", "la opinión ", "la realidad ", "la perspectiva ",
             "la medicina ", "la decisión ", "el entretenimiento ", "la responsabilidad ",
@@ -292,13 +292,13 @@ public class Abstractos2 {
                 ps2eng = "you " + "haven't been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "has not been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "has not been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "has not been " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "haven't been " + vnbc[v] + nnobles[n];
@@ -9532,13 +9532,13 @@ public class Abstractos2 {
                 ps2eng = "you " + "haven't been " + vnbc[v];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v];
-                ps3eng = "he " + "has not been " + vnbc[v];
+                ps3eng = "he " + "hasn't been " + vnbc[v];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v];
-                ps3she = "she " + "has not been " + vnbc[v];
+                ps3she = "she " + "hasn't been " + vnbc[v];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v];
-                ps3it = "it " + "has not been " + vnbc[v];
+                ps3it = "it " + "hasn't been " + vnbc[v];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v];
                 ps4eng = "they " + "haven't been " + vnbc[v];

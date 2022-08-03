@@ -75,7 +75,7 @@ public class Nobles2 {
     };
 
     // nouns nobles top 100
-    String nnobles[] = {"news ", "the news ", "the growth ", "the marriage ", "the user ", "the combination ",
+    String nnobles[] = {"the new ", "the news ", "the growth ", "the marriage ", "the user ", "the combination ",
             "the failure ", "the meaning ", "the medicine ", "the philosophy ", "the teacher ", "the communication ",
             "the night ", "the chemistry ", "the disease ", "the disks ", "the energy ", "the nation ",
             "the road ", "the role ", "the soup ", "the location ", "the success ", "the addition ",
@@ -96,7 +96,7 @@ public class Nobles2 {
 
 
     // nouns nobles espa;ol top 100
-    String nnoblesesp[] = {"noticias ", "las noticias ", "el crecimiento ", "el matrimonio ", "a el usuario ", "la combinación ", "el fracaso ",
+    String nnoblesesp[] = {"la noticia ", "las noticias ", "el crecimiento ", "el matrimonio ", "a el usuario ", "la combinación ", "el fracaso ",
             "el significado ", "la medicina ", "la filosofía ", "el maestro ", "la comunicación ", "la noche ", "la quimica ",
             "la enfermedad ", "el disco ", "la energia ", "la nación ", "el camino ", "el rol ", "la sopa ", "la ubicación ", "el éxito ",
             "la suma ", "el departamento ", "la educación ", "las matematicas ", "el momento ", "la pintura ", "la atención ",
@@ -105,7 +105,7 @@ public class Nobles2 {
             "el contexto ", "la introducción ", "la oportunidad ", "el desempeño ", "a el conductor ", "el vuelo ", "la longitud ", "la revista ",
             "la relación ", "las enseñanzas ", "la celula ", "a el distribuidor ", "el debate ", "el hallazgo ", "el lago ", "a el miembro ",
             "el mensaje ", "el teléfono ", "la escena ", "la apariencia ", "la asociación ", "el concepto ", "a el cliente ", "la muerte ",
-            "la discución ", "la vivienda ", "la inflanción ", "la aseguranza ", "a la mujer ", "el consejo ", "la sangre ", "el esfuerzo ",
+            "la discución ", "la vivienda ", "la inflanción ", "el seguro ", "a la mujer ", "el consejo ", "la sangre ", "el esfuerzo ",
             "la expresión ", "la importancia ", "la opinión ", "el pago ", "la realidad ", "la responsabilidad ", "la situación ", "la habilidad ",
             "la declaración ", "la riqueza ", "la aplicación ", "la ciudad ", "el país ", "la profunidad ", "el estado ", "la fundación ",
             "a la abuela ", "el corazón ", "la prespectiva ", "la foto ", "la receta ", "el estudio "
@@ -612,13 +612,13 @@ public class Nobles2 {
                 ps2eng = "you " + "haven't been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "has not been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "has not been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "has not been " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "haven't been " + vnbc[v] + nnobles[n];
@@ -9796,13 +9796,13 @@ public class Nobles2 {
                 ps2eng = "you " + "haven't been " + vnbc[v];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v];
-                ps3eng = "he " + "has not been " + vnbc[v];
+                ps3eng = "he " + "hasn't been " + vnbc[v];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v];
-                ps3she = "she " + "has not been " + vnbc[v];
+                ps3she = "she " + "hasn't been " + vnbc[v];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v];
-                ps3it = "it " + "has not been " + vnbc[v];
+                ps3it = "it " + "hasn't been " + vnbc[v];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v];
                 ps4eng = "they " + "haven't been " + vnbc[v];
