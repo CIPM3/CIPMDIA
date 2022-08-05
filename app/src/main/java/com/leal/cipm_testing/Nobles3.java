@@ -2109,16 +2109,16 @@ public class Nobles3 {
                 ps2eng2 = "you're not " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they're not "  + vnbc[v] + nnobles[n] + frequadv[r];
@@ -6048,16 +6048,16 @@ public class Nobles3 {
                 ps2eng2 = "you're not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3eng = "he's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3eng2 = "he's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng = "he isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she = "she's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3she2 = "she's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she = "she isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3it = "it's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3iteng2 = "it's not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3it = "it isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3iteng2 = "it isn't " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they're not " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
