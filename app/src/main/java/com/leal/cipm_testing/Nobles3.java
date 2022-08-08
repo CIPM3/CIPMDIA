@@ -3909,7 +3909,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos quizá "  + "estén " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos quizá "  + "estén " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they might "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they might " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3943,7 +3943,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos quizá no "  + "estén " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos quizá no "  + "estén " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they might not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they might not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -7469,7 +7469,7 @@ public class Nobles3 {
                 ps3iteng2 = "it could have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos "  + "pudieron haber estado " + vnbc[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos "  + "pudieron haber estado " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they could have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they could have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7505,7 +7505,7 @@ public class Nobles3 {
                 ps3iteng2 = "it couldn't " + "have been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos no " + "pudieron haber estado " + vnbc[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos no " + "pudieron haber estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "we couldn't "  + "have been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "we couldn't " + "have been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7940,7 +7940,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos quizá "  + "estén " + vnbc[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos quizá "  + "estén " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they might "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they might " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7974,7 +7974,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos quizá no "  + "estén " + vnbc[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos quizá no "  + "estén " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they might not "  + "be " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they might not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -8096,7 +8096,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos quizá "  + "hayan estado " + vnbc[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos quizá "  + "hayan estado " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they might have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they might have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -8133,7 +8133,7 @@ public class Nobles3 {
                 ps3iteng2 = "it might not " + "have been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos quizá no "  + "hayan estado " + vnbc[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos quizá no "  + "hayan estado " + vnbcs[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they might not "  + "have been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they might not " + "have been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
