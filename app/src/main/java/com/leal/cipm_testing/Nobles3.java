@@ -8159,10 +8159,6 @@ public class Nobles3 {
                 ps1eng = "I can "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I can " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps1 = "yo puedo "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps1eng = "I can "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I can " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-
 
                 ps2 = "tú puedes "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps2eng = "you can "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
