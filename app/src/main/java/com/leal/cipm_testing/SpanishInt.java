@@ -817,7 +817,6 @@ public class SpanishInt extends AppCompatActivity {
         }
 
     }
-
     public void possibleanswers(View view){
 
         if(engtx.getText().toString().equals("null")){
@@ -839,10 +838,6 @@ public class SpanishInt extends AppCompatActivity {
         }
 
     }
-
-
-
-
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
