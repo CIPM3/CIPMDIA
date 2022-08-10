@@ -230,12 +230,6 @@ public class Oo2 {
             "the heart ", "the photo ", "the recipe ", "the studio "
     };
 
-    String nnoblesM[]={"the apartment ","the disk ","the cigarette ","the flight ", "the magazine ",
-            "the lake ","the message ","the phone ","the heart ","the studio "
-    };
-    String nnoblesF[]={"the painting ","the road ","the soup ","the wood ","the office ","the magazine ",
-            "the cell ","the blood ", "the photo ","the recipe ",
-    };
 
     String nnoblesesp[] = {"el apartamento ", "la pintura ", "el disco ", "la carretera ", "la sopa ",
             "la madera ", "la oficina ", "el cigarro ", "el vuelo ", "la revista ", "el periódico ",
@@ -243,13 +237,7 @@ public class Oo2 {
             "la foto ", "la receta ", "el estudio "
     };
 
-    String nnoblesespM[]={"el apartamento ","el disco ","el cigarro ", "el vuelo ","el periódico ",
-            "el lago ", "el mensaje ", "el teléfono ","el corazón ","el estudio "
-    };
-    String nnoblesespF[]={"la pintura ","la carretera ", "la sopa ",
-            "la madera ", "la oficina ", "la revista ","la celda ","la sangre ",
-            "la foto ", "la receta ",
-    };
+
 
 
 

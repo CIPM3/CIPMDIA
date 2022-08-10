@@ -10144,9 +10144,7 @@ public class Generator {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
         int verb = (int) (Math.random() * 4);
-
         String temp = pronombres[rand];
-
         switch (temp) {
             case "yo ":
                 switch (verb) {
