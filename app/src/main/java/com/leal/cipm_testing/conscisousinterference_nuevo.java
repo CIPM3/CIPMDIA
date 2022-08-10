@@ -38,7 +38,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     String selection;
     TextView txt1;
     Spinner spin;
-    TextView tv1, tv2, tv3, tv4, tv5;
     EditText ai1, ai2, ai3, ai4, ai5;
     String r1, r2, r3, r4, r5;
     String temp1 ,temp2, temp3, temp4, temp5;
@@ -728,8 +727,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     pass_1.setVisibility(View.GONE);
 
                     inc_1.setVisibility(View.VISIBLE);
-                    mic_1.setVisibility(View.GONE);
-
+                    // mic_1.setVisibility(View.GONE);
                     lay_resp_1.setVisibility(View.VISIBLE);
                 }
                 break;
