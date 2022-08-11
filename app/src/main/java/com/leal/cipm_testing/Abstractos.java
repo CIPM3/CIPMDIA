@@ -2317,7 +2317,7 @@ public class Abstractos {
                 ps3iteng2 = "it wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estaban " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps4eng = "they weren't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they weren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2575,7 +2575,7 @@ public class Abstractos {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos "  + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos "  + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they will "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2609,7 +2609,7 @@ public class Abstractos {
                 ps3iteng2 = "it won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps4eng = "they won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -6145,7 +6145,7 @@ public class Abstractos {
                 ps3iteng2 = "it was " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "estaban " + vnbc[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "estaban " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps4eng = "they were " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they were " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
@@ -6181,7 +6181,7 @@ public class Abstractos {
                 ps3iteng2 = "it wasn't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos no " + "estaban " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps4eng = "they weren't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they weren't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
@@ -6451,7 +6451,7 @@ public class Abstractos {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "estarán " + vnbc[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "estarán " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps4eng = "they will " + "be " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
