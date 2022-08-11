@@ -15,10 +15,13 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".SignIn"
+            android:exported="false" />
+        <activity
             android:name=".SpanishInt_nuevo"
             android:exported="false" />
         <activity
-            android:name=".ActivityProfile"
+            android:name=".profile"
             android:exported="false" />
         <activity
             android:name=".StructureResults"
@@ -58,9 +61,6 @@
             android:exported="false" />
         <activity
             android:name=".chat_maestro"
-            android:exported="false" />
-        <activity
-            android:name=".profile"
             android:exported="false" />
         <activity
             android:name=".chose_availability"

@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void tutorialGeneral(View vista) {
-        Intent intento = new Intent(this, MainTesting.class);
+        Intent intento = new Intent(this, TutorialGeneral.class);
         startActivity(intento);
     }
     public void vocabulary(View vista) {
@@ -76,19 +76,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //billing
-    public void test(View vist){
-        Intent intent = new Intent(this, MainTesting.class);
-        startActivity(intent);
-    }
+
 
     public void Cultura(View vista) {
         Intent intento = new Intent(this, Culture.class);
         startActivity(intento);
     }
-    public void Test(View vista) {
-        Intent intento = new Intent(this, MainTesting.class);
-        startActivity(intento);
-    }
+
 
     public void ConInt(View vista) {
         Intent intento = new Intent(this, rachel.class);

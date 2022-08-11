@@ -47,7 +47,7 @@ public class StructureResults extends AppCompatActivity {
                         ArrayList<Student> students = snapshot.getValue(t);
                         //String value = String.valueOf(students.get(0).presentsimple);
                         estructuras = new String[]
-                                {       "Presente Simple "+": "+ String.valueOf(students.get(0).presentsimple),
+                                {       "Presente Simple "+": "+ students.get(0).presentsimple,
                                         "Presente Continuo"+": "+ String.valueOf(students.get(0).presenteContinuo),
                                         "Presente Perfecto"+": "+ String.valueOf(students.get(0).presenteperfecto),
                                         "Presente Perfecto Continuo"+": "+ String.valueOf(students.get(0).presentepp),
