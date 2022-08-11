@@ -17,65 +17,65 @@ public class Generator2 {
     // we just want to stick a prepositional phrase next to them
     String vib[] = {
             "differ ", "relax ", "participate ", "succeed ", "suffer ", "adapt ", "argue ",
-            "arise ", "compete ", "retire ", "arrive ", "behave ", "disagree ", "insist ", "remain ",
+            "compete ", "retire ", "arrive ", "behave ", "disagree ", "insist ", "remain ",
             "apologize ", "belong ", "hesitate ", "decide ", "complain "
     };
 
     String vibesp[] = {"diferir ", "relajar ", "participar ", "triunfar ", "sufrir ", "adaptar ",
-            "discutir ", "aumentar ", "competir ", "retirar ", "llegar ", "comportar ", "discrepar ",
+            "discutir ", "competir ", "retirar ", "llegar ", "comportar ", "discrepar ",
             "insistir ", "permanecer ", "disculpar ", "pertenecer ", "dudar ", "decidir ", "quejar "
     };
 
 
     // verbos intransitivos tercera persona eng
     String vib3[] = {"differs ", "relaxes ", "participates ", "succeeds ", "suffers ", "adapts ", "argues ",
-            "arises ", "competes ", "retires ", "arrives ", "behaves ", "disagrees ", "insists ", "remains ",
+            "competes ", "retires ", "arrives ", "behaves ", "disagrees ", "insists ", "remains ",
             "apologizes ", "belongs ", "hesitates ", "decides ", "complains "
     };
 
     // continuos intransitivos inglés
     String vib3cont[] = {"differing ", "relaxing ", "participating ", "succeeding ", "suffering ",
-            "adapting ", "arguing ", "arising ", "competing ", "retiring ", "arriving ", "behaving ",
+            "adapting ", "arguing ", "competing ", "retiring ", "arriving ", "behaving ",
             "disagreeing ", "insisting ", "remaining ", "apologizing ", "belonging ", "hesitating ",
             "deciding ", "complaining "
     };
 
     // participio intransitivo esp
     String vib3contesp[] = {"difiriendo ", "relajándose ", "participando ", "triunfando ", "sufriendo ",
-            "adaptándose ", "discutiendo ", "aumentando ", "compitiendo ", "retirando ", "llegando ",
+            "adaptándose ", "discutiendo ", "compitiendo ", "retirando ", "llegando ",
             "comportándose ", "discrepando ", "insistiendo ", "permaneciendo ", "disculpándose ",
             "perteneciendo ", "dudando ", "decidiendo ", "quejándose "
     };
 
     //participio intransitivo inglés
     String viparticiple[] = {"differed ", "relaxed ", "participated ", "succeeded ", "suffered ",
-            "adapted ", "argued ", "arised ", "competed ", "retired ", "arrived ", "behaved ",
+            "adapted ", "argued ", "competed ", "retired ", "arrived ", "behaved ",
             "disagreed ", "insisted ", "remained ", "apologized ", "belonged ", "hesitated ", "decided ",
             "complained "
     };
     String vibparticipiosp[] = {"diferido ", "relajado ", "participado ", "triunfado ", "sufrido ",
-            "adaptado ", "discutido ", "aumentado ", "competido ", "retirado ", "llegado ",
+            "adaptado ", "discutido ", "competido ", "retirado ", "llegado ",
             "comportado ", "discrepado ", "insistido ", "permanecido ", "disculpado ",
             "pertenecido ", "dudado ", "decidido ", "quejado "
     };
 
     // verbos intransitivos base tercera persona esp
     String vib3esp[] = {"difiere ", " se relaja ", "participa ", "triunfa ", "sufre ",
-            "adapta ", "discute ", "aumenta ", "compite ", "se retira ", "llega ",
+            "adapta ", "discute ", "compite ", "se retira ", "llega ",
             "se comporta ", "discrepa ", "insiste ", "permanece ", "se disculpa ",
             "pertenece ", "duda ", "decide ", "se queja "
     };
 
     //verbos intransitivos base primera
     String vib1[] = {"difiero ", " me relajo ", "participó ", "triunfo ", "sufro ",
-            "me adapto ", "discuto ", "aumento ", "compito ", "me retiro ", "llegó ",
+            "me adapto ", "discuto ", "compito ", "me retiro ", "llegó ",
             "me comporto ", "discrepo ", "insisto ", "permanezco ", "me disculpo ",
             "pertenezco ", "dudo ", "decido ", "me quejo "
     };
 
     //verbos intransitivos base segunda
     String vib2[] = {"difieres ", " te relajas ", "participas ", "triunfas ", "sufres ",
-            "te adaptas ", "discutes ", "aumentas ", "compites ", "te retiras ", "llegas ",
+            "te adaptas ", "discutes ", "compites ", "te retiras ", "llegas ",
             "te comportas ", "discrepas ", "insistes ", "permaneces ", "te disculpas ",
             "perteneces ", "dudas ", "decides ", "te quejas "
 
@@ -83,14 +83,14 @@ public class Generator2 {
 
     //verbos intransitivos base tercera plural
     String vib3p[] = {"difieren ", " se relajan ", "participan ", "triunfan ", "sufren ",
-            "se adaptan ", "discuten ", "aumentan ", "compiten ", "se retiran ", "llegan ",
+            "se adaptan ", "discuten ", "compiten ", "se retiran ", "llegan ",
             "se comportan ", "discrepan ", "insisten ", "permanecen ", "se disculpan ",
             "pertenecen ", "dudan ", "deciden ", "se quejan "
     };
 
     //verbos intransitivos base nosotros
     String vibnos[] = {"diferimos ", "nos relajamos ", "participamos ", "triunfamos ", "sufrimos ",
-            "nos adaptamos ", "discutimos ", "aumentamos ", "competimos ", "nos retiramos ", "llegamos ",
+            "nos adaptamos ", "discutimos ", "competimos ", "nos retiramos ", "llegamos ",
             "nos comportamos ", "discrepamos ", "insistimos ", "permanecemos ", "nos disculpamos ",
             "pertenecemos ", "dudamos ", "decidimos ", "nos quejamos "
     };
@@ -98,95 +98,94 @@ public class Generator2 {
 
     //verbo intrasitivo base futuro primer persona
     String vib1f[] = {
-            "diferiré ", "me relajaré ", "participaré ", "triunfaré "
-            , "sufriré ", "adaptaré ", "discutiré ", "aumentaré ",
-            "competiré ", "me retiraré ", "llegaré ", "me comportaré ",
-            "discreparé ", "insistiré ", "permaneceré ", "me disculparé ",
-            "perteneceré ", "dudaré ", "decidiré ", "me quejaré "
+            "diferiré ", "me relajaré ", "participaré ", "triunfaré ", "sufriré ", "adaptaré ",
+            "discutiré ", "competiré ", "me retiraré ", "llegaré ", "me comportaré ", "discreparé ",
+            "insistiré ", "permaneceré ", "me disculparé ", "perteneceré ", "dudaré ", "decidiré ",
+            "me quejaré "
     };
 
     //verbo intrasitivo base futuro segunda persona
     String vib2f[] = {"diferirás ", "te relajarás ", "participarás ", "triunfarás ", "sufrirás ",
-            "adaptarás ", "discutirás ", "aumentarás ", "competirás ", "te retirarás ", "llegarás ",
+            "adaptarás ", "discutirás ", "competirás ", "te retirarás ", "llegarás ",
             "te comportarás ", "discreparás ", "insistirás ", "permanecerás ", "te disculparás ",
             "pertenecerás ", "dudarás ", "decidirás ", "te quejarás "
     };
 
     //verbo intranstivo base futuro tercera persona
     String vib3f[] = {"diferirá ", "se relajará ", "participará ", "triunfará ", "sufrirá ",
-            "adaptará ", "discutirá ", "aumentará ", "competirá ", "se retirará ", "llegará ",
+            "adaptará ", "discutirá ", "competirá ", "se retirará ", "llegará ",
             "se comportará ", "discrepará ", "insistirá ", "permanecerá ", "se disculpará ",
             "pertenecerá ", "dudará ", "decidirá ", "se quejará "
     };
 
     //verbo intransitivo base futuro cuarta persona
     String vib4f[] = {"diferirán ", "se relajarán ", "participarán ", "triunfarán ", "sufrirán ",
-            "adaptarán ", "discutirán ", "aumentarán ", "competirán ", "se retirarán ", "llegarán ",
+            "adaptarán ", "discutirán ", "competirán ", "se retirarán ", "llegarán ",
             "se comportarán ", "discreparán ", "insistirán ", "permanecerán ", "se disculparán ",
             "pertenecerán ", "dudarán ", "decidirán ", "se quejarán "
     };
 
     //verbo intransitivo base futuro nosotros
     String vibfnos[] = {"diferiremos ", "nos relajaremos ", "participaremos ", "triunfaremos ", "sufriremos ",
-            "adaptaremos ", "discutiremos ", "aumentaremos ", "competiremos ", "nos retiraremos ", "llegaremos ",
+            "adaptaremos ", "discutiremos ", "competiremos ", "nos retiraremos ", "llegaremos ",
             "nos comportaremos ", "discreparemos ", "insistiremos ", "permaneceremos ", "nos disculparemos ",
             "perteneceremos ", "dudaremos ", "decidiremos ", "nos quejaremos "
     };
 
     // subjuntivos intransitivos
     String vib1s[] = {"difiera ", "me relaje ", "participe ", "triunfe ", "sufra ",
-            "me adapte ", "discuta ", "aumente ", "compita ", "me retire ", "llegue ",
+            "me adapte ", "discuta ", "compita ", "me retire ", "llegue ",
             "me comporte ", "discrepe ", "insista ", "permanezca ", "me disculpe ",
             "pertenezca ", "dude ", "decida ", "me queje "
     };
     String vib2s[] = {"difieras ", "te relajes ", "partícipes ", "triunfes ", "sufras ",
-            "te adaptes ", "discutas ", "aumentes ", "compitas ", "te retires ", "llegues ",
+            "te adaptes ", "discutas ", "compitas ", "te retires ", "llegues ",
             "te comportes ", "discrepes ", "insistas ", "permanezcas ", "te disculpes ",
             "pertenezcas ", "dudes ", "decidas ", "te quejes "
     };
     String vib3s[] = {"difiera ", "se relaje ", "participe ", "triunfe ", "sufra ",
-            "se adapte ", "discuta ", "aumente ", "compita ", "se retire ", "llegue ",
+            "se adapte ", "discuta ", "compita ", "se retire ", "llegue ",
             "se comporte ", "discrepe ", "insista ", "permanezca ", "se disculpe ",
             "pertenezca ", "dude ", "decida ", "se queje "
     };
     String vib4s[] = {"difieran ", "se relajen ", "participen ", "triunfen ", "sufran ",
-            "se adapten ", "discutan ", "aumenten ", "compitan ", "se retiren ", "lleguen ",
+            "se adapten ", "discutan ", "compitan ", "se retiren ", "lleguen ",
             "se comporten ", "discrepen ", "insistan ", "permanezcan ", "se disculpen ",
             "pertenezcan ", "duden ", "decidan ", "se quejen "
     };
     String vib5s[] = {"difieramos ", "nos relajemos ", "participemos ", "triunfemos ", "suframos ",
-            "nos adaptemos ", "discutamos ", "aumentemos ", "compitamos ", "nos retiremos ", "lleguemos ",
+            "nos adaptemos ", "discutamos ", "compitamos ", "nos retiremos ", "lleguemos ",
             "nos comportemos ", "discrepemos ", "insistamos ", "permanezcamos ", "nos disculpemos ",
             "pertenezcamos ", "dudemos ", "decidamos ", "nos quejemos "
     };
     // hipoteticos intransitivos
     String vib1w[] = {"diferiría ", "me relajaría ", "participaría ", "triunfaría ", "sufriría ",
-            "me adaptaría ", "discutiría ", "aumentaría ", "competiría ", "me retiraría ", "llegaría ",
+            "me adaptaría ", "discutiría ", "competiría ", "me retiraría ", "llegaría ",
             "me comportaría ", "discreparía ", "insistiría ", "permanecería ", "me disculparía ",
             "pertenecería ", "dudaría ", "decidiría ", "me quejaría "
     };
     String vib2w[] = {"diferirías ", "te relajarías ", "participarías ", "triunfarías ", "sufrirías ",
-            "te adaptarías ", "discutirías ", "aumentarías ", "competirías ", "te retirarías ", "llegarías ",
+            "te adaptarías ", "discutirías ", "competirías ", "te retirarías ", "llegarías ",
             "te comportarías ", "discreparías ", "insistirías ", "permanecerías ", "te disculparías ",
             "pertenecerías ", "dudarías ", "decidirías ", "te quejarías "
     };
     // hipoteticos intransitivos
     String vib3w[] = {"diferiría ", "se relajaría ", "participaría ", "triunfaría ", "sufriría ",
-            "se adaptaría ", "discutiría ", "aumentaría ", "competiría ", "se retiraría ", "llegaría ",
+            "se adaptaría ", "discutiría ", "competiría ", "se retiraría ", "llegaría ",
             "se comportaría ", "discreparía ", "insistiría ", "permanecería ", "se disculparía ",
             "pertenecería ", "dudaría ", "decidiría ", "se quejaría "
     };
 
     // hipoteticos intransitivos ustedes
     String vib4w[] = {"diferirían ", "se relajarían ", "participarían ", "triunfarían ", "sufrirían ",
-            "se adaptarían ", "discutirían ", "aumentarían ", "competirían ", "se retirarían ", "llegarían ",
+            "se adaptarían ", "discutirían ", "competirían ", "se retirarían ", "llegarían ",
             "se comportarían ", "discreparían ", "insistirían ", "permanecerían ", "se disculparían ",
             "pertenecerían ", "dudarían ", "decidirían ", "se quejarían "
     };
 
     // hipoteticos intransitivos nosotros
     String vib5w[] = {"diferiríamos ", "nos relajaríamos ", "participaríamos ", "triunfaríamos ",
-            "sufriríamos ", "nos adaptaríamos ", "discutiríamos ", "aumentaríamos ", "competiríamos ",
+            "sufriríamos ", "nos adaptaríamos ", "discutiríamos ", "competiríamos ",
             "nos retiraríamos ", "llegaríamos ", "nos comportaríamos ", "discreparíamos ",
             "insistiríamos ", "permaneceríamos ", "nos disculparíamos ", "perteneceríamos ",
             "dudaríamos ", "decidiríamos ", "nos quejaríamos "
