@@ -623,7 +623,7 @@ public class People3 {
 
 
     }
-    public void GenPastPerf2() {
+    public void GenPastPerf2(){
         switch (neg) {
             case 0:
                 ps1 = "yo " + "había " + vpsp[v] + nnoblesesp[n];
@@ -633,13 +633,13 @@ public class People3 {
                 ps2eng = "you " + "had " + vpeng[v] + nnobles[n];
 
                 ps3 = "él " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3eng = "he " + "had " + vpeng[v] + nnobles[n];
+                ps3eng = "he " + "has "+ vpeng[v] + nnobles[n];
 
                 ps3ella = "ella " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3she = "she " + "had " + vpeng[v] + nnobles[n];
+                ps3she = "she " + "has "+ vpeng[v] + nnobles[n];
 
                 ps3eso = "eso " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3it = "it " + "had " + vpeng[v] + nnobles[n];
+                ps3it = "it " + "has "+ vpeng[v] + nnobles[n];
 
                 ps4 = "ellos " + "habían " + vpsp[v] + nnoblesesp[n];
                 ps4eng = "they " + "had " + vpeng[v] + nnobles[n];
@@ -655,13 +655,13 @@ public class People3 {
                 ps2eng = "you " + "hadn't " + vpeng[v] + nnobles[n];
 
                 ps3 = "él no " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3eng = "he " + "hadn't " + vpeng[v] + nnobles[n];
+                ps3eng = "he " + "hasn't " + vpeng[v] + nnobles[n];
 
                 ps3ella = "ella no " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3she = "she " + "hadn't " + vpeng[v] + nnobles[n];
+                ps3she = "she " + "hasn't " + vpeng[v] + nnobles[n];
 
                 ps3eso = "eso no " + "había " + vpsp[v] + nnoblesesp[n];
-                ps3it = "it " + "hadn't " + vpeng[v] + nnobles[n];
+                ps3it = "it" + "hasn't " + vpeng[v] + nnobles[n];
 
                 ps4 = "ellos no " + "habían " + vpsp[v] + nnoblesesp[n];
                 ps4eng = "they " + "hadn't " + vpeng[v] + nnobles[n];
@@ -684,13 +684,13 @@ public class People3 {
                 ps2eng = "you " + "had been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "had been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "has been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "had been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "has been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "had been " + vnbc[v] + nnobles[n];
+                ps3it = "it" + "has been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos " + "habían estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "had been " + vnbc[v] + nnobles[n];
@@ -706,13 +706,13 @@ public class People3 {
                 ps2eng = "you " + "hadn't been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "hadn't been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "hadn't been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no " + "había estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "hadn't been " + vnbc[v] + nnobles[n];
+                ps3it = "it" + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "habían estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "hadn't been " + vnbc[v] + nnobles[n];
@@ -2304,7 +2304,7 @@ public class People3 {
                     ps2eng = "you " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3 = "él " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
-                    ps3eng = "he " + "din't "  + vnb[v] + nnobles[n] + frequadv[r];
+                    ps3eng = "he " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3ella = "ella " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
                     ps3she = "she " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
@@ -2443,16 +2443,16 @@ public class People3 {
                 ps2eng2 = "you had " + vpeng[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él "  + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he had "  + vpeng[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he had " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he has " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he has "+ vpeng[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella "  + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she had "  + vpeng[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she had " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3she = "she has " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she has "+ vpeng[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso "  + "había " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it had "  + vpeng[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it had " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3it = "it has " + vpeng[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it has "+ vpeng[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos "  + "habían " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they had "  + vpeng[v] + nnobles[n] + frequadv[r];
@@ -2518,21 +2518,21 @@ public class People3 {
 
 
                 ps3 = "él "  + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he has "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he has " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella "  + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she has "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she has " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso "  + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it has "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it has " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos "  + "habían estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos "  + "habían estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2551,18 +2551,18 @@ public class People3 {
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no " + "habían estado " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos no " + "habían estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -6160,7 +6160,7 @@ public class People3 {
                     ps2eng = "you " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                     ps3 = "él " + "no " + ps3p[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                    ps3eng = "he " + "din't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                    ps3eng = "he " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                     ps3ella = "ella " + "no " + ps3p[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                     ps3she = "she " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
@@ -6305,16 +6305,16 @@ public class People3 {
                 ps2eng2 = "you had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3 = "él " + "había " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3eng = "he had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3eng2 = "he had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng = "he has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3ella = "ella " + "había " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she = "she had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3she2 = "she had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she = "she has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3eso = "eso " + "había " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3it = "it had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3iteng2 = "it had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3it = "it has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3iteng2 = "it has "+ vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps4 = "ellos " + "habían " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they had " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
@@ -6383,21 +6383,21 @@ public class People3 {
 
 
                 ps3 = "él " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3eng = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng = "he has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
                 ps3ella = "ella " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she = "she had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3she2 = "she had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she = "she has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
                 ps3eso = "eso " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3it = "it had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3iteng2 = "it had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3it = "it has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3iteng2 = "it has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "habían estado " + vnbc[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "habían estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6416,18 +6416,18 @@ public class People3 {
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3eng = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng = "he hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3ella = "ella no " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3she = "she hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3she2 = "she hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she = "she hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps3eso = "eso no " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps3it = "it hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps3iteng2 = "it hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3it = "it hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps3iteng2 = "it hasn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps4 = "ellos no " + "habían estado " + vnbc[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos no " + "habían estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps4eng = "they hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -9863,13 +9863,13 @@ public class People3 {
                 ps2eng = "you " + "had " + vpeng[v];
 
                 ps3 = "él " + "había " + vpsp[v];
-                ps3eng = "he " + "had " + vpeng[v];
+                ps3eng = "he " + "has "+ vpeng[v];
 
                 ps3ella = "ella " + "había " + vpsp[v];
-                ps3she = "she " + "had " + vpeng[v];
+                ps3she = "she " + "has "+ vpeng[v];
 
                 ps3eso = "eso " + "había " + vpsp[v];
-                ps3it = "it " + "had " + vpeng[v];
+                ps3it = "it " + "has "+ vpeng[v];
 
                 ps4 = "ellos " + "habían " + vpsp[v];
                 ps4eng = "they " + "had " + vpeng[v];
@@ -9885,13 +9885,13 @@ public class People3 {
                 ps2eng = "you " + "hadn't " + vpeng[v];
 
                 ps3 = "él no " + "había " + vpsp[v];
-                ps3eng = "he " + "hadn't " + vpeng[v];
+                ps3eng = "he " + "hasn't " + vpeng[v];
 
                 ps3ella = "ella no " + "había " + vpsp[v];
-                ps3she = "she " + "hadn't " + vpeng[v];
+                ps3she = "she " + "hasn't " + vpeng[v];
 
                 ps3eso = "eso no " + "había " + vpsp[v];
-                ps3it = "it " + "hadn't " + vpeng[v];
+                ps3it = "it" + "hasn't " + vpeng[v];
 
                 ps4 = "ellos no " + "habían " + vpsp[v];
                 ps4eng = "they " + "hadn't " + vpeng[v];
@@ -9912,13 +9912,13 @@ public class People3 {
                 ps2eng = "you " + "had been " + vnbc[v];
 
                 ps3 = "él " + "había estado " + vnbcs[v];
-                ps3eng = "he " + "had been " + vnbc[v];
+                ps3eng = "he " + "has been " + vnbc[v];
 
                 ps3ella = "ella " + "había estado " + vnbcs[v];
-                ps3she = "she " + "had been " + vnbc[v];
+                ps3she = "she " + "has been " + vnbc[v];
 
                 ps3eso = "eso " + "había estado " + vnbcs[v];
-                ps3it = "it " + "had been " + vnbc[v];
+                ps3it = "it" + "has been " + vnbc[v];
 
                 ps4 = "ellos " + "habían estado " + vnbcs[v];
                 ps4eng = "they " + "had been " + vnbc[v];
@@ -9934,13 +9934,13 @@ public class People3 {
                 ps2eng = "you " + "hadn't been " + vnbc[v];
 
                 ps3 = "él no " + "había estado " + vnbcs[v];
-                ps3eng = "he " + "hadn't been " + vnbc[v];
+                ps3eng = "he " + "hasn't been " + vnbc[v];
 
                 ps3ella = "ella no " + "había estado " + vnbcs[v];
-                ps3she = "she " + "hadn't been " + vnbc[v];
+                ps3she = "she " + "hasn't been " + vnbc[v];
 
                 ps3eso = "eso no " + "había estado " + vnbcs[v];
-                ps3it = "it " + "hadn't been " + vnbc[v];
+                ps3it = "it" + "hasn't been " + vnbc[v];
 
                 ps4 = "ellos no " + "habían estado " + vnbcs[v];
                 ps4eng = "they " + "hadn't been " + vnbc[v];
