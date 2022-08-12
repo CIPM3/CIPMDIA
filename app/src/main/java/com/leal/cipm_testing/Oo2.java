@@ -7,239 +7,272 @@ public class Oo2 {
 
 
     //these should go right after the subject
-    String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
+    String advfrequ[] = {
+            "siempre ", "constantemente ", "frecuentemente ",
             "generalmente ",
             "normalmente ", "ocasionalmente  ", "seguido ", "raramente ",
             "regularmente ",
             "regularmente ", "usualmente "
     };
-    String frequadv[] = {"always ", "constantly ", "frequently ", "generally ",
+    String frequadv[] = {
+            "always ", "constantly ", "frequently ", "generally ",
             "normally ", "occasionally ", "often ", "rarely ", "regularly ",
             "regularly ", "usually "
     };
 
 
     // verbos orientados a objetos
-    String vnbs[] = {"poseer ", "retener ", "negociar ", "pesar ", "merecer ", "destruir ",
-            "manufacturar ", "expandir ", "habilitar ", "operar ", "distribuir "
+    String vnbs[] = {
+            "poseer ", "retener ", "negociar ", "pesar ", "merecer ", "destruir ",
+            "manufacturar ", "expandir ", "habilitar ", "distribuir "
     };
 
-    String vnb[] = {"possess ", "retain ", "negociate ", "weigh ", "deserve ", "destroy ",
-            "manufacture ", "expand ", "enable ", "operate ", "distribute "
+    String vnb[] = {
+            "possess ", "retain ", "negociate ", "weigh ", "deserve ", "destroy ",
+            "manufacture ", "expand ", "enable ", "distribute "
     };
 
-    String vn3[] = {"possesses ", "retains ", "negociates ", "weighs ", "deserves ", "destroys ",
-            "manufactures ", "expands ", "enables ", "operates ", "distributes "
+    String vn3[] = {
+            "possesses ", "retains ", "negociates ", "weighs ", "deserves ", "destroys ",
+            "manufactures ", "expands ", "enables ", "distributes "
     };
 
 
-    String vn1[] = {"poseo ", "retengo ", "negocío ", "peso ", "merezco ", "destruyo ",
-            "manufacturo ", "expando ", "habilitó ", "operó ", "distribuyo "
+    String vn1[] = {
+            "poseo ", "retengo ", "negocío ", "peso ", "merezco ", "destruyo ",
+            "manufacturo ", "expando ", "habilitó ", "distribuyo "
     };
 
-    String vn2[] = {"posees ", "retienes ", "negocías ", "pesas ", "mereces ", "destruyes ",
-            "manufacturas ", "expandes ", "habilitas ", "óperas ", "distribuyes "
+    String vn2[] = {
+            "posees ", "retienes ", "negocías ", "pesas ", "mereces ", "destruyes ",
+            "manufacturas ", "expandes ", "habilitas ", "distribuyes "
     };
 
-    String vnb3[] = {"posee ", "retiene ", "negocía ", "pesa ", "merece ", "destruye ",
-            "manufactura ", "expande ", "habilita ", "opera ", "distribuye "
+    String vnb3[] = {
+            "posee ", "retiene ", "negocía ", "pesa ", "merece ", "destruye ",
+            "manufactura ", "expande ", "habilita ", "distribuye "
     };
 
-    String vn4[] = {"poseen ", "retienen ", "negocían ", "pesan ", "merecen ", "destruyen ",
-            "manufacturan ", "expanden ", "habilitan ", "operan ", "distribuyen "
+    String vn4[] = {
+            "poseen ", "retienen ", "negocían ", "pesan ", "merecen ", "destruyen ",
+            "manufacturan ", "expanden ", "habilitan ", "distribuyen "
     };
 
-    String vn5[] = {"poseemos ", "retenemos ", "negociamos ", "pesamos ", "merecemos ", "destruimos ",
-            "manufacturamos ", "expandimos ", "habilitamos ", "operamos ", "distribuimos "
+    String vn5[] = {
+            "poseemos ", "retenemos ", "negociamos ", "pesamos ", "merecemos ", "destruimos ",
+            "manufacturamos ", "expandimos ", "habilitamos ", "distribuimos "
     };
 
-    String vnbcs[] = {"poseyendo ", "reteniendo ", "negociando ", "pesando ", "mereciendo ",
-            "destruyendo ", "manufacturando ", "expandiendo ", "habilitando ", "operando ",
+    String vnbcs[] = {
+            "poseyendo ", "reteniendo ", "negociando ", "pesando ", "mereciendo ",
+            "destruyendo ", "manufacturando ", "expandiendo ", "habilitando ",
             "distribuyendo "
     };
 
-    String vnbc[] = {"possessing ", "retaining ", "negociating ", "weighing ",
-            "deserving ", "destroying ", "manufacturing ", "expanding ", "enabling ", "operating ",
+    String vnbc[] = {
+            "possessing ", "retaining ", "negociating ", "weighing ",
+            "deserving ", "destroying ", "manufacturing ", "expanding ", "enabling ",
             "distributing "
     };
     // participios esp
-    String vpsp[] = {"poseído ", "retenido ", "negociado ", "pesado ", "merecido ", "destruido ",
-            "manufacturado ", "expandido ", "habilitado ", "operado ",
-            "distribuido "
+    String vpsp[] = {
+            "poseído ", "retenido ", "negociado ", "pesado ", "merecido ", "destruido ",
+            "manufacturado ", "expandido ", "habilitado ", "distribuido "
     };
 
     String vpspM[]={
             "poseído ", "retenido ", "negociado ", "pesado ", "merecido ", "destruido ",
-            "manufacturado ", "expandido ", "habilitado ", "operado ",
-            "distribuido "
+            "manufacturado ", "expandido ", "habilitado ", "distribuido "
     };
     String vpspF[]={
             "poseída ", "retenida ", "negociada ", "pesada ", "merecida ", "destruida ",
-            "manufacturada ", "expandida ", "habilitada ", "operada ",
-            "distribuida "
+            "manufacturada ", "expandida ", "habilitada ", "distribuida "
     };
 
     // verbos participio inglés
-    String vpeng[] = {"possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
-            "manufactured ", "expanded ", "enabled ", "operated ",
-            "distributed "
+    String vpeng[] = {
+            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "manufactured ", "expanded ", "enabled ", "distributed "
     };
 
     String vpengM[]={
             "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
-            "manufactured ", "expanded ", "enabled ", "operated ",
-            "distributed "
+            "manufactured ", "expanded ", "enabled ", "distributed "
     };
     String vpengF[]={
             "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
-            "manufactured ", "expanded ", "enabled ", "operated ",
-            "distributed "
+            "manufactured ", "expanded ", "enabled ", "distributed "
     };
 
-    String vnbp[] = {"possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
-            "manufactured ", "expanded ", "enabled ", "operated ",
-            "distributed "
+    String vnbp[] = {
+            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "manufactured ", "expanded ", "enabled ", "distributed "
     };
 
-    String ps1pre[] = {"poseí ", "retuve ", "negocié ", "pesé ", "merecí ", "destruí ", "manufacturé ",
-            "expandí ", "habilité ", "operé ", "distribuí "
+    String ps1pre[] = {
+            "poseí ", "retuve ", "negocié ", "pesé ", "merecí ", "destruí ", "manufacturé ",
+            "expandí ", "habilité ", "distribuí "
     };
 
-    String ps1imp[] = {"poseía ", "retenía ", "negociaba ", "pesaba ", "merecía ", "destruía ",
-            "manufacturaba ", "expandía ", "habilitaba ", "operaba ", "distribuía "
+    String ps1imp[] = {
+            "poseía ", "retenía ", "negociaba ", "pesaba ", "merecía ", "destruía ",
+            "manufacturaba ", "expandía ", "habilitaba ", "distribuía "
     };
 
-    String ps2pre[] = {"poseiste ", "retuviste ", "negociaste ", "pesaste ", "mereciste ",
-            "destruiste ", "manufacturaste ", "expandiste ", "habilitaste ", "operaste ",
-            "distribuiste "
+    String ps2pre[] = {
+            "poseiste ", "retuviste ", "negociaste ", "pesaste ", "mereciste ",
+            "destruiste ", "manufacturaste ", "expandiste ", "habilitaste ", "distribuiste "
     };
 
     String ps2imp[] = {"poseías ", "retenías ", "negociabas ", "pesabas ", "merecías ",
-            "destruías ", "manufacturabas ", "expandías ", "habilitabas ", "operabas ",
+            "destruías ", "manufacturabas ", "expandías ", "habilitabas ",
             "distribuías "
     };
 
-    String ps3p[] = {"poseyó ", "retuvo ", "negoció ", "pesó ", "mereció ", "destruyó ",
-            "manufacturó ", "expandió ", "habilitó ", "operó ", "distribuyó "
+    String ps3p[] = {
+            "poseyó ", "retuvo ", "negoció ", "pesó ", "mereció ", "destruyó ",
+            "manufacturó ", "expandió ", "habilitó ", "distribuyó "
     };
-    String ps3imp[] = {"poseía ", "retenía ", "negociaba ", "pesaba ", "merecía ", "destruía ",
-            "manufacturaba ", "expandía ", "habilitaba ", "operaba ", "distribuía "
+    String ps3imp[] = {
+            "poseía ", "retenía ", "negociaba ", "pesaba ", "merecía ", "destruía ",
+            "manufacturaba ", "expandía ", "habilitaba ", "distribuía "
     };
 
-    String vn4p[] = {"poseyeron ", "retuvieron ", "negociaron ", "pesaron ", "merecieron ",
-            "destruyeron ", "manufacturaron ", "expandieron ", "habilitaron ", "operaron ",
+    String vn4p[] = {
+            "poseyeron ", "retuvieron ", "negociaron ", "pesaron ", "merecieron ",
+            "destruyeron ", "manufacturaron ", "expandieron ", "habilitaron ",
             "distribuyeron "
     };
 
-    String vn4imp[] = {"poseían ", "retenían ", "negociaban ", "pesaban ", "merecían ",
-            "destruían ", "manufacturaban ", "expandían ", "habilitaban ", "operaban ",
+    String vn4imp[] = {
+            "poseían ", "retenían ", "negociaban ", "pesaban ", "merecían ",
+            "destruían ", "manufacturaban ", "expandían ", "habilitaban ",
             "distribuían "
     };
 
-    String vn5p[] = {"poseemos ", "retuvimos ", "negociamos ", "pesamos ", "merecimos ",
-            "destruimos ", "manufacturamos ", "expandimos ", "habilitamos ", "operamos ",
+    String vn5p[] = {
+            "poseemos ", "retuvimos ", "negociamos ", "pesamos ", "merecimos ",
+            "destruimos ", "manufacturamos ", "expandimos ", "habilitamos ",
             "distribuimos "
     };
-    String vn5imp[] = {"poseíamos ", "reteníamos ", "negociábamos ", "pesábamos ", "merecíamos ",
-            "destruíamos ", "manufacturábamos ", "expandíamos ", "habilitábamos ", "operábamos ",
+    String vn5imp[] = {
+            "poseíamos ", "reteníamos ", "negociábamos ", "pesábamos ", "merecíamos ",
+            "destruíamos ", "manufacturábamos ", "expandíamos ", "habilitábamos ",
             "distribuíamos "
     };
 
-    String vn1f[] = {"poseeré ", "retendré ", "negociaré ", "pesaré ", "mereceré ", "destruiré ",
-            "manufacturaré ", "expanderé ", "habilitaré ", "operaré ", "distribuiré "
+    String vn1f[] = {
+            "poseeré ", "retendré ", "negociaré ", "pesaré ", "mereceré ", "destruiré ",
+            "manufacturaré ", "expanderé ", "habilitaré ", "distribuiré "
     };
-    String vn2f[] = {"poseerás ", "retendrás ", "negociarás ", "pensarás ", "merecerás ",
-            "destruirás ", "manufacturarás ", "expandirás ", "habilitarás ", "operarás ",
+    String vn2f[] = {
+            "poseerás ", "retendrás ", "negociarás ", "pensarás ", "merecerás ",
+            "destruirás ", "manufacturarás ", "expandirás ", "habilitarás ",
             "distribuirás "
     };
 
-    String vn3f[] = {"poseerá ", "retendrá ", "negociará ", "pesará ", "merecerá ", "destruirá ",
-            "manufacturará ", "expandirá ", "habilitará ", "operará ", "distribuirá "
+    String vn3f[] = {
+            "poseerá ", "retendrá ", "negociará ", "pesará ", "merecerá ", "destruirá ",
+            "manufacturará ", "expandirá ", "habilitará ", "distribuirá "
     };
-    String vn4f[] = {"poseerán ", "retendrán ", "negociarán ", "pesarán ", "merecerán ", "destruirán ",
-            "manufacturarán ", "expandirán ", "habilitarán ", "operarán ", "distribuirán "
+    String vn4f[] = {
+            "poseerán ", "retendrán ", "negociarán ", "pesarán ", "merecerán ", "destruirán ",
+            "manufacturarán ", "expandirán ", "habilitarán ", "distribuirán "
     };
 
-    String vn5f[] = {"poseeremos ", "retendremos ", "negociaremos ", "pensaremos ", "mereceremos ",
-            "destruiremos ", "manufacturaremos ", "expandiremos ", "habilitaremos ", "operaremos ",
+    String vn5f[] = {
+            "poseeremos ", "retendremos ", "negociaremos ", "pensaremos ", "mereceremos ",
+            "destruiremos ", "manufacturaremos ", "expandiremos ", "habilitaremos ",
             "distribuiremos "
     };
 
-    String vn1w[] = {"poseería ", "retendría ", "negociaría ", "pesaría ", "merecería ",
-            "destruiría ", "manufacturaría ", "expandiría ", "habilitaría ", "operaría ",
+    String vn1w[] = {
+            "poseería ", "retendría ", "negociaría ", "pesaría ", "merecería ",
+            "destruiría ", "manufacturaría ", "expandiría ", "habilitaría ",
             "distribuiría "
     };
 
-    String vn2w[] = {"poseerías ", "retendrías ", "negociarías ", "pesarías ", "merecerías ",
-            "destruirías ", "manufacturarías ", "expandirías ", "habilitarías ", "operarías ",
+    String vn2w[] = {
+            "poseerías ", "retendrías ", "negociarías ", "pesarías ", "merecerías ",
+            "destruirías ", "manufacturarías ", "expandirías ", "habilitarías ",
             "distribuirías "
     };
 
-    String vn3w[] = {"poseería ", "retendría ", "negociaría ", "pesaría ", "merecería ",
-            "destruiría ", "manufacturaría ", "expandiría ", "habilitaría ", "operaría ",
+    String vn3w[] = {
+            "poseería ", "retendría ", "negociaría ", "pesaría ", "merecería ",
+            "destruiría ", "manufacturaría ", "expandiría ", "habilitaría ",
             "distribuiría "
     };
 
-    String vn4w[] = {"poseerían ", "retrendrían ", "negociarían ", "pesarían ", "merecerían ",
-            "destruirían ", "manufacturarían ", "expandirían ", "habilitarían ", "operarían ",
+    String vn4w[] = {
+            "poseerían ", "retrendrían ", "negociarían ", "pesarían ", "merecerían ",
+            "destruirían ", "manufacturarían ", "expandirían ", "habilitarían ",
             "distribuirían "
     };
 
-    String vn5w[] = {"poseeríamos ", "retendríamos ", "negociaríamos ", "pesaríamos ",
+    String vn5w[] =
+            {"poseeríamos ", "retendríamos ", "negociaríamos ", "pesaríamos ",
             "mereceríamos ", "destruiríamos ", "manufacturaríamos ", "expandiríamos ",
-            "habilitaríamos ", "operaríamos ", "distribuiríamos "
+            "habilitaríamos ", "distribuiríamos "
     };
 
-    String vn1y3subj[] = {"posea ", "retenga ", "negocie ", "pese ", "merezca ", "destruya ",
-            "manufacture ", "expanda ", "habilite ", "opere ", "distribuya "
+    String vn1y3subj[] = {
+            "posea ", "retenga ", "negocie ", "pese ", "merezca ", "destruya ",
+            "manufacture ", "expanda ", "habilite ", "distribuya "
     };
 
-    String vn2subj[] = {"poseas ", "retengas ", "negocies ", "peces  ", "merezcas ", "destruyas ",
-            "manufactures ", "expandas ", "habilites ", "operes ", "distribuyas "
+    String vn2subj[] = {
+            "poseas ", "retengas ", "negocies ", "peces  ", "merezcas ", "destruyas ",
+            "manufactures ", "expandas ", "habilites ", "distribuyas "
     };
 
-    String vn4subj[] = {"posean ", "retengan ", "negocien ", "pesen ", "merezcan ", "destruyan ",
-            "manufacturen ", "expandan ", "habiliten ", "operen ", "distribuyan "
+    String vn4subj[] = {
+            "posean ", "retengan ", "negocien ", "pesen ", "merezcan ", "destruyan ",
+            "manufacturen ", "expandan ", "habiliten ", "distribuyan "
     };
 
-    String vn5subj[] = {"poseamos ", "retengamos ", "negociemos ", "pesemos ", "merezcamos ",
-            "destruyamos ", "manufacturemos ", "expandamos ", "habilitemos ", "operemos ",
+    String vn5subj[] = {
+            "poseamos ", "retengamos ", "negociemos ", "pesemos ", "merezcamos ",
+            "destruyamos ", "manufacturemos ", "expandamos ", "habilitemos ",
             "distribuyamos "
     };
 
     //pasados (agregado wish SV 060422)
-    String ps1wish[] = {"poseyera ", "retuviera ", "negociara ", "pesara ", "mereciera ",
-            "destruyera ", "manufacturara ", "expandiera ", "habilitara ", "operara ", "distribuyera "
+    String ps1wish[] = {
+            "poseyera ", "retuviera ", "negociara ", "pesara ", "mereciera ",
+            "destruyera ", "manufacturara ", "expandiera ", "habilitara ", "distribuyera "
     };
-    String ps2wish[] = {"poseyeras ", "retuvieras ", "negociaras ", "pesaras ", "merecieras ",
-            "destruyeras ", "manufacturaras ", "expandieras ", "habilitaras ", "operaras ", "distribuyeras "
+    String ps2wish[] = {
+            "poseyeras ", "retuvieras ", "negociaras ", "pesaras ", "merecieras ",
+            "destruyeras ", "manufacturaras ", "expandieras ", "habilitaras ", "distribuyeras "
     };
-    String ps3wish[] = {"poseyera ", "retuviera ", "negociara ", "pesara ", "mereciera ",
-            "destruyera ", "manufacturara ", "expandiera ", "habilitara ", "operara ", "distribuyera "
+    String ps3wish[] = {
+            "poseyera ", "retuviera ", "negociara ", "pesara ", "mereciera ",
+            "destruyera ", "manufacturara ", "expandiera ", "habilitara ", "distribuyera "
     };
-    String ps4wish[] = {"poseyeran ", "retuvieran ", "negociarán ", "pesaran ", "merecieran ",
-            "destruyeran ", "manufacturaran ", "expandieran ", "habilitaran ", "operaran ", "distribuyeran "
+    String ps4wish[] = {
+            "poseyeran ", "retuvieran ", "negociarán ", "pesaran ", "merecieran ",
+            "destruyeran ", "manufacturaran ", "expandieran ", "habilitaran ", "distribuyeran "
     };
-    String ps5wish[] = {"poseyeramos ", "retuvieramos ", "negociaramos ", "pesaramos ", "merecieramos ",
-            "destruyeramos ", "manufacturaramos ", "expandieramos ", "habilitaramos ", "operaramos ", "distribuyeramos "
+    String ps5wish[] = {
+            "poseyeramos ", "retuvieramos ", "negociaramos ", "pesaramos ", "merecieramos ",
+            "destruyeramos ", "manufacturaramos ", "expandieramos ", "habilitaramos ", "distribuyeramos "
     };
 
-    String nnobles[] = {"the apartment ", "the painting ", "the disk ", "the road ", "the soup ",
+    String nnobles[] = {
+            "the apartment ", "the painting ", "the disk ", "the road ", "the soup ",
             "the wood ", "the office ", "the cigarette ", "the flight ", "the magazine ",
             "the newspaper ", "the cell ", "the lake ", "the message ", "the phone ", "the blood ",
             "the heart ", "the photo ", "the recipe ", "the studio "
     };
 
 
-    String nnoblesesp[] = {"el apartamento ", "la pintura ", "el disco ", "la carretera ", "la sopa ",
+    String nnoblesesp[] = {
+            "el apartamento ", "la pintura ", "el disco ", "la carretera ", "la sopa ",
             "la madera ", "la oficina ", "el cigarro ", "el vuelo ", "la revista ", "el periódico ",
             "la celda ", "el lago ", "el mensaje ", "el teléfono ", "la sangre ", "el corazón ",
             "la foto ", "la receta ", "el estudio "
     };
-
-
-
-
 
 
     String ps1;
