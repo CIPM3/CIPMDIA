@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import java.util.ArrayList;
@@ -275,6 +276,12 @@ public class vocabulary_nuevo extends AppCompatActivity {
         opclay.setBackgroundColor(Color.WHITE);
 
         switch (selection) {
+
+
+            case "Tutorial":
+
+                Toast.makeText(this, "estas en tutorial, elige un rango", Toast.LENGTH_SHORT).show();
+                break;
             case "0 to 50":
                 gen.gencerotofifty();
                 answerinp.setText("");
