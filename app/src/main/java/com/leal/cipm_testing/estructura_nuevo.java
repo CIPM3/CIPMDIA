@@ -17944,8 +17944,8 @@ public class estructura_nuevo extends AppCompatActivity {
             resppass.setVisibility(View.GONE);
             respescu.setVisibility(View.GONE);
             respescu2.setVisibility(View.VISIBLE);
-
             respinc.setVisibility(View.VISIBLE);
+
             answer_lay.setVisibility(View.VISIBLE);
 
             btncheck.setText("Checa Tu Respuesta ");

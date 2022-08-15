@@ -238,6 +238,7 @@
 
             <!--BTN Empezar-->
             <LinearLayout
+                android:id="@+id/btn_emp_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -250,8 +251,404 @@
                     android:layout_height="40dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
                     android:text="Empezar"
+                    android:onClick="practice"
                     android:textColor="@color/azul"
                     android:textSize="14dp"
+                    />
+            </LinearLayout>
+
+            <!--Spanish Sentences-->
+            <LinearLayout
+                android:id="@+id/spanish_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Como dirias? :"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/spanishsentence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spanish"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Input Eng-->
+            <LinearLayout
+                android:id="@+id/input_lay"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="5dp"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:id="@+id/answerinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:hint="Escribe tu respuesta aqui"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    />
+                <!--Validacion-->
+                <LinearLayout
+                    android:id="@+id/opclay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/respdecir"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_microfono"
+                        android:layout_marginLeft="5dp"
+                        android:visibility="visible"
+                        android:onClick="speakdecir"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/resppass"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:background="@drawable/ic_controlar"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/respinc"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_cruzar"
+                        android:layout_marginLeft="5dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/respescu"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_volumen"
+                        android:layout_marginLeft="5dp"
+                        android:visibility="gone"
+                        android:onClick="speakans"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--EngCheck-->
+            <LinearLayout
+                android:id="@+id/answer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Respuesta correcta es:"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/txteng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="eng"
+                        android:textColor="@color/azul"
+                        android:textSize="14dp"
+                        />
+                    <LinearLayout
+                        android:id="@+id/respescu2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_volumen"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:onClick="speakans"
+                        android:visibility="gone"
+                        >
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Posible ans-->
+            <LinearLayout
+                android:id="@+id/answer_pos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Respuesta correcta es:"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 1"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 2"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 3"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 4"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 5"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 6"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--BTNS INT Y POS ANS-->
+            <LinearLayout
+                android:id="@+id/btns_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+                <!--BTN INTENTAR OTRA VEZ-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="checkans"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Intetalo otra vez"
+                        android:textColor="@color/azul"
+                        android:textAlignment="center"
+                        >
+
+                    </TextView>
+                </LinearLayout>
+
+                <!--BTN POSIBlE RESPUESTA-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:onClick="possibleanswers"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Possible answers"
+                        android:textColor="@color/azul"
+                        android:textAlignment="center"
+                        >
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--BTN Checar Respuestas-->
+            <LinearLayout
+                android:id="@+id/btn_check_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+                <Button
+                    android:id="@+id/btn_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:text="Checar la respuesta"
+                    android:textColor="@color/azul"
+                    android:textSize="14dp"
+                    android:onClick="checkans"
+                    />
+            </LinearLayout>
+
+            <!--BTN INTENTALO OTRA VEZ-->
+            <LinearLayout
+                android:id="@+id/btn_intent_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+                <Button
+                    android:id="@+id/btn_intent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:text="Intentalo Otra Vez"
+                    android:textColor="@color/azul"
+                    android:textSize="14dp"
+                    android:onClick="practice"
                     />
             </LinearLayout>
         </LinearLayout>
