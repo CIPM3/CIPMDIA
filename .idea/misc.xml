@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../Library/Android/sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25625" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_controlar.xml" value="0.1835" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_hut.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout-xlarge/activity_spanish_int.xml" value="0.1" />
@@ -10,14 +11,13 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_main_testing.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_profile.xml" value="0.16621376811594202" />
-        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_register.xml" value="0.1358695652173913" />
-        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_sign_in.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_sign_in.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_spanish_int.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_spanish_int_nuevo.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_structure_results.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_vocabulary_nuevo.xml" value="0.13496376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/list.xml" value="0.16621376811594202" />
-        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/main.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout-normal/activity_main.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout/activity_chose_conscisousinterference.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout/activity_chose_estruc.xml" value="0.22894736842105262" />
@@ -27,7 +27,32 @@
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout/activity_spa_int_nuevo.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout/activity_spanish_int_nuevo.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/pedro/Desktop/CIPMDIA/app/src/main/res/layout/main.xml" value="0.22894736842105262" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_controlar.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_cruzar.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_grupo_146.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_grupo_vocabshort.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_microfono.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_rect_ngulo_btncheck.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_rect_ngulo_selecline.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_rect_ngulo_selecline_red.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_trazado.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_volumen.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/imput.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/roundedlayout.xml" value="0.1825" />
+        <entry key="app/src/main/res/layout/activity_chat_maestro.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.2685127590013587" />
+        <entry key="app/src/main/res/layout/activity_cultura_nuevo.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_estructura_nuevo.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_main_testing.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_spa_int_nuevo.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_structure_results.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_tutorial_general.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_vocabulary_nuevo.xml" value="0.25625" />
       </map>
     </option>
   </component>
