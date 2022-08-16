@@ -191,7 +191,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
     public void chose_spa_int(View vista) {
-        Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
+        Intent intento = new Intent(this, spa_int_nuevo.class);
+        startActivity(intento);
+        //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
     }
 
     //cambios

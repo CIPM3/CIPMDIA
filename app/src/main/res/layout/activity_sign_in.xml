@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E4DBDB"
-    android:backgroundTint="#3F51B5"
+    android:background="@color/azul"
     tools:context=".SignIn">
 
     <ImageView
@@ -14,7 +13,6 @@
         android:layout_height="0dp"
         android:layout_marginTop="33dp"
         android:layout_marginBottom="65dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,13 +51,17 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/loginbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log in " />
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:text="Log in "
+            android:background="@drawable/roundedlayout"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/notreg"
