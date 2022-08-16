@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     RegisterActivity r;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
         tvnameuser = findViewById(R.id.UserNameTv);
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this,gso);
-
-
-
-
-
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
@@ -69,10 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             startActivity(new Intent(this,StoreActivity.class));
         });
-
     }
-
-
     public void logout(View v){
         mAuth.signOut();
         startActivity(new Intent(MainActivity.this,SignIn.class));
@@ -89,20 +83,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
     protected void onStart() {
         super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
+         user = mAuth.getCurrentUser();
         if(user==null){
             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
             if(acct!=null){
                 String personName = acct.getDisplayName();
-                String personEmail = acct.getEmail();
                 tvnameuser.setText(personName);
                 return;
             }
-            startActivity(new Intent(MainActivity.this,SignIn.class));
+            mAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        FirebaseUser currentUser = mAuth.getCurrentUser();
+                        updateUi(currentUser);
+                        tvnameuser.setText("Anonimo");
+                    }else { updateUi(null); }
+
+                }
+            });
+
+        }else {
+            tvnameuser.setText(user.getEmail());
+        }
+    }
+    private void updateUi(FirebaseUser user) {
+        if(user==null   ){
+            mAuth.signInAnonymously().addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUi(user);
+                    }else {
+                        updateUi(null );
+                    }
+                }
+            });
+
         }
     }
     private void gotoURl(String s) {
@@ -123,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
 
     }
+
+
     //billing
     public void Cultura(View vista) {
         Intent intento = new Intent(this, Culture.class);

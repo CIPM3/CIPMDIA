@@ -35,7 +35,7 @@ public class SignIn extends AppCompatActivity {
     Button btnlogin;
     TextView tvRegisterhere;
     EditText etloginemail,etloginpassword;
-    TextView googlesignin;
+    TextView googlesignin,anonymus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +68,13 @@ public class SignIn extends AppCompatActivity {
                 startActivity(new Intent(SignIn.this,RegisterActivity.class));
             }
         });
-
+        anonymus = findViewById(R.id.anonymuslink);
+        anonymus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                procede();
+            }
+        });
 
     }
     //goole sign in
@@ -76,6 +82,35 @@ public class SignIn extends AppCompatActivity {
         Intent signInIntent = gsc.getSignInIntent();
         startActivityForResult(signInIntent,1000);
     }
+    // email-password sign in
+    private void loginUser() {
+
+        String email = etloginemail.getText().toString().trim();
+        String password= etloginpassword.getText().toString().trim();
+
+        if(TextUtils.isEmpty(email)){
+            etloginemail.setError("email cannot be empty");
+            etloginemail.requestFocus();
+        }else if(TextUtils.isEmpty(password)){
+            etloginpassword.setError("password cannot be empty");
+            etloginpassword.requestFocus();
+        }else {
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(SignIn.this, "User logged in succesfully ", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(SignIn.this,MainActivity.class ));
+
+                    }else {
+                        Toast.makeText(SignIn.this, "Email or password incorrect ", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -96,33 +131,8 @@ public class SignIn extends AppCompatActivity {
         Intent intent = new Intent(SignIn.this,MainActivity.class);
         startActivity(intent);
     }
-    private void loginUser() {
 
-        String email = etloginemail.getText().toString().trim();
-        String password= etloginpassword.getText().toString().trim();
-
-        if(TextUtils.isEmpty(email)){
-            etloginemail.setError("email cannot be empty");
-            etloginemail.requestFocus();
-        }else if(TextUtils.isEmpty(password)){
-            etloginpassword.setError("password cannot be empty");
-            etloginpassword.requestFocus();
-        }else {
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(SignIn.this, "User logged in succesfully ", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SignIn.this,MainActivity.class ));
-                    }else {
-                        Toast.makeText(SignIn.this, "Email or password incorrect ", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
-
-    }
-    public void procede(View view){
+    public void procede(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
