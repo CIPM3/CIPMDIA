@@ -66,6 +66,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     TextView txteng4;
     TextView txteng5;
     TextView txteng6;
+    TextView txteng7;
 
     EditText answerinput;
 
@@ -121,6 +122,7 @@ public class spa_int_nuevo extends AppCompatActivity {
         txteng4 = (TextView) findViewById(R.id.txteng4);
         txteng5 = (TextView) findViewById(R.id.txteng5);
         txteng6 = (TextView) findViewById(R.id.txteng6);
+        txteng7 = findViewById(R.id.txteng7);
 
         vv = (VideoView) findViewById(R.id.videoView1);
         vf = (LinearLayout) findViewById(R.id.vf);
@@ -150,7 +152,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             });
 
 
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinrango.setAdapter(adapter2);
             spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -312,6 +314,8 @@ public class spa_int_nuevo extends AppCompatActivity {
     }
 
     public void practice(View vista) {
+        answer_lay.setVisibility(View.GONE);
+        answer_pos.setVisibility(View.GONE);
         EditText text = (EditText)findViewById(R.id.answerinput);
         btn_intent_lay.setVisibility(View.GONE);
         text.setText("");
@@ -781,6 +785,7 @@ public class spa_int_nuevo extends AppCompatActivity {
                                                         t5= n.gene6;
                                                         txteng6.setText(t5);
                                                         t6=n.gene7;
+                                                        txteng7.setText(t6);
 
 
                                                         // en caso de int de sujeto tercer persona
@@ -851,6 +856,7 @@ public class spa_int_nuevo extends AppCompatActivity {
 
             }
         }else{
+            Toast.makeText(this, "estas en tutorial, elige una interferencia", Toast.LENGTH_SHORT).show();
             ocultarlay();
         }
 
@@ -951,7 +957,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             answer_lay.setVisibility(View.GONE);
             btns_lay.setVisibility(View.GONE);
             answer_lay.setVisibility(View.GONE);
-            btn_check_lay.setVisibility(View.GONE);
+            btn_check_lay.setVisibility(View.VISIBLE);
             answer_pos.setVisibility(View.GONE);
 
             resppass.setVisibility(View.VISIBLE);
@@ -1003,7 +1009,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             btns_lay.setVisibility(View.VISIBLE);
             answer_lay.setVisibility(View.VISIBLE);
             btn_intent_lay.setVisibility(View.GONE);
-            btn_check_lay.setVisibility(View.GONE);
+            btn_check_lay.setVisibility(View.VISIBLE);
 
             resppass.setVisibility(View.GONE);
             respescu.setVisibility(View.GONE);
@@ -1058,7 +1064,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             case REC_CODE_SPEECH_INPUT:
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    engtx.setText(result.get(0));
+                    answerinput.setText(result.get(0));
                 }
                 break;
         }

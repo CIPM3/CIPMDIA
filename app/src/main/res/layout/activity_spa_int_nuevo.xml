@@ -550,6 +550,23 @@
                             android:textSize="14dp"
                             />
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/txteng7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="eng 7"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
 
@@ -572,13 +589,13 @@
                     android:layout_marginRight="1dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:onClick="checkans"
+                    android:onClick="practice"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Intetalo otra vez"
+                        android:text="Siguiente oración"
                         android:textColor="@color/azul"
                         android:textAlignment="center"
                         >
@@ -616,7 +633,7 @@
                 android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:paddingHorizontal="30dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 >
                 <Button
                     android:id="@+id/btn_check"
@@ -645,7 +662,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:text="Intentalo Otra Vez"
+                    android:text="Siguiente oración"
                     android:textColor="@color/azul"
                     android:textSize="14dp"
                     android:onClick="practice"
