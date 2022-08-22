@@ -4884,7 +4884,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 Locale spanish = new Locale("es", "MX");
                                 if (i == TextToSpeech.SUCCESS) {
                                     int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener(){
                                         @Override
                                         public void onStart(String s) {
                                         }
@@ -9197,7 +9197,8 @@ public class estructura_nuevo extends AppCompatActivity {
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new
+                                TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");

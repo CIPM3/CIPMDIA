@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CIPM3</string>
     <string-array name="structuresGratis">
-        <item>Tutorial</item>
+        <item>Pick a Structure</item>
         <item>Present Simple</item>
         <item>Present Continuous</item>
         <item>Present Perfect</item>

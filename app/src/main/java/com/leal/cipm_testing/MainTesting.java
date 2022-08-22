@@ -5,14 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,64 +27,162 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.Locale;
 public class MainTesting extends AppCompatActivity {
-
-
-    TextToSpeech tts;
-    private ImageButton botonhablar;
+    private Button starttest;
+    TextView choose,sptx, getsent,save;
+    Spinner spin;
+    ImageButton mic;
+    TextToSpeech tt1;
+    EditText Answerinput;
+    String txteng;
     public static final int REC_CODE_SPEECH_INPUT = 100;
-    EditText answerinput;
-    TextView text,texteng;
-    String engtxt,inputxt;
-    Button startnext,save,seeresults;
-    boolean temp;
-    Switch aSwitch;
-
 
 
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
-    boolean ps,pc,pp,ppc, pas,pac,pap,papc,fs,fc,fp,fpc,ws,wc,wp,wpc,cs,cc,ccp,cpc,ss,sc,sp,spc,mis,mic,mip,mipc
+    boolean ps,pc,pp,ppc, pas,pac,pap,papc,fs,fc,fp,fpc,ws,wc,wp,wpc,cs,cc,ccp,cpc,ss,sc,sp,spc,mis,mip,mipc
             ,ms,mc,mp,mpc,cans,canc,pvpp,vj,pregunta,get,thereis,goingto,haveto,usedto,reflx,supp,wyt,wish,comp,superl,formeto
             ;
     DatabaseReference myDbRef= FirebaseDatabase.getInstance().getReference().child("UserName");
-
-    //counter positive, counter negative
-    int cp=0;
-    int cn=0;
-    Boolean Automatic;
-    Generator gen  = new Generator();
+    String selection;
+    int cp,cn;
     int number=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_testing);
-        botonhablar = findViewById(R.id.btnhablartesting);
-        answerinput = findViewById(R.id.answerinputtest);
-        text= findViewById(R.id.comodiriastestmain);
-        texteng= findViewById(R.id.engtxtx);
-        seeresults=findViewById(R.id.ResultsBtn);
-        texteng.setVisibility(View.INVISIBLE);
-        botonhablar.setOnClickListener(new View.OnClickListener() {
+        starttest=findViewById(R.id.StartTestMain);
+        choose=findViewById(R.id.choosest);
+        choose.setVisibility(View.GONE);
+        spin = findViewById(R.id.spinnert);
+        spin.setVisibility(View.GONE);
+        Answerinput=findViewById(R.id.answerinputtest);
+        Answerinput.setVisibility(View.GONE);
+        sptx=findViewById(R.id.comodiriastestmain);
+        sptx.setVisibility(View.GONE);
+        mic = findViewById(R.id.btnhablartesting);
+        mic.setVisibility(View.GONE);
+        Answerinput=findViewById(R.id.answerinputtest);
+        mic.setVisibility(View.GONE);
+        getsent = findViewById(R.id.getsentence);
+        getsent.setVisibility(View.GONE);
+        save = findViewById(R.id.sendinfo);
+        save.setVisibility(View.GONE);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                iniciarentradavoz();
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selection = spin.getSelectedItem().toString();
+                if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                    shownext();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
-        save= findViewById(R.id.sendinfo);
-        aSwitch=findViewById(R.id.switch1);
-
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sendInfo();
-            }
 
 
-        });
-        save.setVisibility(View.INVISIBLE);
 
 
     }
-    private void iniciarentradavoz() {
+
+    public   void start(View view){
+        choose.setVisibility(View.VISIBLE);
+        spin.setVisibility(View.VISIBLE);
+    }
+
+    private void shownext() {
+        mic.setVisibility(View.VISIBLE);
+        sptx.setVisibility(View.VISIBLE);
+        starttest.setVisibility(View.VISIBLE);
+        Answerinput.setVisibility(View.VISIBLE);
+        getsent.setVisibility(View.VISIBLE);
+
+
+    }
+
+    public void startTest(View view){
+        save.setVisibility(View.VISIBLE);
+        switch (selection) {
+            case "Pick a Structure":
+                Toast.makeText(this, "elige una estructura", Toast.LENGTH_SHORT).show();
+                break;
+            case "Present Simple":
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenPresSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng=gen1.gene;
+
+                            Answerinput.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case "Present Continuous":
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPresCont2();
+                                    sptx.setText(gen1.gens);
+                                    txteng=gen1.gene;
+
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+        }
+    }
+    public void iniciarentradavoz(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
@@ -89,393 +191,51 @@ public class MainTesting extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
+    public void checkanswer(View vista) {
+
+        String t = txteng.trim();
+        String t2 = Answerinput.getText().toString().trim();
+        if(t.equalsIgnoreCase(t2)){
+            cp= cp+1;
+            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+
+        }else {
+            cn=cn+1;
+            Toast.makeText(this, String.valueOf(cp)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+        }
+        Answerinput.setText("");
+
+        if(cp==4){
+            Toast.makeText(this, selection+"passed /pasa a la sig est"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            cp=0;
+
+
+        }else if(cn==4){
+            Toast.makeText(this, selection+"not passed / pasa a la sig est"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
+            cn=0;
+
+
+        }
+
+
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
+
             case REC_CODE_SPEECH_INPUT:
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    answerinput.setText(result.get(0));
+
+                    Answerinput.setText(result.get(0));
 
                 }
                 break;
         }
 
     }
-    // to do
-    // complete metodo de preguntas, el completo y luego el automatico ,
-    public void chosenMode(View v){
-        if(aSwitch.isChecked()){
-            Toast.makeText(this," switch checked automatic under construction", Toast.LENGTH_SHORT).show();
-            //   startAuto();
-        }else {
-            StartComplete();
-            Toast.makeText(this,"switch not checked", Toast.LENGTH_SHORT).show();
-        }
-    }
-    public void StartComplete(){
-        // number=whatever we get from database
-        if(!texteng.getText().toString().trim().equals("TextView")){
-            submitbtn();
-
-        }
-
-        switch (number){
-            case 0:
-                answerinput.setText("");
-                gen.GenPresSimp2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 1:
-                answerinput.setText("");
-                gen.GenPresCont2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-
-            case 2:
-                answerinput.setText("");
-                gen.GenPresPerf2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 3:
-                answerinput.setText("");
-                gen.GenPresPerfCont2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 4:
-                answerinput.setText("");
-                gen.GenPastSimp2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 5:
-                answerinput.setText("");
-                gen.GenPastCont2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 6:
-                answerinput.setText("");
-                gen.GenPastPerf2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-            case 7:
-                answerinput.setText("");
-                gen.GenPastPerfCont2();
-                text.setText(gen.gens);
-                texteng.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías  " + text.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-        }
-
-    }
-    public void startAuto(){
-        // number=whatever we get from database
-
-
-
-    }
-    public void submitbtn(){
-        int cpp=0;
-        int cnn=0;
-        inputxt=answerinput.getText().toString().trim();
-        String v= texteng.getText().toString().trim();
-        // as long as cp and cn is raised this if statement is mostly useless
-        if(inputxt.equalsIgnoreCase(v)){
-            cpp= cp++;
-            String s=Integer.toString(cpp);
-            Toast.makeText(this, s+" good",Toast.LENGTH_SHORT).show();
-
-        }else {
-            cnn=cn++;
-            String s2=Integer.toString(cnn);
-            Toast.makeText(this,s2+ " bad ",Toast.LENGTH_SHORT).show();
-        }
-
-        if(cpp >2 || cnn > 2){
-            if(cpp>2) {
-                Toast.makeText(this," approved ", Toast.LENGTH_SHORT).show();
-                TurnTrue(number);
-                number++;
-                save.setVisibility(View.VISIBLE);
-                cp=0;
-                cn=0;
-            }else {
-                Toast.makeText(this," not approved ", Toast.LENGTH_SHORT).show();
-                number++;
-                save.setVisibility(View.VISIBLE);
-                cp=0;
-                cn=0;
-
-            }
-
-        }
-
-
-    }
-    private void TurnTrue(int number) {
-        // if number goes over the amount of structures we have, we return it to 0
-        if(number>100){
-            Toast.makeText(this,"esas son todas las estructuras", Toast.LENGTH_SHORT);
-            number=0;
-        }
-        switch (number){
-            case 0:
-                ps=true;
-                break;
-
-            case 1:
-                pc=true;
-
-                break;
-
-            case 2:
-                pp= true;
-                break;
-
-
-        }
-
-    }
-    private void sendInfo() {
-        String name;
-        name=answerinput.getText().toString().trim();
-
-        ArrayList<Student> students = new ArrayList<>();
-        Student student = new Student(name,ps,pc,pp,ppc,  pas,pac,pap,papc );
-        students.add(student);
-        myDbRef.setValue(students);
-        save.setVisibility(View.INVISIBLE);
-
-
-
-    }
-    public void change(View v){
-        Intent intent= new Intent(this,StructureResults.class);
-        startActivity(intent);
-
-    }
-
 
 }
