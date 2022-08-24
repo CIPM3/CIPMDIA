@@ -213,13 +213,13 @@ public class Oo {
             "adquirieramos "
     };
 
-    String nnobles[] = {"history ", "art ", "money ", "the money ",
-            "information ", "the map ", "the system ", "the computer ", "the meat ",
-            "meat ", "music ", "the method ", "a method ", "the data ", "food ",
+    String nnobles[] = {"the history ", "the art ", "the money ",
+            "the information ", "the map ", "the system ", "the computer ", "the meat ",
+            "the music ", "the method ", "a method ", "the data ",
             "the food ", "the literature ", "the problem ", "the software ",
-            "the power ", "the love ", "love ", "the internet ", "the televisions ",
+            "the power ", "the love ", "the internet ", "the televisions ",
             "the television ", "the science ", "the product ", "the idea ", "the area ",
-            "society ", "the society ", "the story ", "the industry ",
+            "the society ", "the story ", "the industry ",
             "the thing ", "the oven ", "the community ", "the language ",
             "variety ", "the video ", "the security ", "the country ", "the movie ",
             "the organization ", "the equipment ", "the technology ",
@@ -227,13 +227,13 @@ public class Oo {
             "the university ", "the writing ", "the article ", "the department "
     };
 
-    String nnoblesesp[] = {"historia ", "arte ", "dinero ", "el dinero ",
-            "información ", "el mapa ", "el sistema ", "la computadora ", "la carne ",
-            "carne ", "música ", "el método ", "un método ", "los datos ", "comida ",
+    String nnoblesesp[] = {"la historia ", "el arte ", "el dinero ",
+            "la información ", "el mapa ", "el sistema ", "la computadora ", "la carne ",
+            "la música ", "el método ", "un método ", "los datos ",
             "la comida ", "la literatura ", "el problema ", "el software ",
-            "el poder ", "el amor ", "amor ", "el internet ", "las televisiónes ",
+            "el poder ", "el amor ", "el internet ", "las televisiónes ",
             "la televisión ", "la ciencia ", "el producto ", "la idea ", "el área ",
-            "sociedad ", "la sociedad ", "la historia ", "la industria ",
+            "la sociedad ", "la historia ", "la industria ",
             "la cosa ", "el horno ", "la comunidad ", "el idioma ",
             "variedad ", "el video ", "la seguridad ", "el país ", "la pelicula ",
             "la organización ", "el equipo ", "la tecnología ",
@@ -388,22 +388,22 @@ public class Oo {
                 ps1eng = "I " + "am " + "not " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n];
-                ps2eng = "you " + "are " + "not " + vnbc[v] + nnobles[n];
+                ps2eng = "you " + "aren't " + vnbc[v] + nnobles[n];
 
                 ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "is " + "not " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "is " + "not " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "is " + "not " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n];
-                ps4eng = "they " + "are not " + vnbc[v] + nnobles[n];
+                ps4eng = "they " + "aren't " + vnbc[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n];
-                ps5eng = "we " + "are not " + vnbc[v] + nnobles[n];
+                ps5eng = "we " + "aren't " + vnbc[v] + nnobles[n];
                 break;
         }
     } // neg
@@ -490,13 +490,13 @@ public class Oo {
                 ps2eng = "you " + "haven't been " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "has not been " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "has not been " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "has not been " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "hasn't been " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "haven't been " + vnbc[v] + nnobles[n];
@@ -1878,25 +1878,25 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v] + nnoblesesp[n];
-                ps1eng = "I " + "must not " + vnb[v] + nnobles[n];
+                ps1eng = "I " + "musn't " + vnb[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you " + "must not " + vnb[v] + nnobles[n];
+                ps2eng = "you " + "musn't " + vnb[v] + nnobles[n];
 
                 ps3 = "él no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he " + "must not " + vnb[v] + nnobles[n];
+                ps3eng = "he " + "musn't " + vnb[v] + nnobles[n];
 
                 ps3ella = "ella no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she " + "must not " + vnb[v] + nnobles[n];
+                ps3she = "she " + "musn't " + vnb[v] + nnobles[n];
 
                 ps3eso = "eso no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it " + "must no " + vnb[v] + nnobles[n];
+                ps3it = "it " + "musn't " + vnb[v] + nnobles[n];
 
                 ps4 = "ellos no " + "deben " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they " + "must not " + vnb[v] + nnobles[n];
+                ps4eng = "they " + "musn't " + vnb[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we " + "must not " + vnb[v] + nnobles[n];
+                ps5eng = "we " + "musn't " + vnb[v] + nnobles[n];
 
                 break;
         }
@@ -1928,25 +1928,25 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v] + nnoblesesp[n];
-                ps1eng = "I " + "must not " + "be " + vnbc[v] + nnobles[n];
+                ps1eng = "I " + "musn't " + "be " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v] + nnoblesesp[n];
-                ps2eng = "you " + "must not " + "be " + vnbc[v] + nnobles[n];
+                ps2eng = "you " + "musn't " + "be " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "must not be " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "musn't be " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "must not be " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "musn't be " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "must not be " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "musn't be " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no deben estar " + vnbcs[v] + nnoblesesp[n];
-                ps4eng = "they " + "must not be " + vnbc[v] + nnobles[n];
+                ps4eng = "they " + "musn't be " + vnbc[v] + nnobles[n];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v] + nnoblesesp[n];
-                ps5eng = "we " + "must not be " + vnbc[v] + nnobles[n];
+                ps5eng = "we " + "musn't be " + vnbc[v] + nnobles[n];
 
                 break;
         }
@@ -2083,28 +2083,28 @@ public class Oo {
                 ps1eng2 = "I'm not " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps2 = "tú no " + "estás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps2eng = "you're not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you're not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you aren't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3eng = "he's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3she = "she's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps3it = "it's not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it's not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it isn't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps4eng = "they're not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they're not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they aren't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
-                ps5eng = "we're not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we're not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we aren't "  + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 break;
 
@@ -2434,7 +2434,7 @@ public class Oo {
                 ps3iteng2 = "it wasn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estaban " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps4eng = "they weren't "  + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they weren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2692,7 +2692,7 @@ public class Oo {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos "  + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos "  + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they will "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2726,7 +2726,7 @@ public class Oo {
                 ps3iteng2 = "it won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estarán " + vnbc[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos no " + "estarán " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps4eng = "they won't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they won't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -4284,38 +4284,38 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps1eng = "I " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng = "I " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she = "she " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it = "it " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
         }
     }// nuevo
@@ -4359,38 +4359,38 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps1eng = "I must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps1eng = "I musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we must not "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 break;
         }
@@ -4572,44 +4572,44 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "Se supone que " + vn2[v] + nnoblesesp[n];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "Se supone que él " + vnb3[v] + nnoblesesp[n];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "Se supone que ella " + vnb3[v] + nnoblesesp[n];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "Se supone que eso " + vnb3[v] + nnoblesesp[n];
-                ps3it = "it's supposed to " + vnb[v] + nnobles[n];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que " + vn4[v] + nnoblesesp[n];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que " + vn5[v] + nnoblesesp[n];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n];
                 break;
             case 1:
                 ps1 = "se supone que no " + vn1[v] + nnoblesesp[n];
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "se supone que no " + vn2[v] + nnoblesesp[n];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "se supone que él no " + vnb3[v] + nnoblesesp[n];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella no " + vnb3[v] + nnoblesesp[n];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no " + vnb3[v] + nnoblesesp[n];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que no " + vn5[v] + nnoblesesp[n];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n];
                 break;
 
             case 2:
@@ -4617,22 +4617,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "se supone que tienes que " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "se supone que él tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que tenemos que " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n];
                 break;
 
             case 3:
@@ -4640,22 +4640,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que no tenemos que " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n];
                 break;
 
             case 4:
@@ -4663,22 +4663,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "se supone que vas a " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "se supone que él va a " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella va a " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que vamos a " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n];
 
                 break;
 
@@ -4687,22 +4687,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n];
 
                 ps2 = "se supone que no vas a " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps3 = "se supone que él no va a " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella no va a " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
 
                 ps5 = "se supone que no vamos a " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n];
                 break;
 
         }
@@ -5066,22 +5066,22 @@ public class Oo {
                 ps1eng = "I'm used to " + vnbc[v] + nnobles[n];
 
                 ps2 = "Tu estás acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "You're used to " + vnbc[v] + nnobles[n];
+                ps2eng = "You are used to " + vnbc[v] + nnobles[n];
 
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "He's used to " + vnbc[v] + nnobles[n];
+                ps3eng = "He is used to " + vnbc[v] + nnobles[n];
 
                 ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n];
-                ps3she = "She's used to " + vnbc[v] + nnobles[n];
+                ps3she = "She is used to " + vnbc[v] + nnobles[n];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps3it = "It's used to " + vnbc[v] + nnobles[n];
+                ps3it = "It is used to " + vnbc[v] + nnobles[n];
 
                 ps4 = "Ellos están acostumbrados a " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "They're used to " + vnbc[v] + nnobles[n];
+                ps4eng = "They are used to " + vnbc[v] + nnobles[n];
 
                 ps5 = "Nosotros estamos acostumbrados a " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "We're used to " + vnbc[v] + nnobles[n];
+                ps5eng = "We are used to " + vnbc[v] + nnobles[n];
                 break;
 
             case 1:
@@ -5089,22 +5089,22 @@ public class Oo {
                 ps1eng = "I'm not used to " + vnbc[v] + nnobles[n];
 
                 ps2 = "Tu no estás acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "You're not used to " + vnbc[v] + nnobles[n];
+                ps2eng = "You aren't used to " + vnbc[v] + nnobles[n];
 
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "He's not used to " + vnbc[v] + nnobles[n];
+                ps3eng = "He isn't used to " + vnbc[v] + nnobles[n];
 
                 ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n];
-                ps3she = "She's not used to " + vnbc[v] + nnobles[n];
+                ps3she = "She isn't used to " + vnbc[v] + nnobles[n];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps3it = "It's not used to " + vnbc[v] + nnobles[n];
+                ps3it = "It isn't used to " + vnbc[v] + nnobles[n];
 
                 ps4 = "Ellos no están acostumbrados a " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "They're not used to " + vnbc[v] + nnobles[n];
+                ps4eng = "They aren't used to " + vnbc[v] + nnobles[n];
 
                 ps5 = "Nosotros no estamos acostumbrados a " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "We're not used to " + vnbc[v] + nnobles[n];
+                ps5eng = "We aren't used to " + vnbc[v] + nnobles[n];
                 break;
         }
     } //SergioVazquez 130422
@@ -5279,44 +5279,44 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "Se supone que " + vn2[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "Se supone que él " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "Se supone que ella " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Se supone que eso " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que " + vn4[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que " + vn5[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
             case 1:
                 ps1 = "se supone que no " + vn1[v] + nnoblesesp[n] + advfrequ[radv];
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "se supone que no " + vn2[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "se supone que él no " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella no " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no " + vnb3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que no " + vn5[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
 
             case 2:
@@ -5324,22 +5324,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "se supone que tienes que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "se supone que él tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que tenemos que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
 
             case 3:
@@ -5347,22 +5347,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que no tenemos que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
 
             case 4:
@@ -5370,22 +5370,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "se supone que vas a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "se supone que él va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que vamos a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
 
             case 5:
@@ -5393,22 +5393,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "se supone que no vas a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "se supone que él no va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella no va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "se supone que no vamos a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
                 break;
 
         }
@@ -5774,22 +5774,22 @@ public class Oo {
                 ps1eng = "I'm used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "Tu estás acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "You're used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "You are used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "He's used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "He is used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "She's used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3she = "She is used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "It's used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3it = "It is used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "Ellos están acostumbrados a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "They're used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "They are used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "Nosotros estamos acostumbrados a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "We're used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "We are used to " + vnbc[v] + nnobles[n] + frequadv[radv];
                 break;
 
             case 1:
@@ -5797,22 +5797,22 @@ public class Oo {
                 ps1eng = "I'm not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps2 = "Tu no estás acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps2eng = "You're not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps2eng = "You aren't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3eng = "He's not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3eng = "He isn't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3she = "She's not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3she = "She isn't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "It's not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps3it = "It isn't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "Ellos no están acostumbrados a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps4eng = "They're not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps4eng = "They aren't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps5 = "Nosotros no estamos acostumbrados a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps5eng = "We're not used to " + vnbc[v] + nnobles[n] + frequadv[radv];
+                ps5eng = "We aren't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
                 break;
         }
     } //PD 22/04/2022
@@ -5932,28 +5932,28 @@ public class Oo {
                 ps1eng2 = "I'm not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps2 = "tú no " + "estás " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps2eng = "you're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps2eng2 = "you're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps2eng = "you aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps2eng2 = "you aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps3eng = "he's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps3eng2 = "he's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps3eng = "he isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps3eng2 = "he isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps3ella = "ella no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps3she = "she's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps3she2 = "she's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps3she = "she isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps3she2 = "she isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps3eso = "eso no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps3it = "it's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps3iteng2 = "it's not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps3it = "it isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps3iteng2 = "it isn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps4eng = "they're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps4eng2 = "they're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps4eng = "they aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps4eng2 = "they aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                ps5eng = "we're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps5eng2 = "we're not " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                ps5eng = "we aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r] ;
+                ps5eng2 = "we aren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 break;
 
@@ -6224,7 +6224,7 @@ public class Oo {
 
                     ps5 = "nosotros " + "no " + vn5imp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                     ps5eng = "we " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
-                    ps5eng2 = "we " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                    ps5eng2 = "we " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 }
                 break;
@@ -6259,7 +6259,7 @@ public class Oo {
                 ps3iteng2 = "it was " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "estaban " + vnbc[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "estaban " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps4eng = "they were " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they were " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
@@ -6295,7 +6295,7 @@ public class Oo {
                 ps3iteng2 = "it wasn't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos no " + "estaban " + vnbc[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
+                ps4 = "ellos no " + "estaban " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps4eng = "they weren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they weren't " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
@@ -6565,7 +6565,7 @@ public class Oo {
                 ps3iteng2 = "it will " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
-                ps4 = "ellos " + "estarán " + vnbc[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "estarán " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps4eng = "they will " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they will " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
@@ -6671,7 +6671,7 @@ public class Oo {
 
                 ps3ella = "ella no " + "habrá " + vpsp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps3she = "she won't " + "have " + vpeng[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r] ;
-                ps3she2 = "she won't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps3she2 = "she won't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps3eso = "eso no " + "habrá " + vpsp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
@@ -6686,7 +6686,7 @@ public class Oo {
 
                 ps5 = "nosotros no " + "habremos " + vpsp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps5eng = "we won't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
-                ps5eng2 = "we won't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps5eng2 = "we won't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                 break;
         }
@@ -6705,32 +6705,32 @@ public class Oo {
 
                 ps2 = "tú " + "habrás estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps2eng = "you will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps3 = "él " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps3eng = "he will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps3ella = "ella " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps3she = "she will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps3she2 = "she will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps3she2 = "she will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps3eso = "eso " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps3it = "it will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps3iteng2 = "it will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps3iteng2 = "it will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps4 = "ellos " + "habrán estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps4eng = "they will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps4eng2 = "they will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps4eng2 = "they will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps5 = "nosotros " + "habremos estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps5eng = "we will have " + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[r];
-                ps5eng2 = "we will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps5eng2 = "we will have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 break;
@@ -6742,7 +6742,7 @@ public class Oo {
 
                 ps2 = "tú no " + "habrás estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                 ps2eng = "you won't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
-                ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r]+ frequadv[r];
+                ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
 
                 ps3 = "él no " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
@@ -7614,7 +7614,7 @@ public class Oo {
 
                 ps3ella = "ella no debió " + "haber " + vpsp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3she = "she shouldn't "  + "have " + vpeng[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she shouldn't " + "have " + vpeng[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv]+frequadv[r];
+                ps3she2 = "she shouldn't " + "have " + vpeng[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso no debió " + "haber " + vpsp[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
@@ -8247,38 +8247,38 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps1eng = "I " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps1eng = "I " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3iteng2 = "it " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3iteng2 = "it " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we " + "must not "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we " + "must not " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we " + "musn't "  + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we " + "musn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
         }
     }// nuevo
@@ -8326,38 +8326,38 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps1eng = "I must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps1eng = "I musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps3iteng2 = "it must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3iteng2 = "it musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we must not "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we must not " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we musn't "  + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we musn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 break;
         }
@@ -8541,44 +8541,44 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "Se supone que " + vn2[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "Se supone que él " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "Se supone que ella " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Se supone que eso " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que " + vn4[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que " + vn5[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
             case 1:
                 ps1 = "se supone que no " + vn1[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "se supone que no " + vn2[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "se supone que él no " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella no " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no " + vnb3[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que no " + vn5[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
             case 2:
@@ -8586,22 +8586,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "se supone que tienes que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "se supone que él tiene que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella tiene que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que tenemos que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
             case 3:
@@ -8609,22 +8609,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que no tenemos que " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
             case 4:
@@ -8632,22 +8632,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "se supone que vas a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "se supone que él va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she is supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que vamos a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we are supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
             case 5:
@@ -8655,22 +8655,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "se supone que no vas a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "you're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "se supone que él no va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "he's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella no va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "she's not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "it's not supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "they're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "se supone que no vamos a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "we're not supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we aren't supposed to " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
         }
@@ -9054,22 +9054,22 @@ public class Oo {
                 ps1eng = "I'm used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "Tu estás acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "You're used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "You are used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "He's used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "He is used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "She's used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "She is used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "It's used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "It is used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "Ellos están acostumbrados a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "They're used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "They are used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "Nosotros estamos acostumbrados a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "We're used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "We are used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
 
             case 1:
@@ -9077,22 +9077,22 @@ public class Oo {
                 ps1eng = "I'm not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps2 = "Tu no estás acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps2eng = "You're not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps2eng = "You aren't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3eng = "He's not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3eng = "He isn't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3she = "She's not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3she = "She isn't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps3it = "It's not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps3it = "It isn't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "Ellos no están acostumbrados a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps4eng = "They're not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps4eng = "They aren't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 ps5 = "Nosotros no estamos acostumbrados a " + vnbs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
-                ps5eng = "We're not used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
+                ps5eng = "We aren't used to " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
         }
     } //PD 29/04/2022
@@ -9613,22 +9613,22 @@ public class Oo {
                 ps1eng = "I " + "am " + "not " + vnbc[v];
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v];
-                ps2eng = "you " + "are " + "not " + vnbc[v];
+                ps2eng = "you " + "aren't " + vnbc[v];
 
                 ps3 = "él " + "no " + "está " + vnbcs[v];
-                ps3eng = "he " + "is " + "not " + vnbc[v];
+                ps3eng = "he " + "isn't " + vnbc[v];
 
                 ps3ella = "ella " + "no " + "está " + vnbcs[v];
-                ps3she = "she " + "is " + "not " + vnbc[v];
+                ps3she = "she " + "isn't " + vnbc[v];
 
                 ps3eso = "eso " + "no " + "está " + vnbcs[v];
-                ps3it = "it " + "is " + "not " + vnbc[v];
+                ps3it = "it " + "isn't " + vnbc[v];
 
                 ps4 = "ellos no " + "están " + vnbcs[v];
-                ps4eng = "they " + "are not " + vnbc[v];
+                ps4eng = "they " + "aren't " + vnbc[v];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v];
-                ps5eng = "we " + "are not " + vnbc[v];
+                ps5eng = "we " + "aren't " + vnbc[v];
                 break;
         }
     }//PD 10/06/2022
@@ -9713,13 +9713,13 @@ public class Oo {
                 ps2eng = "you " + "haven't been " + vnbc[v];
 
                 ps3 = "él no " + "ha estado " + vnbcs[v];
-                ps3eng = "he " + "has not been " + vnbc[v];
+                ps3eng = "he " + "hasn't been " + vnbc[v];
 
                 ps3ella = "ella no " + "ha estado " + vnbcs[v];
-                ps3she = "she " + "has not been " + vnbc[v];
+                ps3she = "she " + "hasn't been " + vnbc[v];
 
                 ps3eso = "eso no " + "ha estado " + vnbcs[v];
-                ps3it = "it " + "has not been " + vnbc[v];
+                ps3it = "it " + "hasn't been " + vnbc[v];
 
                 ps4 = "ellos no " + "han estado " + vnbcs[v];
                 ps4eng = "they " + "haven't been " + vnbc[v];
@@ -11073,25 +11073,25 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v];
-                ps1eng = "I " + "must not " + vnb[v];
+                ps1eng = "I " + "musn't " + vnb[v];
 
                 ps2 = "tú no " + "debes " + vnbs[v];
-                ps2eng = "you " + "must not " + vnb[v];
+                ps2eng = "you " + "musn't " + vnb[v];
 
                 ps3 = "él no " + "debe " + vnbs[v];
-                ps3eng = "he " + "must not " + vnb[v];
+                ps3eng = "he " + "musn't " + vnb[v];
 
                 ps3ella = "ella no " + "debe " + vnbs[v];
-                ps3she = "she " + "must not " + vnb[v];
+                ps3she = "she " + "musn't " + vnb[v];
 
                 ps3eso = "eso no " + "debe " + vnbs[v];
-                ps3it = "it " + "must no " + vnb[v];
+                ps3it = "it " + "musn't " + vnb[v];
 
                 ps4 = "ellos no " + "deben " + vnbs[v];
-                ps4eng = "they " + "must not " + vnb[v];
+                ps4eng = "they " + "musn't " + vnb[v];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v];
-                ps5eng = "we " + "must not " + vnb[v];
+                ps5eng = "we " + "musn't " + vnb[v];
 
                 break;
         }
@@ -11122,25 +11122,25 @@ public class Oo {
                 break;
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v];
-                ps1eng = "I " + "must not " + "be " + vnbc[v];
+                ps1eng = "I " + "musn't " + "be " + vnbc[v];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v];
-                ps2eng = "you " + "must not " + "be " + vnbc[v];
+                ps2eng = "you " + "musn't " + "be " + vnbc[v];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v];
-                ps3eng = "he " + "must not be " + vnbc[v];
+                ps3eng = "he " + "musn't be " + vnbc[v];
 
                 ps3ella = "ella no debe estar " + vnbcs[v];
-                ps3she = "she " + "must not be " + vnbc[v];
+                ps3she = "she " + "musn't be " + vnbc[v];
 
                 ps3eso = "eso no debe estar " + vnbcs[v];
-                ps3it = "it " + "must not be " + vnbc[v];
+                ps3it = "it " + "musn't be " + vnbc[v];
 
                 ps4 = "ellos no deben estar " + vnbcs[v];
-                ps4eng = "they " + "must not be " + vnbc[v];
+                ps4eng = "they " + "musn't be " + vnbc[v];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v];
-                ps5eng = "we " + "must not be " + vnbc[v];
+                ps5eng = "we " + "musn't be " + vnbc[v];
 
                 break;
         }
@@ -11317,44 +11317,44 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v];
 
                 ps2 = "Se supone que " + vn2[v];
-                ps2eng = "you're supposed to " + vnb[v];
+                ps2eng = "you are supposed to " + vnb[v];
 
                 ps3 = "Se supone que él " + vnb3[v];
-                ps3eng = "he's supposed to " + vnb[v];
+                ps3eng = "he is supposed to " + vnb[v];
 
                 ps3ella = "Se supone que ella " + vnb3[v];
-                ps3she = "she's supposed to " + vnb[v];
+                ps3she = "she is supposed to " + vnb[v];
 
                 ps3eso = "Se supone que eso " + vnb3[v];
-                ps3it = "it's supposed to " + vnb[v];
+                ps3it = "it is supposed to " + vnb[v];
 
                 ps4 = "se supone que " + vn4[v];
-                ps4eng = "they're supposed to " + vnb[v];
+                ps4eng = "they are supposed to " + vnb[v];
 
                 ps5 = "se supone que " + vn5[v];
-                ps5eng = "we're supposed to " + vnb[v];
+                ps5eng = "we are supposed to " + vnb[v];
                 break;
             case 1:
                 ps1 = "se supone que no " + vn1[v];
                 ps1eng = "I'm not supposed to " + vnb[v];
 
                 ps2 = "se supone que no " + vn2[v];
-                ps2eng = "you're not supposed to " + vnb[v];
+                ps2eng = "you aren't supposed to " + vnb[v];
 
                 ps3 = "se supone que él no " + vnb3[v];
-                ps3eng = "he's not supposed to " + vnb[v];
+                ps3eng = "he isn't supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella no " + vnb3[v];
-                ps3she = "she's not supposed to " + vnb[v];
+                ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no " + vnb3[v];
-                ps3it = "it's not supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to  " + vnb[v];
 
                 ps4 = "se supone que no " + vn4[v];
-                ps4eng = "they're not supposed to " + vnb[v];
+                ps4eng = "they aren't supposed to " + vnb[v];
 
                 ps5 = "se supone que no " + vn5[v];
-                ps5eng = "we're not supposed to " + vnb[v];
+                ps5eng = "we aren't supposed to " + vnb[v];
                 break;
 
             case 2:
@@ -11362,22 +11362,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v];
 
                 ps2 = "se supone que tienes que " + vnbs[v];
-                ps2eng = "you're supposed to " + vnb[v];
+                ps2eng = "you are supposed to " + vnb[v];
 
                 ps3 = "se supone que él tiene que " + vnbs[v];
-                ps3eng = "he's supposed to " + vnb[v];
+                ps3eng = "he is supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella tiene que " + vnbs[v];
-                ps3she = "she's supposed to " + vnb[v];
+                ps3she = "she is supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v];
-                ps3it = "it's supposed to  " + vnb[v];
+                ps3it = "it is supposed to  " + vnb[v];
 
                 ps4 = "se supone que tienen que " + vnbs[v];
-                ps4eng = "they're supposed to " + vnb[v];
+                ps4eng = "they are supposed to " + vnb[v];
 
                 ps5 = "se supone que tenemos que " + vnbs[v];
-                ps5eng = "we're supposed to " + vnb[v];
+                ps5eng = "we are supposed to " + vnb[v];
                 break;
 
             case 3:
@@ -11385,22 +11385,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v];
 
                 ps2 = "se supone que no tienes que " + vnbs[v];
-                ps2eng = "you're not supposed to " + vnb[v];
+                ps2eng = "you aren't supposed to " + vnb[v];
 
                 ps3 = "se supone que él no tiene que  " + vnbs[v];
-                ps3eng = "he's not supposed to " + vnb[v];
+                ps3eng = "he isn't supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v];
-                ps3she = "she's not supposed to " + vnb[v];
+                ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v];
-                ps3it = "it's not supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to  " + vnb[v];
 
                 ps4 = "se supone que no tienen que " + vnbs[v];
-                ps4eng = "they're not supposed to " + vnb[v];
+                ps4eng = "they aren't supposed to " + vnb[v];
 
                 ps5 = "se supone que no tenemos que " + vnbs[v];
-                ps5eng = "we're not supposed to " + vnb[v];
+                ps5eng = "we aren't supposed to " + vnb[v];
                 break;
 
             case 4:
@@ -11408,22 +11408,22 @@ public class Oo {
                 ps1eng = "I'm supposed to " + vnb[v];
 
                 ps2 = "se supone que vas a " + vnbs[v];
-                ps2eng = "you're supposed to " + vnb[v];
+                ps2eng = "you are supposed to " + vnb[v];
 
                 ps3 = "se supone que él va a " + vnbs[v];
-                ps3eng = "he's supposed to " + vnb[v];
+                ps3eng = "he is supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella va a " + vnbs[v];
-                ps3she = "she's supposed to " + vnb[v];
+                ps3she = "she is supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso va a " + vnbs[v];
-                ps3it = "it's supposed to " + vnb[v];
+                ps3it = "it is supposed to " + vnb[v];
 
                 ps4 = "se supone que van a " + vnbs[v];
-                ps4eng = "they're supposed to " + vnb[v];
+                ps4eng = "they are supposed to " + vnb[v];
 
                 ps5 = "se supone que vamos a " + vnbs[v];
-                ps5eng = "we're supposed to " + vnb[v];
+                ps5eng = "we are supposed to " + vnb[v];
 
                 break;
 
@@ -11432,22 +11432,22 @@ public class Oo {
                 ps1eng = "I'm not supposed to " + vnb[v];
 
                 ps2 = "se supone que no vas a " + vnbs[v];
-                ps2eng = "you're not supposed to " + vnb[v];
+                ps2eng = "you aren't supposed to " + vnb[v];
 
                 ps3 = "se supone que él no va a " + vnbs[v];
-                ps3eng = "he's not supposed to " + vnb[v];
+                ps3eng = "he isn't supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella no va a " + vnbs[v];
-                ps3she = "she's not supposed to " + vnb[v];
+                ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v];
-                ps3it = "it's not supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to  " + vnb[v];
 
                 ps4 = "se supone que no van a " + vnbs[v];
-                ps4eng = "they're not supposed to " + vnb[v];
+                ps4eng = "they aren't supposed to " + vnb[v];
 
                 ps5 = "se supone que no vamos a " + vnbs[v];
-                ps5eng = "we're not supposed to " + vnb[v];
+                ps5eng = "we aren't supposed to " + vnb[v];
                 break;
 
         }
@@ -11810,22 +11810,22 @@ public class Oo {
                 ps1eng = "I'm used to " + vnbc[v];
 
                 ps2 = "Tu estás acostumbrado a " + vnbs[v];
-                ps2eng = "You're used to " + vnbc[v];
+                ps2eng = "You are used to " + vnbc[v];
 
                 ps3 = "Él está acostumbrado a " + vnbs[v];
-                ps3eng = "He's used to " + vnbc[v];
+                ps3eng = "He is used to " + vnbc[v];
 
                 ps3ella = "Ella está acostumbrada a  " + vnbs[v];
-                ps3she = "She's used to " + vnbc[v];
+                ps3she = "She is used to " + vnbc[v];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v];
-                ps3it = "It's used to " + vnbc[v];
+                ps3it = "It is used to " + vnbc[v];
 
                 ps4 = "Ellos están acostumbrados a " + vnbs[v];
-                ps4eng = "They're used to " + vnbc[v];
+                ps4eng = "They are used to " + vnbc[v];
 
                 ps5 = "Nosotros estamos acostumbrados a " + vnbs[v];
-                ps5eng = "We're used to " + vnbc[v];
+                ps5eng = "We are used to " + vnbc[v];
                 break;
 
             case 1:
@@ -11833,22 +11833,22 @@ public class Oo {
                 ps1eng = "I'm not used to " + vnbc[v];
 
                 ps2 = "Tu no estás acostumbrado a " + vnbs[v];
-                ps2eng = "You're not used to " + vnbc[v];
+                ps2eng = "You aren't used to " + vnbc[v];
 
                 ps3 = "Él no está acostumbrado a " + vnbs[v];
-                ps3eng = "He's not used to " + vnbc[v];
+                ps3eng = "He isn't used to " + vnbc[v];
 
                 ps3ella = "Ella no está acostumbrada a  " + vnbs[v];
-                ps3she = "She's not used to " + vnbc[v];
+                ps3she = "She isn't used to " + vnbc[v];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v];
-                ps3it = "It's not used to " + vnbc[v];
+                ps3it = "It isn't used to " + vnbc[v];
 
                 ps4 = "Ellos no están acostumbrados a " + vnbs[v];
-                ps4eng = "They're not used to " + vnbc[v];
+                ps4eng = "They aren't used to " + vnbc[v];
 
                 ps5 = "Nosotros no estamos acostumbrados a " + vnbs[v];
-                ps5eng = "We're not used to " + vnbc[v];
+                ps5eng = "We aren't used to " + vnbc[v];
                 break;
         }
     }//PD 15/06/2022

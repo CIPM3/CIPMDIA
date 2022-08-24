@@ -7551,7 +7551,7 @@ public class People2 {
 
                 ps3ella = "ella no debió " + "haber " + vpsp[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
                 ps3she = "she shouldn't "  + "have " + vpeng[v] + nnobles[n]+ prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she shouldn't " + "have " + vpeng[v] + nnobles[n]+ prep.peoplespecialeng[p][p2] + frequadv[radv]+frequadv[r];
+                ps3she2 = "she shouldn't " + "have " + vpeng[v] + nnobles[n]+ prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso no debió " + "haber " + vpsp[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
