@@ -45,16 +45,16 @@ public class StructureResults extends AppCompatActivity {
                         GenericTypeIndicator<ArrayList<Student>> t = new GenericTypeIndicator<ArrayList<Student>>() {
                         };
                         ArrayList<Student> students = snapshot.getValue(t);
-                        //String value = String.valueOf(students.get(0).presentsimple);
+                        //String value = (students.get(0).presentsimple);
                         estructuras = new String[]
                                 {       "Presente Simple "+": "+ students.get(0).presentsimple,
-                                        "Presente Continuo"+": "+ String.valueOf(students.get(0).presenteContinuo),
-                                        "Presente Perfecto"+": "+ String.valueOf(students.get(0).presenteperfecto),
-                                        "Presente Perfecto Continuo"+": "+ String.valueOf(students.get(0).presentepp),
-                                        "Pasado Simple "+": "+ String.valueOf(students.get(0).pasadosimple),
-                                        "Pasado Continuo"+": "+ String.valueOf(students.get(0).pasadocontinuo),
-                                        "Pasado Perfecto"+": "+ String.valueOf(students.get(0).pasadoperfecto),
-                                        "Pasado Perfecto Continuo"+": "+ String.valueOf(students.get(0).pasadopp)
+                                        "Presente Continuo"+": "+(students.get(0).presenteContinuo),
+                                        "Presente Perfecto"+": "+ (students.get(0).presenteperfecto),
+                                        "Presente Perfecto Continuo"+": "+ (students.get(0).presentepp),
+                                        "Pasado Simple "+": "+ (students.get(0).pasadosimple),
+                                        "Pasado Continuo"+": "+ (students.get(0).pasadocontinuo),
+                                        "Pasado Perfecto"+": "+ (students.get(0).pasadoperfecto),
+                                        "Pasado Perfecto Continuo"+": "+ (students.get(0).pasadopp)
 
                                 };
 

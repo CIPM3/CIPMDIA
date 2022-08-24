@@ -115,7 +115,7 @@
                             android:layout_width="90dp"
                             android:layout_height="90dp"
                             android:background="@drawable/ic_grupo_strushort"
-                            android:onClick="change" />
+                            android:onClick="estructuratest" />
 
                         <TextView
                             android:layout_width="match_parent"

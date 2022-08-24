@@ -13,24 +13,20 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);
     }
-
-    public void change(View v){
-        Intent intent= new Intent(this,StructureResults.class);
+    public void estructuratest(View v){
+        Intent intent= new Intent(this,MainTesting.class);
         startActivity(intent);
 
     }

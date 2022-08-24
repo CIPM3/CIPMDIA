@@ -19,30 +19,36 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import im.crisp.client.Crisp;
 
 public class MainActivity extends AppCompatActivity {
-    Button info;
-    Button livech;
-    Button btn,logoutbtn,googlelogout;
+    Button btn,logoutbtn,testest;
     TextView txt, tvnameuser;
     FirebaseAuth mAuth;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     RegisterActivity r;
     FirebaseUser user;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         tvnameuser = findViewById(R.id.UserNameTv);
+        testest= findViewById(R.id.testest);
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this,gso);
         mAuth= FirebaseAuth.getInstance();
@@ -65,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
         }
         btn.setOnClickListener(view -> {
             startActivity(new Intent(this,StoreActivity.class));
+        });
+
+        testest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,MainTesting.class));
+
+            }
         });
     }
     public void logout(View v){
@@ -130,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
     public void tutorialGeneral(View vista) {
-        Intent intento = new Intent(this, MainTesting.class);
+        Intent intento = new Intent(this, TutorialGeneral.class);
         startActivity(intento);
     }
     public void vocabulary(View vista) {

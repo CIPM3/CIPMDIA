@@ -1,5 +1,6 @@
 package com.leal.cipm_testing;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,12 +22,22 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+
 public class MainTesting extends AppCompatActivity {
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private Button starttest;
     TextView choose,sptx, getsent,save;
     Spinner spin;
@@ -34,17 +45,12 @@ public class MainTesting extends AppCompatActivity {
     TextToSpeech tt1;
     EditText Answerinput;
     String txteng;
+    FirebaseAuth mAuth;
     public static final int REC_CODE_SPEECH_INPUT = 100;
-
-
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
-    boolean ps,pc,pp,ppc, pas,pac,pap,papc,fs,fc,fp,fpc,ws,wc,wp,wpc,cs,cc,ccp,cpc,ss,sc,sp,spc,mis,mip,mipc
-            ,ms,mc,mp,mpc,cans,canc,pvpp,vj,pregunta,get,thereis,goingto,haveto,usedto,reflx,supp,wyt,wish,comp,superl,formeto
-            ;
-    DatabaseReference myDbRef= FirebaseDatabase.getInstance().getReference().child("UserName");
+    boolean ps,pc,pp;
     String selection;
     int cp,cn;
-    int number=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +72,7 @@ public class MainTesting extends AppCompatActivity {
         getsent.setVisibility(View.GONE);
         save = findViewById(R.id.sendinfo);
         save.setVisibility(View.GONE);
+        mAuth= FirebaseAuth.getInstance();
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(adapter);
@@ -88,12 +95,10 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     public   void start(View view){
         choose.setVisibility(View.VISIBLE);
         spin.setVisibility(View.VISIBLE);
     }
-
     private void shownext() {
         mic.setVisibility(View.VISIBLE);
         sptx.setVisibility(View.VISIBLE);
@@ -103,7 +108,6 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     public void startTest(View view){
         save.setVisibility(View.VISIBLE);
         switch (selection) {
@@ -173,7 +177,7 @@ public class MainTesting extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng=gen1.gene;
 
-                                    Answerinput.setText("");
+                                   Answerinput.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
 
@@ -182,17 +186,7 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-    public void iniciarentradavoz(View view) {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        try {
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
-        } catch (ActivityNotFoundException e) {
-        }
-    }
     public void checkanswer(View vista) {
-
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
@@ -201,14 +195,14 @@ public class MainTesting extends AppCompatActivity {
 
         }else {
             cn=cn+1;
-            Toast.makeText(this, String.valueOf(cp)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
         }
         Answerinput.setText("");
 
         if(cp==4){
             Toast.makeText(this, selection+"passed /pasa a la sig est"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp=0;
-
+            turnTrue(selection);
 
         }else if(cn==4){
             Toast.makeText(this, selection+"not passed / pasa a la sig est"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
@@ -220,7 +214,33 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+    private void turnTrue(String CurrentStructure) {
 
+        switch (selection){
+            case "Present Simple":
+                ps=true;
+                break;
+            case "Present Continuous":
+                pc=true;
+                break;
+
+        }
+    }
+    public void dbtesting(View view) {
+        String t = txteng.trim();
+        String t2 = Answerinput.getText().toString().trim();
+        Map<String, Object> user = new HashMap<>();
+        user.put("RightAnswer", t);
+        user.put("UserInput",t2);
+
+        db.document(mAuth.getUid()+"/structures").set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(MainTesting.this, "shit worked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -236,6 +256,15 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
 
+    }
+    public void iniciarentradavoz(View view) {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException e) {
+        }
     }
 
 }

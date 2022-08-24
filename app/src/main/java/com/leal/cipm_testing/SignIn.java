@@ -47,6 +47,7 @@ public class SignIn extends AppCompatActivity {
         etloginpassword = findViewById(R.id.etpasswordlogin);
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this,gso);
+
         googlesignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
