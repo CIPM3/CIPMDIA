@@ -165,7 +165,7 @@ public class People {
 
 // dificultad 2
     //presente dif 2
-public void GenPresSimp2() {
+    public void GenPresSimp2() {
 
     switch (neg) {
         case 0:

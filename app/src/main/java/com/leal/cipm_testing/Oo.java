@@ -221,7 +221,7 @@ public class Oo {
             "the television ", "the science ", "the product ", "the idea ", "the area ",
             "the society ", "the story ", "the industry ",
             "the thing ", "the oven ", "the community ", "the language ",
-            "variety ", "the video ", "the security ", "the country ", "the movie ",
+            "the variety ", "the video ", "the security ", "the country ", "the movie ",
             "the organization ", "the equipment ", "the technology ",
             "the army ", "the camera ", "the cameras ", "the truth ", "the marketing ",
             "the university ", "the writing ", "the article ", "the department "
@@ -235,7 +235,7 @@ public class Oo {
             "la televisión ", "la ciencia ", "el producto ", "la idea ", "el área ",
             "la sociedad ", "la historia ", "la industria ",
             "la cosa ", "el horno ", "la comunidad ", "el idioma ",
-            "variedad ", "el video ", "la seguridad ", "el país ", "la pelicula ",
+            "la variedad ", "el video ", "la seguridad ", "el país ", "la pelicula ",
             "la organización ", "el equipo ", "la tecnología ",
             "el ejército ", "la cámara ", "las cámaras ", "la verdad ", "el marketing ",
             "la universidad ", "la escritura ", "el artículo ", "el departamento "

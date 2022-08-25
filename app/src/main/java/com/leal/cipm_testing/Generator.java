@@ -48,7 +48,7 @@ public class Generator {
             "viniendo ", "mirando ", "trabajando ",
             "jugando ", "platicando ", "corriendo ",
             "moviendo ",
-            "viviendo ", "sentando ", "parando ",
+            "viviendo ", "sentado ", "parando ",
             "entendiendo ", "caminando ", "creciendo ",
             "esperando ", "muriendo ", "quedando ",
             "cayendo "

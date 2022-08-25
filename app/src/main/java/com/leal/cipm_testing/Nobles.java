@@ -489,8 +489,6 @@ public class Nobles {
             "olvidaría ", "aceptaría ", "compararía ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
             "debería ", "incorporaría ", "organizaría "
     };
-
-
     // verbos nobles segunda persona would
     String vn2w[] = {"tendrías ", "obtendrías ", "verías ", "necesitarías ", "sabrías ", "encontrarías ", "tomarías ", "querrías ", "incluiría ",
             "agradecerías ", "agregarías ", "elegirías ", "desarrollarías ", "recordarías ", "traerías ", "protegerías ",
@@ -498,8 +496,6 @@ public class Nobles {
             "olvidarías ", "aceptarías ", "compararías ", "imaginarías ", "reconocerías ", "reemplazarías ", "pedirías prestado ", "examinarías ",
             "deberías ", "incorporarías ", "organizarías "
     };
-
-
     // verbos nobles tercera persona would
     String vn3w[] = {"tendría ", "obtendría ", "vería ", "necesitaría ", "sabría ", "encontraría ", "tomaría ", "querría ", "incluiría ",
             "agradecería ", "agregaría ", "elegiría ", "desarrollaría ", "recordaría ", "traería ", "protegería ",
@@ -507,8 +503,6 @@ public class Nobles {
             "olvidaría ", "aceptaría ", "compararía ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
             "debería ", "incorporaría ", "organizaría "
     };
-
-
     // verbos nobles cuarta persona would
     String vn4w[] = {"tendrían ", "obtendrían ", "verían ", "necesitarían ", "sabrían ", "encontrarían ", "tomarían ", "querrían ", "incluirían ",
             "agradecerían ", "agregarían ", "elegirían ", "desarrollarían ", "recordarían ", "traerían ", "protegerían ",
@@ -516,8 +510,6 @@ public class Nobles {
             "olvidarían ", "aceptarían ", "compararían ", "imaginarían ", "reconocerían ", "reemplazarían ", "pedirían prestado ", "examinarían ",
             "deberían ", "incorporarían ", "organizarían "
     };
-
-
     // verbos nobles quinta persona would
     String vn5w[] = {"tendríamos ", "obtendríamos ", "veríamos ", "necesitaríamos ", "sabríamos ", "encontraríamos ", "tomaríamos ", "querrían ", "incluiríamos ",
             "agradeceríamos ", "agregaríamos ", "elegiríamos ", "desarrollaríamos ", "recordaríamos ", "traeríamos ", "protegeríamos ",
@@ -539,7 +531,6 @@ public class Nobles {
             "olvide ", "acepte ", "comparta ", "imagine ", "reconozca ", "reemplace ", "pida prestado ", "examine ",
             "deba ", "incorpore ", "organice "
     };
-
     // verbos nobles segunda persona subjuntivo
     String vn2subj[] = {"tengas ", "obtengas ", "veas ", "necesites ", "sepas ", "encuentres ", "tomes ", "quieras ", "incluyas ",
             "agradezcas ", "agregues ", "elijas ", "desarrolles ", "recuerdes ", "traigas ", "protejas ",
@@ -547,7 +538,6 @@ public class Nobles {
             "olvides ", "aceptes ", "compartas ", "imagines ", "reconozcas ", "reemplaces ", "pidas prestado ", "examines ",
             "debas ", "incorpores ", "organices "
     };
-
     //vnb verbos nobles top 100  cuarta persona esp subjuntivos
     String vn4subj[] = {"tengan ", "obtengan ", "vean ", "necesiten ", "sepan ", "encuentren ", "tomen ", "quieran ", "incluyan ",
             "agradezcan ", "agreguen ", "elijan ", "desarrollen ", "recuerden ", "traigan ", "protejan ",
@@ -555,7 +545,6 @@ public class Nobles {
             "olviden ", "acepten ", "compartan ", "imaginen ", "reconozcan ", "reemplacen ", "pidan prestado ", "examinen ",
             "deban ", "incorporen ", "organicen "
     };
-
     //vnb verbos nobles nosotros subjuntivo
     String vn5subj[] = {"tengamos ", "obtengamos ", "veamos ", "necesitemos ", "sepamos ", "encontremos ", "tomemos ", "queramos ", "incluyamos ",
             "agradezcamos ", "agreguemos ", "elijamos ", "desarrollemos ", "recordemos ", "traigamos ", "protejamos ",

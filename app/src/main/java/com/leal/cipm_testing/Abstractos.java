@@ -37,44 +37,97 @@ public class Abstractos {
 
 
     //pasados (agregado wish SV 060422)
-    String ps1pre[] = {"conocí ", "aprendí ", "entendí ", "consideré ", "mantuve ", "expliqué ", "enfaticé "};
-    String ps1imp[] = {"conocía ", "aprendía ", "entendía ", "consideraba ", "mantenía ", "explicaba ", "enfatizaba "};
+    String ps1pre[] = {"conocí ", "aprendí ", "entendí ", "consideré ", "mantuve ",
+            "expliqué ", "enfaticé "
+    };
+    String ps1imp[] = {"conocía ", "aprendía ", "entendía ", "consideraba ", "mantenía ",
+            "explicaba ", "enfatizaba "
+    };
     String ps1wish[] = {"conociera ", "aprendiera ", "entendiera ", "considerara ", "mantuviera ",
-            "explicara ", "enfatizara "};
-    String ps2pre[] = {"conociste ", "aprendiste ", "entendiste ", "consideraste ", "mantuviste ", "explicaste ", "enfatizaste "};
-    String ps2imp[] = {"conocías ", "aprendías ", "entendías ", "considerabas ", "mantenías ", "explicabas ", "enfatizabas "};
+            "explicara ", "enfatizara "
+    };
+    String ps2pre[] = {"conociste ", "aprendiste ", "entendiste ", "consideraste ", "mantuviste ",
+            "explicaste ", "enfatizaste "
+    };
+    String ps2imp[] = {"conocías ", "aprendías ", "entendías ", "considerabas ", "mantenías ",
+            "explicabas ", "enfatizabas "
+    };
     String ps2wish[] = {"supieras ", "aprendieras ", "entendieras ", "consideraras ", "mantuvieras ",
-            "explicaras ", "enfatizaras "};
-    String ps3p[] = {"conoció ", "aprendío ", "entendio ", "consideró ", "mantuvo ", "explicó ", "enfatizó "};
-    String ps3imp[] = {"conocía ", "aprendía ", "entendía ", "consideraba ", "mantenía ", "explicaba ", "enfatizaba "};
+            "explicaras ", "enfatizaras "
+    };
+    String ps3p[] = {"conoció ", "aprendío ", "entendio ", "consideró ", "mantuvo ",
+            "explicó ", "enfatizó "
+    };
+    String ps3imp[] = {"conocía ", "aprendía ", "entendía ", "consideraba ", "mantenía ",
+            "explicaba ", "enfatizaba "
+    };
     String ps3wish[] = {"conociera ", "aprendiera ", "entendiera ", "considerara ", "mantuviera ",
-            "explicara ", "enfatizara "};
-    String vn4p[] = {"conocieron ", "aprendieron ", "entendieron ", "consideraron ", "mantuvieron ", "explicaron ", "enfatizaron "};
-    String vn4imp[] = {"conocían ", "aprendían ", "entendían ", "consideraban ", "mantenían ", "explicaban ", "enfatizaban "};
+            "explicara ", "enfatizara "
+    };
+    String vn4p[] = {"conocieron ", "aprendieron ", "entendieron ", "consideraron ", "mantuvieron ",
+            "explicaron ", "enfatizaron "
+    };
+    String vn4imp[] = {"conocían ", "aprendían ", "entendían ", "consideraban ", "mantenían ",
+            "explicaban ", "enfatizaban "
+    };
     String ps4wish[] = {"conocieran ", "aprendieran ", "entendieran ", "consideraran ", "mantuvieran ",
-            "explicaran ", "enfatizaran "};
-    String vn5p[] = {"conocímos ", "aprendimos ", "entendimos ", "consideramos ", "mantuvimos ", "explicamos ", "enfatizamos "};
-    String vn5imp[] = {"conocíamos ", "aprendíamos ", "entendíamos ", "considerábamos ", "manteníamos ", "explicábamos ", "enfatizábamos "};
+            "explicaran ", "enfatizaran "
+    };
+    String vn5p[] = {"conocímos ", "aprendimos ", "entendimos ", "consideramos ", "mantuvimos ",
+            "explicamos ", "enfatizamos "
+    };
+    String vn5imp[] = {"conocíamos ", "aprendíamos ", "entendíamos ", "considerábamos ", "manteníamos ",
+            "explicábamos ", "enfatizábamos "
+    };
     String ps5wish[] = {"conocieramos ", "aprendiéramos ", "entendiéramos ", "consideráramos ", "mantuviéramos ",
-            "explicáramos ", "enfatizáramos "};
+            "explicáramos ", "enfatizáramos "
+    };
     //futuro
-    String vn1f[] = {"conoceré ", "aprenderé ", "entenderé ", "consideraré ", "mantendré ", "explicaré ", "enfatizaré "};
-    String vn2f[] = {"conocerás ", "aprenderás ", "entenderás ", "considerarás ", "mantendrás ", "explicarás ", "enfatizarás "};
-    String vn3f[] = {"conocerá ", "aprenderá ", "entenderá ", "considerará ", "mantendrá ", "explicará ", "enfatizará "};
-    String vn4f[] = {"conocerán ", "aprenderán ", "entenderán ", "considerarán ", "mantendrán ", "explicarán ", "enfatizarán "};
-    String vn5f[] = {"conoceremos ", "aprenderemos ", "entenderemos ", "consideraremos ", "mantendremos ", "explicaremos ", "enfatizaremos "};
+    String vn1f[] = {"conoceré ", "aprenderé ", "entenderé ", "consideraré ", "mantendré ",
+            "explicaré ", "enfatizaré "
+    };
+    String vn2f[] = {"conocerás ", "aprenderás ", "entenderás ", "considerarás ", "mantendrás ",
+            "explicarás ", "enfatizarás "
+    };
+    String vn3f[] = {"conocerá ", "aprenderá ", "entenderá ", "considerará ", "mantendrá ",
+            "explicará ", "enfatizará "
+    };
+    String vn4f[] = {"conocerán ", "aprenderán ", "entenderán ", "considerarán ", "mantendrán ",
+            "explicarán ", "enfatizarán "
+    };
+    String vn5f[] = {"conoceremos ", "aprenderemos ", "entenderemos ", "consideraremos ",
+            "mantendremos ", "explicaremos ", "enfatizaremos "
+    };
     //would
-    String vn1w[] = {"conocería ", "aprendería ", "entendería ", "consideraría ", "mantendría ", "explicaría ", "enfatizaría "};
-    String vn2w[] = {"conocerían ", "aprenderían ", "entenderían ", "considerarían ", "mantendrían ", "explicarían ", "enfatizarían "};
-    String vn3w[] = {"conocería ", "aprendería ", "entendería ", "consideraría ", "mantendría ", "explicaría ", "enfatizaría "};
-    String vn4w[] = {"conocerían ", "aprenderían ", "entenderían ", "considerarían ", "mantendrían ", "explicarían ", "enfatizarían "};
-    String vn5w[] = {"conoceríamos ", "aprenderíamos ", "entenderíamos ", "consideraríamos ", "mantendríamos ", "explicaríamos ", "enfatizaríamos "};
+    String vn1w[] = {"conocería ", "aprendería ", "entendería ", "consideraría ", "mantendría ",
+            "explicaría ", "enfatizaría "
+    };
+    String vn2w[] = {"conocerían ", "aprenderían ", "entenderían ", "considerarían ", "mantendrían ",
+            "explicarían ", "enfatizarían "
+    };
+    String vn3w[] = {"conocería ", "aprendería ", "entendería ", "consideraría ", "mantendría ",
+            "explicaría ", "enfatizaría "
+    };
+    String vn4w[] = {"conocerían ", "aprenderían ", "entenderían ", "considerarían ", "mantendrían ",
+            "explicarían ", "enfatizarían "
+    };
+    String vn5w[] = {"conoceríamos ", "aprenderíamos ", "entenderíamos ", "consideraríamos ",
+            "mantendríamos ", "explicaríamos ", "enfatizaríamos "
+    };
 
     //subjunctive
-    String vn1y3subj[] = {"conozca ", "aprenda ", "entienda ", "considere ", "mantenga ", "explique ", "enfatize "};
-    String vn2subj[] = {"conozcas ", "aprendas ", "entiendas ", "consideres ", "mantengas ", "expliques ", "enfatices "};
-    String vn4subj[] = {"conozcan ", "aprendan ", "entiendan ", "consideren ", "mantengan ", "expliquen ", "enfatizen "};
-    String vn5subj[] = {"conozcamos ", "aprendamos ", "entendamos ", "consideremos ", "mantengamos ", "expliquemos ", "enfatizemos "};
+    String vn1y3subj[] = {"conozca ", "aprenda ", "entienda ", "considere ", "mantenga ", "explique ",
+            "enfatize "
+    };
+    String vn2subj[] = {"conozcas ", "aprendas ", "entiendas ", "consideres ", "mantengas ", "expliques ",
+            "enfatices "
+    };
+    String vn4subj[] = {"conozcan ", "aprendan ", "entiendan ", "consideren ", "mantengan ", "expliquen ",
+            "enfatizen "
+    };
+    String vn5subj[] = {"conozcamos ", "aprendamos ", "entendamos ", "consideremos ", "mantengamos ",
+            "expliquemos ", "enfatizemos "
+    };
 
 
     // objetos abstractos
