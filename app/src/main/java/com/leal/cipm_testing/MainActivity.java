@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ import im.crisp.client.Crisp;
 
 public class MainActivity extends AppCompatActivity {
     Button btn,logoutbtn,testest;
+    LinearLayout menu,btn_menu_open,btn_menu_closed;
     TextView txt, tvnameuser;
     FirebaseAuth mAuth;
     GoogleSignInOptions gso;
@@ -56,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
         txt = findViewById(R.id.itemName);
         btn = findViewById(R.id.itemPrice);
+        menu = findViewById(R.id.menu);
+        btn_menu_open = findViewById(R.id.btn_menu_open);
+        btn_menu_closed = findViewById(R.id.btn_menu_closed);
         Prefs prefs = new Prefs(this);
         if (prefs.getPremium()==1){
             //Give the user all the premium features
@@ -208,6 +213,20 @@ public class MainActivity extends AppCompatActivity {
         Intent intento = new Intent(this, spa_int_nuevo.class);
         startActivity(intento);
         //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
+    }
+
+    public void Open_menu(View vista){
+        //Toast.makeText(this, "Menu abierto", Toast.LENGTH_SHORT).show();
+        menu.setVisibility(View.VISIBLE);
+        btn_menu_open.setVisibility(View.GONE);
+        btn_menu_closed.setVisibility(View.VISIBLE);
+    }
+
+    public void Close_menu(View vista){
+        //Toast.makeText(this, "Menu abierto", Toast.LENGTH_SHORT).show();
+        menu.setVisibility(View.GONE);
+        btn_menu_open.setVisibility(View.VISIBLE);
+        btn_menu_closed.setVisibility(View.GONE);
     }
 
     //cambios
