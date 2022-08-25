@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         menu = findViewById(R.id.menu);
         btn_menu_open = findViewById(R.id.btn_menu_open);
         btn_menu_closed = findViewById(R.id.btn_menu_closed);
+        menu.setVisibility(View.GONE);
+        btn_menu_open.setVisibility(View.VISIBLE);
+        btn_menu_closed.setVisibility(View.GONE);
         Prefs prefs = new Prefs(this);
         if (prefs.getPremium()==1){
             //Give the user all the premium features
