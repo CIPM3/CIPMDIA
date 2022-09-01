@@ -99,27 +99,27 @@ public class Generator {
 
     //verbo intrasitivo base futuro primer persona
     String vib1f[] = {"iré ", "pensaré ", "vendré ", "miraré ", "trabajaré ", "jugaré ", "platicaré ", "correré ", "moveré ", "viviré ",
-            "me sentaré ", "me pararé ", "entenderé ", "caminaré ", "creceré ", "esperaré ", "moriré ", "me quedaré ", "me caeré "
+            "sentaré ", "pararé ", "entenderé ", "caminaré ", "creceré ", "esperaré ", "moriré ", "me quedaré ", "me caeré "
     };
 
     //verbo intrasitivo base futuro segunda persona
     String vib2f[] = {"iras ", "pensaras ", "vendras ", "miraras ", "trabajaras ", "jugaras ", "platicaras ", "correras ", "moveras ", "viviras ",
-            "te sentaras ", "te pararás ", "entenderas ", "caminarás ", "creceras ", "esperaras ", "moriras ", "te quedaras ", "te caeras "
+            "sentaras ", "pararás ", "entenderas ", "caminarás ", "creceras ", "esperaras ", "moriras ", "te quedaras ", "te caeras "
     };
 
     //verbo intranstivo base futuro tercera persona
     String vib3f[] = {"ira ", "pensará ", "vendrá ", "mirará ", "trabajará ", "jugará ", "platicará ", "correrá ", "moverá ", "vivirá ",
-            "se sentará ", "se parará ", "entenderá ", "caminará ", "crecerá ", "esperará ", "morirá ", "se quedará ", "se caerá "
+            "sentará ", "parará ", "entenderá ", "caminará ", "crecerá ", "esperará ", "morirá ", "se quedará ", "se caerá "
     };
 
     //verbo intransitivo base futuro cuarta persona
     String vib4f[] = {"irán ", "pensarán ", "vendrán ", "mirarán ", "trabajarán ", "jugarán ", "platicán ", "correrán ", "moveran ", "viviran ",
-            "se sentarán ", "se pararán ", "entenderan ", "caminarán ", "creceran ", "esperarán ", "moriran ", "se quedaran ", "se caeran "
+            "sentarán ", "pararán ", "entenderan ", "caminarán ", "creceran ", "esperarán ", "moriran ", "se quedaran ", "se caeran "
     };
 
     //verbo intransitivo base futuro nosotros
     String vibfnos[] = {"iremos ", "pensaremos ", "vendremos ", "miraremos ", "trabajaremos ", "jugaremos ", "platicaremos ", "correremos ", "moveremos ", "viviremos ",
-            "nos sentaremos ", "nos pararemos ", "entenderemos ", "caminaremos ", "creceremos ", "esperaremos ", "moriremos ", "nos quedaremos ", "nos caeremos "
+            "sentaremos ", "pararemos ", "entenderemos ", "caminaremos ", "creceremos ", "esperaremos ", "moriremos ", "nos quedaremos ", "nos caeremos "
     };
 
     // subjuntivos intransitivos
@@ -12381,10 +12381,10 @@ public class Generator {
             case "yo ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp1;
+                        gene = i.eng1;
                         break;
                     case 1:
                         Special s = new Special();
@@ -12393,10 +12393,10 @@ public class Generator {
                         gene = s.eng1;
                         break;
                     case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp1;
-                        gene = i.eng1;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
                         break;
 
                     case 3:
@@ -12425,11 +12425,12 @@ public class Generator {
             case "tú ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
+
                     case 1:
                         Special s = new Special();
                         s.GenPresSimp2();
@@ -12437,10 +12438,10 @@ public class Generator {
                         gene = s.eng2;
                         break;
                     case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
                         break;
 
                     case 3:
@@ -12469,11 +12470,12 @@ public class Generator {
             case "él ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
+
                     case 1:
                         Special s = new Special();
                         s.GenPresSimp2();
@@ -12481,10 +12483,10 @@ public class Generator {
                         gene = s.eng3;
                         break;
                     case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
                         break;
 
                     case 3:
@@ -12512,10 +12514,10 @@ public class Generator {
             case "ella ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
                     case 1:
                         Special s = new Special();
@@ -12524,11 +12526,10 @@ public class Generator {
                         gene = s.eng3she;
                         break;
                     case 2:
-
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
                         break;
 
                     case 3:
@@ -12556,10 +12557,10 @@ public class Generator {
             case "eso ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
                     case 1:
                         Special s = new Special();
@@ -12568,11 +12569,10 @@ public class Generator {
                         gene = s.eng3she;
                         break;
                     case 2:
-
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
                         break;
 
                     case 3:
@@ -12600,10 +12600,10 @@ public class Generator {
             case "ellos ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
                     case 1:
                         Special s = new Special();
@@ -12612,12 +12612,12 @@ public class Generator {
                         gene = s.eng4;
                         break;
                     case 2:
-
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
                         break;
+
 
                     case 3:
                         People p = new People();
@@ -12644,10 +12644,10 @@ public class Generator {
             case "nosotros ":
                 switch (verb) {
                     case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenPresSimp2();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
                     case 1:
                         Special s = new Special();
@@ -12656,12 +12656,12 @@ public class Generator {
                         gene = s.eng5;
                         break;
                     case 2:
-
-                        Intrans i = new Intrans();
-                        i.GenPresSimp2();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Nobles n = new Nobles();
+                        n.GenPresSimp2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
                         break;
+
 
                     case 3:
                         People p = new People();

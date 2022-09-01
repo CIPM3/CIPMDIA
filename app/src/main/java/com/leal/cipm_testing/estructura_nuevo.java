@@ -67,7 +67,6 @@ public class estructura_nuevo extends AppCompatActivity {
     Button btndif4;
 
 
-
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
 
@@ -167,7 +166,7 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
             });
             //espacio.......................................
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin2.setAdapter(adapter2);
             spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -107,26 +107,26 @@ public class Nobles {
     };
 
     // nouns nobles top 100
-    String nnobles[] = {"people ", "the people ",
-            "history ", "the history ", "art ", "the art ",
-            "money ", "the money ",
+    String nnobles[] = {"the people ",
+            "the history ", "the art ",
+            "the money ",
             "the world ", "the worlds ",
             "information ", "the information ",
-            "the map ", "the maps ", "family ",
+            "the map ", "the maps ",
             "the family ", "government ",
             "the government ", "the governments ",
             "health ", "the health ", "the system ",
 
             "the systems ", "the computer ",
-            "the computers ", "the meat ", "meat ",
+            "the computers ", "the meat ",
             "the year ", " the years ",
-            "the thanks ", "music ", "the music ",
+            "the thanks ","the music ",
             "the person ", "the reading ", "reading ",
             "the method ", "the methods "
 
             , "the data ", "data ", "the food ", "food ",
             "the understanding ", "understanding ",
-            "the theory ", "theory ",
+            "the theory ",
             "the law ", "law ", "the bird ",
             "the birds ", "literature ", "the literature ",
             "the problem ", "the problems ",
@@ -164,7 +164,7 @@ public class Nobles {
             "the boyfriend ", "the direction ", "the strategy ",
             "strategy ", "technology ", "the technology ",
             "the army ", "the armies ", "the camera ",
-            "the cameras ", "freedom ", "the freedom ",
+            "the cameras ", "the freedom ",
 
             "the paper ",  "the environment ",
             "the child ",
@@ -173,30 +173,28 @@ public class Nobles {
             "the University ", "the writing ", "the article ",
             "the department ", "the difference ", "the goal ",
             "the news ", "the audience ", "news ", "the growth ",
-            "growth ", "a block of cheese "
+            "a block of cheese "
     };
 
     // nouns nobles espa;ol top 100
-    String nnoblesesp[] = {"gente ", "a la gente ",
-            "historia ", "la historia ", "arte ", "el arte ",
-            "dinero ", "el dinero ",
+    String nnoblesesp[] = {"a la gente ",
+            "la historia ", "el arte ",
+            "el dinero ",
             "el mundo ", "los mundos ", "información ",
             "la información ", "el mapa ", "los mapas ",
-            "familia ",
             "la familia ", "gobierno ", "el gobierno ",
             "los gobiernos ", "salud ", "la salud ",
             "el sistema ",
 
             "los sistemas ", "la computadora ",
-            "las computadoras ", "la carne ", "carne ",
+            "las computadoras ", "la carne ",
             "el año ", "los años ",
-            "el agradecimiento ", "música ", "la música ",
+            "el agradecimiento ", "la música ",
             "la persona ", "la lectura ", "lectura ",
             "el método ", "los métodos ",
 
             "los datos ", "datos ", "la comida ", "comida ",
             "el entendimiento ", "entendimiento ", "la teoría ",
-            "teoría ",
             "la ley ", "ley ", "el pájaro ", "a los pájaros ",
             "literatura ", "la literatura ", "el problema ",
             "los problemas ",
@@ -236,7 +234,7 @@ public class Nobles {
             "el novio ", "la dirección ", "la estrategia ",
             "estrategia ", "tecnología ", "la tecnología ",
             "el ejército ", "los ejércitos ", "la cámara ",
-            "las cámaras ", "libertad ", "la libertad ",
+            "las cámaras ", "la libertad ",
 
             "el papel ", "el medio ambiente ",
             "el niño ",
@@ -245,7 +243,7 @@ public class Nobles {
             "la universidad ", "la escritura ", "el artículo ",
             "el departamento ", "la diferencia ", "la meta ",
             "las noticias ", "a la audiencia ", "noticias ",
-            "el crecimiento ", "crecimiento ",
+            "el crecimiento ",
             "un bloque de queso "
     };
 
