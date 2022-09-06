@@ -23,6 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,20 +40,23 @@ import java.util.Locale;
 import java.util.Map;
 
 public class MainTesting extends AppCompatActivity {
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private Button starttest;
-    TextView choose,sptx, getsent,save;
-    Spinner spin;
-    ImageButton mic;
-    TextToSpeech tt1;
-    EditText Answerinput;
-    String txteng;
-    FirebaseAuth mAuth;
+    FirebaseFirestore  db = FirebaseFirestore.getInstance();
+    private Button     starttest;
+    TextView           choose,sptx,getsent,save;
+    Spinner            spin;
+    ImageButton        mic;
+    TextToSpeech       tt1;
+    EditText           Answerinput;
+    String             txteng,userid;
+    FirebaseAuth       mAuth;
+    GoogleSignInClient gsc;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
     boolean ps,pc,pp;
     String selection;
     int cp,cn;
+    Button gotofr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +79,11 @@ public class MainTesting extends AppCompatActivity {
         save = findViewById(R.id.sendinfo);
         save.setVisibility(View.GONE);
         mAuth= FirebaseAuth.getInstance();
+
+        // este es el id que identifica al usuario-aparentemente jala con los 3 diferentes tipos de auth
+        userid = mAuth.getCurrentUser().getUid();
+        // este culero de arriba es el user id del usuario jala con los 3 aparentemente
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(adapter);
@@ -95,11 +106,11 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    public   void start(View view){
+    public  void   start(View view){
         choose.setVisibility(View.VISIBLE);
         spin.setVisibility(View.VISIBLE);
     }
-    private void shownext() {
+    private void   shownext() {
         mic.setVisibility(View.VISIBLE);
         sptx.setVisibility(View.VISIBLE);
         starttest.setVisibility(View.VISIBLE);
@@ -108,7 +119,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    public void startTest(View view){
+    public  void   startTest(View view){
         save.setVisibility(View.VISIBLE);
         switch (selection) {
             case "Pick a Structure":
@@ -173,6 +184,7 @@ public class MainTesting extends AppCompatActivity {
                                         }
                                     });
                                     Generator gen1 = new Generator();
+                                    // este metodo de abajo se cambia para matchear el case
                                     gen1.GenPresCont2();
                                     sptx.setText(gen1.gens);
                                     txteng=gen1.gene;
@@ -186,7 +198,7 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-    public void checkanswer(View vista) {
+    public  void   checkanswer(View vista) {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
@@ -214,7 +226,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    private void turnTrue(String CurrentStructure) {
+    private void   turnTrue(String CurrentStructure) {
 
         switch (selection){
             case "Present Simple":
@@ -226,19 +238,52 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-    public void dbtesting(View view) {
+    public  void   dbtesting(View view) {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
-        Map<String, Object> user = new HashMap<>();
-        user.put("RightAnswer", t);
-        user.put("UserInput",t2);
+        if(t.equalsIgnoreCase(t2)){
+            cp= cp+1;
+            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
 
-        db.document(mAuth.getUid()+"/structures").set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(MainTesting.this, "shit worked", Toast.LENGTH_SHORT).show();
-            }
-        });
+        }else {
+            cn=cn+1;
+            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+        }
+        Answerinput.setText("");
+        if(cp==4){
+            Toast.makeText(this, selection+"passed /pasa a la sig est"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            cp=0;
+            turnTrue(selection);
+
+        }else if(cn==4){
+            Toast.makeText(this, selection+"not passed / pasa a la sig est"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
+            cn=0;
+
+
+        }
+
+
+        Map<String, Boolean> user = new HashMap<>();
+        user.put("Present Simple",ps);
+        user.put("Present Continuous",pc);
+
+            db.document(userid+"/structures")
+                    .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(MainTesting.this, "shit worked", Toast.LENGTH_SHORT)
+                                    .show();
+                        }
+                    });
+
+            db.document(userid+"/Vocabulario")
+                .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MainTesting.this, "shit worked vocab", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
 
     }
     @Override
@@ -257,7 +302,7 @@ public class MainTesting extends AppCompatActivity {
         }
 
     }
-    public void iniciarentradavoz(View view) {
+    public    void iniciarentradavoz(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
@@ -265,6 +310,10 @@ public class MainTesting extends AppCompatActivity {
             startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException e) {
         }
+    }
+    public void gotofragments(View view){
+        Intent intento = new Intent(this, TestResults.class);
+        startActivity(intento);
     }
 
 }

@@ -1,12 +1,15 @@
 package com.leal.cipm_testing;
 
 
+import android.widget.ListView;
+
 public class vocabgen {
     String gens;
     String gene;
     cerotofifty ob = new cerotofifty();
 
     public void gencerotofifty() {
+
         int r = (int) (Math.random() * 8);
         switch (r) {
             case 0:

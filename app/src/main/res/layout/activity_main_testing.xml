@@ -9,11 +9,14 @@
     <LinearLayout
         android:id="@+id/linearLayout40"
         android:layout_width="409dp"
-        android:layout_height="344dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/gotofrag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/StartTestMain"
@@ -95,5 +98,18 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/gotofrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="193dp"
+        android:backgroundTint="#FDD835"
+        android:onClick="gotofragments"
+        android:text="Go to fragments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout40"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout40" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

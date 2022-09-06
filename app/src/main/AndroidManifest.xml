@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".TestResults"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
@@ -25,9 +28,6 @@
             android:exported="false" />
         <activity
             android:name=".profile"
-            android:exported="false" />
-        <activity
-            android:name=".StructureResults"
             android:exported="false" />
         <activity
             android:name=".MainTesting"

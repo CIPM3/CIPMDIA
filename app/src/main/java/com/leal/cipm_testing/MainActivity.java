@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.databinding.ActivityMainBinding;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,18 +42,14 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
-    RegisterActivity r;
     FirebaseUser user;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         tvnameuser = findViewById(R.id.UserNameTv);
+        //createRequest();
         testest= findViewById(R.id.testest);
-        gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this,gso);
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
@@ -88,33 +85,32 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this, gso);
+
+
+
     }
+
+   /* public void createRequest(){
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        gsc = GoogleSignIn.getClient(this,gso);
+    }*/
     public void logout(View v){
+        FirebaseAuth.getInstance().signOut();
         mAuth.signOut();
         startActivity(new Intent(MainActivity.this,SignIn.class));
-        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        finish();
-                        startActivity(new Intent(MainActivity.this,SignIn.class));
-                    }
-                });
-            }
-        });
+
     }
+
     protected void onStart() {
         super.onStart();
-         user = mAuth.getCurrentUser();
+        user = mAuth.getCurrentUser();
         if(user==null){
-            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-            if(acct!=null){
-                String personName = acct.getDisplayName();
-                tvnameuser.setText(personName);
-                return;
-            }
             mAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -126,14 +122,14 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-
         }else {
             tvnameuser.setText(user.getEmail());
         }
     }
     private void updateUi(FirebaseUser user) {
         if(user==null   ){
-            mAuth.signInAnonymously().addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
+            mAuth.signInAnonymously()
+                    .addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
@@ -189,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(crispIntent);
     }
     public void masinfo(View vist) {
-        gotoURl("https://www.facebook.com/olympusgroupmx");
+        gotoURl("https://www.cursosdeinglespersonalizadosenmonterrey.com/");
     }
     //Provisonal ventanas de eleccion
     public void chose_est(View vista) {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/structureitem"
+        android:icon="@drawable/ic_baseline_connect_without_structure_speaking"
+        android:title="Structures" />
+    <item
+        android:id="@+id/vocabitem"
+        android:icon="@drawable/ic_baseline_accessibility_new_vocab"
+        android:title="Vocab" />
+    <item
+        android:id="@+id/interfspitem"
+        android:icon="@drawable/ic_grupo_spaint"
+        android:title="Spanish int" />
+</menu>
