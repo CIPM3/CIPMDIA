@@ -52,10 +52,11 @@ public class MainTesting extends AppCompatActivity {
     GoogleSignInClient gsc;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
-    boolean ps,pc,pp;
+
+    // 1. tiene que haber un booleano para cada estr
+    boolean ps,pc,pp,ppc,passi;
     String selection;
     int cp,cn;
-    Button gotofr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +120,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+    // 2. llenas start test
     public  void   startTest(View view){
         save.setVisibility(View.VISIBLE);
         switch (selection) {
@@ -196,6 +198,42 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
+            case "Present Perfect":
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.GenPresPerf2();
+                                    sptx.setText(gen1.gens);
+                                    txteng=gen1.gene;
+
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
         }
     }
     public  void   checkanswer(View vista) {
@@ -226,8 +264,8 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+    //3. llenas turn true
     private void   turnTrue(String CurrentStructure) {
-
         switch (selection){
             case "Present Simple":
                 ps=true;
@@ -235,9 +273,14 @@ public class MainTesting extends AppCompatActivity {
             case "Present Continuous":
                 pc=true;
                 break;
+            case "Present Perfect":
+                pp=true;
+                break;
 
         }
     }
+
+    //4. completar el hashmap
     public  void   dbtesting(View view) {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -266,6 +309,7 @@ public class MainTesting extends AppCompatActivity {
         Map<String, Boolean> user = new HashMap<>();
         user.put("Present Simple",ps);
         user.put("Present Continuous",pc);
+        user.put("Present Perfect", pp);
 
             db.document(userid+"/structures")
                     .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {

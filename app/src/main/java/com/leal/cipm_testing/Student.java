@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 public class Student {
 
     String name;
-    boolean presentsimple,presenteContinuo;
+    boolean presentsimple,presenteContinuo, presentepefecto;
 
 
     public Student() {
@@ -41,10 +41,4 @@ public class Student {
         this.name = name;
     }
 
-    @NonNull
-    @Override
-    public String toString() {
-
-        return "Present Simple " +this.presentsimple + "\n"+ "Present Continuous "+this.presenteContinuo;
-    }
 }
