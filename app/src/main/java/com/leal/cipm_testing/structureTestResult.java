@@ -49,7 +49,7 @@ public class structureTestResult extends Fragment {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Student st = documentSnapshot.toObject(Student.class);
                 String[] estructuras= {
-                        "Present Simple :" + st.presentsimple,
+                        "Present Simple :" + st.presentesimple,
                         "Present Continuous :"+ st.presenteContinuo
                 };
                 adapter = new ArrayAdapter<String>(getContext(),
