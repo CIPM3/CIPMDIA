@@ -1666,9 +1666,46 @@ public class MainTesting extends AppCompatActivity {
         Map<String, Boolean> user = new HashMap<>();
         user.put("Present Simple",ps);
         user.put("Present Continuous",pc);
+        user.put("Present Perfect",pp);
+        user.put("Present Perfect Continuous",ppc);
+        user.put("Past Simple",pss);
+        user.put("Past Continuous",psc);
+        user.put("Past Perfect",psp);
+        user.put("Past Perfect Continuous",pspc);
+        user.put("Future Simple",fs);
+        user.put("Future Continuous",fc);
+        user.put("Future Perfect",fp);
+        user.put("Future Perfect Continuous",fpc);
+        user.put("Would Simple",ws);
+        user.put("Would Continuous",wc);
+        user.put("Would Perfect",wp);
+        user.put("Would Perfect Continuous",wpc);
+        user.put("Could Simple",cos);
+        user.put("Could Continuous",coc);
+        user.put("Could Perfect",cop);
+        user.put("Could Perfect Continuous",copc);
+        user.put("Should Simple",ss);
+        user.put("Should Continuous",sc);
+        user.put("Should Perfect",sp);
+        user.put("Should Perfect Continuous",spc);
+        user.put("Might Simple",ms);
+        user.put("Might Continuous",mc);
+        user.put("Might Perfect",mp);
+        user.put("Might Perfect Continuous",mpc);
+        user.put("Can Simple",cs);
+        user.put("Can Continuous",cc);
+        user.put("Must Simple",mus);
+        user.put("Must Continuous",muc);
+        user.put("Want To",wt);
+        user.put("For To",ft);
+        user.put("Supposed To Present",stp);
+        user.put("Wish Past Perfect",wpp);
+        user.put("Used To",ut);
+        user.put("Be Used To",but);
 
-            db.document(userid+"/structures")
-                    .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+        db.document(userid+"/structures")
+                .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             Toast.makeText(MainTesting.this, "shit worked", Toast.LENGTH_SHORT)
@@ -1676,7 +1713,7 @@ public class MainTesting extends AppCompatActivity {
                         }
                     });
 
-            db.document(userid+"/Vocabulario")
+        db.document(userid+"/Vocabulario")
                 .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
