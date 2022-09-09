@@ -552,7 +552,7 @@ public class Intrans3 {
                 sp1 = "yo no estoy " + vib3contesp[rand];
                 eng1 = "I'm not " + vib3cont[rand];
                 sp2 = "tú no estás " + vib3contesp[rand];
-                eng2 = "you're not " + vib3cont[rand];
+                eng2 = "you aren't " + vib3cont[rand];
                 sp3 = "él no está " + vib3contesp[rand];
                 eng3 = "he isn't " + vib3cont[rand];
                 sp4 = "ella no está " + vib3contesp[rand];
@@ -560,9 +560,9 @@ public class Intrans3 {
                 sp5 = "eso no está " + vib3contesp[rand];
                 eng5 = "it isn't " + vib3cont[rand];
                 sp6 = "ellos no están " + vib3contesp[rand];
-                eng6 = "they're not " + vib3cont[rand];
+                eng6 = "they aren't " + vib3cont[rand];
                 sp7 = "nosotros no estamos " + vib3contesp[rand];
-                eng7 = "we're not " + vib3cont[rand];
+                eng7 = "we aren't " + vib3cont[rand];
                 break;
         }
 
@@ -2526,7 +2526,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
                         eng1 = "I'm not " + vib3cont[rand] + restSpecial[rand3][rand4];
                         sp2 = "tú no estás " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
-                        eng2 = "you're not " + vib3cont[rand] + restSpecial[rand3][rand4];
+                        eng2 = "you aren't " + vib3cont[rand] + restSpecial[rand3][rand4];
                         sp3 = "él no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
                         eng3 = "he isn't " + vib3cont[rand] + restSpecial[rand3][rand4];
                         sp4 = "ella no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
@@ -2534,9 +2534,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
                         eng5 = "it isn't " + vib3cont[rand] + restSpecial[rand3][rand4];
                         sp6 = "ellos no están " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
-                        eng6 = "they're not " + vib3cont[rand] + restSpecial[rand3][rand4];
+                        eng6 = "they aren't " + vib3cont[rand] + restSpecial[rand3][rand4];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + descansarSpecial[rand3][rand4];
-                        eng7 = "we're not " + vib3cont[rand] + restSpecial[rand3][rand4];
+                        eng7 = "we aren't " + vib3cont[rand] + restSpecial[rand3][rand4];
                         break;
                 }
                 break;
@@ -2562,7 +2562,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + cobrarSpecial[r5][r6];
                         eng1 = "I'm not " + vib3cont[rand] + chargeSpecial[r5][r6];
                         sp2 = "tú no estás " + vib3contesp[rand] + cobrarSpecial[r5][r6];
-                        eng2 = "you're not " + vib3cont[rand] + chargeSpecial[r5][r6];
+                        eng2 = "you aren't " + vib3cont[rand] + chargeSpecial[r5][r6];
                         sp3 = "él no está " + vib3contesp[rand] + cobrarSpecial[r5][r6];
                         eng3 = "he isn't " + vib3cont[rand] + chargeSpecial[r5][r6];
                         sp4 = "ella no está " + vib3contesp[rand] + cobrarSpecial[r5][r6];
@@ -2570,9 +2570,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + cobrarSpecial[r5][r6];
                         eng5 = "it isn't " + vib3cont[rand] + chargeSpecial[r5][r6];
                         sp6 = "ellos no están " + vib3contesp[rand] + cobrarSpecial[r5][r6];
-                        eng6 = "they're not " + vib3cont[rand] + chargeSpecial[r5][r6];
+                        eng6 = "they aren't " + vib3cont[rand] + chargeSpecial[r5][r6];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + cobrarSpecial[r5][r6];
-                        eng7 = "we're not " + vib3cont[rand] + chargeSpecial[r5][r6];
+                        eng7 = "we aren't " + vib3cont[rand] + chargeSpecial[r5][r6];
                         break;
                 }
                 break;
@@ -2598,7 +2598,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + bailarSpecial[r7][r8];
                         eng1 = "I'm not " + vib3cont[rand] + danceSpecial[r7][r8];
                         sp2 = "tú no estás " + vib3contesp[rand] + bailarSpecial[r7][r8];
-                        eng2 = "you're not " + vib3cont[rand] + danceSpecial[r7][r8];
+                        eng2 = "you aren't " + vib3cont[rand] + danceSpecial[r7][r8];
                         sp3 = "él no está " + vib3contesp[rand] + bailarSpecial[r7][r8];
                         eng3 = "he isn't " + vib3cont[rand] + danceSpecial[r7][r8];
                         sp4 = "ella no está " + vib3contesp[rand] + bailarSpecial[r7][r8];
@@ -2606,9 +2606,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + bailarSpecial[r7][r8];
                         eng5 = "it isn't " + vib3cont[rand] + danceSpecial[r7][r8];
                         sp6 = "ellos no están " + vib3contesp[rand] + bailarSpecial[r7][r8];
-                        eng6 = "they're not " + vib3cont[rand] + danceSpecial[r7][r8];
+                        eng6 = "they aren't " + vib3cont[rand] + danceSpecial[r7][r8];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + bailarSpecial[r7][r8];
-                        eng7 = "we're not " + vib3cont[rand] + danceSpecial[r7][r8];
+                        eng7 = "we aren't " + vib3cont[rand] + danceSpecial[r7][r8];
                         break;
                 }
                 break;
@@ -2634,7 +2634,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + vivirSpecial[r9][r10];
                         eng1 = "I'm not " + vib3cont[rand] + liveSpecial[r9][r10];
                         sp2 = "tú no estás " + vib3contesp[rand] + vivirSpecial[r9][r10];
-                        eng2 = "you're not " + vib3cont[rand] + liveSpecial[r9][r10];
+                        eng2 = "you aren't " + vib3cont[rand] + liveSpecial[r9][r10];
                         sp3 = "él no está " + vib3contesp[rand] + vivirSpecial[r9][r10];
                         eng3 = "he isn't " + vib3cont[rand] + liveSpecial[r9][r10];
                         sp4 = "ella no está " + vib3contesp[rand] + vivirSpecial[r9][r10];
@@ -2642,9 +2642,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + vivirSpecial[r9][r10];
                         eng5 = "it " + "doesn't" + vib[rand] + liveSpecial[r9][r10];
                         sp6 = "ellos no están " + vib3contesp[rand] + vivirSpecial[r9][r10];
-                        eng6 = "they're not " + vib3cont[rand] + liveSpecial[r9][r10];
+                        eng6 = "they aren't " + vib3cont[rand] + liveSpecial[r9][r10];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + vivirSpecial[r9][r10];
-                        eng7 = "we're not " + vib3cont[rand] + liveSpecial[r9][r10];
+                        eng7 = "we aren't " + vib3cont[rand] + liveSpecial[r9][r10];
                         break;
                 }
                 break;
@@ -2677,7 +2677,7 @@ public class Intrans3 {
                         eng1 = "I'm not " + vib3cont[rand] + stopSpecial[r11][r12];
 
                         sp2 = "tú no estás " + vib3contesp[rand] + detenerSpecial[r11][r12];
-                        eng2 = "you're not " + vib3cont[rand] + stopSpecial[r11][r12];
+                        eng2 = "you aren't " + vib3cont[rand] + stopSpecial[r11][r12];
                         sp3 = "él no está " + vib3contesp[rand] + detenerSpecial[r11][r12];
                         eng3 = "he isn't " + vib3cont[rand] + stopSpecial[r11][r12];
                         sp4 = "ella no está " + vib3contesp[rand] + detenerSpecial[r11][r12];
@@ -2687,10 +2687,10 @@ public class Intrans3 {
                         eng5 = "it isn't " + vib3cont[rand] + stopSpecial[r11][r12];
 
                         sp6 = "ellos no están " + vib3contesp[rand] + detenerSpecial[r11][r12];
-                        eng6 = "they're not " + vib3cont[rand] + stopSpecial[r11][r12];
+                        eng6 = "they aren't " + vib3cont[rand] + stopSpecial[r11][r12];
 
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + detenerSpecial[r11][r12];
-                        eng7 = "we're not " + vib3cont[rand] + stopSpecial[r11][r12];
+                        eng7 = "we aren't " + vib3cont[rand] + stopSpecial[r11][r12];
                         break;
                 }
                 break;
@@ -2718,7 +2718,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + fallarSpecial[r13][r14];
                         eng1 = "I'm not " + vib3cont[rand] + failSpecial[r13][r14];
                         sp2 = "tú no estás " + vib3contesp[rand] + fallarSpecial[r13][r14];
-                        eng2 = "you're not " + vib3cont[rand] + failSpecial[r13][r14];
+                        eng2 = "you aren't " + vib3cont[rand] + failSpecial[r13][r14];
                         sp3 = "él no está " + vib3contesp[rand] + fallarSpecial[r13][r14];
                         eng3 = "he isn't " + vib3cont[rand] + failSpecial[r13][r14];
                         sp4 = "ella no está " + vib3contesp[rand] + fallarSpecial[r13][r14];
@@ -2726,9 +2726,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + fallarSpecial[r13][r14];
                         eng5 = "it isn't " + vib3cont[rand] + failSpecial[r13][r14];
                         sp6 = "ellos no están " + vib3contesp[rand] + fallarSpecial[r13][r14];
-                        eng6 = "they're not " + vib3cont[rand] + failSpecial[r13][r14];
+                        eng6 = "they aren't " + vib3cont[rand] + failSpecial[r13][r14];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + fallarSpecial[r13][r14];
-                        eng7 = "we're not " + vib3cont[rand] + failSpecial[r13][r14];
+                        eng7 = "we aren't " + vib3cont[rand] + failSpecial[r13][r14];
                         break;
                 }
                 break;
@@ -2756,7 +2756,7 @@ public class Intrans3 {
                         sp1 = "yo no me estoy " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
                         eng1 = "I'm not " + vib3cont[rand] + worrySpecial[r15][r16];
                         sp2 = "tú no te estás " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
-                        eng2 = "you're not " + vib3cont[rand] + worrySpecial[r15][r16];
+                        eng2 = "you aren't " + vib3cont[rand] + worrySpecial[r15][r16];
                         sp3 = "él no se está " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
                         eng3 = "he isn't " + vib3cont[rand] + worrySpecial[r15][r16];
                         sp4 = "ella no se está " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
@@ -2764,9 +2764,9 @@ public class Intrans3 {
                         sp5 = "eso no se está " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
                         eng5 = "it isn't " + vib3cont[rand] + worrySpecial[r15][r16];
                         sp6 = "ellos no se están " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
-                        eng6 = "they're not " + vib3cont[rand] + worrySpecial[r15][r16];
+                        eng6 = "they aren't " + vib3cont[rand] + worrySpecial[r15][r16];
                         sp7 = "nosotros no nos estamos " + vib3contesp[rand] + preocuparseSpecial[r15][r16];
-                        eng7 = "we're not " + vib3cont[rand] + worrySpecial[r15][r16];
+                        eng7 = "we aren't " + vib3cont[rand] + worrySpecial[r15][r16];
                         break;
                 }
                 break;
@@ -2793,7 +2793,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + viajarSpecial[r17][r18];
                         eng1 = "I'm not " + vib3cont[rand] + travelSpecial[r17][r18];
                         sp2 = "tú no estás " + vib3contesp[rand] + viajarSpecial[r17][r18];
-                        eng2 = "you're not " + vib3cont[rand] + travelSpecial[r17][r18];
+                        eng2 = "you aren't " + vib3cont[rand] + travelSpecial[r17][r18];
 
                         sp3 = "él no está " + vib3contesp[rand] + viajarSpecial[r17][r18];
                         eng3 = "he isn't " + vib3cont[rand] + travelSpecial[r17][r18];
@@ -2802,9 +2802,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + viajarSpecial[r17][r18];
                         eng5 = "it isn't " + vib3cont[rand] + travelSpecial[r17][r18];
                         sp6 = "ellos no están " + vib3contesp[rand] + viajarSpecial[r17][r18];
-                        eng6 = "they're not " + vib3cont[rand] + travelSpecial[r17][r18];
+                        eng6 = "they aren't " + vib3cont[rand] + travelSpecial[r17][r18];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + viajarSpecial[r17][r18];
-                        eng7 = "we're not " + vib3cont[rand] + travelSpecial[r17][r18];
+                        eng7 = "we aren't " + vib3cont[rand] + travelSpecial[r17][r18];
                         break;
                 }
                 break;
@@ -2830,7 +2830,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + devolverSpecial[r19][r20];
                         eng1 = "I'm not " + vib3cont[rand] + returnSpecial[r19][r20];
                         sp2 = "tú no estás " + vib3contesp[rand] + devolverSpecial[r19][r20];
-                        eng2 = "you're not " + vib3cont[rand] + returnSpecial[r19][r20];
+                        eng2 = "you aren't " + vib3cont[rand] + returnSpecial[r19][r20];
                         sp3 = "él no está " + vib3contesp[rand] + devolverSpecial[r19][r20];
                         eng3 = "he isn't " + vib3cont[rand] + returnSpecial[r19][r20];
                         sp4 = "ella no está " + vib3contesp[rand] + devolverSpecial[r19][r20];
@@ -2838,9 +2838,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + devolverSpecial[r19][r20];
                         eng5 = "it isn't " + vib3cont[rand] + returnSpecial[r19][r20];
                         sp6 = "ellos no están " + vib3contesp[rand] + devolverSpecial[r19][r20];
-                        eng6 = "they're not " + vib3cont[rand] + returnSpecial[r19][r20];
+                        eng6 = "they aren't " + vib3cont[rand] + returnSpecial[r19][r20];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + devolverSpecial[r19][r20];
-                        eng7 = "we're not " + vib3cont[rand] + returnSpecial[r19][r20];
+                        eng7 = "we aren't " + vib3cont[rand] + returnSpecial[r19][r20];
                         break;
                 }
                 break;
@@ -2867,7 +2867,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + caminarSpecial[r21][r22];
                         eng1 = "I'm not " + vib3cont[rand] + walkSpecial[r21][r22];
                         sp2 = "tú no estás " + vib3contesp[rand] + caminarSpecial[r21][r22];
-                        eng2 = "you're not " + vib3cont[rand] + walkSpecial[r21][r22];
+                        eng2 = "you aren't " + vib3cont[rand] + walkSpecial[r21][r22];
                         sp3 = "él no está " + vib3contesp[rand] + caminarSpecial[r21][r22];
                         eng3 = "he isn't " + vib3cont[rand] + walkSpecial[r21][r22];
                         sp4 = "ella no está " + vib3contesp[rand] + caminarSpecial[r21][r22];
@@ -2875,9 +2875,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + caminarSpecial[r21][r22];
                         eng5 = "it isn't " + vib3cont[rand] + walkSpecial[r21][r22];
                         sp6 = "ellos no están " + vib3contesp[rand] + caminarSpecial[r21][r22];
-                        sp6 = "they're not " + vib3cont[rand] + walkSpecial[r21][r22];
+                        sp6 = "they aren't " + vib3cont[rand] + walkSpecial[r21][r22];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + caminarSpecial[r21][r22];
-                        eng7 = "we're not " + vib3cont[rand] + walkSpecial[r21][r22];
+                        eng7 = "we aren't " + vib3cont[rand] + walkSpecial[r21][r22];
                         break;
                 }
                 break;
@@ -2903,7 +2903,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + correrSpecial[r23][r24];
                         eng1 = "I'm not " + vib3cont[rand] + runSpecial[r23][r24];
                         sp2 = "tú no estás " + vib3contesp[rand] + correrSpecial[r23][r24];
-                        eng2 = "you're not " + vib3cont[rand] + runSpecial[r23][r24];
+                        eng2 = "you aren't " + vib3cont[rand] + runSpecial[r23][r24];
                         sp3 = "él no está " + vib3contesp[rand] + correrSpecial[r23][r24];
                         eng3 = "he isn't " + vib3cont[rand] + runSpecial[r23][r24];
 
@@ -2913,10 +2913,10 @@ public class Intrans3 {
                         eng5 = "it isn't " + vib3cont[rand] + runSpecial[r23][r24];
 
                         sp6 = "ellos no están " + vib3contesp[rand] + correrSpecial[r23][r24];
-                        eng6 = "they're not " + vib3cont[rand] + runSpecial[r23][r24];
+                        eng6 = "they aren't " + vib3cont[rand] + runSpecial[r23][r24];
 
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + correrSpecial[r23][r24];
-                        eng7 = "we're not " + vib3cont[rand] + runSpecial[r23][r24];
+                        eng7 = "we aren't " + vib3cont[rand] + runSpecial[r23][r24];
                         break;
                 }
                 break;
@@ -2942,7 +2942,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + subirSpecial[r25][r26];
                         eng1 = "I'm not " + vib3cont[rand] + riseSpecial[r25][r26];
                         sp2 = "tú no estás " + vib3contesp[rand] + subirSpecial[r25][r26];
-                        eng2 = "you're not " + vib3cont[rand] + riseSpecial[r25][r26];
+                        eng2 = "you aren't " + vib3cont[rand] + riseSpecial[r25][r26];
                         sp3 = "él no está " + vib3contesp[rand] + subirSpecial[r25][r26];
                         eng3 = "he isn't " + vib3cont[rand] + riseSpecial[r25][r26];
                         sp4 = "ella no está " + vib3contesp[rand] + subirSpecial[r25][r26];
@@ -2950,9 +2950,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + subirSpecial[r25][r26];
                         eng5 = "it isn't " + vib3cont[rand] + riseSpecial[r25][r26];
                         sp6 = "ellos no están " + vib3contesp[rand] + subirSpecial[r25][r26];
-                        eng6 = "they're not " + vib3cont[rand] + riseSpecial[r25][r26];
+                        eng6 = "they aren't " + vib3cont[rand] + riseSpecial[r25][r26];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + subirSpecial[r25][r26];
-                        eng7 = "we're not " + vib3cont[rand] + riseSpecial[r25][r26];
+                        eng7 = "we aren't " + vib3cont[rand] + riseSpecial[r25][r26];
                         break;
                 }
                 break;
@@ -2979,7 +2979,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + volarSpecial[r27][r28];
                         eng1 = "I'm not " + vib3cont[rand] + flySpecial[r27][r28];
                         sp2 = "tú no estás " + vib3contesp[rand] + volarSpecial[r27][r28];
-                        eng2 = "you're not " + vib3cont[rand] + flySpecial[r27][r28];
+                        eng2 = "you aren't " + vib3cont[rand] + flySpecial[r27][r28];
                         sp3 = "él no está " + vib3contesp[rand] + volarSpecial[r27][r28];
                         eng3 = "he isn't " + vib3cont[rand] + flySpecial[r27][r28];
                         sp4 = "ella no está " + vib3contesp[rand] + volarSpecial[r27][r28];
@@ -2987,9 +2987,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + volarSpecial[r27][r28];
                         eng5 = "it isn't " + vib3cont[rand] + flySpecial[r27][r28];
                         sp6 = "ellos no están " + vib3contesp[rand] + volarSpecial[r27][r28];
-                        eng6 = "they're not " + vib3cont[rand] + flySpecial[r27][r28];
+                        eng6 = "they aren't " + vib3cont[rand] + flySpecial[r27][r28];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + volarSpecial[r27][r28];
-                        eng7 = "we're not " + vib3cont[rand] + flySpecial[r27][r28];
+                        eng7 = "we aren't " + vib3cont[rand] + flySpecial[r27][r28];
                         break;
                 }
                 break;
@@ -3009,11 +3009,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
                         eng2 = "you have " + viparticiple[rand] + restSpecial[rand3][rand4];
                         sp3 = "él ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
-                        eng3 = "he have " + viparticiple[rand] + restSpecial[rand3][rand4];
+                        eng3 = "he has " + viparticiple[rand] + restSpecial[rand3][rand4];
                         sp4 = "ella ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
-                        eng4 = "she have " + viparticiple[rand] + restSpecial[rand3][rand4];
+                        eng4 = "she has " + viparticiple[rand] + restSpecial[rand3][rand4];
                         sp5 = "eso ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
-                        eng5 = "it have " + viparticiple[rand] + restSpecial[rand3][rand4];
+                        eng5 = "it has " + viparticiple[rand] + restSpecial[rand3][rand4];
                         sp6 = "ellos han " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
                         eng6 = "they have " + viparticiple[rand] + restSpecial[rand3][rand4];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4];
@@ -3045,11 +3045,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
                         eng2 = "you have " + viparticiple[rand] + chargeSpecial[r5][r6];
                         sp3 = "él ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
-                        eng3 = "he have " + viparticiple[rand] + chargeSpecial[r5][r6];
+                        eng3 = "he has " + viparticiple[rand] + chargeSpecial[r5][r6];
                         sp4 = "ella ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
-                        eng4 = "she have " + viparticiple[rand] + chargeSpecial[r5][r6];
+                        eng4 = "she has " + viparticiple[rand] + chargeSpecial[r5][r6];
                         sp5 = "eso ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
-                        eng5 = "it have " + viparticiple[rand] + chargeSpecial[r5][r6];
+                        eng5 = "it has " + viparticiple[rand] + chargeSpecial[r5][r6];
                         sp6 = "ellos han " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
                         eng6 = "they have " + viparticiple[rand] + chargeSpecial[r5][r6];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + cobrarSpecial[r5][r6];
@@ -3081,11 +3081,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
                         eng2 = "you have " + viparticiple[rand] + danceSpecial[r7][r8];
                         sp3 = "él ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
-                        eng3 = "he have " + viparticiple[rand] + danceSpecial[r7][r8];
+                        eng3 = "he has " + viparticiple[rand] + danceSpecial[r7][r8];
                         sp4 = "ella ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
-                        eng4 = "she have " + viparticiple[rand] + danceSpecial[r7][r8];
+                        eng4 = "she has " + viparticiple[rand] + danceSpecial[r7][r8];
                         sp5 = "eso ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
-                        eng5 = "it have " + viparticiple[rand] + danceSpecial[r7][r8];
+                        eng5 = "it has " + viparticiple[rand] + danceSpecial[r7][r8];
                         sp6 = "ellos han " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
                         eng6 = "they have " + viparticiple[rand] + danceSpecial[r7][r8];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + bailarSpecial[r7][r8];
@@ -3117,11 +3117,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
                         eng2 = "you have " + viparticiple[rand] + liveSpecial[r9][r10];
                         sp3 = "él ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
-                        eng3 = "he have " + viparticiple[rand] + liveSpecial[r9][r10];
+                        eng3 = "he has " + viparticiple[rand] + liveSpecial[r9][r10];
                         sp4 = "ella ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
-                        eng4 = "she have " + viparticiple[rand] + liveSpecial[r9][r10];
+                        eng4 = "she has " + viparticiple[rand] + liveSpecial[r9][r10];
                         sp5 = "eso ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
-                        eng5 = "she have " + viparticiple[rand] + liveSpecial[r9][r10];
+                        eng5 = "she has " + viparticiple[rand] + liveSpecial[r9][r10];
                         sp6 = "ellos han " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
                         eng6 = "they have " + viparticiple[rand] + liveSpecial[r9][r10];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + vivirSpecial[r9][r10];
@@ -3155,13 +3155,13 @@ public class Intrans3 {
                         eng2 = "you have " + viparticiple[rand] + stopSpecial[r11][r12];
 
                         sp3 = "él ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12];
-                        eng3 = "he have " + viparticiple[rand] + stopSpecial[r11][r12];
+                        eng3 = "he has " + viparticiple[rand] + stopSpecial[r11][r12];
 
                         sp4 = "ella ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12];
-                        eng4 = "she have " + viparticiple[rand] + stopSpecial[r11][r12];
+                        eng4 = "she has " + viparticiple[rand] + stopSpecial[r11][r12];
 
                         sp5 = "eso ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12];
-                        eng5 = "it have " + viparticiple[rand] + stopSpecial[r11][r12];
+                        eng5 = "it has " + viparticiple[rand] + stopSpecial[r11][r12];
 
                         sp6 = "ellos han " + vibparticipiosp[rand] + detenerSpecial[r11][r12];
                         eng6 = "they have " + viparticiple[rand] + stopSpecial[r11][r12];
@@ -3201,11 +3201,11 @@ public class Intrans3 {
                         eng2 = "you have " + viparticiple[rand] + failSpecial[r13][r14];
 
                         sp3 = "él ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14];
-                        eng3 = "he have " + viparticiple[rand] + failSpecial[r13][r14];
+                        eng3 = "he has " + viparticiple[rand] + failSpecial[r13][r14];
                         sp4 = "ella ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14];
-                        eng4 = "she have " + viparticiple[rand] + failSpecial[r13][r14];
+                        eng4 = "she has " + viparticiple[rand] + failSpecial[r13][r14];
                         sp5 = "eso ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14];
-                        eng5 = "it have " + viparticiple[rand] + failSpecial[r13][r14];
+                        eng5 = "it has " + viparticiple[rand] + failSpecial[r13][r14];
                         sp6 = "ellos han " + vibparticipiosp[rand] + fallarSpecial[r13][r14];
                         eng6 = "they have " + viparticiple[rand] + failSpecial[r13][r14];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + fallarSpecial[r13][r14];
@@ -3238,11 +3238,11 @@ public class Intrans3 {
                         sp2 = "tú te has " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
                         eng2 = "you have " + viparticiple[rand] + worrySpecial[r15][r16];
                         sp3 = "él se ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
-                        eng3 = "he have " + viparticiple[rand] + worrySpecial[r15][r16];
+                        eng3 = "he has " + viparticiple[rand] + worrySpecial[r15][r16];
                         sp4 = "ella se ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
-                        eng4 = "she have " + viparticiple[rand] + worrySpecial[r15][r16];
+                        eng4 = "she has " + viparticiple[rand] + worrySpecial[r15][r16];
                         sp5 = "eso se ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
-                        eng5 = "it have " + viparticiple[rand] + worrySpecial[r15][r16];
+                        eng5 = "it has " + viparticiple[rand] + worrySpecial[r15][r16];
                         sp6 = "ellos se han " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
                         eng6 = "they have " + viparticiple[rand] + worrySpecial[r15][r16];
                         sp7 = "nosotros nos hemos " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16];
@@ -3275,12 +3275,12 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
                         eng2 = "you have " + viparticiple[rand] + travelSpecial[r17][r18];
                         sp3 = "él ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
-                        eng3 = "he have " + viparticiple[rand] + travelSpecial[r17][r18];
+                        eng3 = "he has " + viparticiple[rand] + travelSpecial[r17][r18];
                         sp4 = "ella ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
-                        eng4 = "she have " + viparticiple[rand] + travelSpecial[r17][r18];
+                        eng4 = "she has " + viparticiple[rand] + travelSpecial[r17][r18];
 
                         sp5 = "eso ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
-                        eng5 = "it have " + viparticiple[rand] + travelSpecial[r17][r18];
+                        eng5 = "it has " + viparticiple[rand] + travelSpecial[r17][r18];
                         sp6 = "ellos han " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
                         eng6 = "they have " + viparticiple[rand] + travelSpecial[r17][r18];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + viajarSpecial[r17][r18];
@@ -3313,11 +3313,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
                         eng2 = "you have " + viparticiple[rand] + returnSpecial[r19][r20];
                         sp3 = "él ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
-                        eng3 = "he have " + viparticiple[rand] + returnSpecial[r19][r20];
+                        eng3 = "he has " + viparticiple[rand] + returnSpecial[r19][r20];
                         sp4 = "ella ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
-                        eng4 = "she have " + viparticiple[rand] + returnSpecial[r19][r20];
+                        eng4 = "she has " + viparticiple[rand] + returnSpecial[r19][r20];
                         sp5 = "eso ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
-                        eng5 = "it have " + viparticiple[rand] + returnSpecial[r19][r20];
+                        eng5 = "it has " + viparticiple[rand] + returnSpecial[r19][r20];
                         sp6 = "ellos han " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
                         eng6 = "they have " + viparticiple[rand] + returnSpecial[r19][r20];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + devolverSpecial[r19][r20];
@@ -3349,11 +3349,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
                         eng2 = "you have " + viparticiple[rand] + walkSpecial[r21][r22];
                         sp3 = "él ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
-                        eng3 = "he have " + viparticiple[rand] + walkSpecial[r21][r22];
+                        eng3 = "he has " + viparticiple[rand] + walkSpecial[r21][r22];
                         sp4 = "ella ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
-                        eng4 = "she have " + viparticiple[rand] + walkSpecial[r21][r22];
+                        eng4 = "she has " + viparticiple[rand] + walkSpecial[r21][r22];
                         sp5 = "eso ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
-                        eng5 = "it have " + viparticiple[rand] + walkSpecial[r21][r22];
+                        eng5 = "it has " + viparticiple[rand] + walkSpecial[r21][r22];
                         sp6 = "ellos han " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
                         eng6 = "they have " + viparticiple[rand] + walkSpecial[r21][r22];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + caminarSpecial[r21][r22];
@@ -3386,11 +3386,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + correrSpecial[r23][r24];
                         eng2 = "you have " + viparticiple[rand] + runSpecial[r23][r24];
                         sp3 = "él ha " + vibparticipiosp[rand] + correrSpecial[r23][r24];
-                        eng3 = "he have " + viparticiple[rand] + runSpecial[r23][r24];
+                        eng3 = "he has " + viparticiple[rand] + runSpecial[r23][r24];
                         sp4 = "ella ha " + vibparticipiosp[rand] + correrSpecial[r23][r24];
-                        eng4 = "she have " + viparticiple[rand] + runSpecial[r23][r24];
+                        eng4 = "she has " + viparticiple[rand] + runSpecial[r23][r24];
                         sp5 = "eso ha " + vibparticipiosp[rand] + correrSpecial[r23][r24];
-                        eng5 = "it have " + viparticiple[rand] + runSpecial[r23][r24];
+                        eng5 = "it has " + viparticiple[rand] + runSpecial[r23][r24];
                         sp6 = "ellos han " + vibparticipiosp[rand] + correrSpecial[r23][r24];
                         eng6 = "they have " + viparticiple[rand] + runSpecial[r23][r24];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + correrSpecial[r23][r24];
@@ -3425,11 +3425,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + subirSpecial[r25][r26];
                         eng2 = "you have " + viparticiple[rand] + riseSpecial[r25][r26];
                         sp3 = "él ha " + vibparticipiosp[rand] + subirSpecial[r25][r26];
-                        eng3 = "he have " + viparticiple[rand] + riseSpecial[r25][r26];
+                        eng3 = "he has " + viparticiple[rand] + riseSpecial[r25][r26];
                         sp4 = "ella ha " + vibparticipiosp[rand] + subirSpecial[r25][r26];
-                        eng4 = "she have " + viparticiple[rand] + riseSpecial[r25][r26];
+                        eng4 = "she has " + viparticiple[rand] + riseSpecial[r25][r26];
                         sp5 = "eso ha " + vibparticipiosp[rand] + subirSpecial[r25][r26];
-                        eng5 = "it have " + viparticiple[rand] + riseSpecial[r25][r26];
+                        eng5 = "it has " + viparticiple[rand] + riseSpecial[r25][r26];
                         sp6 = "ellos han " + vibparticipiosp[rand] + subirSpecial[r25][r26];
                         sp6 = "they have " + viparticiple[rand] + riseSpecial[r25][r26];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + subirSpecial[r25][r26];
@@ -3461,11 +3461,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + volarSpecial[r27][r28];
                         eng2 = "you have " + viparticiple[rand] + flySpecial[r27][r28];
                         sp3 = "él ha " + vibparticipiosp[rand] + volarSpecial[r27][r28];
-                        eng3 = "he have " + viparticiple[rand] + flySpecial[r27][r28];
+                        eng3 = "he has " + viparticiple[rand] + flySpecial[r27][r28];
                         sp4 = "ella ha " + vibparticipiosp[rand] + volarSpecial[r27][r28];
-                        eng4 = "she have " + viparticiple[rand] + flySpecial[r27][r28];
+                        eng4 = "she has " + viparticiple[rand] + flySpecial[r27][r28];
                         sp5 = "eso ha " + vibparticipiosp[rand] + volarSpecial[r27][r28];
-                        eng5 = "it have " + viparticiple[rand] + flySpecial[r27][r28];
+                        eng5 = "it has " + viparticiple[rand] + flySpecial[r27][r28];
                         sp6 = "ellos han " + vibparticipiosp[rand] + volarSpecial[r27][r28];
                         eng6 = "they have " + viparticiple[rand] + flySpecial[r27][r28];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + volarSpecial[r27][r28];
@@ -20627,7 +20627,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
@@ -20635,9 +20635,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20663,17 +20663,17 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng4 = "she isn't " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso no está " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "it " + "doesn't" + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it isn't " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20699,7 +20699,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
@@ -20707,9 +20707,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20735,7 +20735,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
@@ -20743,9 +20743,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20772,7 +20772,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
@@ -20780,9 +20780,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20808,7 +20808,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
@@ -20816,9 +20816,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20844,7 +20844,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
@@ -20852,9 +20852,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20881,7 +20881,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
@@ -20889,9 +20889,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        sp6 = "they are not  " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        sp6 = "they aren't  " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20917,7 +20917,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
@@ -20927,10 +20927,10 @@ public class Intrans3 {
                         eng5 = "it isn't " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp6 = "ellos no están " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20957,7 +20957,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
@@ -20965,9 +20965,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         break;
                 }
                 break;
@@ -20994,7 +20994,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
@@ -21002,9 +21002,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         break;
                 }
                 break;
@@ -21030,7 +21030,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp3 = "él no está " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp4 = "ella no está " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
@@ -21038,9 +21038,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         break;
                 }
                 break;
@@ -21066,7 +21066,7 @@ public class Intrans3 {
                         sp1 = "yo no estoy " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng1 = "I'm not " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp2 = "tú no estás " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng2 = "you're not " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng2 = "you aren't " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
 
                         sp3 = "él no está " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng3 = "he isn't " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
@@ -21075,9 +21075,9 @@ public class Intrans3 {
                         sp5 = "eso no está " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng5 = "it isn't " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp6 = "ellos no están " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng6 = "they are not  " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng6 = "they aren't  " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp7 = "nosotros no estamos " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng7 = "we are not  " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng7 = "we aren't  " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         break;
                 }
                 break;
@@ -21100,11 +21100,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
@@ -21116,11 +21116,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
@@ -21136,11 +21136,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "she have " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
@@ -21152,11 +21152,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "it " + "doesn't" + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
@@ -21174,13 +21174,13 @@ public class Intrans3 {
                         eng2 = "you have " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp3 = "él ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp4 = "ella ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp5 = "eso ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp6 = "ellos han " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
@@ -21195,12 +21195,12 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp5 = "eso no ha " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp6 = "ellos no han " + vibparticipiosp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + danceSpecial[r7][r8] + frequadv[radv];
@@ -21220,11 +21220,11 @@ public class Intrans3 {
                         eng2 = "you have " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
 
                         sp3 = "él ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
@@ -21236,11 +21236,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
@@ -21257,11 +21257,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
@@ -21274,11 +21274,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
@@ -21294,12 +21294,12 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
 
                         sp5 = "eso ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
@@ -21312,11 +21312,11 @@ public class Intrans3 {
                         eng2 = "you haven't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
 
                         sp3 = "él no ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
@@ -21332,11 +21332,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
@@ -21348,11 +21348,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
@@ -21368,11 +21368,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
@@ -21385,11 +21385,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         sp6 = "they haven't " + viparticiple[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
@@ -21405,11 +21405,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
@@ -21421,12 +21421,12 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp4 = "ella no ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp6 = "ellos no han " + vibparticipiosp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + returnSpecial[r19][r20] + frequadv[radv];
@@ -21445,11 +21445,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         sp6 = "they have " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
@@ -21461,11 +21461,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
@@ -21481,11 +21481,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
@@ -21498,11 +21498,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
@@ -21518,11 +21518,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
@@ -21534,11 +21534,11 @@ public class Intrans3 {
                         sp2 = "tú no has " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng2 = "you haven't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp3 = "él no ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
@@ -21554,11 +21554,11 @@ public class Intrans3 {
                         sp2 = "tú has " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng2 = "you have " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp3 = "él ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng3 = "he have " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng3 = "he has " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp4 = "ella ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng4 = "she have " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng4 = "she has " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp5 = "eso ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng5 = "it have " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng5 = "it has " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp6 = "ellos han " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng6 = "they have " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp7 = "nosotros hemos " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
@@ -21571,11 +21571,11 @@ public class Intrans3 {
                         eng2 = "you haven't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
 
                         sp3 = "él no ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng3 = "he haven't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng3 = "he hasn't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp4 = "ella no ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng4 = "she haven't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng4 = "she hasn't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp5 = "eso no ha " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng5 = "it haven't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng5 = "it hasn't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp6 = "ellos no han " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng6 = "they haven't " + viparticiple[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp7 = "nosotros no hemos " + vibparticipiosp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
@@ -21602,11 +21602,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
@@ -21618,11 +21618,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + restSpecial[rand3][rand4] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + descansarSpecial[rand3][rand4] + advfrequ[radv];
@@ -21638,11 +21638,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "she have been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
@@ -21654,11 +21654,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "it " + "doesn't" + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
@@ -21676,13 +21676,13 @@ public class Intrans3 {
                         eng2 = "you have been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp3 = "él ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp4 = "ella ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp5 = "eso ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp6 = "ellos han estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
@@ -21697,12 +21697,12 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp5 = "eso no ha estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
 
                         sp6 = "ellos no han estado " + vib3contesp[rand] + bailarSpecial[r7][r8] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + danceSpecial[r7][r8] + frequadv[radv];
@@ -21722,11 +21722,11 @@ public class Intrans3 {
                         eng2 = "you have been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
 
                         sp3 = "él ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
@@ -21738,11 +21738,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + liveSpecial[r9][r10] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + vivirSpecial[r9][r10] + advfrequ[radv];
@@ -21759,11 +21759,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
@@ -21776,11 +21776,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + stopSpecial[r11][r12] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + detenerSpecial[r11][r12] + advfrequ[radv];
@@ -21796,12 +21796,12 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
 
                         sp5 = "eso ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
@@ -21814,11 +21814,11 @@ public class Intrans3 {
                         eng2 = "you haven't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
 
                         sp3 = "él no ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + failSpecial[r13][r14] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + fallarSpecial[r13][r14] + advfrequ[radv];
@@ -21834,11 +21834,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
@@ -21850,11 +21850,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + worrySpecial[r15][r16] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + preocuparseSpecial[r15][r16] + advfrequ[radv];
@@ -21870,11 +21870,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
@@ -21887,11 +21887,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
                         sp6 = "they haven't been " + vib3cont[rand] + travelSpecial[r17][r18] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + viajarSpecial[r17][r18] + advfrequ[radv];
@@ -21907,11 +21907,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
@@ -21923,12 +21923,12 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp4 = "ella no ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
 
                         sp6 = "ellos no han estado " + vib3contesp[rand] + devolverSpecial[r19][r20] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + returnSpecial[r19][r20] + frequadv[radv];
@@ -21947,11 +21947,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         sp6 = "they have been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
@@ -21963,11 +21963,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + walkSpecial[r21][r22] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + caminarSpecial[r21][r22] + advfrequ[radv];
@@ -21983,11 +21983,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
@@ -22000,11 +22000,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + runSpecial[r23][r24] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + correrSpecial[r23][r24] + advfrequ[radv];
@@ -22020,11 +22020,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
@@ -22036,11 +22036,11 @@ public class Intrans3 {
                         sp2 = "tú no has estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng2 = "you haven't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp3 = "él no ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + riseSpecial[r25][r26] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + subirSpecial[r25][r26] + advfrequ[radv];
@@ -22056,11 +22056,11 @@ public class Intrans3 {
                         sp2 = "tú has estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng2 = "you have been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp3 = "él ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng3 = "he have been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng3 = "he has been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp4 = "ella ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng4 = "she have been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng4 = "she has been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp5 = "eso ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng5 = "it have been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng5 = "it has been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp6 = "ellos han estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng6 = "they have been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp7 = "nosotros hemos estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
@@ -22073,11 +22073,11 @@ public class Intrans3 {
                         eng2 = "you haven't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
 
                         sp3 = "él no ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng3 = "he haven't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng3 = "he hasn't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp4 = "ella no ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng4 = "she haven't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng4 = "she hasn't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp5 = "eso no ha estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
-                        eng5 = "it haven't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
+                        eng5 = "it hasn't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp6 = "ellos no han estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
                         eng6 = "they haven't been " + vib3cont[rand] + flySpecial[r27][r28] + frequadv[radv];
                         sp7 = "nosotros no hemos estado " + vib3contesp[rand] + volarSpecial[r27][r28] + advfrequ[radv];
@@ -33100,7 +33100,7 @@ public class Intrans3 {
                         sp4 = "ella " + "no debería " + vibesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng4 = "she " + "shouldn't " + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp5 = "eso " + "no debería " + vibesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
-                        eng5 = "it " + "should not " + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
+                        eng5 = "it " + "shouldn't " + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp6 = "ellos " + "no deberían " + vibesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];
                         eng6 = "they " + "shouldn't " + vib[rand] + chargeSpecial[r5][r6] + frequadv[radv];
                         sp7 = "nosotros " + "no deberíamos " + vibesp[rand] + cobrarSpecial[r5][r6] + advfrequ[radv];

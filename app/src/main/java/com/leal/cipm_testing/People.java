@@ -1735,25 +1735,25 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v] + nnoblesesp[n];
-                ps1eng = "I " + "musn't " + vnb[v] + nnobles[n];
+                ps1eng = "I " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you " + "musn't " + vnb[v] + nnobles[n];
+                ps2eng = "you " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps3 = "él no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he " + "musn't " + vnb[v] + nnobles[n];
+                ps3eng = "he " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps3ella = "ella no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she " + "musn't " + vnb[v] + nnobles[n];
+                ps3she = "she " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps3eso = "eso no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it " + "musn't " + vnb[v] + nnobles[n];
+                ps3it = "it " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps4 = "ellos no " + "deben " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they " + "musn't " + vnb[v] + nnobles[n];
+                ps4eng = "they " + "mustn't " + vnb[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we " + "musn't " + vnb[v] + nnobles[n];
+                ps5eng = "we " + "mustn't " + vnb[v] + nnobles[n];
 
                 break;
         }
@@ -1785,25 +1785,25 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v] + nnoblesesp[n];
-                ps1eng = "I " + "musn't " + "be " + vnbc[v] + nnobles[n];
+                ps1eng = "I " + "mustn't " + "be " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v] + nnoblesesp[n];
-                ps2eng = "you " + "musn't " + "be " + vnbc[v] + nnobles[n];
+                ps2eng = "you " + "mustn't " + "be " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "musn't be " + vnbc[v] + nnobles[n];
+                ps3eng = "he " + "mustn't be " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "musn't be " + vnbc[v] + nnobles[n];
+                ps3she = "she " + "mustn't be " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no debe estar " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "musn't be " + vnbc[v] + nnobles[n];
+                ps3it = "it " + "mustn't be " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no deben estar " + vnbcs[v] + nnoblesesp[n];
-                ps4eng = "they " + "musn't be " + vnbc[v] + nnobles[n];
+                ps4eng = "they " + "mustn't be " + vnbc[v] + nnobles[n];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v] + nnoblesesp[n];
-                ps5eng = "we " + "musn't be " + vnbc[v] + nnobles[n];
+                ps5eng = "we " + "mustn't be " + vnbc[v] + nnobles[n];
 
                 break;
         }
@@ -4859,38 +4859,38 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps1eng = "I " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng = "I " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she = "she " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it = "it " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we " + "musn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we " + "musn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
         }
     }// nuevo
@@ -4934,38 +4934,38 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps1eng = "I musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps1eng = "I mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3iteng2 = "it musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3iteng2 = "it mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we musn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we musn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we mustn't "  + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 break;
         }
@@ -8111,38 +8111,38 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps1eng = "I " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps1eng = "I " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps2eng = "you " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3eng = "he " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3she = "she " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3she = "she " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3it = "it " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3iteng2 = "it " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3it = "it " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3iteng2 = "it " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps4eng = "they " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps5eng = "we " + "musn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we " + "musn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we " + "mustn't "  + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we " + "mustn't " + vnb[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
                 break;
         }
     }// nuevo
@@ -8190,38 +8190,38 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps1eng = "I musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps1eng = "I mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps2eng = "you musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3eng = "he musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3she = "she musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3she = "she mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps3it = "it musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps3iteng2 = "it musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3it = "it mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps3iteng2 = "it mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps4eng = "they musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.peoplespecial[p][p2] + advfrequ[radv];
-                ps5eng = "we musn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we musn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we mustn't "  + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we mustn't " + "be " + vnbc[v] + nnobles[n] + prep.peoplespecialeng[p][p2] + frequadv[radv];
 
                 break;
         }
@@ -10935,25 +10935,25 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v];
-                ps1eng = "I " + "musn't " + vnb[v];
+                ps1eng = "I " + "mustn't " + vnb[v];
 
                 ps2 = "tú no " + "debes " + vnbs[v];
-                ps2eng = "you " + "musn't " + vnb[v];
+                ps2eng = "you " + "mustn't " + vnb[v];
 
                 ps3 = "él no " + "debe " + vnbs[v];
-                ps3eng = "he " + "musn't " + vnb[v];
+                ps3eng = "he " + "mustn't " + vnb[v];
 
                 ps3ella = "ella no " + "debe " + vnbs[v];
-                ps3she = "she " + "musn't " + vnb[v];
+                ps3she = "she " + "mustn't " + vnb[v];
 
                 ps3eso = "eso no " + "debe " + vnbs[v];
-                ps3it = "it " + "musn't " + vnb[v];
+                ps3it = "it " + "mustn't " + vnb[v];
 
                 ps4 = "ellos no " + "deben " + vnbs[v];
-                ps4eng = "they " + "musn't " + vnb[v];
+                ps4eng = "they " + "mustn't " + vnb[v];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v];
-                ps5eng = "we " + "musn't " + vnb[v];
+                ps5eng = "we " + "mustn't " + vnb[v];
 
                 break;
         }
@@ -10984,25 +10984,25 @@ public class People {
                 break;
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v];
-                ps1eng = "I " + "musn't " + "be " + vnbc[v];
+                ps1eng = "I " + "mustn't " + "be " + vnbc[v];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v];
-                ps2eng = "you " + "musn't " + "be " + vnbc[v];
+                ps2eng = "you " + "mustn't " + "be " + vnbc[v];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v];
-                ps3eng = "he " + "musn't be " + vnbc[v];
+                ps3eng = "he " + "mustn't be " + vnbc[v];
 
                 ps3ella = "ella no debe estar " + vnbcs[v];
-                ps3she = "she " + "musn't be " + vnbc[v];
+                ps3she = "she " + "mustn't be " + vnbc[v];
 
                 ps3eso = "eso no debe estar " + vnbcs[v];
-                ps3it = "it " + "musn't be " + vnbc[v];
+                ps3it = "it " + "mustn't be " + vnbc[v];
 
                 ps4 = "ellos no deben estar " + vnbcs[v];
-                ps4eng = "they " + "musn't be " + vnbc[v];
+                ps4eng = "they " + "mustn't be " + vnbc[v];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v];
-                ps5eng = "we " + "musn't be " + vnbc[v];
+                ps5eng = "we " + "mustn't be " + vnbc[v];
 
                 break;
         }
