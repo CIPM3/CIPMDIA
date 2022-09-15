@@ -352,16 +352,17 @@ public class People4 {
     };
 
     // objetos persona
-    String nnobles[] = {"the cousin ", "the engineer ", "the psychologist ", "the secretary ",
-            "the agency ", "the union ", "the member ", "the personality ", "the republic ",
-            "the tradition ", "the virus ", "the director ", "the employee ", "the charity ",
-            "the employer "
+    String nnobles[] = {
+            "the cousin ","the editor ","the leader ","the mom ","the singer ","the police ",
+            "the queen ","the wife ","the farmer ","the girl ","the historian ",
+            "the son ","the winner ","the worker ","the writer "
     };
 
-    String nnoblesesp[] = {"a la prima ", "a el ingeniero ", "a la psicóloga ", "a el secretario ",
-            "a la agencia ", "a la unión ", "a el miembro ", "a la personalidad ", "a la republica ",
-            "a la tradición ", "a el virus ", "a la directora ", "a el empleado ", "a la caridad ",
-            "a la empleadora "
+    String nnoblesesp[]={
+            "a la prima", "a el editor ", "a el líder", "a la mamá ", "a el cantante ",
+            "a la policía ","a la reina ", "a la esposa ", "a el granjero ",
+            "a la niña ", "a el historiador ","a el hijo ", "a el ganador ",
+            "a el trabajador ", "a el escritor "
     };
 
 

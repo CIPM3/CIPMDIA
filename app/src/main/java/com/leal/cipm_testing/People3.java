@@ -233,7 +233,6 @@ public class People3 {
             "afectemos ", "conozcamos "
     };
 
-
     // objetos persona
     String nnobles[] = {"the cousin ", "the engineer ", "the psychologist ", "the secretary ",
             "the agency ", "the union ", "the member ", "the personality ", "the republic ",
