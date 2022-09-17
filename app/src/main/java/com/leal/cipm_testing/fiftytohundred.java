@@ -2,6 +2,8 @@ package com.leal.cipm_testing;
 
 public class fiftytohundred {
 
+
+
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "they ", "we "};
 

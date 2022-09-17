@@ -4,8 +4,7 @@ import android.widget.Toast;
 
 public class cerotofifty {
 
-   public static int j=0;
-
+ // hacer este array
     String alleng[]= {"the", "the",  "to be ", "and ", "of ", "a ", "in ", "to "
     ,"to have ",  "it ", "I", "that ", "that ", "for ", "for " , "you ", "he ", "with ", "on ",
             "to do ", "to say", "this " , "they ", "at ", "but ", "we ", "his ", "from ","from ","since",   "by ", "she ",
@@ -90,13 +89,11 @@ public class cerotofifty {
     // este metodo genera prepossiciones, articulos y objetos
     String ob;
     String eng;
-
+    public static int j=0;
     public void vocab0a50(){
-        if(j>52){
+        if(j==alleng.length) {
             j=0;
-
         }
-
             ob=allsp[j];
             eng=alleng[j];
         j++;
