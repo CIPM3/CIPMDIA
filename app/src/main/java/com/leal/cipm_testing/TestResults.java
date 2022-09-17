@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,20 +18,22 @@ public class TestResults extends AppCompatActivity {
         VocabTestResult vtr  = new VocabTestResult();
         SpintTestResult sitr = new SpintTestResult();
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_results);
         bottomNavigationViewm= findViewById(R.id.bottom_nav);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,str).commit();
-        bottomNavigationViewm.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        bottomNavigationViewm
+                .setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.structureitem:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,str).commit();
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.container,str)
+                                .commit();
 
                         return true;
                     case R.id.vocabitem:

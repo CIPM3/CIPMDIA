@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".Fragsup"
+            android:exported="false" />
+        <activity
             android:name=".TestResults"
             android:exported="false" />
         <activity

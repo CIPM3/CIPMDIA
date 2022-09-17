@@ -21,8 +21,8 @@ android {
         applicationId "com.leal.cipm_testing"
         minSdk 21
         targetSdk 32
-        versionCode 13
-        versionName "6.3"
+        versionCode 16
+        versionName "6.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

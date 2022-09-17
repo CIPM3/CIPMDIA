@@ -11,6 +11,11 @@
         android:id="@+id/spt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:text="esta también"
+        android:textColor="#E53935"
+        android:textColorHighlight="#F4511E"
+        android:textColorLink="#E53935"
+        android:textSize="24sp" />
 
 </FrameLayout>

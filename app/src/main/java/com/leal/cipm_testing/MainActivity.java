@@ -32,11 +32,12 @@ import com.leal.cipm_testing.databinding.ActivityMainBinding;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import im.crisp.client.Crisp;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn,logoutbtn,testest;
+    Button btn,logoutbtn,testest,hamtest;
     LinearLayout menu,btn_menu_open,btn_menu_closed;
     TextView txt, tvnameuser;
     FirebaseAuth mAuth;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
         tvnameuser = findViewById(R.id.UserNameTv);
         //createRequest();
+        hamtest= findViewById(R.id.hamtestbtn);
         testest= findViewById(R.id.testest);
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
@@ -77,22 +79,19 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             startActivity(new Intent(this,StoreActivity.class));
         });
-
-        testest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,MainTesting.class));
-
-            }
-        });
-
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
-
-
-
     }
 
+
+    public void starttest(View view){
+        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
+            Toast.makeText(this, "Favor de registrarse con email y password para hacer examen", Toast.LENGTH_SHORT).show();
+        }else{
+            startActivity(new Intent(MainActivity.this,MainTesting.class));
+
+        }
+    }
    /* public void createRequest(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -106,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,SignIn.class));
 
     }
-
     protected void onStart() {
         super.onStart();
         user = mAuth.getCurrentUser();

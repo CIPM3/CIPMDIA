@@ -8,12 +8,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout40"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="74dp"
+        android:layout_width="403dp"
+        android:layout_height="428dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/gotofrag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,6 +28,20 @@
             android:text="Click here " />
 
         <TextView
+            android:id="@+id/chooselevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Choose a Level"
+            android:textColor="@color/azul" />
+
+        <Spinner
+            android:id="@+id/spinnert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"></Spinner>
+
+        <TextView
             android:id="@+id/choosest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +53,9 @@
             android:id="@+id/spinnert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp">
+            android:paddingTop="16dp"
+            android:outlineAmbientShadowColor="@color/amarillo"
+            >
 
         </Spinner>
 
@@ -93,23 +110,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="dbtesting"
+                android:onClick="answerchecker"
                 android:text="Submit" />
         </LinearLayout>
 
     </LinearLayout>
 
+    <VideoView
+        android:id="@+id/tutgentest"
+        android:layout_width="247dp"
+        android:layout_height="154dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tutgenbtn"
+        android:layout_width="150dp"
+        android:layout_height="77dp"
+        android:backgroundTint="@color/amarillo"
+        android:onClick="showvid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
     <Button
         android:id="@+id/gotofrag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="193dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#FDD835"
         android:onClick="gotofragments"
-        android:text="Go to fragments"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout40"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout40" />
-
+        android:text="See Test Results"
+        app:layout_constraintBottom_toTopOf="@+id/tutgentest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

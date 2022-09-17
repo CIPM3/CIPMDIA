@@ -37,6 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#3949AB"
+                    android:onClick="starttest"
                     android:text="cuantas estructuras de lenguaje sabes?/click here"
                     android:textColor="#FDD835" />
 
@@ -461,11 +462,12 @@
 
             <!--Mas Test-->
             <Button
+                android:id="@+id/hamtestbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/azul"
-                android:onClick="logout"
+                android:onClick="starttest"
                 android:text="Test" />
 
             <!--Mas Info-->

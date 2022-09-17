@@ -6,7 +6,8 @@ import androidx.annotation.NonNull;
 public class Student {
 
     String name;
-    boolean presentesimple,presenteContinuo,presentePerfecto,presentePerfectoContinuo;
+    boolean presentesimple,presenteContinuo,presentePerfecto,
+            presentePerfectoContinuo;
     boolean pastsimple,pastContinuo,pastPerfecto,pastPerfectoContinuo;
     boolean futuresimple,futureContinuo,futurePerfecto,futurePerfectoContinuo;
     boolean wouldsimple,wouldContinuo,wouldPerfecto,wouldPerfectoContinuo;
@@ -20,9 +21,8 @@ public class Student {
     public Student() {
 
     }
-
-    public Student(
-            String name, boolean presentesimple, boolean presenteContinuo, boolean presentePerfecto,boolean presentePerfectoContinuo,
+    public Student( String name,
+          boolean presentesimple, boolean presenteContinuo, boolean presentePerfecto,boolean presentePerfectoContinuo,
             boolean pastsimple, boolean pastContinuo, boolean pastPerfecto, boolean pastPerfectoContinuo,
             boolean futuresimple, boolean futureContinuo, boolean futurePerfecto, boolean futurePerfectoContinuo,
             boolean wouldsimple, boolean wouldContinuo, boolean wouldPerfecto, boolean wouldPerfectoContinuo,
@@ -33,7 +33,7 @@ public class Student {
             boolean wantTo, boolean forTo, boolean supposedToPresent, boolean wishPastPerfect, boolean usedTo,
             boolean beUsedTo
     ) {
-        this.name = name;
+        this.name=name;
         this.presentesimple = presentesimple;
         this.presenteContinuo= presenteContinuo;
         this.presentePerfecto = presentePerfecto;
@@ -83,13 +83,24 @@ public class Student {
         this.beUsedTo = beUsedTo;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     // pressentes get y set
+
     public boolean isPresentesimple() {
         return presentesimple;
     }
+
     public void setPresentesimple(boolean presentesimple) {
         this.presentesimple = presentesimple;
     }
+
     public boolean isPresenteContinuo() {
         return presenteContinuo;
     }
@@ -331,13 +342,6 @@ public class Student {
         this.beUsedTo = beUsedTo;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @NonNull
     @Override

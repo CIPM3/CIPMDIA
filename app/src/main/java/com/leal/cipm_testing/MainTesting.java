@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -17,10 +18,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -31,6 +34,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -41,9 +45,9 @@ import java.util.Map;
 
 public class MainTesting extends AppCompatActivity {
     FirebaseFirestore  db = FirebaseFirestore.getInstance();
-    private Button     starttest;
-    TextView           choose,sptx,getsent,save;
-    Spinner            spin;
+    private Button     starttest,gotofrag;
+    TextView           choose,sptx,getsent,save, chooselev;
+    Spinner            spin,spinv;
     ImageButton        mic;
     TextToSpeech       tt1;
     EditText           Answerinput;
@@ -56,19 +60,32 @@ public class MainTesting extends AppCompatActivity {
     boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
     boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
     boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
-    String selection;
+    String selection,selectionv;
     int cp,cn;
-    Button gotofr;
+    VideoView vv;
+    ImageButton b;
+    String see= "see Tutorial";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_testing);
+        gotofrag=findViewById(R.id.gotofrag);
+        gotofrag.setVisibility(View.GONE);
         starttest=findViewById(R.id.StartTestMain);
+        vv= findViewById(R.id.tutgentest);
+        vv.setVisibility(View.GONE);
+        b=  findViewById(R.id.tutgenbtn);
+        b.setVisibility(View.GONE);
         choose=findViewById(R.id.choosest);
         choose.setVisibility(View.GONE);
         spin = findViewById(R.id.spinnert);
         spin.setVisibility(View.GONE);
+        chooselev = findViewById(R.id.chooselevel);
+        chooselev.setVisibility(View.GONE);
+        spinv= findViewById(R.id.spinnert2);
+        spinv.setVisibility(View.GONE);
+
         Answerinput=findViewById(R.id.answerinputtest);
         Answerinput.setVisibility(View.GONE);
         sptx=findViewById(R.id.comodiriastestmain);
@@ -87,32 +104,178 @@ public class MainTesting extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         // este culero de arriba es el user id del usuario jala con los 3 aparentemente
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
-        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selection = spin.getSelectedItem().toString();
-                if(!selection.equalsIgnoreCase("Pick a Structure")) {
-                    shownext();
+
+        Prefs prefs = new Prefs(this);
+        if (prefs.getPremium()==1){
+            //Give the user all the premium features
+            //hide ads if you are showing ads
+            ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
+                    (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
+            adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinv.setAdapter(adapterv);
+            spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selectionv = spinv.getSelectedItem().toString();
+
+                    switch (selectionv){
+
+                        case "Vocabulary":
+                            spin.setVisibility(View.VISIBLE);
+                            choose.setText("Choose a Range");
+                            choose.setVisibility(View.VISIBLE);
+                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    if(!selection.equalsIgnoreCase("Tutorial")) {
+                                        shownext();
+                                    }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                            break;
+
+
+                        case "Syntax":
+                            spin.setVisibility(View.VISIBLE);
+                            choose.setVisibility(View.VISIBLE);
+                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
+                            adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapters);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                        shownext();
+                                    }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                            break;
+
+
+                    }
+
                 }
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
 
-            }
-        });
+                }
+            });
+
+
+        } else if (prefs.getPremium()==0){
+            //remove user all the premium features
+            //show ads to the user
+            ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
+                    (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
+            adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinv.setAdapter(adapterv);
+            spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selectionv = spinv.getSelectedItem().toString();
+
+                    switch (selectionv){
+
+                        case "Vocabulary":
+                            spin.setVisibility(View.VISIBLE);
+                            choose.setText("Choose a Range");
+                            choose.setVisibility(View.VISIBLE);
+                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocab, android.R.layout.simple_spinner_item);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    if(!selection.equalsIgnoreCase("Tutorial")) {
+                                        shownext();
+                                    }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                            break;
+
+
+                        case "Syntax":
+                            spin.setVisibility(View.VISIBLE);
+                            choose.setVisibility(View.VISIBLE);
+                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structuresGratis, android.R.layout.simple_spinner_item);
+                            adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapters);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                        shownext();
+                                    }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                            break;
+
+
+                    }
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
+
+
+        }
+
+
 
 
 
 
     }
     public  void   start(View view){
-        choose.setVisibility(View.VISIBLE);
-        spin.setVisibility(View.VISIBLE);
+        if(starttest.getText().equals(see)){
+            vv.setVisibility(View.VISIBLE);
+            b.setVisibility(View.VISIBLE);
+
+        }else{
+            chooselev.setVisibility(View.VISIBLE);
+            spinv.setVisibility(View.VISIBLE);
+            gotofrag.setVisibility(View.VISIBLE);
+            starttest.setText(see);
+
+
+        }
+
+
     }
+
     private void   shownext() {
         mic.setVisibility(View.VISIBLE);
         sptx.setVisibility(View.VISIBLE);
@@ -120,11 +283,11 @@ public class MainTesting extends AppCompatActivity {
         Answerinput.setVisibility(View.VISIBLE);
         getsent.setVisibility(View.VISIBLE);
 
-
     }
     //2
     public  void   startTest(View view){
         save.setVisibility(View.VISIBLE);
+
         switch (selection) {
             case "Pick a Structure":
                 Toast.makeText(this, "elige una estructura", Toast.LENGTH_SHORT).show();
@@ -1488,35 +1651,45 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
+
+            case "0 to 50":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    cerotofifty gen1 = new cerotofifty();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab0a50();
+
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
         }
-    }
-    public  void   checkanswer(View vista) {
-        String t = txteng.trim();
-        String t2 = Answerinput.getText().toString().trim();
-        if(t.equalsIgnoreCase(t2)){
-            cp= cp+1;
-            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
-
-        }else {
-            cn=cn+1;
-            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
-        }
-        Answerinput.setText("");
-
-        if(cp==4){
-            Toast.makeText(this, selection+"passed /pasa a la sig est"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
-            cp=0;
-            turnTrue(selection);
-
-        }else if(cn==4){
-            Toast.makeText(this, selection+"not passed / pasa a la sig est"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
-            cn=0;
-
-
-        }
-
-
-
     }
     //3
     private void   turnTrue(String CurrentStructure) {
@@ -1636,91 +1809,96 @@ public class MainTesting extends AppCompatActivity {
             case "Be Used To":
                 but=true;
                 break;
+            case "0 to 50":
+
+                break;
         }
     }
-    public  void   dbtesting(View view) {
+
+    public void answerchecker(View view){
+        switch (selectionv){
+            case "Structures ":
+                dbtesting();
+                break;
+
+            case "Vocabulary":
+
+                break;
+        }
+    }
+    public  void   dbtesting() {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
             cp= cp+1;
-            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
 
         }else {
             cn=cn+1;
-            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
         }
-        Answerinput.setText("");
+
+
         if(cp==4){
-            Toast.makeText(this, selection+"passed /pasa a la sig est"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, selection+"pasaste-Pasa a otra estructura"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp=0;
+            cn=0;
             turnTrue(selection);
 
         }else if(cn==4){
-            Toast.makeText(this, selection+"not passed / pasa a la sig est"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, selection+"not passed Pasa a otra estructura"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
             cn=0;
+            cp=0;
 
 
         }
 
+        // completar esta pendejada con las keys iguales a las de student
+        CollectionReference uid= db.collection(userid);
+        Map<String, Object> user = new HashMap<>();
+        user.put("name",Answerinput.getText().toString());
+        user.put("presentesimple",ps);
+        user.put("presenteContinuo",pc);
+        user.put("presentePerfecto",pp);
+        user.put("presentePerfectoContinuo",ppc);
+        user.put("pastsimple",pss);
+        user.put("pastContinuo",psc);
+        user.put("pastPerfecto",psp);
+        user.put("pastPerfectoContinuo",pspc);
+        user.put("futuresimple",fs);
+        user.put("futureContinuo",fc);
+        user.put("futurePerfecto",fp);
+        user.put("futurePerfectoContinuo",fpc);
+        user.put("wouldsimple",ws);
+        user.put("wouldContinuo",wc);
+        user.put("wouldPerfecto",wp);
+        user.put("wouldPerfectoContinuo",wpc);
+        user.put("couldsimple",cos);
+        user.put("couldContinuo",coc);
+        user.put("couldPerfecto",cop);
+        user.put("couldPerfectoContinuo",copc);
+        user.put("mightsimple",ms);
+        user.put("mightContinuo",mc);
+        user.put("mightPerfecto",mp);
+        user.put("mightPerfectoContinuo",mpc);
+        user.put("cansimple",cs);
+        user.put("canContinuo",cc);
+        user.put("mustsimple",mus);
+        user.put("mustContinuo",muc);
+        user.put("shouldsimple",ss);
+        user.put("shouldContinuo",sc);
+        user.put("shouldPerfecto",sp);
+        user.put("shouldPerfectoContinuo",spc);
+        user.put("wantTo",wt);
+        user.put("forTo",ft);
+        user.put("supposedToPresent",stp);
+        user.put("wishPastPerfect",wpp);
+        user.put("usedTo",ut);
+        user.put("beUsedTo",but);
+        uid.document("structures").set(user);
 
-        Map<String, Boolean> user = new HashMap<>();
-        user.put("Present Simple",ps);
-        user.put("Present Continuous",pc);
-        user.put("Present Perfect",pp);
-        user.put("Present Perfect Continuous",ppc);
-        user.put("Past Simple",pss);
-        user.put("Past Continuous",psc);
-        user.put("Past Perfect",psp);
-        user.put("Past Perfect Continuous",pspc);
-        user.put("Future Simple",fs);
-        user.put("Future Continuous",fc);
-        user.put("Future Perfect",fp);
-        user.put("Future Perfect Continuous",fpc);
-        user.put("Would Simple",ws);
-        user.put("Would Continuous",wc);
-        user.put("Would Perfect",wp);
-        user.put("Would Perfect Continuous",wpc);
-        user.put("Could Simple",cos);
-        user.put("Could Continuous",coc);
-        user.put("Could Perfect",cop);
-        user.put("Could Perfect Continuous",copc);
-        user.put("Should Simple",ss);
-        user.put("Should Continuous",sc);
-        user.put("Should Perfect",sp);
-        user.put("Should Perfect Continuous",spc);
-        user.put("Might Simple",ms);
-        user.put("Might Continuous",mc);
-        user.put("Might Perfect",mp);
-        user.put("Might Perfect Continuous",mpc);
-        user.put("Can Simple",cs);
-        user.put("Can Continuous",cc);
-        user.put("Must Simple",mus);
-        user.put("Must Continuous",muc);
-        user.put("Want To",wt);
-        user.put("For To",ft);
-        user.put("Supposed To Present",stp);
-        user.put("Wish Past Perfect",wpp);
-        user.put("Used To",ut);
-        user.put("Be Used To",but);
 
 
-        db.document(userid+"/structures")
-                .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void unused) {
-                            Toast.makeText(MainTesting.this, "shit worked", Toast.LENGTH_SHORT)
-                                    .show();
-                        }
-                    });
-
-        db.document(userid+"/Vocabulario")
-                .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(MainTesting.this, "shit worked vocab", Toast.LENGTH_SHORT)
-                                .show();
-                    }
-                });
 
     }
     @Override
@@ -1751,6 +1929,15 @@ public class MainTesting extends AppCompatActivity {
     public void gotofragments(View view){
         Intent intento = new Intent(this, TestResults.class);
         startActivity(intento);
+    }
+    public void showvid(View view){
+        b.setVisibility(View.INVISIBLE);
+        Uri uri = Uri.parse("https://adrianlealcaldera.com/appupdatereducido.mp4");
+        vv.setVideoURI(uri);
+        vv.setMediaController(new MediaController(this));
+        vv.requestFocus();
+        vv.start();
+
     }
 
 }

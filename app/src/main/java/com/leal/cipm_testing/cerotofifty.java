@@ -1,6 +1,25 @@
 package com.leal.cipm_testing;
 
+import android.widget.Toast;
+
 public class cerotofifty {
+
+   public static int j=0;
+
+    String alleng[]= {"the", "the",  "to be ", "and ", "of ", "a ", "in ", "to "
+    ,"to have ",  "it ", "I", "that ", "that ", "for ", "for " , "you ", "he ", "with ", "on ",
+            "to do ", "to say", "this " , "they ", "at ", "but ", "we ", "his ", "from ","from ","since",   "by ", "she ",
+            "or ", "as ", "as ", "what ", "what ", "to go ", "their ", "can ", "who ", "to get ", "if ",
+            "would", "her ", "all ", "my ", "to make ", "about ", "about ", "to know ", "will ", "up "
+    };
+    String allsp[]= {"el, la, los o las","el, la, los o las", "ser o estar", "y ", "de ", "un o una", "en ", "a ",
+    "tener o haber ", "eso ", "yo ", "eso ", "que, para conectar", "por ", "para ", "tu", "el ", "con ", "sobre ", "hacer ",
+            "decir ", "esto ", "ellos ", "en " , "pero ", "nosotros" , "su de el ", "desde, para un lugar","de ","desde ", "por ", "ella ",
+            "o ", "como ", "en lo que ", "que, para preguntar ", "lo que ", "ir " , "su de ellos", "poder ", "quien ", "obtener ", "si",
+            "la terminacion ria en los verbos ", "su de ella", "todo ", "mi ", "hacer ", "acerca ", "acerca de ", "saber ", "el modal que hace futuro a un verbo ", "arriba"
+    };
+
+
     String articles[] = {"the ", "the ", "the ", "the ", "a ", "a ", "some ", "some "};
     String articulos[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas "};
 
@@ -71,6 +90,21 @@ public class cerotofifty {
     // este metodo genera prepossiciones, articulos y objetos
     String ob;
     String eng;
+
+    public void vocab0a50(){
+        if(j>52){
+            j=0;
+
+        }
+
+            ob=allsp[j];
+            eng=alleng[j];
+        j++;
+
+    }
+
+
+
 
     public void prepartob() {
         int i = (int) (Math.random() * articles.length);
