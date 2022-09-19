@@ -2,6 +2,36 @@ package com.leal.cipm_testing;
 
 public class fiftytohundred {
 
+    String alleng[]={
+            "one ","one ","time ","there ","year ","so ",
+            "think ","when ","which ","them ","some ",
+            "me ","people ","take ","out ","into ",
+            "just ","see ","him ","your ","come ",
+            "could ","now ","than ","like ","other ",
+            "how ","then ","its ","our ","two ",
+            "more ","these ","want ","way ","look ",
+            "first ","also ","new ","beacuse ","day",
+            "more ","use ","no ","man ","find ","here ",
+            "thing ","give ","many ","well "
+    };
+
+    String allsp[]={
+            "uno, una ","uno una ","tiempo ","ahi de lugar ","año ",
+            "entonces de conector ","pensar ","cuando (conector de tiempo) ",
+            "cual, cuales ","ellos, ellas ","algunos, algunas ","yo ",
+            "gente, personas ","tomar un objeto ","salir (de algun lugar) ",
+            "dentro (de algun lugar) ","solo (justificativo) ","observar ",
+            "suyo (del sujeto el) ","tuyo (del sujeto tu ) ","venir (acercarse) ",
+            "poder, podria, puedes ","ahora (en el momento ) ",
+            "comparativo favorable entre dos partes ","gustar, me gusta o comparativo ",
+            "otro ","cómo (pregunta) ","entonces ","es, eso ","nuestro, nuestra ",
+            "dos ","mas, mucho ","estos, estas ","quiero, quieres, querer ",
+            "camino, manera (decision o ejemplo) ","mira, mirar, miro ",
+            "primero (de lugar, momento, etc) ","tambien (comparativo) ",
+            "nuevo,nueva, nuevos ","porque (explicacion) ","dia ","mas, mucho, muchas ",
+            "usar (objetos) ","no ","hombre ","buscar, encotrar ","aqui (localizacion) ",
+            "cosa ","dar ","muchos, muchas ","bien "
+    };
 
 
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
@@ -44,6 +74,19 @@ public class fiftytohundred {
 
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab50a100(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 
     // adjetivos y sustantivos
     public void adjpro() {

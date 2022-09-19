@@ -4,7 +4,10 @@ import android.widget.Toast;
 
 public class cerotofifty {
 
- // hacer este array
+    //1 hacer este array
+    //2 copias j=0; y la funcion vocab
+    // 3 debugging
+    //mandarlo a db (no esta listo)
     String alleng[]= {"the", "the",  "to be ", "and ", "of ", "a ", "in ", "to "
     ,"to have ",  "it ", "I", "that ", "that ", "for ", "for " , "you ", "he ", "with ", "on ",
             "to do ", "to say", "this " , "they ", "at ", "but ", "we ", "his ", "from ","from ","since",   "by ", "she ",

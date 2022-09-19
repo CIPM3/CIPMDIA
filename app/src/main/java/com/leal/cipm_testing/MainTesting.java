@@ -1689,6 +1689,44 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
+
+            case "50 to 100":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    fiftytohundred gen1 = new fiftytohundred();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab50a100();
+
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
         }
     }
     //3
