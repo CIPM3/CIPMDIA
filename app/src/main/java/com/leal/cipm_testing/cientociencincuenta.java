@@ -2,6 +2,31 @@ package com.leal.cipm_testing;
 
 public class cientociencincuenta {
 
+    String alleng[]={
+            "well ","well ","only ","those ","tell ","one ","very ","her ","even ",
+            "back ","any ","good ","woman ","through ","us ","life ","child ",
+            "there ","work ","down ","may ","after ","should ","call ","world ",
+            "over ","school ","still ","try ","in ","as ","last ","ask ","need ",
+            "too ","feel ","three ","when ","state ","never ","become ","between ",
+            "high ","really ","something ","most ","another ","much ",
+            "another ","much ","family ","own ","out ","leave "
+    };
+
+    String allsp[]={
+            "bueno, bien ","bueno bien ","solo ","esos,esas ","dile, diles ","uno,una ",
+            "muy, mucho ","ella ","incluso ","atrás ","cualquiera, cualquier ","bien, buen,bueno ",
+            "mujer ","a través de ","nosotros, nosotras ","vida ","niño, niña ",
+            "ahí (lugar de objeto) ","trabajar,trabajo ","abajo ","puede, puedes, podemos ",
+            "despues (verbo de tiempo) ","deberia, debes, ","llamar ","mundo ",
+            "sobre ","escuela ","todavía ","probar,pruebo,pruebas ","en,dentro ",
+            "como (comparativo) ","ultimo, ultima ","pregunto,preguntar "
+            ,"necesitar, necesito,necesita ", "mucho,demasiado ","sentir, siento, siente ",
+            "tres ","cuando (momento) ","estado ","nunca ","convertir,convertirse ",
+            "entre (posición)","alto ","realmente ","algo ","mas (comparativo) ",
+            "otro,otra,otros ","mucho ","otro,otra,otros ","mucho ","familia ",
+            "propio,propia ","fuera,sacar ","abandonar,dejar "
+    };
+
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "they ", "we "};
 
@@ -55,6 +80,18 @@ public class cientociencincuenta {
     String sp[] = {"woman ", "child ", "back ", "life ", "world ", "state ", "school ", "family "};
     String sps[] = {"mujer ", "niño ", "espalda ", "vida ", "mundo ", "estado ", "escuela ", "familia "};
 
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab100a150(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 
     String gens;
     String gene;
