@@ -200,89 +200,140 @@ public class Intrans3 {
             "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ", "with the woman ",
             "with the dentist ", "with the mailman ", "with the fireman ", "with people ", "with the people ", "with a nurse ",
             "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-            "with my friend ", "with my cousin ", "with the father ", "with the mother "};
+            "with my friend ", "with my cousin ", "with the father ", "with the mother "
+    };
     String con[] = {"con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
             "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
             "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ", "con gente ", "con la gente ",
             "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ", "con el maestro ", "con mi amiparticipate ",
-            "con mi primo ", "con el papá ", "con la mamá "};
+            "con mi primo ", "con el papá ", "con la mamá "
+    };
 
     String at[] = {"at the restaurant", "at school ", "at the house ", "at the concert ", "at the store ", "at church ", "at the hospital ",
-            "at the office ", "at the station "};
+            "at the office ", "at the station "
+    };
     String aten[] = {"en el restaurante (pero no dentro) ", "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
             "en el concierto (pero no dentro) ",
             "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ", "en el hospital (pero no dentro) ",
-            "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "};
+            "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+    };
 
-    String from[] = {"from the jungle ", "from the house ", "from the office ", "from the hospital "};
-    String defrom[] = {"de la selva ", "de la casa ", "de la oficina ", "de el hospital "};
-    String defromdesde[] = {"desde la selva ", "desde la casa ", "desde la oficina ", "desde el hospital "};
+    String from[] = {"from the jungle ", "from the house ", "from the office ", "from the hospital "
+    };
+    String defrom[] = {"de la selva ", "de la casa ", "de la oficina ", "de el hospital "
+    };
+    String defromdesde[] = {"desde la selva ", "desde la casa ", "desde la oficina ", "desde el hospital "
+    };
 
-    String during[] = {"during the game ", "during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "};
-    String duringsp[] = {"durante el juego ", "durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "};
+    String during[] = {"during the game ", "during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
+    };
+    String duringsp[] = {"durante el juego ", "durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
+    };
 
-    String until[] = {"until tomorrow ", "until the next day ", "until next year ", "until five "};
-    String hasta[] = {"hasta mañana ", "hasta el siguiente dia ", "hasta el siguiente año ", "hasta las cinco "};
+    String until[] = {"until tomorrow ", "until the next day ", "until next year ", "until five "
+    };
+    String hasta[] = {"hasta mañana ", "hasta el siguiente dia ", "hasta el siguiente año ", "hasta las cinco "
+    };
 
-    String among[] = {"among people ", "among artist ", "among teachers "};
-    String entreamong[] = {"entre gente ", "entre artistas ", "entre maestros "};
+    String among[] = {"among people ", "among artist ", "among teachers "
+    };
+    String entreamong[] = {"entre gente ", "entre artistas ", "entre maestros "
+    };
 
-    String through[] = {"through the days ", "through the forest ", "through the vegetation ", "through the house "};
-    String throughsp[] = {"a través de los dias ", "a través de el bosque ", "a través de la vegetación ", "a través de la casa "};
+    String through[] = {"through the days ", "through the forest ", "through the vegetation ", "through the house "
+    };
+    String throughsp[] = {"a través de los dias ", "a través de el bosque ", "a través de la vegetación ", "a través de la casa "
+    };
 
-    String towrd[] = {"towards the house ", "towards the person ", "towards the police station ", "towards knowledge "};
-    String hacia[] = {"hacia la casa ", "hacia la persona ", "hacia la estación de policia ", "hacia el conocimiento "};
+    String towrd[] = {"towards the house ", "towards the person ", "towards the police station ", "towards knowledge "
+    };
+    String hacia[] = {"hacia la casa ", "hacia la persona ", "hacia la estación de policia ", "hacia el conocimiento "
+    };
 
-    String to[] = {"to the house ", "to the store ", "to school ", "to the concert "};
-    String toa[] = {"a la casa ", "a la tienda ", "a la escuela ", "a el concierto"};
+    String to[] = {"to the house ", "to the store ", "to school ", "to the concert "
+    };
+    String toa[] = {"a la casa ", "a la tienda ", "a la escuela ", "a el concierto"
+    };
 
-    String in[] = {"in the house ", "in the friedge ", "in the year ", "in the bus ", "in the car ", "in the club "};
-    String indent[] = {"en la casa ", "el el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "};
+    String in[] = {"in the house ", "in the friedge ", "in the year ", "in the bus ", "in the car ", "in the club "
+    };
+    String indent[] = {"en la casa ", "el el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
+    };
 
-    String ffor[] = {"for everyone ", "for you ", "for the city ", "for my friend "};
-    String para[] = {"para todos ", "para ti ", "para la ciudad ", "para mi amiparticipate "};
+    String ffor[] = {"for everyone ", "for you ", "for the city ", "for my friend "
+    };
+    String para[] = {"para todos ", "para ti ", "para la ciudad ", "para mi amiparticipate "
+    };
 
-    String on[] = {"on the table ", "on the wall ", "on the surface ", "on the roof ", "on the window "};
-    String sobreon[] = {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "};
+    String on[] = {"on the table ", "on the wall ", "on the surface ", "on the roof ", "on the window "
+    };
+    String sobreon[] = {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "
+    };
 
-    String by[] = {"by the house ", "by the station ", "by the river ", "by the park "};
-    String bypor[] = {"por la casa ", "por la estación ", "por el rio ", "por el parque "};
+    String by[] = {"by the house ", "by the station ", "by the river ", "by the park "
+    };
+    String bypor[] = {"por la casa ", "por la estación ", "por el rio ", "por el parque "
+    };
 
-    String about[] = {"about you ", "about the problems ", "about the book ", "about the situation "};
-    String aboutsob[] = {"sobre ti ", "sobre el problema ", "sobre el libro ", "sobre la situación "};
+    String about[] = {"about you ", "about the problems ", "about the book ", "about the situation "
+    };
+    String aboutsob[] = {"sobre ti ", "sobre el problema ", "sobre el libro ", "sobre la situación "
+    };
 
-    String above[] = {"above the house ", "above the car ", "above your head "};
-    String abovesp[] = {"por encima de la casa", "por encima de el carro ", "por encima de tu cabeza "};
+    String above[] = {"above the house ", "above the car ", "above your head "
+    };
+    String abovesp[] = {"por encima de la casa", "por encima de el carro ", "por encima de tu cabeza "
+    };
 
-    String between[] = {"between the car and the house ", "between you and me ", "between two places "};
-    String betweensp[] = {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "};
+    String between[] = {"between the car and the house ", "between you and me ", "between two places "
+    };
+    String betweensp[] = {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+    };
 
-    String since[] = {"since five ", "since this morning ", "since last year "};
-    String sincesp[] = {"desde las cinco ", "desde esta mañana ", "desde el año pasado "};
+    String since[] = {"since five ", "since this morning ", "since last year "
+    };
+    String sincesp[] = {"desde las cinco ", "desde esta mañana ", "desde el año pasado "
+    };
 
-    String under[] = {"under the radar ", "under the bed ", "under the house ", "under you "};
-    String undersp[] = {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "};
+    String under[] = {"under the radar ", "under the bed ", "under the house ", "under you "
+    };
+    String undersp[] = {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
+    };
 
-    String without[] = {"without you ", "without money ", "without permission "};
-    String sin[] = {"sin ti ", "sin dinero ", "sin permiso "};
+    String without[] = {"without you ", "without money ", "without permission "
+    };
+    String sin[] = {"sin ti ", "sin dinero ", "sin permiso "
+    };
 
-    String across[] = {"across the street ", "across the nation ", "across the park "};
-    String acrossp[] = {"cruzando la calle ", "cruzando la nacion ", "cruzando el parque "};
+    String across[] = {"across the street ", "across the nation ", "across the park "
+    };
+    String acrossp[] = {"cruzando la calle ", "cruzando la nacion ", "cruzando el parque "
+    };
 
-    String behind[] = {"behind the car ", "behind the house ", "behind the restaurant "};
-    String behindsp[] = {"atras de el carro ", "atras de la casa ", "atras de el restaurante "};
+    String behind[] = {"behind the car ", "behind the house ", "behind the restaurant "
+    };
+    String behindsp[] = {"atras de el carro ", "atras de la casa ", "atras de el restaurante "
+    };
 
-    String beyond[] = {"beyond the forest ", "beyond the city ", "beyond the jugle "};
-    String beyondsp[] = {"más allá de el bosque ", "más allá de la ciudad ", "más allá de la selva "};
+    String beyond[] = {"beyond the forest ", "beyond the city ", "beyond the jugle "
+    };
+    String beyondsp[] = {"más allá de el bosque ", "más allá de la ciudad ", "más allá de la selva "
+    };
 
-    String outof[] = {"out of the house ", "out of jail ", "out of school ", "out of the car "};
-    String outofsp[] = {"fuera de la casa", "fuera de la carcel ", "fuera de la escuela ", "fuera de el carro "};
+    String outof[] = {"out of the house ", "out of jail ", "out of school ", "out of the car "
+    };
+    String outofsp[] = {"fuera de la casa", "fuera de la carcel ", "fuera de la escuela ", "fuera de el carro "
+    };
 
-    String around[] = {"around the house ", "around the park ", "around the church ", "around the block "};
-    String aroundsp[] = {"al rededor de la casa ", "al rededor del parque ", "al rededor de la iglesia ", "al rededor de la cuadra "};
+    String around[] = {"around the house ", "around the park ", "around the church ", "around the block "
+    };
+    String aroundsp[] = {"al rededor de la casa ", "al rededor del parque ", "al rededor de la iglesia ", "al rededor de la cuadra "
+    };
 
-    String near[] = {"near the house ", "near the station ", "near the end ", "near the river "};
-    String nearsp[] = {"cerca de la casa ", "cerca de la estación ", "cerca de el fin ", "cerca del rio "};
+    String near[] = {"near the house ", "near the station ", "near the end ", "near the river "
+    };
+    String nearsp[] = {"cerca de la casa ", "cerca de la estación ", "cerca de el fin ", "cerca del rio "
+    };
 
 
     String advfrequ[] = {
@@ -309,130 +360,370 @@ public class Intrans3 {
     // the single dimention arrays are on top, now to make the special 2 dimentional arrays
 
     String restSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {among[0]},
-            {about[0]}, {without[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String descansarSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {entreamong[0]},
-            {aboutsob[0]}, {sin[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String chargeSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]}, {among[0]}, {through[0]},
-            {in[0]}, {between[0]}, {since[0]}, {without[0]}, {across[0]},
-            {behind[0]}, {around[0]}, {near[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String cobrarSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]}, {entreamong[0]}, {throughsp[0]},
-            {indent[0]}, {betweensp[0]}, {sincesp[0]}, {sin[0]}, {acrossp[0]},
-            {behindsp[0]}, {aroundsp[0]}, {nearsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String danceSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]}, {through[0]},
-            {in[0]}, {ffor[0]}, {without[0]},
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String bailarSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]}, {throughsp[0]},
-            {indent[0]}, {para[0]}, {sin[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String liveSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {without[0]}, {outof[0]},
-            {near[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String vivirSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {sin[0]}, {outofsp[0]},
-            {nearsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String stopSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]}, {among[0]},
-            {through[0]}, {in[0]}, {without[0]}, {across[0]},
-            {beyond[0]}, {outof[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String detenerSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]}, {entreamong[0]},
-            {throughsp[0]}, {indent[0]}, {sin[0]}, {acrossp[0]},
-            {beyondsp[0]}, {outofsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String failSpecial[][] = {
-            {con[0]}, {aten[0]}, {during[0]}, {through[0]}, {to[0]},
-            {in[0]}, {without[0]}, {across[0]}, {beyond[0]}, {outof[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String fallarSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {throughsp[0]}, {toa[0]},
-            {indent[0]}, {sin[0]}, {acrossp[0]}, {beyondsp[0]}, {outofsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String worrySpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]}, {among[0]},
-            {in[0]}, {since[0]}, {without[0]}, {across[0]}, {outof[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String preocuparseSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]}, {entreamong[0]},
-            {indent[0]}, {sincesp[0]}, {sin[0]}, {acrossp[0]}, {outofsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String travelSpecial[][] = {
-            {with[0]}, {at[0]}, {from[0]}, {from[0]}, {during[0]},
-            {among[0]}, {through[0]}, {in[0]}, {ffor[0]}, {without[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String viajarSpecial[][] = {
-            {con[0]}, {aten[0]}, {defrom[0]}, {defromdesde[0]}, {duringsp[0]}
-            , {entreamong[0]}, {throughsp[0]}, {indent[0]}, {para[0]}, {sin[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String returnSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]},
-            {among[0]}, {through[0]}, {in[0]}, {ffor[0]}, {since[0]},
-            {without[0]}, {outof[0]}, {around[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String devolverSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]},
-            {entreamong[0]}, {throughsp[0]}, {indent[0]}, {para[0]}, {sincesp[0]},
-            {sin[0]}, {outofsp[0]}, {aroundsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
+
     };
 
     String walkSpecial[][] = {
-            {with[0]}, {at[0]}, {from[0]}, {during[0]}, {until[0]},
-            {to[0]}, {since[0]}, {without[0]}, {beyond[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String caminarSpecial[][] = {
-            {con[0]}, {aten[0]}, {defrom[0]}, {duringsp[0]}, {hasta[0]},
-            {toa[0]}, {sincesp[0]}, {sin[0]}, {beyondsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String runSpecial[][] = {
-            {with[0]}, {at[0]}, {from[0]}, {from[0]}, {during[0]},
-            {until[0]}, {to[0]}, {without[0]}, {across[0]}, {beyond[0]},
-            {around[0]}, {near[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String correrSpecial[][] = {
-            {con[0]}, {aten[0]}, {defrom[0]}, {defromdesde[0]}, {duringsp[0]},
-            {hasta[0]}, {toa[0]}, {sin[0]}, {acrossp[0]}, {beyondsp[0]},
-            {aroundsp[0]}, {nearsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
+
     };
 
     String riseSpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {until[0]},
-            {among[0]}, {in[0]}, {ffor[0]}, {since[0]}, {without[0]},
-            {across[0]}, {outof[0]}, {around[0]}, {near[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
+
     };
     String subirSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {hasta[0]},
-            {entreamong[0]}, {indent[0]}, {para[0]}, {sincesp[0]}, {sin[0]},
-            {acrossp[0]}, {outofsp[0]}, {aroundsp[0]}, {nearsp[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
     String flySpecial[][] = {
-            {with[0]}, {at[0]}, {during[0]}, {among[0]},
-            {in[0]}, {ffor[0]}, {about[0]}, {without[0]}
+            {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
+                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                    "with the woman ",
+                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                    "with the people ", "with a nurse ",
+                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                    "with my friend ", "with my cousin ", "with the father ", "with the mother "},
+            {"at the restaurant ", "at school ", "at the house ", "at the concert ",
+                    "at the store ", "at church ", "at the hospital ",
+                    "at the office ", "at the station "},
     };
     String volarSpecial[][] = {
-            {con[0]}, {aten[0]}, {duringsp[0]}, {entreamong[0]},
-            {indent[0]}, {para[0]}, {aboutsob[0]}, {sin[0]}
+            {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
+                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                    "con gente ", "con la gente ",
+                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                    "con el maestro ", "con mi amigo ",
+                    "con mi primo ", "con el papá ", "con la mamá "},
+            {"en el restaurante (pero no dentro) ",
+                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                    "en el concierto (pero no dentro) ",
+                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                    "en el hospital (pero no dentro) ",
+                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "},
     };
 
 
