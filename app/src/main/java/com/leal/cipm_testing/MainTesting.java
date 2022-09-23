@@ -69,6 +69,14 @@ public class MainTesting extends AppCompatActivity {
             or,as1,as2,what1,what2,togo,their,can,who,toget,if1,
             would,her,all,my,tomake,about1,about2,toknow,will,up;
 
+    //50 a 100 booleanos
+    boolean one,time,there,year,so,think,when,which,
+            them,some,me,people,take,out,into,just,
+            see1,him,your,come,could,now,than,like,other,
+            how,then,its,our,two,more,these,want,way,look,
+            first,also,new1,because,day,more1,use,no,man,
+            find,here,thing,give,many,well;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -1907,6 +1915,144 @@ public class MainTesting extends AppCompatActivity {
             case "of":
                 of= true;
                 break;
+            case "a":
+                a= true;
+                break;
+            case "in":
+                in= true;
+                break;
+            case "to":
+                to= true;
+                break;
+            case "to have":
+                tohave= true;
+                break;
+            case "it":
+                it= true;
+                break;
+            case "I":
+                I= true;
+                break;
+            case "that 1":
+                that1= true;
+                break;
+            case "that 2":
+                that2= true;
+                break;
+            case "for 1":
+                for1= true;
+                break;
+            case "for 2":
+                for2= true;
+                break;
+            case "you":
+                you= true;
+                break;
+            case "he":
+                he= true;
+                break;
+            case "with":
+                with= true;
+                break;
+            case "on":
+                on= true;
+                break;
+            case "to do":
+                todo= true;
+                break;
+            case "to say":
+                tosay= true;
+                break;
+            case "they":
+                they= true;
+                break;
+            case "at":
+                at= true;
+                break;
+            case "but 1":
+                but1= true;
+                break;
+            case "we":
+                we= true;
+                break;
+            case "his":
+                his= true;
+                break;
+            case "from 1":
+                from1= true;
+                break;
+            case "from 2":
+                from2= true;
+                break;
+            case "since":
+                since= true;
+                break;
+            case "by":
+                by= true;
+                break;
+            case "she":
+                she= true;
+                break;
+            case "or":
+                or= true;
+                break;
+            case "as 1":
+                as1= true;
+                break;
+            case "as 2":
+                as2= true;
+                break;
+            case "what 1":
+                what1= true;
+                break;
+            case "what 2":
+                what2= true;
+                break;
+            case "to go":
+                togo= true;
+                break;
+            case "their":
+                their= true;
+                break;
+            case "can":
+                can= true;
+                break;
+            case "who":
+                who= true;
+                break;
+            case "to get":
+                toget= true;
+                break;
+            case "if 1":
+                if1= true;
+                break;
+            case "would":
+                would= true;
+                break;
+            case "her":
+                her= true;
+                break;
+            case "all":
+                all= true;
+                break;
+            case "my":
+                my= true;
+                break;
+            case "to make":
+                tomake= true;
+                break;
+            case "about 1":
+                about1= true;
+                break;
+            case "about 2":
+                about2= true;
+                break;
+            case "will":
+                will= true;
+                break;
+            case "up":
+                up= true;
+                break;
         }
     }
 
@@ -2009,10 +2155,111 @@ public class MainTesting extends AppCompatActivity {
         user.put("tobe",tobe);
         user.put("and",and);
         user.put("of",of);
+        user.put("a",a);
+        user.put("in",in);
+        user.put("to",to);
+        user.put("tohave",tohave);
+        user.put("it",it);
+        user.put("I",I);
+        user.put("that1",that1);
+        user.put("that2",that2);
+        user.put("for1",for1);
+        user.put("for2",for2);
+        user.put("you",you);
+        user.put("he",he);
+        user.put("with",with);
+        user.put("on",on);
+        user.put("todo",todo);
+        user.put("tosay",tosay);
+        user.put("this1",this1);
+        user.put("they",they);
+        user.put("at",at);
+        user.put("but1",but1);
+        user.put("we",we);
+        user.put("his",his);
+        user.put("from1",from1);
+        user.put("from2",from2);
+        user.put("since",since);
+        user.put("by",by);
+        user.put("she",she);
+        user.put("or",or);
+        user.put("as1",as1);
+        user.put("as2",as2);
+        user.put("what1",what1);
+        user.put("what2",what2);
+        user.put("togo",togo);
+        user.put("their",their);
+        user.put("can",can);
+        user.put("who",who);
+        user.put("toget",toget);
+        user.put("if1",if1);
+        user.put("would",would);
+        user.put("her",her);
+        user.put("all",all);
+        user.put("my",my);
+        user.put("tomake",tomake);
+        user.put("about1",about1);
+        user.put("about2",about2);
+        user.put("toknow",toknow);
+        user.put("will",will);
+        user.put("up",up);
+        //aqui termina 0 a 50
+
+        //50 a 100
+        user.put("one",one);
+        user.put("time",time);
+        user.put("there",there);
+        user.put("year",year);
+        user.put("so",so);
+        user.put("think",think);
+        user.put("when",when);
+        user.put("which",which);
+        user.put("them",them);
+        user.put("some",some);
+        user.put("me",me);
+        user.put("people",people);
+        user.put("take",take);
+        user.put("out",out);
+        user.put("into",into);
+        user.put("just",just);
+        user.put("see1",see1);
+        user.put("him",him);
+        user.put("your",your);
+        user.put("come",come);
+        user.put("could",could);
+        user.put("now",now);
+        user.put("than",than);
+        user.put("like",like);
+        user.put("other",other);
+        user.put("how",how);
+        user.put("then",then);
+        user.put("its",its);
+        user.put("our",our);
+        user.put("two",two);
+        user.put("more",more);
+        user.put("these",these);
+        user.put("want",want);
+        user.put("way",way);
+        user.put("look",look);
+        user.put("first",first);
+        user.put("also",also);
+        user.put("new1",new1);
+        user.put("because",because);
+        user.put("day",day);
+        user.put("more1",more1);
+        user.put("use",use);
+        user.put("no",no);
+        user.put("man",man);
+        user.put("find",find);
+        user.put("here",here);
+        user.put("thing",thing);
+        user.put("give",give);
+        user.put("many",many);
+        user.put("well",well);
+        //aqui termina 50 a 100
+
 
         uid.document("vocabulary").set(user);
-
-
 
     }
 

@@ -10,7 +10,7 @@ public class fiftytohundred {
             "could ","now ","than ","like ","other ",
             "how ","then ","its ","our ","two ",
             "more ","these ","want ","way ","look ",
-            "first ","also ","new ","beacuse ","day",
+            "first ","also ","new ","because ","day",
             "more ","use ","no ","man ","find ","here ",
             "thing ","give ","many ","well "
     };
