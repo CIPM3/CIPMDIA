@@ -54,12 +54,21 @@ public class MainTesting extends AppCompatActivity {
     String             txteng,userid;
     FirebaseAuth       mAuth;
     GoogleSignInClient gsc;
+
+
     public static final int REC_CODE_SPEECH_INPUT = 100;
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
     //1
     boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
     boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
     boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
+    // booleanos de los primeros 50 palabras
+    boolean the,tobe,and,of,a,in,to,tohave,it,I,
+            that1,that2,for1,for2,you,he,with,on,todo,tosay,
+            this1,they,at,but1,we,his,from1,from2,since,by,she,
+            or,as1,as2,what1,what2,togo,their,can,who,toget,if1,
+            would,her,all,my,tomake,about1,about2,toknow,will,up;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -1770,7 +1779,7 @@ public class MainTesting extends AppCompatActivity {
     //3
     private void   turnTrue(String CurrentStructure) {
 
-        switch (selection){
+        switch (CurrentStructure){
             case "Present Simple":
                 ps=true;
                 break;
@@ -1885,19 +1894,30 @@ public class MainTesting extends AppCompatActivity {
             case "Be Used To":
                 but=true;
                 break;
-            case "0 to 50":
-
+            case "the":
+                the= true;
+                Toast.makeText(this, "inside the", Toast.LENGTH_SHORT).show();
+                break;
+            case "to be":
+                tobe= true;
+                break;
+            case "and":
+                and= true;
+                break;
+            case "of":
+                of= true;
                 break;
         }
     }
 
     public void answerchecker(View view){
         switch (selectionv){
-            case "Structures ":
+            case "Syntax":
                 dbtesting();
                 break;
 
             case "Vocabulary":
+                vocabdbtesting();
 
                 break;
         }
@@ -1907,14 +1927,12 @@ public class MainTesting extends AppCompatActivity {
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
             cp= cp+1;
-           // Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
 
         }else {
             cn=cn+1;
-            //Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
         }
-
-
         if(cp==4){
             Toast.makeText(this, selection+"pasaste-Pasa a otra estructura"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp=0;
@@ -1928,9 +1946,8 @@ public class MainTesting extends AppCompatActivity {
 
 
         }
-
-        // completar esta pendejada con las keys iguales a las de student
         CollectionReference uid= db.collection(userid);
+        // completar esta pendejada con las keys iguales a las de student
         Map<String, Object> user = new HashMap<>();
         user.put("name",Answerinput.getText().toString());
         user.put("presentesimple",ps);
@@ -1977,6 +1994,28 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+    public void vocabdbtesting(){
+        String t = txteng.trim();
+        String t2 = Answerinput.getText().toString().trim();
+        if(t.equalsIgnoreCase(t2)){
+             Toast.makeText(this, String.valueOf(cp)+" is correct", Toast.LENGTH_SHORT).show();
+             turnTrue(t.trim());
+        }else {
+            Toast.makeText(this, String.valueOf(cn)+" is not correct "+txteng, Toast.LENGTH_SHORT).show();
+        }
+        CollectionReference uid= db.collection(userid);
+        Map<String, Object> user = new HashMap<>();
+        user.put("the",the);
+        user.put("tobe",tobe);
+        user.put("and",and);
+        user.put("of",of);
+
+        uid.document("vocabulary").set(user);
+
+
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

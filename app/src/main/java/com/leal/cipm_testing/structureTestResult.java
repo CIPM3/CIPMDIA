@@ -29,16 +29,11 @@ public class structureTestResult extends Fragment {
     FirebaseAuth mAuth;
     ListView lv;
     String userid;
-    TextView ttv;
     View v;
     Student  st= new Student();
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -63,7 +58,7 @@ public class structureTestResult extends Fragment {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
                     Toast.makeText(getContext(), "espere un segundo", Toast.LENGTH_SHORT).show();
-                  st=  documentSnapshot.toObject(Student.class);
+                      st=  documentSnapshot.toObject(Student.class);
                     assert st != null;
                     //aparentemente ya funciona, solo llenar el array
                     String[] est = {st.name,
@@ -111,10 +106,6 @@ public class structureTestResult extends Fragment {
                 lv.setAdapter(adapter);
             }
         });
-
-
-
-
 
 
     }

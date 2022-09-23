@@ -8,13 +8,17 @@ public class cerotofifty {
     //2 copias j=0; y la funcion vocab
     // 3 debugging
     //mandarlo a db (no esta listo)
-    String alleng[]= {"the", "the",  "to be ", "and ", "of ", "a ", "in ", "to "
-    ,"to have ",  "it ", "I", "that ", "that ", "for ", "for " , "you ", "he ", "with ", "on ",
-            "to do ", "to say", "this " , "they ", "at ", "but ", "we ", "his ", "from ","from ","since",   "by ", "she ",
-            "or ", "as ", "as ", "what ", "what ", "to go ", "their ", "can ", "who ", "to get ", "if ",
-            "would", "her ", "all ", "my ", "to make ", "about ", "about ", "to know ", "will ", "up "
+    String alleng[]= {"the",  "to be", "and", "of", "a", "in ", "to "
+    ,"to have",  "it ", "I", "that ", "that ", "for ", "for " , "you ", "he ",
+            "with ", "on ",
+            "to do ", "to say", "this " , "they ", "at ", "but ", "we ", "his ",
+            "from ","from ","since",   "by ", "she ",
+            "or ", "as ", "as ", "what ", "what ", "to go ", "their ", "can ",
+            "who ", "to get ", "if ",
+            "would", "her ", "all ", "my ", "to make ", "about ", "about ",
+            "to know ", "will ", "up "
     };
-    String allsp[]= {"el, la, los o las","el, la, los o las", "ser o estar", "y ", "de ", "un o una", "en ", "a ",
+    String allsp[]= {"el, la, los o las", "ser o estar", "y ", "de ", "un o una", "en ", "a ",
     "tener o haber ", "eso ", "yo ", "eso ", "que, para conectar", "por ", "para ", "tu", "el ", "con ", "sobre ", "hacer ",
             "decir ", "esto ", "ellos ", "en " , "pero ", "nosotros" , "su de el ", "desde, para un lugar","de ","desde ", "por ", "ella ",
             "o ", "como ", "en lo que ", "que, para preguntar ", "lo que ", "ir " , "su de ellos", "poder ", "quien ", "obtener ", "si",
@@ -102,10 +106,6 @@ public class cerotofifty {
         j++;
 
     }
-
-
-
-
     public void prepartob() {
         int i = (int) (Math.random() * articles.length);
         int ii = (int) (Math.random() * soms.length);

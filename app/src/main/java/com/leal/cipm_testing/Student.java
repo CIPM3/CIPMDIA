@@ -21,67 +21,7 @@ public class Student {
     public Student() {
 
     }
-    public Student( String name,
-          boolean presentesimple, boolean presenteContinuo, boolean presentePerfecto,boolean presentePerfectoContinuo,
-            boolean pastsimple, boolean pastContinuo, boolean pastPerfecto, boolean pastPerfectoContinuo,
-            boolean futuresimple, boolean futureContinuo, boolean futurePerfecto, boolean futurePerfectoContinuo,
-            boolean wouldsimple, boolean wouldContinuo, boolean wouldPerfecto, boolean wouldPerfectoContinuo,
-            boolean couldsimple, boolean couldContinuo, boolean couldPerfecto, boolean couldPerfectoContinuo,
-            boolean mightsimple, boolean mightContinuo, boolean mightPerfecto, boolean mightPerfectoContinuo,
-            boolean cansimple, boolean canContinuo, boolean mustsimple, boolean mustContinuo,
-            boolean shouldsimple, boolean shouldContinuo, boolean shouldPerfecto, boolean shouldPerfectoContinuo,
-            boolean wantTo, boolean forTo, boolean supposedToPresent, boolean wishPastPerfect, boolean usedTo,
-            boolean beUsedTo
-    ) {
-        this.name=name;
-        this.presentesimple = presentesimple;
-        this.presenteContinuo= presenteContinuo;
-        this.presentePerfecto = presentePerfecto;
-        this.presentePerfectoContinuo = presentePerfectoContinuo;
 
-        this.pastsimple = pastsimple;
-        this.pastContinuo= pastContinuo;
-        this.pastPerfecto = pastPerfecto;
-        this.pastPerfectoContinuo = pastPerfectoContinuo;
-
-        this.futuresimple = futuresimple;
-        this.futureContinuo= futureContinuo;
-        this.futurePerfecto = futurePerfecto;
-        this.futurePerfectoContinuo = futurePerfectoContinuo;
-
-        this.wouldsimple = wouldsimple;
-        this.wouldContinuo= wouldContinuo;
-        this.wouldPerfecto = wouldPerfecto;
-        this.wouldPerfectoContinuo = wouldPerfectoContinuo;
-
-        this.couldsimple = couldsimple;
-        this.couldContinuo= couldContinuo;
-        this.couldPerfecto = couldPerfecto;
-        this.couldPerfectoContinuo = couldPerfectoContinuo;
-
-        this.mightsimple = mightsimple;
-        this.mightContinuo= mightContinuo;
-        this.mightPerfecto = mightPerfecto;
-        this.mightPerfectoContinuo = mightPerfectoContinuo;
-
-        this.cansimple = cansimple;
-        this.canContinuo= canContinuo;
-
-        this.mustsimple = mustsimple;
-        this.mustContinuo= mustContinuo;
-
-        this.shouldsimple = shouldsimple;
-        this.shouldContinuo= shouldContinuo;
-        this.shouldPerfecto = shouldPerfecto;
-        this.shouldPerfectoContinuo = shouldPerfectoContinuo;
-
-        this.wantTo = wantTo;
-        this.forTo = forTo;
-        this.supposedToPresent = supposedToPresent;
-        this.wishPastPerfect = wishPastPerfect;
-        this.usedTo = usedTo;
-        this.beUsedTo = beUsedTo;
-    }
 
     public void setName(String name) {
         this.name = name;
