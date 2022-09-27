@@ -3,13 +3,13 @@ package com.leal.cipm_testing;
 public class cientociencincuenta {
 
     String alleng[]={
-            "well ","well ","only ","those ","tell ","one ","very ","her ","even ",
+            "only ","only ","those ","tell ","one ","very ","her ","even ",
             "back ","any ","good ","woman ","through ","us ","life ","child ",
             "there ","work ","down ","may ","after ","should ","call ","world ",
             "over ","school ","still ","try ","in ","as ","last ","ask ","need ",
             "too ","feel ","three ","when ","state ","never ","become ","between ",
             "high ","really ","something ","most ","another ","much ",
-            "another ","much ","family ","own ","out ","leave "
+            "another ","much ","family ","own ","out ","leave ","put"
     };
 
     String allsp[]={

@@ -17,6 +17,15 @@ public class StudentVocabRestultsModel {
             first,also,new1,because,day,more1,use,no,man,
             find,here,thing,give,many,well;
 
+    //100 a 150 booleanos
+    boolean only ,those ,tell ,one1 ,very ,her1 ,even ,
+            back ,any ,good ,woman ,through ,us ,life ,child ,
+            there1 ,work ,down ,may ,after ,should ,call ,world,
+            over ,school ,still ,try1 ,in1 ,as ,last ,ask ,need ,
+            too ,feel ,three ,when1 ,state ,never ,become ,between ,
+            high ,really ,something ,most ,another ,much ,
+            another1 ,much1 ,family ,own ,out1 ,leave ,put;
+
 
 
     public StudentVocabRestultsModel(){}
@@ -836,5 +845,429 @@ public class StudentVocabRestultsModel {
 
     public void setWell(boolean well) {
         this.well = well;
+    }
+
+    public boolean isOnly() {
+        return only;
+    }
+
+    public void setOnly(boolean only) {
+        this.only = only;
+    }
+
+    public boolean isThose() {
+        return those;
+    }
+
+    public void setThose(boolean those) {
+        this.those = those;
+    }
+
+    public boolean isTell() {
+        return tell;
+    }
+
+    public void setTell(boolean tell) {
+        this.tell = tell;
+    }
+
+    public boolean isOne1() {
+        return one1;
+    }
+
+    public void setOne1(boolean one1) {
+        this.one1 = one1;
+    }
+
+    public boolean isVery() {
+        return very;
+    }
+
+    public void setVery(boolean very) {
+        this.very = very;
+    }
+
+    public boolean isHer1() {
+        return her1;
+    }
+
+    public void setHer1(boolean her1) {
+        this.her1 = her1;
+    }
+
+    public boolean isEven() {
+        return even;
+    }
+
+    public void setEven(boolean even) {
+        this.even = even;
+    }
+
+    public boolean isBack() {
+        return back;
+    }
+
+    public void setBack(boolean back) {
+        this.back = back;
+    }
+
+    public boolean isAny() {
+        return any;
+    }
+
+    public void setAny(boolean any) {
+        this.any = any;
+    }
+
+    public boolean isGood() {
+        return good;
+    }
+
+    public void setGood(boolean good) {
+        this.good = good;
+    }
+
+    public boolean isWoman() {
+        return woman;
+    }
+
+    public void setWoman(boolean woman) {
+        this.woman = woman;
+    }
+
+    public boolean isThrough() {
+        return through;
+    }
+
+    public void setThrough(boolean through) {
+        this.through = through;
+    }
+
+    public boolean isUs() {
+        return us;
+    }
+
+    public void setUs(boolean us) {
+        this.us = us;
+    }
+
+    public boolean isLife() {
+        return life;
+    }
+
+    public void setLife(boolean life) {
+        this.life = life;
+    }
+
+    public boolean isChild() {
+        return child;
+    }
+
+    public void setChild(boolean child) {
+        this.child = child;
+    }
+
+    public boolean isThere1() {
+        return there1;
+    }
+
+    public void setThere1(boolean there1) {
+        this.there1 = there1;
+    }
+
+    public boolean isWork() {
+        return work;
+    }
+
+    public void setWork(boolean work) {
+        this.work = work;
+    }
+
+    public boolean isDown() {
+        return down;
+    }
+
+    public void setDown(boolean down) {
+        this.down = down;
+    }
+
+    public boolean isMay() {
+        return may;
+    }
+
+    public void setMay(boolean may) {
+        this.may = may;
+    }
+
+    public boolean isAfter() {
+        return after;
+    }
+
+    public void setAfter(boolean after) {
+        this.after = after;
+    }
+
+    public boolean isShould() {
+        return should;
+    }
+
+    public void setShould(boolean should) {
+        this.should = should;
+    }
+
+    public boolean isCall() {
+        return call;
+    }
+
+    public void setCall(boolean call) {
+        this.call = call;
+    }
+
+    public boolean isWorld() {
+        return world;
+    }
+
+    public void setWorld(boolean world) {
+        this.world = world;
+    }
+
+    public boolean isOver() {
+        return over;
+    }
+
+    public void setOver(boolean over) {
+        this.over = over;
+    }
+
+    public boolean isSchool() {
+        return school;
+    }
+
+    public void setSchool(boolean school) {
+        this.school = school;
+    }
+
+    public boolean isStill() {
+        return still;
+    }
+
+    public void setStill(boolean still) {
+        this.still = still;
+    }
+
+    public boolean isTry1() {
+        return try1;
+    }
+
+    public void setTry1(boolean try1) {
+        this.try1 = try1;
+    }
+
+    public boolean isIn1() {
+        return in1;
+    }
+
+    public void setIn1(boolean in1) {
+        this.in1 = in1;
+    }
+
+    public boolean isAs() {
+        return as;
+    }
+
+    public void setAs(boolean as) {
+        this.as = as;
+    }
+
+    public boolean isLast() {
+        return last;
+    }
+
+    public void setLast(boolean last) {
+        this.last = last;
+    }
+
+    public boolean isAsk() {
+        return ask;
+    }
+
+    public void setAsk(boolean ask) {
+        this.ask = ask;
+    }
+
+    public boolean isNeed() {
+        return need;
+    }
+
+    public void setNeed(boolean need) {
+        this.need = need;
+    }
+
+    public boolean isToo() {
+        return too;
+    }
+
+    public void setToo(boolean too) {
+        this.too = too;
+    }
+
+    public boolean isFeel() {
+        return feel;
+    }
+
+    public void setFeel(boolean feel) {
+        this.feel = feel;
+    }
+
+    public boolean isThree() {
+        return three;
+    }
+
+    public void setThree(boolean three) {
+        this.three = three;
+    }
+
+    public boolean isWhen1() {
+        return when1;
+    }
+
+    public void setWhen1(boolean when1) {
+        this.when1 = when1;
+    }
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
+    public boolean isNever() {
+        return never;
+    }
+
+    public void setNever(boolean never) {
+        this.never = never;
+    }
+
+    public boolean isBecome() {
+        return become;
+    }
+
+    public void setBecome(boolean become) {
+        this.become = become;
+    }
+
+    public boolean isBetween() {
+        return between;
+    }
+
+    public void setBetween(boolean between) {
+        this.between = between;
+    }
+
+    public boolean isHigh() {
+        return high;
+    }
+
+    public void setHigh(boolean high) {
+        this.high = high;
+    }
+
+    public boolean isReally() {
+        return really;
+    }
+
+    public void setReally(boolean really) {
+        this.really = really;
+    }
+
+    public boolean isSomething() {
+        return something;
+    }
+
+    public void setSomething(boolean something) {
+        this.something = something;
+    }
+
+    public boolean isMost() {
+        return most;
+    }
+
+    public void setMost(boolean most) {
+        this.most = most;
+    }
+
+    public boolean isAnother() {
+        return another;
+    }
+
+    public void setAnother(boolean another) {
+        this.another = another;
+    }
+
+    public boolean isMuch() {
+        return much;
+    }
+
+    public void setMuch(boolean much) {
+        this.much = much;
+    }
+
+    public boolean isAnother1() {
+        return another1;
+    }
+
+    public void setAnother1(boolean another1) {
+        this.another1 = another1;
+    }
+
+    public boolean isMuch1() {
+        return much1;
+    }
+
+    public void setMuch1(boolean much1) {
+        this.much1 = much1;
+    }
+
+    public boolean isFamily() {
+        return family;
+    }
+
+    public void setFamily(boolean family) {
+        this.family = family;
+    }
+
+    public boolean isOwn() {
+        return own;
+    }
+
+    public void setOwn(boolean own) {
+        this.own = own;
+    }
+
+    public boolean isOut1() {
+        return out1;
+    }
+
+    public void setOut1(boolean out1) {
+        this.out1 = out1;
+    }
+
+    public boolean isLeave() {
+        return leave;
+    }
+
+    public void setLeave(boolean leave) {
+        this.leave = leave;
+    }
+
+    public boolean isPut() {
+        return put;
+    }
+
+    public void setPut(boolean put) {
+        this.put = put;
     }
 }
