@@ -9,12 +9,12 @@ public class People4 {
     //estos frases preposicionales van con este tipo de verbo
 
     String vnb[] = {
-            "shoot", "select", "kick","treat"
-            ,"abuse","beat","hire","kill"
-            ,"feed","attack","impress","mention"
-            ,"command","hate","scratch","strike"
-            ,"employ","hurt","miss","respond"
-            ,"quote"
+            "shoot ", "select ", "kick ","treat "
+            ,"abuse ","beat ","hire ","kill "
+            ,"feed ","attack ","impress ","mention "
+            ,"command ","hate ","scratch ","strike "
+            ,"employ ","hurt ","miss ","respond "
+            ,"quote "
     };
 
     String vnbs[]={
@@ -27,11 +27,12 @@ public class People4 {
     };
 
     String vn3[]={
-            "shoots ","selects ","kicks ","treats ","abuses ",
-            "beats ","hires ","kills ","feeds ","attacks ",
-            "impresses ","mentions ","commands ","hates ",
-            "scratches ","strikes ","employs ","hurts ",
-            "misses ","responds ","quotes "
+            "shoots ","selects ","kicks ","treats ",
+            "abuses ", "beats ","hires ","kills ",
+            "feeds ","attacks ", "impresses ","mentions ",
+            "commands ","hates ", "scratches ","strikes ",
+            "employs ","hurts ", "misses ","responds ",
+            "quotes "
     };
 
     String vn1[]={
@@ -57,7 +58,8 @@ public class People4 {
             "abusa ","derrota ","contrata ","mata ",
             "alimenta ","ataca ","impresiona ","menciona ",
             "ordena ","odia ","rasguña ","golpea ",
-            "emplea ","hiere ","extraña"
+            "emplea ","hiere ","extraña ","responde ",
+            "cita "
     };
 
     String vn4[]={
@@ -65,7 +67,8 @@ public class People4 {
             "abusan ","derrotan ","contratan ","matan ",
             "alimentan ","atacan ","impresionan ","mencionan ",
             "ordenan ","odian ","rasguñan ","golpean ",
-            "emplean ","hieren ","extrañan "
+            "emplean ","hieren ","extrañan ","responden ",
+            "citan "
     };
 
     String vn5[]={
@@ -73,7 +76,8 @@ public class People4 {
             "abusamos ","derrotamos ","contratamos ","matamos ",
             "alimentamos ","atacamos ","impresionamos ","mencionamos ",
             "ordenamos ","odiamos ","rasguñamos ","golpeamos ",
-            "empleamos ","heriamos ","extrañamos "
+            "empleamos ","heriamos ","extrañamos ","respondemos ",
+            "citamos "
     };
 
     String vnbcs[]={
@@ -81,7 +85,8 @@ public class People4 {
             "abusando ","derrotando ","contratando ","matando ",
             "alimentando ","atacando ","impresionando ","mencionando ",
             "ordenando ","odiando ","rasguñando ","golpeando ",
-            "empleando ","hiriendo ","extrañando "
+            "empleando ","hiriendo ","extrañando ","respondiendo ",
+            "citando "
     };
 
     String vnbc[]={
@@ -98,7 +103,8 @@ public class People4 {
             "abusado ","derrotado ","contratado ","matado ",
             "alimentado ","atacado ","impresionado ","mencionado ",
             "ordenado ","odiado ","rasguñado ","golpeado ",
-            "empleado ","herido ","extrañado "
+            "empleado ","herido ","extrañado ","respondido ",
+            "citado "
     };
 
     String vpeng[]={
@@ -124,7 +130,8 @@ public class People4 {
             "abuse ","derrote ","contrate ","mate ",
             "alimente ","ataque ","impresione ","mencione ",
             "ordene ","odie ","rasguñe ","golpie ",
-            "emplee ","heri ","extrañe "
+            "emplee ","heri ","extrañe ","respondi ",
+            "cite "
     };
 
     String ps1imp[]={
@@ -132,7 +139,8 @@ public class People4 {
             "abusaba ","derrotaba ","contrataba ","mataba ",
             "alimentaba ","atacaba ","impresionaba ","mencionaba ",
             "ordenaba ","odiaba ","rasguñaba ","golpeaba ",
-            "empleaba ","heria ","extrañaba "
+            "empleaba ","heria ","extrañaba ","respondia ",
+            "citaba "
     };
 
     String ps2pre[]={
@@ -140,7 +148,8 @@ public class People4 {
             "abusaste ","derrotaste ","contrataste ","mataste ",
             "alimentaste ","atacaste ","impresionaste ","mencionaste ",
             "ordenaste ","odiaste ","rasguñaste ","golpeaste ",
-            "empleaste ","heriste ","extrañaste "
+            "empleaste ","heriste ","extrañaste ","respondiste ",
+            "citaste "
     };
 
     String ps2imp[]={
@@ -148,7 +157,8 @@ public class People4 {
             "abusabas ","derrotabas ","contratabas ","matabas ",
             "alimentabas ","atacabas ","impresionabas ",
             "ordenabas ","odiabas ","rasguñabas ","golpeabas ",
-            "empleabas ","herias ","extrañabas "
+            "empleabas ","herias ","extrañabas ","respondias ",
+            "citabas "
     };
 
     String ps3p[]={
@@ -156,7 +166,8 @@ public class People4 {
             "abuso ","derroto ","contrato ","mato ",
             "alimento ","ataco ","impresiono ",
             "ordeno ","odio ","rasguño ","golpeo ",
-            "empleo ","hirio ","extraño "
+            "empleo ","hirio ","extraño ","respondo ",
+            "cito "
     };
 
     String ps3imp[]={
@@ -164,7 +175,8 @@ public class People4 {
             "abusaba ","derrotaba ","contrataba ","mataba ",
             "alimentaba ","atacaba ","impresionaba ","mencionaba ",
             "ordenaba ","odiaba ","rasguñaba ","golpeaba ",
-            "empleaba ","heria ","extrañaba "
+            "empleaba ","heria ","extrañaba ","respondias ",
+            "citabas "
     };
 
     String vn4p[]={
@@ -172,7 +184,8 @@ public class People4 {
             "abusaron ","derrotaron ","contrataron ","mataron ",
             "alimentaron ","atacaron ","impresionaron ",
             "ordenaron ","odiaron ","rasguñaron ","golpearon ",
-            "emplearon ","hirieron ","extrañaron "
+            "emplearon ","hirieron ","extrañaron ","respondieron ",
+            "citaron "
     };
 
     String vn4imp[]={
@@ -180,7 +193,8 @@ public class People4 {
             "abusaban ","derrotaban ","contrataban ","mataban ",
             "alimentaban ","atacaban ","impresionaban ",
             "ordenaban ","odiaban ","rasguñaban ","golpeaban ",
-            "empleaban ","herian ","extrañaban "
+            "empleaban ","herian ","extrañaban ","respondian ",
+            "citaban "
     };
 
     String vn5p[]={
@@ -188,7 +202,8 @@ public class People4 {
             "abusamos ","derrotamos ","contratamos ","matamos ",
             "alimentamos ","atacamos ","impresionamos ",
             "ordenamos ","odiamos ","rasguñamos ","golpeamos ",
-            "empleamos ","herimos ","extrañamos "
+            "empleamos ","herimos ","extrañamos ","respondimos ",
+            "citamos "
     };
 
     String vn5imp[]={
@@ -196,7 +211,8 @@ public class People4 {
             "abusabamos ","derrotabamos ","contratabamos ","matabamos ",
             "alimentabamos ","atacabamos ","impresionabamos ",
             "ordenabamos ","odiabamos ","rasguñabamos ","golpeabamos ",
-            "empleabamos ","heriamos ","extrañabamos "
+            "empleabamos ","heriamos ","extrañabamos ","responiamos ",
+            "citabamos "
     };
 
     String ps1wish[]={
@@ -204,7 +220,8 @@ public class People4 {
             "abusar ","derrotar ","contratar ","matar ",
             "alimentar ","atacar ","impresionar ","mencionar ",
             "ordenar ","odiar ","rasguñar ","golpear ",
-            "emplear ","herir ","extrañar "
+            "emplear ","herir ","extrañar ","respondera ",
+            "citar "
     };
 
     String ps2wish[]={
@@ -212,7 +229,8 @@ public class People4 {
             "abusaras ","derrotaras ","contrataras ","mataras ",
             "alimentaras ","atacaras ","impresionaras ","mencionaras ",
             "ordenaras ","odiaras ","rasguñaras ","golpearas ",
-            "emplearas ","heriras ","extrañaras "
+            "emplearas ","heriras ","extrañaras ","responderas ",
+            "citaras "
     };
 
     String ps3wish[]={
@@ -220,7 +238,8 @@ public class People4 {
             "abusar ","derrotar ","contratar ","matar ",
             "alimentar ","atacar ","impresionar ","mencionar ",
             "ordenar ","odiar ","rasguñar ","golpear ",
-            "emplear ","herir ","extrañar "
+            "emplear ","herir ","extrañar ","respondera ",
+            "citara "
     };
 
     String ps4wish[]={
@@ -228,7 +247,8 @@ public class People4 {
             "abusaran ","derrotaran ","contrataran ","mataran ",
             "alimentaran ","atacaran ","impresionaran ","mencionaran ",
             "ordenaran ","odiaran ","rasguñaran ","golpearan ",
-            "emplearan ","heriran ","extrañaran "
+            "emplearan ","heriran ","extrañaran ","responderan ",
+            "citaran "
     };
 
     String ps5wish[]={
@@ -236,7 +256,8 @@ public class People4 {
             "abusaremos ","derrotaremos ","contrataremos ","mataremos ",
             "alimentaremos ","atacaremos ","impresionaremos ","mencionaremos ",
             "ordenaremos ","odiaremos ","rasguñaremos ","golpearemos ",
-            "emplearemos ","heriremos ","extrañaremos "
+            "emplearemos ","heriremos ","extrañaremos ","responderemos ",
+            "citaremos "
     };
 
     String vn1f[]={
@@ -244,7 +265,8 @@ public class People4 {
             "abusare ","derrotare ","contratare ","matare ",
             "alimentare ","atacare ","impresionare ","mencionare ",
             "ordenare ","odiare ","rasguñare ","golpeare ",
-            "empleare ","herire ","extrañare "
+            "empleare ","herire ","extrañare ","respondere ",
+            "citare "
     };
 
     String vn2f[]={
@@ -252,7 +274,8 @@ public class People4 {
             "abusaras ","derrotaras ","contrataras ","mataras ",
             "alimentaras ","atacaras ","impresionaras ","mencionaras ",
             "ordenaras ","odiaras ","rasguñaras ","golpearas ",
-            "emplearas ","heriras ","extrañaras "
+            "emplearas ","heriras ","extrañaras ","responderas ",
+            "citaras "
     };
 
     String vnbf[]={
@@ -260,7 +283,8 @@ public class People4 {
             "abusara ","derrotara ","contratara ","matara ",
             "alimentara ","atacara ","impresionara ","mencionara ",
             "ordenara ","odiara ","rasguñara ","golpeara ",
-            "empleara ","herira ","extrañara "
+            "empleara ","herira ","extrañara ","respondera ",
+            "citara "
     };
 
     String vn4f[]={
@@ -268,7 +292,8 @@ public class People4 {
             "abusaran ","derrotaran ","contrataran ","mataran ",
             "alimentaran ","atacaran ","impresionaran ","mencionaran ",
             "ordenaran ","odiaran ","rasguñaran ","golpearan ",
-            "emplearan ","heriran ","extrañaran "
+            "emplearan ","heriran ","extrañaran ","responderan ",
+            "citaran "
     };
 
     String vn5f[]={
@@ -276,7 +301,8 @@ public class People4 {
             "abusaremos ","derrotaremos ","contrataremos ","mataremos ",
             "alimentaremos ","atacaremos ","impresionaremos ","mencionaremos ",
             "ordenaremos ","odiaremos ","rasguñaremos ","golpearemos ",
-            "emplearemos ","heriremos ","extrañaremos "
+            "emplearemos ","heriremos ","extrañaremos ","responderemos ",
+            "citaremos "
     };
 
     String vn1w[]={
@@ -284,7 +310,8 @@ public class People4 {
             "abusaria ","derrotaria ","contrataria ","mataria ",
             "alimentaria ","atacaria ","impresionaria ","mencionaria ",
             "ordenaria ","odiaria ","rasguñaria ","golpearia ",
-            "emplearia ","heriria ","extrañaria "
+            "emplearia ","heriria ","extrañaria ","responderia ",
+            "citaria "
     };
 
     String vn2w[]={
@@ -292,7 +319,8 @@ public class People4 {
             "abusarias ","derrotarias ","contratarias ","matarias ",
             "alimentarias ","atacarias ","impresionarias ","mencionarias ",
             "ordenarias ","odirarias ","rasguñarias ","golpearias ",
-            "emplearias ","heririas ","extrañarias "
+            "emplearias ","heririas ","extrañarias ","responderias ",
+            "citarias "
     };
 
     String vnbw[]={
@@ -300,7 +328,8 @@ public class People4 {
             "abusaria ","derrotaria ","contrataria ","mataria ",
             "alimentaria ","atacaria ","impresionaria ","mencionaria ",
             "ordenaria ","odiaria ","rasguñaria ","golpearia ",
-            "emplearia ","heriria ","extrañaria "
+            "emplearia ","heriria ","extrañaria ","responderia ",
+            "citaria "
     };
 
     String vn4w[]={
@@ -308,7 +337,8 @@ public class People4 {
             "abusarian ","derrotarian ","contratarian ","matarian ",
             "alimentarian ","atacarian ","impresionarian ","mencionarian ",
             "ordenarian ","odiarian ","rasguñarian ","golpearian ",
-            "emplearian ","heririan ","extrañarian "
+            "emplearian ","heririan ","extrañarian ","responderian ",
+            "citarian "
     };
 
     String vn5w[]={
@@ -316,7 +346,8 @@ public class People4 {
             "abusariamos ","derrotariamos ","contratariamos ","matariamos ",
             "alimentariamos ","atacariamos ","impresionariamos ","mencionariamos ",
             "ordenariamos ","odiariamos ","rasguñariamos ","golpeariamos ",
-            "empleariamos ","heririramos ","extrañariamos "
+            "empleariamos ","heririramos ","extrañariamos ","responderiamos ",
+            "citariamos "
     };
 
     String vn1y3subj[]={
@@ -324,7 +355,8 @@ public class People4 {
             "abuse ","derrote ","contrate ","mate ",
             "alimente ","ataque ","impresione ","mencione ",
             "ordene ","odiare ","rasguñe ","golpeare ",
-            "emplee ","heri ","extrañe "
+            "emplee ","heri ","extrañe ","respondi ",
+            "cite "
     };
 
     String vn2subj[]={
@@ -332,7 +364,8 @@ public class People4 {
             "abuses ","derrotes ","contrates ","mates ",
             "alimentes ","ataques ","impresiones ","menciones ",
             "ordenes ","odies ","rasguñes ","golpees ",
-            "emplees ","hieres ","extrañes "
+            "emplees ","hieres ","extrañes ","respondes ",
+            "cites "
     };
 
     String vn4subj[]={
@@ -340,7 +373,8 @@ public class People4 {
             "abusen ","derroten ","contraten ","maten ",
             "alimenten ","ataquen ","impresionen ","mencionen ",
             "ordenen ","odien ","rasguñen ","golpeen ",
-            "empleen ","hieren ","extrañen "
+            "empleen ","hieren ","extrañen ","responden ",
+            "citen "
     };
 
     String vn5subj[]={
@@ -348,7 +382,8 @@ public class People4 {
             "abusemos ","derrotemos ","contratemos ","matemos ",
             "alimentemos ","ataquemos ","impresionemos ","mencionemos ",
             "ordenemos ","odiemos ","rasguñenmos ","golpeemos ",
-            "empleemos ","herimos ","extrañemos "
+            "empleemos ","herimos ","extrañemos ","respondemos ",
+            "citemos "
     };
 
     // objetos persona

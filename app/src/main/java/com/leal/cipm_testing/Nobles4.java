@@ -2864,7 +2864,7 @@ public class Nobles4 {
                 ps2eng = "you have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él "  + "ha estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he has "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he has " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -2894,7 +2894,7 @@ public class Nobles4 {
                 ps2eng = "you haven't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you haven't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "ha estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "ha estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he hasn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hasn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3206,7 +3206,7 @@ public class Nobles4 {
                 ps2eng2 = "you had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "había estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he had "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3239,7 +3239,7 @@ public class Nobles4 {
                 ps2eng = "you hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
-                ps3 = "él no " + "había estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he hadn't "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3502,7 +3502,7 @@ public class Nobles4 {
                 ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he will have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3539,7 +3539,7 @@ public class Nobles4 {
                 ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he won't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he won't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3799,7 +3799,7 @@ public class Nobles4 {
                 ps2eng2 = "you would have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él "  + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he would have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he would have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -3835,7 +3835,7 @@ public class Nobles4 {
                 ps2eng2 = "you wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él no " + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he wouldn't have "  + "been " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he wouldn't have " + "been " + vnbc[v] + nnobles[n] + frequadv[r];
 
@@ -6103,7 +6103,7 @@ public class Nobles4 {
                 ps2eng = "you have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you have " + "been " + vnbc[v] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él " + "ha estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "ha estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he has " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he has " + "been " + vnbc[v] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6457,7 +6457,7 @@ public class Nobles4 {
                 ps2eng2 = "you had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él " + "había estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he had " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6490,7 +6490,7 @@ public class Nobles4 {
                 ps2eng = "you hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él no " + "había estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él no " + "había estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he hadn't " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6765,7 +6765,7 @@ public class Nobles4 {
                 ps2eng2 = "you will have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he will have " + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he will have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -6802,7 +6802,7 @@ public class Nobles4 {
                 ps2eng2 = "you won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
 
-                ps3 = "él no " + "habrá estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps3 = "él no " + "habrá estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps3eng = "he won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he won't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
@@ -7077,7 +7077,7 @@ public class Nobles4 {
                 ps2eng2 = "you would have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él "  + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he would have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he would have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7113,7 +7113,7 @@ public class Nobles4 {
                 ps2eng2 = "you wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él no " + "hubiera estdo " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
