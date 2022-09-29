@@ -24,12 +24,13 @@ public class Oo4 {
 
     // verbos orientados a objetos
     String vnbs[] = {
-            "fix ", "connect ", "grab ", "crash ", "divide ", "wash ", "waste ", "pull ",
-            "collect ", "fill ", "expose ", "repair ", "split "
-    };
-    String vnb[] = {
             "arreglar ", "conectar ", "agarrar ", "chocar ", "dividir ", "lavar ", "malgastar ",
             "jalar ", "coleccionar ", "llenar ", "exponer ", "reparar ", "partir "
+
+    };
+    String vnb[] = {
+            "fix ", "connect ", "grab ", "crash ", "divide ", "wash ", "waste ", "pull ",
+            "collect ", "fill ", "expose ", "repair ", "split "
     };
     String vn3[] = {
             "fixes ", "connects ", "grabs ", "crashes ", "divides ", "washes ", "wastes ",
