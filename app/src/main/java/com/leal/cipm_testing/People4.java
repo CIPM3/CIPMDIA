@@ -394,7 +394,7 @@ public class People4 {
     };
 
     String nnoblesesp[]={
-            "a la prima ", "a el editor ", "a el líder", "a la mamá ", "a el cantante ",
+            "a la prima ", "a el editor ", "a el líder ", "a la mamá ", "a el cantante ",
             "a la policía ","a la reina ", "a la esposa ", "a el granjero ",
             "a la niña ", "a el historiador ","a el hijo ", "a el ganador ",
             "a el trabajador ", "a el escritor "
@@ -3939,17 +3939,17 @@ public class People4 {
                 ps2eng2 = "you might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él quizá " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3ella = "ella quizá " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she might " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso quizá " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3eso = "eso quizá " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it might " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it might " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -3975,17 +3975,17 @@ public class People4 {
                 ps2eng2 = "you " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3 = "él " + "quizá no " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3ella = "ella " + "quizá no " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso " + "quizá no " + vn1y3subj[v] + nnoblesesp[n] + advfrequ[r];
+                ps3eso = "eso " + "quizá no " + vnbf[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3iteng2 = "it " + "might not " + vnb[v] + nnobles[n] + frequadv[r];
 
@@ -7868,17 +7868,17 @@ public class People4 {
                 ps2eng2 = "you might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él quiza " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "él quiza " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella quiza " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3ella = "ella quiza " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "she might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso quiza " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3eso = "eso quiza " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3it = "it might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it might " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -7904,17 +7904,17 @@ public class People4 {
                 ps2eng2 = "you " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él " + "quiza no " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "él " + "quiza no " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella " + "quiza no " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3ella = "ella " + "quiza no " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "she " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso " + "quiza no " + vn1y3subj[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3eso = "eso " + "quiza no " + vnbf[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3it = "it " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it " + "might not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
