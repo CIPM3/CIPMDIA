@@ -26,6 +26,9 @@ public class StudentVocabRestultsModel {
             high ,really ,something ,most ,another ,much ,
             another1 ,much1 ,family ,own ,out1 ,leave ,put;
 
+    // 50 a 100 booleanos
+
+
 
 
     public StudentVocabRestultsModel(){}

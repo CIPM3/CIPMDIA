@@ -320,8 +320,6 @@ public class SpanishInt extends AppCompatActivity {
                                                     t4= "null";
                                                     t5= "null";
                                                     t6= "null";
-
-
                                                     // en caso de int de sujeto tercer persona
                                                     //engtx.setTextColor(Color.WHITE);
                                                     answerinp.setText("");
@@ -338,7 +336,6 @@ public class SpanishInt extends AppCompatActivity {
 
                         break;
                 }
-
                 break;
             case "Por Sujeto":
                 switch (selection2){
@@ -375,8 +372,6 @@ public class SpanishInt extends AppCompatActivity {
                                                     t4= "null";
                                                     t5= "null";
                                                     t6= "null";
-
-
                                                     // en caso de int de sujeto tercer persona
                                                     answerinp.setText("");
                                                     tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
@@ -436,7 +431,6 @@ public class SpanishInt extends AppCompatActivity {
                         break;
                 }
                 break;
-
             case "Por Objeto":
                 switch (selection2){
                     case "Present Simple":
@@ -472,8 +466,6 @@ public class SpanishInt extends AppCompatActivity {
                                                     t4= "null";
                                                     t5= "null";
                                                     t6= "null";
-
-
                                                     // en caso de int de sujeto tercer persona
                                                     //engtx.setTextColor(Color.WHITE);
                                                     answerinp.setText("");
@@ -536,7 +528,6 @@ public class SpanishInt extends AppCompatActivity {
                         break;
                 }
                 break;
-
             case "Interferencia Reflexiva":
                 switch (selection2){
                     case "Present Simple":
@@ -571,8 +562,6 @@ public class SpanishInt extends AppCompatActivity {
                                                     t4= "null";
                                                     t5= "null";
                                                     t6= "null";
-
-
                                                     // en caso de int de sujeto tercer persona
                                                     //engtx.setTextColor(Color.WHITE);
                                                     answerinp.setText("");
@@ -634,7 +623,6 @@ public class SpanishInt extends AppCompatActivity {
                         break;
                 }
                 break;
-
             case "Interferencia Pasiva":
                 switch (selection2){
                     case "Present Simple":
@@ -670,8 +658,6 @@ public class SpanishInt extends AppCompatActivity {
                                                     t4= n.gene5;
                                                     t5= n.gene6;
                                                     t6=n.gene7;
-
-
                                                     // en caso de int de sujeto tercer persona
                                                     //engtx.setTextColor(Color.WHITE);
                                                     answerinp.setText("");

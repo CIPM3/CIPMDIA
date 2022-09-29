@@ -54,6 +54,7 @@ public class MainTesting extends AppCompatActivity {
     String             txteng,userid;
     FirebaseAuth       mAuth;
     GoogleSignInClient gsc;
+    String t0, t1, t2, t3, t4, t5, t6,engtx;
 
 
     public static final int REC_CODE_SPEECH_INPUT = 100;
@@ -76,15 +77,6 @@ public class MainTesting extends AppCompatActivity {
             how,then,its,our,two,more,these,want,way,look,
             first,also,new1,because,day,more1,use,no,man,
             find,here,thing,give,many,well;
-
-    //100 a 150 booleanos
-    boolean only ,those ,tell ,one1 ,very ,her1 ,even ,
-            back ,any ,good ,woman ,through ,us ,life ,child ,
-            there1 ,work ,down ,may ,after ,should ,call ,world,
-            over ,school ,still ,try1 ,in1 ,as ,last ,ask ,need ,
-            too ,feel ,three ,when1 ,state ,never ,become ,between ,
-            high ,really ,something ,most ,another ,much ,
-            another1 ,much1 ,family ,own ,out1 ,leave ,put;
 
     String selection,selectionv;
     int cp,cn;
@@ -191,6 +183,11 @@ public class MainTesting extends AppCompatActivity {
                                 }
                             });
                             break;
+                        case "Spanish Interference":
+                            Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
+                            shownext();
+
+                            break;
 
 
                     }
@@ -263,6 +260,11 @@ public class MainTesting extends AppCompatActivity {
                                 }
                             });
                             break;
+                        case "Spanish Interference":
+                            Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
+                            shownext();
+
+                            break;
 
 
                     }
@@ -310,8 +312,147 @@ public class MainTesting extends AppCompatActivity {
         getsent.setVisibility(View.VISIBLE);
 
     }
+    public void chooser(View view){
+        switch (selectionv){
+            case "Syntax":
+                startTest();
+                break;
+
+            case "Vocabulary":
+                startTest();
+
+                break;
+            case "Spanish Interference":
+                save.setVisibility(View.VISIBLE);
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    int rand = (int)(Math.random()*5);
+                                    switch (rand){
+                                        case 0:
+                                            Generator n = new Generator();
+                                            //interferencia por preposición
+                                            n.generatepsporprep();
+                                            sptx.setText(n.gens);
+                                            engtx=n.gene;
+                                            // t0= n.gene;
+                                            t1= n.gene2;// she
+                                            t2= n.gene3;// it
+                                            t3= "null";
+                                            t4= "null";
+                                            t5= "null";
+                                            t6= "null";
+                                            Answerinput.setText("");
+                                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                            break;
+
+                                        case 1:
+                                            Generator ns = new Generator();
+                                            ns.generatepsporSujeto();
+                                            sptx.setText(ns.gens);
+                                            engtx=ns.gene;
+                                            t0= ns.gene;
+                                            t1= ns.gene2;
+                                            t2= ns.gene3;
+                                            t3= "null";
+                                            t4= "null";
+                                            t5= "null";
+                                            t6= "null";
+                                            // en caso de int de sujeto tercer persona
+                                            Answerinput.setText("");
+                                            tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                            break;
+
+                                        case 2:
+                                            Generator no = new Generator();
+                                            no.generatepsporObjeto();
+                                            sptx.setText(no.gens);
+                                            engtx=no.gene;// he
+                                            t0= no.gene;
+                                            t1= no.gene2;// she
+                                            t2= no.gene3;// it
+                                            t3= "null";
+                                            t4= "null";
+                                            t5= "null";
+                                            t6= "null";
+                                            // en caso de int de sujeto tercer persona
+                                            //engtx.setTextColor(Color.WHITE);
+                                            Answerinput.setText("");
+                                            tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                            break;
+
+
+                                        case 3:
+                                            Generator nr = new Generator();
+                                            nr.generatepsporReflexivos();
+                                            sptx.setText(nr.gens);
+                                            engtx=nr.gene;// he
+                                            t1= nr.gene2;// she
+                                            t2= nr.gene3;// it
+                                            t3= "null";
+                                            t4= "null";
+                                            t5= "null";
+                                            t6= "null";
+                                            // en caso de int de sujeto tercer persona
+                                            //engtx.setTextColor(Color.WHITE);
+                                            Answerinput.setText("");
+                                            tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                            break;
+
+
+                                        case 4:
+                                            Generator np = new Generator();
+                                            np.GenIntPorPasiva();
+                                            sptx.setText(np.gens);
+                                            engtx=np.gene;// he
+                                            t0= np.gene;
+                                            t1= np.gene2;
+                                            t2= np.gene3;
+                                            t3= np.gene4;
+                                            t4= np.gene5;
+                                            t5= np.gene6;
+                                            t6=np.gene7;
+                                            // en caso de int de sujeto tercer persona
+                                            //engtx.setTextColor(Color.WHITE);
+                                            Answerinput.setText("");
+                                            tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                            break;
+                                    }
+
+
+                                }
+
+                            }
+                        });
+
+                break;
+        }
+    }
+
     //2
-    public  void   startTest(View view){
+    public  void   startTest(){
         save.setVisibility(View.VISIBLE);
 
         switch (selection) {
@@ -321,37 +462,37 @@ public class MainTesting extends AppCompatActivity {
             case "Present Simple":
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPresSimp2();
+                                    sptx.setText(gen1.gens);
+                                    txteng=gen1.gene;
+
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
 
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenPresSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng=gen1.gene;
-
-                            Answerinput.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
+                            }
+                        });
                 break;
             case "Present Continuous":
                 tt1 = new TextToSpeech(getApplicationContext(),
@@ -382,7 +523,7 @@ public class MainTesting extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng=gen1.gene;
 
-                                   Answerinput.setText("");
+                                    Answerinput.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
 
@@ -1781,7 +1922,6 @@ public class MainTesting extends AppCompatActivity {
                                     cientociencincuenta gen1 = new cientociencincuenta();
                                     // este metodo de abajo se cambia para matchear el case
                                     gen1.vocab100a150();
-
                                     sptx.setText(gen1.ob);
                                     txteng=gen1.eng;
                                     Answerinput.setText("");
@@ -1791,8 +1931,15 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
+
+            //aqui debería ir los metodos de sp int
+
+
+
+
         }
     }
+
     //3
     private void   turnTrue(String CurrentStructure) {
 
@@ -2062,318 +2209,6 @@ public class MainTesting extends AppCompatActivity {
             case "up":
                 up= true;
                 break;
-            //aqui termina 0 a 50
-
-            //aqui empieza 50 a 100
-            case "one":
-                one= true;
-                break;
-            case "time":
-                time= true;
-                break;
-            case "there":
-                there= true;
-                break;
-            case "year":
-                year= true;
-                break;
-            case "so":
-                so= true;
-                break;
-            case "think":
-                think= true;
-                break;
-            case "when":
-                when= true;
-                break;
-            case "which":
-                which= true;
-                break;
-            case "them":
-                them= true;
-                break;
-            case "some":
-                some= true;
-                break;
-            case "me":
-                me= true;
-                break;
-            case "people":
-                people= true;
-                break;
-            case "take":
-                take= true;
-                break;
-            case "out":
-                out= true;
-                break;
-            case "into":
-                into= true;
-                break;
-            case "just":
-                just= true;
-                break;
-            case "see1":
-                see1= true;
-                break;
-            case "him":
-                your= true;
-                break;
-            case "come":
-                come= true;
-                break;
-            case "could":
-                could= true;
-                break;
-            case "now":
-                now= true;
-                break;
-            case "than":
-                than= true;
-                break;
-            case "like":
-                like= true;
-                break;
-            case "other":
-                other= true;
-                break;
-            case "how":
-                how= true;
-                break;
-            case "then":
-                then= true;
-                break;
-            case "its":
-                its= true;
-                break;
-            case "our":
-                our= true;
-                break;
-            case "two":
-                two= true;
-                break;
-            case "more":
-                more= true;
-                break;
-            case "these":
-                these= true;
-                break;
-            case "want":
-                want= true;
-                break;
-            case "way":
-                way= true;
-                break;
-            case "look":
-                look= true;
-                break;
-            case "first":
-                first= true;
-                break;
-            case "also":
-                also= true;
-                break;
-            case "new1":
-                new1= true;
-                break;
-            case "because":
-                because= true;
-                break;
-            case "day":
-                day= true;
-                break;
-            case "more1":
-                more1= true;
-                break;
-            case "use":
-                use= true;
-                break;
-            case "no":
-                no= true;
-                break;
-            case "man":
-                man= true;
-                break;
-            case "find":
-                find= true;
-                break;
-            case "here":
-                here= true;
-                break;
-            case "thing":
-                thing= true;
-                break;
-            case "give":
-                give= true;
-                break;
-            case "many":
-                many= true;
-                break;
-            case "well":
-                well= true;
-                break;
-            //aqui termina 50 a 100
-
-            case "only":
-                only= true;
-                break;
-            case "those":
-                those= true;
-                break;
-            case "tell":
-                tell= true;
-                break;
-            case "one1":
-                one1= true;
-                break;
-            case "very":
-                very= true;
-                break;
-            case "her1":
-                her1= true;
-                break;
-            case "even":
-                even= true;
-                break;
-            case "back":
-                back= true;
-                break;
-            case "any":
-                any= true;
-                break;
-            case "good":
-                good= true;
-                break;
-            case "woman":
-                woman= true;
-                break;
-            case "through":
-                through= true;
-                break;
-            case "us":
-                us= true;
-                break;
-            case "life":
-                life= true;
-                break;
-            case "child":
-                child= true;
-                break;
-            case "there1":
-                there1= true;
-                break;
-            case "work":
-                work= true;
-                break;
-            case "down":
-                down= true;
-                break;
-            case "may":
-                may= true;
-                break;
-            case "after":
-                after= true;
-                break;
-            case "should":
-                should= true;
-                break;
-            case "call":
-                call= true;
-                break;
-            case "world":
-                world= true;
-                break;
-            case "over":
-                over= true;
-                break;
-            case "school":
-                school= true;
-                break;
-            case "still":
-                still= true;
-                break;
-            case "try1":
-                try1= true;
-                break;
-            case "in1":
-                in1= true;
-                break;
-            case "as":
-                as= true;
-                break;
-            case "last":
-                last= true;
-                break;
-            case "ask":
-                ask= true;
-                break;
-            case "need":
-                need= true;
-                break;
-            case "too":
-                too= true;
-                break;
-            case "feel":
-                feel= true;
-                break;
-            case "three":
-                three= true;
-                break;
-            case "when1":
-                when1= true;
-                break;
-            case "state":
-                state= true;
-                break;
-            case "never":
-                never= true;
-                break;
-            case "become":
-                become= true;
-                break;
-            case "between":
-                between= true;
-                break;
-            case "high":
-                high= true;
-                break;
-            case "really":
-                really= true;
-                break;
-            case "something":
-                something= true;
-                break;
-            case "most":
-                most= true;
-                break;
-            case "another":
-                another= true;
-                break;
-            case "much":
-                much= true;
-                break;
-            case "another1":
-                another1= true;
-                break;
-            case "much1":
-                much1= true;
-                break;
-            case "family":
-                family= true;
-                break;
-            case "own":
-                own= true;
-                break;
-            case "out1":
-                out1= true;
-                break;
-            case "leave":
-                leave= true;
-                break;
-            case "put":
-                family= put;
-                break;
-            //aqui termina 100 a 150
         }
     }
 
@@ -2385,6 +2220,10 @@ public class MainTesting extends AppCompatActivity {
 
             case "Vocabulary":
                 vocabdbtesting();
+
+                break;
+            case "Spanish Interference":
+                spintdbtesting();
 
                 break;
         }
@@ -2579,64 +2418,33 @@ public class MainTesting extends AppCompatActivity {
         user.put("well",well);
         //aqui termina 50 a 100
 
-        //aqui empieza 100 a 150
-        user.put("only",only);
-        user.put("those",those);
-        user.put("tell",tell);
-        user.put("one1",one1);
-        user.put("very",very);
-        user.put("her1",her1);
-        user.put("even",even);
-        user.put("back",back);
-        user.put("any",any);
-        user.put("good",good);
-        user.put("woman",woman);
-        user.put("through",through);
-        user.put("us",us);
-        user.put("life",life);
-        user.put("child",child);
-        user.put("there1",there1);
-        user.put("work",work);
-        user.put("down",down);
-        user.put("may",may);
-        user.put("after",after);
-        user.put("should",should);
-        user.put("call",call);
-        user.put("world",world);
-        user.put("over",over);
-        user.put("school",school);
-        user.put("still",still);
-        user.put("try1",try1);
-        user.put("in1",in1);
-        user.put("as",as);
-        user.put("last",last);
-        user.put("ask",ask);
-        user.put("need",need);
-        user.put("too",too);
-        user.put("feel",feel);
-        user.put("three",three);
-        user.put("when1",when1);
-        user.put("state",state);
-        user.put("never",never);
-        user.put("become",become);
-        user.put("between",between);
-        user.put("high",high);
-        user.put("really",really);
-        user.put("something",something);
-        user.put("most",most);
-        user.put("another",another);
-        user.put("much",much);
-        user.put("another1",another1);
-        user.put("much1",much1);
-        user.put("family",family);
-        user.put("own",own);
-        user.put("out1",out1);
-        user.put("leave",leave);
-        user.put("put",put);
 
         uid.document("vocabulary").set(user);
 
     }
+    public void spintdbtesting()  {
+        String ansin = Answerinput.getText().toString().trim();
+        if (
+                t1.trim().equalsIgnoreCase(ansin.trim())||
+                        t2.trim().equalsIgnoreCase(ansin.trim())||
+                        t3.trim().equalsIgnoreCase(ansin.trim())||
+                        t4.trim().equalsIgnoreCase(ansin.trim())||
+                        t5.trim().equalsIgnoreCase(ansin.trim())||
+                        t6.trim().equalsIgnoreCase(ansin.trim())||
+                        engtx.trim().equalsIgnoreCase(ansin.trim()))
+        {
+            Toast.makeText(this, "interferencia is correct", Toast.LENGTH_SHORT).show();
+
+        }
+        else {
+            Toast.makeText(this, "interferencia is not correct", Toast.LENGTH_SHORT).show();
+
+        }
+
+    }
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
