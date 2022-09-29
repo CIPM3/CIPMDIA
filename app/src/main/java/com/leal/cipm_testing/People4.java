@@ -394,7 +394,7 @@ public class People4 {
     };
 
     String nnoblesesp[]={
-            "a la prima", "a el editor ", "a el líder", "a la mamá ", "a el cantante ",
+            "a la prima ", "a el editor ", "a el líder", "a la mamá ", "a el cantante ",
             "a la policía ","a la reina ", "a la esposa ", "a el granjero ",
             "a la niña ", "a el historiador ","a el hijo ", "a el ganador ",
             "a el trabajador ", "a el escritor "
