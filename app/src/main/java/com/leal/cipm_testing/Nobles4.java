@@ -85,7 +85,7 @@ public class Nobles4 {
     String nnoblesesp[] = {
             "el desastre ", "la eficiencia ", "la emoción ", "la extensión ",
             "la retroalimentación ", "la guitarra ", "la tarea ", "el resultado ",
-            "el permiso ", "la presentación ", "el ascenso ", "el reflejo ",
+            "el permiso ", "la presentación ", "la promoción ", "el reflejo ",
             "el refrigerador ", "la resolución ", "los ingresos ", "la sesión ",
             "el tenis ", "la canasta ", "el plus ", "el gabinete ", "la infancia ",
             "la iglesia ", "la ropa ", "el café ", "la cena ", "el dibujo ",
