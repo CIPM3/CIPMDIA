@@ -68,21 +68,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="10dp"
             android:paddingBottom="5dp"
             android:text="Not Registered? click here"
             android:textColor="#FDD835"
             android:textColorHighlight="#FDD835"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/googlesignintv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="10dp"
             android:paddingBottom="5dp"
             android:text="Register With Google click here"
             android:textColor="#F4511E"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/anonymuslink"
@@ -90,7 +92,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Proceder anonimamente( no se guarda tu progreso)"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="gone" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -172,6 +172,7 @@ public class MainTesting extends AppCompatActivity {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
+
                                     if(!selection.equalsIgnoreCase("Pick a Structure")) {
                                         shownext();
                                     }
@@ -261,6 +262,8 @@ public class MainTesting extends AppCompatActivity {
                             });
                             break;
                         case "Spanish Interference":
+                            spin.setVisibility(View.INVISIBLE);
+                            choose.setVisibility(View.INVISIBLE);
                             Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
                             shownext();
 
@@ -312,7 +315,7 @@ public class MainTesting extends AppCompatActivity {
         getsent.setVisibility(View.VISIBLE);
 
     }
-    public void chooser(View view){
+    public void chooser(View view)  {
         switch (selectionv){
             case "Syntax":
                 startTest();
@@ -323,6 +326,7 @@ public class MainTesting extends AppCompatActivity {
 
                 break;
             case "Spanish Interference":
+
                 save.setVisibility(View.VISIBLE);
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
@@ -437,13 +441,9 @@ public class MainTesting extends AppCompatActivity {
                                             //engtx.setTextColor(Color.WHITE);
                                             Answerinput.setText("");
                                             tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
-
                                             break;
                                     }
-
-
                                 }
-
                             }
                         });
 
@@ -454,7 +454,6 @@ public class MainTesting extends AppCompatActivity {
     //2
     public  void   startTest(){
         save.setVisibility(View.VISIBLE);
-
         switch (selection) {
             case "Pick a Structure":
                 Toast.makeText(this, "elige una estructura", Toast.LENGTH_SHORT).show();
@@ -2228,6 +2227,7 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
+
     public  void   dbtesting() {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -2442,9 +2442,6 @@ public class MainTesting extends AppCompatActivity {
         }
 
     }
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

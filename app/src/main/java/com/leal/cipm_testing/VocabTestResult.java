@@ -114,6 +114,8 @@ public class VocabTestResult extends Fragment {
                             "Will :"+st.will,
                             "Up :"+st.up,
                             "Aqui Termina el Rango 0 a 50"
+
+                            // falta completar aqui para que lo muestre el listview en el fragmento
                     };
 
                     adapter = new ArrayAdapter<String>(getContext(),
