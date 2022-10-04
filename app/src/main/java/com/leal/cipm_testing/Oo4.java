@@ -71,13 +71,13 @@ public class Oo4 {
 
     // participios esp
     String vpsp[] = {
-            "fixed ", "connected ", "grabbed ", "crashed ", "divided ", "washed ", "wasted ", "pulled ",
-            "collected ", "filled ", "exposed ", "repaired ", "split "
+            "arreglado ", "conectado ", "agarrado ", "chocado ", "dividido ", "lavado ", "malgastado ",
+            "jalado ", "coleccionado ", "llenado ", "expuesto ", "reparado ", "partido "
     };
     // verbos participio inglés
     String vpeng[] = {
-            "arreglado ", "conectado ", "agarrado ", "chocado ", "dividido ", "lavado ", "malgastado ",
-            "jalado ", "coleccionado ", "llenado ", "expuesto ", "reparado ", "partido "
+            "fixed ", "connected ", "grabbed ", "crashed ", "divided ", "washed ", "wasted ", "pulled ",
+            "collected ", "filled ", "exposed ", "repaired ", "split "
     };
 
     String vnbp[] = {
@@ -225,7 +225,7 @@ public class Oo4 {
             "la canasta ", "el gabinete ", "la iglesia ", "la iniciativa ", "el laboratorio ",
             "la posibilidad ", "el restaurante ", "el sector ", "la canción ", "el vehículo ",
             "el aeropuerto ", "la base de datos ", "la puerta ", "el hospital ", "el habla ",
-            "el pueblo ",
+            "a el pueblo ",
     };
 
 
@@ -6758,37 +6758,37 @@ public class Oo4 {
 
                 break;
             case 1:
-                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps1 = "yo " + "no " + vn1w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps1eng = "I " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps2 = "tú " + "no " + vn2w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps2eng = "you " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps3 = "él " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3eng = "he " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps3ella = "ella " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3she = "she " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps3eso = "eso " + "no " + vn3w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3it = "it " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps4 = "ellos " + "no " + vn4w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps4eng = "they " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps5 = "nosotros " + "no " + vn5w[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps5eng = "we " + "wouldn't "  + vnb[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we " + "wouldn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
@@ -6861,7 +6861,7 @@ public class Oo4 {
                 ps4eng = "they wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
-                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2];
+                ps5 = "nosotros no " + "estaríamos " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps5eng = "we wouldn't "  + "be " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we wouldn't " + "be " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
@@ -6961,68 +6961,68 @@ public class Oo4 {
                 ps1eng2 = "I would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú "  + "hubieras estado " + vnbcs[v] + nnoblesesp[n];
+                ps2 = "tú "  + "hubieras estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps2eng = "you would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n];
+                ps3 = "él "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3eng = "he would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n];
+                ps3ella = "ella "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3she = "she would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n];
+                ps3eso = "eso "  + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps3it = "it would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos "  + "hubieran estado " + vnbcs[v] + nnoblesesp[n];
+                ps4 = "ellos "  + "hubieran estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps4eng = "they would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros "  + "hubieramos estado " + vnbcs[v] + nnoblesesp[n];
+                ps5 = "nosotros "  + "hubieramos estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv];
                 ps5eng = "we would have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we would have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
                 break;
             case 1:
-                ps1 = "yo no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps1 = "yo no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps1eng = "I wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú no " + "hubieras estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps2 = "tú no " + "hubieras estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps2eng = "you wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps3 = "él no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps3eng = "he wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps3ella = "ella no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps3she = "she wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps3eso = "eso no " + "hubiera estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps3it = "it wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps3iteng2 = "it wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos no " + "hubieran estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps4 = "ellos no " + "hubieran estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps4eng = "they wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros no " + "hubieramos estado " + vnbcs[v] + nnoblesesp[n]; ;
+                ps5 = "nosotros no " + "hubieramos estado " + vnbcs[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[radv]; ;
                 ps5eng = "we wouldn't have "  + "been " + vnbc[v] + nnobles[n]+ prep.Oospecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we wouldn't have " + "been " + vnbc[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
 

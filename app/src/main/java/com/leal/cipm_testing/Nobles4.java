@@ -93,7 +93,7 @@ public class Nobles4 {
             "la medición ", "el lodo ", "la naranja ", "la poesía ", "la posibilidad ",
             "el procedimiento ", "la proporción ", "la relación ", "el restaurante ",
             "la satisfacción ", "el sector ", "la firma ", "la importancia ",
-            "la canción ", "el diente ", "el pueblo ", "el vehículo ", "el volumen ",
+            "la canción ", "el diente ", "a el pueblo ", "el vehículo ", "el volumen ",
             "el accidente ", "el aeropuerto ", "la cita ", "la llegada ",
             "la suposición ", "el beisbol ", "el capítulo ", "el comité ",
             "la conversación ", "la base de datos ", "el entusiasmo ", "el error ",
