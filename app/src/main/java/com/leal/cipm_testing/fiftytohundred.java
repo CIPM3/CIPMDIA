@@ -6,12 +6,12 @@ public class fiftytohundred {
            "one ","time ","there ","year ","so ",
             "to think ","when ","which ","them ","some ",
             "me ","people ","to take ","out ","into ",
-            "just ","to see ","his ","your ","to come ",
+            "just ","to see ","him ","your ","to come ",
             "could ","now ","than ","to like ","other ",
             "how ","then ","its ","our ","two ",
             "more ","these ","to want ","way ","to look ",
             "first ","also ","new ","because ","day",
-           "to use ","man ","find ","here ",
+            "to use ","man ","find ","here ",
             "thing ","to give ","many "
     };
 
@@ -21,7 +21,7 @@ public class fiftytohundred {
             "algunos, algunas ","mi ",
             "gente ","agarrar-tomar ","fuera",
             "dentro de","solo ","ver ",
-            "suyo (del sujeto el) ","tuyo ",
+            "él como objeto ","tuyo ",
             "venir ",
             "podría,pudiera,pudiese","ahora ",
             "qué -para comparar adjetivos",
