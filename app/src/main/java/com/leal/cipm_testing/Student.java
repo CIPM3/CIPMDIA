@@ -16,6 +16,7 @@ public class Student {
     boolean cansimple,canContinuo,mustsimple,mustContinuo;
     boolean shouldsimple,shouldContinuo,shouldPerfecto,shouldPerfectoContinuo;
     boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
+    boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200;
 
 
     public Student() {
@@ -282,6 +283,32 @@ public class Student {
         this.beUsedTo = beUsedTo;
     }
 
+    //Vocab Getters and Setters
+    public boolean isVocab0a50() {
+        return vocab0a50;
+    }
+    public void setVocab0a50(boolean vocab0a50) {
+        this.vocab0a50 = vocab0a50;
+    }
+    public boolean isVocab50a100() {
+        return vocab50a100;
+    }
+    public void setVocab50a100(boolean vocab50a100) {
+        this.vocab50a100 = vocab50a100;
+    }
+    public boolean isVocab100a150() {
+        return vocab100a150;
+    }
+    public void setVocab100a150(boolean vocab100a150) {
+        this.vocab100a150 = vocab100a150;
+    }
+    public boolean isVocab150a200() {
+        return vocab150a200;
+    }
+    public void setVocab150a200(boolean vocab150a200) {
+        this.vocab150a200 = vocab150a200;
+    }
+
 
     @NonNull
     @Override
@@ -314,7 +341,10 @@ public class Student {
                 + "\n"+ "Can Simple "+this.cansimple
                 + "\n"+ "Can Continuous "+this.canContinuo
                 + "\n"+ "Must Simple "+this.mustsimple
-                + "\n"+ "Must Continuous "+this.mustContinuo
+                + "\n"+ "0 a 50 "+this.vocab0a50
+                + "\n"+ "50 a 100 "+this.vocab50a100
+                + "\n"+ "100 a 150 "+this.vocab100a150
+                + "\n"+ "150 a 200 "+this.vocab150a200
                 ;
     }
 }

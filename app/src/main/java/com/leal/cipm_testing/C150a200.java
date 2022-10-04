@@ -2,6 +2,28 @@ package com.leal.cipm_testing;
 
 public class C150a200 {
 
+    String alleng[]={
+            "old ","old ","while ","mean ","on ","keep ","student ","why ",
+            "let ","great ","same ","big ","group ","begin ","seem ",
+            "country ","help ","talk ","where ","turn ","problem ",
+            "every ","start ","hand ","might ","american ","show ",
+            "part ","about ","against ","place ","over ","such ",
+            "again ","few ","case ","most ","week ","company ",
+            "where ","system ","each ","right ","program ","hear ",
+            "so ","question ","during ","work ","play "
+    };
+
+    String allsp[]={
+            "viejo ", "viejo ", "mientras ", "significa ", "en ", "mantener ", "estudiante ", "por qué ",
+            "dejar", "grandioso ", "igual", "grande ", "grupo ", "comenzar ", "parecer ",
+            "país ", "ayuda ", "hablar ", "dónde ", "giro ", "problema ",
+            "cada ", "inicio ", "mano ", "podría ", "americano ", "mostrar ",
+            "parte ", "acerca de ", "contra ", "lugar ", "sobre ", "tal ",
+            "otra vez ", "pocos ", "caso ", "la mayoría ", "semana ", "empresa ",
+            "donde ", "sistema ", "cada uno ", "derecho ", "programa ", "escuchar ",
+            "entonces ", "pregunta ", "durante ", "trabajo ", "jugar "
+    };
+
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "nosotros ", "ellos "};
 
@@ -79,6 +101,19 @@ public class C150a200 {
     String nspf[] = {"las partes ", "las manos ", "las semanas ", "las compañía "};
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab150a200(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 
 
     public void verbsgen() {

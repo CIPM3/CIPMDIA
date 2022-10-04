@@ -99,7 +99,12 @@ public class structureTestResult extends Fragment {
                             "Supposed to Present : " + st.supposedToPresent,
                             "Wish Past Perfect : "+ st.wishPastPerfect,
                             "Used to : "+ st.usedTo,
-                            "Be Used to : "+ st.beUsedTo};
+                            "Be Used to : "+ st.beUsedTo,
+                            "0 a 50 : "+st.vocab0a50,
+                            "50 a 100 : "+st.vocab50a100,
+                            "100 a 150 : "+st.vocab100a150,
+                            "150 a 200 : "+st.vocab150a200
+                    };
                     adapter = new ArrayAdapter<String>(getContext(),
                             android.R.layout.simple_list_item_1, est);
                 }

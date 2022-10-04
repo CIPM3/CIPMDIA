@@ -86,6 +86,16 @@ public class MainTesting extends AppCompatActivity {
             too ,feel ,three ,when1 ,state ,never ,become ,between ,
             high ,really ,something ,most ,another ,much ,
             another1 ,much1 ,family ,own ,out1 ,leave ,put;
+    
+    //150 a 200 booleanos
+    boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
+            let ,great ,same ,big ,group ,begin ,seem ,
+            country ,help ,talk ,where ,turn ,problem ,
+            every ,start ,hand ,might ,american ,show ,
+            part ,about ,against ,place ,over2 ,such ,
+            again ,few ,case1 ,most2 ,week ,company ,
+            where2 ,system ,each ,right ,program ,hear ,
+            so2 ,question ,during ,work2 ,play ;
 
     String selection,selectionv;
     int cp,cn;
@@ -1940,6 +1950,43 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "150 to 200":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C150a200 gen1 = new C150a200();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab150a200();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             //aqui debería ir los metodos de sp int
 
 
@@ -2532,6 +2579,155 @@ public class MainTesting extends AppCompatActivity {
                 break;
             //100 a 150
 
+            case "old":
+                old= true;
+                break;
+            case "while1":
+                while1= true;
+                break;
+            case "mean":
+                mean= true;
+                break;
+            case "on2":
+                on2= true;
+                break;
+            case "keep":
+                keep= true;
+                break;
+            case "student":
+                student= true;
+                break;
+            case "why":
+                why= true;
+                break;
+            case "let":
+                let= true;
+                break;
+            case "great":
+                great= true;
+                break;
+            case "same":
+                same= true;
+                break;
+            case "big":
+                big= true;
+                break;
+            case "group":
+                group= true;
+                break;
+            case "begin":
+                begin= true;
+                break;
+            case "seem":
+                seem= true;
+                break;
+            case "country":
+                country= true;
+                break;
+            case "help":
+                help= true;
+                break;
+            case "talk":
+                talk= true;
+                break;
+            case "where":
+                where= true;
+                break;
+            case "turn":
+                turn= true;
+                break;
+            case "problem":
+                problem= true;
+                break;
+            case "every":
+                every= true;
+                break;
+            case "start":
+                start= true;
+                break;
+            case "hand":
+                hand= true;
+                break;
+            case "might":
+                might= true;
+                break;
+            case "american":
+                american= true;
+                break;
+            case "show":
+                show= true;
+                break;
+            case "part":
+                part= true;
+                break;
+            case "about":
+                about= true;
+                break;
+            case "against":
+                against= true;
+                break;
+            case "place":
+                place= true;
+                break;
+            case "over2":
+                over2= true;
+                break;
+            case "such":
+                such= true;
+                break;
+            case "again":
+                again= true;
+                break;
+            case "few":
+                few= true;
+                break;
+            case "case1":
+                case1= true;
+                break;
+            case "most2":
+                most2= true;
+                break;
+            case "week":
+                week= true;
+                break;
+            case "company":
+                company= true;
+                break;
+            case "where2":
+                where2= true;
+                break;
+            case "system":
+                system= true;
+                break;
+            case "each":
+                each= true;
+                break;
+            case "right":
+                right= true;
+                break;
+            case "program":
+                program= true;
+                break;
+            case "hear":
+                hear= true;
+                break;
+            case "so2":
+                so2= true;
+                break;
+            case "question":
+                question= true;
+                break;
+            case "during":
+                during= true;
+                break;
+            case "work2":
+                work2= true;
+                break;
+            case "play":
+                play= true;
+                break;
+            //150 a 200
+
         }
     }
 
@@ -2796,6 +2992,57 @@ public class MainTesting extends AppCompatActivity {
         user.put("leave",leave);
         user.put("put",put);
         //aqui termina 100 a 150
+
+        user.put("old",old);
+        user.put("while1",while1);
+        user.put("mean",mean);
+        user.put("on2",on2);
+        user.put("keep",keep);
+        user.put("student",student);
+        user.put("why",why);
+        user.put("let",let);
+        user.put("great",great);
+        user.put("same",same);
+        user.put("big",big);
+        user.put("group",group);
+        user.put("begin",begin);
+        user.put("seem",seem);
+        user.put("country",country);
+        user.put("help",help);
+        user.put("talk",talk);
+        user.put("where",where);
+        user.put("turn",turn);
+        user.put("problem",problem);
+        user.put("every",every);
+        user.put("start",start);
+        user.put("hand",hand);
+        user.put("might",might);
+        user.put("american",american);
+        user.put("show",show);
+        user.put("part",part);
+        user.put("about",about);
+        user.put("against",against);
+        user.put("place",place);
+        user.put("over2",over2);
+        user.put("such",such);
+        user.put("again",again);
+        user.put("few",few);
+        user.put("case1",case1);
+        user.put("most2",most2);
+        user.put("week",week);
+        user.put("company",company);
+        user.put("where2",where2);
+        user.put("system",system);
+        user.put("each",each);
+        user.put("right",right);
+        user.put("program",program);
+        user.put("hear",hear);
+        user.put("so2",so2);
+        user.put("question",question);
+        user.put("during",during);
+        user.put("work2",work2);
+        user.put("play",play);
+        //aqui termina 150 a 200
 
 
         uid.document("vocabulary").set(user);

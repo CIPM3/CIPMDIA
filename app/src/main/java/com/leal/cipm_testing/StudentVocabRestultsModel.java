@@ -26,6 +26,15 @@ public class StudentVocabRestultsModel {
             high ,really ,something ,most ,another ,much ,
             another1 ,much1 ,family ,own ,out1 ,leave ,put;
 
+    //150 a 200 booleanos
+    boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
+            let ,great ,same ,big ,group ,begin ,seem ,
+            country ,help ,talk ,where ,turn ,problem ,
+            every ,start ,hand ,might ,american ,show ,
+            part ,about ,against ,place ,over2 ,such ,
+            again ,few ,case1 ,most2 ,week ,company ,
+            where2 ,system ,each ,right ,program ,hear ,
+            so2 ,question ,during ,work2 ,play ;
 
 
 
@@ -1271,5 +1280,397 @@ public class StudentVocabRestultsModel {
 
     public void setPut(boolean put) {
         this.put = put;
+    }
+
+    public boolean isOld() {
+        return old;
+    }
+
+    public void setOld(boolean old) {
+        this.old = old;
+    }
+
+    public boolean isWhile1() {
+        return while1;
+    }
+
+    public void setWhile1(boolean while1) {
+        this.while1 = while1;
+    }
+
+    public boolean isMean() {
+        return mean;
+    }
+
+    public void setMean(boolean mean) {
+        this.mean = mean;
+    }
+
+    public boolean isOn2() {
+        return on2;
+    }
+
+    public void setOn2(boolean on2) {
+        this.on2 = on2;
+    }
+
+    public boolean isKeep() {
+        return keep;
+    }
+
+    public void setKeep(boolean keep) {
+        this.keep = keep;
+    }
+
+    public boolean isStudent() {
+        return student;
+    }
+
+    public void setStudent(boolean student) {
+        this.student = student;
+    }
+
+    public boolean isWhy() {
+        return why;
+    }
+
+    public void setWhy(boolean why) {
+        this.why = why;
+    }
+
+    public boolean isLet() {
+        return let;
+    }
+
+    public void setLet(boolean let) {
+        this.let = let;
+    }
+
+    public boolean isGreat() {
+        return great;
+    }
+
+    public void setGreat(boolean great) {
+        this.great = great;
+    }
+
+    public boolean isSame() {
+        return same;
+    }
+
+    public void setSame(boolean same) {
+        this.same = same;
+    }
+
+    public boolean isBig() {
+        return big;
+    }
+
+    public void setBig(boolean big) {
+        this.big = big;
+    }
+
+    public boolean isGroup() {
+        return group;
+    }
+
+    public void setGroup(boolean group) {
+        this.group = group;
+    }
+
+    public boolean isBegin() {
+        return begin;
+    }
+
+    public void setBegin(boolean begin) {
+        this.begin = begin;
+    }
+
+    public boolean isSeem() {
+        return seem;
+    }
+
+    public void setSeem(boolean seem) {
+        this.seem = seem;
+    }
+
+    public boolean isCountry() {
+        return country;
+    }
+
+    public void setCountry(boolean country) {
+        this.country = country;
+    }
+
+    public boolean isHelp() {
+        return help;
+    }
+
+    public void setHelp(boolean help) {
+        this.help = help;
+    }
+
+    public boolean isTalk() {
+        return talk;
+    }
+
+    public void setTalk(boolean talk) {
+        this.talk = talk;
+    }
+
+    public boolean isWhere() {
+        return where;
+    }
+
+    public void setWhere(boolean where) {
+        this.where = where;
+    }
+
+    public boolean isTurn() {
+        return turn;
+    }
+
+    public void setTurn(boolean turn) {
+        this.turn = turn;
+    }
+
+    public boolean isProblem() {
+        return problem;
+    }
+
+    public void setProblem(boolean problem) {
+        this.problem = problem;
+    }
+
+    public boolean isEvery() {
+        return every;
+    }
+
+    public void setEvery(boolean every) {
+        this.every = every;
+    }
+
+    public boolean isStart() {
+        return start;
+    }
+
+    public void setStart(boolean start) {
+        this.start = start;
+    }
+
+    public boolean isHand() {
+        return hand;
+    }
+
+    public void setHand(boolean hand) {
+        this.hand = hand;
+    }
+
+    public boolean isMight() {
+        return might;
+    }
+
+    public void setMight(boolean might) {
+        this.might = might;
+    }
+
+    public boolean isAmerican() {
+        return american;
+    }
+
+    public void setAmerican(boolean american) {
+        this.american = american;
+    }
+
+    public boolean isShow() {
+        return show;
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
+    }
+
+    public boolean isPart() {
+        return part;
+    }
+
+    public void setPart(boolean part) {
+        this.part = part;
+    }
+
+    public boolean isAbout() {
+        return about;
+    }
+
+    public void setAbout(boolean about) {
+        this.about = about;
+    }
+
+    public boolean isAgainst() {
+        return against;
+    }
+
+    public void setAgainst(boolean against) {
+        this.against = against;
+    }
+
+    public boolean isPlace() {
+        return place;
+    }
+
+    public void setPlace(boolean place) {
+        this.place = place;
+    }
+
+    public boolean isOver2() {
+        return over2;
+    }
+
+    public void setOver2(boolean over2) {
+        this.over2 = over2;
+    }
+
+    public boolean isSuch() {
+        return such;
+    }
+
+    public void setSuch(boolean such) {
+        this.such = such;
+    }
+
+    public boolean isAgain() {
+        return again;
+    }
+
+    public void setAgain(boolean again) {
+        this.again = again;
+    }
+
+    public boolean isFew() {
+        return few;
+    }
+
+    public void setFew(boolean few) {
+        this.few = few;
+    }
+
+    public boolean isCase1() {
+        return case1;
+    }
+
+    public void setCase1(boolean case1) {
+        this.case1 = case1;
+    }
+
+    public boolean isMost2() {
+        return most2;
+    }
+
+    public void setMost2(boolean most2) {
+        this.most2 = most2;
+    }
+
+    public boolean isWeek() {
+        return week;
+    }
+
+    public void setWeek(boolean week) {
+        this.week = week;
+    }
+
+    public boolean isCompany() {
+        return company;
+    }
+
+    public void setCompany(boolean company) {
+        this.company = company;
+    }
+
+    public boolean isWhere2() {
+        return where2;
+    }
+
+    public void setWhere2(boolean where2) {
+        this.where2 = where2;
+    }
+
+    public boolean isSystem() {
+        return system;
+    }
+
+    public void setSystem(boolean system) {
+        this.system = system;
+    }
+
+    public boolean isEach() {
+        return each;
+    }
+
+    public void setEach(boolean each) {
+        this.each = each;
+    }
+
+    public boolean isRight() {
+        return right;
+    }
+
+    public void setRight(boolean right) {
+        this.right = right;
+    }
+
+    public boolean isProgram() {
+        return program;
+    }
+
+    public void setProgram(boolean program) {
+        this.program = program;
+    }
+
+    public boolean isHear() {
+        return hear;
+    }
+
+    public void setHear(boolean hear) {
+        this.hear = hear;
+    }
+
+    public boolean isSo2() {
+        return so2;
+    }
+
+    public void setSo2(boolean so2) {
+        this.so2 = so2;
+    }
+
+    public boolean isQuestion() {
+        return question;
+    }
+
+    public void setQuestion(boolean question) {
+        this.question = question;
+    }
+
+    public boolean isDuring() {
+        return during;
+    }
+
+    public void setDuring(boolean during) {
+        this.during = during;
+    }
+
+    public boolean isWork2() {
+        return work2;
+    }
+
+    public void setWork2(boolean work2) {
+        this.work2 = work2;
+    }
+
+    public boolean isPlay() {
+        return play;
+    }
+
+    public void setPlay(boolean play) {
+        this.play = play;
     }
 }
