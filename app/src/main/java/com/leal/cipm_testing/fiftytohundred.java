@@ -6,31 +6,36 @@ public class fiftytohundred {
            "one ","time ","there ","year ","so ",
             "to think ","when ","which ","them ","some ",
             "me ","people ","to take ","out ","into ",
-            "just ","see ","him ","your ","come ",
-            "could ","now ","than ","like ","other ",
+            "just ","to see ","his ","your ","to come ",
+            "could ","now ","than ","to like ","other ",
             "how ","then ","its ","our ","two ",
-            "more ","these ","want ","way ","look ",
+            "more ","these ","to want ","way ","to look ",
             "first ","also ","new ","because ","day",
-            "more ","use ","no ","man ","find ","here ",
-            "thing ","give ","many ","well "
+           "to use ","man ","find ","here ",
+            "thing ","to give ","many "
     };
 
     String allsp[]={
            "uno ","tiempo ","ahí ","año ", "entonces (así que) ",
             "pensar ","cuando ", "cual, cuales ","ellos, ellas ",
             "algunos, algunas ","mi ",
-            "gente ","tomar un objeto ","salir (de algun lugar) ",
-            "dentro (de algun lugar) ","solo (justificativo) ","observar ",
-            "suyo (del sujeto el) ","tuyo (del sujeto tu ) ","venir (acercarse) ",
-            "poder, podria, puedes ","ahora (en el momento ) ",
-            "comparativo favorable entre dos partes ","gustar, me gusta o comparativo ",
-            "otro ","cómo (pregunta) ","entonces ","es, eso ","nuestro, nuestra ",
-            "dos ","mas, mucho ","estos, estas ","quiero, quieres, querer ",
-            "camino, manera (decision o ejemplo) ","mira, mirar, miro ",
-            "primero (de lugar, momento, etc) ","tambien (comparativo) ",
-            "nuevo,nueva, nuevos ","porque (explicacion) ","dia ","mas, mucho, muchas ",
-            "usar (objetos) ","no ","hombre ","buscar, encotrar ","aqui (localizacion) ",
-            "cosa ","dar ","muchos, muchas ","bien "
+            "gente ","agarrar-tomar ","fuera",
+            "dentro de","solo ","ver ",
+            "suyo (del sujeto el) ","tuyo ",
+            "venir ",
+            "podría,pudiera,pudiese","ahora ",
+            "qué -para comparar adjetivos",
+            "gustar ",
+            "otro ","cómo ","entonces ","suyo de eso ",
+            "nuestro ",
+            "dos ","mas ","estos ","querer ",
+            "camino,manera,forma ","mirar ",
+            "primero ","tambíen ",
+            "nuevo ","porque (explicacion) ","día ",
+
+            "usar ","hombre ","encontrar ",
+            "aqui ",
+            "cosa ","dar ","muchos"
     };
 
 
