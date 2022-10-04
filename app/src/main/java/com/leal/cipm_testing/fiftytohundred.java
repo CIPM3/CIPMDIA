@@ -3,9 +3,9 @@ package com.leal.cipm_testing;
 public class fiftytohundred {
 
     String alleng[]={
-            "one ","one ","time ","there ","year ","so ",
-            "think ","when ","which ","them ","some ",
-            "me ","people ","take ","out ","into ",
+           "one ","time ","there ","year ","so ",
+            "to think ","when ","which ","them ","some ",
+            "me ","people ","to take ","out ","into ",
             "just ","see ","him ","your ","come ",
             "could ","now ","than ","like ","other ",
             "how ","then ","its ","our ","two ",
@@ -16,10 +16,10 @@ public class fiftytohundred {
     };
 
     String allsp[]={
-            "uno, una ","uno una ","tiempo ","ahi de lugar ","año ",
-            "entonces de conector ","pensar ","cuando (conector de tiempo) ",
-            "cual, cuales ","ellos, ellas ","algunos, algunas ","yo ",
-            "gente, personas ","tomar un objeto ","salir (de algun lugar) ",
+           "uno ","tiempo ","ahí ","año ", "entonces (así que) ",
+            "pensar ","cuando ", "cual, cuales ","ellos, ellas ",
+            "algunos, algunas ","mi ",
+            "gente ","tomar un objeto ","salir (de algun lugar) ",
             "dentro (de algun lugar) ","solo (justificativo) ","observar ",
             "suyo (del sujeto el) ","tuyo (del sujeto tu ) ","venir (acercarse) ",
             "poder, podria, puedes ","ahora (en el momento ) ",
