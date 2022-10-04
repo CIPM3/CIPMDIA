@@ -225,7 +225,7 @@ public class Oo4 {
             "la canasta ", "el gabinete ", "la iglesia ", "la iniciativa ", "el laboratorio ",
             "la posibilidad ", "el restaurante ", "el sector ", "la canción ", "el vehículo ",
             "el aeropuerto ", "la base de datos ", "la puerta ", "el hospital ", "el habla ",
-            "el pueblo ",
+            "a el pueblo ",
     };
 
 
