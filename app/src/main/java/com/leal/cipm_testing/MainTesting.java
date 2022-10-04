@@ -2878,7 +2878,6 @@ public class MainTesting extends AppCompatActivity {
         user.put("new1",new1);
         user.put("because",because);
         user.put("day",day);
-        user.put("more1",more1);
         user.put("use",use);
         user.put("no",no);
         user.put("man",man);
@@ -2887,7 +2886,6 @@ public class MainTesting extends AppCompatActivity {
         user.put("thing",thing);
         user.put("give",give);
         user.put("many",many);
-        user.put("well",well);
         //aqui termina 50 a 100
 
         user.put("only",only);
