@@ -3104,11 +3104,9 @@ public class MainTesting extends AppCompatActivity {
         user.put("should",should);
         user.put("call",call);
         user.put("world",world);
-        user.put("over",over);
         user.put("school",school);
         user.put("still",still);
         user.put("try1",try1);
-        user.put("in1",in1);
         user.put("as",as);
         user.put("last",last);
         user.put("ask",ask);
@@ -3116,7 +3114,6 @@ public class MainTesting extends AppCompatActivity {
         user.put("too",too);
         user.put("feel",feel);
         user.put("three",three);
-        user.put("when1",when1);
         user.put("state",state);
         user.put("never",never);
         user.put("become",become);
@@ -3127,11 +3124,8 @@ public class MainTesting extends AppCompatActivity {
         user.put("most",most);
         user.put("another",another);
         user.put("much",much);
-        user.put("another1",another1);
-        user.put("much1",much1);
         user.put("family",family);
         user.put("own",own);
-        user.put("out1",out1);
         user.put("leave",leave);
         user.put("put",put);
         //aqui termina 100 a 150

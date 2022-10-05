@@ -5,26 +5,27 @@ public class cientociencincuenta {
     String alleng[]={
            "only ","those ","to tell ","one ","very ","her ","even ",
             "back ","any ","good ","woman ","through ","us ","life ","child ",
-            "there ","work ","down ","may ","after ","should ","call ","world ",
-            "over ","school ","still ","try ","in ","as ","last ","ask ","need ",
-            "too ","feel ","three ","when ","state ","never ","become ","between ",
-            "high ","really ","something ","most ","another ","much ",
-            "another ","much ","family ","own ","out ","leave ","put"
-    };
+            "there ","to work ","down ","may ","after ",
+            "should ","to call ","world ", "school ","still ","to try ",
 
+            "as ","last ","to ask ","to need ",
+            "too ","to feel ","three ","state ","never ","become ",
+            "between ",
+            "high ","really ","something ","most ","another ","much ",
+            "family ","own ","leave ","put"
+    };
     String allsp[]={
-            "solo","esos,esas ","comentar","uno,una ",
-            "muy ","ella como objeto","incluso ","atrás ","cualquier ","bien",
-            "mujer ","a través de ","nosotros como objeto","vida ","niño, niña ",
-            "ahí (lugar de objeto) ","trabajar,trabajo ","abajo ","puede, puedes, podemos ",
-            "despues (verbo de tiempo) ","deberia, debes, ","llamar ","mundo ",
-            "sobre ","escuela ","todavía ","probar,pruebo,pruebas ","en,dentro ",
-            "como (comparativo) ","ultimo, ultima ","pregunto,preguntar "
-            ,"necesitar, necesito,necesita ", "mucho,demasiado ","sentir, siento, siente ",
-            "tres ","cuando (momento) ","estado ","nunca ","convertir,convertirse ",
-            "entre (posición)","alto ","realmente ","algo ","mas (comparativo) ",
-            "otro,otra,otros ","mucho ","otro,otra,otros ","mucho ","familia ",
-            "propio,propia ","fuera,sacar ","abandonar,dejar "
+            "solo","esos,esas ","comentar","uno,una ", "muy ","ella como objeto","incluso ",
+            "atrás ","cualquier ","bien", "mujer ","a través de ","nosotros como objeto",
+            "vida ","niño, niña ", "ahí","trabajar ","abajo ","poder de posibilidad ",
+            "despues","deberia ","llamar ","mundo ", "escuela ","todavía ","intentar",
+
+            "como (comparativo) ","ultimo ","preguntar "
+            ,"necesitar ", "demasiado ","sentir",
+            "tres ","estado ","nunca ","convertirse ",
+            "entre","alto ","realmente ","algo ","mas (superlativo) ",
+            "otro-singular ","mucho ","familia ",
+            "propio","abandonar,dejar "
     };
 
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
