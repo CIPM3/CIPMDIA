@@ -38,9 +38,7 @@ public class structureTestResult extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
          v =  inflater.inflate(R.layout.fragment_structure_test_result, container, false);
-
         return v;
     }
     @Override
