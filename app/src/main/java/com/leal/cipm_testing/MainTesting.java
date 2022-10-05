@@ -214,7 +214,7 @@ public class MainTesting extends AppCompatActivity {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                    if(!selection.equalsIgnoreCase("Tutorial")) {
                                         shownext();
                                     }
                                 }
@@ -310,7 +310,7 @@ public class MainTesting extends AppCompatActivity {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                    if(!selection.equalsIgnoreCase("Tutorial")) {
                                         shownext();
                                     }
                                 }

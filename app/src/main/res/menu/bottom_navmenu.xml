@@ -13,4 +13,15 @@
         android:id="@+id/interfspitem"
         android:icon="@drawable/ic_grupo_spaint"
         android:title="Spanish int" />
+    <item
+        android:id="@+id/culturaitem"
+        android:icon="@drawable/ic_grupo_spaint"
+        android:title="Cultura" />
+    <item
+        android:id="@+id/dispitem"
+        android:icon="@drawable/ic_grupo_spaint"
+        android:title="Disponibilidad" />
+
+
+
 </menu>

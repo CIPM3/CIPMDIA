@@ -46,13 +46,11 @@ public class structureTestResult extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-      //  ttv= v.findViewById(R.id.testertv);
         db = FirebaseFirestore.getInstance();
         mAuth= FirebaseAuth.getInstance();
         lv= view.findViewById(R.id.listviewfrag);
         userid= mAuth.getCurrentUser().getUid();
         DocumentReference docref = db.collection(userid).document("structures");
-
         docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
