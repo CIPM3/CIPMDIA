@@ -97,6 +97,15 @@ public class MainTesting extends AppCompatActivity {
             where2 ,system ,each ,right ,program ,hear ,
             so2 ,question ,during ,work2 ,play ;
 
+    //200 a 250 booleanos
+    boolean goverment ,run ,small ,number ,off ,always ,move ,
+            like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
+            happen ,next ,without ,before ,large ,all2 ,million ,must ,
+            home ,under ,water ,room ,write ,mother ,area ,national ,
+            money ,story ,young ,fact ,month ,different ,lot ,right2 ,
+            study ,book ,eye ,job ,word ,though ,business ,issue ,
+            side ,kind ;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -1905,6 +1914,43 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "200 to 250":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C200a250 gen1 = new C200a250();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab200a250();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             //aqui debería ir los metodos de sp int
 
 
@@ -2645,6 +2691,158 @@ public class MainTesting extends AppCompatActivity {
                 play= true;
                 break;
             //150 a 200
+
+            case "goverment":
+                goverment= true;
+                break;
+            case "run":
+                run= true;
+                break;
+            case "small":
+                small= true;
+                break;
+            case "number":
+                number= true;
+                break;
+            case "off":
+                off= true;
+                break;
+            case "always":
+                always= true;
+                break;
+            case "move":
+                move= true;
+                break;
+            case "like2":
+                like2= true;
+                break;
+            case "night":
+                night= true;
+                break;
+            case "live":
+                live= true;
+                break;
+            case "mr":
+                mr= true;
+                break;
+            case "point":
+                point= true;
+                break;
+            case "believe":
+                believe= true;
+                break;
+            case "hold":
+                hold= true;
+                break;
+            case "today":
+                today= true;
+                break;
+            case "bring":
+                bring= true;
+                break;
+            case "happen":
+                happen= true;
+                break;
+            case "next":
+                next= true;
+                break;
+            case "without":
+                without= true;
+                break;
+            case "before":
+                before= true;
+                break;
+            case "large":
+                large= true;
+                break;
+            case "all2":
+                all2= true;
+                break;
+            case "million":
+                million= true;
+                break;
+            case "must":
+                must= true;
+                break;
+            case "home":
+                home= true;
+                break;
+            case "under":
+                under= true;
+                break;
+            case "water":
+                water= true;
+                break;
+            case "room":
+                room= true;
+                break;
+            case "write":
+                write= true;
+                break;
+            case "mother":
+                mother= true;
+                break;
+            case "area":
+                area= true;
+                break;
+            case "national":
+                national= true;
+                break;
+            case "money":
+                money= true;
+                break;
+            case "story":
+                story= true;
+                break;
+            case "young":
+                young= true;
+                break;
+            case "fact":
+                fact= true;
+                break;
+            case "month":
+                month= true;
+                break;
+            case "different":
+                different= true;
+                break;
+            case "lot":
+                lot= true;
+                break;
+            case "right2":
+                right2= true;
+                break;
+            case "study":
+                study= true;
+                break;
+            case "book":
+                book= true;
+                break;
+            case "eye":
+                eye= true;
+                break;
+            case "job":
+                job= true;
+                break;
+            case "word":
+                word= true;
+                break;
+            case "though":
+                though= true;
+                break;
+            case "business":
+                business= true;
+                break;
+            case "issue":
+                issue= true;
+                break;
+            case "side":
+                side= true;
+                break;
+            case "kind":
+                kind= true;
+                break;
+            //200 a 250
 
         }
     }

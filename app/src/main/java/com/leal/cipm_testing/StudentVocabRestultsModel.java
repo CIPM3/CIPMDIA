@@ -36,8 +36,15 @@ public class StudentVocabRestultsModel {
             where2 ,system ,each ,right ,program ,hear ,
             so2 ,question ,during ,work2 ,play ;
 
-
-
+    //200 a 250 booleanos
+    boolean goverment ,run ,small ,number ,off ,always ,move ,
+            like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
+            happen ,next ,without ,before ,large ,all2 ,million ,must ,
+            home ,under ,water ,room ,write ,mother ,area ,national ,
+            money ,story ,young ,fact ,month ,different ,lot ,right2 ,
+            study ,book ,eye ,job ,word ,though ,business ,issue ,
+            side ,kind ;
+    
 
     public StudentVocabRestultsModel(){}
 
@@ -1672,5 +1679,405 @@ public class StudentVocabRestultsModel {
 
     public void setPlay(boolean play) {
         this.play = play;
+    }
+
+    public boolean isGoverment() {
+        return goverment;
+    }
+
+    public void setGoverment(boolean goverment) {
+        this.goverment = goverment;
+    }
+
+    public boolean isRun() {
+        return run;
+    }
+
+    public void setRun(boolean run) {
+        this.run = run;
+    }
+
+    public boolean isSmall() {
+        return small;
+    }
+
+    public void setSmall(boolean small) {
+        this.small = small;
+    }
+
+    public boolean isNumber() {
+        return number;
+    }
+
+    public void setNumber(boolean number) {
+        this.number = number;
+    }
+
+    public boolean isOff() {
+        return off;
+    }
+
+    public void setOff(boolean off) {
+        this.off = off;
+    }
+
+    public boolean isAlways() {
+        return always;
+    }
+
+    public void setAlways(boolean always) {
+        this.always = always;
+    }
+
+    public boolean isMove() {
+        return move;
+    }
+
+    public void setMove(boolean move) {
+        this.move = move;
+    }
+
+    public boolean isLike2() {
+        return like2;
+    }
+
+    public void setLike2(boolean like2) {
+        this.like2 = like2;
+    }
+
+    public boolean isNight() {
+        return night;
+    }
+
+    public void setNight(boolean night) {
+        this.night = night;
+    }
+
+    public boolean isLive() {
+        return live;
+    }
+
+    public void setLive(boolean live) {
+        this.live = live;
+    }
+
+    public boolean isMr() {
+        return mr;
+    }
+
+    public void setMr(boolean mr) {
+        this.mr = mr;
+    }
+
+    public boolean isPoint() {
+        return point;
+    }
+
+    public void setPoint(boolean point) {
+        this.point = point;
+    }
+
+    public boolean isBelieve() {
+        return believe;
+    }
+
+    public void setBelieve(boolean believe) {
+        this.believe = believe;
+    }
+
+    public boolean isHold() {
+        return hold;
+    }
+
+    public void setHold(boolean hold) {
+        this.hold = hold;
+    }
+
+    public boolean isToday() {
+        return today;
+    }
+
+    public void setToday(boolean today) {
+        this.today = today;
+    }
+
+    public boolean isBring() {
+        return bring;
+    }
+
+    public void setBring(boolean bring) {
+        this.bring = bring;
+    }
+
+    public boolean isHappen() {
+        return happen;
+    }
+
+    public void setHappen(boolean happen) {
+        this.happen = happen;
+    }
+
+    public boolean isNext() {
+        return next;
+    }
+
+    public void setNext(boolean next) {
+        this.next = next;
+    }
+
+    public boolean isWithout() {
+        return without;
+    }
+
+    public void setWithout(boolean without) {
+        this.without = without;
+    }
+
+    public boolean isBefore() {
+        return before;
+    }
+
+    public void setBefore(boolean before) {
+        this.before = before;
+    }
+
+    public boolean isLarge() {
+        return large;
+    }
+
+    public void setLarge(boolean large) {
+        this.large = large;
+    }
+
+    public boolean isAll2() {
+        return all2;
+    }
+
+    public void setAll2(boolean all2) {
+        this.all2 = all2;
+    }
+
+    public boolean isMillion() {
+        return million;
+    }
+
+    public void setMillion(boolean million) {
+        this.million = million;
+    }
+
+    public boolean isMust() {
+        return must;
+    }
+
+    public void setMust(boolean must) {
+        this.must = must;
+    }
+
+    public boolean isHome() {
+        return home;
+    }
+
+    public void setHome(boolean home) {
+        this.home = home;
+    }
+
+    public boolean isUnder() {
+        return under;
+    }
+
+    public void setUnder(boolean under) {
+        this.under = under;
+    }
+
+    public boolean isWater() {
+        return water;
+    }
+
+    public void setWater(boolean water) {
+        this.water = water;
+    }
+
+    public boolean isRoom() {
+        return room;
+    }
+
+    public void setRoom(boolean room) {
+        this.room = room;
+    }
+
+    public boolean isWrite() {
+        return write;
+    }
+
+    public void setWrite(boolean write) {
+        this.write = write;
+    }
+
+    public boolean isMother() {
+        return mother;
+    }
+
+    public void setMother(boolean mother) {
+        this.mother = mother;
+    }
+
+    public boolean isArea() {
+        return area;
+    }
+
+    public void setArea(boolean area) {
+        this.area = area;
+    }
+
+    public boolean isNational() {
+        return national;
+    }
+
+    public void setNational(boolean national) {
+        this.national = national;
+    }
+
+    public boolean isMoney() {
+        return money;
+    }
+
+    public void setMoney(boolean money) {
+        this.money = money;
+    }
+
+    public boolean isStory() {
+        return story;
+    }
+
+    public void setStory(boolean story) {
+        this.story = story;
+    }
+
+    public boolean isYoung() {
+        return young;
+    }
+
+    public void setYoung(boolean young) {
+        this.young = young;
+    }
+
+    public boolean isFact() {
+        return fact;
+    }
+
+    public void setFact(boolean fact) {
+        this.fact = fact;
+    }
+
+    public boolean isMonth() {
+        return month;
+    }
+
+    public void setMonth(boolean month) {
+        this.month = month;
+    }
+
+    public boolean isDifferent() {
+        return different;
+    }
+
+    public void setDifferent(boolean different) {
+        this.different = different;
+    }
+
+    public boolean isLot() {
+        return lot;
+    }
+
+    public void setLot(boolean lot) {
+        this.lot = lot;
+    }
+
+    public boolean isRight2() {
+        return right2;
+    }
+
+    public void setRight2(boolean right2) {
+        this.right2 = right2;
+    }
+
+    public boolean isStudy() {
+        return study;
+    }
+
+    public void setStudy(boolean study) {
+        this.study = study;
+    }
+
+    public boolean isBook() {
+        return book;
+    }
+
+    public void setBook(boolean book) {
+        this.book = book;
+    }
+
+    public boolean isEye() {
+        return eye;
+    }
+
+    public void setEye(boolean eye) {
+        this.eye = eye;
+    }
+
+    public boolean isJob() {
+        return job;
+    }
+
+    public void setJob(boolean job) {
+        this.job = job;
+    }
+
+    public boolean isWord() {
+        return word;
+    }
+
+    public void setWord(boolean word) {
+        this.word = word;
+    }
+
+    public boolean isThough() {
+        return though;
+    }
+
+    public void setThough(boolean though) {
+        this.though = though;
+    }
+
+    public boolean isBusiness() {
+        return business;
+    }
+
+    public void setBusiness(boolean business) {
+        this.business = business;
+    }
+
+    public boolean isIssue() {
+        return issue;
+    }
+
+    public void setIssue(boolean issue) {
+        this.issue = issue;
+    }
+
+    public boolean isSide() {
+        return side;
+    }
+
+    public void setSide(boolean side) {
+        this.side = side;
+    }
+
+    public boolean isKind() {
+        return kind;
+    }
+
+    public void setKind(boolean kind) {
+        this.kind = kind;
     }
 }
