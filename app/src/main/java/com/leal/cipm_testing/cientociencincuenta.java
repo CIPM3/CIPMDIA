@@ -3,7 +3,7 @@ package com.leal.cipm_testing;
 public class cientociencincuenta {
 
     String alleng[]={
-            "only ","only ","those ","tell ","one ","very ","her ","even ",
+           "only ","those ","to tell ","one ","very ","her ","even ",
             "back ","any ","good ","woman ","through ","us ","life ","child ",
             "there ","work ","down ","may ","after ","should ","call ","world ",
             "over ","school ","still ","try ","in ","as ","last ","ask ","need ",
@@ -13,9 +13,9 @@ public class cientociencincuenta {
     };
 
     String allsp[]={
-            "bueno, bien ","bueno bien ","solo ","esos,esas ","dile, diles ","uno,una ",
-            "muy, mucho ","ella ","incluso ","atrás ","cualquiera, cualquier ","bien, buen,bueno ",
-            "mujer ","a través de ","nosotros, nosotras ","vida ","niño, niña ",
+            "solo","esos,esas ","comentar","uno,una ",
+            "muy ","ella como objeto","incluso ","atrás ","cualquier ","bien",
+            "mujer ","a través de ","nosotros como objeto","vida ","niño, niña ",
             "ahí (lugar de objeto) ","trabajar,trabajo ","abajo ","puede, puedes, podemos ",
             "despues (verbo de tiempo) ","deberia, debes, ","llamar ","mundo ",
             "sobre ","escuela ","todavía ","probar,pruebo,pruebas ","en,dentro ",

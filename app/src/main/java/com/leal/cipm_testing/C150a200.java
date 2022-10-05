@@ -3,24 +3,24 @@ package com.leal.cipm_testing;
 public class C150a200 {
 
     String alleng[]={
-            "old ","old ","while ","mean ","on ","keep ","student ","why ",
-            "let ","great ","same ","big ","group ","begin ","seem ",
-            "country ","help ","talk ","where ","turn ","problem ",
-            "every ","start ","hand ","might ","american ","show ",
+          "old ","while ","to mean ","on ","to keep ","student ","why ",
+            "to let ","great ","same ","big ","group ","begin ","to seem ",
+            "country ","to help ","to talk ","where ","to turn ","problem ",
+            "every ","start ","hand ","might ","american ","to show ",
             "part ","about ","against ","place ","over ","such ",
             "again ","few ","case ","most ","week ","company ",
-            "where ","system ","each ","right ","program ","hear ",
-            "so ","question ","during ","work ","play "
+            "system ","each ","right ","program ","to hear ",
+            "so ","question ","during ","work ","to play "
     };
 
     String allsp[]={
-            "viejo ", "viejo ", "mientras ", "significa ", "en ", "mantener ", "estudiante ", "por qué ",
+         "viejo ", "mientras ", "significar ", "sobre (superficie) ", "mantener ", "estudiante ", "por qué ",
             "dejar", "grandioso ", "igual", "grande ", "grupo ", "comenzar ", "parecer ",
-            "país ", "ayuda ", "hablar ", "dónde ", "giro ", "problema ",
-            "cada ", "inicio ", "mano ", "podría ", "americano ", "mostrar ",
-            "parte ", "acerca de ", "contra ", "lugar ", "sobre ", "tal ",
+            "país ", "ayuda ", "hablar ", "dónde ", "girar ", "problema ",
+            "cada ", "inicio ", "mano ", "quizá que se usa como modal ", "americano ", "mostrar ",
+            "parte ", "acerca de ", "contra ", "lugar ", "sobre por encima ", "tal ",
             "otra vez ", "pocos ", "caso ", "la mayoría ", "semana ", "empresa ",
-            "donde ", "sistema ", "cada uno ", "derecho ", "programa ", "escuchar ",
+            "sistema ", "cada uno ", "derecho ", "programa ", "escuchar ",
             "entonces ", "pregunta ", "durante ", "trabajo ", "jugar "
     };
 

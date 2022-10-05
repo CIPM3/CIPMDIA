@@ -32,7 +32,6 @@ public class fiftytohundred {
             "camino,manera,forma ","mirar ",
             "primero ","tambíen ",
             "nuevo ","porque (explicacion) ","día ",
-
             "usar ","hombre ","encontrar ",
             "aqui ",
             "cosa ","dar ","muchos"
