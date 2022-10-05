@@ -233,7 +233,6 @@ public class MainTesting extends AppCompatActivity {
 
                                 }
                             });
-                            Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
                             shownext();
 
                             break;
@@ -1953,6 +1952,216 @@ public class MainTesting extends AppCompatActivity {
 
             //aqui debería ir los metodos de sp int
 
+            case "Tutorial":
+                Toast.makeText(this, "Estas en tutorial, elige algo", Toast.LENGTH_SHORT).show();
+                break ;
+            case "Por Sujeto":
+                tt1= new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            //iniciarentradavoz();
+                                        }
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator n = new Generator();
+                                    n.generatepsporSujeto();
+                                    sptx.setText(n.gens);
+                                    engtx=n.gene;
+                                    t0= n.gene;
+                                    t1= n.gene2;
+                                    t2= n.gene3;
+                                    t3= "null";
+                                    t4= "null";
+                                    t5= "null";
+                                    t6= "null";
+                                    // en caso de int de sujeto tercer persona
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+
+                            }
+                        });
+                break;
+            case "Por Objeto":
+                tt1= new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            //iniciarentradavoz();
+                                        }
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator n = new Generator();
+                                    n.generatepsporObjeto();
+                                    sptx.setText(n.gens);
+                                    engtx=n.gene;// he
+                                    t0= n.gene;
+                                    t1= n.gene2;// she
+                                    t2= n.gene3;// it
+                                    t3= "null";
+                                    t4= "null";
+                                    t5= "null";
+                                    t6= "null";
+                                    // en caso de int de sujeto tercer persona
+                                    //engtx.setTextColor(Color.WHITE);
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+
+                            }
+                        });
+                break;
+            case "Por Preposición":
+                tt1= new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            //iniciarentradavoz();
+                                        }
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator n = new Generator();
+                                    n.generatepsporprep();
+                                    sptx.setText(n.gens);
+                                    engtx=n.gene;// he
+                                    t0= n.gene;
+                                    t1=n.gene2;
+                                    t2= n.gene3;
+                                    t3= "null";
+                                    t4= "null";
+                                    t5= "null";
+                                    t6= "null";
+                                    // en caso de int de sujeto tercer persona
+                                    //engtx.setTextColor(Color.WHITE);
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+
+                            }
+                        });
+                break;
+            case "Interferencia Reflexiva":
+                tt1= new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            //iniciarentradavoz();
+                                        }
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator n = new Generator();
+                                    n.generatepsporReflexivos();
+                                    sptx.setText(n.gens);
+                                    engtx=n.gene;// he
+                                    t1= n.gene2;// she
+                                    t2= n.gene3;// it
+                                    t3= "null";
+                                    t4= "null";
+                                    t5= "null";
+                                    t6= "null";
+                                    // en caso de int de sujeto tercer persona
+                                    //engtx.setTextColor(Color.WHITE);
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+
+                            }
+                        });
+                break;
+
+            case "Interferencia Pasiva":
+                tt1= new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            //iniciarentradavoz();
+                                        }
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator n = new Generator();
+                                    n.GenIntPorPasiva();
+                                    sptx.setText(n.gens);
+                                    engtx=n.gene;// he
+                                    t0= n.gene;
+                                    t1= n.gene2;
+                                    t2= n.gene3;
+                                    t3= n.gene4;
+                                    t4= n.gene5;
+                                    t5= n.gene6;
+                                    t6=n.gene7;
+                                    // en caso de int de sujeto tercer persona
+                                    //engtx.setTextColor(Color.WHITE);
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+
+                            }
+                        });
+                break;
+
+
+
 
 
 
@@ -2077,6 +2286,23 @@ public class MainTesting extends AppCompatActivity {
             case "Be Used To":
                 but=true;
                 break;
+            // interferencias
+            case "Por Sujeto":
+                intxsub=true;
+                break ;
+            case "Por Objeto":
+                intxob=true;
+                break ;
+            case "Por Preposición":
+                intxprep=true;
+                break ;
+            case "Interferencia Reflexiva":
+                intxref=true;
+                break ;
+            case "Interferencia Pasiva":
+                intpasiva=true;
+                break ;
+
             case "the":
                 the= true;
                 Toast.makeText(this, "inside the", Toast.LENGTH_SHORT).show();
@@ -2843,10 +3069,12 @@ public class MainTesting extends AppCompatActivity {
                 kind= true;
                 break;
             //200 a 250
+            
+
+
 
         }
     }
-
     public void answerchecker(View view){
         switch (selectionv){
             case "Syntax":
@@ -3075,11 +3303,9 @@ public class MainTesting extends AppCompatActivity {
         user.put("should",should);
         user.put("call",call);
         user.put("world",world);
-        user.put("over",over);
         user.put("school",school);
         user.put("still",still);
         user.put("try1",try1);
-        user.put("in1",in1);
         user.put("as",as);
         user.put("last",last);
         user.put("ask",ask);
@@ -3087,7 +3313,6 @@ public class MainTesting extends AppCompatActivity {
         user.put("too",too);
         user.put("feel",feel);
         user.put("three",three);
-        user.put("when1",when1);
         user.put("state",state);
         user.put("never",never);
         user.put("become",become);
@@ -3098,11 +3323,8 @@ public class MainTesting extends AppCompatActivity {
         user.put("most",most);
         user.put("another",another);
         user.put("much",much);
-        user.put("another1",another1);
-        user.put("much1",much1);
         user.put("family",family);
         user.put("own",own);
-        user.put("out1",out1);
         user.put("leave",leave);
         user.put("put",put);
         //aqui termina 100 a 150
@@ -3197,11 +3419,11 @@ public class MainTesting extends AppCompatActivity {
         }
         Map<String, Object> user = new HashMap<>();
         CollectionReference uid= db.collection(userid);
-        user.put("Interferencia Por Sujeto: ", intxsub);
-        user.put("Interferencia Por Objeto: ", intxob);
-        user.put("Interferencia Por Preposicion: ", intxprep);
-        user.put("Interferencia Por Reflexiva: ", intxref);
-        user.put("Interferencia Por Pasiva: ", intpasiva);
+        user.put("porobjeto", intxsub);
+        user.put("porsujeto", intxob);
+        user.put("porprep", intxprep);
+        user.put("porrefl", intxref);
+        user.put("porpasiva", intpasiva);
 
         uid.document("Interferencias").set(user);
     }

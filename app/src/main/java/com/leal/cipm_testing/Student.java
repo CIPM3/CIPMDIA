@@ -18,6 +18,10 @@ public class Student {
     boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
     boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200,vocab200a250;
 
+    int presentesimpleint;
+
+
+
 
     public Student() {
 
