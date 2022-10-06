@@ -106,6 +106,15 @@ public class MainTesting extends AppCompatActivity {
             study ,book ,eye ,job ,word ,though ,business ,issue ,
             side ,kind ;
 
+    //350 a 400 booleanos
+    boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
+            morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
+            food ,before2 ,moment ,himself ,toair , teacher ,toforce ,tooffer ,
+            enough ,both ,education ,across ,although ,toremember ,foot ,second ,
+            boy ,maybe ,toward , able ,age ,off2  ,policy ,everything ,love ,
+            toprocess ,music ,including ,toconsider ,toappear ,actually ,
+            tobuy , probably  ;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -1950,6 +1959,43 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "350 to 400":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C350a400 gen1 = new C350a400();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab350a400();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             //aqui debería ir los metodos de sp int
 
             case "Tutorial":
@@ -3069,9 +3115,158 @@ public class MainTesting extends AppCompatActivity {
                 kind= true;
                 break;
             //200 a 250
-            
 
-
+            case "war":
+                war= true;
+                break;
+            case "history":
+                history= true;
+                break;
+            case "party":
+                party= true;
+                break;
+            case "within":
+                within= true;
+                break;
+            case "togrow":
+                togrow= true;
+                break;
+            case "result":
+                result= true;
+                break;
+            case "open":
+                open= true;
+                break;
+            case "change":
+                change= true;
+                break;
+            case "morning":
+                morning= true;
+                break;
+            case "towalk":
+                towalk= true;
+                break;
+            case "reason":
+                reason= true;
+                break;
+            case "low":
+                low= true;
+                break;
+            case "towin":
+                towin= true;
+                break;
+            case "toresearch":
+                toresearch= true;
+                break;
+            case "girl":
+                girl= true;
+                break;
+            case "guy":
+                guy= true;
+                break;
+            case "early":
+                early= true;
+                break;
+            case "food":
+                food= true;
+                break;
+            case "before2":
+                before2= true;
+                break;
+            case "moment":
+                moment= true;
+                break;
+            case "himself":
+                himself= true;
+                break;
+            case "toair":
+                toair= true;
+                break;
+            case "teacher":
+                teacher= true;
+                break;
+            case "toforce":
+                toforce= true;
+                break;
+            case "tooffer":
+                tooffer= true;
+                break;
+            case "enough":
+                enough= true;
+                break;
+            case "both":
+                both= true;
+                break;
+            case "education":
+                education= true;
+                break;
+            case "across":
+                across= true;
+                break;
+            case "although":
+                although= true;
+                break;
+            case "toremember":
+                toremember= true;
+                break;
+            case "foot":
+                foot= true;
+                break;
+            case "second":
+                second= true;
+                break;
+            case "boy":
+                boy= true;
+                break;
+            case "maybe":
+                maybe= true;
+                break;
+            case "toward":
+                toward= true;
+                break;
+            case "able":
+                able= true;
+                break;
+            case "age":
+                age= true;
+                break;
+            case "off2":
+                off2= true;
+                break;
+            case "policy":
+                policy= true;
+                break;
+            case "everything":
+                everything= true;
+                break;
+            case "love":
+                love= true;
+                break;
+            case "toprocess":
+                toprocess= true;
+                break;
+            case "music":
+                music= true;
+                break;
+            case "including":
+                including= true;
+                break;
+            case "toconsider":
+                toconsider= true;
+                break;
+            case "toappear":
+                toappear= true;
+                break;
+            case "actually":
+                actually= true;
+                break;
+            case "tobuy":
+                tobuy= true;
+                break;
+            case "probably":
+                probably= true;
+                break;
+            //aqui termina 350 a 400
 
         }
     }
@@ -3380,6 +3575,57 @@ public class MainTesting extends AppCompatActivity {
         user.put("play",play);
         //aqui termina 150 a 200
 
+        user.put("war",war);
+        user.put("history",history);
+        user.put("party",party);
+        user.put("within",within);
+        user.put("togrow",togrow);
+        user.put("result",result);
+        user.put("open",open);
+        user.put("change",change);
+        user.put("morning",morning);
+        user.put("towalk",towalk);
+        user.put("reason",reason);
+        user.put("low",low);
+        user.put("towin",towin);
+        user.put("toresearch",toresearch);
+        user.put("girl",girl);
+        user.put("guy",guy);
+        user.put("early",early);
+        user.put("food",food);
+        user.put("before2",before2);
+        user.put("moment",moment);
+        user.put("himself",himself);
+        user.put("toair",toair);
+        user.put("teacher",teacher);
+        user.put("toforce",toforce);
+        user.put("tooffer",tooffer);
+        user.put("enough",enough);
+        user.put("both",both);
+        user.put("education",education);
+        user.put("across",across);
+        user.put("although",although);
+        user.put("toremember",toremember);
+        user.put("foot",foot);
+        user.put("second",second);
+        user.put("boy",boy);
+        user.put("maybe",maybe);
+        user.put("toward",toward);
+        user.put("able",able);
+        user.put("age",age);
+        user.put("off2",off2);
+        user.put("policy",policy);
+        user.put("everything",everything);
+        user.put("love",love);
+        user.put("toprocess",toprocess);
+        user.put("music",music);
+        user.put("including",including);
+        user.put("toconsider",toconsider);
+        user.put("toappear",toappear);
+        user.put("actually",actually);
+        user.put("tobuy",tobuy);
+        user.put("probably",probably);
+        //aqui termina 350 a 400
 
         uid.document("vocabulary").set(user);
 

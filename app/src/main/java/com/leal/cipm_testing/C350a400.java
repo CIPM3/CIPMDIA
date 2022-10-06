@@ -2,6 +2,28 @@ package com.leal.cipm_testing;
 
 public class C350a400 {
 
+    String alleng[]={
+            "war ", "history ", "party ", "within ", "to grow ", "result ", "open ",
+            "change ", "morning ", "to walk ", "reason ", "low ", "to win ", "to research ",
+            "girl ", "guy ", "early ", "food ", "before ", "moment ", "himself ", "to air ",
+            "teacher ", "to force ", "to offer ", "enough ", "both ", "education ", "across ",
+            "although ", "to remember ", "foot ", "second ", "boy ", "maybe ", "toward ",
+            "able ", "age ", "off  ", "policy ", "everything ", "love ", "to process ",
+            "music ", "including ", "to consider ", "to appear ", "actually ", "to buy ",
+            "probably "
+    };
+
+    String allsp[]={
+            "guerra ", "historia ", "fiesta ", "dentro de ", "crecer ", "resultado ", "abierto o abrir ",
+            "cambiar ", "mañana ", "caminar ", "razón ", "bajo ", "ganar ", "investigar ",
+            "niña ", "tipo (forma de llamar a un chico) ", "temprano ", "comida ", "antes ", "momento ",
+            "él mismo ", "ventilar ", "profesor ", "forzar ", "ofrecer ", "suficiente ",
+            "ambos ", "educación ", "a través de ", "aunque ", "recordar ", "pie ", "segundo o segunda ",
+            "niño ", "tal vez ", "hacia ", "capaz ", "edad ", "apagado ", "política ",
+            "toda o todo ", "amor ", "procesar ", "música ", "incluyendo ", "considerar ",
+            "aparecer ", "realmente ", "comprar ", "problablemente "
+    };
+
     String sust[] = {"la historia ",
             "la fiesta ", "el resultado ", "la mañana ", "la razón ", "la investigación ",
             "la niña ", "el chavo ", "la comida ", "el momento ",
@@ -64,6 +86,19 @@ public class C350a400 {
 
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab350a400(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 
     public void prepn() {
         int p = (int) (Math.random() * prep.length);

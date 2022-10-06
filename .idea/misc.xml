@@ -6,7 +6,6 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_accessibility_new_vocab.xml" value="0.1465" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_connect_without_structure_speaking.xml" value="0.1465" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_people_outline_intsp.xml" value="0.1465" />
-        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_sort_by_alpha_24.xml" value="0.158" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_controlar.xml" value="0.1835" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_hut.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout-xlarge/activity_spanish_int.xml" value="0.1" />
@@ -26,7 +25,6 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_tutorial_general.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_vocabulary_nuevo.xml" value="0.13496376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/fragment_spint_test_result.xml" value="0.175" />
-        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/fragment_spint_test_results.xml" value="0.1484375" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/fragment_structure_test_result.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/fragment_vocab_test_result.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/list.xml" value="0.16621376811594202" />
@@ -46,6 +44,8 @@
         <entry key="app/src/main/res/drawable/ic_grupo_select.xml" value="0.251" />
         <entry key="app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.2685127590013587" />
         <entry key="app/src/main/res/layout/activity_estructura_nuevo.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_main_testing.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_test_results.xml" value="0.14945652173913043" />
       </map>
     </option>
   </component>
