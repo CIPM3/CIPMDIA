@@ -45,6 +45,14 @@ public class StudentVocabRestultsModel {
             study ,book ,eye ,job ,word ,though ,business ,issue ,
             side ,kind ;
 
+    //250 a 300 booleanos
+    boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
+            after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
+            important ,father ,sit ,away ,until ,power ,hour ,
+            game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
+            bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
+            almost ,include ,continue1 ,set ,later ,community;
+
     //350 a 400 booleanos
     boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
             morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
@@ -53,7 +61,10 @@ public class StudentVocabRestultsModel {
             boy ,maybe ,toward , able ,age ,off2  ,policy ,everything ,love ,
             toprocess ,music ,including ,toconsider ,toappear ,actually ,
             tobuy , probably ;
-    
+
+
+
+
 
     public StudentVocabRestultsModel(){}
 
@@ -2090,404 +2101,779 @@ public class StudentVocabRestultsModel {
         this.kind = kind;
     }
 
-    public boolean isWar(){
+    public boolean isFour() {
+        return four;
+    }
+
+    public void setFour(boolean four) {
+        this.four = four;
+    }
+
+    public boolean isHead() {
+        return head;
+    }
+
+    public void setHead(boolean head) {
+        this.head = head;
+    }
+
+    public boolean isFar() {
+        return far;
+    }
+
+    public void setFar(boolean far) {
+        this.far = far;
+    }
+
+    public boolean isBlack() {
+        return black;
+    }
+
+    public void setBlack(boolean black) {
+        this.black = black;
+    }
+
+    public boolean isLong1() {
+        return long1;
+    }
+
+    public void setLong1(boolean long1) {
+        this.long1 = long1;
+    }
+
+    public boolean isBoth2() {
+        return both2;
+    }
+
+    public void setBoth2(boolean both2) {
+        this.both2 = both2;
+    }
+
+    public boolean isLittle() {
+        return little;
+    }
+
+    public void setLittle(boolean little) {
+        this.little = little;
+    }
+
+    public boolean isHouse() {
+        return house;
+    }
+
+    public void setHouse(boolean house) {
+        this.house = house;
+    }
+
+    public boolean isYes() {
+        return yes;
+    }
+
+    public void setYes(boolean yes) {
+        this.yes = yes;
+    }
+
+    public boolean isAfter2() {
+        return after2;
+    }
+
+    public void setAfter2(boolean after2) {
+        this.after2 = after2;
+    }
+
+    public boolean isSince2() {
+        return since2;
+    }
+
+    public void setSince2(boolean since2) {
+        this.since2 = since2;
+    }
+
+    public boolean isLong2() {
+        return long2;
+    }
+
+    public void setLong2(boolean long2) {
+        this.long2 = long2;
+    }
+
+    public boolean isProvide() {
+        return provide;
+    }
+
+    public void setProvide(boolean provide) {
+        this.provide = provide;
+    }
+
+    public boolean isService() {
+        return service;
+    }
+
+    public void setService(boolean service) {
+        this.service = service;
+    }
+
+    public boolean isAround() {
+        return around;
+    }
+
+    public void setAround(boolean around) {
+        this.around = around;
+    }
+
+    public boolean isFriend() {
+        return friend;
+    }
+
+    public void setFriend(boolean friend) {
+        this.friend = friend;
+    }
+
+    public boolean isImportant() {
+        return important;
+    }
+
+    public void setImportant(boolean important) {
+        this.important = important;
+    }
+
+    public boolean isFather() {
+        return father;
+    }
+
+    public void setFather(boolean father) {
+        this.father = father;
+    }
+
+    public boolean isSit() {
+        return sit;
+    }
+
+    public void setSit(boolean sit) {
+        this.sit = sit;
+    }
+
+    public boolean isAway() {
+        return away;
+    }
+
+    public void setAway(boolean away) {
+        this.away = away;
+    }
+
+    public boolean isUntil() {
+        return until;
+    }
+
+    public void setUntil(boolean until) {
+        this.until = until;
+    }
+
+    public boolean isPower() {
+        return power;
+    }
+
+    public void setPower(boolean power) {
+        this.power = power;
+    }
+
+    public boolean isHour() {
+        return hour;
+    }
+
+    public void setHour(boolean hour) {
+        this.hour = hour;
+    }
+
+    public boolean isGame() {
+        return game;
+    }
+
+    public void setGame(boolean game) {
+        this.game = game;
+    }
+
+    public boolean isOften() {
+        return often;
+    }
+
+    public void setOften(boolean often) {
+        this.often = often;
+    }
+
+    public boolean isYet() {
+        return yet;
+    }
+
+    public void setYet(boolean yet) {
+        this.yet = yet;
+    }
+
+    public boolean isLine() {
+        return line;
+    }
+
+    public void setLine(boolean line) {
+        this.line = line;
+    }
+
+    public boolean isPolitical() {
+        return political;
+    }
+
+    public void setPolitical(boolean political) {
+        this.political = political;
+    }
+
+    public boolean isEnd() {
+        return end;
+    }
+
+    public void setEnd(boolean end) {
+        this.end = end;
+    }
+
+    public boolean isAmong() {
+        return among;
+    }
+
+    public void setAmong(boolean among) {
+        this.among = among;
+    }
+
+    public boolean isEver() {
+        return ever;
+    }
+
+    public void setEver(boolean ever) {
+        this.ever = ever;
+    }
+
+    public boolean isStand() {
+        return stand;
+    }
+
+    public void setStand(boolean stand) {
+        this.stand = stand;
+    }
+
+    public boolean isBad() {
+        return bad;
+    }
+
+    public void setBad(boolean bad) {
+        this.bad = bad;
+    }
+
+    public boolean isLose() {
+        return lose;
+    }
+
+    public void setLose(boolean lose) {
+        this.lose = lose;
+    }
+
+    public boolean isHowever() {
+        return however;
+    }
+
+    public void setHowever(boolean however) {
+        this.however = however;
+    }
+
+    public boolean isMember() {
+        return member;
+    }
+
+    public void setMember(boolean member) {
+        this.member = member;
+    }
+
+    public boolean isPay() {
+        return pay;
+    }
+
+    public void setPay(boolean pay) {
+        this.pay = pay;
+    }
+
+    public boolean isLaw() {
+        return law;
+    }
+
+    public void setLaw(boolean law) {
+        this.law = law;
+    }
+
+    public boolean isMeet() {
+        return meet;
+    }
+
+    public void setMeet(boolean meet) {
+        this.meet = meet;
+    }
+
+    public boolean isCar() {
+        return car;
+    }
+
+    public void setCar(boolean car) {
+        this.car = car;
+    }
+
+    public boolean isCity() {
+        return city;
+    }
+
+    public void setCity(boolean city) {
+        this.city = city;
+    }
+
+    public boolean isAlmost() {
+        return almost;
+    }
+
+    public void setAlmost(boolean almost) {
+        this.almost = almost;
+    }
+
+    public boolean isInclude() {
+        return include;
+    }
+
+    public void setInclude(boolean include) {
+        this.include = include;
+    }
+
+    public boolean isContinue1() {
+        return continue1;
+    }
+
+    public void setContinue1(boolean continue1) {
+        this.continue1 = continue1;
+    }
+
+    public boolean isSet() {
+        return set;
+    }
+
+    public void setSet(boolean set) {
+        this.set = set;
+    }
+
+    public boolean isLater() {
+        return later;
+    }
+
+    public void setLater(boolean later) {
+        this.later = later;
+    }
+
+    public boolean isCommunity() {
+        return community;
+    }
+
+    public void setCommunity(boolean community) {
+        this.community = community;
+    }
+
+    public boolean isWar() {
         return war;
     }
 
-    public void setWar(boolean war){
+    public void setWar(boolean war) {
         this.war = war;
     }
 
-    public boolean isHistory(){
+    public boolean isHistory() {
         return history;
     }
 
-    public void setHistory(boolean history){
+    public void setHistory(boolean history) {
         this.history = history;
     }
 
-    public boolean isParty(){
+    public boolean isParty() {
         return party;
     }
 
-    public void setParty(boolean party){
+    public void setParty(boolean party) {
         this.party = party;
     }
 
-    public boolean isWithin(){
+    public boolean isWithin() {
         return within;
     }
 
-    public void setWithin(boolean within){
+    public void setWithin(boolean within) {
         this.within = within;
     }
 
-    public boolean isTogrow(){
+    public boolean isTogrow() {
         return togrow;
     }
 
-    public void setTogrow(boolean togrow){
+    public void setTogrow(boolean togrow) {
         this.togrow = togrow;
     }
 
-    public boolean isResult(){
+    public boolean isResult() {
         return result;
     }
 
-    public void setResult(boolean result){
+    public void setResult(boolean result) {
         this.result = result;
     }
 
-    public boolean isOpen(){
+    public boolean isOpen() {
         return open;
     }
 
-    public void setOpen(boolean open){
+    public void setOpen(boolean open) {
         this.open = open;
     }
 
-    public boolean isChange(){
+    public boolean isChange() {
         return change;
     }
 
-    public void setChange(boolean change){
+    public void setChange(boolean change) {
         this.change = change;
     }
 
-    public boolean isMorning(){
+    public boolean isMorning() {
         return morning;
     }
 
-    public void setMorning(boolean morning){
+    public void setMorning(boolean morning) {
         this.morning = morning;
     }
 
-    public boolean isTowalk(){
+    public boolean isTowalk() {
         return towalk;
     }
 
-    public void setTowalk(boolean towalk){
+    public void setTowalk(boolean towalk) {
         this.towalk = towalk;
     }
 
-    public boolean isReason(){
+    public boolean isReason() {
         return reason;
     }
 
-    public void setReason(boolean reason){
+    public void setReason(boolean reason) {
         this.reason = reason;
     }
 
-    public boolean isLow(){
+    public boolean isLow() {
         return low;
     }
 
-    public void setLow(boolean low){
+    public void setLow(boolean low) {
         this.low = low;
     }
 
-    public boolean isTowin(){
+    public boolean isTowin() {
         return towin;
     }
 
-    public void setTowin(boolean towin){
+    public void setTowin(boolean towin) {
         this.towin = towin;
     }
 
-    public boolean isToresearch(){
+    public boolean isToresearch() {
         return toresearch;
     }
 
-    public void setToresearch(boolean toresearch){
+    public void setToresearch(boolean toresearch) {
         this.toresearch = toresearch;
     }
 
-    public boolean isGirl(){
+    public boolean isGirl() {
         return girl;
     }
 
-    public void setGirl(boolean girl){
+    public void setGirl(boolean girl) {
         this.girl = girl;
     }
 
-    public boolean isGuy(){
+    public boolean isGuy() {
         return guy;
     }
 
-    public void setGuy(boolean guy){
+    public void setGuy(boolean guy) {
         this.guy = guy;
     }
 
-    public boolean isRarly(){
+    public boolean isEarly() {
         return early;
     }
 
-    public void setRarly(boolean early){
+    public void setEarly(boolean early) {
         this.early = early;
     }
 
-    public boolean isFood(){
+    public boolean isFood() {
         return food;
     }
 
-    public void setFood(boolean food){
+    public void setFood(boolean food) {
         this.food = food;
     }
 
-    public boolean isBefore2(){
+    public boolean isBefore2() {
         return before2;
     }
 
-    public void setBefore2(boolean before2){
+    public void setBefore2(boolean before2) {
         this.before2 = before2;
     }
 
-    public boolean isMoment(){
+    public boolean isMoment() {
         return moment;
     }
 
-    public void setMoment(boolean moment){
+    public void setMoment(boolean moment) {
         this.moment = moment;
     }
 
-    public boolean ishimself(){
+    public boolean isHimself() {
         return himself;
     }
 
-    public void sethimself(boolean himself){
+    public void setHimself(boolean himself) {
         this.himself = himself;
     }
 
-    public boolean isToair(){
+    public boolean isToair() {
         return toair;
     }
 
-    public void setToair(boolean toair){
+    public void setToair(boolean toair) {
         this.toair = toair;
     }
 
-    public boolean isTeacher(){
+    public boolean isTeacher() {
         return teacher;
     }
 
-    public void setTeacher(boolean teacher){
+    public void setTeacher(boolean teacher) {
         this.teacher = teacher;
     }
 
-    public boolean isToforce(){
+    public boolean isToforce() {
         return toforce;
     }
 
-    public void setToforce(boolean toforce){
+    public void setToforce(boolean toforce) {
         this.toforce = toforce;
     }
 
-    public boolean isTooffer(){
+    public boolean isTooffer() {
         return tooffer;
     }
 
-    public void setTooffer(boolean tooffer){
+    public void setTooffer(boolean tooffer) {
         this.tooffer = tooffer;
     }
 
-    public boolean isEnough(){
+    public boolean isEnough() {
         return enough;
     }
 
-    public void setEnough(boolean enough){
+    public void setEnough(boolean enough) {
         this.enough = enough;
     }
 
-    public boolean isBoth(){
+    public boolean isBoth() {
         return both;
     }
 
-    public void setBoth(boolean both){
+    public void setBoth(boolean both) {
         this.both = both;
     }
 
-    public boolean isEducation(){
+    public boolean isEducation() {
         return education;
     }
 
-    public void setEducation(boolean education){
+    public void setEducation(boolean education) {
         this.education = education;
     }
 
-    public boolean isAcross(){
+    public boolean isAcross() {
         return across;
     }
 
-    public void setAcross(boolean across){
+    public void setAcross(boolean across) {
         this.across = across;
     }
 
-    public boolean isAlthough(){
+    public boolean isAlthough() {
         return although;
     }
 
-    public void setAlthough(boolean although){
+    public void setAlthough(boolean although) {
         this.although = although;
     }
 
-    public boolean isToremember(){
+    public boolean isToremember() {
         return toremember;
     }
 
-    public void setToremember(boolean toremember){
+    public void setToremember(boolean toremember) {
         this.toremember = toremember;
     }
 
-    public boolean isFoot(){
+    public boolean isFoot() {
         return foot;
     }
 
-    public void setFoot(boolean foot){
+    public void setFoot(boolean foot) {
         this.foot = foot;
     }
 
-    public boolean isSecond(){
+    public boolean isSecond() {
         return second;
     }
 
-    public void setSecond(boolean second){
+    public void setSecond(boolean second) {
         this.second = second;
     }
 
-    public boolean isBoy(){
+    public boolean isBoy() {
         return boy;
     }
 
-    public void setBoy(boolean boy){
+    public void setBoy(boolean boy) {
         this.boy = boy;
     }
 
-    public boolean isMaybe(){
+    public boolean isMaybe() {
         return maybe;
     }
 
-    public void setMaybe(boolean maybe){
+    public void setMaybe(boolean maybe) {
         this.maybe = maybe;
     }
 
-    public boolean isToward(){
+    public boolean isToward() {
         return toward;
     }
 
-    public void setToward(boolean toward){
+    public void setToward(boolean toward) {
         this.toward = toward;
     }
 
-    public boolean isAble(){
+    public boolean isAble() {
         return able;
     }
 
-    public void setAble(boolean able){
+    public void setAble(boolean able) {
         this.able = able;
     }
 
-    public boolean isAge(){
+    public boolean isAge() {
         return age;
     }
 
-    public void setAge(boolean age){
+    public void setAge(boolean age) {
         this.age = age;
     }
 
-    public boolean isOff2(){
+    public boolean isOff2() {
         return off2;
     }
 
-    public void setOff2(boolean off2){
+    public void setOff2(boolean off2) {
         this.off2 = off2;
     }
 
-    public boolean isPolicy(){
+    public boolean isPolicy() {
         return policy;
     }
 
-    public void setPolicy(boolean policy){
+    public void setPolicy(boolean policy) {
         this.policy = policy;
     }
 
-    public boolean isEverything(){
+    public boolean isEverything() {
         return everything;
     }
 
-    public void setEverything(boolean everything){
+    public void setEverything(boolean everything) {
         this.everything = everything;
     }
 
-    public boolean isLove(){
+    public boolean isLove() {
         return love;
     }
 
-    public void setLove(boolean love){
+    public void setLove(boolean love) {
         this.love = love;
     }
 
-    public boolean isToprocess(){
+    public boolean isToprocess() {
         return toprocess;
     }
 
-    public void setToprocess(boolean toprocess){
+    public void setToprocess(boolean toprocess) {
         this.toprocess = toprocess;
     }
 
-    public boolean isMusic(){
+    public boolean isMusic() {
         return music;
     }
 
-    public void setMusic(boolean music){
+    public void setMusic(boolean music) {
         this.music = music;
     }
 
-    public boolean isIncluding(){
+    public boolean isIncluding() {
         return including;
     }
 
-    public void setIncluding(boolean including){
+    public void setIncluding(boolean including) {
         this.including = including;
     }
 
-    public boolean isToconsider(){
+    public boolean isToconsider() {
         return toconsider;
     }
 
-    public void setToconsider(boolean toconsider){
+    public void setToconsider(boolean toconsider) {
         this.toconsider = toconsider;
     }
 
-    public boolean isToappear(){
+    public boolean isToappear() {
         return toappear;
     }
 
-    public void setToappear(boolean toappear){
+    public void setToappear(boolean toappear) {
         this.toappear = toappear;
     }
 
-    public boolean isActually(){
+    public boolean isActually() {
         return actually;
     }
 
-    public void setActually(boolean actually){
+    public void setActually(boolean actually) {
         this.actually = actually;
     }
 
-    public boolean isTobuy(){
+    public boolean isTobuy() {
         return tobuy;
     }
 
-    public void setTobuy(boolean tobuy){
+    public void setTobuy(boolean tobuy) {
         this.tobuy = tobuy;
     }
 
-    public boolean isProbably(){
+    public boolean isProbably() {
         return probably;
     }
 
-    public void setProbably(boolean probably){
+    public void setProbably(boolean probably) {
         this.probably = probably;
     }
-
 }
