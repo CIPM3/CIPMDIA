@@ -30,7 +30,7 @@ public class Oo {
             "expand ", "operate ", "improve ", "distribute ", "acquire "
     };
 
-    String vn3[] = {"creates ", "enjoys ", "requires ", "builds ", "recieves ", "contains ", "explores ",
+    String vn3[] = {"creates ", "enjoys ", "requires ", "builds ", "receives ", "contains ", "explores ",
             "expands ", "operates ", "improves ", "distributes ", "acquires "
     };
 
@@ -79,22 +79,22 @@ public class Oo {
     };
 
     // verbos participio inglés
-    String vpeng[] = {"created ", "enjoyed ", "required ", "built ", "recieved ", "contained ",
+    String vpeng[] = {"created ", "enjoyed ", "required ", "built ", "received ", "contained ",
             "explored ", "expanded ", "operated ", "improved ", "distributed ", "acquired "
     };
 
     // verbos participio inglés Masculino
-    String vpengM[] = {"created ", "enjoyed ", "required ", "built ", "recieved ", "contained ",
+    String vpengM[] = {"created ", "enjoyed ", "required ", "built ", "received ", "contained ",
             "explored ", "expanded ", "operated ", "improved ", "distributed ", "acquired "
     };
 
     // verbos participio inglés Femenino
-    String vpengF[] = {"created ", "enjoyed ", "required ", "built ", "recieved ", "contained ",
+    String vpengF[] = {"created ", "enjoyed ", "required ", "built ", "received ", "contained ",
             "explored ", "expanded ", "operated ", "improved ", "distributed ", "acquired "
     };
 
 
-    String vnbp[] = {"created ", "enjoyed ", "required ", "built ", "recieved ", "contained ", "explored ",
+    String vnbp[] = {"created ", "enjoyed ", "required ", "built ", "received ", "contained ", "explored ",
             "expanded ", "operated ", "improved ", "distributed ", "acquired "
     };
 

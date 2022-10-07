@@ -20,9 +20,23 @@ public class Student {
             vocab250a300,vocab300a350,vocab350a400,vocab400a450;
 
     int presentesimpleint;
+    String presentesimpletime;
 
+    public int getPresentesimpleint() {
+        return presentesimpleint;
+    }
 
+    public void setPresentesimpleint(int presentesimpleint) {
+        this.presentesimpleint = presentesimpleint;
+    }
 
+    public String getPresentesimpletime() {
+        return presentesimpletime;
+    }
+
+    public void setPresentesimpletime(String presentesimpletime) {
+        this.presentesimpletime = presentesimpletime;
+    }
 
     public Student() {
 
