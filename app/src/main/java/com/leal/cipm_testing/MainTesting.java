@@ -197,7 +197,7 @@ public class MainTesting extends AppCompatActivity {
 
                     switch (selectionv){
 
-                        case "Vocabulary":
+                        case "Vocabular":
                             spin.setVisibility(View.VISIBLE);
                             choose.setText("Choose a Range");
                             choose.setVisibility(View.VISIBLE);
