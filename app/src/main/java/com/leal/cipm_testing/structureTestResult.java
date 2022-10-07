@@ -58,7 +58,7 @@ public class structureTestResult extends Fragment {
                     assert st != null;
                     //aparentemente ya funciona, solo llenar el array
                     String[] est = {st.name,
-                            "Present Simple : "+st.presentesimple,
+                            "Present Simple : "+st.presentesimple+" Response time:"+st.presentesimpletime+" "+"Seconds",
                             "Present Continuous : "+st.presenteContinuo,
                             "Present Perfect : "+st.presentePerfecto,
                             "Present Perfect Continous: "+ st.presentePerfectoContinuo,

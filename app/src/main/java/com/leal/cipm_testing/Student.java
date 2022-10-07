@@ -19,9 +19,23 @@ public class Student {
     boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200;
 
     int presentesimpleint;
+    String presentesimpletime;
 
+    public int getPresentesimpleint() {
+        return presentesimpleint;
+    }
 
+    public void setPresentesimpleint(int presentesimpleint) {
+        this.presentesimpleint = presentesimpleint;
+    }
 
+    public String getPresentesimpletime() {
+        return presentesimpletime;
+    }
+
+    public void setPresentesimpletime(String presentesimpletime) {
+        this.presentesimpletime = presentesimpletime;
+    }
 
     public Student() {
 

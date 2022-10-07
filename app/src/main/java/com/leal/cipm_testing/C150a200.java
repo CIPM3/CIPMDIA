@@ -5,23 +5,23 @@ public class C150a200 {
     String alleng[]={
           "old ","while ","to mean ","on ","to keep ","student ","why ",
             "to let ","great ","same ","big ","group ","begin ","to seem ",
-            "country ","to help ","to talk ","where ","to turn ","problem ",
+            "country ","to help ","to talk ","to turn ","problem ",
             "every ","start ","hand ","might ","american ","to show ",
             "part ","about ","against ","place ","over ","such ",
-            "again ","few ","case ","most ","week ","company ",
+            "again ","few ","case ","week ","company ",
             "system ","each ","right ","program ","to hear ",
-            "so ","question ","during ","work ","to play "
+            "question ","during ","work ","to play "
     };
 
     String allsp[]={
          "viejo ", "mientras ", "significar ", "sobre (superficie) ", "mantener ", "estudiante ", "por qué ",
             "dejar", "grandioso ", "igual", "grande ", "grupo ", "comenzar ", "parecer ",
-            "país ", "ayuda ", "hablar ", "dónde ", "girar ", "problema ",
+            "país ", "ayuda ", "hablar ",  "girar ", "problema ",
             "cada ", "inicio ", "mano ", "quizá que se usa como modal ", "americano ", "mostrar ",
             "parte ", "acerca de ", "contra ", "lugar ", "sobre por encima ", "tal ",
-            "otra vez ", "pocos ", "caso ", "la mayoría ", "semana ", "empresa ",
+            "otra vez ", "pocos ", "caso ",  "semana ", "empresa ",
             "sistema ", "cada uno ", "derecho ", "programa ", "escuchar ",
-            "entonces ", "pregunta ", "durante ", "trabajo ", "jugar "
+             "pregunta ", "durante ", "trabajo como sustantivo", "jugar "
     };
 
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};

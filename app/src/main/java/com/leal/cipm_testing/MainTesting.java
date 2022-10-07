@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -20,33 +19,26 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainTesting extends AppCompatActivity {
     FirebaseFirestore  db = FirebaseFirestore.getInstance();
     private Button     starttest,gotofrag;
-    TextView           choose,sptx,getsent,save, chooselev;
+    TextView           choose,sptx,getsent,save, chooselev , timerText;
     Spinner            spin,spinv;
     ImageButton        mic;
     TextToSpeech       tt1;
@@ -55,6 +47,8 @@ public class MainTesting extends AppCompatActivity {
     FirebaseAuth       mAuth;
     GoogleSignInClient gsc;
     String t0, t1, t2, t3, t4, t5, t6,engtx;
+    int prom;
+    String psseconds;
 
 
     public static final int REC_CODE_SPEECH_INPUT = 100;
@@ -86,7 +80,7 @@ public class MainTesting extends AppCompatActivity {
             too ,feel ,three ,when1 ,state ,never ,become ,between ,
             high ,really ,something ,most ,another ,much ,
             another1 ,much1 ,family ,own ,out1 ,leave ,put;
-    
+
     //150 a 200 booleanos
     boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
             let ,great ,same ,big ,group ,begin ,seem ,
@@ -103,11 +97,21 @@ public class MainTesting extends AppCompatActivity {
     ImageButton b;
     String see= "see Tutorial";
     boolean intxsub,intxprep,intxob,intxref,intpasiva;
+    Timer timer;
+    TimerTask timerTask;
+    Double timen = 0.0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_testing);
+        timer = new Timer();
+        timerText= (TextView) findViewById(R.id.timertextv);
+       // timerText.setVisibility(View.INVISIBLE);
+        timerText.setText(formatTime(0,0,0));
+
+
         gotofrag=findViewById(R.id.gotofrag);
         gotofrag.setVisibility(View.GONE);
         starttest=findViewById(R.id.StartTestMain);
@@ -389,6 +393,7 @@ public class MainTesting extends AppCompatActivity {
 
     //2
     public  void   startTest(){
+
         save.setVisibility(View.VISIBLE);
         switch (selection) {
             case "Pick a Structure":
@@ -409,8 +414,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2128,9 +2134,766 @@ public class MainTesting extends AppCompatActivity {
         switch (CurrentStructure){
             case "Present Simple":
                 ps=true;
+
                 break;
             case "Present Continuous":
                 pc=true;
+                break;
+            case "Present Perfect":
+                pp=true;
+                break;
+            case "Present Perfect Continuous":
+                ppc=true;
+                break;
+            case "Past Simple":
+                pss=true;
+                break;
+            case "Past Continuous":
+                psc=true;
+                break;
+            case "Past Perfect":
+                psp=true;
+                break;
+            case "Past Perfect Continuous":
+                pspc=true;
+                break;
+            case "Future Simple":
+                fs=true;
+                break;
+            case "Future Continuous":
+                fc=true;
+                break;
+            case "Future Perfect":
+                fp=true;
+                break;
+            case "Future Perfect Continuous":
+                fpc=true;
+                break;
+            case "Would Simple":
+                ws=true;
+                break;
+            case "Would Continuous":
+                wc=true;
+                break;
+            case "Would Perfect":
+                wp=true;
+                break;
+            case "Would Perfect Continuous":
+                wpc=true;
+                break;
+            case "Could Simple":
+                cos=true;
+                break;
+            case "Could Continuous":
+                coc=true;
+                break;
+            case "Could Perfect":
+                cop=true;
+                break;
+            case "Could Perfect Continuous":
+                copc=true;
+                break;
+            case "Might Simple":
+                ms=true;
+                break;
+            case "Might Continuous":
+                mc=true;
+                break;
+            case "Might Perfect":
+                mp=true;
+                break;
+            case "Might Perfect Continuous":
+                mpc=true;
+                break;
+            case "Can Simple":
+                cs=true;
+                break;
+            case "Can Continuous":
+                cc=true;
+                break;
+            case "Must Simple":
+                mus=true;
+                break;
+            case "Must Continuous":
+                muc=true;
+                break;
+            case "Should Simple":
+                ss=true;
+                break;
+            case "Should Continuous":
+                sc=true;
+                break;
+            case "Should Perfect":
+                sp=true;
+                break;
+            case "Should Perfect Continuous":
+                spc=true;
+                break;
+            case "Want To":
+                wt=true;
+                break;
+            case "For To":
+                ft=true;
+                break;
+            case "Supposed To Present":
+                stp=true;
+                break;
+            case "Wish Past Perfect":
+                wpp=true;
+                break;
+            case "Used To":
+                ut=true;
+                break;
+            case "Be Used To":
+                but=true;
+                break;
+            case "the":
+                the= true;
+                Toast.makeText(this, "inside the", Toast.LENGTH_SHORT).show();
+                break;
+            case "to be":
+                tobe= true;
+                break;
+            case "and":
+                and= true;
+                break;
+            case "of":
+                of= true;
+                break;
+            case "a":
+                a= true;
+                break;
+            case "in":
+                in= true;
+                break;
+            case "to":
+                to= true;
+                break;
+            case "to have":
+                tohave= true;
+                break;
+            case "it":
+                it= true;
+                break;
+            case "I":
+                I= true;
+                break;
+            case "that 1":
+                that1= true;
+                break;
+            case "that 2":
+                that2= true;
+                break;
+            case "for 1":
+                for1= true;
+                break;
+            case "for 2":
+                for2= true;
+                break;
+            case "you":
+                you= true;
+                break;
+            case "he":
+                he= true;
+                break;
+            case "with":
+                with= true;
+                break;
+            case "on":
+                on= true;
+                break;
+            case "to do":
+                todo= true;
+                break;
+            case "to say":
+                tosay= true;
+                break;
+            case "they":
+                they= true;
+                break;
+            case "at":
+                at= true;
+                break;
+            case "but 1":
+                but1= true;
+                break;
+            case "we":
+                we= true;
+                break;
+            case "his":
+                his= true;
+                break;
+            case "from 1":
+                from1= true;
+                break;
+            case "from 2":
+                from2= true;
+                break;
+            case "since":
+                since= true;
+                break;
+            case "by":
+                by= true;
+                break;
+            case "she":
+                she= true;
+                break;
+            case "or":
+                or= true;
+                break;
+            case "as 1":
+                as1= true;
+                break;
+            case "as 2":
+                as2= true;
+                break;
+            case "what 1":
+                what1= true;
+                break;
+            case "what 2":
+                what2= true;
+                break;
+            case "to go":
+                togo= true;
+                break;
+            case "their":
+                their= true;
+                break;
+            case "can":
+                can= true;
+                break;
+            case "who":
+                who= true;
+                break;
+            case "to get":
+                toget= true;
+                break;
+            case "if 1":
+                if1= true;
+                break;
+            case "would":
+                would= true;
+                break;
+            case "her":
+                her= true;
+                break;
+            case "all":
+                all= true;
+                break;
+            case "my":
+                my= true;
+                break;
+            case "to make":
+                tomake= true;
+                break;
+            case "about 1":
+                about1= true;
+                break;
+            case "about 2":
+                about2= true;
+                break;
+            case "will":
+                will= true;
+                break;
+            case "up":
+                up= true;
+                break;
+            //0 a 50
+
+            case "one":
+                one= true;
+                break;
+            case "time":
+                time= true;
+                break;
+            case "there":
+                there= true;
+                break;
+            case "year":
+                year= true;
+                break;
+            case "so":
+                so= true;
+                break;
+            case "think":
+                think= true;
+                break;
+            case "when":
+                when= true;
+                break;
+            case "which":
+                which= true;
+                break;
+            case "them":
+                them= true;
+                break;
+            case "some":
+                some= true;
+                break;
+            case "me":
+                me= true;
+                break;
+            case "people":
+                people= true;
+                break;
+            case "take":
+                take= true;
+                break;
+            case "out":
+                out= true;
+                break;
+            case "into":
+                into= true;
+                break;
+            case "just":
+                just= true;
+                break;
+            case "see1":
+                see1= true;
+                break;
+            case "him":
+                him= true;
+                break;
+            case "your":
+                your= true;
+                break;
+            case "come":
+                come= true;
+                break;
+            case "could":
+                could= true;
+                break;
+            case "now":
+                now= true;
+                break;
+            case "than":
+                than= true;
+                break;
+            case "like":
+                like= true;
+                break;
+            case "other":
+                other= true;
+                break;
+            case "how":
+                how= true;
+                break;
+            case "then":
+                then= true;
+                break;
+            case "its":
+                its= true;
+                break;
+            case "our":
+                our= true;
+                break;
+            case "two":
+                two= true;
+                break;
+            case "more":
+                more= true;
+                break;
+            case "these":
+                these= true;
+                break;
+            case "want":
+                want= true;
+                break;
+            case "way":
+                way= true;
+                break;
+            case "look":
+                look= true;
+                break;
+            case "first":
+                first= true;
+                break;
+            case "also":
+                also= true;
+                break;
+            case "new1":
+                new1= true;
+                break;
+            case "because":
+                because= true;
+                break;
+            case "day":
+                day= true;
+                break;
+            case "more1":
+                more1= true;
+                break;
+            case "use":
+                use= true;
+                break;
+            case "no":
+                no= true;
+                break;
+            case "man":
+                man= true;
+                break;
+            case "find":
+                find= true;
+                break;
+            case "here":
+                here= true;
+                break;
+            case "thing":
+                thing= true;
+                break;
+            case "give":
+                give= true;
+                break;
+            case "many":
+                many= true;
+                break;
+            case "well":
+                well= true;
+                break;
+            //50 a 100
+
+            case "only":
+                only= true;
+                break;
+            case "those":
+                those= true;
+                break;
+            case "tell":
+                tell= true;
+                break;
+            case "one2":
+                one2= true;
+                break;
+            case "very":
+                very= true;
+                break;
+            case "her1":
+                her1= true;
+                break;
+            case "even":
+                even= true;
+                break;
+            case "back":
+                back= true;
+                break;
+            case "any":
+                any= true;
+                break;
+            case "good":
+                good= true;
+                break;
+            case "woman":
+                woman= true;
+                break;
+            case "through":
+                through= true;
+                break;
+            case "us":
+                us= true;
+                break;
+            case "life":
+                life= true;
+                break;
+            case "child":
+                child= true;
+                break;
+            case "there1":
+                there1= true;
+                break;
+            case "work":
+                work= true;
+                break;
+            case "down":
+                down= true;
+                break;
+            case "may":
+                may= true;
+                break;
+            case "after":
+                after= true;
+                break;
+            case "should":
+                should= true;
+                break;
+            case "call":
+                call= true;
+                break;
+            case "world":
+                world= true;
+                break;
+            case "over":
+                over= true;
+                break;
+            case "school":
+                school= true;
+                break;
+            case "still":
+                still= true;
+                break;
+            case "try1":
+                try1= true;
+                break;
+            case "in1":
+                in1= true;
+                break;
+            case "as":
+                as= true;
+                break;
+            case "last":
+                last= true;
+                break;
+            case "ask":
+                ask= true;
+                break;
+            case "need":
+                need= true;
+                break;
+            case "too":
+                too= true;
+                break;
+            case "feel":
+                feel= true;
+                break;
+            case "three":
+                three= true;
+                break;
+            case "when1":
+                when1= true;
+                break;
+            case "state":
+                state= true;
+                break;
+            case "never":
+                never= true;
+                break;
+            case "become":
+                become= true;
+                break;
+            case "between":
+                between= true;
+                break;
+            case "high":
+                high= true;
+                break;
+            case "really":
+                really= true;
+                break;
+            case "something":
+                something= true;
+                break;
+            case "most":
+                most= true;
+                break;
+            case "another":
+                another= true;
+                break;
+            case "much":
+                much= true;
+                break;
+            case "another1":
+                another1= true;
+                break;
+            case "much1":
+                much1= true;
+                break;
+            case "family":
+                family= true;
+                break;
+            case "own":
+                own= true;
+                break;
+            case "out1":
+                out1= true;
+                break;
+            case "leave":
+                leave= true;
+                break;
+            case "put":
+                put= true;
+                break;
+            //100 a 150
+
+            case "old":
+                old= true;
+                break;
+            case "while1":
+                while1= true;
+                break;
+            case "mean":
+                mean= true;
+                break;
+            case "on2":
+                on2= true;
+                break;
+            case "keep":
+                keep= true;
+                break;
+            case "student":
+                student= true;
+                break;
+            case "why":
+                why= true;
+                break;
+            case "let":
+                let= true;
+                break;
+            case "great":
+                great= true;
+                break;
+            case "same":
+                same= true;
+                break;
+            case "big":
+                big= true;
+                break;
+            case "group":
+                group= true;
+                break;
+            case "begin":
+                begin= true;
+                break;
+            case "seem":
+                seem= true;
+                break;
+            case "country":
+                country= true;
+                break;
+            case "help":
+                help= true;
+                break;
+            case "talk":
+                talk= true;
+                break;
+            case "where":
+                where= true;
+                break;
+            case "turn":
+                turn= true;
+                break;
+            case "problem":
+                problem= true;
+                break;
+            case "every":
+                every= true;
+                break;
+            case "start":
+                start= true;
+                break;
+            case "hand":
+                hand= true;
+                break;
+            case "might":
+                might= true;
+                break;
+            case "american":
+                american= true;
+                break;
+            case "show":
+                show= true;
+                break;
+            case "part":
+                part= true;
+                break;
+            case "about":
+                about= true;
+                break;
+            case "against":
+                against= true;
+                break;
+            case "place":
+                place= true;
+                break;
+            case "over2":
+                over2= true;
+                break;
+            case "such":
+                such= true;
+                break;
+            case "again":
+                again= true;
+                break;
+            case "few":
+                few= true;
+                break;
+            case "case1":
+                case1= true;
+                break;
+            case "most2":
+                most2= true;
+                break;
+            case "week":
+                week= true;
+                break;
+            case "company":
+                company= true;
+                break;
+            case "where2":
+                where2= true;
+                break;
+            case "system":
+                system= true;
+                break;
+            case "each":
+                each= true;
+                break;
+            case "right":
+                right= true;
+                break;
+            case "program":
+                program= true;
+                break;
+            case "hear":
+                hear= true;
+                break;
+            case "so2":
+                so2= true;
+                break;
+            case "question":
+                question= true;
+                break;
+            case "during":
+                during= true;
+                break;
+            case "work2":
+                work2= true;
+                break;
+            case "play":
+                play= true;
+                break;
+            //150 a 200
+
+            // interferencias
+            case "Por Sujeto":
+                intxsub=true;
+                break ;
+            case "Por Objeto":
+                intxob=true;
+                break ;
+            case "Por Preposición":
+                intxprep=true;
+                break ;
+            case "Interferencia Reflexiva":
+                intxref=true;
+                break ;
+            case "Interferencia Pasiva":
+                intpasiva=true;
+                break ;
+
+
+
+        }
+    }
+    private void   turnTrueTime(@NonNull String CurrentStructure, String segundos) {
+
+        switch (CurrentStructure){
+            case "Present Simple":
+                ps=true;
+                psseconds= segundos;
+
+                break;
+            case "Present Continuous":
+                pc=true;
+
                 break;
             case "Present Perfect":
                 pp=true;
@@ -2899,6 +3662,9 @@ public class MainTesting extends AppCompatActivity {
         if(t.equalsIgnoreCase(t2)){
             cp= cp+1;
             Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
+           prom = rounded/4;
+
+
 
         }else {
             cn=cn+1;
@@ -2908,7 +3674,13 @@ public class MainTesting extends AppCompatActivity {
             Toast.makeText(this, selection+"pasaste-Pasa a otra estructura"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp=0;
             cn=0;
-            turnTrue(selection);
+            timerText.setText(String.valueOf(prom));
+            turnTrueTime(selection,String.valueOf(prom));
+            timen=0.0;
+            if (timerTask!=null ){
+                timerTask.cancel();
+            }
+            timerTask=null;
 
         }else if(cn==4){
             Toast.makeText(this, selection+"not passed Pasa a otra estructura"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
@@ -2922,6 +3694,7 @@ public class MainTesting extends AppCompatActivity {
         Map<String, Object> user = new HashMap<>();
         user.put("name",Answerinput.getText().toString());
         user.put("presentesimple",ps);
+        user.put("presentesimpletime",psseconds);
         user.put("presenteContinuo",pc);
         user.put("presentePerfecto",pp);
         user.put("presentePerfectoContinuo",ppc);
@@ -3165,16 +3938,13 @@ public class MainTesting extends AppCompatActivity {
         user.put("again",again);
         user.put("few",few);
         user.put("case1",case1);
-        user.put("most2",most2);
         user.put("week",week);
         user.put("company",company);
-        user.put("where2",where2);
         user.put("system",system);
         user.put("each",each);
         user.put("right",right);
         user.put("program",program);
         user.put("hear",hear);
-        user.put("so2",so2);
         user.put("question",question);
         user.put("during",during);
         user.put("work2",work2);
@@ -3267,5 +4037,45 @@ public class MainTesting extends AppCompatActivity {
         vv.start();
 
     }
+
+    private void startTimer() {
+        timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        timen++;
+                       timerText.setText(getTimerText());
+
+                    }
+                });
+            }
+
+        };
+        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
+    }
+    int seconds;
+    int minutes;
+    int hours;
+    int rounded;
+    private String getTimerText() {
+         rounded = (int) Math.round(timen);
+
+         seconds = ((rounded % 86400) % 3600) % 60;
+         minutes = ((rounded % 86400) % 3600) / 60;
+         hours= ((rounded % 86400) / 3600);
+
+        return formatTime(seconds, minutes, hours);
+    }
+    private String formatTime(int seconds, int minutes, int hours) {
+        return String.format("%02d",hours) + " : " + String.format("%02d",minutes) + " : " + String.format("%02d",seconds);
+    }
+
+
 
 }

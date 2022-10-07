@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout40"
-        android:layout_width="403dp"
-        android:layout_height="428dp"
+        android:layout_width="410dp"
+        android:layout_height="471dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -96,7 +96,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
             <Button
                 android:id="@+id/getsentence"
@@ -114,6 +115,14 @@
                 android:onClick="answerchecker"
                 android:text="Submit" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/timertextv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:text="TextView"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -152,4 +161,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
