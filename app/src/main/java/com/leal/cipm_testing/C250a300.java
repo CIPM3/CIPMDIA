@@ -8,7 +8,7 @@ public class C250a300 {
             "important ","father ","sit ","away ","until ","power ","hour ",
             "game ","often ","yet ","line ","political ","end ","among ","ever ","stand ",
             "bad ","lose ","however ","member ","pay ","law ","meet ","car ","city ",
-            "almost ","include ","continue ","set ","later ","community "
+            "almost ","include ","continue ","set ","later ","community ","much ","name "
     };
 
     String allsp[]={
@@ -17,7 +17,7 @@ public class C250a300 {
             "importante ", "padre ", "sentarse ", "lejos ", "hasta ", "poder ", "hora ",
             "juego ", "a menudo ", "todavía ", "línea ", "político ", "fin ", "entre ", "nunca ", "soportar ",
             "malo ", "perder ", "sin embargo ", "miembro ", "pagar ", "ley ", "conocer ", "coche ", "ciudad ",
-            "casi ", "incluir ", "continuar ", "establecer ", "más tarde ", "comunidad "
+            "casi ", "incluir ", "continuar ", "establecer ", "más tarde ", "comunidad ","mucho ","nombre "
     };
 
     String gens;

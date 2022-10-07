@@ -17,7 +17,7 @@ public class Student {
     boolean shouldsimple,shouldContinuo,shouldPerfecto,shouldPerfectoContinuo;
     boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
     boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200,vocab200a250,
-            vocab250a300;
+            vocab250a300,vocab300a350,vocab350a400,vocab400a450;
 
     int presentesimpleint;
 
@@ -352,6 +352,10 @@ public class Student {
                 + "\n"+ "150 a 200 "+this.vocab150a200
                 + "\n"+ "200 a 250 "+this.vocab200a250
                 + "\n"+ "250 a 300 "+this.vocab250a300
+                + "\n"+ "300 a 350 "+this.vocab300a350
+                + "\n"+ "350 a 400 "+this.vocab350a400
+                + "\n"+ "400 a 450 "+this.vocab400a450
+
                 ;
     }
 }

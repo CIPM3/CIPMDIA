@@ -51,7 +51,19 @@ public class StudentVocabRestultsModel {
             important ,father ,sit ,away ,until ,power ,hour ,
             game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
             bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
-            almost ,include ,continue1 ,set ,later ,community;
+            almost ,include ,continue1 ,set ,later ,community, much2,
+            name;
+
+    //300 a 350 booleanos
+    boolean  five ,once ,white ,least ,president ,learn ,
+            real ,change2 ,team ,minute ,best ,several ,
+            idea ,kid ,body ,information ,nothing ,ago ,
+            right3 ,lead ,social ,understand ,whether ,
+            back2 ,watch ,together ,follow ,around2 ,parent ,
+            only2 ,stop ,face ,anything ,create ,public2 ,
+            already ,speak ,others ,read ,level ,allow ,
+            add ,office ,spend ,door ,health ,person ,
+            art ,sure ,such2 ;
 
     //350 a 400 booleanos
     boolean war ,history ,party ,within ,togrow ,result ,open ,change ,

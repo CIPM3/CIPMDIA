@@ -101,7 +101,10 @@ public class structureTestResult extends Fragment {
                             "100 a 150 : "+st.vocab100a150,
                             "150 a 200 : "+st.vocab150a200,
                             "200 a 250 : "+st.vocab200a250,
-                            "250 a 300 : "+st.vocab200a250
+                            "250 a 300 : "+st.vocab250a300,
+                            "300 a 350 : "+st.vocab300a350,
+                            "350 a 400 : "+st.vocab350a400,
+                            "400 a 450 : "+st.vocab400a450,
                     };
                     adapter = new ArrayAdapter<String>(getContext(),
                             android.R.layout.simple_list_item_1, est);

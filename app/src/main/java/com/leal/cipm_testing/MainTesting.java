@@ -112,7 +112,19 @@ public class MainTesting extends AppCompatActivity {
             important ,father ,sit ,away ,until ,power ,hour ,
             game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
             bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
-            almost ,include ,continue1 ,set ,later ,community;
+            almost ,include ,continue1 ,set ,later ,community,much2,
+            name;
+    
+    //300 a 350 booleanos
+    boolean  five ,once ,white ,least ,president ,learn ,
+             real ,change2 ,team ,minute ,best ,several ,
+             idea ,kid ,body ,information ,nothing ,ago ,
+             right3 ,lead ,social ,understand ,whether ,
+             back2 ,watch ,together ,follow ,around2 ,parent ,
+             only2 ,stop ,face ,anything ,create ,public2 ,
+             already ,speak ,others ,read ,level ,allow ,
+             add ,office ,spend ,door ,health ,person ,
+             art ,sure ,such2 ;
 
     //350 a 400 booleanos
     boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
@@ -2013,6 +2025,43 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "300 to 350":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C300a350 gen1 = new C300a350();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab300a350();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             case "350 to 400":
 
                 tt1 = new TextToSpeech(getApplicationContext(),
@@ -3342,7 +3391,159 @@ public class MainTesting extends AppCompatActivity {
                 break;
             case "community":
                 community= true;
+            case "much2":
+                much2= true;
+            case "name":
+                name= true;
             //250 a 300
+
+            case "five":
+                five= true;
+                break;
+            case "once":
+                once= true;
+                break;
+            case "white":
+                white= true;
+                break;
+            case "least":
+                least= true;
+                break;
+            case "president":
+                president= true;
+                break;
+            case "learn":
+                learn= true;
+                break;
+            case "real":
+                real= true;
+                break;
+            case "change2":
+                change2= true;
+                break;
+            case "team":
+                team= true;
+                break;
+            case "minute":
+                minute= true;
+                break;
+            case "best":
+                best= true;
+                break;
+            case "several":
+                several= true;
+                break;
+            case "idea":
+                idea= true;
+                break;
+            case "kid":
+                kid= true;
+                break;
+            case "body":
+                body= true;
+                break;
+            case "information":
+                information= true;
+                break;
+            case "nothing":
+                nothing= true;
+                break;
+            case "ago":
+                ago= true;
+                break;
+            case "right3":
+                right3= true;
+                break;
+            case "lead":
+                lead= true;
+                break;
+            case "social":
+                social= true;
+                break;
+            case "understand":
+                understand= true;
+                break;
+            case "whether":
+                whether= true;
+                break;
+            case "back2":
+                back2= true;
+                break;
+            case "watch":
+                watch= true;
+                break;
+            case "together":
+                together= true;
+                break;
+            case "follow":
+                follow= true;
+                break;
+            case "around2":
+                around2= true;
+                break;
+            case "parent":
+                parent= true;
+                break;
+            case "only2":
+                only2= true;
+                break;
+            case "stop":
+                stop= true;
+                break;
+            case "face":
+                face= true;
+                break;
+            case "anything":
+                anything= true;
+                break;
+            case "create":
+                create= true;
+                break;
+            case "public2":
+                public2= true;
+                break;
+            case "already":
+                already= true;
+                break;
+            case "speak":
+                speak= true;
+                break;
+            case "others":
+                others= true;
+                break;
+            case "read":
+                read= true;
+                break;
+            case "level":
+                level= true;
+                break;
+            case "allow":
+                allow= true;
+                break;
+            case "add":
+                add= true;
+                break;
+            case "office":
+                office= true;
+                break;
+            case "spend":
+                spend= true;
+                break;
+            case "door":
+                door= true;
+                break;
+            case "health":
+                health= true;
+                break;
+            case "person":
+                person= true;
+            case "art":
+                art= true;
+            case "sure":
+                sure= true;
+            case "such2":
+                such2= true;
+                //300 a 350
 
             case "war":
                 war= true;
@@ -3739,6 +3940,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+    //4
     public void vocabdbtesting(){
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -3954,6 +4156,161 @@ public class MainTesting extends AppCompatActivity {
         user.put("work2",work2);
         user.put("play",play);
         //aqui termina 150 a 200
+
+        user.put("goverment",goverment);
+        user.put("run",run);
+        user.put("small",small);
+        user.put("number",number);
+        user.put("off",off);
+        user.put("always",always);
+        user.put("move",move);
+        user.put("like2",like2);
+        user.put("night",night);
+        user.put("live",live);
+        user.put("mr",mr);
+        user.put("point",point);
+        user.put("believe",believe);
+        user.put("hold",hold);
+        user.put("today",today);
+        user.put("bring",bring);
+        user.put("happen",happen);
+        user.put("next",next);
+        user.put("without",without);
+        user.put("before",before);
+        user.put("large",large);
+        user.put("all2",all2);
+        user.put("million",million);
+        user.put("must",must);
+        user.put("home",home);
+        user.put("under",under);
+        user.put("water",water);
+        user.put("room",room);
+        user.put("write",write);
+        user.put("mother",mother);
+        user.put("area",area);
+        user.put("national",national);
+        user.put("money",money);
+        user.put("story",story);
+        user.put("young",young);
+        user.put("fact",fact);
+        user.put("month",month);
+        user.put("different",different);
+        user.put("lot",lot);
+        user.put("right2",right2);
+        user.put("study",study);
+        user.put("book",book);
+        user.put("eye",eye);
+        user.put("job",job);
+        user.put("word",word);
+        user.put("though",though);
+        user.put("business",business);
+        user.put("issue",issue);
+        user.put("side",side);
+        user.put("kind",kind);
+        //aqui termina 200 a 250
+
+        user.put("four",four);
+        user.put("head",head);
+        user.put("far",far);
+        user.put("black",black);
+        user.put("long1",long1);
+        user.put("both2",both2);
+        user.put("little",little);
+        user.put("house",house);
+        user.put("yes",yes);
+        user.put("after2",after2);
+        user.put("since2",since2);
+        user.put("long2",long2);
+        user.put("provide",provide);
+        user.put("service",service);
+        user.put("around",around);
+        user.put("friend",friend);
+        user.put("important",important);
+        user.put("father",father);
+        user.put("sit",sit);
+        user.put("away",away);
+        user.put("until",until);
+        user.put("power",power);
+        user.put("hour",hour);
+        user.put("game",game);
+        user.put("often",often);
+        user.put("yet",yet);
+        user.put("line",line);
+        user.put("political",political);
+        user.put("end",end);
+        user.put("among",among);
+        user.put("ever",ever);
+        user.put("stand",stand);
+        user.put("bad",bad);
+        user.put("lose",lose);
+        user.put("however",however);
+        user.put("member",member);
+        user.put("pay",pay);
+        user.put("law",law);
+        user.put("meet",meet);
+        user.put("car",car);
+        user.put("city",city);
+        user.put("almost",almost);
+        user.put("include",include);
+        user.put("continue1",continue1);
+        user.put("set",set);
+        user.put("later",later);
+        user.put("community",community);
+        user.put("much2",much2);
+        user.put("name",name);
+        //aqui termina 250 a 300
+
+        user.put("five",five);
+        user.put("once",once);
+        user.put("white",white);
+        user.put("least",least);
+        user.put("president",president);
+        user.put("learn",learn);
+        user.put("real",real);
+        user.put("change2",change2);
+        user.put("team",team);
+        user.put("minute",minute);
+        user.put("best",best);
+        user.put("several",several);
+        user.put("idea",idea);
+        user.put("kid",kid);
+        user.put("body",body);
+        user.put("information",information);
+        user.put("nothing",nothing);
+        user.put("ago",ago);
+        user.put("right3",right3);
+        user.put("lead",lead);
+        user.put("social",social);
+        user.put("understand",understand);
+        user.put("whether",whether);
+        user.put("back2",back2);
+        user.put("watch",watch);
+        user.put("together",together);
+        user.put("follow",follow);
+        user.put("around2",around2);
+        user.put("parent",parent);
+        user.put("only2",only2);
+        user.put("stop",stop);
+        user.put("face",face);
+        user.put("anything",anything);
+        user.put("create",create);
+        user.put("public2",public2);
+        user.put("already",already);
+        user.put("speak",speak);
+        user.put("others",others);
+        user.put("read",read);
+        user.put("level",level);
+        user.put("allow",allow);
+        user.put("add",add);
+        user.put("office",office);
+        user.put("spend",spend);
+        user.put("door",door);
+        user.put("health",health);
+        user.put("person",person);
+        user.put("art",art);
+        user.put("sure",sure);
+        user.put("such2",such2);
+        //aqui termina 300 a 350
 
         user.put("war",war);
         user.put("history",history);

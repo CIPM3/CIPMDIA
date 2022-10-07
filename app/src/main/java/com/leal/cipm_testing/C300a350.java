@@ -2,8 +2,45 @@ package com.leal.cipm_testing;
 
 public class C300a350 {
 
+    String[] alleng ={
+            "five ","once ","white ","least ","president ","learn ",
+            "real ","change ","team ","minute ","best ","several ",
+            "idea ","kid ","body ","information ","nothing ","ago ",
+            "right ","lead ","social ","understand ","whether ",
+            "back ","watch ","together ","follow ","around ","parent ",
+            "only ","stop ","face ","anything ","create ","public ",
+            "already ","speak ","others ","read ","level ","allow ",
+            "add ","office ","spend ","door ","health ","person ",
+            "art ","sure ","such "
+    };
+
+    String[] allsp ={
+            "cinco ", "una vez ", "blanco ", "menos ", "presidente ", "aprende ",
+            "real ","cambio ","equipo ","minuto ","mejor ","varios ",
+            "idea ", "niño ", "cuerpo ", "información ", "nada ", "hace ",
+            "correcto ", "liderar ", "social ", "comprender ", "si ",
+            "atrás ", "mirar ", "juntos ", "seguir ", "alrededor ", "padre ",
+            "solo ", "parar ", "rostro ", "cualquier cosa ", "crear ", "público ",
+            "ya ", "hablar ", "otros ", "leer ", "nivelar ", "permitir ",
+            "agregar ", "oficina ", "gastar ", "puerta ", "salud ", "persona ",
+            "arte ", "seguro ", "tal "
+    };
+
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab300a350(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "nosotros ", "ellos "};
