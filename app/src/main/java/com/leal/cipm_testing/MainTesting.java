@@ -91,6 +91,41 @@ public class MainTesting extends AppCompatActivity {
             where2 ,system ,each ,right ,program ,hear ,
             so2 ,question ,during ,work2 ,play ;
 
+    //200 a 250 booleanos
+    boolean goverment ,run ,small ,number ,off ,always ,move ,
+            like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
+            happen ,next ,without ,before ,large ,all2 ,million ,must ,
+            home ,under ,water ,room ,write ,mother ,area ,national ,
+            money ,story ,young ,fact ,month ,different ,lot ,right2 ,
+            study ,book ,eye ,job ,word ,though ,business ,issue ,
+            side ,kind ;
+
+    //250 a 300 booleanos
+    boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
+            after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
+            important ,father ,sit ,away ,until ,power ,hour ,
+            game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
+            bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
+            almost ,include ,continue1 ,set ,later ,community;
+
+    //350 a 400 booleanos
+    boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
+            morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
+            food ,before2 ,moment ,himself ,toair , teacher ,toforce ,tooffer ,
+            enough ,both ,education ,across ,although ,toremember ,foot ,second ,
+            boy ,maybe ,toward , able ,age ,off2  ,policy ,everything ,love ,
+            toprocess ,music ,including ,toconsider ,toappear ,actually ,
+            tobuy , probably  ;
+
+    //400 a 450 booleanos
+    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
+            tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
+            death ,course ,someone ,experience ,behind ,reach ,local ,
+            tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
+            control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
+            else2 ,topass , former ,sell ,major ,sometimes ,require ,along ,
+            development , themselves ;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -1910,6 +1945,154 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "200 to 250":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C200a250 gen1 = new C200a250();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab200a250();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
+            case "250 to 300":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C250a300 gen1 = new C250a300();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab250a300();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
+            case "350 to 400":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C350a400 gen1 = new C350a400();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab350a400();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
+            case "400 to 500":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C400a500 gen1 = new C400a500();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab400a500();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             //aqui debería ir los metodos de sp int
 
             case "Tutorial":
@@ -2120,11 +2303,6 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
-
-
-
-
-
         }
     }
 
@@ -2247,6 +2425,23 @@ public class MainTesting extends AppCompatActivity {
             case "Be Used To":
                 but=true;
                 break;
+            // interferencias
+            case "Por Sujeto":
+                intxsub=true;
+                break ;
+            case "Por Objeto":
+                intxob=true;
+                break ;
+            case "Por Preposición":
+                intxprep=true;
+                break ;
+            case "Interferencia Reflexiva":
+                intxref=true;
+                break ;
+            case "Interferencia Pasiva":
+                intpasiva=true;
+                break ;
+
             case "the":
                 the= true;
                 Toast.makeText(this, "inside the", Toast.LENGTH_SHORT).show();
@@ -2862,24 +3057,603 @@ public class MainTesting extends AppCompatActivity {
                 break;
             //150 a 200
 
-            // interferencias
-            case "Por Sujeto":
-                intxsub=true;
-                break ;
-            case "Por Objeto":
-                intxob=true;
-                break ;
-            case "Por Preposición":
-                intxprep=true;
-                break ;
-            case "Interferencia Reflexiva":
-                intxref=true;
-                break ;
-            case "Interferencia Pasiva":
-                intpasiva=true;
-                break ;
+            case "goverment":
+                goverment= true;
+                break;
+            case "run":
+                run= true;
+                break;
+            case "small":
+                small= true;
+                break;
+            case "number":
+                number= true;
+                break;
+            case "off":
+                off= true;
+                break;
+            case "always":
+                always= true;
+                break;
+            case "move":
+                move= true;
+                break;
+            case "like2":
+                like2= true;
+                break;
+            case "night":
+                night= true;
+                break;
+            case "live":
+                live= true;
+                break;
+            case "mr":
+                mr= true;
+                break;
+            case "point":
+                point= true;
+                break;
+            case "believe":
+                believe= true;
+                break;
+            case "hold":
+                hold= true;
+                break;
+            case "today":
+                today= true;
+                break;
+            case "bring":
+                bring= true;
+                break;
+            case "happen":
+                happen= true;
+                break;
+            case "next":
+                next= true;
+                break;
+            case "without":
+                without= true;
+                break;
+            case "before":
+                before= true;
+                break;
+            case "large":
+                large= true;
+                break;
+            case "all2":
+                all2= true;
+                break;
+            case "million":
+                million= true;
+                break;
+            case "must":
+                must= true;
+                break;
+            case "home":
+                home= true;
+                break;
+            case "under":
+                under= true;
+                break;
+            case "water":
+                water= true;
+                break;
+            case "room":
+                room= true;
+                break;
+            case "write":
+                write= true;
+                break;
+            case "mother":
+                mother= true;
+                break;
+            case "area":
+                area= true;
+                break;
+            case "national":
+                national= true;
+                break;
+            case "money":
+                money= true;
+                break;
+            case "story":
+                story= true;
+                break;
+            case "young":
+                young= true;
+                break;
+            case "fact":
+                fact= true;
+                break;
+            case "month":
+                month= true;
+                break;
+            case "different":
+                different= true;
+                break;
+            case "lot":
+                lot= true;
+                break;
+            case "right2":
+                right2= true;
+                break;
+            case "study":
+                study= true;
+                break;
+            case "book":
+                book= true;
+                break;
+            case "eye":
+                eye= true;
+                break;
+            case "job":
+                job= true;
+                break;
+            case "word":
+                word= true;
+                break;
+            case "though":
+                though= true;
+                break;
+            case "business":
+                business= true;
+                break;
+            case "issue":
+                issue= true;
+                break;
+            case "side":
+                side= true;
+                break;
+            case "kind":
+                kind= true;
+                break;
+            //200 a 250
 
+            case "four":
+                four= true;
+                break;
+            case "head":
+                head= true;
+                break;
+            case "far":
+                far= true;
+                break;
+            case "black":
+                black= true;
+                break;
+            case "long1":
+                long1= true;
+                break;
+            case "both2":
+                both2= true;
+                break;
+            case "little":
+                little= true;
+                break;
+            case "house":
+                house= true;
+                break;
+            case "yes":
+                yes= true;
+                break;
+            case "after2":
+                after2= true;
+                break;
+            case "since2":
+                since2= true;
+                break;
+            case "long2":
+                long2= true;
+                break;
+            case "provide":
+                provide= true;
+                break;
+            case "service":
+                service= true;
+                break;
+            case "around":
+                around= true;
+                break;
+            case "friend":
+                friend= true;
+                break;
+            case "important":
+                important= true;
+                break;
+            case "father":
+                father= true;
+                break;
+            case "sit":
+                sit= true;
+                break;
+            case "away":
+                away= true;
+                break;
+            case "until":
+                until= true;
+                break;
+            case "power":
+                power= true;
+                break;
+            case "hour":
+                hour= true;
+                break;
+            case "game":
+                game= true;
+                break;
+            case "often":
+                often= true;
+                break;
+            case "yet":
+                yet= true;
+                break;
+            case "line":
+                line= true;
+                break;
+            case "political":
+                political= true;
+                break;
+            case "end":
+                end= true;
+                break;
+            case "among":
+                among= true;
+                break;
+            case "ever":
+                ever= true;
+                break;
+            case "stand":
+                stand= true;
+                break;
+            case "bad":
+                bad= true;
+                break;
+            case "lose":
+                lose= true;
+                break;
+            case "however":
+                however= true;
+                break;
+            case "member":
+                member= true;
+                break;
+            case "pay":
+                pay= true;
+                break;
+            case "law":
+                law= true;
+                break;
+            case "meet":
+                meet= true;
+                break;
+            case "car":
+                car= true;
+                break;
+            case "city":
+                city= true;
+                break;
+            case "almost":
+                almost= true;
+                break;
+            case "include":
+                include= true;
+                break;
+            case "continue1":
+                continue1= true;
+                break;
+            case "set":
+                set= true;
+                break;
+            case "later":
+                later= true;
+                break;
+            case "community":
+                community= true;
+            //250 a 300
 
+            case "war":
+                war= true;
+                break;
+            case "history":
+                history= true;
+                break;
+            case "party":
+                party= true;
+                break;
+            case "within":
+                within= true;
+                break;
+            case "to grow":
+                togrow= true;
+                break;
+            case "result":
+                result= true;
+                break;
+            case "open":
+                open= true;
+                break;
+            case "change":
+                change= true;
+                break;
+            case "morning":
+                morning= true;
+                break;
+            case "to walk":
+                towalk= true;
+                break;
+            case "reason":
+                reason= true;
+                break;
+            case "low":
+                low= true;
+                break;
+            case "to win":
+                towin= true;
+                break;
+            case "to research":
+                toresearch= true;
+                break;
+            case "girl":
+                girl= true;
+                break;
+            case "guy":
+                guy= true;
+                break;
+            case "early":
+                early= true;
+                break;
+            case "food":
+                food= true;
+                break;
+            case "before2":
+                before2= true;
+                break;
+            case "moment":
+                moment= true;
+                break;
+            case "himself":
+                himself= true;
+                break;
+            case "toair":
+                toair= true;
+                break;
+            case "teacher":
+                teacher= true;
+                break;
+            case "to force":
+                toforce= true;
+                break;
+            case "to offer":
+                tooffer= true;
+                break;
+            case "enough":
+                enough= true;
+                break;
+            case "both":
+                both= true;
+                break;
+            case "education":
+                education= true;
+                break;
+            case "across":
+                across= true;
+                break;
+            case "although":
+                although= true;
+                break;
+            case "to remember":
+                toremember= true;
+                break;
+            case "foot":
+                foot= true;
+                break;
+            case "second":
+                second= true;
+                break;
+            case "boy":
+                boy= true;
+                break;
+            case "maybe":
+                maybe= true;
+                break;
+            case "to ward":
+                toward= true;
+                break;
+            case "able":
+                able= true;
+                break;
+            case "age":
+                age= true;
+                break;
+            case "off2":
+                off2= true;
+                break;
+            case "policy":
+                policy= true;
+                break;
+            case "everything":
+                everything= true;
+                break;
+            case "love":
+                love= true;
+                break;
+            case "to process":
+                toprocess= true;
+                break;
+            case "music":
+                music= true;
+                break;
+            case "including":
+                including= true;
+                break;
+            case "to consider":
+                toconsider= true;
+                break;
+            case "to appear":
+                toappear= true;
+                break;
+            case "actually":
+                actually= true;
+                break;
+            case "to buy":
+                tobuy= true;
+                break;
+            case "probably":
+                probably= true;
+                break;
+            //aqui termina 350 a 400
+
+            case "human":
+                human= true;
+                break;
+            case "to wait":
+                towait= true;
+                break;
+            case "to serve":
+                toserve= true;
+                break;
+            case "market":
+                market= true;
+                break;
+            case "to die":
+                todie= true;
+                break;
+            case "to send":
+                tosend= true;
+                break;
+            case "toexpect":
+                toexpect= true;
+                break;
+            case "home2":
+                home2= true;
+                break;
+            case "sense":
+                sense= true;
+                break;
+            case "to build":
+                tobuild= true;
+                break;
+            case "to stay":
+                tostay= true;
+                break;
+            case "to fall":
+                tofall= true;
+                break;
+            case "oh":
+                oh= true;
+                break;
+            case "nation":
+                nation= true;
+                break;
+            case "to plan":
+                toplan= true;
+                break;
+            case "cut":
+                cut= true;
+                break;
+            case "college":
+                college= true;
+                break;
+            case "interest":
+                interest= true;
+                break;
+            case "death":
+                death= true;
+                break;
+            case "course":
+                course= true;
+                break;
+            case "someone":
+                someone= true;
+                break;
+            case "experience":
+                experience= true;
+                break;
+            case "behind":
+                behind= true;
+                break;
+            case "reach":
+                reach= true;
+                break;
+            case "local":
+                local= true;
+                break;
+            case "to kill":
+                tokill= true;
+                break;
+            case "six":
+                six= true;
+                break;
+            case "remain":
+                remain= true;
+                break;
+            case "effect":
+                effect= true;
+                break;
+            case "use2":
+                use2= true;
+                break;
+            case "yeah":
+                yeah= true;
+                break;
+            case "to suggest":
+                tosuggest= true;
+                break;
+            case "class":
+                class2= true;
+                break;
+            case "control":
+                control= true;
+                break;
+            case "to raise":
+                toraise= true;
+                break;
+            case "care":
+                care= true;
+                break;
+            case "perhaps":
+                perhaps= true;
+                break;
+            case "little2":
+                little2= true;
+                break;
+            case "late":
+                late= true;
+                break;
+            case "hard":
+                hard= true;
+                break;
+            case "field":
+                field= true;
+                break;
+            case "else":
+                else2= true;
+                break;
+            case "to pass":
+                topass= true;
+                break;
+            case "former":
+                former= true;
+                break;
+            case "sell":
+                sell= true;
+                break;
+            case "major":
+                major= true;
+                break;
+            case "sometimes":
+                sometimes= true;
+                break;
+            case "require":
+                require= true;
+                break;
+            case "along":
+                along= true;
+                break;
+            case "development":
+                development= true;
+                break;
+            //aqui termina 400 a 450
 
         }
     }
@@ -3951,6 +4725,109 @@ public class MainTesting extends AppCompatActivity {
         user.put("play",play);
         //aqui termina 150 a 200
 
+        user.put("war",war);
+        user.put("history",history);
+        user.put("party",party);
+        user.put("within",within);
+        user.put("togrow",togrow);
+        user.put("result",result);
+        user.put("open",open);
+        user.put("change",change);
+        user.put("morning",morning);
+        user.put("towalk",towalk);
+        user.put("reason",reason);
+        user.put("low",low);
+        user.put("towin",towin);
+        user.put("toresearch",toresearch);
+        user.put("girl",girl);
+        user.put("guy",guy);
+        user.put("early",early);
+        user.put("food",food);
+        user.put("before2",before2);
+        user.put("moment",moment);
+        user.put("himself",himself);
+        user.put("toair",toair);
+        user.put("teacher",teacher);
+        user.put("toforce",toforce);
+        user.put("tooffer",tooffer);
+        user.put("enough",enough);
+        user.put("both",both);
+        user.put("education",education);
+        user.put("across",across);
+        user.put("although",although);
+        user.put("toremember",toremember);
+        user.put("foot",foot);
+        user.put("second",second);
+        user.put("boy",boy);
+        user.put("maybe",maybe);
+        user.put("toward",toward);
+        user.put("able",able);
+        user.put("age",age);
+        user.put("off2",off2);
+        user.put("policy",policy);
+        user.put("everything",everything);
+        user.put("love",love);
+        user.put("toprocess",toprocess);
+        user.put("music",music);
+        user.put("including",including);
+        user.put("toconsider",toconsider);
+        user.put("toappear",toappear);
+        user.put("actually",actually);
+        user.put("tobuy",tobuy);
+        user.put("probably",probably);
+        //aqui termina 350 a 400
+
+        user.put("human",human);
+        user.put("towait",towait);
+        user.put("toserve",toserve);
+        user.put("market",market);
+        user.put("todie",todie);
+        user.put("tosend",tosend);
+        user.put("toexpect",toexpect);
+        user.put("home2",home2);
+        user.put("sense",sense);
+        user.put("tobuild",tobuild);
+        user.put("tostay",tostay);
+        user.put("tofall",tofall);
+        user.put("oh",oh);
+        user.put("nation",nation);
+        user.put("toplan",toplan);
+        user.put("cut",cut);
+        user.put("college",college);
+        user.put("interest",interest);
+        user.put("death",death);
+        user.put("course",course);
+        user.put("someone",someone);
+        user.put("experience",experience);
+        user.put("behind",behind);
+        user.put("reach",reach);
+        user.put("local",local);
+        user.put("tokill",tokill);
+        user.put("six",six);
+        user.put("remain",remain);
+        user.put("effect",effect);
+        user.put("use2",use2);
+        user.put("yeah",yeah);
+        user.put("tosuggest",tosuggest);
+        user.put("class2",class2);
+        user.put("control",control);
+        user.put("toraise",toraise);
+        user.put("care",care);
+        user.put("perhaps",perhaps);
+        user.put("little2",little2);
+        user.put("late",late);
+        user.put("hard",hard);
+        user.put("field",field);
+        user.put("else2",else2);
+        user.put("topass",topass);
+        user.put("former",former);
+        user.put("sell",sell);
+        user.put("major",major);
+        user.put("sometimes",sometimes);
+        user.put("require",require);
+        user.put("along",along);
+        user.put("development",development);
+        //aqui termina 400 a 450
 
         uid.document("vocabulary").set(user);
 

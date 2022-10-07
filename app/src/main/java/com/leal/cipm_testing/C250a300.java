@@ -2,8 +2,40 @@ package com.leal.cipm_testing;
 
 public class C250a300 {
 
+    String alleng[]={
+            "four ","head ","far ","black ","long ","both ","little ","house ","yes ",
+            "after ","since ","long ","provide ","service ","around ","friend ",
+            "important ","father ","sit ","away ","until ","power ","hour ",
+            "game ","often ","yet ","line ","political ","end ","among ","ever ","stand ",
+            "bad ","lose ","however ","member ","pay ","law ","meet ","car ","city ",
+            "almost ","include ","continue ","set ","later ","community "
+    };
+
+    String allsp[]={
+            "cuatro ", "cabeza ", "lejos ", "negra ", "larga", "ambos ", "pequeña ", "casa ", "sí ",
+            "después ", "desde ", "largo ", "proporcionar ", "servicio ", "alrededor ", "amigo ",
+            "importante ", "padre ", "sentarse ", "lejos ", "hasta ", "poder ", "hora ",
+            "juego ", "a menudo ", "todavía ", "línea ", "político ", "fin ", "entre ", "nunca ", "soportar ",
+            "malo ", "perder ", "sin embargo ", "miembro ", "pagar ", "ley ", "conocer ", "coche ", "ciudad ",
+            "casi ", "incluir ", "continuar ", "establecer ", "más tarde ", "comunidad "
+    };
+
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab250a300(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
+
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "nosotros ", "ellos "};
 

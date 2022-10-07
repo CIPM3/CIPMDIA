@@ -1,6 +1,27 @@
 package com.leal.cipm_testing;
 
 public class C200a250 {
+
+    String alleng[]={
+            "goverment ","goverment ","run ","small ","number ","off ","always ","move ",
+            "like ","night ","live ","mr ","point ","believe ","hold ","today ","bring ",
+            "happen ","next ","without ","before ","large ","all ","million ","must ",
+            "home ","under ","water ","room ","write ","mother ","area ","national ",
+            "money ","story ","young ","fact ","month ","different ","lot ","right ",
+            "study ","book ","eye ","job ","word ","though ","business ","issue ",
+            "side ","kind "
+    };
+
+    String allsp[]={
+            "gobierno ","gobierno ","correr ","pequeño ","número ","apagado ","siempre ","mover ",
+            "como ","noche ","vivir ","señor ","apuntar ","creer ","aguantar ","hoy ","traer ",
+            "pasar ","siguiente ","sin ","antes ", "grande ","todos ","millones ","debe ",
+            "casa ","bajo ", "agua ","sala ","escribir ","madre ","área ","nacional ",
+            "dinero ","cuento","joven ","hecho ","mes ","diferente ","lote ","correcto ",
+            "estudio ","libro","ojo ","trabajo ","palabra ","aunque ","negocio ","tema ",
+            "lado ","tipo "
+    };
+
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "nosotros ", "ellos "};
 
@@ -95,6 +116,19 @@ public class C200a250 {
     String detm[] = {"todos los ", "ambos ", "un millón de "};
     String gens;
     String gene;
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab200a250(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+
+    }
 // falta like y always
 
     public void verbsgen() {

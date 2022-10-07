@@ -16,7 +16,8 @@ public class Student {
     boolean cansimple,canContinuo,mustsimple,mustContinuo;
     boolean shouldsimple,shouldContinuo,shouldPerfecto,shouldPerfectoContinuo;
     boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
-    boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200;
+    boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200,vocab200a250,
+            vocab250a300;
 
     int presentesimpleint;
     String presentesimpletime;
@@ -363,6 +364,8 @@ public class Student {
                 + "\n"+ "50 a 100 "+this.vocab50a100
                 + "\n"+ "100 a 150 "+this.vocab100a150
                 + "\n"+ "150 a 200 "+this.vocab150a200
+                + "\n"+ "200 a 250 "+this.vocab200a250
+                + "\n"+ "250 a 300 "+this.vocab250a300
                 ;
     }
 }
