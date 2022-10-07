@@ -123,6 +123,15 @@ public class MainTesting extends AppCompatActivity {
             toprocess ,music ,including ,toconsider ,toappear ,actually ,
             tobuy , probably  ;
 
+    //400 a 450 booleanos
+    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
+            tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
+            death ,course ,someone ,experience ,behind ,reach ,local ,
+            tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
+            control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
+            else2 ,topass , former ,sell ,major ,sometimes ,require ,along ,
+            development , themselves ;
+
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -2041,6 +2050,43 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+            case "400 to 500":
+
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C400a500 gen1 = new C400a500();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab400a500();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
             //aqui debería ir los metodos de sp int
 
             case "Tutorial":
@@ -2250,11 +2296,6 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
-
-
-
-
-
 
         }
     }
@@ -3315,7 +3356,7 @@ public class MainTesting extends AppCompatActivity {
             case "within":
                 within= true;
                 break;
-            case "togrow":
+            case "to grow":
                 togrow= true;
                 break;
             case "result":
@@ -3330,7 +3371,7 @@ public class MainTesting extends AppCompatActivity {
             case "morning":
                 morning= true;
                 break;
-            case "towalk":
+            case "to walk":
                 towalk= true;
                 break;
             case "reason":
@@ -3339,10 +3380,10 @@ public class MainTesting extends AppCompatActivity {
             case "low":
                 low= true;
                 break;
-            case "towin":
+            case "to win":
                 towin= true;
                 break;
-            case "toresearch":
+            case "to research":
                 toresearch= true;
                 break;
             case "girl":
@@ -3372,10 +3413,10 @@ public class MainTesting extends AppCompatActivity {
             case "teacher":
                 teacher= true;
                 break;
-            case "toforce":
+            case "to force":
                 toforce= true;
                 break;
-            case "tooffer":
+            case "to offer":
                 tooffer= true;
                 break;
             case "enough":
@@ -3393,7 +3434,7 @@ public class MainTesting extends AppCompatActivity {
             case "although":
                 although= true;
                 break;
-            case "toremember":
+            case "to remember":
                 toremember= true;
                 break;
             case "foot":
@@ -3408,7 +3449,7 @@ public class MainTesting extends AppCompatActivity {
             case "maybe":
                 maybe= true;
                 break;
-            case "toward":
+            case "to ward":
                 toward= true;
                 break;
             case "able":
@@ -3429,7 +3470,7 @@ public class MainTesting extends AppCompatActivity {
             case "love":
                 love= true;
                 break;
-            case "toprocess":
+            case "to process":
                 toprocess= true;
                 break;
             case "music":
@@ -3438,22 +3479,174 @@ public class MainTesting extends AppCompatActivity {
             case "including":
                 including= true;
                 break;
-            case "toconsider":
+            case "to consider":
                 toconsider= true;
                 break;
-            case "toappear":
+            case "to appear":
                 toappear= true;
                 break;
             case "actually":
                 actually= true;
                 break;
-            case "tobuy":
+            case "to buy":
                 tobuy= true;
                 break;
             case "probably":
                 probably= true;
                 break;
             //aqui termina 350 a 400
+
+            case "human":
+                human= true;
+                break;
+            case "to wait":
+                towait= true;
+                break;
+            case "to serve":
+                toserve= true;
+                break;
+            case "market":
+                market= true;
+                break;
+            case "to die":
+                todie= true;
+                break;
+            case "to send":
+                tosend= true;
+                break;
+            case "toexpect":
+                toexpect= true;
+                break;
+            case "home2":
+                home2= true;
+                break;
+            case "sense":
+                sense= true;
+                break;
+            case "to build":
+                tobuild= true;
+                break;
+            case "to stay":
+                tostay= true;
+                break;
+            case "to fall":
+                tofall= true;
+                break;
+            case "oh":
+                oh= true;
+                break;
+            case "nation":
+                nation= true;
+                break;
+            case "to plan":
+                toplan= true;
+                break;
+            case "cut":
+                cut= true;
+                break;
+            case "college":
+                college= true;
+                break;
+            case "interest":
+                interest= true;
+                break;
+            case "death":
+                death= true;
+                break;
+            case "course":
+                course= true;
+                break;
+            case "someone":
+                someone= true;
+                break;
+            case "experience":
+                experience= true;
+                break;
+            case "behind":
+                behind= true;
+                break;
+            case "reach":
+                reach= true;
+                break;
+            case "local":
+                local= true;
+                break;
+            case "to kill":
+                tokill= true;
+                break;
+            case "six":
+                six= true;
+                break;
+            case "remain":
+                remain= true;
+                break;
+            case "effect":
+                effect= true;
+                break;
+            case "use2":
+                use2= true;
+                break;
+            case "yeah":
+                yeah= true;
+                break;
+            case "to suggest":
+                tosuggest= true;
+                break;
+            case "class":
+                class2= true;
+                break;
+            case "control":
+                control= true;
+                break;
+            case "to raise":
+                toraise= true;
+                break;
+            case "care":
+                care= true;
+                break;
+            case "perhaps":
+                perhaps= true;
+                break;
+            case "little2":
+                little2= true;
+                break;
+            case "late":
+                late= true;
+                break;
+            case "hard":
+                hard= true;
+                break;
+            case "field":
+                field= true;
+                break;
+            case "else":
+                else2= true;
+                break;
+            case "to pass":
+                topass= true;
+                break;
+            case "former":
+                former= true;
+                break;
+            case "sell":
+                sell= true;
+                break;
+            case "major":
+                major= true;
+                break;
+            case "sometimes":
+                sometimes= true;
+                break;
+            case "require":
+                require= true;
+                break;
+            case "along":
+                along= true;
+                break;
+            case "development":
+                development= true;
+                break;
+            //aqui termina 400 a 450
 
         }
     }
@@ -3813,6 +4006,58 @@ public class MainTesting extends AppCompatActivity {
         user.put("tobuy",tobuy);
         user.put("probably",probably);
         //aqui termina 350 a 400
+
+        user.put("human",human);
+        user.put("towait",towait);
+        user.put("toserve",toserve);
+        user.put("market",market);
+        user.put("todie",todie);
+        user.put("tosend",tosend);
+        user.put("toexpect",toexpect);
+        user.put("home2",home2);
+        user.put("sense",sense);
+        user.put("tobuild",tobuild);
+        user.put("tostay",tostay);
+        user.put("tofall",tofall);
+        user.put("oh",oh);
+        user.put("nation",nation);
+        user.put("toplan",toplan);
+        user.put("cut",cut);
+        user.put("college",college);
+        user.put("interest",interest);
+        user.put("death",death);
+        user.put("course",course);
+        user.put("someone",someone);
+        user.put("experience",experience);
+        user.put("behind",behind);
+        user.put("reach",reach);
+        user.put("local",local);
+        user.put("tokill",tokill);
+        user.put("six",six);
+        user.put("remain",remain);
+        user.put("effect",effect);
+        user.put("use2",use2);
+        user.put("yeah",yeah);
+        user.put("tosuggest",tosuggest);
+        user.put("class2",class2);
+        user.put("control",control);
+        user.put("toraise",toraise);
+        user.put("care",care);
+        user.put("perhaps",perhaps);
+        user.put("little2",little2);
+        user.put("late",late);
+        user.put("hard",hard);
+        user.put("field",field);
+        user.put("else2",else2);
+        user.put("topass",topass);
+        user.put("former",former);
+        user.put("sell",sell);
+        user.put("major",major);
+        user.put("sometimes",sometimes);
+        user.put("require",require);
+        user.put("along",along);
+        user.put("development",development);
+        //aqui termina 400 a 450
 
         uid.document("vocabulary").set(user);
 

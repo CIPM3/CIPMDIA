@@ -62,8 +62,14 @@ public class StudentVocabRestultsModel {
             toprocess ,music ,including ,toconsider ,toappear ,actually ,
             tobuy , probably ;
 
-
-
+    //400 a 450 booleanos
+    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
+            tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
+            death ,course ,someone ,experience ,behind ,reach ,local ,
+            tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
+            control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
+            else2 ,topass ,former ,sell ,major ,sometimes ,require ,along ,
+            development ,themselves ;
 
 
     public StudentVocabRestultsModel(){}
@@ -2876,4 +2882,413 @@ public class StudentVocabRestultsModel {
     public void setProbably(boolean probably) {
         this.probably = probably;
     }
+
+    public boolean isHuman(){
+        return human;
+    }
+
+    public void setHuman(boolean human){
+        this.human = human;
+    }
+
+    public boolean isTowait(){
+        return towait;
+    }
+
+    public void setTowait(boolean towait){
+        this.towait = towait;
+    }
+
+    public boolean isToserve(){
+        return toserve;
+    }
+
+    public void setToserve(boolean toserve){
+        this.toserve = toserve;
+    }
+
+    public boolean isMarket(){
+        return market;
+    }
+
+    public void setMarket(boolean market){
+        this.market = market;
+    }
+
+    public boolean isTodie(){
+        return todie;
+    }
+
+    public void setTodie(boolean todie){
+        this.todie = todie;
+    }
+
+    public boolean isTosend(){
+        return tosend;
+    }
+
+    public void setTosend(boolean tosend){
+        this.tosend = tosend;
+    }
+
+    public boolean isToexpect(){
+        return toexpect;
+    }
+
+    public void setToexpect(boolean toexpect){
+        this.toexpect = toexpect;
+    }
+
+    public boolean isHome2(){
+        return home2;
+    }
+
+    public void setHome2(boolean home2){
+        this.home2 = home2;
+    }
+
+    public boolean isSense(){
+        return sense;
+    }
+
+    public void setSense(boolean sense){
+        this.sense = sense;
+    }
+
+    public boolean isTobuild(){
+        return tobuild;
+    }
+
+    public void setTobuild(boolean tobuild){
+        this.tobuild = tobuild;
+    }
+
+    public boolean isTostay(){
+        return tostay;
+    }
+
+    public void setTostay(boolean tostay){
+        this.tostay = tostay;
+    }
+
+    public boolean isTofall(){
+        return tofall;
+    }
+
+    public void setTofall(boolean tofall){
+        this.tofall = tofall;
+    }
+
+    public boolean isOh(){
+        return oh;
+    }
+
+    public void setOh(boolean oh){
+        this.oh = oh;
+    }
+
+    public boolean isNation(){
+        return nation;
+    }
+
+    public void setNation(boolean nation){
+        this.nation = nation;
+    }
+
+    public boolean isToplan(){
+        return toplan;
+    }
+
+    public void setToplan(boolean toplan){
+        this.toplan = toplan;
+    }
+
+    public boolean isCut(){
+        return cut;
+    }
+
+    public void setCut(boolean cut){
+        this.cut = cut;
+    }
+
+    public boolean isCollege(){
+        return college;
+    }
+
+    public void setCollege(boolean college){
+        this.college = college;
+    }
+
+    public boolean isInterest(){
+        return interest;
+    }
+
+    public void setInterest(boolean interest){
+        this.interest = interest;
+    }
+
+    public boolean isDeath(){
+        return death;
+    }
+
+    public void setDeath(boolean death){
+        this.death = death;
+    }
+
+    public boolean isCourse(){
+        return course;
+    }
+
+    public void setCourse(boolean course){
+        this.course = course;
+    }
+
+    public boolean isSomeone(){
+        return someone;
+    }
+
+    public void setSomeone(boolean someone){
+        this.someone = someone;
+    }
+
+    public boolean isExperience(){
+        return experience;
+    }
+
+    public void setExperience(boolean experience){
+        this.experience = experience;
+    }
+
+    public boolean isBehind(){
+        return behind;
+    }
+
+    public void setBehind(boolean behind){
+        this.behind = behind;
+    }
+
+    public boolean isReach(){
+        return reach;
+    }
+
+    public void setReach(boolean reach){
+        this.reach = reach;
+    }
+
+    public boolean isLocal(){
+        return local;
+    }
+
+    public void setLocal(boolean local){
+        this.local = local;
+    }
+
+    public boolean isTokill(){
+        return tokill;
+    }
+
+    public void setTokill(boolean tokill){
+        this.tokill = tokill;
+    }
+
+    public boolean isSix(){
+        return six;
+    }
+
+    public void setSix(boolean six){
+        this.six = six;
+    }
+
+    public boolean isRemain(){
+        return remain;
+    }
+
+    public void setRemain(boolean remain){
+        this.remain = remain;
+    }
+
+    public boolean isEffect(){
+        return effect;
+    }
+
+    public void setEffect(boolean effect){
+        this.effect = effect;
+    }
+
+    public boolean isUse2(){
+        return use2;
+    }
+
+    public void setUse2(boolean use2){
+        this.use2 = use2;
+    }
+
+    public boolean isYeah(){
+        return yeah;
+    }
+
+    public void setYeah(boolean yeah){
+        this.yeah = yeah;
+    }
+
+    public boolean isTosuggest(){
+        return tosuggest;
+    }
+
+    public void setTosuggest(boolean tosuggest){
+        this.tosuggest = tosuggest;
+    }
+
+    public boolean isClass2(){
+        return class2;
+    }
+
+    public void setClass2(boolean class2){
+        this.class2 = class2;
+    }
+
+    public boolean isControl(){
+        return control;
+    }
+
+    public void setControl(boolean control){
+        this.control = control;
+    }
+
+    public boolean isToraise(){
+        return toraise;
+    }
+
+    public void setToraise(boolean toraise){
+        this.toraise = toraise;
+    }
+
+    public boolean isCare(){
+        return care;
+    }
+
+    public void setCare(boolean care){
+        this.care = care;
+    }
+
+    public boolean isPerhaps(){
+        return perhaps;
+    }
+
+    public void setPerhaps(boolean perhaps){
+        this.perhaps = perhaps;
+    }
+
+    public boolean isLittle2(){
+        return little2;
+    }
+
+    public void setLittle2(boolean little2){
+        this.little2 = little2;
+    }
+
+    public boolean isLate(){
+        return late;
+    }
+
+    public void setLate(boolean late){
+        this.late = late;
+    }
+
+    public boolean isHard(){
+        return hard;
+    }
+
+    public void setHard(boolean hard){
+        this.hard = hard;
+    }
+
+    public boolean isField(){
+        return field;
+    }
+
+    public void setField(boolean field){
+        this.field = field;
+    }
+
+    public boolean isElse2(){
+        return else2;
+    }
+
+    public void setElse2(boolean else2){
+        this.else2 = else2;
+    }
+
+    public boolean isTopass(){
+        return topass;
+    }
+
+    public void setTopass(boolean topass){
+        this.topass = topass;
+    }
+
+    public boolean isFormer(){
+        return former;
+    }
+
+    public void setFormer(boolean former){
+        this.former = former;
+    }
+
+    public boolean isSell(){
+        return sell;
+    }
+
+    public void setSell(boolean sell){
+        this.sell = sell;
+    }
+
+    public boolean isMajor(){
+        return major;
+    }
+
+    public void setMajor(boolean major){
+        this.major = major;
+    }
+
+    public boolean isSometimes(){
+        return sometimes;
+    }
+
+    public void setSometimes(boolean sometimes){
+        this.sometimes = sometimes;
+    }
+
+    public boolean isRequire(){
+        return require;
+    }
+
+    public void setRequire(boolean require){
+        this.require = require;
+    }
+
+    public boolean isAlong(){
+        return along;
+    }
+
+    public void setAlong(boolean along){
+        this.along = along;
+    }
+
+    public boolean isDevelopment(){
+        return development;
+    }
+
+    public void setDevelopment(boolean development){
+        this.development = development;
+    }
+
+    public boolean isThemselves(){
+        return themselves;
+    }
+
+    public void setThemselves (boolean themselves){
+        this.themselves = themselves;
+    }
+
 }

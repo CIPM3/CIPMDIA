@@ -1,6 +1,29 @@
 package com.leal.cipm_testing;
 
 public class C400a500 {
+
+    String alleng[]={
+            "human ", "to wait ", "to serve ", "market ", "to die ", "to send ", "to expect ",
+            "home ", "sense ", "to build ", "to stay ", "to fall ", "oh ", "nation ", "to plan ",
+            "cut ", "college ", "interest ", "death ", "course ", "someone ",
+            "experience ", "behind ", "reach ", "local ", "to kill ", "six ", "remain ",
+            "effect ", "use ", "yeah ", "to suggest ", "class ", "control ", "to raise ",
+            "care ", "perhaps ", "little ", "late ", "hard ", "field ", "else ",
+            "to pass ", "former ", "sell ", "major ", "sometimes ", "require ",
+            "along ", "development ", "themselves "
+    };
+
+    String allsp[]={
+            "humano ", "esperar ", "servir ", "mercado ", "morir ", "enviar ", "esperar ",
+            "hogar ", "sentido ", "construir ", "quedarse ", "caer ", "oh (usado para expresar sorpresa o susto) ",
+            "nación ", "planear ", "corte ", "universidad ", "interés ", "muerte ", "curso ", "alguien ",
+            "experiencia ", "detrás de ", "alcance ", "local ", "matar ", "seis ", "permanecer ",
+            "efecto ", "uso ", "sí (afirmación) ", "sugerir ", "clase ", "control ", "aumento ",
+            "cuidado ", "quizás ", "pequeño ", "tarde ", "duro ", "campo ", "más ",
+            "pasar ", "antiguo ", "vender ", "especialidad ", "a veces ", "requerir ",
+            "a lo largo de ", "dsarrollo ", "ellos mismo "
+    };
+
     String gens;
     String gene;
     String pronoun[] = {"I ", "you ", "he ", "she ", "it ", "we ", "they "};
@@ -76,6 +99,18 @@ public class C400a500 {
 
     String ad[] = {"perhaps ", "sometimes "};
     String adv[] = {"quiza ", "aveces "};
+
+    String ob;
+    String eng;
+    public static int j=0;
+    public void vocab400a500(){
+        if(j==alleng.length) {
+            j=0;
+        }
+        ob=allsp[j];
+        eng=alleng[j];
+        j++;
+    }
 
     public void adjnf() {
         int n = (int) (Math.random() * sustf.length);
