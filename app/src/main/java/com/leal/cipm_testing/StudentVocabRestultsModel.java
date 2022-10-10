@@ -81,7 +81,15 @@ public class StudentVocabRestultsModel {
             tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
             control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
             else2 ,topass ,former ,sell ,major ,sometimes ,require ,along ,
-            development ,themselves ;
+            development ,themselves;
+
+    //450 a 500 booleanos
+    boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
+            possible ,heart ,drug ,toshow ,leader ,light ,voice , wife ,whole ,police ,
+            mind ,finally2 ,topull ,toreturn ,free ,military ,price ,report2 ,
+            less ,accordingto,decision ,toexplain , son ,hope ,even2 ,todevelop ,
+            view ,relationship ,carry ,town , road ,todrive ,arm ,true2 ,federal ,
+            tobreak ,better2 ,difference , tothank  ,toreceive ,value ;
 
 
     public StudentVocabRestultsModel(){}
@@ -3299,8 +3307,408 @@ public class StudentVocabRestultsModel {
         return themselves;
     }
 
-    public void setThemselves (boolean themselves){
+    public void setThemselves(boolean themselves){
         this.themselves = themselves;
+    }
+
+    public boolean isReport(){
+        return report;
+    }
+
+    public void setReport(boolean report){
+        this.report = report;
+    }
+
+    public boolean isRole() {
+        return role;
+    }
+
+    public void setRole(boolean role) {
+        this.role = role;
+    }
+
+    public boolean isBetter() {
+        return better;
+    }
+
+    public void setBetter(boolean better) {
+        this.better = better;
+    }
+
+    public boolean isEconomic() {
+        return economic;
+    }
+
+    public void setEconomic(boolean economic) {
+        this.economic = economic;
+    }
+
+    public boolean isEffort() {
+        return effort;
+    }
+
+    public void setEffort(boolean effort) {
+        this.effort = effort;
+    }
+
+    public boolean isup2(){
+        return up2;
+    }
+
+    public void setup2(boolean up2){
+        this.up2 = up2;
+    }
+
+    public boolean istodecide(){
+        return todecide;
+    }
+
+    public void settodecide(boolean todecide){
+        this.todecide = todecide;
+    }
+
+    public boolean israte(){
+        return rate;
+    }
+
+    public void setrate(boolean rate){
+        this.rate = rate;
+    }
+
+    public boolean isstrong(){
+        return strong;
+    }
+
+    public void setstrong(boolean strong){
+        this.strong = strong;
+    }
+
+    public boolean ispossible(){
+        return possible;
+    }
+
+    public void setpossible(boolean possible){
+        this.possible = possible;
+    }
+
+    public boolean isheart(){
+        return heart;
+    }
+
+    public void setheart(boolean heart){
+        this.heart = heart;
+    }
+
+    public boolean isdrug(){
+        return drug;
+    }
+
+    public void setdrug(boolean drug){
+        this.drug = drug;
+    }
+
+    public boolean istoshow(){
+        return toshow;
+    }
+
+    public void settoshow(boolean toshow){
+        this.toshow = toshow;
+    }
+
+    public boolean isleader(){
+        return leader;
+    }
+
+    public void setleader(boolean leader){
+        this.leader = leader;
+    }
+
+    public boolean islight(){
+        return light;
+    }
+
+    public void setlight(boolean light){
+        this.light = light;
+    }
+
+    public boolean isvoice(){
+        return voice;
+    }
+
+    public void setvoice(boolean voice){
+        this.voice = voice;
+    }
+
+    public boolean iswife(){
+        return wife;
+    }
+
+    public void setwife(boolean wife){
+        this.wife = wife;
+    }
+
+    public boolean iswhole(){
+        return whole;
+    }
+
+    public void setwhole(boolean whole){
+        this.whole = whole;
+    }
+
+    public boolean ispolice(){
+        return police;
+    }
+
+    public void setpolice(boolean police){
+        this.police = police;
+    }
+
+    public boolean ismind(){
+        return mind;
+    }
+
+    public void setmind(boolean mind){
+        this.mind = mind;
+    }
+
+    public boolean isfinally2(){
+        return finally2;
+    }
+
+    public void setfinally2(boolean finally2){
+        this.finally2 = finally2;
+    }
+
+    public boolean istopull(){
+        return topull;
+    }
+
+    public void settopull(boolean topull){
+        this.topull = topull;
+    }
+
+    public boolean istoreturn(){
+        return toreturn;
+    }
+
+    public void settoreturn(boolean toreturn){
+        this.toreturn = toreturn;
+    }
+
+    public boolean isfree(){
+        return free;
+    }
+
+    public void setfree(boolean free){
+        this.free = free;
+    }
+
+    public boolean ismilitary(){
+        return military;
+    }
+
+    public void setmilitary(boolean military){
+        this.military = military;
+    }
+
+    public boolean isprice(){
+        return price;
+    }
+
+    public void setprice(boolean price){
+        this.price = price;
+    }
+
+    public boolean isreport2(){
+        return report2;
+    }
+
+    public void setreport2(boolean report2){
+        this.report2 = report2;
+    }
+
+    public boolean isless(){
+        return less;
+    }
+
+    public void setless(boolean less){
+        this.less = less;
+    }
+
+    public boolean isaccordingto(){
+        return accordingto;
+    }
+
+    public void setaccordingto(boolean accordingto){
+        this.accordingto = accordingto;
+    }
+
+    public boolean isdecision(){
+        return decision;
+    }
+
+    public void setdecision(boolean decision){
+        this.decision = decision;
+    }
+
+    public boolean istoexplain(){
+        return toexplain;
+    }
+
+    public void settoexplain(boolean toexplain){
+        this.toexplain = toexplain;
+    }
+
+    public boolean isson(){
+        return son;
+    }
+
+    public void setson(boolean son){
+        this.son = son;
+    }
+
+    public boolean ishope(){
+        return hope;
+    }
+
+    public void sethope(boolean hope){
+        this.hope = hope;
+    }
+
+    public boolean iseven2(){
+        return even2;
+    }
+
+    public void seteven2(boolean even2){
+        this.even2 = even2;
+    }
+
+    public boolean istodevelop(){
+        return todevelop;
+    }
+
+    public void settodevelop(boolean todevelop){
+        this.todevelop = todevelop;
+    }
+
+    public boolean isview(){
+        return view;
+    }
+
+    public void setview(boolean view){
+        this.view = view;
+    }
+
+    public boolean isrelationship(){
+        return relationship;
+    }
+
+    public void setrelationship(boolean relationship){
+        this.relationship = relationship;
+    }
+
+    public boolean iscarry(){
+        return carry;
+    }
+
+    public void setcarry(boolean carry){
+        this.carry = carry;
+    }
+
+    public boolean istown(){
+        return town;
+    }
+
+    public void settown(boolean town){
+        this.town = town;
+    }
+
+    public boolean isroad(){
+        return road;
+    }
+
+    public void setroad(boolean road){
+        this.road = road;
+    }
+
+    public boolean istodrive(){
+        return todrive;
+    }
+
+    public void settodrive(boolean todrive){
+        this.todrive = todrive;
+    }
+
+    public boolean isarm(){
+        return arm;
+    }
+
+    public void setarm(boolean arm){
+        this.arm = arm;
+    }
+
+    public boolean istrue2(){
+        return true2;
+    }
+
+    public void settrue2(boolean true2){
+        this.true2 = true2;
+    }
+
+    public boolean isfederal(){
+        return federal;
+    }
+
+    public void setfederal(boolean federal){
+        this.federal = federal;
+    }
+
+    public boolean istobreak(){
+        return tobreak;
+    }
+
+    public void settobreak(boolean tobreak){
+        this.tobreak = tobreak;
+    }
+
+    public boolean isbetter2(){
+        return better2;
+    }
+
+    public void setbetter2(boolean better2){
+        this.better2 = better2;
+    }
+
+    public boolean isdifference(){
+        return difference;
+    }
+
+    public void setdifference(boolean difference){
+        this.difference = difference;
+    }
+
+    public boolean istothank(){
+        return tothank;
+    }
+
+    public void settothank(boolean tothank){
+        this.tothank = tothank;
+    }
+
+    public boolean istoreceive(){
+        return toreceive;
+    }
+
+    public void settoreceive(boolean toreceive){
+        this.toreceive = toreceive;
+    }
+
+    public boolean isvalue(){
+        return value;
+    }
+
+    public void setvalue(boolean value){
+        this.value = value;
     }
 
 }

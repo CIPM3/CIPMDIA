@@ -108,7 +108,7 @@ public class MainTesting extends AppCompatActivity {
             bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
             almost ,include ,continue1 ,set ,later ,community,much2,
             name;
-    
+
     //300 a 350 booleanos
     boolean  five ,once ,white ,least ,president ,learn ,
              real ,change2 ,team ,minute ,best ,several ,
@@ -136,7 +136,16 @@ public class MainTesting extends AppCompatActivity {
             tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
             control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
             else2 ,topass , former ,sell ,major ,sometimes ,require ,along ,
-            development , themselves ;
+            development ,themselves ;
+
+    //450 a 500 booleanos
+    boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
+            possible ,heart ,drug ,toshow ,leader ,light ,voice , wife ,whole ,police ,
+            mind ,finally2 ,topull ,toreturn ,free ,military ,price ,report2 ,
+            less ,accordingto,decision ,toexplain , son ,hope ,even2 ,todevelop ,
+            view ,relationship ,carry ,town , road ,todrive ,arm ,true2 ,federal ,
+            tobreak ,better2 ,difference , tothank  ,toreceive ,value ;
+
 
     String selection,selectionv;
     int cp,cn;
@@ -1808,7 +1817,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "0 to 50":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -1846,7 +1854,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "50 to 100":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -1882,7 +1889,6 @@ public class MainTesting extends AppCompatActivity {
                             }
                         });
                 break;
-
 
                 case "100 to 150":
                 tt1 = new TextToSpeech(getApplicationContext(),
@@ -1921,7 +1927,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "150 to 200":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -1958,7 +1963,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "200 to 250":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -1995,7 +1999,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "250 to 300":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -2069,7 +2072,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
 
             case "350 to 400":
-
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -2105,8 +2107,7 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
-            case "400 to 500":
-
+            case "400 to 450":
                 tt1 = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -2131,7 +2132,43 @@ public class MainTesting extends AppCompatActivity {
                                     });
                                     C400a500 gen1 = new C400a500();
                                     // este metodo de abajo se cambia para matchear el case
-                                    gen1.vocab400a500();
+                                    gen1.vocab400a450();
+                                    sptx.setText(gen1.ob);
+                                    txteng=gen1.eng;
+                                    Answerinput.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                break;
+
+            case "450 to 500":
+                tt1 = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    C400a500 gen1 = new C400a500();
+                                    // este metodo de abajo se cambia para matchear el case
+                                    gen1.vocab450a500();
                                     sptx.setText(gen1.ob);
                                     txteng=gen1.eng;
                                     Answerinput.setText("");
@@ -3854,7 +3891,162 @@ public class MainTesting extends AppCompatActivity {
             case "development":
                 development= true;
                 break;
+            case "themselves":
+                themselves= true;
+                break;
             //aqui termina 400 a 450
+
+            case "report":
+                report= true;
+                break;
+            case "role":
+                role= true;
+                break;
+            case "better":
+                better= true;
+                break;
+            case "economic":
+                economic= true;
+                break;
+            case "effort":
+                effort= true;
+                break;
+            case "up2":
+                up2= true;
+                break;
+            case "to decide":
+                todecide= true;
+                break;
+            case "rate":
+                rate= true;
+                break;
+            case "strong":
+                strong= true;
+                break;
+            case "possible":
+                possible= true;
+                break;
+            case "heart":
+                heart= true;
+                break;
+            case "drug":
+                drug= true;
+                break;
+            case "to show":
+                toshow= true;
+                break;
+            case "leader":
+                leader= true;
+                break;
+            case "light":
+                light= true;
+                break;
+            case "voice":
+                voice= true;
+                break;
+            case "wife":
+                 wife= true;
+                 break;
+            case "whole":
+                whole= true;
+                break;
+            case "police":
+                police= true;
+                break;
+            case "mind":
+                mind= true;
+                break;
+            case "finally2":
+                finally2= true;
+                break;
+            case "to pull":
+                topull= true;
+                break;
+            case "to return":
+                toreturn= true;
+                break;
+            case "free":
+                free= true;
+                break;
+            case "military":
+                military= true;
+                break;
+            case "price":
+                price= true;
+                break;
+            case "report2":
+                report2= true;
+                break;
+            case "less":
+                less= true;
+                break;
+            case "according to":
+                accordingto= true;
+                break;
+            case "decision":
+                decision= true;
+                break;
+            case "to explain":
+                toexplain= true;
+                break;
+            case "son":
+                son= true;
+                break;
+            case "hope":
+                hope= true;
+                break;
+            case "even2":
+                even2= true;
+                break;
+            case "to develop":
+                todevelop= true;
+                break;
+            case "view":
+                view= true;
+                break;
+            case "relationship":
+                relationship= true;
+                break;
+            case "carry":
+                carry= true;
+                break;
+            case "town":
+                town= true;
+                break;
+            case "road":
+                road= true;
+                break;
+            case "to drive":
+                todrive= true;
+                break;
+            case "arm":
+                arm= true;
+                break;
+            case "true2":
+                true2= true;
+                break;
+            case "federal":
+                federal= true;
+                break;
+            case "to break":
+                tobreak= true;
+                break;
+            case "better2":
+                better2= true;
+                break;
+            case "difference":
+                difference= true;
+                break;
+            case "to thank":
+                tothank= true;
+                break;
+            case "to receive":
+                toreceive= true;
+                break;
+            case "value":
+                value= true;
+                break;
+            //aqui termina 450 a 500
 
         }
     }
@@ -5184,7 +5376,60 @@ public class MainTesting extends AppCompatActivity {
         user.put("require",require);
         user.put("along",along);
         user.put("development",development);
+        user.put("themselves",themselves);
         //aqui termina 400 a 450
+
+        user.put("report",report);
+        user.put("role",role);
+        user.put("better",better);
+        user.put("economic",economic);
+        user.put("effort",effort);
+        user.put("up2",up2);
+        user.put("todecide",todecide);
+        user.put("rate",rate);
+        user.put("strong",strong);
+        user.put("possible",possible);
+        user.put("heart",heart);
+        user.put("drug",drug);
+        user.put("toshow",toshow);
+        user.put("leader",leader);
+        user.put("light",light);
+        user.put("voice",voice);
+        user.put("wife",wife);
+        user.put("whole",whole);
+        user.put("police",police);
+        user.put("mind",mind);
+        user.put("finally2",finally2);
+        user.put("topull",topull);
+        user.put("toreturn",toreturn);
+        user.put("free",free);
+        user.put("military",military);
+        user.put("price",price);
+        user.put("report2",report2);
+        user.put("less",less);
+        user.put("accordingto",accordingto);
+        user.put("decision",decision);
+        user.put("toexplain",toexplain);
+        user.put("son",son);
+        user.put("hope",hope);
+        user.put("even2",even2);
+        user.put("todevelop",todevelop);
+        user.put("view",view);
+        user.put("relationship",relationship);
+        user.put("carry",carry);
+        user.put("town",town);
+        user.put("road",road);
+        user.put("todrive",todrive);
+        user.put("arm",arm);
+        user.put("true2",true2);
+        user.put("federal",federal);
+        user.put("tobreak",tobreak);
+        user.put("better2",better2);
+        user.put("difference",difference);
+        user.put("tothank",tothank);
+        user.put("toreceive",toreceive);
+        user.put("value",value);
+        //aqui termina 450 a 500
 
         uid.document("vocabulary").set(user);
 

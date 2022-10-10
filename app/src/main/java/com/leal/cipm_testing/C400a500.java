@@ -12,7 +12,6 @@ public class C400a500 {
             "to pass ", "former ", "sell ", "major ", "sometimes ", "require ",
             "along ", "development ", "themselves "
     };
-
     String allsp[]={
             "humano ", "esperar ", "servir ", "mercado ", "morir ", "enviar ", "esperar ",
             "hogar ", "sentido ", "construir ", "quedarse ", "caer ", "oh (usado para expresar sorpresa o susto) ",
@@ -22,6 +21,25 @@ public class C400a500 {
             "cuidado ", "quizás ", "pequeño ", "tarde ", "duro ", "campo ", "más ",
             "pasar ", "antiguo ", "vender ", "especialidad ", "a veces ", "requerir ",
             "a lo largo de ", "dsarrollo ", "ellos mismo "
+    };
+
+    String alleng2[]={
+            "report ", "role ", "better ", "economic ", "effort ", "up ", "to decide ", "rate ",
+            "strong ", "possible ", "heart ", "drug ", "to show ", "leader ", "light ", "voice ",
+            "wife ", "whole ", "police ", "mind ", "finally ", "to pull ", "to return ", "free ",
+            "military ", "price ", "report ", "less ", "according to ", "decision ", "to explain ",
+            "son ", "hope ", "even ", "to develop ", "view ", "relationship ", "carry ", "town ",
+            "road ", "to drive ", "arm ", "true ", "federal ", "to break ", "better ", "difference ",
+            "to thank  ", "to receive ", "value "
+    };
+    String allsp2[]={
+            "informe ", "papel (cine, teatro y televisión) ", "mejor ", "económico ", "esfuerzo ",
+            "arriba ", "decidir ", "tarifa ", "fuerte ", "posible ", "corazón ", "droga ", "mostrar ",
+            "líder ", "luz ", "voz ", "esposa ", "entero ", "policía ", "mente ", "finalmente ",
+            "jalar ", "regresar ", "gratis ", "militar ", "pricio ", "informe ", "menos ", "según ",
+            "desición ", "explicar ", "hijo ", "esperanza ", "incluso ", "desarrollar ", "vista ",
+            "relación ", "cargar ", "pueblo ", "carretera ", "manejar ", "brazo ", "cierto ",
+            "federal ", "romper ", "mejor ", "diferencia ", "agradecer ", "recibir ", "valor "
     };
 
     String gens;
@@ -103,12 +121,21 @@ public class C400a500 {
     String ob;
     String eng;
     public static int j=0;
-    public void vocab400a500(){
+    public void vocab400a450(){
         if(j==alleng.length) {
             j=0;
         }
         ob=allsp[j];
         eng=alleng[j];
+        j++;
+    }
+
+    public void vocab450a500(){
+        if(j==alleng2.length) {
+            j=0;
+        }
+        ob=allsp2[j];
+        eng=alleng2[j];
         j++;
     }
 
