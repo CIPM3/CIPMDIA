@@ -48,7 +48,6 @@ public class MainTesting extends AppCompatActivity {
     GoogleSignInClient gsc;
     String t0, t1, t2, t3, t4, t5, t6,engtx;
     int prom;
-    String psseconds;
 
 
     public static final int REC_CODE_SPEECH_INPUT = 100;
@@ -57,6 +56,12 @@ public class MainTesting extends AppCompatActivity {
     boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
     boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
     boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
+    //1 crear string time
+    //PD
+    String pssec,pcsec,ppsec,ppcsec,psssec,pscsec;
+
+    //LR
+
     // booleanos de los primeros 50 palabras
     boolean the,tobe,and,of,a,in,to,tohave,it,I,
             that1,that2,for1,for2,you,he,with,on,todo,tosay,
@@ -447,7 +452,11 @@ public class MainTesting extends AppCompatActivity {
         }
     }
 
-    //2
+    //2 cambiar en onDone de cada uno por
+    //if(timerTask == null){
+    //                                                startTimer();
+    //                                            }
+
     public  void   startTest(){
 
         save.setVisibility(View.VISIBLE);
@@ -507,7 +516,9 @@ public class MainTesting extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -543,7 +554,9 @@ public class MainTesting extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -579,7 +592,9 @@ public class MainTesting extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -615,7 +630,9 @@ public class MainTesting extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -650,7 +667,9 @@ public class MainTesting extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2392,7 +2411,6 @@ public class MainTesting extends AppCompatActivity {
         }
     }
 
-    //3
     private void   turnTrue(@NonNull String CurrentStructure) {
 
         switch (CurrentStructure){
@@ -4050,29 +4068,34 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
+    //3 poner las variables de segundos en cada case
     private void   turnTrueTime(@NonNull String CurrentStructure, String segundos) {
 
         switch (CurrentStructure){
             case "Present Simple":
                 ps=true;
-                psseconds= segundos;
+                pssec= segundos;
 
                 break;
             case "Present Continuous":
                 pc=true;
-
+                pcsec= segundos;
                 break;
             case "Present Perfect":
                 pp=true;
+                ppsec=segundos;
                 break;
             case "Present Perfect Continuous":
                 ppc=true;
+                ppcsec=segundos;
                 break;
             case "Past Simple":
                 pss=true;
+                psssec=segundos;
                 break;
             case "Past Continuous":
                 psc=true;
+                pscsec=segundos;
                 break;
             case "Past Perfect":
                 psp=true;
@@ -4823,89 +4846,91 @@ public class MainTesting extends AppCompatActivity {
         }
     }
 
+    //4 crear en un userput con la estructura time
     public  void   dbtesting() {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
-        if(t.equalsIgnoreCase(t2)){
-            cp= cp+1;
-            Toast.makeText(this, "inside good"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
-           prom = rounded/4;
+        if (t.equalsIgnoreCase(t2)) {
+            cp = cp + 1;
+            Toast.makeText(this, "inside good" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            prom = rounded / 4;
 
 
-
-        }else {
-            cn=cn+1;
-            Toast.makeText(this, String.valueOf(cn)+" inside bad "+txteng, Toast.LENGTH_SHORT).show();
+        } else {
+            cn = cn + 1;
+            Toast.makeText(this, String.valueOf(cn) + " inside bad " + txteng, Toast.LENGTH_SHORT).show();
         }
-        if(cp==4){
-            Toast.makeText(this, selection+"pasaste-Pasa a otra estructura"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
-            cp=0;
-            cn=0;
+        if (cp == 4) {
+            Toast.makeText(this, selection + "pasaste-Pasa a otra estructura" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
+            cp = 0;
+            cn = 0;
             timerText.setText(String.valueOf(prom));
-            turnTrueTime(selection,String.valueOf(prom));
-            timen=0.0;
-            if (timerTask!=null ){
+            turnTrueTime(selection, String.valueOf(prom));
+            timen = 0.0;
+            if (timerTask != null) {
                 timerTask.cancel();
             }
-            timerTask=null;
+            timerTask = null;
 
-        }else if(cn==4){
-            Toast.makeText(this, selection+"not passed Pasa a otra estructura"+String.valueOf(cn), Toast.LENGTH_SHORT).show();
-            cn=0;
-            cp=0;
+        } else if (cn == 4) {
+            Toast.makeText(this, selection + "not passed Pasa a otra estructura" + String.valueOf(cn), Toast.LENGTH_SHORT).show();
+            cn = 0;
+            cp = 0;
 
 
         }
-        CollectionReference uid= db.collection(userid);
+        CollectionReference uid = db.collection(userid);
         // completar esta pendejada con las keys iguales a las de student
         Map<String, Object> user = new HashMap<>();
-        user.put("name",Answerinput.getText().toString());
-        user.put("presentesimple",ps);
-        user.put("presentesimpletime",psseconds);
-        user.put("presenteContinuo",pc);
-        user.put("presentePerfecto",pp);
-        user.put("presentePerfectoContinuo",ppc);
-        user.put("pastsimple",pss);
-        user.put("pastContinuo",psc);
-        user.put("pastPerfecto",psp);
-        user.put("pastPerfectoContinuo",pspc);
-        user.put("futuresimple",fs);
-        user.put("futureContinuo",fc);
-        user.put("futurePerfecto",fp);
-        user.put("futurePerfectoContinuo",fpc);
-        user.put("wouldsimple",ws);
-        user.put("wouldContinuo",wc);
-        user.put("wouldPerfecto",wp);
-        user.put("wouldPerfectoContinuo",wpc);
-        user.put("couldsimple",cos);
-        user.put("couldContinuo",coc);
-        user.put("couldPerfecto",cop);
-        user.put("couldPerfectoContinuo",copc);
-        user.put("mightsimple",ms);
-        user.put("mightContinuo",mc);
-        user.put("mightPerfecto",mp);
-        user.put("mightPerfectoContinuo",mpc);
-        user.put("cansimple",cs);
-        user.put("canContinuo",cc);
-        user.put("mustsimple",mus);
-        user.put("mustContinuo",muc);
-        user.put("shouldsimple",ss);
-        user.put("shouldContinuo",sc);
-        user.put("shouldPerfecto",sp);
-        user.put("shouldPerfectoContinuo",spc);
-        user.put("wantTo",wt);
-        user.put("forTo",ft);
-        user.put("supposedToPresent",stp);
-        user.put("wishPastPerfect",wpp);
-        user.put("usedTo",ut);
-        user.put("beUsedTo",but);
+        user.put("name", Answerinput.getText().toString());
+        user.put("presentesimple", ps);
+        user.put("presentesimpletime", pssec);
+        user.put("presenteContinuo", pc);
+        user.put("presentecontinuotime", pcsec);
+        user.put("presentePerfecto", pp);
+        user.put("presenteperfectotime", ppsec);
+        user.put("presentePerfectoContinuo", ppc);
+        user.put("presenteperfectocontinuo", ppcsec);
+        user.put("pastsimple", pss);
+        user.put("pastsimpletime", psssec);
+        user.put("pastContinuo", psc);
+        user.put("pastcontinuotime", pscsec);
+        user.put("pastPerfecto", psp);
+        user.put("pastPerfectoContinuo", pspc);
+        user.put("futuresimple", fs);
+        user.put("futureContinuo", fc);
+        user.put("futurePerfecto", fp);
+        user.put("futurePerfectoContinuo", fpc);
+        user.put("wouldsimple", ws);
+        user.put("wouldContinuo", wc);
+        user.put("wouldPerfecto", wp);
+        user.put("wouldPerfectoContinuo", wpc);
+        user.put("couldsimple", cos);
+        user.put("couldContinuo", coc);
+        user.put("couldPerfecto", cop);
+        user.put("couldPerfectoContinuo", copc);
+        user.put("mightsimple", ms);
+        user.put("mightContinuo", mc);
+        user.put("mightPerfecto", mp);
+        user.put("mightPerfectoContinuo", mpc);
+        user.put("cansimple", cs);
+        user.put("canContinuo", cc);
+        user.put("mustsimple", mus);
+        user.put("mustContinuo", muc);
+        user.put("shouldsimple", ss);
+        user.put("shouldContinuo", sc);
+        user.put("shouldPerfecto", sp);
+        user.put("shouldPerfectoContinuo", spc);
+        user.put("wantTo", wt);
+        user.put("forTo", ft);
+        user.put("supposedToPresent", stp);
+        user.put("wishPastPerfect", wpp);
+        user.put("usedTo", ut);
+        user.put("beUsedTo", but);
         uid.document("structures").set(user);
 
 
-
-
     }
-    //4
     public void vocabdbtesting(){
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();

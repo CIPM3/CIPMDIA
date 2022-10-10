@@ -16,11 +16,24 @@ public class Student {
     boolean cansimple,canContinuo,mustsimple,mustContinuo;
     boolean shouldsimple,shouldContinuo,shouldPerfecto,shouldPerfectoContinuo;
     boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
-    boolean vocab0a50,vocab50a100,vocab100a150,vocab150a200,vocab200a250,
-            vocab250a300,vocab300a350,vocab350a400,vocab400a450;
+    boolean vocab0a50;
+    boolean vocab50a100;
+    boolean vocab100a150;
+    boolean vocab150a200;
+    boolean vocab200a250;
+    boolean vocab250a300;
+    boolean vocab300a350;
+    boolean vocab350a400;
+    boolean vocab400a450;
 
     int presentesimpleint;
+    //5 Agregar el modelo time y generar los get y set
     String presentesimpletime;
+    String presentecontinuotime;
+    String presenteperfectotime;
+    String presenteperfectocontinuo;
+    String pastsimpletime;
+    String pastcontinuotime;
 
     public int getPresentesimpleint() {
         return presentesimpleint;
@@ -327,8 +340,86 @@ public class Student {
     public void setVocab150a200(boolean vocab150a200) {
         this.vocab150a200 = vocab150a200;
     }
+    public boolean isVocab200a250() {
+        return vocab200a250;
+    }
+
+    public void setVocab200a250(boolean vocab200a250) {
+        this.vocab200a250 = vocab200a250;
+    }
+
+    public boolean isVocab250a300() {
+        return vocab250a300;
+    }
+
+    public void setVocab250a300(boolean vocab250a300) {
+        this.vocab250a300 = vocab250a300;
+    }
+
+    public boolean isVocab300a350() {
+        return vocab300a350;
+    }
+
+    public void setVocab300a350(boolean vocab300a350) {
+        this.vocab300a350 = vocab300a350;
+    }
+
+    public boolean isVocab350a400() {
+        return vocab350a400;
+    }
+
+    public void setVocab350a400(boolean vocab350a400) {
+        this.vocab350a400 = vocab350a400;
+    }
+
+    public boolean isVocab400a450() {
+        return vocab400a450;
+    }
+
+    public void setVocab400a450(boolean vocab400a450) {
+        this.vocab400a450 = vocab400a450;
+    }
 
 
+    public String getPresentecontinuotime() {
+        return presentecontinuotime;
+    }
+
+    public void setPresentecontinuotime(String presentecontinuotime) {
+        this.presentecontinuotime = presentecontinuotime;
+    }
+
+    public String getPresenteperfectotime() {
+        return presenteperfectotime;
+    }
+
+    public void setPresenteperfectotime(String presenteperfectotime) {
+        this.presenteperfectotime = presenteperfectotime;
+    }
+
+    public String getPresenteperfectocontinuo() {
+        return presenteperfectocontinuo;
+    }
+
+    public void setPresenteperfectocontinuo(String presenteperfectocontinuo) {
+        this.presenteperfectocontinuo = presenteperfectocontinuo;
+    }
+
+    public String getPastsimpletime() {
+        return pastsimpletime;
+    }
+
+    public void setPastsimpletime(String pastsimpletime) {
+        this.pastsimpletime = pastsimpletime;
+    }
+
+    public String getPastcontinuotime() {
+        return pastcontinuotime;
+    }
+
+    public void setPastcontinuotime(String pastcontinuotime) {
+        this.pastcontinuotime = pastcontinuotime;
+    }
     @NonNull
     @Override
     public String toString() {

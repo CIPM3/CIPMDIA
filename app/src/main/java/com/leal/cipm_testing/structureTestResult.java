@@ -57,13 +57,14 @@ public class structureTestResult extends Fragment {
                       st=  documentSnapshot.toObject(Student.class);
                     assert st != null;
                     //aparentemente ya funciona, solo llenar el array
+                    //paso 6 final
                     String[] est = {st.name,
                             "Present Simple : "+st.presentesimple+" Response time:"+st.presentesimpletime+" "+"Seconds",
-                            "Present Continuous : "+st.presenteContinuo,
-                            "Present Perfect : "+st.presentePerfecto,
-                            "Present Perfect Continous: "+ st.presentePerfectoContinuo,
-                            "Past Simple : " + st.pastsimple,
-                            "Past Continous : "+ st.pastContinuo,
+                            "Present Continuous : "+st.presenteContinuo+" Response time:"+st.presentecontinuotime+" "+"Seconds",
+                            "Present Perfect : "+st.presentePerfecto+" Response time:"+st.presenteperfectotime+" "+"Seconds",
+                            "Present Perfect Continous: "+ st.presentePerfectoContinuo+" Response time:"+st.presenteperfectocontinuo+" "+"Seconds",
+                            "Past Simple : " + st.pastsimple+" Response time:"+st.pastsimpletime+" "+"Seconds",
+                            "Past Continous : "+ st.pastContinuo+" Response time:"+st.pastcontinuotime+" "+"Seconds",
                             "Past Perfect : "+ st.pastPerfecto,
                             "Past Perfect Continous : " + st.pastPerfectoContinuo,
                             "Future Simple : "+ st.futuresimple,
