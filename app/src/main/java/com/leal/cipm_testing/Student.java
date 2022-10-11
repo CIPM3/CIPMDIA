@@ -34,6 +34,12 @@ public class Student {
     String presenteperfectocontinuo;
     String pastsimpletime;
     String pastcontinuotime;
+    String pastperfectotime;
+    String pastperfectocontinuotime;
+    String futurosimpletime;
+    String futurocontinuotime;
+    String futuroperfectotime;
+    String futuroperfectocontinuotime;
 
     public int getPresentesimpleint() {
         return presentesimpleint;
@@ -419,6 +425,54 @@ public class Student {
 
     public void setPastcontinuotime(String pastcontinuotime) {
         this.pastcontinuotime = pastcontinuotime;
+    }
+
+    public String getPastperfectotime() {
+        return pastperfectotime;
+    }
+
+    public void setPastperfectotime(String pastperfectotime) {
+        this.pastperfectotime = pastperfectotime;
+    }
+
+    public String getPastperfectocontinuotime() {
+        return pastperfectocontinuotime;
+    }
+
+    public void setPastperfectocontinuotime(String pastperfectocontinuotime) {
+        this.pastperfectocontinuotime = pastperfectocontinuotime;
+    }
+
+    public String getFuturosimpletime() {
+        return futurosimpletime;
+    }
+
+    public void setFuturosimpletime(String futurosimpletime) {
+        this.futurosimpletime = futurosimpletime;
+    }
+
+    public String getFuturocontinuotime() {
+        return futurocontinuotime;
+    }
+
+    public void setFuturocontinuotime(String futurocontinuotime) {
+        this.futurocontinuotime = futurocontinuotime;
+    }
+
+    public String getFuturoperfectotime() {
+        return futuroperfectotime;
+    }
+
+    public void setFuturoperfectotime(String futuroperfectotime) {
+        this.futuroperfectotime = futuroperfectotime;
+    }
+
+    public String getFuturoperfectocontinuotime() {
+        return futuroperfectocontinuotime;
+    }
+
+    public void setFuturoperfectocontinuotime(String futuroperfectocontinuotime) {
+        this.futuroperfectocontinuotime = futuroperfectocontinuotime;
     }
     @NonNull
     @Override
