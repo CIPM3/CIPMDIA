@@ -201,6 +201,8 @@ public class Student {
     public void setCouldsimple(boolean couldsimple) {
         this.couldsimple = couldsimple;
     }
+
+
     public boolean isCouldContinuo() {
         return couldContinuo;
     }
@@ -575,13 +577,7 @@ public class Student {
         this.shouldPerfectoContinuotime = shouldPerfectoContinuotime;
     }
 
-    public String getPresenteperfectocontinuotime() {
-        return presenteperfectocontinuotime;
-    }
 
-    public void setPresenteperfectocontinuotime(String presenteperfectocontinuotime) {
-        this.presenteperfectocontinuotime = presenteperfectocontinuotime;
-    }
 
     public String getWouldsimpletime() {
         return wouldsimpletime;
