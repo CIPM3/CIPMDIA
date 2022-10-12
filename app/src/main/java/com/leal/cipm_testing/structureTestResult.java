@@ -102,7 +102,7 @@ public class structureTestResult extends Fragment {
                     };
                     adapter = new ArrayAdapter<String>(getContext(),
                             android.R.layout.simple_list_item_1, est);
-                }
+                } 
                 lv.setAdapter(adapter);
             }
         });
