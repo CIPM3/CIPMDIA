@@ -106,7 +106,6 @@ public class Student {
     public boolean isPresentePerfectoContinuo() {
         return presentePerfectoContinuo;
     }
-
     public void setPresentePerfectoContinuo(boolean presentePerfectoContinuo) {
         this.presentePerfectoContinuo = presentePerfectoContinuo;
     }
@@ -416,12 +415,12 @@ public class Student {
         this.presenteperfectotime = presenteperfectotime;
     }
 
-    public String getPresenteperfectocontinuotime() {
-        return presenteperfectocontinuotime;
+    public String getPresenteperfectocontinuo() {
+        return presenteperfectocontinuo;
     }
 
-    public void setPresenteperfectocontinuotime(String presenteperfectocontinuo) {
-        this.presenteperfectocontinuotime = presenteperfectocontinuo;
+    public void setPresenteperfectocontinuo(String presenteperfectocontinuo) {
+        this.presenteperfectocontinuo = presenteperfectocontinuo;
     }
 
     public String getPastsimpletime() {
