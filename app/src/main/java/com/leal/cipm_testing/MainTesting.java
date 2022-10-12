@@ -52,17 +52,22 @@ public class MainTesting extends AppCompatActivity {
 
     public static final int REC_CODE_SPEECH_INPUT = 100;
     //p-present,pa-past,mi=might,m-must, vj=verbos juntos
+
     //1
     boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
     boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
     boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
     //1 crear string time
+
     //PD
     String pssec,pcsec,ppsec,ppcsec,psssec,pscsec,
             pspsec,pspcsec,fssec,fcsec,fpsec,fpcsec
     ;
 
     //LR
+    String mssec ,mcsec ,mpsec ,mpcsec ,cssec ,ccsec ,mussec ,mucsec,
+            sssec ,scsec ,spsec ,spcsec ,wtsec ,ftsec ,stpsec ,wppsec ,
+            utsec ,butsec ;
 
     // booleanos de los primeros 50 palabras
     boolean the,tobe,and,of,a,in,to,tohave,it,I,
@@ -458,7 +463,6 @@ public class MainTesting extends AppCompatActivity {
     //if(timerTask == null){
     //                                                startTimer();
     //                                            }
-
     public  void   startTest(){
 
         save.setVisibility(View.VISIBLE);
@@ -1219,8 +1223,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1254,8 +1259,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1290,8 +1296,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1326,8 +1333,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1362,8 +1370,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1397,8 +1406,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1433,8 +1443,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1468,8 +1479,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1504,8 +1516,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1539,8 +1552,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1575,8 +1589,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1611,8 +1626,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1647,8 +1663,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1683,8 +1700,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1719,8 +1737,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1755,8 +1774,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1791,8 +1811,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1827,8 +1848,9 @@ public class MainTesting extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4089,7 +4111,6 @@ public class MainTesting extends AppCompatActivity {
             case "Present Simple":
                 ps=true;
                 pssec= segundos;
-
                 break;
             case "Present Continuous":
                 pc=true;
@@ -4161,57 +4182,75 @@ public class MainTesting extends AppCompatActivity {
                 break;
             case "Might Simple":
                 ms=true;
+                mssec= segundos;
                 break;
             case "Might Continuous":
                 mc=true;
+                mcsec= segundos;
                 break;
             case "Might Perfect":
                 mp=true;
+                mpsec= segundos;
                 break;
             case "Might Perfect Continuous":
                 mpc=true;
+                mpcsec= segundos;
                 break;
             case "Can Simple":
                 cs=true;
+                cssec= segundos;
                 break;
             case "Can Continuous":
                 cc=true;
+                ccsec= segundos;
                 break;
             case "Must Simple":
                 mus=true;
+                mussec= segundos;
                 break;
             case "Must Continuous":
                 muc=true;
+                mucsec= segundos;
                 break;
             case "Should Simple":
                 ss=true;
+                sssec= segundos;
                 break;
             case "Should Continuous":
                 sc=true;
+                scsec= segundos;
                 break;
             case "Should Perfect":
                 sp=true;
+                spsec= segundos;
                 break;
             case "Should Perfect Continuous":
                 spc=true;
+                spcsec= segundos;
                 break;
             case "Want To":
                 wt=true;
+                wtsec= segundos;
                 break;
             case "For To":
                 ft=true;
+                ftsec= segundos;
                 break;
             case "Supposed To Present":
                 stp=true;
+                stpsec= segundos;
                 break;
             case "Wish Past Perfect":
                 wpp=true;
+                wppsec= segundos;
                 break;
             case "Used To":
                 ut=true;
+                utsec= segundos;
                 break;
             case "Be Used To":
                 but=true;
+                butsec= segundos;
                 break;
             case "the":
                 the= true;
@@ -4935,24 +4974,43 @@ public class MainTesting extends AppCompatActivity {
         user.put("couldContinuo", coc);
         user.put("couldPerfecto", cop);
         user.put("couldPerfectoContinuo", copc);
+        //LR
         user.put("mightsimple", ms);
+        user.put("mightsimpletime", mssec);
         user.put("mightContinuo", mc);
+        user.put("mightContinuotime", mcsec);
         user.put("mightPerfecto", mp);
+        user.put("mightPerfectotime", mpsec);
         user.put("mightPerfectoContinuo", mpc);
+        user.put("mightPerfectoContinuotime", mpcsec);
         user.put("cansimple", cs);
+        user.put("cansimpletime", cssec);
         user.put("canContinuo", cc);
+        user.put("canContinuotime", ccsec);
         user.put("mustsimple", mus);
+        user.put("mustsimpletime", mussec);
         user.put("mustContinuo", muc);
+        user.put("mustContinuotime", mucsec);
         user.put("shouldsimple", ss);
+        user.put("shouldsimpletime", sssec);
         user.put("shouldContinuo", sc);
+        user.put("shouldContinuotime", scsec);
         user.put("shouldPerfecto", sp);
+        user.put("shouldPerfectotime", spsec);
         user.put("shouldPerfectoContinuo", spc);
+        user.put("shouldPerfectoContinuotime", spcsec);
         user.put("wantTo", wt);
+        user.put("wantTotime", wtsec);
         user.put("forTo", ft);
+        user.put("forTotime", ftsec);
         user.put("supposedToPresent", stp);
+        user.put("supposedToPresenttime", stpsec);
         user.put("wishPastPerfect", wpp);
+        user.put("wishPastPerfecttime", wppsec);
         user.put("usedTo", ut);
+        user.put("usedTotime", utsec);
         user.put("beUsedTo", but);
+        user.put("beUsedTotime", butsec);
         uid.document("structures").set(user);
 
 

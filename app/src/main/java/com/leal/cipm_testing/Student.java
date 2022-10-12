@@ -28,6 +28,8 @@ public class Student {
 
     int presentesimpleint;
     //5 Agregar el modelo time y generar los get y set
+
+    //PR
     String presentesimpletime;
     String presentecontinuotime;
     String presenteperfectotime;
@@ -40,6 +42,12 @@ public class Student {
     String futurocontinuotime;
     String futuroperfectotime;
     String futuroperfectocontinuotime;
+
+    //LR
+    String mightsimpletime ,mightContinuotime ,mightPerfectotime ,mightPerfectoContinuotime ;
+    String cansimpletime ,canContinuotime ,mustsimpletime ,mustContinuotime ;
+    String shouldsimpletime ,shouldContinuotime ,shouldPerfectotime ,shouldPerfectoContinuotime ;
+    String wantTotime ,forTotime ,supposedToPresenttime ,wishPastPerfecttime ,usedTotime ,beUsedTotime ;
 
     public int getPresentesimpleint() {
         return presentesimpleint;
@@ -386,6 +394,7 @@ public class Student {
         this.vocab400a450 = vocab400a450;
     }
 
+ //PD
 
     public String getPresentecontinuotime() {
         return presentecontinuotime;
@@ -474,6 +483,127 @@ public class Student {
     public void setFuturoperfectocontinuotime(String futuroperfectocontinuotime) {
         this.futuroperfectocontinuotime = futuroperfectocontinuotime;
     }
+
+    //LR
+
+    //might get y set
+    public String getMightsimpletime() {
+        return mightsimpletime;
+    }
+    public void setMightsimpletime(String mightsimpletime) {
+        this.mightsimpletime = mightsimpletime;
+    }
+    public String getMightContinuotime() {
+        return mightContinuotime;
+    }
+    public void setMightContinuotime(String mightContinuotime) {
+        this.mightContinuotime = mightContinuotime;
+    }
+    public String getMightPerfectotime() {
+        return mightPerfectotime;
+    }
+    public void setMightPerfectotime(String mightPerfectotime) {
+        this.mightPerfectotime = mightPerfectotime;
+    }
+    public String getMightPerfectoContinuotime() {
+        return mightPerfectoContinuotime;
+    }
+    public void setMightPerfectoContinuotime(String mightPerfectoContinuotime) {
+        this.mightPerfectoContinuotime = mightPerfectoContinuotime;
+    }
+
+    //can get y set
+    public String getCansimpletime() {
+        return cansimpletime;
+    }
+    public void setCansimpletime(String cansimpletime) {
+        this.cansimpletime = cansimpletime;
+    }
+    public String getCanContinuotime() {
+        return canContinuotime;
+    }
+    public void setCanContinuotime(String canContinuotime) {
+        this.canContinuotime = canContinuotime;
+    }
+
+    //must get y set
+    public String getMustsimpletime() {
+        return mustsimpletime;
+    }
+    public void setMustsimpletime(String mustsimpletime) {
+        this.mustsimpletime = mustsimpletime;
+    }
+    public String getMustContinuotime() {
+        return mustContinuotime;
+    }
+    public void setMustContinuotime(String mustContinuotime) {
+        this.mustContinuotime = mustContinuotime;
+    }
+
+    //should get y set
+    public String getShouldsimpletime() {
+        return shouldsimpletime;
+    }
+    public void setShouldsimpletime(String shouldsimpletime) {
+        this.shouldsimpletime = shouldsimpletime;
+    }
+    public String getShouldContinuotime() {
+        return shouldContinuotime;
+    }
+    public void setShouldContinuotime(String shouldContinuotime) {
+        this.shouldContinuotime = shouldContinuotime;
+    }
+    public String getShouldPerfectotime() {
+        return shouldPerfectotime;
+    }
+    public void setShouldPerfectotime(String shouldPerfectotime) {
+        this.shouldPerfectotime = shouldPerfectotime;
+    }
+    public String getShouldPerfectoContinuotime() {
+        return shouldPerfectoContinuotime;
+    }
+    public void setShouldPerfectoContinuotime(String shouldPerfectoContinuotime) {
+        this.shouldPerfectoContinuotime = shouldPerfectoContinuotime;
+    }
+
+    //others get y set
+    public String getWantTotime() {
+        return wantTotime;
+    }
+    public void setWantTotime(String wantTotime) {
+        this.wantTotime = wantTotime;
+    }
+    public String getForTotime() {
+        return forTotime;
+    }
+    public void setForTotime(String forTotime) {
+        this.forTotime = forTotime;
+    }
+    public String getSupposedToPresenttime() {
+        return supposedToPresenttime;
+    }
+    public void setSupposedToPresenttime(String supposedToPresenttime) {
+        this.supposedToPresenttime = supposedToPresenttime;
+    }
+    public String getWishPastPerfecttime() {
+        return wishPastPerfecttime;
+    }
+    public void setWishPastPerfecttime(String wishPastPerfecttime) {
+        this.wishPastPerfecttime = wishPastPerfecttime;
+    }
+    public String getUsedTotime() {
+        return usedTotime;
+    }
+    public void setUsedTotime(String usedTotime) {
+        this.usedTotime = usedTotime;
+    }
+    public String getBeUsedTotime() {
+        return beUsedTotime;
+    }
+    public void setBeUsedTotime(String beUsedTotime) {
+        this.beUsedTotime = beUsedTotime;
+    }
+
     @NonNull
     @Override
     public String toString() {
