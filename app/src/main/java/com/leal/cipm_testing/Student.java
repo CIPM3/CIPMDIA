@@ -421,6 +421,14 @@ public class Student {
         this.presenteperfectotime = presenteperfectotime;
     }
 
+    public String getPresenteperfectocontinuotime() {
+        return presenteperfectocontinuotime;
+    }
+
+    public void setPresenteperfectocontinuotime(String presenteperfectocontinuo) {
+        this.presenteperfectocontinuotime = presenteperfectocontinuo;
+    }
+
     public String getPastsimpletime() {
         return pastsimpletime;
     }
