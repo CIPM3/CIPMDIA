@@ -48,14 +48,14 @@ public class SignIn extends AppCompatActivity {
     TextView tvRegisterhere;
     EditText etloginemail,etloginpassword;
     TextView googlesignin,anonymus;
-    private GoogleSignInOptions gso;
-    private  GoogleSignInClient gsc;
+   /* private GoogleSignInOptions gso;
+    private  GoogleSignInClient gsc;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        googlesignin=findViewById(R.id.googlesignintv);
+       // googlesignin=findViewById(R.id.googlesignintv);
         mAuth = FirebaseAuth.getInstance();
         tvRegisterhere= findViewById(R.id.notreg);
         etloginemail = findViewById(R.id.etemaillogin);
@@ -83,19 +83,19 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+     /*   gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
-                .build();
+                .build();*/
 
-        gsc= GoogleSignIn.getClient(this,gso);
+      /*  gsc= GoogleSignIn.getClient(this,gso);
         googlesignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = gsc.getSignInIntent();
                 startActivityForResult(i,1234);
             }
-        });
+        });*/
 
 
 
@@ -172,6 +172,8 @@ public class SignIn extends AppCompatActivity {
         Intent intent = new Intent(SignIn.this,MainActivity.class);
         startActivity(intent);
     }
+
+    
     public void procede(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
