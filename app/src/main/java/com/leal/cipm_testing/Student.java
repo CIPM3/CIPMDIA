@@ -44,7 +44,13 @@ public class Student {
     String futuroperfectocontinuotime;
     String wouldsimpletime;
     String wouldcontinuotime;
-    String wouldperfectotime,wouldperfectocontinuotime,couldsimpletime,couldcontinuotime;
+    String wouldperfectotime;
+    String wouldperfectocontinuotime;
+    String couldsimpletime;
+    String couldcontinuotime;
+    String couldperfectotime;
+    String couldperfectocontinuotime
+                    ;
 
     //LR
     String mightsimpletime ,mightContinuotime ,mightPerfectotime ,mightPerfectoContinuotime ;
@@ -559,6 +565,78 @@ public class Student {
     }
     public void setShouldPerfectoContinuotime(String shouldPerfectoContinuotime) {
         this.shouldPerfectoContinuotime = shouldPerfectoContinuotime;
+    }
+
+    public String getPresenteperfectocontinuotime() {
+        return presenteperfectocontinuotime;
+    }
+
+    public void setPresenteperfectocontinuotime(String presenteperfectocontinuotime) {
+        this.presenteperfectocontinuotime = presenteperfectocontinuotime;
+    }
+
+    public String getWouldsimpletime() {
+        return wouldsimpletime;
+    }
+
+    public void setWouldsimpletime(String wouldsimpletime) {
+        this.wouldsimpletime = wouldsimpletime;
+    }
+
+    public String getWouldcontinuotime() {
+        return wouldcontinuotime;
+    }
+
+    public void setWouldcontinuotime(String wouldcontinuotime) {
+        this.wouldcontinuotime = wouldcontinuotime;
+    }
+
+    public String getWouldperfectotime() {
+        return wouldperfectotime;
+    }
+
+    public void setWouldperfectotime(String wouldperfectotime) {
+        this.wouldperfectotime = wouldperfectotime;
+    }
+
+    public String getWouldperfectocontinuotime() {
+        return wouldperfectocontinuotime;
+    }
+
+    public void setWouldperfectocontinuotime(String wouldperfectocontinuotime) {
+        this.wouldperfectocontinuotime = wouldperfectocontinuotime;
+    }
+
+    public String getCouldsimpletime() {
+        return couldsimpletime;
+    }
+
+    public void setCouldsimpletime(String couldsimpletime) {
+        this.couldsimpletime = couldsimpletime;
+    }
+
+    public String getCouldcontinuotime() {
+        return couldcontinuotime;
+    }
+
+    public void setCouldcontinuotime(String couldcontinuotime) {
+        this.couldcontinuotime = couldcontinuotime;
+    }
+
+    public String getCouldperfectotime() {
+        return couldperfectotime;
+    }
+
+    public void setCouldperfectotime(String couldperfectotime) {
+        this.couldperfectotime = couldperfectotime;
+    }
+
+    public String getCouldperfectocontinuotime() {
+        return couldperfectocontinuotime;
+    }
+
+    public void setCouldperfectocontinuotime(String couldperfectocontinuotime) {
+        this.couldperfectocontinuotime = couldperfectocontinuotime;
     }
 
     //others get y set

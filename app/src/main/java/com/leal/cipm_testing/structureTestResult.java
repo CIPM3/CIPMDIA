@@ -77,8 +77,8 @@ public class structureTestResult extends Fragment {
                             "Would Perfect Continous : "+ st.wouldPerfectoContinuo+" Response time:"+st.wouldperfectocontinuotime+" "+"Seconds",
                             "Could Simple : " + st.couldsimple+" Response time:"+st.couldsimpletime+" "+"Seconds",
                             "Could Continous : "+ st.couldContinuo+" Response time:"+st.couldcontinuotime+" "+"Seconds",
-                            "Could Perfect : "+ st.couldPerfecto,
-                            "Could Perfect Continous : " + st.couldPerfectoContinuo,
+                            "Could Perfect : "+ st.couldPerfecto+" Response time:"+st.couldperfectotime+" "+"Seconds",
+                            "Could Perfect Continous : " + st.couldPerfectoContinuo+" Response time:"+st.couldperfectocontinuotime+" "+"Seconds",
                             //LR
 
                             "Might Simple : " + st.mightsimple + "Response time :" + st.mightsimpletime + " " + "Seconds",
