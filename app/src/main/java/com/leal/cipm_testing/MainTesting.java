@@ -176,7 +176,7 @@ public class MainTesting extends AppCompatActivity {
         setContentView(R.layout.activity_main_testing);
         timer = new Timer();
         timerText= (TextView) findViewById(R.id.timertextv);
-       // timerText.setVisibility(View.INVISIBLE);
+        timerText.setVisibility(View.INVISIBLE);
         timerText.setText(formatTime(0,0,0));
 
 
@@ -4923,7 +4923,8 @@ public class MainTesting extends AppCompatActivity {
             Toast.makeText(this, selection + "pasaste-Pasa a otra estructura" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp = 0;
             cn = 0;
-            timerText.setText(String.valueOf(prom));
+            timerText.setText("your Average Response time: "  +String.valueOf(prom)+" seconds");
+            timerText.setVisibility(View.VISIBLE);
             turnTrueTime(selection, String.valueOf(prom));
             timen = 0.0;
             if (timerTask != null) {
