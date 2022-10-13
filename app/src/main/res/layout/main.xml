@@ -41,6 +41,16 @@
                     android:text="cuantas estructuras de lenguaje sabes?/click here"
                     android:textColor="#FDD835" />
 
+                <Button
+                    android:id="@+id/itemPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#E53935"
+                    android:onClick="premium"
+                    android:text="Hazte Premium :)"
+                    android:textSize="10dp" />
+
                 <TextView
                     android:id="@+id/UserNameTv"
                     android:layout_width="match_parent"
@@ -441,14 +451,7 @@
                 android:orientation="horizontal"
                 >
 
-                <Button
-                    android:id="@+id/itemPrice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="premium"
-                    android:text="Hazte Premium"
-                    android:textSize="10dp" />
+
 
                 <TextView
                     android:id="@+id/itemName"

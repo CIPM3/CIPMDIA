@@ -2,6 +2,7 @@ package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
@@ -233,7 +234,7 @@ public class MainTesting extends AppCompatActivity {
 
                     switch (selectionv){
 
-                        case "Vocabular":
+                        case "Vocabulary":
                             spin.setVisibility(View.VISIBLE);
                             choose.setText("Choose a Range");
                             choose.setVisibility(View.VISIBLE);
@@ -5596,8 +5597,9 @@ public class MainTesting extends AppCompatActivity {
 
         }
         else {
-            Toast.makeText(this, "interferencia is not correct", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "interferencia is not correct "+engtx.trim().toString(), Toast.LENGTH_SHORT).show();
             cn=cn+1;
+
         }
         if(cp==4){
             Toast.makeText(this, selection+" pasaste-Pasa a otra estructura"+String.valueOf(cp), Toast.LENGTH_SHORT).show();
@@ -5614,8 +5616,8 @@ public class MainTesting extends AppCompatActivity {
         }
         Map<String, Object> user = new HashMap<>();
         CollectionReference uid= db.collection(userid);
-        user.put("porobjeto", intxsub);
-        user.put("porsujeto", intxob);
+        user.put("porobjeto", intxob);
+        user.put("porsujeto", intxsub);
         user.put("porprep", intxprep);
         user.put("porrefl", intxref);
         user.put("porpasiva", intpasiva);
