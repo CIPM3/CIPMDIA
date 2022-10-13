@@ -60,15 +60,17 @@ public class MainTesting extends AppCompatActivity {
     //1 crear string time
 
     //PD
-    String pssec,pcsec,ppsec,ppcsec,psssec,pscsec,
-            pspsec,pspcsec,fssec,fcsec,fpsec,fpcsec,
-            wssec,wcsec,wpsec,wpcsec, cossec,cocsec,copsec,copcsec
+    String pssec ,pcsec ,ppsec ,ppcsec ,psssec ,pscsec ,
+            pspsec ,pspcsec ,fssec ,fcsec ,fpsec ,fpcsec ,
+            wssec ,wcsec ,wpsec ,wpcsec , cossec ,cocsec ,copsec ,
+            copcsec
     ;
 
     //LR
     String mssec ,mcsec ,mpsec ,mpcsec ,cssec ,ccsec ,mussec ,mucsec,
             sssec ,scsec ,spsec ,spcsec ,wtsec ,ftsec ,stpsec ,wppsec ,
-            utsec ,butsec ;
+            utsec ,butsec
+            ;
 
     // booleanos de los primeros 50 palabras
     boolean the,tobe,and,of,a,in,to,tohave,it,I,
@@ -4991,23 +4993,23 @@ public class MainTesting extends AppCompatActivity {
         user.put("futurePerfecto", fp);
         user.put("futureperfectotime", fpsec);
         user.put("futurePerfectoContinuo", fpc);
-        user.put("futureperfectocontinuo", fpcsec);
+        user.put("futureperfectocontinuotime", fpcsec);
         user.put("wouldsimple", ws);
-        user.put("wouldsimple", wssec);
+        user.put("wouldsimpletime", wssec);
         user.put("wouldContinuo", wc);
-        user.put("wouldcontinuo", wcsec);
+        user.put("wouldcontinuotime", wcsec);
         user.put("wouldPerfecto", wp);
-        user.put("wouldperfecto", wpsec);
+        user.put("wouldperfectotime", wpsec);
         user.put("wouldPerfectoContinuo", wpc);
-        user.put("wouldperfectocontinuo", wpcsec);
+        user.put("wouldperfectocontinuotime", wpcsec);
         user.put("couldsimple", cos);
-        user.put("couldsimple", cossec);
+        user.put("couldsimpletime", cossec);
         user.put("couldContinuo", coc);
-        user.put("couldcontinuo", cocsec);
+        user.put("couldcontinuotime", cocsec);
         user.put("couldPerfecto", cop);
-        user.put("couldperfecto", copsec);
+        user.put("couldperfectotime", copsec);
         user.put("couldPerfectoContinuo", copc);
-        user.put("couldperfectocontinuo", copcsec);
+        user.put("couldperfectocontinuotime", copcsec);
         //LR
         user.put("mightsimple", ms);
         user.put("mightsimpletime", mssec);
