@@ -76,7 +76,7 @@ public class People4 {
             "abusamos ","derrotamos ","contratamos ","matamos ",
             "alimentamos ","atacamos ","impresionamos ","mencionamos ",
             "ordenamos ","odiamos ","rasguñamos ","golpeamos ",
-            "empleamos ","heriamos ","extrañamos ","respondemos ",
+            "empleamos ","herimos ","extrañamos ","respondemos ",
             "citamos "
     };
 
