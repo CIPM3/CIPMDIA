@@ -6,12 +6,11 @@ public class Pasts {
     }
 
     //verbos base intrans
-    String[] vib = {"go ", "think ", "come ", "look ", "work ",
-            "play ", "talk ",
-            "run ", "move ", "live ",
-            "sit ", "stand ", "understand ",
-            "walk ", "grow ", "wait ", "die ",
-            "stay ", "fall ",
+    String[] vib = {
+            "go ", "think ", "come ", "look ", "work ",
+            "play ", "talk ", "run ", "move ", "live ",
+            "sit ", "stand ", "understand ", "walk ", "grow ",
+            "wait ", "die ", "stay ", "fall ",
 
     };
 
@@ -26,108 +25,96 @@ public class Pasts {
     };
 
     //intrans base past
-    String[] vibpast = {"went ", "thought ", "came ", "looked ", "worked ",
-            "played ", "talked ",
-            "ran ", "moved ", "lived ",
-            "sat ", "stood ", "understood ",
-            "walked ", "grew ", "waited ", "died ",
-            "stayed ", "fell ",
+    String[] vibpast = {
+            "went ", "thought ", "came ", "looked ", "worked ",
+            "played ", "talked ", "ran ", "moved ", "lived ",
+            "sat ", "stood ", "understood ", "walked ", "grew ",
+            "waited ", "died ", "stayed ", "fell ",
 
     };
 
 
     //intrans base past primera persona imperfecto (aba iba)
-    String[] vibp1 = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
-            "jugaba ", "platicaba ",
-            "corría ", "me movía ", "vivía ",
-            "me sentaba ", "me paraba ", "entendía ",
-            "caminaba ", "crecía ", "esperaba ", "moría ",
-            "me quedaba ", "me caía ",
-
+    String[] vibp1 = {
+            "iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
+            "jugaba ", "platicaba ", "corría ", "me movía ", "vivía ",
+            "me sentaba ", "me paraba ", "entendía ", "caminaba ", "crecía ",
+            "esperaba ", "moría ", "me quedaba ", "me caía ",
     };
     //intrans base past primera persona preterito
-    String[] vibp1pr = {"fui ", "pensé ", "vine ", "miré ", "trabajé ",
-            "jugué ", "platiqué ",
-            "corrí ", "me moví ", "viví ",
-            "me senté ", "me paré ", "entendí ",
-            "caminé ", "crecí ", "esperé ", "morí ",
-            "me quedé ", "me caí ",
+    String[] vibp1pr = {
+            "fui ", "pensé ", "vine ", "miré ", "trabajé ",
+            "jugué ", "platiqué ", "corrí ", "me moví ", "viví ",
+            "me senté ", "me paré ", "entendí ", "caminé ", "crecí ",
+            "esperé ", "morí ", "me quedé ", "me caí ",
 
     };
     //intrans base past segunda persona imperfecto (aba iba)
-    String[] vibp2 = {"ibas ", "pensabas ", "venías ", "mirabas ", "trabajabas ",
-            "jugabas ", "platicabas ",
-            "corrías ", "te movías ", "vivías ",
-            "te sentabas ", "te parabas ", "entendías ",
-            "caminabas ", "crecías ", "esperabas ", "morías ",
-            "te quedabas ", "te caías ",
+    String[] vibp2 = {
+            "ibas ", "pensabas ", "venías ", "mirabas ", "trabajabas ",
+            "jugabas ", "platicabas ", "corrías ", "te movías ", "vivías ",
+            "te sentabas ", "te parabas ", "entendías ", "caminabas ", "crecías ",
+            "esperabas ", "morías ", "te quedabas ", "te caías ",
 
     };
 
     //intrans base past segunda persona preterito
-    String[] vibp2pr = {"fuiste ", "pensaste ", "veniste ", "miraste ", "trabajaste ",
-            "jugaste ", "platicaste ",
-            "corriste ", "te moviste ", "viviste ",
-            "te sentaste ", "te paraste ", "entendiste ",
-            "caminaste ", "creciste ", "esperaste ", "moriste ",
-            "te quedaste ", "te caiste ",
+    String[] vibp2pr = {
+            "fuiste ", "pensaste ", "veniste ", "miraste ", "trabajaste ",
+            "jugaste ", "platicaste ", "corriste ", "te moviste ", "viviste ",
+            "te sentaste ", "te paraste ", "entendiste ", "caminaste ", "creciste ",
+            "esperaste ", "moriste ", "te quedaste ", "te caiste ",
 
     };
 
     //intrans base past tercer persona imperfecto (aba iba)
-    String[] vibp3 = {"iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
-            "jugaba ", "platicaba ",
-            "corría ", "se movía ", "vivía ",
-            "se sentaba ", "se paraba ", "entendía ",
-            "caminaba ", "crecía ", "esperaba ", "moría ",
-            "se quedaba ", "se caía ",
+    String[] vibp3 = {
+            "iba ", "pensaba ", "venía ", "miraba ", "trabajaba ",
+            "jugaba ", "platicaba ", "corría ", "se movía ", "vivía ",
+            "se sentaba ", "se paraba ", "entendía ", "caminaba ", "crecía ",
+            "esperaba ", "moría ", "se quedaba ", "se caía ",
 
     };
     //intrans base past tercer persona preterito
-    String[] vibp3pr = {"fue ", "pensó ", "vino ", "miró ", "trabajó ",
-            "jugó ", "platicó ",
-            "corrió ", "se movió ", "vivió ",
-            "se sentó ", "se paró ", "entendió ",
-            "caminó ", "creció ", "esperó ", "murió ",
-            "se quedó ", "se cayó ",
+    String[] vibp3pr = {
+            "fue ", "pensó ", "vino ", "miró ", "trabajó ",
+            "jugó ", "platicó ", "corrió ", "se movió ", "vivió ",
+            "se sentó ", "se paró ", "entendió ", "caminó ", "creció ",
+            "esperó ", "murió ", "se quedó ", "se cayó ",
 
     };
 
     //intrans base past cuarta persona imperfecto (aba iba)
-    String[] vibp4 = {"iban ", "pensaban ", "venían ", "miraban ", "trabajaban ",
-            "jugaban ", "platicaban ",
-            "corrían ", "se movían ", "vivían ",
-            "se sentaban ", "se paraban ", "entendían ",
-            "caminaban ", "crecían ", "esperaban ", "morían ",
-            "se quedaban ", "se caían ",
+    String[] vibp4 = {
+            "iban ", "pensaban ", "venían ", "miraban ", "trabajaban ",
+            "jugaban ", "platicaban ", "corrían ", "se movían ", "vivían ",
+            "se sentaban ", "se paraban ", "entendían ", "caminaban ", "crecían ",
+            "esperaban ", "morían ", "se quedaban ", "se caían ",
 
     };
 
     //intrans base past cuarta persona preterito
-    String[] vibp4pr = {"fueron ", "pensaron ", "vinieron ", "miraron ", "trabajaron ",
-            "jugaron ", "platicaron ",
-            "corrieron ", "se movieron ", "vivieron ",
-            "se sentaron ", "se pararon ", "entendieron ",
-            "caminaron ", "crecieron ", "esperaron ", "murieron ",
-            "se quedaron ", "se cayeron ",
+    String[] vibp4pr = {
+            "fueron ", "pensaron ", "vinieron ", "miraron ", "trabajaron ",
+            "jugaron ", "platicaron ", "corrieron ", "se movieron ", "vivieron ",
+            "se sentaron ", "se pararon ", "entendieron ", "caminaron ", "crecieron ",
+            "esperaron ", "murieron ", "se quedaron ", "se cayeron ",
 
     };
     //intrans base past nosotros 5ta persona imperfecto (aba iba)
-    String[] vibp5 = {"ibamos ", "pensabamos ", "veníamos ", "mirabamos ", "trabajabamos ",
-            "jugabamos ", "platicabamos ",
-            "corríamos ", "nos movíamos ", "vivíamos ",
-            "nos sentabamos ", "nos parabamos ", "entendíamos ",
-            "caminabamos ", "crecíamos ", "esperabamos ", "moríamos ",
-            "nos quedabamos ", "nos caíamos ",
+    String[] vibp5 = {
+            "ibamos ", "pensabamos ", "veníamos ", "mirabamos ", "trabajabamos ",
+            "jugabamos ", "platicabamos ", "corríamos ", "nos movíamos ", "vivíamos ",
+            "nos sentabamos ", "nos parabamos ", "entendíamos ", "caminabamos ", "crecíamos ",
+            "esperabamos ", "moríamos ", "nos quedabamos ", "nos caíamos ",
 
     };
     //intrans base past nosotros 5ta persona preterito
-    String[] vibp5pr = {"fuimos ", "pensamos ", "venimos ", "miramos ", "trabajamos ",
-            "jugamos ", "platicamos ",
-            "corrimos ", "nos movimos ", "vivimos ",
-            "nos sentamos ", "nos paramos ", "entendimos ",
-            "caminamos ", "crecimos ", "esperamos ", "morimos ",
-            "nos quedamos ", "nos caímos ",
+    String[] vibp5pr = {
+            "fuimos ", "pensamos ", "venimos ", "miramos ", "trabajamos ",
+            "jugamos ", "platicamos ", "corrimos ", "nos movimos ", "vivimos ",
+            "nos sentamos ", "nos paramos ", "entendimos ", "caminamos ", "crecimos ",
+            "esperamos ", "morimos ", "nos quedamos ", "nos caímos ",
 
     };
 

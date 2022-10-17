@@ -883,7 +883,7 @@ public class Generator4 {
                         gene = n.ps1eng;
                         break;
 
-                    case 2:
+                    case 1:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps1;
@@ -891,7 +891,7 @@ public class Generator4 {
 
                         break;
 
-                    case 3:
+                    case 2:
                         Oo4 o = new Oo4();
                         o.GenPresPerfCont2();
                         gens = o.ps1;
@@ -899,16 +899,14 @@ public class Generator4 {
 
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-
-
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp1;
@@ -933,14 +931,14 @@ public class Generator4 {
                         gene = o.ps2eng;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps2;
                         gene = p.ps2eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp2;
@@ -948,7 +946,7 @@ public class Generator4 {
 
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp2;
@@ -975,21 +973,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps3;
                         gene = p.ps3eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp3;
@@ -1013,21 +1011,21 @@ public class Generator4 {
                         gene = o.ps3she;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps3ella;
                         gene = p.ps3she;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp3ella;
@@ -1051,21 +1049,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps3eso;
                         gene = p.ps3it;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp3eso;
@@ -1090,21 +1088,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps4;
                         gene = p.ps4eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp4;
@@ -1129,21 +1127,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont2();
                         gens = p.ps5;
                         gene = p.ps5eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont2();
                         gens = s.sp5;
@@ -1152,8 +1150,6 @@ public class Generator4 {
                         break;
                 }
                 break;
-
-
         }
     }
 
@@ -11609,7 +11605,7 @@ public class Generator4 {
                         gene = n.ps1eng;
                         break;
 
-                    case 2:
+                    case 1:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps1;
@@ -11617,7 +11613,7 @@ public class Generator4 {
 
                         break;
 
-                    case 3:
+                    case 2:
                         Oo4 o = new Oo4();
                         o.GenPresPerfCont3();
                         gens = o.ps1;
@@ -11625,7 +11621,7 @@ public class Generator4 {
 
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp1;
@@ -11634,7 +11630,7 @@ public class Generator4 {
 
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp1;
@@ -11659,14 +11655,14 @@ public class Generator4 {
                         gene = o.ps2eng;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps2;
                         gene = p.ps2eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp2;
@@ -11674,7 +11670,7 @@ public class Generator4 {
 
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp2;
@@ -11701,21 +11697,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps3;
                         gene = p.ps3eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp3;
@@ -11739,21 +11735,21 @@ public class Generator4 {
                         gene = o.ps3she;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps3ella;
                         gene = p.ps3she;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp3ella;
@@ -11777,21 +11773,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps3eso;
                         gene = p.ps3it;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp3eso;
@@ -11816,21 +11812,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps4;
                         gene = p.ps4eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp4;
@@ -11855,21 +11851,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont3();
                         gens = p.ps5;
                         gene = p.ps5eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont3();
                         gens = s.sp5;
@@ -31893,7 +31889,7 @@ public class Generator4 {
                         gene = n.ps1eng;
                         break;
 
-                    case 2:
+                    case 1:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps1;
@@ -31901,7 +31897,7 @@ public class Generator4 {
 
                         break;
 
-                    case 3:
+                    case 2:
                         Oo4 o = new Oo4();
                         o.GenPresPerfCont1();
                         gens = o.ps1;
@@ -31909,7 +31905,7 @@ public class Generator4 {
 
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp1;
@@ -31918,7 +31914,7 @@ public class Generator4 {
 
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp1;
@@ -31943,14 +31939,14 @@ public class Generator4 {
                         gene = o.ps2eng;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps2;
                         gene = p.ps2eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp2;
@@ -31958,7 +31954,7 @@ public class Generator4 {
 
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp2;
@@ -31985,21 +31981,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps3;
                         gene = p.ps3eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp3;
@@ -32023,21 +32019,21 @@ public class Generator4 {
                         gene = o.ps3she;
                         break;
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps3ella;
                         gene = p.ps3she;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp3ella;
@@ -32061,21 +32057,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps3eso;
                         gene = p.ps3it;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp3eso;
@@ -32100,21 +32096,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps4;
                         gene = p.ps4eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp4;
@@ -32139,21 +32135,21 @@ public class Generator4 {
                         break;
 
 
-                    case 3:
+                    case 2:
                         People4 p = new People4();
                         p.GenPresPerfCont1();
                         gens = p.ps5;
                         gene = p.ps5eng;
                         break;
 
-                    case 4:
+                    case 3:
                         Intrans4 i = new Intrans4();
                         i.GenPresPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
                         break;
 
-                    case 5:
+                    case 4:
                         Special4 s = new Special4();
                         s.GenPresPerfCont1();
                         gens = s.sp5;
@@ -32162,8 +32158,6 @@ public class Generator4 {
                         break;
                 }
                 break;
-
-
         }
     }
 
@@ -32448,8 +32442,6 @@ public class Generator4 {
                         break;
                 }
                 break;
-
-
         }
     }
     public void GenPassCont1() {

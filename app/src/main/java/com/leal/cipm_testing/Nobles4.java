@@ -98,7 +98,7 @@ public class Nobles4 {
             "la suposición ", "el beisbol ", "el capítulo ", "el comité ",
             "la conversación ", "la base de datos ", "el entusiasmo ", "el error ",
             "la explicación ", "la puerta ", "el vestíbulo ", "el hospital ", "la herida ",
-            "la instrucción ", "el mantenimiento ", "la fabricante ", "la comida ",
+            "la instrucción ", "el mantenimiento ", "el fabricante ", "la comida ",
             "la percepción ", "el pastel ", "el poema ", "la presencia ", "la propuesta ",
             "la recepción ", "el reemplazo ", "la revolución ", "el río ", "el discurso ",
             "el té ", "el pueblo ", "la advertencia ", "la ayuda ", "la respiración "

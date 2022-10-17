@@ -155,16 +155,16 @@ public class People4 {
     String ps2imp[]={
             "disparabas ","seleccionabas ","pateabas ","tratabas ",
             "abusabas ","derrotabas ","contratabas ","matabas ",
-            "alimentabas ","atacabas ","impresionabas ",
-            "ordenabas ","odiabas ","rasguñabas ","golpeabas ",
-            "empleabas ","herias ","extrañabas ","respondias ",
+            "alimentabas ","atacabas ","impresionabas ","mencionabas ",
+            "ordenabas ", "odiabas ","rasguñabas ","golpeabas ",
+            "empleabas ", "herias ","extrañabas ","respondias ",
             "citabas "
     };
 
     String ps3p[]={
             "disparo ","selecciono ","pateo ","trato ",
             "abuso ","derroto ","contrato ","mato ",
-            "alimento ","ataco ","impresiono ",
+            "alimento ","ataco ","impresiono ","menciono ",
             "ordeno ","odio ","rasguño ","golpeo ",
             "empleo ","hirio ","extraño ","respondo ",
             "cito "
@@ -182,7 +182,7 @@ public class People4 {
     String vn4p[]={
             "dispararon ","seleccionaron ","patearon ","trataron ",
             "abusaron ","derrotaron ","contrataron ","mataron ",
-            "alimentaron ","atacaron ","impresionaron ",
+            "alimentaron ","atacaron ","impresionaron ","mencionaron ",
             "ordenaron ","odiaron ","rasguñaron ","golpearon ",
             "emplearon ","hirieron ","extrañaron ","respondieron ",
             "citaron "
@@ -191,7 +191,7 @@ public class People4 {
     String vn4imp[]={
             "disparaban ","seleccionaban ","pateaban ","trataban ",
             "abusaban ","derrotaban ","contrataban ","mataban ",
-            "alimentaban ","atacaban ","impresionaban ",
+            "alimentaban ","atacaban ","impresionaban ","mencionaban ",
             "ordenaban ","odiaban ","rasguñaban ","golpeaban ",
             "empleaban ","herian ","extrañaban ","respondian ",
             "citaban "
@@ -200,7 +200,7 @@ public class People4 {
     String vn5p[]={
             "disparamos ","seleccionamos ","pateamos ","tratamos ",
             "abusamos ","derrotamos ","contratamos ","matamos ",
-            "alimentamos ","atacamos ","impresionamos ",
+            "alimentamos ","atacamos ","impresionamos ","impresionamos ",
             "ordenamos ","odiamos ","rasguñamos ","golpeamos ",
             "empleamos ","herimos ","extrañamos ","respondimos ",
             "citamos "
@@ -209,7 +209,7 @@ public class People4 {
     String vn5imp[]={
             "disparabamos ","seleccionabamos ","pateabamos ","tratabamos ",
             "abusabamos ","derrotabamos ","contratabamos ","matabamos ",
-            "alimentabamos ","atacabamos ","impresionabamos ",
+            "alimentabamos ","atacabamos ","impresionabamos ","impresionabamos ",
             "ordenabamos ","odiabamos ","rasguñabamos ","golpeabamos ",
             "empleabamos ","heriamos ","extrañabamos ","responiamos ",
             "citabamos "
