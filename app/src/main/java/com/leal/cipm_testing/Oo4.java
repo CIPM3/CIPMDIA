@@ -2265,7 +2265,7 @@ public class Oo4 {
                     ps2eng = "you " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3 = "él " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
-                    ps3eng = "he " + "din't "  + vnb[v] + nnobles[n] + frequadv[r];
+                    ps3eng = "he " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3ella = "ella " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
                     ps3she = "she " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
@@ -6123,7 +6123,7 @@ public class Oo4 {
                     ps2eng = "you " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                     ps3 = "él " + "no " + ps3p[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
-                    ps3eng = "he " + "din't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
+                    ps3eng = "he " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];
 
                     ps3ella = "ella " + "no " + ps3p[v] + nnoblesesp[n] + prep.Oospecial[p][p2] + advfrequ[r];
                     ps3she = "she " + "didn't " + vnb[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[r];

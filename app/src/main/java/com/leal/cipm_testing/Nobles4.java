@@ -564,7 +564,7 @@ public class Nobles4 {
                     ps2eng = "you " + "didn't " + vnb[v] + nnobles[n];
 
                     ps3 = "él " + "no " + ps3p[v] + nnoblesesp[n];
-                    ps3eng = "he " + "din't " + vnb[v] + nnobles[n];
+                    ps3eng = "he " + "didn't " + vnb[v] + nnobles[n];
 
                     ps3ella = "ella " + "no " + ps3p[v] + nnoblesesp[n];
                     ps3she = "she " + "didn't " + vnb[v] + nnobles[n];
@@ -2993,7 +2993,7 @@ public class Nobles4 {
                     ps2eng = "you " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3 = "él " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
-                    ps3eng = "he " + "din't "  + vnb[v] + nnobles[n] + frequadv[r];
+                    ps3eng = "he " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
 
                     ps3ella = "ella " + "no "  + ps3p[v] + nnoblesesp[n] + advfrequ[r];
                     ps3she = "she " + "didn't "  + vnb[v] + nnobles[n] + frequadv[r];
@@ -6235,7 +6235,7 @@ public class Nobles4 {
                     ps2eng = "you " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                     ps3 = "él " + "no " + ps3p[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
-                    ps3eng = "he " + "din't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                    ps3eng = "he " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                     ps3ella = "ella " + "no " + ps3p[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[r];
                     ps3she = "she " + "didn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[r];
