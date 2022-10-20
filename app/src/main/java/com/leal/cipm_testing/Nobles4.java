@@ -76,9 +76,9 @@ public class Nobles4 {
             "the conversation ", "the database ", "the error ",
             "the explanation ", "the gate ", "the hall ", "the hospital ", "the injury ",
             "the instruction ", "the maintenance ", "the manufacturer ", "the meal ",
-            "the perception ", "the pie ", "the poem ", "the presence ", "the proposal ",
+            "the perception ", "the pie ", "the presence ", "the proposal ",
             "the reception ", "the replacement ", "the revolution ", "the river ", "the speech ",
-            "the tea ", "the village ", "the warning ", "the assistance ", "the breath "
+            "the tea ", "the village ", "the warning ", "the assistance "
     };
 
     // nouns nobles espa;ol top 100
@@ -99,9 +99,9 @@ public class Nobles4 {
             "la conversación ", "la base de datos ", "el error ",
             "la explicación ", "la puerta ", "el vestíbulo ", "el hospital ", "la herida ",
             "la instrucción ", "el mantenimiento ", "el fabricante ", "la comida ",
-            "la percepción ", "el pastel ", "el poema ", "la presencia ", "la propuesta ",
+            "la percepción ", "el pastel ", "la presencia ", "la propuesta ",
             "la recepción ", "el reemplazo ", "la revolución ", "el río ", "el discurso ",
-            "el té ", "el pueblo ", "la advertencia ", "la ayuda ", "la respiración "
+            "el té ", "el pueblo ", "la advertencia ", "la ayuda "
     };
 
     //vnb verbos nobles top 100 in past
