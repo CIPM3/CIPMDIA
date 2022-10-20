@@ -32315,8 +32315,8 @@ public class Generator4 {
                     case 3:
                         Special4 s = new Special4();
                         s.GenPastSimp1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
 
                     case 4:
@@ -32354,8 +32354,8 @@ public class Generator4 {
                     case 3:
                         Special4 s = new Special4();
                         s.GenPastSimp1();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
 
                     case 4:
@@ -32392,8 +32392,8 @@ public class Generator4 {
                     case 3:
                         Special4 s = new Special4();
                         s.GenPastSimp1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        gens = s.sp6;
+                        gene = s.eng6;
                         break;
 
                     case 4:
@@ -32430,8 +32430,8 @@ public class Generator4 {
                     case 3:
                         Special4 s = new Special4();
                         s.GenPastSimp1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        gens = s.sp7;
+                        gene = s.eng7;
                         break;
 
                     case 4:
