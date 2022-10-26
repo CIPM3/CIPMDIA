@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -29,6 +30,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
@@ -2464,6 +2466,35 @@ public class MainTesting extends AppCompatActivity {
                         });
                 break;
 
+        }
+    }
+    String url = "https://adrianlealcaldera.com/kermet.mp3";
+
+    //PD
+    String soundArray[]={
+            "https://adrianlealcaldera.com/Come%20rain%20or%20shine.mp3",
+            "https://adrianlealcaldera.com/Calm%20before%20the%20storm.mp3",
+            "https://adrianlealcaldera.com/Burn%20bridges.mp3",
+            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue.mp3",
+            "https://adrianlealcaldera.com/As%20right%20as%20rain.mp3",
+            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure.mp3",
+            "https://adrianlealcaldera.com/An%20apple%20a%20day%20keeps%20the%20doctor%20away.mp3",
+            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup.mp3",
+            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
+            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
+            "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3"
+            //76...
+    };
+
+    public void soundtest(View view){
+        MediaPlayer mp = new MediaPlayer();
+        try{
+            mp.setDataSource(url);
+            mp.prepare();
+            mp.start();
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 
