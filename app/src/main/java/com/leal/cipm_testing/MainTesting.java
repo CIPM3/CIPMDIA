@@ -40,7 +40,7 @@ import java.util.TimerTask;
 
 public class MainTesting extends AppCompatActivity {
     FirebaseFirestore  db = FirebaseFirestore.getInstance();
-    private Button     starttest,gotofrag;
+    private Button     starttest,gotofrag,soundbtn;
     TextView           choose,sptx,getsent,save, chooselev , timerText;
     Spinner            spin,spinv;
     ImageButton        mic;
@@ -184,6 +184,7 @@ public class MainTesting extends AppCompatActivity {
         timerText= (TextView) findViewById(R.id.timertextv);
         timerText.setVisibility(View.INVISIBLE);
         timerText.setText(formatTime(0,0,0));
+        soundbtn = findViewById(R.id.soundtest);
 
 
         gotofrag=findViewById(R.id.gotofrag);
@@ -2484,10 +2485,28 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
             "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
             "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3"
-            //76...
-    };
 
-    public void soundtest(View view){
+            //76...
+
+    };
+    String soundArrayRobot[] = {
+            "Come rain or shine",
+            "the calm before the storm",
+            "burn bridges",
+            "bolt from the blue",
+            "as right as rain",
+            "an ounce of prevention is worth a pound of cure",
+            "an apple a day keeps the doctor away",
+            "a storm in a teacup",
+            "a stitch in time saves nine",
+            "a snowball's chance in hell",
+            "a snowball effect",
+            "a little learning is a dangerous thing"
+
+};
+
+
+  /*  public void soundtest(View view){
         MediaPlayer mp = new MediaPlayer();
         try{
             mp.setDataSource(url);
@@ -2496,6 +2515,79 @@ public class MainTesting extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }*/
+  //  String url = "https://adrianlealcaldera.com/kermet.mp3";
+    int countPos=0;
+    int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,pos10,pos11,pos12,pos13,pos14,pos15,pos17,pos18,pos19;
+    public void soundtest(View view){
+
+
+        if(countPos>9){
+
+            switch (countPos){
+                case 10:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        int lang = tt1.setLanguage(spanish);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+                                        Generator gen1 = new Generator();
+                                        gen1.GenPresSimp2();
+                                        sptx.setText(gen1.gens);
+                                        txteng=gen1.gene;
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[countPos], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+
+                    break;
+            }
+            //run some code
+            // we want to get the pos0 and give it to soundArrayRobot[] so we can hear the machine say it ,
+            // what happens when we get to 19?
+            // reset count pos, send info , notify user
+        }
+        int rsa = (int)(Math.random()*soundArray.length);
+        MediaPlayer mp = new MediaPlayer();
+        try {
+            mp.setDataSource(soundArray[rsa]);
+            mp.prepare();
+            mp.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        switch (countPos){
+            case 0:
+                pos0=rsa;
+                break;
+            case 1:
+                pos1=rsa;
+                break;
+        }
+        countPos++;
+
     }
 
     private void   turnTrue(@NonNull String CurrentStructure) {
