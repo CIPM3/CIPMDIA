@@ -185,6 +185,7 @@ public class MainTesting extends AppCompatActivity {
         timerText.setVisibility(View.INVISIBLE);
         timerText.setText(formatTime(0,0,0));
         soundbtn = findViewById(R.id.soundtest);
+        soundbtn.setVisibility(View.INVISIBLE);
 
 
         gotofrag=findViewById(R.id.gotofrag);
@@ -291,7 +292,8 @@ public class MainTesting extends AppCompatActivity {
                             spin.setAdapter(adapterst);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                public void onItemSelected(AdapterView<?> adapterView,
+                                                           View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
                                     if(!selection.equalsIgnoreCase("Tutorial")) {
                                         shownext();
@@ -305,6 +307,10 @@ public class MainTesting extends AppCompatActivity {
                             });
                             shownext();
 
+                            break;
+
+                        case "Conscious Interference":
+                            shownext();
                             break;
 
 
@@ -402,6 +408,16 @@ public class MainTesting extends AppCompatActivity {
                             shownext();
                             break;
 
+                        case "Conscious Interference":
+                            shownext();
+                            break;
+
+
+
+
+
+
+
 
                     }
 
@@ -460,9 +476,13 @@ public class MainTesting extends AppCompatActivity {
                 break;
             case "Spanish Interference":
                 startTest();
-
-
                 break;
+
+            case "Conscious Interference":
+                soundtest();
+                break;
+
+
         }
     }
 
@@ -2887,6 +2907,415 @@ public class MainTesting extends AppCompatActivity {
                                         gen1.GenPresSimp2();
                                         sptx.setText(gen1.gens);
                                         txteng=gen1.gene;
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos9], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+
+
+
+            }
+            //run some code
+            // we want to get the pos0 and give it to soundArrayRobot[] so we can hear the machine say it ,
+            // what happens when we get to 19?
+            // reset count pos, send info , notify user
+        }
+        else {
+            int rsa = (int)(Math.random()*soundArray.length);
+            MediaPlayer mp = new MediaPlayer();
+            try {
+                mp.setDataSource(soundArray[rsa]);
+                mp.prepare();
+                mp.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            switch (countPos){
+                case 0:
+                    pos0=rsa;
+                    break;
+                case 1:
+                    pos1=rsa;
+                    break;
+                case 2:
+                    pos2=rsa;
+                    break;
+
+                case 3:
+                    pos3=rsa;
+                    break;
+
+                case 4:
+                    pos4=rsa;
+                    break;
+
+                case 5:
+                    pos5=rsa;
+                    break;
+
+                case 6:
+                    pos6 = rsa;
+                    break;
+
+                case 7:
+                    pos7=rsa;
+                    break;
+
+                case 8:
+                    pos8=rsa;
+                    break;
+
+                case 9:
+                    pos9=rsa;
+                    break;
+            }
+        }
+
+        countPos++;
+
+    }
+    public void soundtest(){
+    sptx.setText("escribe lo que escuchas");
+        if(countPos>19){
+            // send info to database
+
+            //notify user
+            Toast.makeText(this, "Test is done", Toast.LENGTH_SHORT).show();
+
+            // reset counter
+            countPos=0 ;
+        }
+        if(countPos>9){
+            switch (countPos){
+                case 10:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos0], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 11:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos1], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 12:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos2], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 13:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos3], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 14:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos4], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 15:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos5], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+                case 16:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos6], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+
+                case 17:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos7], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+
+                case 18:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
+
+                                        Answerinput.setText("");
+                                        tt1.speak(soundArrayRobot[pos8], TextToSpeech.QUEUE_ADD, null, "one");
+                                    }
+
+                                }
+                            });
+                    break;
+
+                case 19:
+                    tt1 = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    // Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        tt1.setLanguage(Locale.ENGLISH);
+                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
+
+                                            @Override
+                                            public void onDone(String utteranceId) {
+                                                if(timerTask == null){
+                                                    startTimer();
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+
 
                                         Answerinput.setText("");
                                         tt1.speak(soundArrayRobot[pos9], TextToSpeech.QUEUE_ADD, null, "one");
