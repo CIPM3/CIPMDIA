@@ -2517,8 +2517,19 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
             "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
             "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
-            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3"
-            //91...
+            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3",
+            "https://adrianlealcaldera.com/He's%20sitting%20on%20the%20fence.mp3",
+            "https://adrianlealcaldera.com/It%20is%20always%20darkest%20before%20the%20dawn.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango.mp3",
+            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon.mp3",
+            "https://adrianlealcaldera.com/Know%20which%20way%20the%20wind%20is%20blowing.mp3",
+            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned.mp3",
+            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
+            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
+            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3"
+
+            //102...
 
     };
     String soundArrayRobot[] = {
@@ -2546,7 +2557,17 @@ public class MainTesting extends AppCompatActivity {
             "Haste makes waste",
             "Have your head in the clouds",
             "Hear something straight from the horse's mouth",
-            "He's off his rocker"
+            "He's off his rocker",
+            "He's sitting on the fence",
+            "It is always darkest before the dawn",
+            "It takes two to tango",
+            "Jump on the bandwagon",
+            "Know which way the wind is blowing",
+            "Leave no stone unturned",
+            "Let sleeping dogs lie",
+            "Like riding a bicycle",
+            "Like two peas in a pod",
+            "Make hay while the sun shines"
 
 };
     int countPos=0;
