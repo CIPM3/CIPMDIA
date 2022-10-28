@@ -2504,9 +2504,21 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
             "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
             "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
-            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3"
-
-            //76...
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3",
+            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat.mp3",
+            "https://adrianlealcaldera.com/Cut%20the%20mustard.mp3",
+            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse.mp3",
+            "https://adrianlealcaldera.com/Every%20dog%20has%20his%20day.mp3",
+            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt.mp3",
+            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle.mp3",
+            "https://adrianlealcaldera.com/Get%20a%20second%20wind.mp3",
+            "https://adrianlealcaldera.com/Get%20wind%20of%20something.mp3",
+            "https://adrianlealcaldera.com/Go%20down%20in%20flames.mp3",
+            "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
+            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
+            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
+            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3"
+            //91...
 
     };
     String soundArrayRobot[] = {
@@ -2521,22 +2533,22 @@ public class MainTesting extends AppCompatActivity {
             "a stitch in time saves nine",
             "a snowball's chance in hell",
             "a snowball effect",
-            "a little learning is a dangerous thing"
+            "a little learning is a dangerous thing",
+            "Curiosity killed the cat",
+            "Cut the mustard",
+            "Don't beat a dead horse",
+            "Every dog has his day",
+            "Familiarity breeds contempt",
+            "Fit as a fiddle",
+            "Get a second wind",
+            "Get wind of something",
+            "Go down in flames",
+            "Haste makes waste",
+            "Have your head in the clouds",
+            "Hear something straight from the horse's mouth",
+            "He's off his rocker"
 
 };
-
-
-  /*  public void soundtest(View view){
-        MediaPlayer mp = new MediaPlayer();
-        try{
-            mp.setDataSource(url);
-            mp.prepare();
-            mp.start();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }*/
-  //  String url = "https://adrianlealcaldera.com/kermet.mp3";
     int countPos=0;
     int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
     public void soundtest(View view){
