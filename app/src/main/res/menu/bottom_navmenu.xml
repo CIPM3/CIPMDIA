@@ -13,5 +13,9 @@
         android:id="@+id/interfspitem"
         android:icon="@drawable/ic_grupo_spaint"
         android:title="Spanish int" />
+    <item
+        android:id="@+id/int_con"
+        android:icon="@drawable/ic_grupo_spaint"
+        android:title="Spanish int" />
 
 </menu>

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -19,14 +20,14 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class SpintTestResult extends Fragment {
-    ArrayAdapter<String> adapter;
+public class Con_int_test_results extends Fragment {
+
     FirebaseFirestore db;
     FirebaseAuth mAuth;
-    ListView lv;
     String userid;
     View v;
-    SpanishintStudentModel  st= new SpanishintStudentModel();
+    TextView score;
+    ConIntScore  st= new ConIntScore();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,37 +38,30 @@ public class SpintTestResult extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v =  inflater.inflate(R.layout.fragment_spint_test_result, container, false);
+        v =  inflater.inflate(R.layout.fragment_con_int_test_results, container, false);
         return v;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        score= v.findViewById(R.id.scoretext);
         db = FirebaseFirestore.getInstance();
         mAuth= FirebaseAuth.getInstance();
-        lv= v.findViewById(R.id.lvspintresults);
         userid= mAuth.getCurrentUser().getUid();
-        DocumentReference docref = db.collection(userid).document("Interferencias");
+        DocumentReference docref = db.collection(userid).document("Interferencia_Consciente");
         docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
                     Toast.makeText(getContext(), "espere un segundo", Toast.LENGTH_SHORT).show();
-                    st=  documentSnapshot.toObject(SpanishintStudentModel.class);
+                    st=  documentSnapshot.toObject(ConIntScore.class);
                     assert st != null;
-                    //aparentemente ya funciona, solo llenar el array
-                    String[] est = {
-                            "Interferencia por sujeto: "+st.porsujeto,
-                            "Interferencia por objeto: "+st.porobjeto,
-                            "Interferencia por preposicion: "+st.porprep,
-                            "Interferencia por reflexiva: "+st.porrefl,
-                            "Interferencia por pasiva: "+st.porpasiva
-                    };
-                    adapter = new ArrayAdapter<String>(getContext(),
-                            android.R.layout.simple_list_item_1, est);
+
+
+
                 }
-                lv.setAdapter(adapter);
+                score.setText(String.valueOf(st.Score)+" de 30 puntos posibles");
             }
         });
     }

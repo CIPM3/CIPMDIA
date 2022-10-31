@@ -40,7 +40,7 @@ import java.util.TimerTask;
 
 public class MainTesting extends AppCompatActivity {
     FirebaseFirestore  db = FirebaseFirestore.getInstance();
-    private Button     starttest,gotofrag,soundbtn;
+    private Button     starttest,gotofrag,audiorepeat;
     TextView           choose,sptx,getsent,save, chooselev , timerText;
     Spinner            spin,spinv;
     ImageButton        mic;
@@ -184,8 +184,8 @@ public class MainTesting extends AppCompatActivity {
         timerText= (TextView) findViewById(R.id.timertextv);
         timerText.setVisibility(View.INVISIBLE);
         timerText.setText(formatTime(0,0,0));
-        soundbtn = findViewById(R.id.soundtest);
-        soundbtn.setVisibility(View.INVISIBLE);
+        audiorepeat = findViewById(R.id.audiorepeatbtn);
+        audiorepeat.setVisibility(View.INVISIBLE);
 
 
         gotofrag=findViewById(R.id.gotofrag);
@@ -2504,32 +2504,9 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
             "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
             "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
-            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3",
-            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat.mp3",
-            "https://adrianlealcaldera.com/Cut%20the%20mustard.mp3",
-            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse.mp3",
-            "https://adrianlealcaldera.com/Every%20dog%20has%20his%20day.mp3",
-            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt.mp3",
-            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle.mp3",
-            "https://adrianlealcaldera.com/Get%20a%20second%20wind.mp3",
-            "https://adrianlealcaldera.com/Get%20wind%20of%20something.mp3",
-            "https://adrianlealcaldera.com/Go%20down%20in%20flames.mp3",
-            "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
-            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
-            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
-            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3",
-            "https://adrianlealcaldera.com/He's%20sitting%20on%20the%20fence.mp3",
-            "https://adrianlealcaldera.com/It%20is%20always%20darkest%20before%20the%20dawn.mp3",
-            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango.mp3",
-            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon.mp3",
-            "https://adrianlealcaldera.com/Know%20which%20way%20the%20wind%20is%20blowing.mp3",
-            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned.mp3",
-            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
-            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
-            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
-            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3"
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3"
 
-            //102...
+            //76...
 
     };
     String soundArrayRobot[] = {
@@ -2544,474 +2521,28 @@ public class MainTesting extends AppCompatActivity {
             "a stitch in time saves nine",
             "a snowball's chance in hell",
             "a snowball effect",
-            "a little learning is a dangerous thing",
-            "Curiosity killed the cat",
-            "Cut the mustard",
-            "Don't beat a dead horse",
-            "Every dog has his day",
-            "Familiarity breeds contempt",
-            "Fit as a fiddle",
-            "Get a second wind",
-            "Get wind of something",
-            "Go down in flames",
-            "Haste makes waste",
-            "Have your head in the clouds",
-            "Hear something straight from the horse's mouth",
-            "He's off his rocker",
-            "He's sitting on the fence",
-            "It is always darkest before the dawn",
-            "It takes two to tango",
-            "Jump on the bandwagon",
-            "Know which way the wind is blowing",
-            "Leave no stone unturned",
-            "Let sleeping dogs lie",
-            "Like riding a bicycle",
-            "Like two peas in a pod",
-            "Make hay while the sun shines"
+            "a little learning is a dangerous thing"
 
 };
+
+
+  /*  public void soundtest(View view){
+        MediaPlayer mp = new MediaPlayer();
+        try{
+            mp.setDataSource(url);
+            mp.prepare();
+            mp.start();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }*/
+  //  String url = "https://adrianlealcaldera.com/kermet.mp3";
     int countPos=0;
     int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
-    public void soundtest(View view){
-
-        if(countPos>19){
-            // send info to database
-
-            //notify user
-            Toast.makeText(this, "Test is done", Toast.LENGTH_SHORT).show();
-
-            // reset counter
-            countPos=0 ;
-        }
-        if(countPos>9){
-            switch (countPos){
-                case 10:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos0], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 11:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos1], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 12:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos2], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 13:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos3], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 14:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos4], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 15:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos5], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-                case 16:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos6], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-
-                case 17:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos7], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-
-                case 18:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos8], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-
-                case 19:
-                    tt1 = new TextToSpeech(getApplicationContext(),
-                            new TextToSpeech.OnInitListener() {
-                                @Override
-                                public void onInit(int i) {
-                                    // Locale spanish = new Locale("es", "MX");
-                                    if (i == TextToSpeech.SUCCESS) {
-                                        tt1.setLanguage(Locale.ENGLISH);
-                                        tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                            @Override
-                                            public void onStart(String s) {
-                                            }
-
-                                            @Override
-                                            public void onDone(String utteranceId) {
-                                                if(timerTask == null){
-                                                    startTimer();
-                                                }
-                                            }
-
-                                            @Override
-                                            public void onError(String s) {
-                                            }
-                                        });
-                                        Generator gen1 = new Generator();
-                                        gen1.GenPresSimp2();
-                                        sptx.setText(gen1.gens);
-                                        txteng=gen1.gene;
-
-                                        Answerinput.setText("");
-                                        tt1.speak(soundArrayRobot[pos9], TextToSpeech.QUEUE_ADD, null, "one");
-                                    }
-
-                                }
-                            });
-                    break;
-
-
-
-            }
-            //run some code
-            // we want to get the pos0 and give it to soundArrayRobot[] so we can hear the machine say it ,
-            // what happens when we get to 19?
-            // reset count pos, send info , notify user
-        }
-        else {
-            int rsa = (int)(Math.random()*soundArray.length);
-            MediaPlayer mp = new MediaPlayer();
-            try {
-                mp.setDataSource(soundArray[rsa]);
-                mp.prepare();
-                mp.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            switch (countPos){
-                case 0:
-                    pos0=rsa;
-                    break;
-                case 1:
-                    pos1=rsa;
-                    break;
-                case 2:
-                    pos2=rsa;
-                    break;
-
-                case 3:
-                    pos3=rsa;
-                    break;
-
-                case 4:
-                    pos4=rsa;
-                    break;
-
-                case 5:
-                    pos5=rsa;
-                    break;
-
-                case 6:
-                    pos6 = rsa;
-                    break;
-
-                case 7:
-                    pos7=rsa;
-                    break;
-
-                case 8:
-                    pos8=rsa;
-                    break;
-
-                case 9:
-                    pos9=rsa;
-                    break;
-            }
-        }
-
-        countPos++;
-
-    }
+    int rsa;
     public void soundtest(){
+        save.setVisibility(View.VISIBLE);
+        audiorepeat.setVisibility(View.VISIBLE);
     sptx.setText("escribe lo que escuchas");
         if(countPos>19){
             // send info to database
@@ -3367,7 +2898,8 @@ public class MainTesting extends AppCompatActivity {
             // reset count pos, send info , notify user
         }
         else {
-            int rsa = (int)(Math.random()*soundArray.length);
+
+            rsa = (int)(Math.random()*soundArray.length);
             MediaPlayer mp = new MediaPlayer();
             try {
                 mp.setDataSource(soundArray[rsa]);
@@ -3420,7 +2952,6 @@ public class MainTesting extends AppCompatActivity {
         countPos++;
 
     }
-
     private void   turnTrue(@NonNull String CurrentStructure) {
 
         switch (CurrentStructure){
@@ -5875,14 +5406,14 @@ public class MainTesting extends AppCompatActivity {
             case "Syntax":
                 dbtesting();
                 break;
-
             case "Vocabulary":
                 vocabdbtesting();
-
                 break;
             case "Spanish Interference":
                 spintdbtesting();
-
+                break;
+            case "Conscious Interference":
+                Conintdbtesting();
                 break;
         }
     }
@@ -6577,6 +6108,145 @@ public class MainTesting extends AppCompatActivity {
         user.put("porpasiva", intpasiva);
 
         uid.document("Interferencias").set(user);
+    }
+    int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
+    int ScoreFinal;
+    public void Conintdbtesting(){
+        String ansin = Answerinput.getText().toString().trim();
+        String temp = soundArrayRobot[rsa].trim();
+        if (countPos>9 ){
+            switch (countPos){
+                case 10:
+                    temp = soundArrayRobot[pos0];
+                    break;
+                case 11:
+                    temp = soundArrayRobot[pos1];
+                    break;
+                case 12:
+                    temp = soundArrayRobot[pos2];
+                    break;
+                case 13:
+                    temp = soundArrayRobot[pos3];
+                    break;
+                case 14:
+                    temp = soundArrayRobot[pos4];
+                    break;
+                case 15:
+                    temp = soundArrayRobot[pos5];
+                    break;
+                case 16:
+                    temp = soundArrayRobot[pos6];
+                    break;
+                case 17:
+                    temp = soundArrayRobot[pos7];
+                    break;
+                case 18:
+                    temp = soundArrayRobot[pos8];
+                    break;
+                case 19:
+                    temp = soundArrayRobot[pos9];
+                    break;
+            }
+        }
+        if(ansin.equalsIgnoreCase(temp)){
+            switch (countPos){
+                case 0:
+                    score0=2;
+
+                    break;
+
+                case 1:
+                    score1=2;
+                    break;
+
+                case 2:
+                    score2=2;
+
+                    break;
+
+                case 3:
+                    score3=2;
+
+                    break;
+
+                case 4:
+                    score4=2;
+
+                    break;
+
+                case 5:
+                    score5=2;
+                    break;
+
+                case 6:
+                    score6=2;
+                    break;
+
+                case 7:
+                    score7=2;
+                    break;
+
+                case 8:
+                    score8=2;
+                    break;
+
+                case 9:
+                    score9=2;
+                    break;
+
+                case 10:
+                    score10=1;
+                    break;
+
+                case 11:
+                    score11=1;
+                    break;
+
+                case 12:
+                    score12=1;
+                    break;
+
+                case 13:
+                    score13=1;
+                    break;
+
+                case 14:
+                    score14=1;
+                    break;
+
+                case 15:
+                    score15=1;
+                    break;
+
+                case 16:
+                    score16=1;
+                    break;
+
+                case 17:
+                    score17=1;
+                    break;
+
+                case 18:
+                    score18=1;
+                    break;
+
+                case 19:
+                    score19=1;
+                    break;
+            }
+            Toast.makeText(this, "correct", Toast.LENGTH_SHORT).show();
+
+        }else {
+            Toast.makeText(this, "incorrect/debug", Toast.LENGTH_SHORT).show();
+        }
+         ScoreFinal= score0+score1+score2+score3+score4+score5+score6+score7+score8+score9+score10+score11+score12+score13+score14+score15+score16+score17+score18+score19;
+
+        Map<String, Object> user = new HashMap<>();
+        CollectionReference uid= db.collection(userid);
+        user.put("score",ScoreFinal);
+        uid.document("Interferencia_Consciente").set(user);
+
+
     }
 
     @Override

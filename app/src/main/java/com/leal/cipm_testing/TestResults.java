@@ -17,6 +17,7 @@ public class TestResults extends AppCompatActivity {
         structureTestResult str = new structureTestResult();
         VocabTestResult vtr  = new VocabTestResult();
         SpintTestResult sitr = new SpintTestResult();
+        Con_int_test_results ctr = new Con_int_test_results();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,9 @@ public class TestResults extends AppCompatActivity {
                         return true;
                     case R.id.interfspitem:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,sitr).commit();
+                        return true;
+                    case R.id.int_con:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,ctr).commit();
                         return true;
 
                 }
