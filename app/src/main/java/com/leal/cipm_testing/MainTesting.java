@@ -2504,9 +2504,32 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
             "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
             "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
-            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3"
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3",
+            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat.mp3",
+            "https://adrianlealcaldera.com/Cut%20the%20mustard.mp3",
+            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse.mp3",
+            "https://adrianlealcaldera.com/Every%20dog%20has%20his%20day.mp3",
+            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt.mp3",
+            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle.mp3",
+            "https://adrianlealcaldera.com/Get%20a%20second%20wind.mp3",
+            "https://adrianlealcaldera.com/Get%20wind%20of%20something.mp3",
+            "https://adrianlealcaldera.com/Go%20down%20in%20flames.mp3",
+            "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
+            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
+            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
+            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3",
+            "https://adrianlealcaldera.com/He's%20sitting%20on%20the%20fence.mp3",
+            "https://adrianlealcaldera.com/It%20is%20always%20darkest%20before%20the%20dawn.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango.mp3",
+            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon.mp3",
+            "https://adrianlealcaldera.com/Know%20which%20way%20the%20wind%20is%20blowing.mp3",
+            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned.mp3",
+            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
+            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
+            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3"
 
-            //76...
+            //102...
 
     };
     String soundArrayRobot[] = {
@@ -2521,9 +2544,32 @@ public class MainTesting extends AppCompatActivity {
             "a stitch in time saves nine",
             "a snowball's chance in hell",
             "a snowball effect",
-            "a little learning is a dangerous thing"
+            "a little learning is a dangerous thing",
+            "Curiosity killed the cat",
+            "Cut the mustard",
+            "Don't beat a dead horse",
+            "Every dog has his day",
+            "Familiarity breeds contempt",
+            "Fit as a fiddle",
+            "Get a second wind",
+            "Get wind of something",
+            "Go down in flames",
+            "Haste makes waste",
+            "Have your head in the clouds",
+            "Hear something straight from the horse's mouth",
+            "He's off his rocker",
+            "He's sitting on the fence",
+            "It is always darkest before the dawn",
+            "It takes two to tango",
+            "Jump on the bandwagon",
+            "Know which way the wind is blowing",
+            "Leave no stone unturned",
+            "Let sleeping dogs lie",
+            "Like riding a bicycle",
+            "Like two peas in a pod",
+            "Make hay while the sun shines"
 
-};
+    };
 
     int countPos=0;
     int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
