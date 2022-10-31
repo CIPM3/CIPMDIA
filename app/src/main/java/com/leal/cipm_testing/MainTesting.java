@@ -2525,22 +2525,11 @@ public class MainTesting extends AppCompatActivity {
 
 };
 
-
-  /*  public void soundtest(View view){
-        MediaPlayer mp = new MediaPlayer();
-        try{
-            mp.setDataSource(url);
-            mp.prepare();
-            mp.start();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }*/
-  //  String url = "https://adrianlealcaldera.com/kermet.mp3";
     int countPos=0;
     int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
     int rsa;
     public void soundtest(){
+
         save.setVisibility(View.VISIBLE);
         audiorepeat.setVisibility(View.VISIBLE);
     sptx.setText("escribe lo que escuchas");
@@ -2950,6 +2939,7 @@ public class MainTesting extends AppCompatActivity {
         }
 
         countPos++;
+
 
     }
     private void   turnTrue(@NonNull String CurrentStructure) {
@@ -6112,6 +6102,7 @@ public class MainTesting extends AppCompatActivity {
     int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
     int ScoreFinal;
     public void Conintdbtesting(){
+
         String ansin = Answerinput.getText().toString().trim();
         String temp = soundArrayRobot[rsa].trim();
         if (countPos>9 ){
@@ -6245,10 +6236,8 @@ public class MainTesting extends AppCompatActivity {
         CollectionReference uid= db.collection(userid);
         user.put("score",ScoreFinal);
         uid.document("Interferencia_Consciente").set(user);
-
-
+        Answerinput.setText("");
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
