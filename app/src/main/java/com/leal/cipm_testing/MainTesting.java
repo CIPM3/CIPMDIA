@@ -2538,9 +2538,17 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black.mp3",
             "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon.mp3",
             "https://adrianlealcaldera.com/Through%20thick%20and%20thin.mp3",
-            "https://adrianlealcaldera.com/Time%20is%20money.mp3"
+            "https://adrianlealcaldera.com/Time%20is%20money.mp3",
+            "https://adrianlealcaldera.com/Waste%20not%20want%20not.mp3",
+            "https://adrianlealcaldera.com/We%20see%20eye%20to%20eye.mp3",
+            "https://adrianlealcaldera.com/Weather%20the%20storm.mp3",
+            "https://adrianlealcaldera.com/Well%20begun%20is%20half%20done.mp3",
+            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours.mp3",
+            "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar.mp3",
+            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink.mp3",
+            "https://adrianlealcaldera.com/You%20can't%20make%20an%20omelet%20without%20breaking%20some%20eggs.mp3"
 
-            //114...
+            //122...
 
     };
     String soundArrayRobot[] = {
@@ -2589,7 +2597,15 @@ public class MainTesting extends AppCompatActivity {
             "The pot calling the kettle black",
             "There are clouds on the horizon",
             "Through thick and thin",
-            "Time is money"
+            "Time is money",
+            "Waste not want not",
+            "We see eye to eye",
+            "Weather the storm",
+            "Well begun is half done",
+            "When it rains it pours",
+            "You can catch more flies with honey than you can with vinegar",
+            "You can lead a horse to water but you can't make him drink",
+            "You can't make an omelet without breaking some eggs"
 
     };
 
