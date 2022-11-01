@@ -2527,9 +2527,20 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
             "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
             "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
-            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3"
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3",
+            "https://adrianlealcaldera.com/On%20cloud%20nine.mp3",
+            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy.mp3",
+            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire.mp3",
+            "https://adrianlealcaldera.com/Run%20like%20the%20wind.mp3",
+            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out.mp3",
+            "https://adrianlealcaldera.com/Snowed%20under.mp3",
+            "https://adrianlealcaldera.com/That%20ship%20has%20sailed.mp3",
+            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black.mp3",
+            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon.mp3",
+            "https://adrianlealcaldera.com/Through%20thick%20and%20thin.mp3",
+            "https://adrianlealcaldera.com/Time%20is%20money.mp3"
 
-            //102...
+            //114...
 
     };
     String soundArrayRobot[] = {
@@ -2567,7 +2578,18 @@ public class MainTesting extends AppCompatActivity {
             "Let sleeping dogs lie",
             "Like riding a bicycle",
             "Like two peas in a pod",
-            "Make hay while the sun shines"
+            "Make hay while the sun shines",
+            "On cloud nine",
+            "Once bitten twice shy",
+            "Out of the frying pan and into the fire",
+            "Run like the wind",
+            "Shape up or ship out",
+            "Snowed under",
+            "That ship has sailed",
+            "The pot calling the kettle black",
+            "There are clouds on the horizon",
+            "Through thick and thin",
+            "Time is money"
 
     };
 
