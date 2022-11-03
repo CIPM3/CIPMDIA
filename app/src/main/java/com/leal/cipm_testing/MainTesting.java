@@ -2598,7 +2598,7 @@ public class MainTesting extends AppCompatActivity {
             "a stitch in time saves nine",
             "a snowball's chance in hell",
             "a snowball effect",
-            "a little learning is a dangerous thing",
+            "a little learning is a dangerous thing",//corregidos
             "Curiosity killed the cat",
             "Cut the mustard",
             "Don't beat a dead horse",
