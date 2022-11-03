@@ -366,7 +366,7 @@ public class MainTesting extends AppCompatActivity {
                         case "Syntax":
                             spin.setVisibility(View.VISIBLE);
                             choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structuresGratis, android.R.layout.simple_spinner_item);
+                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
                             adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapters);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -2546,9 +2546,44 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours.mp3",
             "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar.mp3",
             "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink.mp3",
-            "https://adrianlealcaldera.com/You%20can't%20make%20an%20omelet%20without%20breaking%20some%20eggs.mp3"
+            "https://adrianlealcaldera.com/You%20can't%20make%20an%20omelet%20without%20breaking%20some%20eggs.mp3",
 
             //122...
+
+            //LR
+            "https://adrianlealcaldera.com/A%20penny%20for%20your%20thoughts.mp3",
+            "https://adrianlealcaldera.com/A%20penny%20saved%20is%20a%20penny%20earned.mp3",
+            "https://adrianlealcaldera.com/A%20perfect%20storm.mp3",
+            "https://adrianlealcaldera.com/Actions%20speak%20louder%20than%20words.mp3",
+            "https://adrianlealcaldera.com/Add%20insult%20to%20injury.mp3",
+            "https://adrianlealcaldera.com/Barking%20up%20the%20wrong%20tree.mp3",
+            "https://adrianlealcaldera.com/Birds%20of%20a%20feather%20flock%20together.mp3",
+            "https://adrianlealcaldera.com/Break%20the%20ice.mp3",
+            "https://adrianlealcaldera.com/By%20the%20skin%20of%20your%20teeth.mp3",
+            "https://adrianlealcaldera.com/Comparing%20apples%20to%20oranges.mp3",
+            "https://adrianlealcaldera.com/Costs%20an%20arm%20and%20a%20leg.mp3",
+            "https://adrianlealcaldera.com/Do%20something%20at%20the%20drop%20of%20a%20hat.mp3",
+            "https://adrianlealcaldera.com/Do%20unto%20others%20as%20you%20would%20have%20them%20do%20unto%20you.mp3",
+            "https://adrianlealcaldera.com/Don't%20count%20your%20chickens%20before%20they%20hatch.mp3",
+            "https://adrianlealcaldera.com/Don't%20cry%20over%20spilt%20milk.mp3",
+            "https://adrianlealcaldera.com/Don't%20give%20up%20your%20day%20job.mp3",
+            "https://adrianlealcaldera.com/Don't%20put%20all%20your%20eggs%20in%20one%20basket.mp3",
+            "https://adrianlealcaldera.com/Every%20cloud%20has%20a%20silver%20lining.mp3",
+            "https://adrianlealcaldera.com/Give%20someone%20the%20cold%20shoulder.mp3",
+            "https://adrianlealcaldera.com/Go%20on%20a%20wild%20goose%20chase.mp3",
+            "https://adrianlealcaldera.com/Good%20things%20come%20to%20those%20who%20wait.mp3",
+            "https://adrianlealcaldera.com/Hit%20the%20nail%20on%20the%20head.mp3",
+            "https://adrianlealcaldera.com/Ignorance%20is%20bliss.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20one%20to%20know%20one.mp3",
+            "https://adrianlealcaldera.com/It's%20a%20piece%20of%20cake.mp3",
+            "https://adrianlealcaldera.com/It's%20raining%20cats%20and%20dogs.mp3",
+            "https://adrianlealcaldera.com/Kill%20two%20birds%20with%20one%20stone.mp3",
+            "https://adrianlealcaldera.com/Let%20the%20cat%20out%20of%20the%20bag.mp3",
+            "https://adrianlealcaldera.com/Live%20and%20learn.mp3",
+            "https://adrianlealcaldera.com/Look%20before%20you%20leap.mp3",
+            "https://adrianlealcaldera.com/On%20thin%20ice.mp3",
+            "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon.mp3",
+
 
     };
     String soundArrayRobot[] = {
@@ -2605,7 +2640,42 @@ public class MainTesting extends AppCompatActivity {
             "When it rains it pours",
             "You can catch more flies with honey than you can with vinegar",
             "You can lead a horse to water but you can't make him drink",
-            "You can't make an omelet without breaking some eggs"
+            "You can't make an omelet without breaking some eggs",
+
+            //LR
+            "A penny for your thoughts",
+            "A penny saved is a penny earned",
+            "A perfect storm",
+            "Actions speak louder than words",
+            "Add insult to injury",
+            "Barking up the wrong tree",
+            "Birds of a feather flock together",
+            "Bite off more than you can chew",
+            "Break the ice",
+            "By the skin of your teeth",
+            "Comparing apples to oranges",
+            "Costs an arm and a leg",
+            "Do something at the drop of a hat",
+            "Do unto others as you would have them do unto you",
+            "Don't count your chickens before they hatch",
+            "Don't cry over spilt milk",
+            "Don't give up your day job",
+            "Don't put all your eggs in one basket",
+            "Every cloud has a silver lining",
+            "Give someone the cold shoulder",
+            "Go on a wild goose chase",
+            "Good things come to those who wait",
+            "Hit the nail on the head",
+            "Ignorance is bliss",
+            "It takes one to know one",
+            "It's a piece of cake",
+            "It's raining cats and dogs",
+            "Kill two birds with one stone",
+            "Let the cat out of the bag",
+            "Live and learn",
+            "Look before you leap",
+            "On thin ice",
+            "Once in a blue moon",
 
     };
 
