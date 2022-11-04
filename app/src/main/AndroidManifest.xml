@@ -15,6 +15,14 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".Culturalphrases"
+            android:exported="false" />
+        <activity
+            android:name=".CulturePhrases"
+            android:exported="false"
+            android:label="@string/title_activity_culture_phrases"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name=".Fragsup"
             android:exported="false" />
         <activity

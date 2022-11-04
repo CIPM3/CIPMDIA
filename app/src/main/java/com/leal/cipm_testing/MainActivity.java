@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
     public void chose_vocab(View vista) {
-        Intent intento = new Intent(this, vocabulary_nuevo.class);
+        Intent intento = new Intent(this, Culturalphrases.class);
         startActivity(intento);
     }
     public void chose_cultura(View vista) {

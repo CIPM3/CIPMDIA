@@ -5583,7 +5583,7 @@ public class MainTesting extends AppCompatActivity {
     }
 
     //4 crear en un userput con la estructura time
-    public  void   dbtesting() {
+    public void      dbtesting()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
@@ -5701,7 +5701,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    public void vocabdbtesting(){
+    public void vocabdbtesting()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
@@ -6273,8 +6273,10 @@ public class MainTesting extends AppCompatActivity {
 
         uid.document("Interferencias").set(user);
     }
+
     int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
     int ScoreFinal;
+
     public void Conintdbtesting(){
 
         String ansin = Answerinput.getText().toString().trim();
