@@ -2583,6 +2583,16 @@ public class MainTesting extends AppCompatActivity {
             "https://adrianlealcaldera.com/Look%20before%20you%20leap.mp3",
             "https://adrianlealcaldera.com/On%20thin%20ice.mp3",
             "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon.mp3",
+            "https://adrianlealcaldera.com/Play%20devil's%20advocate.mp3",
+            "https://adrianlealcaldera.com/Put%20something%20on%20ice.mp3",
+            "https://adrianlealcaldera.com/Saving%20for%20a%20rainy%20day.mp3",
+            "https://adrianlealcaldera.com/Slow%20and%20steady%20wins%20the%20race.mp3",
+            "https://adrianlealcaldera.com/Spill%20the%20beans.mp3",
+            "https://adrianlealcaldera.com/Take%20a%20rain%20check.mp3",
+            "https://adrianlealcaldera.com/Take%20it%20with%20a%20grain%20of%20salt.mp3",
+            "https://adrianlealcaldera.com/The%20ball%20is%20in%20your%20court.mp3",
+            "https://adrianlealcaldera.com/The%20best%20thing%20since%20sliced%20bread.mp3",
+            "https://adrianlealcaldera.com/The%20devil%20is%20in%20the%20details.mp3",
 
 
     };
@@ -2676,6 +2686,16 @@ public class MainTesting extends AppCompatActivity {
             "Look before you leap",
             "On thin ice",
             "Once in a blue moon",
+            "Play devil's advocate",
+            "Put something on ice",
+            "Saving for a rainy day",
+            "Slow and steady wins the race",
+            "Spill the beans",
+            "Take a rain check",
+            "Take it with a grain of salt",
+            "The ball is in your court",
+            "The best thing since sliced bread",
+            "The devil is in the details",
 
     };
 
