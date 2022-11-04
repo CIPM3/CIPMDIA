@@ -121,7 +121,10 @@ public class Culturalphrases extends AppCompatActivity {
                 "The devil is in the details",
         };
 
+
         String definicionArray[]= {"definición uno", "definición dos ", "etc"};
+
+
         adapter = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_list_item_1, est);
         lv.setAdapter(adapter);
