@@ -2608,7 +2608,7 @@ public class MainTesting extends AppCompatActivity {
             "a stitch in time saves nine",
             "a snowball's chance in hell",
             "a snowball effect",
-            "a little learning is a dangerous thing",//corregidos
+            "a little learning is a dangerous thing",
             "Curiosity killed the cat",
             "Cut the mustard",
             "Don't beat a dead horse",
@@ -2642,7 +2642,7 @@ public class MainTesting extends AppCompatActivity {
             "The pot calling the kettle black",
             "There are clouds on the horizon",
             "Through thick and thin",
-            "Time is money",
+            "Time is money",//corregidos
             "Waste not want not",
             "We see eye to eye",
             "Weather the storm",
