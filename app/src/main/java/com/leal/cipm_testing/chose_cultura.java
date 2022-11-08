@@ -15,7 +15,7 @@ public class chose_cultura extends AppCompatActivity {
     }
 
     public void cultura_old(View vista) {
-        Intent intento = new Intent(this, Culture.class);
+        Intent intento = new Intent(this, Culturalphrases.class);
         startActivity(intento);
     }
 

@@ -185,17 +185,18 @@ public class MainActivity extends AppCompatActivity {
     public void masinfo(View vist) {
         gotoURl("https://www.cursosdeinglespersonalizadosenmonterrey.com/");
     }
+
     //Provisonal ventanas de eleccion
     public void chose_est(View vista) {
         Intent intento = new Intent(this, estructura_nuevo.class);
         startActivity(intento);
     }
     public void chose_vocab(View vista) {
-        Intent intento = new Intent(this, Culturalphrases.class);
+        Intent intento = new Intent(this, vocabulary_nuevo.class);
         startActivity(intento);
     }
     public void chose_cultura(View vista) {
-        Intent intento = new Intent(this, cultura_nuevo.class);
+        Intent intento = new Intent(this, chose_cultura.class);
         startActivity(intento);
     }
     public void chose_aval(View vista) {
