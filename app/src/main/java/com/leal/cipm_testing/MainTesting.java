@@ -2642,7 +2642,7 @@ public class MainTesting extends AppCompatActivity {
             "The pot calling the kettle black",
             "There are clouds on the horizon",
             "Through thick and thin",
-            "Time is money",//corregidos
+            "Time is money",
             "Waste not want not",
             "We see eye to eye",
             "Weather the storm",
@@ -2650,7 +2650,7 @@ public class MainTesting extends AppCompatActivity {
             "When it rains it pours",
             "You can catch more flies with honey than you can with vinegar",
             "You can lead a horse to water but you can't make him drink",
-            "You can't make an omelet without breaking some eggs",
+            "You can't make an omelet without breaking some eggs",//corregidos
 
             //LR
             "A penny for your thoughts",
