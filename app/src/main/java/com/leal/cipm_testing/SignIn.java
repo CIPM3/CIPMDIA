@@ -172,10 +172,8 @@ public class SignIn extends AppCompatActivity {
         Intent intent = new Intent(SignIn.this,MainActivity.class);
         startActivity(intent);
     }
-
-    
     public void procede(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ChooseLevel.class);
         startActivity(intent);
     }
 

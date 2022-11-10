@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseLevel">
+
+    <TextView
+        android:id="@+id/chooseleveltxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#C0CA33"
+        android:paddingTop="26dp"
+        android:text="Como te gustaría que identifiquemos tu nivel de inglés?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="352dp"
+        android:layout_height="405dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chooseleveltxt">
+
+        <TextView
+            android:id="@+id/hablarxmaestrotxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="- Hablar con maestro   (un maestro te hace un diagnostico )"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/hacerfullexamentxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="- Hacer Examen Completo (examen a todos los niveles de abstración de inglés)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/en0txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="- Estoy en ceros (no es necesario examen, no se nada)"
+            android:textColor="#FDD835"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/piensoenesptxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="- Pienso en español (mi problema principal es que &quot;pienso en español&quot;)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/advtxt"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="- Avanzado pero No entiendo inglés hablado de nativos"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/porahoranotxt"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:paddingTop="5dp"
+            android:text="- Por ahora no quiero determinar mi nivel (soy marico)"
+            android:textSize="20sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

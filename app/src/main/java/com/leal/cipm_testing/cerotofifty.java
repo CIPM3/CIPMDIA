@@ -77,7 +77,7 @@ public class cerotofifty {
     //placeholder nouns
     String sofe[] = {"people ", "history ", "way ", "information"};
     String sofs[] = {"gente ", "historia ", "manera ", "información "};
-    String pofs[] = {"mujeres ", "casas ", "maneras ", "coasas "};
+    String pofs[] = {"mujeres ", "casas ", "maneras ", "cosas "};
     String pofe[] = {"women ", "houses ", "ways ", "things"};
 
 
