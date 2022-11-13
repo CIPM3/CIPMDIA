@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ import android.widget.VideoView;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import io.grpc.internal.SharedResourceHolder;
 
 public class vocabulary_nuevo extends AppCompatActivity {
 
@@ -53,10 +56,13 @@ public class vocabulary_nuevo extends AppCompatActivity {
     TextToSpeech ttr;
     TextToSpeech tts;
     TextToSpeech tti;
+    PlanDeEstudiosChooser planDeEstudiosChooserObject = new PlanDeEstudiosChooser();
+
+
     public static final int REC_CODE_SPEECH_INPUT = 100;
     private ImageButton botonhablar;
     boolean v;
-
+    String temp[ ]= {"50 to 100", "100 to 150"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,12 +89,109 @@ public class vocabulary_nuevo extends AppCompatActivity {
         btn_cont_lay = findViewById(R.id.btn_cont_lay);
         txt_exp = findViewById(R.id.txt_exp);
 
-        Prefs prefs = new Prefs(this);
-        if (prefs.getPremium()==1){
+
+        PremiumControler();
+
+
+    }
+    private void PremiumControler() {
+        Intent reciver = getIntent();
+        boolean personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        Prefs prefs = new Prefs(vocabulary_nuevo.this);
+        if(personalizedPlan){
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                        (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+
+                        txt_exp.setVisibility(View.VISIBLE);
+                        btn_emp_lay.setVisibility(View.VISIBLE);
+
+                        spanish_lay.setVisibility(View.GONE);
+                        input_lay.setVisibility(View.GONE);
+
+                        btn_check_lay.setVisibility(View.GONE);
+                        btn_cont_lay.setVisibility(View.GONE);
+
+                        resppass.setVisibility(View.GONE);
+                        respescu.setVisibility(View.GONE);
+                        respinc.setVisibility(View.GONE);
+
+                        answerinp.setBackgroundColor(Color.WHITE);
+                        opclay.setBackgroundColor(Color.WHITE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+            }
+
+            else if (prefs.getPremium()==0){
+
+                // aqui tiene que haber algo que controle el array personalizado
+                // tiene que ser jalado de una clase donde se hagan esos arrays
+                // no se si se tengan que hacer todos al mismo tiempo
+                // que tal si el usuario decide cambiar de plan?
+                //
+                ArrayAdapter<String> adapter =
+                        new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,temp  );
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+                        txt_exp.setVisibility(View.VISIBLE);
+                        btn_emp_lay.setVisibility(View.VISIBLE);
+                        spanish_lay.setVisibility(View.GONE);
+                        input_lay.setVisibility(View.GONE);
+
+                        btn_check_lay.setVisibility(View.GONE);
+                        btn_cont_lay.setVisibility(View.GONE);
+
+                        resppass.setVisibility(View.GONE);
+                        respescu.setVisibility(View.GONE);
+                        respinc.setVisibility(View.GONE);
+
+                        answerinp.setBackgroundColor(Color.WHITE);
+                        opclay.setBackgroundColor(Color.WHITE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+            }
+
+
+
+
+        } else if (prefs.getPremium()==1){
             //Give the user all the premium features
             //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                    (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -123,9 +226,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
             });
 
         } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocab, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                    (this, R.array.vocab, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -133,13 +235,10 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     selection = spin.getSelectedItem().toString();
                     textspin1.setText(selection);
-
                     vf.setVisibility(View.VISIBLE);
                     vv.setVisibility(View.GONE);
-
                     txt_exp.setVisibility(View.VISIBLE);
                     btn_emp_lay.setVisibility(View.VISIBLE);
-
                     spanish_lay.setVisibility(View.GONE);
                     input_lay.setVisibility(View.GONE);
 
@@ -161,13 +260,9 @@ public class vocabulary_nuevo extends AppCompatActivity {
             });
 
         }
-
-
     }
-
     vocabgen gen = new vocabgen();
-    //
-    public void showV(View vista) {
+     public void showV(View vista) {
 
         vf.setVisibility(View.GONE);
         vv.setVisibility(View.VISIBLE);
@@ -256,8 +351,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
         }
 
     }
-
     public void practice(View v) {
+        
         txt_exp.setVisibility(View.GONE);
         btn_emp_lay.setVisibility(View.GONE);
 
@@ -595,7 +690,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         }
     }
-
     public void checkanswer(View vista) {
         v = false;
         String t = engtx.getText().toString().trim();
@@ -630,8 +724,14 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             }
                         });
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
-
-
+                        // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
+                        // volvemos a llamar premium controler y re/setea el array
+                        if(temp.length==1){
+                            Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
+                            startActivity(intent);
+                        }else{
+                            temp= RemoveApprovedElementFromArray(selection);
+                            PremiumControler();            }
                     }
                 }
             });
@@ -680,6 +780,21 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         }
     }
+    int PositionOfElementsLeft;
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        String[] ArrayWithElementRemoved = new String[temp.length-1];
+        for(int i =0; i<temp.length;i++){
+            if(!elementToBeRemoved.equalsIgnoreCase(temp[i])){
+                ArrayWithElementRemoved[PositionOfElementsLeft]=temp[i];
+                PositionOfElementsLeft++;
+            }
+        }
+
+
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+
+    }
 
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
@@ -702,26 +817,21 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         ttr.speak(engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);
     }
-
     public void hablar(View view){
         iniciarentradavoz();
     }
-
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -731,7 +841,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

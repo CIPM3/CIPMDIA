@@ -12,13 +12,12 @@ import android.widget.Toast;
 
 public class PlanDeEstudiosChooser extends AppCompatActivity {
     Button basicPlanRecommendedBtn;
-
-
+    boolean isOnPersonalizedPlan=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_de_estudios_chooser);
-
+        isOnPersonalizedPlan = true;
         basicPlanRecommendedBtn= findViewById(R.id.basicplanbtn);
         basicPlanRecommendedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +35,9 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                                 Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
+                                intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                                 startActivity(intent);
+
                             }
                         })
 //set negative button
@@ -51,4 +52,13 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             }
         });
     }
+
+    public boolean isOnPersonalizedPlanMethod() {
+        return isOnPersonalizedPlan;
+    }
+
+    public void setOnPersonalizedPlan(boolean onPersonalizedPlan) {
+        isOnPersonalizedPlan = onPersonalizedPlan;
+    }
+
 }

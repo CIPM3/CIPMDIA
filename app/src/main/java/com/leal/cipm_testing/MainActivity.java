@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         });
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
+
     }
 
 
