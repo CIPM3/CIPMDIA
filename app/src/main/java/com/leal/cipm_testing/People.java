@@ -8962,13 +8962,13 @@ public class People {
         }
     } //PD 29/04/2022
 
-    String objyo[]= {"te ","lo´ ", "la ","lo ", "los ", "nos "};
-    String objtu[]= {"me ","lo´ ", "la ","lo ", "los ", "nos "};
+    String objyo[]= {"te ","lo ", "la ","lo ", "los ", "nos "};
+    String objtu[]= {"me ","lo ", "la ","lo ", "los ", "nos "};
     String objel[]= {"me ","te ", "la ","lo ", "los ", "nos "};
-    String objella[]= {"me ","lo´ ", "te ","lo ", "los ", "nos "};
-    String objeso[]= {"me ","lo´ ", "te ","la ", "los ", "nos "};
-    String objellos[]= {"me ","lo´ ", "te ","lo ", "la ", "nos "};
-    String objnos[]= {"lo´ ", "te ","lo ", "los ", "la "};
+    String objella[]= {"me ","lo ", "te ","lo ", "los ", "nos "};
+    String objeso[]= {"me ","lo ", "te ","la ", "los ", "nos "};
+    String objellos[]= {"me ","lo ", "te ","lo ", "la ", "nos "};
+    String objnos[]= {"lo ", "te ","lo ", "los ", "la "};
 
     String obji[]= {"you ","him ", "her ","it ", "them ", "us "};
     String objyou[]= {"me ","him ", "her ","it ", "them ", "us "};
