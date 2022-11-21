@@ -107,7 +107,6 @@ public class structureTestResult extends Fragment {
             }
         });
 
-
     }
 
 }

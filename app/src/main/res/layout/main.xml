@@ -63,6 +63,13 @@
             </LinearLayout>
 
             <!--BTNS RECOMENDS-->
+            <Button
+                android:id="@+id/myPlanBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myPlan"
+                android:text="My Plan" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

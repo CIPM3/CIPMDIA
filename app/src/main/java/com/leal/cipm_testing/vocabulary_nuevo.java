@@ -1,5 +1,6 @@
 package com.leal.cipm_testing;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,13 +27,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 import io.grpc.internal.SharedResourceHolder;
 
 public class vocabulary_nuevo extends AppCompatActivity {
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     VideoView vv;
     LinearLayout vf;
     LinearLayout opclay;
@@ -55,14 +70,18 @@ public class vocabulary_nuevo extends AppCompatActivity {
     Button practice;
     TextToSpeech ttr;
     TextToSpeech tts;
-    TextToSpeech tti;
-    PlanDeEstudiosChooser planDeEstudiosChooserObject = new PlanDeEstudiosChooser();
-
-
+    FirebaseAuth       mAuth;
+    String userid;
+    int PositionOfElementsLeft=0;
+    String[] ArrayWithElementRemoved;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     private ImageButton botonhablar;
     boolean v;
-    String temp[ ]= {"50 to 100", "100 to 150"};
+    String[] temp ={ "shit", "50 to 100", "100 to 150"};
+    vocabgen gen = new vocabgen();
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,11 +107,12 @@ public class vocabulary_nuevo extends AppCompatActivity {
         btn_emp_lay = findViewById(R.id.btn_emp_lay);
         btn_cont_lay = findViewById(R.id.btn_cont_lay);
         txt_exp = findViewById(R.id.txt_exp);
-
-
+        mAuth= FirebaseAuth.getInstance();
+        userid = mAuth.getCurrentUser().getUid();
         PremiumControler();
-
-
+    }
+    public void inWhatActivityisTheStudent(){
+        isInVocab = true;
     }
     private void PremiumControler() {
         Intent reciver = getIntent();
@@ -140,49 +160,73 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 });
 
             }
-
             else if (prefs.getPremium()==0){
 
-                // aqui tiene que haber algo que controle el array personalizado
-                // tiene que ser jalado de una clase donde se hagan esos arrays
-                // no se si se tengan que hacer todos al mismo tiempo
-                // que tal si el usuario decide cambiar de plan?
-                //
-                ArrayAdapter<String> adapter =
-                        new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,temp  );
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        textspin1.setText(selection);
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
-                        txt_exp.setVisibility(View.VISIBLE);
-                        btn_emp_lay.setVisibility(View.VISIBLE);
-                        spanish_lay.setVisibility(View.GONE);
-                        input_lay.setVisibility(View.GONE);
+                if(reciver.getBooleanExtra("isCustom",false)){
+                    temp = reciver.getStringArrayExtra("arrayPersonalizado");
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,temp  );
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                            btn_emp_lay.setVisibility(View.VISIBLE);
+                            spanish_lay.setVisibility(View.GONE);
+                            input_lay.setVisibility(View.GONE);
 
-                        btn_check_lay.setVisibility(View.GONE);
-                        btn_cont_lay.setVisibility(View.GONE);
+                            btn_check_lay.setVisibility(View.GONE);
+                            btn_cont_lay.setVisibility(View.GONE);
 
-                        resppass.setVisibility(View.GONE);
-                        respescu.setVisibility(View.GONE);
-                        respinc.setVisibility(View.GONE);
+                            resppass.setVisibility(View.GONE);
+                            respescu.setVisibility(View.GONE);
+                            respinc.setVisibility(View.GONE);
 
-                        answerinp.setBackgroundColor(Color.WHITE);
-                        opclay.setBackgroundColor(Color.WHITE);
-                    }
+                            answerinp.setBackgroundColor(Color.WHITE);
+                            opclay.setBackgroundColor(Color.WHITE);
+                        }
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
 
-                    }
-                });
+                        }
+                    });
+                }else {
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                            btn_emp_lay.setVisibility(View.VISIBLE);
+                            spanish_lay.setVisibility(View.GONE);
+                            input_lay.setVisibility(View.GONE);
 
+                            btn_check_lay.setVisibility(View.GONE);
+                            btn_cont_lay.setVisibility(View.GONE);
+
+                            resppass.setVisibility(View.GONE);
+                            respescu.setVisibility(View.GONE);
+                            respinc.setVisibility(View.GONE);
+
+                            answerinp.setBackgroundColor(Color.WHITE);
+                            opclay.setBackgroundColor(Color.WHITE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                }
             }
-
-
 
 
         } else if (prefs.getPremium()==1){
@@ -261,8 +305,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         }
     }
-    vocabgen gen = new vocabgen();
-     public void showV(View vista) {
+    public void showV(View vista) {
 
         vf.setVisibility(View.GONE);
         vv.setVisibility(View.VISIBLE);
@@ -726,19 +769,22 @@ public class vocabulary_nuevo extends AppCompatActivity {
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
                         // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
                         // volvemos a llamar premium controler y re/setea el array
-                        if(temp.length==1){
+                        // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
+                        if(temp.length<1){
+                            // si queda nada de arrays cambia de vocab a estructura
                             Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
                             startActivity(intent);
                         }else{
-                            temp= RemoveApprovedElementFromArray(selection);
-                            PremiumControler();            }
+                            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+                            temp = RemoveApprovedElementFromArray(selection);
+                            PremiumControler();
+
+                        }
                     }
                 }
             });
-        } else {
-
-            //if you say stop it returns part of the flow control system
-            // if(answerinp.getText().toString().trim().equals("stop")) return;
+        }
+        else {
             answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
             opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
 
@@ -777,25 +823,31 @@ public class vocabulary_nuevo extends AppCompatActivity {
                     }
                 }
             });
-
         }
+        sendInfotoDb();
     }
-    int PositionOfElementsLeft;
     public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
-        String[] ArrayWithElementRemoved = new String[temp.length-1];
-        for(int i =0; i<temp.length;i++){
-            if(!elementToBeRemoved.equalsIgnoreCase(temp[i])){
-                ArrayWithElementRemoved[PositionOfElementsLeft]=temp[i];
+      ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
                 PositionOfElementsLeft++;
             }
         }
-
-
         PositionOfElementsLeft=0;
         return ArrayWithElementRemoved;
 
     }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition
+                );
+        uid.document("WhereisStudent").set(user);
 
+    }
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
         ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {

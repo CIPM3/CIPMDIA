@@ -28,8 +28,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.databinding.ActivityMainBinding;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -166,6 +164,11 @@ public class MainActivity extends AppCompatActivity {
     public void Cultura(View vista) {
         Intent intento = new Intent(this, Culture.class);
         startActivity(intento);
+    }
+    public void myPlan(View vist){
+        Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+        intent.putExtra("key", user.getUid());
+        startActivity(intent);
     }
     public void ConInt(View vista) {
         Intent intento = new Intent(this, rachel.class);

@@ -5795,7 +5795,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-
     //4 crear en un userput con la estructura time
     public void      dbtesting()  {
         String t = txteng.trim();

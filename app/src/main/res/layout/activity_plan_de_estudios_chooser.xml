@@ -68,6 +68,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Button" />
+
+            <Button
+                android:id="@+id/go2myplanbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FDD835"
+                android:onClick="continueMyPlan"
+                android:text="Continue my plan "
+                android:textColor="#3949AB" />
         </LinearLayout>
 
     </LinearLayout>

@@ -157,7 +157,7 @@ public class SignIn extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(SignIn.this, "User logged in succesfully ", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SignIn.this,MainActivity.class ));
+                        startActivity(new Intent(SignIn.this,ChooseLevel.class ));
 
                     }else {
                         Toast.makeText(SignIn.this, "Email or password incorrect ", Toast.LENGTH_SHORT).show();
