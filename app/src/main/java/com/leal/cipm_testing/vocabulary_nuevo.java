@@ -77,16 +77,16 @@ public class vocabulary_nuevo extends AppCompatActivity {
     public static final int REC_CODE_SPEECH_INPUT = 100;
     private ImageButton botonhablar;
     boolean v;
-    String[] temp ={ "shit", "50 to 100", "100 to 150"};
+    String[] temp ={ "0 to 50", "50 to 100", "100 to 150"};
     vocabgen gen = new vocabgen();
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition;
-
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary_nuevo);
-
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
         vf = findViewById(R.id.vf);
@@ -109,16 +109,24 @@ public class vocabulary_nuevo extends AppCompatActivity {
         txt_exp = findViewById(R.id.txt_exp);
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
+        docref = db.collection(userid).document("WhereisStudent");
+
         PremiumControler();
     }
     public void inWhatActivityisTheStudent(){
         isInVocab = true;
     }
     private void PremiumControler() {
+
         Intent reciver = getIntent();
         boolean personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        boolean isCustom = reciver.getBooleanExtra("isCustom",false);
+
         Prefs prefs = new Prefs(vocabulary_nuevo.this);
+
+        // is personalized plan controla entre un plan personalizado y la persona solo entrando a vocabulario
         if(personalizedPlan){
+            //al premium no se le ha movido
             if (prefs.getPremium()==1){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
@@ -160,41 +168,54 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 });
 
             }
+
+            // no es premium
             else if (prefs.getPremium()==0){
+                // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
+                // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
+                // en cada actividad habra un is custom, con el array que le corresponda
+                // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
 
-                if(reciver.getBooleanExtra("isCustom",false)){
-                    temp = reciver.getStringArrayExtra("arrayPersonalizado");
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,temp  );
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                if(isCustom){docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            textspin1.setText(selection);
-                            vf.setVisibility(View.VISIBLE);
-                            vv.setVisibility(View.GONE);
-                            txt_exp.setVisibility(View.VISIBLE);
-                            btn_emp_lay.setVisibility(View.VISIBLE);
-                            spanish_lay.setVisibility(View.GONE);
-                            input_lay.setVisibility(View.GONE);
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                          vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                          temp= vmp.resultArray.toArray(new String[0]);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    textspin1.setText(selection);
+                                    vf.setVisibility(View.VISIBLE);
+                                    vv.setVisibility(View.GONE);
+                                    txt_exp.setVisibility(View.VISIBLE);
+                                    btn_emp_lay.setVisibility(View.VISIBLE);
+                                    spanish_lay.setVisibility(View.GONE);
+                                    input_lay.setVisibility(View.GONE);
 
-                            btn_check_lay.setVisibility(View.GONE);
-                            btn_cont_lay.setVisibility(View.GONE);
+                                    btn_check_lay.setVisibility(View.GONE);
+                                    btn_cont_lay.setVisibility(View.GONE);
 
-                            resppass.setVisibility(View.GONE);
-                            respescu.setVisibility(View.GONE);
-                            respinc.setVisibility(View.GONE);
+                                    resppass.setVisibility(View.GONE);
+                                    respescu.setVisibility(View.GONE);
+                                    respinc.setVisibility(View.GONE);
 
-                            answerinp.setBackgroundColor(Color.WHITE);
-                            opclay.setBackgroundColor(Color.WHITE);
+                                    answerinp.setBackgroundColor(Color.WHITE);
+                                    opclay.setBackgroundColor(Color.WHITE);
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
                         }
+                    });}
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
-                }else {
+                // si no es custom agarra el temp que ha sido inicializado arriba
+                else {
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -229,7 +250,11 @@ public class vocabulary_nuevo extends AppCompatActivity {
             }
 
 
-        } else if (prefs.getPremium()==1){
+        }
+
+
+
+        else if (prefs.getPremium()==1){
             //Give the user all the premium features
             //hide ads if you are showing ads
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
@@ -770,7 +795,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
                         // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
                         // volvemos a llamar premium controler y re/setea el array
                         // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
-                        if(temp.length<1){
+                        if(temp.length==1){
                             // si queda nada de arrays cambia de vocab a estructura
                             Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
                             startActivity(intent);
@@ -778,6 +803,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
                             temp = RemoveApprovedElementFromArray(selection);
                             PremiumControler();
+                            sendInfotoDb();
 
                         }
                     }
@@ -824,7 +850,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 }
             });
         }
-        sendInfotoDb();
+
     }
     public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
       ArrayWithElementRemoved = new String[temp.length-1];

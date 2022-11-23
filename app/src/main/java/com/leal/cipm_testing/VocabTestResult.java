@@ -51,7 +51,6 @@ public class VocabTestResult extends Fragment {
         lv= view.findViewById(R.id.listviewfragv);
         userid= mAuth.getCurrentUser().getUid();
         DocumentReference docref = db.collection(userid).document("vocabulary");
-
         docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
