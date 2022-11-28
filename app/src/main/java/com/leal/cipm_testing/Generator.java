@@ -12370,6 +12370,86 @@ public class Generator {
         }
     }
 
+    public void GenReportedSpeech1(){
+        int rand = (int) (Math.random() * pronombres.length);
+        //int verb = (int) (Math.random() * 4);
+        int verb = 0;
+
+        String temp = pronombres[rand];
+        switch (temp){
+            case "yo ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb){
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.ReportedSpeech1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }
+
 
     //------------------------------------------------------------------------------------------
     // de aqui abajo van dificultad dos
