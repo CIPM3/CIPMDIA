@@ -12372,8 +12372,7 @@ public class Generator {
 
     public void GenReportedSpeech1(){
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 4);
-        int verb = 0;
+        int verb = (int) (Math.random() * 4);
 
         String temp = pronombres[rand];
         switch (temp){
@@ -12385,6 +12384,24 @@ public class Generator {
                         gens = ab.ps1;
                         gene = ab.ps1eng;
                         break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps1;
+                        gene = nb.ps1eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps1;
+                        gene = pp.ps1eng;
+                        break;
                 }
                 break;
             case "tú ":
@@ -12394,6 +12411,24 @@ public class Generator {
                         ab.ReportedSpeech1();
                         gens = ab.ps2;
                         gene = ab.ps2eng;
+                        break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps2;
+                        gene = nb.ps2eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps2;
+                        gene = pp.ps2eng;
                         break;
                 }
                 break;
@@ -12405,6 +12440,24 @@ public class Generator {
                         gens = ab.ps3;
                         gene = ab.ps3eng;
                         break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps3;
+                        gene = nb.ps3eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps3;
+                        gene = pp.ps3eng;
+                        break;
                 }
                 break;
             case "ella ":
@@ -12414,6 +12467,24 @@ public class Generator {
                         ab.ReportedSpeech1();
                         gens = ab.ps3ella;
                         gene = ab.ps3she;
+                        break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps3ella;
+                        gene = nb.ps3she;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps3ella;
+                        gene = pp.ps3she;
                         break;
                 }
                 break;
@@ -12425,6 +12496,24 @@ public class Generator {
                         gens = ab.ps3eso;
                         gene = ab.ps3it;
                         break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps3eso;
+                        gene = nb.ps3it;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps3eso;
+                        gene = pp.ps3it;
+                        break;
                 }
                 break;
             case "ellos ":
@@ -12435,6 +12524,24 @@ public class Generator {
                         gens = ab.ps4;
                         gene = ab.ps4eng;
                         break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps4;
+                        gene = nb.ps4eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps4;
+                        gene = pp.ps4eng;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -12444,6 +12551,24 @@ public class Generator {
                         ab.ReportedSpeech1();
                         gens = ab.ps5;
                         gene = ab.ps5eng;
+                        break;
+                    case 1:
+                        Nobles nb = new Nobles();
+                        nb.ReportedSpeech1();
+                        gens = nb.ps5;
+                        gene = nb.ps5eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.ReportedSpeech1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        break;
+                    case 3:
+                        People pp = new People();
+                        pp.ReportedSpeech1();
+                        gens = pp.ps5;
+                        gene = pp.ps5eng;
                         break;
                 }
                 break;

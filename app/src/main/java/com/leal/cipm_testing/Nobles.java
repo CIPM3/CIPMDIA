@@ -309,7 +309,7 @@ public class Nobles {
     String ps2pre[] = {"tuviste ", "obtuviste ", "viste ", "necesitaste ", "supiste ", "encontraste ", "tomaste ", "quiciste ", "incluiste ",
             "agradeciste ", "agregaste ", "elegiste ", "desarrollaste ", "recordaste ", "trajiste ", "protegiste ",
             "evitaste ", "describiste ", "preferiste ", "descubriste ", "esperaste ", "perdiste ", "oiste ", "representaste ",
-            "olvidaste ", "aceptaste ", "compraste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
+            "olvidaste ", "aceptaste ", "comparaste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
             "debiste ", "incorporaste ", "organizaste "
     };
 
@@ -317,7 +317,7 @@ public class Nobles {
     String ps2imp[] = {"tenías ", "obtenías ", "veías ", "necesitabas ", "sabías ", "encontrabas ", "tomabas ", "querías ", "incluías ",
             "agradecías ", "agregabas ", "elegías ", "desarrollabas ", "recordabas ", "traías ", "protegías ",
             "evitabas ", "describías ", "preferías ", "descubrías ", "esperabas ", "perdías ", "oías ", "representabas ",
-            "olvidabas ", "aceptabas ", "comprabas ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
+            "olvidabas ", "aceptabas ", "comparabas ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
             "debías ", "incorporabas ", "organizabas "
     };
 
@@ -325,7 +325,7 @@ public class Nobles {
     String ps3p[] = {"tuvo ", "obtuvo ", "vio ", "necesitó ", "supo ", "encontró ", "tomó ", "quiso ", "incluyó ",
             "agradeció ", "agregó ", "eligió ", "desarrolló ", "recordó ", "trajo ", "protegió ",
             "evitó ", "describió ", "prefirió ", "descubrió ", "esperó ", "perdió ", "oyó ", "representó ",
-            "olvidó ", "aceptó ", "compró ", "imaginó ", "reconoció ", "reemplazó ", "pidió prestado ", "examinó ",
+            "olvidó ", "aceptó ", "comparó ", "imaginó ", "reconoció ", "reemplazó ", "pidió prestado ", "examinó ",
             "debió ", "incorporó ", "organizó "
     };
 
@@ -12097,6 +12097,77 @@ public class Nobles {
                 break;
         }
     }//PD 15/06/2022
+
+    //REPORTED SPEECH
+    public void ReportedSpeech1(){
+        int neg = (int) (Math.random() * 2);
+        //subject
+        String RsSj[] = {"I ","you ","he ","she ","it ","they ","we "};
+
+        //subject esp
+        String RsSjesp[] = {"yo ","tu ","el ","ella ","eso ","ellos ","nosotros "};
+
+        //second subject
+        String RsS2j[] = {"I ","you ","he ","she ","she ","they ","we "};
+
+        //second subject esp
+        String RsS2jesp[] = {"yo ","tu ","el ","ella ","ella ","ellos ", "nosotros "};
+
+        //ps1pre
+        //vnbp
+        int sc = (int) (Math.random() * RsS2j.length);
+
+        String PreRand [] = {
+                ps1pre[v],ps2pre[v],ps3p[v],ps3p[v],ps3p[v],vn4p[v],vn5p[v]
+        };
+
+        switch (neg){
+            case 0:
+                ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3she = RsSj[3] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3it = RsSj[4] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+
+                ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                break;
+            case 1:
+                ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3she = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3it = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                break;
+        }
+    }//PD 29/11/2022
 
 }
 

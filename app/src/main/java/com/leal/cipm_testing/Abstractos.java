@@ -11788,6 +11788,7 @@ public class Abstractos {
 
     //REPORTED SPEECH
     public void ReportedSpeech1(){
+        int neg = (int) (Math.random() * 2);
         //subject
         String RsSj[] = {"I ","you ","he ","she ","it ","they ","we "};
 
@@ -11808,28 +11809,52 @@ public class Abstractos {
                 ps1pre[v],ps2pre[v],ps3p[v],ps3p[v],ps3p[v],vn4p[v],vn5p[v]
         };
 
-        ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps1eng = RsSj[0] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+        switch (neg){
+            case 0:
+                ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps2eng = RsSj[1] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps3eng = RsSj[2] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps3she = RsSj[3] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3she = RsSj[3] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps3it = RsSj[4] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps3it = RsSj[4] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps4eng = RsSj[5] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
 
-        ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
-        ps5eng = RsSj[6] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + PreRand[sc] + nnoblesesp[n];
+                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + vnbp[v] + nnobles[n];
+                break;
+            case 1:
+                ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
 
+                ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
 
+                ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3she = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps3it = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+
+                ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
+                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                break;
+        }
     }//PD 28/11/2022
 
 }
