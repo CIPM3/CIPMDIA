@@ -10,7 +10,9 @@
         <item>Would Simple</item>
         <item>Could Simple</item>
         <item>Might Simple</item>
-        <item>Can Simple</item>
+        <item>Reported Speech</item>
+        <item>Conectores Standar Presente Simple x Presente Simple</item>
+        <item>Conectores Standar Presente Simple x Presente Continuo</item>
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>

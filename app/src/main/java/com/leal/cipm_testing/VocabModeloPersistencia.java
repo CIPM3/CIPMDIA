@@ -7,22 +7,55 @@ import java.util.List;
 @IgnoreExtraProperties
 public class VocabModeloPersistencia {
 
-    List<String> resultArray, resultArrayStructure;
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition;
+    List<String> resultArray, basicStructuresArray,nonBasicStructuresArray;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCon;
 
-    public List<String> getResultArrayStructure() {
-        return resultArrayStructure;
+    public VocabModeloPersistencia(List<String> resultArray, List<String> basicStructuresArray,
+                                   boolean isInVocab, boolean isInStructure, boolean isInSpanishInt,
+                                   boolean isInCulture, boolean isInPrager,
+                                   boolean isInTransition, boolean isInintCon) {
+        this.resultArray = resultArray;
+        this.basicStructuresArray = basicStructuresArray;
+        this.isInVocab = isInVocab;
+        this.isInStructure = isInStructure;
+        this.isInSpanishInt = isInSpanishInt;
+        this.isInCulture = isInCulture;
+        this.isInPrager = isInPrager;
+        this.isInTransition = isInTransition;
+        this.isInintCon = isInintCon;
     }
 
-    public void setResultArrayStructure(List<String> resultArrayStructure) {
-        this.resultArrayStructure = resultArrayStructure;
+
+
+    public List<String> getNonBasicStructuresArray() {
+        return nonBasicStructuresArray;
+    }
+
+    public void setNonBasicStructuresArray(List<String> nonBasicStructuresArray) {
+        this.nonBasicStructuresArray = nonBasicStructuresArray;
+    }
+
+    public boolean isInintCon() {
+        return isInintCon;
+    }
+
+    public void setInintCon(boolean inintCon) {
+        isInintCon = inintCon;
+    }
+
+    public List<String> getBasicStructuresArray() {
+        return basicStructuresArray;
+    }
+
+    public void setBasicStructuresArray(List<String> basicStructuresArray) {
+        this.basicStructuresArray = basicStructuresArray;
     }
 
     public  VocabModeloPersistencia(){}
 
     public VocabModeloPersistencia(List<String> resultArray, boolean isInVocab,
                                    boolean isInStructure, boolean isInSpanishInt,
-                                   boolean isInCulture, boolean isInPrager, boolean isInTransition) {
+                                   boolean isInCulture, boolean isInPrager, boolean isInTransition,boolean isInintCon) {
         this.resultArray = resultArray;
         this.isInVocab = isInVocab;
         this.isInStructure = isInStructure;
@@ -30,7 +63,7 @@ public class VocabModeloPersistencia {
         this.isInCulture = isInCulture;
         this.isInPrager = isInPrager;
         this.isInTransition = isInTransition;
-        this.resultArrayStructure = resultArrayStructure;
+        this.isInintCon= isInintCon;
     }
 
 
@@ -44,7 +77,7 @@ public class VocabModeloPersistencia {
         this.isInCulture = isInCulture;
         this.isInPrager = isInPrager;
         this.isInTransition = isInTransition;
-        this.resultArrayStructure = resultArrayStructure;
+        this.basicStructuresArray = resultArrayStructure;
     }
 
     public List<String> getResultArray() {

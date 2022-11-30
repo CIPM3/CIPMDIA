@@ -67,21 +67,23 @@ public class vocabulary_nuevo extends AppCompatActivity {
     TextView engtx;
     EditText answerinp;
     TextView textspin1;
-    Button practice;
     TextToSpeech ttr;
     TextToSpeech tts;
     FirebaseAuth       mAuth;
     String userid;
-    int PositionOfElementsLeft=0;
-    String[] ArrayWithElementRemoved;
-    public static final int REC_CODE_SPEECH_INPUT = 100;
-    private ImageButton botonhablar;
-    boolean v;
-    String[] temp ={ "0 to 50", "50 to 100", "100 to 150"};
+    ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    String[] temp =objetoArrays.arrayVocab;
     vocabgen gen = new vocabgen();
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition;
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    String[] ArrayWithElementRemoved;
+    int PositionOfElementsLeft=0;
+    public static final int REC_CODE_SPEECH_INPUT = 100;
+    boolean v;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    boolean personalizedPlan;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,18 +115,19 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         PremiumControler();
     }
-    public void inWhatActivityisTheStudent(){
-        isInVocab = true;
-    }
+
     private void PremiumControler() {
 
+        // info que recive del plan de estudios chooser
         Intent reciver = getIntent();
-        boolean personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         boolean isCustom = reciver.getBooleanExtra("isCustom",false);
 
         Prefs prefs = new Prefs(vocabulary_nuevo.this);
 
-        // is personalized plan controla entre un plan personalizado y la persona solo entrando a vocabulario
+        //si es personalizado jala el array para empezar y luego el de la
+        // base de datos correspondiente
+        // este tiene que jalar un array al principio de lo que sea que sea su plan
         if(personalizedPlan){
             //al premium no se le ha movido
             if (prefs.getPremium()==1){
@@ -168,54 +171,55 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 });
 
             }
-
             // no es premium
             else if (prefs.getPremium()==0){
                 // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
                 // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
                 // en cada actividad habra un is custom, con el array que le corresponda
                 // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
+                if(isCustom)
+                {docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                        temp= vmp.resultArray.toArray(new String[0]);
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                        spin.setAdapter(adapter);
+                        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                selection = spin.getSelectedItem().toString();
+                                textspin1.setText(selection);
+                                vf.setVisibility(View.VISIBLE);
+                                vv.setVisibility(View.GONE);
+                                txt_exp.setVisibility(View.VISIBLE);
+                                btn_emp_lay.setVisibility(View.VISIBLE);
+                                spanish_lay.setVisibility(View.GONE);
+                                input_lay.setVisibility(View.GONE);
 
-                if(isCustom){docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                          vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
-                          temp= vmp.resultArray.toArray(new String[0]);
-                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
-                            spin.setAdapter(adapter);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    textspin1.setText(selection);
-                                    vf.setVisibility(View.VISIBLE);
-                                    vv.setVisibility(View.GONE);
-                                    txt_exp.setVisibility(View.VISIBLE);
-                                    btn_emp_lay.setVisibility(View.VISIBLE);
-                                    spanish_lay.setVisibility(View.GONE);
-                                    input_lay.setVisibility(View.GONE);
+                                btn_check_lay.setVisibility(View.GONE);
+                                btn_cont_lay.setVisibility(View.GONE);
 
-                                    btn_check_lay.setVisibility(View.GONE);
-                                    btn_cont_lay.setVisibility(View.GONE);
+                                resppass.setVisibility(View.GONE);
+                                respescu.setVisibility(View.GONE);
+                                respinc.setVisibility(View.GONE);
 
-                                    resppass.setVisibility(View.GONE);
-                                    respescu.setVisibility(View.GONE);
-                                    respinc.setVisibility(View.GONE);
+                                answerinp.setBackgroundColor(Color.WHITE);
+                                opclay.setBackgroundColor(Color.WHITE);
+                            }
 
-                                    answerinp.setBackgroundColor(Color.WHITE);
-                                    opclay.setBackgroundColor(Color.WHITE);
-                                }
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                }
-                            });
-                        }
-                    });}
-
+                            }
+                        });
+                    }
+                });}
                 // si no es custom agarra el temp que ha sido inicializado arriba
+                // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
+                // aqui empieza el plan personalizado
                 else {
+
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -252,8 +256,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         }
 
-
-
+        // si no es personalizado acesa a todas las funciones que le cooresponden
+        // ya sea pagado o gratis
         else if (prefs.getPremium()==1){
             //Give the user all the premium features
             //hide ads if you are showing ads
@@ -330,6 +334,52 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         }
     }
+    public void inWhatActivityisTheStudent(){
+
+        isInVocab = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            // si queda nada de arrays cambia de vocab a estructura
+            isBasicStructures=true;
+            Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            intent.putExtra("basicSctructures",isBasicStructures );
+            startActivity(intent);
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(selection);
+            //premiumControler updatea el array del spinner
+            PremiumControler();
+            sendInfotoDb();
+        }
+    }
+
+
     public void showV(View vista) {
 
         vf.setVisibility(View.GONE);
@@ -795,16 +845,9 @@ public class vocabulary_nuevo extends AppCompatActivity {
                         // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
                         // volvemos a llamar premium controler y re/setea el array
                         // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
-                        if(temp.length==1){
-                            // si queda nada de arrays cambia de vocab a estructura
-                            Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
-                            startActivity(intent);
-                        }else{
-                            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
-                            temp = RemoveApprovedElementFromArray(selection);
-                            PremiumControler();
-                            sendInfotoDb();
 
+                        if(personalizedPlan ){
+                            SubtractSelectionAndSendinfoToDb();
                         }
                     }
                 }
@@ -850,28 +893,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 }
             });
         }
-
-    }
-    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
-      ArrayWithElementRemoved = new String[temp.length-1];
-        for (String s : temp) {
-            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
-                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
-                PositionOfElementsLeft++;
-            }
-        }
-        PositionOfElementsLeft=0;
-        return ArrayWithElementRemoved;
-
-    }
-    public void sendInfotoDb(){
-        inWhatActivityisTheStudent();
-        CollectionReference uid = db.collection(userid);
-        VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition
-                );
-        uid.document("WhereisStudent").set(user);
 
     }
     public void speakans(View vista){

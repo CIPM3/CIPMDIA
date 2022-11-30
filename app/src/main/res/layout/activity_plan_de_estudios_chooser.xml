@@ -43,31 +43,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E53935"
+                android:onClick="BasicRecomendedPlan"
                 android:text="Basic" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/ListeningBasicbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="BasicListeningPlan"
+                android:text="Listening Basic" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/Custom100btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="Custom100Plan"
+                android:text="100% Personalizado" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/intermediobtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="IntermedioStandardPlan"
+                android:text="Intermedio" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/advancedbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="AdvancedPlan"
+                android:text="Avanzado" />
 
             <Button
                 android:id="@+id/go2myplanbtn"
