@@ -248,7 +248,74 @@ public class Nobles {
     };
 
 
+    //What Continuo Cuestion
+    
+    String scontI[] = {"am I ", "was i ", "will i be "};
+    String scontIesp[] = {"yo estoy ", "yo estaba ", "yo estaré "};
 
+    String scontYou[] = {"are you ", "were you ", "will you be "};
+    String scontYouesp[]={"tu estás ", "tu estabas ", "tu estabas "};
+
+    String scontHe[]={"is he ", "was he ", "will he be "};
+    String scontHeesp[]={"él está ", "él estaba ", "él estará "};
+
+    String scontShe[]={"is she ", "was she ", "will she be "};
+    String scontSheesp[]={"ella está ", "ella estaba ", "ella estará "};
+
+    String scontIt[]={"is it ", "was it ", "will it be "};
+    String scontItesp[]={"eso está ", "eso estaba ", "eso estará "};
+
+    String scontThey[]={"are they ", "were they ", "will they be "};
+    String scontTheyesp[]={"ellos están ", "ellos estaban ", "ellos estarán "};
+
+    String scontWe[]={"are we ", "were we ", "will we be "};
+    String scontWeesp[]={"nosotros estamos ", "nosotros estabamos ", "nosotros estarémos "};
+
+    //What Continuos Cuestion negacion
+    String scontIdont[] = {"am not i ", "wasn't i ", "won't i be "};
+    String scontIespno[] = {"yo no estoy ", "yo no estaba ", "yo no estaré "};
+
+    String scontYoudont[] = {"aren't you ", "weren't you ", "won't you be "};
+    String scontYouespno[]={"tu no estás ", "tu no estabas ", "tu no estabas"};
+
+    String scontHedont[]={"isn't he ", "wasn't he ", "won't he be "};
+    String scontHeespno[]={"él no está ", "él no estaba ", "él no estará "};
+
+    String scontShedont[]={"isn't she ", "wasn't she ", "won't she be "};
+    String scontSheespno[]={"ella no está ", "ella no estaba ", "ella no estará "};
+
+    String scontItdont[]={"isn't it ", "wasn't it ", "won't it be "};
+    String scontItespno[]={"eso no está ", "eso no estaba ", "eso no estará "};
+
+    String scontTheydont[]={"aren't they ", "weren't they ", "won't they be "};
+    String scontTheyespno[]={"ellos no están ", "ellos no estaban ", "ellos no estarán "};
+
+    String scontWedont[]={"aren't we ", "weren't we ", "won't we be "};
+    String scontWeespno[]={"nosotros no estamos ", "nosotros no estabamos ", "nosotros no estarémos "};
+
+
+    //What simple Cuestion
+
+    String sperfI[] = {"have I ", "had i ", "will i have "};
+    String sperfIesp[] = {"yo he ", "yo había ", "yo habré "};
+
+    String sperfYou[] = {"have you ", "had you ", "will you have "};
+    String sperfYouesp[]={"tu has ", "tu habías ", "tu habrás "};
+
+    String sperftHe[]={"has he ", "had he ", "will he have "};
+    String sperfHeesp[]={"él ha ", "él había ", "él habrá "};
+
+    String sperfShe[]={"has she ", "had she ", "will she have "};
+    String sperfSheesp[]={"ella ha ", "ella había ", "ella habrá "};
+
+    String sperfIt[]={"has it ", "had it ", "will it have "};
+    String sperfItesp[]={"eso ha ", "eso había ", "eso habrá "};
+
+    String sperfThey[]={"have they ", "had they ", "will they have "};
+    String sperfTheyesp[]={"ellos han ", "ellos habían ", "ellos habrán "};
+
+    String sperfWe[]={"have we ", "had we ", "will we have "};
+    String sperfWeesp[]={"nosotros hemos ", "nosotros habíamos ", "nosotros habrémos "};
 
     String ps1; // esta la uso para primera persona esp
     String ps1eng;
@@ -272,6 +339,7 @@ public class Nobles {
     String ps4eng2;
     String ps5eng2;
 
+    int s = (int)(Math.random() * scontI.length );
     int v = (int) (Math.random() * vnb.length);
     int n = (int) (Math.random() * nnobles.length);
     int neg = (int) (Math.random() * 2);
@@ -10276,7 +10344,7 @@ public class Nobles {
                 ps1 = "yo " + "estaré " + vnbcs[v];
                 ps1eng = "I " + "will " + "be " + vnbc[v];
 
-                ps2 = "tú " + "estarás " + vnbcs[v];
+                ps2 = "tú " + "estabas " + vnbcs[v];
                 ps2eng = "you " + "will " + "be " + vnbc[v];
 
                 ps3 = "él " + "estará " + vnbcs[v];
@@ -12169,7 +12237,55 @@ public class Nobles {
         }
     }//PD 29/11/2022
 
+    public void WhatCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Que " + scontIesp[s] + vnbcs[v] + "?";
+                ps1eng = "What " + scontI[s] + vnbc[v] + "?";
 
+                ps2 = "¿Que " + scontYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "What " + scontYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Que " + scontHeesp[s] + vnbcs[v] + "?";
+                ps3eng = "What " + scontHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Que " + scontSheesp[s] + vnbcs[v] + "?";
+                ps3she = "What " + scontShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Que " + scontItesp[s] + vnbcs[v] + "?";
+                ps3it = "What " + scontIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Que " + scontTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "What " + scontThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Que " + scontWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "What " + scontWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Que " + scontIespno[s] + vnbcs[v] + "?";
+                ps1eng = "What " + scontIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Que " + scontYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "What " + scontYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Que " + scontHeespno[s] + vnbcs[v] + "?";
+                ps3eng = "What " + scontHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Que " + scontSheespno[s] + vnbcs[v] + "?";
+                ps3she = "What " + scontShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Que " + scontItespno[s] + vnbcs[v] + "?";
+                ps3it = "What " + scontItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Que " + scontTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "What " + scontTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Que " + scontWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "What " + scontWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//prueba
 
 }
 
