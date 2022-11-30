@@ -12378,7 +12378,7 @@ public class Generator {
 
     public void GenReportedSpeech1(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 4);
+        int verb = (int) (Math.random() * 5);
 
         String temp = pronombres[rand];
         switch (temp){
@@ -12408,6 +12408,12 @@ public class Generator {
                         gens = pp.ps1;
                         gene = pp.ps1eng;
                         break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp1;
+                        gene = sp.eng1;
+                        break;
                 }
                 break;
             case "tú ":
@@ -12435,6 +12441,12 @@ public class Generator {
                         pp.ReportedSpeech1();
                         gens = pp.ps2;
                         gene = pp.ps2eng;
+                        break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp2;
+                        gene = sp.eng2;
                         break;
                 }
                 break;
@@ -12464,6 +12476,12 @@ public class Generator {
                         gens = pp.ps3;
                         gene = pp.ps3eng;
                         break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp3;
+                        gene = sp.eng3;
+                        break;
                 }
                 break;
             case "ella ":
@@ -12491,6 +12509,12 @@ public class Generator {
                         pp.ReportedSpeech1();
                         gens = pp.ps3ella;
                         gene = pp.ps3she;
+                        break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp4;
+                        gene = sp.eng4;
                         break;
                 }
                 break;
@@ -12520,6 +12544,12 @@ public class Generator {
                         gens = pp.ps3eso;
                         gene = pp.ps3it;
                         break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp5;
+                        gene = sp.eng5;
+                        break;
                 }
                 break;
             case "ellos ":
@@ -12548,6 +12578,12 @@ public class Generator {
                         gens = pp.ps4;
                         gene = pp.ps4eng;
                         break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp6;
+                        gene = sp.eng6;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -12575,6 +12611,12 @@ public class Generator {
                         pp.ReportedSpeech1();
                         gens = pp.ps5;
                         gene = pp.ps5eng;
+                        break;
+                    case 4:
+                        Special sp = new Special();
+                        sp.ReportedSpeech1();
+                        gens = sp.sp7;
+                        gene = sp.eng7;
                         break;
                 }
                 break;
