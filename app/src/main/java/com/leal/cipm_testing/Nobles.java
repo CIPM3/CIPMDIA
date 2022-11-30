@@ -248,8 +248,7 @@ public class Nobles {
     };
 
 
-    //What Continuo Cuestion
-    
+    //What Continuo
     String scontI[] = {"am I ", "was i ", "will i be "};
     String scontIesp[] = {"yo estoy ", "yo estaba ", "yo estaré "};
 
@@ -271,7 +270,7 @@ public class Nobles {
     String scontWe[]={"are we ", "were we ", "will we be "};
     String scontWeesp[]={"nosotros estamos ", "nosotros estabamos ", "nosotros estarémos "};
 
-    //What Continuos Cuestion negacion
+    //What Continuous
     String scontIdont[] = {"am not i ", "wasn't i ", "won't i be "};
     String scontIespno[] = {"yo no estoy ", "yo no estaba ", "yo no estaré "};
 
@@ -294,15 +293,14 @@ public class Nobles {
     String scontWeespno[]={"nosotros no estamos ", "nosotros no estabamos ", "nosotros no estarémos "};
 
 
-    //What simple Cuestion
-
+    //What Perfect
     String sperfI[] = {"have I ", "had i ", "will i have "};
     String sperfIesp[] = {"yo he ", "yo había ", "yo habré "};
 
     String sperfYou[] = {"have you ", "had you ", "will you have "};
     String sperfYouesp[]={"tu has ", "tu habías ", "tu habrás "};
 
-    String sperftHe[]={"has he ", "had he ", "will he have "};
+    String sperfHe[]={"has he ", "had he ", "will he have "};
     String sperfHeesp[]={"él ha ", "él había ", "él habrá "};
 
     String sperfShe[]={"has she ", "had she ", "will she have "};
@@ -316,6 +314,28 @@ public class Nobles {
 
     String sperfWe[]={"have we ", "had we ", "will we have "};
     String sperfWeesp[]={"nosotros hemos ", "nosotros habíamos ", "nosotros habrémos "};
+
+    //What Perfect negacion
+    String sperfIdont[] = {"haven't I ", "hadn't i ", "won't i have "};
+    String sperfIespno[] = {"yo no he ", "yo no había ", "yo no habré "};
+
+    String sperfYoudont[] = {"haven't you ", "hadn't you ", "won't you have "};
+    String sperfYouespno[]={"tu no has ", "tu no habías ", "tu no habrás "};
+
+    String sperfHedont[]={"hasn't he ", "hadn't he ", "won't he have "};
+    String sperfHeespno[]={"él no ha ", "él no había ", "él no habrá "};
+
+    String sperfShedont[]={"hasn't she ", "hadn't she ", "won't she have "};
+    String sperfSheespno[]={"ella no ha ", "ella no había ", "ella no habrá "};
+
+    String sperfItdont[]={"hasn't it ", "hadn't it ", "won't it have "};
+    String sperfItespno[]={"eso no ha ", "eso no había ", "eso no habrá "};
+
+    String sperfTheydont[]={"haven't they ", "hadn't they ", "won't they have "};
+    String sperfTheyespno[]={"ellos no han ", "ellos no habían ", "ellos no habrán "};
+
+    String sperfWedont[]={"haven't we ", "hadn't we ", "won't we have "};
+    String sperfWeespno[]={"nosotros no hemos ", "nosotros no habíamos ", "nosotros no habrémos "};
 
     String ps1; // esta la uso para primera persona esp
     String ps1eng;
@@ -12237,7 +12257,7 @@ public class Nobles {
         }
     }//PD 29/11/2022
 
-    public void WhatCont1() {
+    public void GenWhatCont1() {
         switch (neg) {
             case 0:
                 ps1 = "¿Que " + scontIesp[s] + vnbcs[v] + "?";
@@ -12283,6 +12303,55 @@ public class Nobles {
 
                 ps5 = "¿Que " + scontWeespno[s] + vnbcs[v] + "?";
                 ps5eng = "What " + scontWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//prueba
+    public void GenWhatPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Que " + sperfIesp[s] + vpsp[v] + "?";
+                ps1eng = "What " + sperfI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Que " + sperfYouesp[s] + vpsp[v] + "?";
+                ps2eng = "What " + sperfYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Que " + sperfHeesp[s] + vpsp[v] + "?";
+                ps3eng = "What " + sperfHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Que " + sperfSheesp[s] + vpsp[v] + "?";
+                ps3she = "What " + sperfShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Que " + sperfItesp[s] + vpsp[v] + "?";
+                ps3it = "What " + sperfIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Que " + sperfTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "What " + sperfThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Que " + sperfWeesp[s] + vpsp[v] + "?";
+                ps5eng = "What " + sperfWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Que " + sperfIespno[s] + vpsp[v] + "?";
+                ps1eng = "What " + sperfIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Que " + sperfYouespno[s] + vpsp[v] + "?";
+                ps2eng = "What " + sperfYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Que " + sperfHeespno[s] + vpsp[v] + "?";
+                ps3eng = "What " + sperfHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Que " + sperfSheespno[s] + vpsp[v] + "?";
+                ps3she = "What " + sperfShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Que " + sperfItespno[s] + vpsp[v] + "?";
+                ps3it = "What " + sperfItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Que " + sperfTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "What " + sperfTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Que " + sperfWeespno[s] + vpsp[v] + "?";
+                ps5eng = "What " + sperfWedont[s] + vpeng[v] + "?";
+
                 break;
         }
     }//prueba

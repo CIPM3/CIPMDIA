@@ -12581,7 +12581,7 @@ public class Generator {
         }
     }
 
-    public void WhatCont1() {
+    public void GenWhatCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
         //int verb = 3;
@@ -12591,7 +12591,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps1;
                         gene = n.ps1eng;
                         break;
@@ -12601,7 +12601,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps2;
                         gene = n.ps2eng;
                         break;
@@ -12612,7 +12612,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps3;
                         gene = n.ps3eng;
                         break;
@@ -12623,7 +12623,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
                         break;
@@ -12634,7 +12634,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
                         break;
@@ -12645,7 +12645,7 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
                         gens = n.ps4;
                         gene = n.ps4eng;
                         break;
@@ -12655,7 +12655,89 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.WhatCont1();
+                        n.GenWhatCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }
+    public void GenWhatPerf1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhatPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
                         break;
