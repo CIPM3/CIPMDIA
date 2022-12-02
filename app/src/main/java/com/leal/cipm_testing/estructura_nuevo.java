@@ -5729,7 +5729,6 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
-
             case "What Continuous":
                 switch (selection2) {
                     case "0 a 100":
@@ -5771,7 +5770,6 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
-
             case "What Perfect":
                 switch (selection2) {
                     case "0 a 100":

@@ -50696,7 +50696,7 @@ public class Generator {
                 }
                 break;
         }
-    }
+    }//LR 02/12/2022
     public void GenWhatCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -50778,7 +50778,7 @@ public class Generator {
                 }
                 break;
         }
-    }
+    }//LR 02/12/2022
     public void GenWhatPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -50860,7 +50860,7 @@ public class Generator {
                 }
                 break;
         }
-    }
+    }//LR 02/12/2022
 
     //PD 02/12/2022
     public void GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo(){
@@ -52804,4 +52804,3 @@ public class Generator {
         }
     }
 }
-
