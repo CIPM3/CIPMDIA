@@ -15,9 +15,10 @@
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
+        <item>What Simple</item>
         <item>What Continuous</item>
         <item>What Perfect</item>
-
+        <item>What Perfect Continuous</item>
 
     </string-array>
     <string-array name="structures">
