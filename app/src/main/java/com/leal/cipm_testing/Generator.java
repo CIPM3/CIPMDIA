@@ -49413,6 +49413,7 @@ public class Generator {
 
 
     //conectores estandar
+    //PD 01/12/2022
     public void GenConectoresStandarPresenteSimpleXPresenteSimple() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 6);
@@ -50856,6 +50857,1948 @@ public class Generator {
                         gens = n.ps5;
                         gene = n.ps5eng;
                         break;
+                }
+                break;
+        }
+    }
+
+    //PD 02/12/2022
+    public void GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 6);
+        int con = (int)(Math.random()*ConectoresEstandar.length );
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n1 = new Nobles();
+                        n.GenPresSimp1();
+                        n1.GenPresPerfCont1();
+                        gens = n.ps1+ConectoresEstandar[con]+n1.ps1;
+                        gene = n.ps1eng+StandardConectors[con]+n1.ps1eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s1 = new Special();
+                        s.GenPresSimp1();
+                        s1.GenPresPerfCont1();
+                        gens = s.sp1+ConectoresEstandar[con]+s1.sp1;
+                        gene = s.eng1+StandardConectors[con]+s1.eng1;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp1+ConectoresEstandar[con]+i2.sp1;
+                        gene = i.eng1+StandardConectors[con]+i2.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps1+ConectoresEstandar[con]+p2.ps1;
+                        gene = p.ps1eng+StandardConectors[con]+p2.ps1eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps1+ConectoresEstandar[con]+o2.ps1;
+                        gene = o.ps1eng+StandardConectors[con]+o2.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps1+ConectoresEstandar[con]+ab2.ps1;
+                        gene = ab.ps1eng+StandardConectors[con]+ab2.ps1eng;
+                        break;
+
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps2+ConectoresEstandar[con]+n2.ps2;
+                        gene = n.ps2eng+StandardConectors[con]+n.ps2eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp2+ConectoresEstandar[con]+s2.sp2;
+                        gene = s.eng2+StandardConectors[con]+s2.eng2;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp2+ConectoresEstandar[con]+i2.sp2;
+                        gene = i.eng2+ConectoresEstandar[con]+i2.eng2;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps2+ConectoresEstandar[con]+p2.ps2;
+                        gene = p.ps2eng+StandardConectors[con]+p2.ps2eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
+                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps2+ConectoresEstandar[con]+ab2.ps2;
+                        gene = ab.ps2eng+StandardConectors[con]+ab2.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps3+ConectoresEstandar[con]+n2.ps3;
+                        gene = n.ps3eng+StandardConectors[con]+n.ps3eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp3+ConectoresEstandar[con]+s2.sp3;
+                        gene = s.eng3+StandardConectors[con]+s2.eng3;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp3+ConectoresEstandar[con]+i2.sp3;
+                        gene = i.eng3+ConectoresEstandar[con]+i2.eng3;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps3+ConectoresEstandar[con]+p2.ps3;
+                        gene = p.ps3eng+StandardConectors[con]+p2.ps3eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
+                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps3+ConectoresEstandar[con]+ab2.ps3;
+                        gene = ab.ps3eng+StandardConectors[con]+ab2.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps3ella+ConectoresEstandar[con]+n2.ps3ella;
+                        gene = n.ps3she+StandardConectors[con]+n.ps3she;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp4+ConectoresEstandar[con]+s2.sp4;
+                        gene = s.eng4+StandardConectors[con]+s2.eng4;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp4+ConectoresEstandar[con]+i2.sp4;
+                        gene = i.eng4+ConectoresEstandar[con]+i2.eng4;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps3ella+ConectoresEstandar[con]+p2.ps3ella;
+                        gene = p.ps3she+StandardConectors[con]+p2.ps3she;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
+                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps3ella+ConectoresEstandar[con]+ab2.ps3ella;
+                        gene = ab.ps3she+StandardConectors[con]+ab2.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps3eso+ConectoresEstandar[con]+n2.ps3eso;
+                        gene = n.ps3it+StandardConectors[con]+n.ps3it;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp5+ConectoresEstandar[con]+s2.sp5;
+                        gene = s.eng5+StandardConectors[con]+s2.eng5;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp5+ConectoresEstandar[con]+i2.sp5;
+                        gene = i.eng5+ConectoresEstandar[con]+i2.eng5;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps3eso+ConectoresEstandar[con]+p2.ps3eso;
+                        gene = p.ps3it+StandardConectors[con]+p2.ps3it;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
+                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps3eso+ConectoresEstandar[con]+ab2.ps3eso;
+                        gene = ab.ps3it+StandardConectors[con]+ab2.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps4+ConectoresEstandar[con]+n2.ps4;
+                        gene = n.ps4eng+StandardConectors[con]+n.ps4eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp6+ConectoresEstandar[con]+s2.sp6;
+                        gene = s.eng6+StandardConectors[con]+s2.eng6;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp6+ConectoresEstandar[con]+i2.sp6;
+                        gene = i.eng6+ConectoresEstandar[con]+i2.eng6;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps4+ConectoresEstandar[con]+p2.ps4;
+                        gene = p.ps4eng+StandardConectors[con]+p2.ps4eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
+                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps4+ConectoresEstandar[con]+ab2.ps4;
+                        gene = ab.ps4eng+StandardConectors[con]+ab2.ps4eng;
+                        break;
+
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenPresPerfCont1();
+                        gens = n.ps5+ConectoresEstandar[con]+n2.ps5;
+                        gene = n.ps5eng+StandardConectors[con]+n.ps5eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenPresPerfCont1();
+                        gens = s.sp7+ConectoresEstandar[con]+s2.sp7;
+                        gene = s.eng7+StandardConectors[con]+s2.eng7;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenPresPerfCont1();
+                        gens = i.sp7+ConectoresEstandar[con]+i2.sp7;
+                        gene = i.eng7+ConectoresEstandar[con]+i2.eng7;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenPresPerfCont1();
+                        gens = p.ps5+ConectoresEstandar[con]+p2.ps5;
+                        gene = p.ps5eng+StandardConectors[con]+p2.ps5eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenPresPerfCont1();
+                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
+                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenPresPerfCont1();
+                        gens = ab.ps5+ConectoresEstandar[con]+ab2.ps5;
+                        gene = ab.ps5eng+StandardConectors[con]+ab2.ps5eng;
+                        break;
+
+                }
+                break;
+        }
+    }
+    public void GenConectoresStandarPresenteSimpleXFuturoSimple(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 6);
+        int con = (int)(Math.random()*ConectoresEstandar.length );
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n1 = new Nobles();
+                        n.GenPresSimp1();
+                        n1.GenFutSimp1();
+                        gens = n.ps1+ConectoresEstandar[con]+n1.ps1;
+                        gene = n.ps1eng+StandardConectors[con]+n1.ps1eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s1 = new Special();
+                        s.GenPresSimp1();
+                        s1.GenFutSimp1();
+                        gens = s.sp1+ConectoresEstandar[con]+s1.sp1;
+                        gene = s.eng1+StandardConectors[con]+s1.eng1;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp1+ConectoresEstandar[con]+i2.sp1;
+                        gene = i.eng1+StandardConectors[con]+i2.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps1+ConectoresEstandar[con]+p2.ps1;
+                        gene = p.ps1eng+StandardConectors[con]+p2.ps1eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps1+ConectoresEstandar[con]+o2.ps1;
+                        gene = o.ps1eng+StandardConectors[con]+o2.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps1+ConectoresEstandar[con]+ab2.ps1;
+                        gene = ab.ps1eng+StandardConectors[con]+ab2.ps1eng;
+                        break;
+
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps2+ConectoresEstandar[con]+n2.ps2;
+                        gene = n.ps2eng+StandardConectors[con]+n.ps2eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp2+ConectoresEstandar[con]+s2.sp2;
+                        gene = s.eng2+StandardConectors[con]+s2.eng2;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp2+ConectoresEstandar[con]+i2.sp2;
+                        gene = i.eng2+ConectoresEstandar[con]+i2.eng2;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps2+ConectoresEstandar[con]+p2.ps2;
+                        gene = p.ps2eng+StandardConectors[con]+p2.ps2eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
+                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps2+ConectoresEstandar[con]+ab2.ps2;
+                        gene = ab.ps2eng+StandardConectors[con]+ab2.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps3+ConectoresEstandar[con]+n2.ps3;
+                        gene = n.ps3eng+StandardConectors[con]+n.ps3eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp3+ConectoresEstandar[con]+s2.sp3;
+                        gene = s.eng3+StandardConectors[con]+s2.eng3;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp3+ConectoresEstandar[con]+i2.sp3;
+                        gene = i.eng3+ConectoresEstandar[con]+i2.eng3;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps3+ConectoresEstandar[con]+p2.ps3;
+                        gene = p.ps3eng+StandardConectors[con]+p2.ps3eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
+                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps3+ConectoresEstandar[con]+ab2.ps3;
+                        gene = ab.ps3eng+StandardConectors[con]+ab2.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps3ella+ConectoresEstandar[con]+n2.ps3ella;
+                        gene = n.ps3she+StandardConectors[con]+n.ps3she;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp4+ConectoresEstandar[con]+s2.sp4;
+                        gene = s.eng4+StandardConectors[con]+s2.eng4;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp4+ConectoresEstandar[con]+i2.sp4;
+                        gene = i.eng4+ConectoresEstandar[con]+i2.eng4;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps3ella+ConectoresEstandar[con]+p2.ps3ella;
+                        gene = p.ps3she+StandardConectors[con]+p2.ps3she;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
+                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps3ella+ConectoresEstandar[con]+ab2.ps3ella;
+                        gene = ab.ps3she+StandardConectors[con]+ab2.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps3eso+ConectoresEstandar[con]+n2.ps3eso;
+                        gene = n.ps3it+StandardConectors[con]+n.ps3it;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp5+ConectoresEstandar[con]+s2.sp5;
+                        gene = s.eng5+StandardConectors[con]+s2.eng5;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp5+ConectoresEstandar[con]+i2.sp5;
+                        gene = i.eng5+ConectoresEstandar[con]+i2.eng5;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps3eso+ConectoresEstandar[con]+p2.ps3eso;
+                        gene = p.ps3it+StandardConectors[con]+p2.ps3it;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
+                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps3eso+ConectoresEstandar[con]+ab2.ps3eso;
+                        gene = ab.ps3it+StandardConectors[con]+ab2.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps4+ConectoresEstandar[con]+n2.ps4;
+                        gene = n.ps4eng+StandardConectors[con]+n.ps4eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp6+ConectoresEstandar[con]+s2.sp6;
+                        gene = s.eng6+StandardConectors[con]+s2.eng6;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp6+ConectoresEstandar[con]+i2.sp6;
+                        gene = i.eng6+ConectoresEstandar[con]+i2.eng6;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps4+ConectoresEstandar[con]+p2.ps4;
+                        gene = p.ps4eng+StandardConectors[con]+p2.ps4eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
+                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps4+ConectoresEstandar[con]+ab2.ps4;
+                        gene = ab.ps4eng+StandardConectors[con]+ab2.ps4eng;
+                        break;
+
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenFutSimp1();
+                        gens = n.ps5+ConectoresEstandar[con]+n2.ps5;
+                        gene = n.ps5eng+StandardConectors[con]+n.ps5eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenFutSimp1();
+                        gens = s.sp7+ConectoresEstandar[con]+s2.sp7;
+                        gene = s.eng7+StandardConectors[con]+s2.eng7;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenFutSimp1();
+                        gens = i.sp7+ConectoresEstandar[con]+i2.sp7;
+                        gene = i.eng7+ConectoresEstandar[con]+i2.eng7;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenFutSimp1();
+                        gens = p.ps5+ConectoresEstandar[con]+p2.ps5;
+                        gene = p.ps5eng+StandardConectors[con]+p2.ps5eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenFutSimp1();
+                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
+                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenFutSimp1();
+                        gens = ab.ps5+ConectoresEstandar[con]+ab2.ps5;
+                        gene = ab.ps5eng+StandardConectors[con]+ab2.ps5eng;
+                        break;
+
+                }
+                break;
+        }
+    }
+    public void GenConectoresStandarPresenteSimpleXReportedSpeech(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 5);
+        int con = (int)(Math.random()*ConectoresEstandar.length );
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n1 = new Nobles();
+                        n.GenPresSimp1();
+                        n1.ReportedSpeech1();
+                        gens = n.ps1+ConectoresEstandar[con]+n1.ps1;
+                        gene = n.ps1eng+StandardConectors[con]+n1.ps1eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s1 = new Special();
+                        s.GenPresSimp1();
+                        s1.ReportedSpeech1();
+                        gens = s.sp1+ConectoresEstandar[con]+s1.sp1;
+                        gene = s.eng1+StandardConectors[con]+s1.eng1;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps1+ConectoresEstandar[con]+ab2.ps1;
+                        gene = ab.ps1eng+StandardConectors[con]+ab2.ps1eng;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps1+ConectoresEstandar[con]+p2.ps1;
+                        gene = p.ps1eng+StandardConectors[con]+p2.ps1eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps1+ConectoresEstandar[con]+o2.ps1;
+                        gene = o.ps1eng+StandardConectors[con]+o2.ps1eng;
+                        break;
+
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps2+ConectoresEstandar[con]+n2.ps2;
+                        gene = n.ps2eng+StandardConectors[con]+n.ps2eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp2+ConectoresEstandar[con]+s2.sp2;
+                        gene = s.eng2+StandardConectors[con]+s2.eng2;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps2+ConectoresEstandar[con]+ab2.ps2;
+                        gene = ab.ps2eng+StandardConectors[con]+ab2.ps2eng;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps2+ConectoresEstandar[con]+p2.ps2;
+                        gene = p.ps2eng+StandardConectors[con]+p2.ps2eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
+                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        break;
+
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps3+ConectoresEstandar[con]+n2.ps3;
+                        gene = n.ps3eng+StandardConectors[con]+n.ps3eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp3+ConectoresEstandar[con]+s2.sp3;
+                        gene = s.eng3+StandardConectors[con]+s2.eng3;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps3+ConectoresEstandar[con]+ab2.ps3;
+                        gene = ab.ps3eng+StandardConectors[con]+ab2.ps3eng;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps3+ConectoresEstandar[con]+p2.ps3;
+                        gene = p.ps3eng+StandardConectors[con]+p2.ps3eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
+                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        break;
+
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps3ella+ConectoresEstandar[con]+n2.ps3ella;
+                        gene = n.ps3she+StandardConectors[con]+n.ps3she;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp4+ConectoresEstandar[con]+s2.sp4;
+                        gene = s.eng4+StandardConectors[con]+s2.eng4;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps3ella+ConectoresEstandar[con]+ab2.ps3ella;
+                        gene = ab.ps3she+StandardConectors[con]+ab2.ps3she;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps3ella+ConectoresEstandar[con]+p2.ps3ella;
+                        gene = p.ps3she+StandardConectors[con]+p2.ps3she;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
+                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        break;
+
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps3eso+ConectoresEstandar[con]+n2.ps3eso;
+                        gene = n.ps3it+StandardConectors[con]+n.ps3it;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp5+ConectoresEstandar[con]+s2.sp5;
+                        gene = s.eng5+StandardConectors[con]+s2.eng5;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps3eso+ConectoresEstandar[con]+ab2.ps3eso;
+                        gene = ab.ps3it+StandardConectors[con]+ab2.ps3it;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps3eso+ConectoresEstandar[con]+p2.ps3eso;
+                        gene = p.ps3it+StandardConectors[con]+p2.ps3it;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
+                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps4+ConectoresEstandar[con]+n2.ps4;
+                        gene = n.ps4eng+StandardConectors[con]+n.ps4eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp6+ConectoresEstandar[con]+s2.sp6;
+                        gene = s.eng6+StandardConectors[con]+s2.eng6;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps4+ConectoresEstandar[con]+ab2.ps4;
+                        gene = ab.ps4eng+StandardConectors[con]+ab2.ps4eng;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps4+ConectoresEstandar[con]+p2.ps4;
+                        gene = p.ps4eng+StandardConectors[con]+p2.ps4eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
+                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        break;
+
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.ReportedSpeech1();
+                        gens = n.ps5+ConectoresEstandar[con]+n2.ps5;
+                        gene = n.ps5eng+StandardConectors[con]+n.ps5eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.ReportedSpeech1();
+                        gens = s.sp7+ConectoresEstandar[con]+s2.sp7;
+                        gene = s.eng7+StandardConectors[con]+s2.eng7;
+                        break;
+                    case 2:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.ReportedSpeech1();
+                        gens = ab.ps5+ConectoresEstandar[con]+ab2.ps5;
+                        gene = ab.ps5eng+StandardConectors[con]+ab2.ps5eng;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.ReportedSpeech1();
+                        gens = p.ps5+ConectoresEstandar[con]+p2.ps5;
+                        gene = p.ps5eng+StandardConectors[con]+p2.ps5eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.ReportedSpeech1();
+                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
+                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        break;
+
+                }
+                break;
+        }
+    }
+    public void GenConectoresStandarPresenteSimpleXMustSimple(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 6);
+        int con = (int)(Math.random()*ConectoresEstandar.length );
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n1 = new Nobles();
+                        n.GenPresSimp1();
+                        n1.GenMustSimp1();
+                        gens = n.ps1+ConectoresEstandar[con]+n1.ps1;
+                        gene = n.ps1eng+StandardConectors[con]+n1.ps1eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s1 = new Special();
+                        s.GenPresSimp1();
+                        s1.GenMustSimp1();
+                        gens = s.sp1+ConectoresEstandar[con]+s1.sp1;
+                        gene = s.eng1+StandardConectors[con]+s1.eng1;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp1+ConectoresEstandar[con]+i2.sp1;
+                        gene = i.eng1+StandardConectors[con]+i2.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps1+ConectoresEstandar[con]+p2.ps1;
+                        gene = p.ps1eng+StandardConectors[con]+p2.ps1eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps1+ConectoresEstandar[con]+o2.ps1;
+                        gene = o.ps1eng+StandardConectors[con]+o2.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps1+ConectoresEstandar[con]+ab2.ps1;
+                        gene = ab.ps1eng+StandardConectors[con]+ab2.ps1eng;
+                        break;
+
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps2+ConectoresEstandar[con]+n2.ps2;
+                        gene = n.ps2eng+StandardConectors[con]+n.ps2eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp2+ConectoresEstandar[con]+s2.sp2;
+                        gene = s.eng2+StandardConectors[con]+s2.eng2;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp2+ConectoresEstandar[con]+i2.sp2;
+                        gene = i.eng2+ConectoresEstandar[con]+i2.eng2;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps2+ConectoresEstandar[con]+p2.ps2;
+                        gene = p.ps2eng+StandardConectors[con]+p2.ps2eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
+                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps2+ConectoresEstandar[con]+ab2.ps2;
+                        gene = ab.ps2eng+StandardConectors[con]+ab2.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps3+ConectoresEstandar[con]+n2.ps3;
+                        gene = n.ps3eng+StandardConectors[con]+n.ps3eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp3+ConectoresEstandar[con]+s2.sp3;
+                        gene = s.eng3+StandardConectors[con]+s2.eng3;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp3+ConectoresEstandar[con]+i2.sp3;
+                        gene = i.eng3+ConectoresEstandar[con]+i2.eng3;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps3+ConectoresEstandar[con]+p2.ps3;
+                        gene = p.ps3eng+StandardConectors[con]+p2.ps3eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
+                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps3+ConectoresEstandar[con]+ab2.ps3;
+                        gene = ab.ps3eng+StandardConectors[con]+ab2.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps3ella+ConectoresEstandar[con]+n2.ps3ella;
+                        gene = n.ps3she+StandardConectors[con]+n.ps3she;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp4+ConectoresEstandar[con]+s2.sp4;
+                        gene = s.eng4+StandardConectors[con]+s2.eng4;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp4+ConectoresEstandar[con]+i2.sp4;
+                        gene = i.eng4+ConectoresEstandar[con]+i2.eng4;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps3ella+ConectoresEstandar[con]+p2.ps3ella;
+                        gene = p.ps3she+StandardConectors[con]+p2.ps3she;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
+                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps3ella+ConectoresEstandar[con]+ab2.ps3ella;
+                        gene = ab.ps3she+StandardConectors[con]+ab2.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps3eso+ConectoresEstandar[con]+n2.ps3eso;
+                        gene = n.ps3it+StandardConectors[con]+n.ps3it;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp5+ConectoresEstandar[con]+s2.sp5;
+                        gene = s.eng5+StandardConectors[con]+s2.eng5;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp5+ConectoresEstandar[con]+i2.sp5;
+                        gene = i.eng5+ConectoresEstandar[con]+i2.eng5;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps3eso+ConectoresEstandar[con]+p2.ps3eso;
+                        gene = p.ps3it+StandardConectors[con]+p2.ps3it;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
+                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps3eso+ConectoresEstandar[con]+ab2.ps3eso;
+                        gene = ab.ps3it+StandardConectors[con]+ab2.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps4+ConectoresEstandar[con]+n2.ps4;
+                        gene = n.ps4eng+StandardConectors[con]+n.ps4eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp6+ConectoresEstandar[con]+s2.sp6;
+                        gene = s.eng6+StandardConectors[con]+s2.eng6;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp6+ConectoresEstandar[con]+i2.sp6;
+                        gene = i.eng6+ConectoresEstandar[con]+i2.eng6;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps4+ConectoresEstandar[con]+p2.ps4;
+                        gene = p.ps4eng+StandardConectors[con]+p2.ps4eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
+                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps4+ConectoresEstandar[con]+ab2.ps4;
+                        gene = ab.ps4eng+StandardConectors[con]+ab2.ps4eng;
+                        break;
+
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenMustSimp1();
+                        gens = n.ps5+ConectoresEstandar[con]+n2.ps5;
+                        gene = n.ps5eng+StandardConectors[con]+n.ps5eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenMustSimp1();
+                        gens = s.sp7+ConectoresEstandar[con]+s2.sp7;
+                        gene = s.eng7+StandardConectors[con]+s2.eng7;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenMustSimp1();
+                        gens = i.sp7+ConectoresEstandar[con]+i2.sp7;
+                        gene = i.eng7+ConectoresEstandar[con]+i2.eng7;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenMustSimp1();
+                        gens = p.ps5+ConectoresEstandar[con]+p2.ps5;
+                        gene = p.ps5eng+StandardConectors[con]+p2.ps5eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenMustSimp1();
+                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
+                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenMustSimp1();
+                        gens = ab.ps5+ConectoresEstandar[con]+ab2.ps5;
+                        gene = ab.ps5eng+StandardConectors[con]+ab2.ps5eng;
+                        break;
+
+                }
+                break;
+        }
+    }
+    public void GenConectoresStandarPresenteSimpleXCanSimple(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 6);
+        int con = (int)(Math.random()*ConectoresEstandar.length );
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n1 = new Nobles();
+                        n.GenPresSimp1();
+                        n1.GenCanSimp1();
+                        gens = n.ps1+ConectoresEstandar[con]+n1.ps1;
+                        gene = n.ps1eng+StandardConectors[con]+n1.ps1eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s1 = new Special();
+                        s.GenPresSimp1();
+                        s1.GenCanSimp1();
+                        gens = s.sp1+ConectoresEstandar[con]+s1.sp1;
+                        gene = s.eng1+StandardConectors[con]+s1.eng1;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp1+ConectoresEstandar[con]+i2.sp1;
+                        gene = i.eng1+StandardConectors[con]+i2.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps1+ConectoresEstandar[con]+p2.ps1;
+                        gene = p.ps1eng+StandardConectors[con]+p2.ps1eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps1+ConectoresEstandar[con]+o2.ps1;
+                        gene = o.ps1eng+StandardConectors[con]+o2.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps1+ConectoresEstandar[con]+ab2.ps1;
+                        gene = ab.ps1eng+StandardConectors[con]+ab2.ps1eng;
+                        break;
+
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps2+ConectoresEstandar[con]+n2.ps2;
+                        gene = n.ps2eng+StandardConectors[con]+n.ps2eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp2+ConectoresEstandar[con]+s2.sp2;
+                        gene = s.eng2+StandardConectors[con]+s2.eng2;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp2+ConectoresEstandar[con]+i2.sp2;
+                        gene = i.eng2+ConectoresEstandar[con]+i2.eng2;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps2+ConectoresEstandar[con]+p2.ps2;
+                        gene = p.ps2eng+StandardConectors[con]+p2.ps2eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
+                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps2+ConectoresEstandar[con]+ab2.ps2;
+                        gene = ab.ps2eng+StandardConectors[con]+ab2.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps3+ConectoresEstandar[con]+n2.ps3;
+                        gene = n.ps3eng+StandardConectors[con]+n.ps3eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp3+ConectoresEstandar[con]+s2.sp3;
+                        gene = s.eng3+StandardConectors[con]+s2.eng3;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp3+ConectoresEstandar[con]+i2.sp3;
+                        gene = i.eng3+ConectoresEstandar[con]+i2.eng3;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps3+ConectoresEstandar[con]+p2.ps3;
+                        gene = p.ps3eng+StandardConectors[con]+p2.ps3eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
+                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps3+ConectoresEstandar[con]+ab2.ps3;
+                        gene = ab.ps3eng+StandardConectors[con]+ab2.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps3ella+ConectoresEstandar[con]+n2.ps3ella;
+                        gene = n.ps3she+StandardConectors[con]+n.ps3she;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp4+ConectoresEstandar[con]+s2.sp4;
+                        gene = s.eng4+StandardConectors[con]+s2.eng4;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp4+ConectoresEstandar[con]+i2.sp4;
+                        gene = i.eng4+ConectoresEstandar[con]+i2.eng4;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps3ella+ConectoresEstandar[con]+p2.ps3ella;
+                        gene = p.ps3she+StandardConectors[con]+p2.ps3she;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
+                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps3ella+ConectoresEstandar[con]+ab2.ps3ella;
+                        gene = ab.ps3she+StandardConectors[con]+ab2.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps3eso+ConectoresEstandar[con]+n2.ps3eso;
+                        gene = n.ps3it+StandardConectors[con]+n.ps3it;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp5+ConectoresEstandar[con]+s2.sp5;
+                        gene = s.eng5+StandardConectors[con]+s2.eng5;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp5+ConectoresEstandar[con]+i2.sp5;
+                        gene = i.eng5+ConectoresEstandar[con]+i2.eng5;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps3eso+ConectoresEstandar[con]+p2.ps3eso;
+                        gene = p.ps3it+StandardConectors[con]+p2.ps3it;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
+                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps3eso+ConectoresEstandar[con]+ab2.ps3eso;
+                        gene = ab.ps3it+StandardConectors[con]+ab2.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps4+ConectoresEstandar[con]+n2.ps4;
+                        gene = n.ps4eng+StandardConectors[con]+n.ps4eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp6+ConectoresEstandar[con]+s2.sp6;
+                        gene = s.eng6+StandardConectors[con]+s2.eng6;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp6+ConectoresEstandar[con]+i2.sp6;
+                        gene = i.eng6+ConectoresEstandar[con]+i2.eng6;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps4+ConectoresEstandar[con]+p2.ps4;
+                        gene = p.ps4eng+StandardConectors[con]+p2.ps4eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
+                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps4+ConectoresEstandar[con]+ab2.ps4;
+                        gene = ab.ps4eng+StandardConectors[con]+ab2.ps4eng;
+                        break;
+
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        Nobles n2 = new Nobles();
+                        n.GenPresSimp1();
+                        n2.GenCanSimp1();
+                        gens = n.ps5+ConectoresEstandar[con]+n2.ps5;
+                        gene = n.ps5eng+StandardConectors[con]+n.ps5eng;
+                        break;
+                    case 1:
+                        Special s = new Special();
+                        Special s2 = new Special();
+                        s.GenPresSimp1();
+                        s2.GenCanSimp1();
+                        gens = s.sp7+ConectoresEstandar[con]+s2.sp7;
+                        gene = s.eng7+StandardConectors[con]+s2.eng7;
+                        break;
+                    case 2:
+                        Intrans i = new Intrans();
+                        Intrans i2 = new Intrans();
+                        i.GenPresSimp1();
+                        i2.GenCanSimp1();
+                        gens = i.sp7+ConectoresEstandar[con]+i2.sp7;
+                        gene = i.eng7+ConectoresEstandar[con]+i2.eng7;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        People p2 = new People();
+                        p.GenPresSimp1();
+                        p2.GenCanSimp1();
+                        gens = p.ps5+ConectoresEstandar[con]+p2.ps5;
+                        gene = p.ps5eng+StandardConectors[con]+p2.ps5eng;
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        Oo o2 = new Oo();
+                        o.GenPresSimp1();
+                        o2.GenCanSimp1();
+                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
+                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        Abstractos ab2 = new Abstractos();
+                        ab.GenPresSimp1();
+                        ab2.GenCanSimp1();
+                        gens = ab.ps5+ConectoresEstandar[con]+ab2.ps5;
+                        gene = ab.ps5eng+StandardConectors[con]+ab2.ps5eng;
+                        break;
+
                 }
                 break;
         }
