@@ -15,6 +15,9 @@
         <item>What Simple</item>
         <item>What Continuous</item>
         <item>What Perfect</item>
+        <item>What Modals Simple</item>
+        <item>What Modals Continuous</item>
+
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>

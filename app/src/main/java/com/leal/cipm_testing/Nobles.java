@@ -336,6 +336,50 @@ public class Nobles {
     String sperfWedont[]={"haven't we ", "hadn't we ", "won't we have "};
     String sperfWeespno[]={"no hemos ", "no habíamos ", "no habrémos "};
 
+    //What Continuo Modals
+    String scontmI[] = {"would i be ", "could i be ", "should i be "};
+    String scontmIesp[] = {"estaría ", "podría estar ", "debería estar "};
+
+    String scontmYou[] = {"would you be ", "could you be ", "should you be "};
+    String scontmYouesp[]={"estarías ", "podrías estar ", "deberías estar "};
+
+    String scontmHe[]={"would he be ", "could he be ", "should he be "};
+    String scontmHeesp[]={"estaría ", "podría estar ", "debería estar "};
+
+    String scontmShe[]={"would she be ", "could she be ", "should she be "};
+    String scontmSheesp[]={"estaría ", "podría estar ", "debería estar "};
+
+    String scontmIt[]={"would it be ", "could it be ", "should it be "};
+    String scontmItesp[]={"estaría ", "podría estar ", "debería estar "};
+
+    String scontmThey[]={"would they be ", "could they be ", "should they be "};
+    String scontmTheyesp[]={"estarían ", "podrían estar ", "deberían estar "};
+
+    String scontmWe[]={"would we be ", "could we be ", "should we be "};
+    String scontmWeesp[]={"estaríamos ", "podríamos estar ", "deberíamos estar "};
+
+    //What Continuous Modals
+    String scontmIdont[] = {"wouldn't i be ", "couldn't i be ", "shouldn't i be "};
+    String scontmIespno[] = {"no estaría ", "no podría estar ", "no debería estar "};
+
+    String scontmYoudont[] = {"wouldn't you be ", "couldn't you be ", "shouldn't you be "};
+    String scontmYouespno[]={"no estarías ", "no podrías estar ", "no deberías estar"};
+
+    String scontmHedont[]={"wouldn't he be ", "couldn't he be ", "shouldn't he be "};
+    String scontmHeespno[]={"no estaría ", "no podría estar ", "no debería estar "};
+
+    String scontmShedont[]={"wouldn't she be ", "couldn't she be ", "shouldn't she be "};
+    String scontmSheespno[]={"no estaría ", "no podría estar ", "no debería estar "};
+
+    String scontmItdont[]={"wouldn't it be ", "couldn't it be ", "shouldn't it be "};
+    String scontmItespno[]={"no estaría ", "no podría estar ", "no debería estar "};
+
+    String scontmTheydont[]={"wouldn't they be ", "couldn't they be ", "shouldn't they be "};
+    String scontmTheyespno[]={"no estarían ", "no podrían estar ", "no deberían estar "};
+
+    String scontmWedont[]={"wouldn't we be ", "couldn't we be ", "shouldn't we be "};
+    String scontmWeespno[]={"no estaríamos ", "no podríamos estar ", "no deberíamos estar "};
+
     String ps1; // esta la uso para primera persona esp
     String ps1eng;
     String ps2;
@@ -12261,6 +12305,7 @@ public class Nobles {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
         switch (neg) {
+            //Presente
             case 0:
                 ps1 = "¿Que " + vn1[v] + "yo?";
                 ps1eng = "What do i" + vnb[v] + "?";
@@ -12306,6 +12351,7 @@ public class Nobles {
                 ps5eng = "What don't we " + vnb[v] + "?";
                 break;
 
+                //Pasado
             case 2:
                 if (sr == 0) {
                     ps1 = "¿Que " + ps1pre[v] + "yo?";
@@ -12351,7 +12397,6 @@ public class Nobles {
                     ps5eng = "What did we " + vnb[v] + "?";
                 }
                 break;
-
             case 3:
                 if (sr == 0) {
                     ps1 = "¿Que no " + ps1pre[v] + "yo?";
@@ -12398,6 +12443,7 @@ public class Nobles {
                 }
                 break;
 
+                //Futuro
             case 4:
                 ps1 = "¿Que " + vn1f[v] + "yo?";
                 ps1eng = "What will i " + vnb[v] + "?";
@@ -12443,7 +12489,7 @@ public class Nobles {
                 ps5eng = "What won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 02/12/2022
     public void GenWhatCont1() {
         switch (neg) {
             case 0:
@@ -12492,7 +12538,7 @@ public class Nobles {
                 ps5eng = "What " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 02/12/2022
     public void GenWhatPerf1() {
         switch (neg) {
             case 0:
@@ -12539,6 +12585,200 @@ public class Nobles {
                 ps5 = "¿Que " + sperfWeespno[s] + vpsp[v] + "nosotros?";
                 ps5eng = "What " + sperfWedont[s] + vpeng[v] + "?";
 
+                break;
+        }
+    }//LR 02/12/2022
+
+   //What Modales
+   public void GenWhatModalsSimp1(){
+       int neg = (int) (Math.random() * 6);
+        switch (neg){
+            //Would
+            case 0:
+                ps1 = "¿Que " + vn1w[v] + "yo?";
+                ps1eng = "What " + "would i " + vnb[v] + "?";
+
+                ps2 = "¿Que " + vn2w[v] + "tú?";
+                ps2eng = "What " + "would you " + vnb[v] + "?";
+
+                ps3 = "¿Que " + vn3w[v] + "él?";
+                ps3eng = "What " + "would he " + vnb[v] + "?";
+
+                ps3ella = "¿Que " + vn3w[v] + "ella?";
+                ps3she = "What " + "would she " + vnb[v] + "?";
+
+                ps3eso = "¿Que " + vn3w[v] + "eso?";
+                ps3it = "What " + "would it " + vnb[v] + "?";
+
+                ps4 = "¿Que " + vn4w[v] + "ellos?";
+                ps4eng = "What " + "would they " + vnb[v] + "?";
+
+                ps5 = "¿Que " + vn5w[v] + "nosotros?";
+                ps5eng = "What " + "would we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Que no " + vn1w[v] + "yo?";
+                ps1eng = "What " + "wouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Que no " + vn2w[v] + "tú?";
+                ps2eng = "What " + "wouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Que no " + vn3w[v] + "él?";
+                ps3eng = "What " + "wouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Que no " + vn3w[v] + "ella?";
+                ps3she = "What " + "wouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Que no " + vn3w[v] + "eso?";
+                ps3it = "What " + "wouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Que no " + vn4w[v] + "ellos?";
+                ps4eng = "What " + "wouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Que no " + vn5w[v] + "nosotros?";
+                ps5eng = "What " + "wouldn't we " + vnb[v] + "?";
+                break;
+
+            //Could
+            case 2:
+                ps1 = "¿Que " + "podría " + vnbs[v] + "yo?";
+                ps1eng = "What " + "could i " + vnb[v] + "?";
+
+                ps2 = "¿Que " + "podrías " + vnbs[v] + "tú?";
+                ps2eng = "What " + "could you " + vnb[v] + "?";
+
+                ps3 = "¿Que " + "podría " + vnbs[v] + "él?";
+                ps3eng = "What " + "could he " + vnb[v] + "?";
+
+                ps3ella = "¿Que " + "podría " + vnbs[v] + "ella?";
+                ps3she = "What " + "could she " + vnb[v] + "?";
+
+                ps3eso = "¿Que " + "podría " + vnbs[v] + "eso?";
+                ps3it = "What " + "could it " + vnb[v] + "?";
+
+                ps4 = "¿Que " + "podrían " + vnbs[v] + "ellos?";
+                ps4eng = "What " + "could they " + vnb[v] + "?";
+
+                ps5 = "¿Que " + "podríamos " + vnbs[v] + "nosotros?";
+                ps5eng = "What " + "could we " + vnb[v] + "?";
+                break;
+            case 3:
+                ps1 = "¿Que no " + "podría " + vnbs[v] + "yo?";
+                ps1eng = "What " + "couldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Que no " + "podrías " + vnbs[v] + "tú?";
+                ps2eng = "What " + "couldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Que no " + "podría " + vnbs[v] + "él?";
+                ps3eng = "What " + "couldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Que no " + "podría " + vnbs[v] + "ella?";
+                ps3she = "What " + "couldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Que no " + "podría " + vnbs[v] + "eso?";
+                ps3it = "What " + "couldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Que no " + "podrían " + vnbs[v] + "ellos?";
+                ps4eng = "What " + "couldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Que no " + "podríamos " + vnbs[v] + "nosotros?";
+                ps5eng = "What " + "couldn't we " + vnb[v] + "?";
+                break;
+
+                //Should
+            case 4:
+                ps1 = "¿Que " + "debería " + vnbs[v] + "yo?";
+                ps1eng = "What " + "should i " + vnb[v] + "?";
+
+                ps2 = "¿Que " + "deberías " + vnbs[v] + "tú?";
+                ps2eng = "What " + "should you " + vnb[v] + "?";
+
+                ps3 = "¿Que " + "debería " + vnbs[v] + "él?";
+                ps3eng = "What " + "should he " + vnb[v] + "?";
+
+                ps3ella = "¿Que " + "debería " + vnbs[v] + "ella?";
+                ps3she = "What " + "should she " + vnb[v] + "?";
+
+                ps3eso = "¿Que " + "debería " + vnbs[v] + "eso?";
+                ps3it = "What " + "should it " + vnb[v] + "?";
+
+                ps4 = "¿Que " + "deberían " + vnbs[v] + "ellos?";
+                ps4eng = "What " + "should they " + vnb[v] + "?";
+
+                ps5 = "¿Que " + "deberíamos " + vnbs[v] + "nosotros?";
+                ps5eng = "What " + "should we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Que no " + "debería " + vnbs[v] + "yo?";
+                ps1eng = "What " + "shouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Que no " + "deberías " + vnbs[v] + "tú?";
+                ps2eng = "What " + "shouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Que no " + "debería " + vnbs[v] + "él?";
+                ps3eng = "What " + "shouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Que no " + "debería " + vnbs[v] + "ella?";
+                ps3she = "What " + "shouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Que no " + "debería " + vnbs[v] + "eso?";
+                ps3it = "What " + "shouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Que no " + "deberían " + vnbs[v] + "ellos?";
+                ps4eng = "What " + "shouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Que no " + "deberíamos " + vnbs[v] + "nosotros?";
+                ps5eng = "What " + "shouldn't we " + vnb[v] + "?";
+                break;
+
+        }
+   }//prueba
+   public void GenWhatModalsCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Que " + scontmIesp[s] + vnbcs[v] + "yo?";
+                ps1eng = "What " + scontmI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Que " + scontmYouesp[s] + vnbcs[v] + "tú?";
+                ps2eng = "What " + scontmYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Que " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "What " + scontmHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Que " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "What " + scontmShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Que " + scontmItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "What " + scontmIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Que " + scontmTheyesp[s] + vnbcs[v] + "ellos?";
+                ps4eng = "What " + scontmThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Que " + scontmWeesp[s] + vnbcs[v] + "nosotros?";
+                ps5eng = "What " + scontmWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Que " + scontmIespno[s] + vnbcs[v] + "yo?";
+                ps1eng = "What " + scontmIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Que " + scontmYouespno[s] + vnbcs[v] + "tú?";
+                ps2eng = "What " + scontmYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Que " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "What " + scontmHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Que " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "What " + scontmShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Que " + scontmItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "What " + scontmItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Que " + scontmTheyespno[s] + vnbcs[v] + "ellos?";
+                ps4eng = "What " + scontmTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Que " + scontmWeespno[s] + vnbcs[v] + "nosotros?";
+                ps5eng = "What " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
     }//prueba
