@@ -12,6 +12,13 @@ public class Generator {
     " sí ", " incluso sí ", " pero ", " sin embargo ", " mientras que "
     };
 
+    String ConectoresCondicionales[]={" siempre y cuando ", " a menos que "};
+    String ConditionalConectors[]={" as long as ", " unless "};
+
+    String TimeConectors[]={" while ", " as "};
+    String ConectoresDeTiempo[ ]={" mientras ", " en lo que " };
+
+
     String starters[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas ", "yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
     String pronouns[] = {"I ", "you ", "he ", "she ", "it ", "they ", "we "};
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
