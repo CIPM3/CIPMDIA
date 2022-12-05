@@ -247,7 +247,6 @@ public class Nobles {
             "un bloque de queso "
     };
 
-
     //What Continuo
     String scontI[] = {"am I ", "was i ", "will i be "};
     String scontIesp[] = {"estoy ", "estaba ", "estaré "};
