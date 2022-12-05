@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -100,13 +101,370 @@ public class Transicion extends AppCompatActivity {
                         });
                 break;
 
-            case"Conectores Standar Presente Continuo":
+            case "Conectores Standar Presente Continuo":
+                gen.GenConectoresStandarPresenteSimpleXPresenteContinuo();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
 
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
                 break;
-
             case "Conectores Standar Presente Perfecto":
+                gen.GenConectoresStandarPresenteSimpleXPresentePerfecto();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
 
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
                 break;
+            case "Conectores Standar Presente Perfecto Continuo":
+                gen.GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Futuro Simple":
+                gen.GenConectoresStandarPresenteSimpleXFuturoSimple();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Reported Speech":
+                gen.GenConectoresStandarPresenteSimpleXReportedSpeech();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Must Simple":
+                gen.GenConectoresStandarPresenteSimpleXMustSimple();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Can Simple":
+                gen.GenConectoresStandarPresenteSimpleXCanSimple();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Presente Simple X Want To":
+                gen.GenConectoresStandarPresenteSimpleXWantTo();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Presente Simple X Supposed To":
+                gen.GenConectoresStandarPresenteSimpleXSupposedTo();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Presente Simple X Be Used To":
+                gen.GenConectoresStandarPresenteSimpleXBeUsedTo();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+            case "Conectores Standar Can Simple X Can Simple":
+                gen.GenConectoresStandarCanSimpleXCanSimple();
+                spSentence.setText(gen.gens);
+                engSentence.setText(gen.gene);
+                tts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tts.setLanguage(spanish);
+                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                }
+
+                            }
+                        });
+                break;
+
         }
     }
     public void CheckAnswer(View view){
