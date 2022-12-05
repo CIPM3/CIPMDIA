@@ -27,7 +27,6 @@
         <item>What Simple</item>
         <item>What Continuous</item>
         <item>What Perfect</item>
-
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
@@ -99,6 +98,20 @@
         <item>Tutorial</item>
         <item>Black Fathers</item>
         <item>Is America Racist?</item>
+    </string-array>
+    <string-array name="Transition">
+        <item>Conectores Standar Presente Simple</item>
+        <item>Conectores Standar Presente Continuo</item>
+        <item>Conectores Standar Presente Perfecto</item>
+        <item>Conectores Standar Presente Perfecto Continuo</item>
+        <item>Conectores Standar Futuro Simple</item>
+        <item>Conectores Standar Reported Speech</item>
+        <item>Conectores Standar Must Simple</item>
+        <item>Conectores Standar Can Simple</item>
+        <item>Conectores Standar Presente Simple X Want To</item>
+        <item>Conectores Standar Presente Simple X Supposed To</item>
+        <item>Conectores Standar Presente Simple X Be Used To</item>
+        <item>Conectores Standar Can Simple X Can Simple</item>
     </string-array>
     <string-array name="pragerPremium">
         <item>Tutorial</item>
