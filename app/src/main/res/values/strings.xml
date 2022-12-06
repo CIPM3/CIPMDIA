@@ -103,6 +103,10 @@
         <item>Conectores Standar Presente Simple X Supposed To</item>
         <item>Conectores Standar Presente Simple X Be Used To</item>
         <item>Conectores Standar Can Simple X Can Simple</item>
+        <item>Conectores Standar Should Simple X Can Simple</item>
+        <item>Conectores Standar Can Simple X Presente Simple</item>
+        <item>Conectores Standar Can Simple X Presente Continuo</item>
+        <item>Conectores Standar Can Simple X Presente Perfecto</item>
     </string-array>
     <string-array name="pragerPremium">
         <item>Tutorial</item>
