@@ -107,14 +107,18 @@
         <item>Conectores Standar Presente Simple X Supposed To</item>
         <item>Conectores Standar Presente Simple X Be Used To</item>
         <item>Conectores Standar Can Simple X Can Simple</item>
-        <item>Conectores Standar Should Simple X Can Simple</item>
+        <item>Conectores Standar Should Simple X Prensente Simple</item>
+        <item>Conectores Standar Should Simple X Prensente Continuo</item>
         <item>Conectores Standar Can Simple X Presente Simple</item>
         <item>Conectores Standar Can Simple X Presente Continuo</item>
         <item>Conectores Standar Can Simple X Presente Perfecto</item>
         <item>Conectores Standar Could Simple X Presente Simple</item>
+        <item>Conectores Standar Could Simple X Presente Continuo</item>
         <item>Conectores Standar Presente Simple X Por Sujeto</item>
         <item>Conectores Standar Presente Simple X Por Objeto</item>
         <item>Conectores Standar Presente Simple X Por Preposicion</item>
+        <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
+        <item>Conectores Standar Presente Simple X Interferencia Pasiva</item>
     </string-array>
     <string-array name="pragerPremium">
         <item>Tutorial</item>
