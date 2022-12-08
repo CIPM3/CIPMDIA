@@ -17,6 +17,10 @@
         <item>What Perfect</item>
         <item>What Modals Simple</item>
         <item>What Modals Continuous</item>
+        <item>What Modals Perfect</item>
+        <item>When Simple</item>
+        <item>When Continuous</item>
+        <item>When Perfect</item>
 
     </string-array>
     <string-array name="structures">
