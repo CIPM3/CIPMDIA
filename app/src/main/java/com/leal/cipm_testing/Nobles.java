@@ -13167,5 +13167,247 @@ public class Nobles {
         }
     }//prueba
 
+   //When Modales
+   public void GenWhenModalsSimp1(){
+        int neg = (int) (Math.random() * 6);
+        switch (neg){
+            //Would
+            case 0:
+                ps1 = "¿Cuándo " + vn1w[v] + "?";
+                ps1eng = "When " + "would i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo " + vn2w[v] + "?";
+                ps2eng = "When " + "would you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo " + vn3w[v] + "él?";
+                ps3eng = "When " + "would he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo " + vn3w[v] + "ella?";
+                ps3she = "When " + "would she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo " + vn3w[v] + "eso?";
+                ps3it = "When " + "would it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo " + vn4w[v] + "?";
+                ps4eng = "When " + "would they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo " + vn5w[v] + "?";
+                ps5eng = "When " + "would we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuándo no " + vn1w[v] + "?";
+                ps1eng = "When " + "wouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo no " + vn2w[v] + "?";
+                ps2eng = "When " + "wouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo no " + vn3w[v] + "él?";
+                ps3eng = "When " + "wouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo no " + vn3w[v] + "ella?";
+                ps3she = "When " + "wouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo no " + vn3w[v] + "eso?";
+                ps3it = "When " + "wouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo no " + vn4w[v] + "?";
+                ps4eng = "When " + "wouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo no " + vn5w[v] + "?";
+                ps5eng = "When " + "wouldn't we " + vnb[v] + "?";
+                break;
+
+            //Could
+            case 2:
+                ps1 = "¿Cuándo " + "podría " + vnbs[v] + "?";
+                ps1eng = "When " + "could i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo " + "podrías " + vnbs[v] + "?";
+                ps2eng = "When " + "could you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo " + "podría " + vnbs[v] + "él?";
+                ps3eng = "When " + "could he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo " + "podría " + vnbs[v] + "ella?";
+                ps3she = "When " + "could she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo " + "podría " + vnbs[v] + "eso?";
+                ps3it = "When " + "could it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo " + "podrían " + vnbs[v] + "?";
+                ps4eng = "When " + "could they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "When " + "could we " + vnb[v] + "?";
+                break;
+            case 3:
+                ps1 = "¿Cuándo no " + "podría " + vnbs[v] + "?";
+                ps1eng = "When " + "couldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo no " + "podrías " + vnbs[v] + "?";
+                ps2eng = "When " + "couldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo no " + "podría " + vnbs[v] + "él?";
+                ps3eng = "When " + "couldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo no " + "podría " + vnbs[v] + "ella?";
+                ps3she = "When " + "couldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo no " + "podría " + vnbs[v] + "eso?";
+                ps3it = "When " + "couldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo no " + "podrían " + vnbs[v] + "?";
+                ps4eng = "When " + "couldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo no " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "When " + "couldn't we " + vnb[v] + "?";
+                break;
+
+            //Should
+            case 4:
+                ps1 = "¿Cuándo " + "debería " + vnbs[v] + "?";
+                ps1eng = "When " + "should i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo " + "deberías " + vnbs[v] + "?";
+                ps2eng = "When " + "should you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo " + "debería " + vnbs[v] + "él?";
+                ps3eng = "When " + "should he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo " + "debería " + vnbs[v] + "ella?";
+                ps3she = "When " + "should she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo " + "debería " + vnbs[v] + "eso?";
+                ps3it = "When " + "should it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo " + "deberían " + vnbs[v] + "?";
+                ps4eng = "When " + "should they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "When " + "should we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Cuándo no " + "debería " + vnbs[v] + "?";
+                ps1eng = "When " + "shouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuándo no " + "deberías " + vnbs[v] + "?";
+                ps2eng = "When " + "shouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuándo no " + "debería " + vnbs[v] + "él?";
+                ps3eng = "When " + "shouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuándo no " + "debería " + vnbs[v] + "ella?";
+                ps3she = "When " + "shouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuándo no " + "debería " + vnbs[v] + "eso?";
+                ps3it = "When " + "shouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuándo no " + "deberían " + vnbs[v] + "?";
+                ps4eng = "When " + "shouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuándo no " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "When " + "shouldn't we " + vnb[v] + "?";
+                break;
+
+        }
+    }//prueba
+   public void GenWhenModalsCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuándo " + scontmIesp[s] + vnbcs[v] + "?";
+                ps1eng = "When " + scontmI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuándo " + scontmYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "When " + scontmYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuándo " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "When " + scontmHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuándo " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "When " + scontmShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuándo " + scontmItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "When " + scontmIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuándo " + scontmTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "When " + scontmThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuándo " + scontmWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "When " + scontmWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Cuándo " + scontmIespno[s] + vnbcs[v] + "?";
+                ps1eng = "When " + scontmIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuándo " + scontmYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "When " + scontmYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuándo " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "When " + scontmHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuándo " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "When " + scontmShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuándo " + scontmItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "When " + scontmItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuándo " + scontmTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "When " + scontmTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuándo " + scontmWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "When " + scontmWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//prueba
+   public void GenWhenModalsPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuándo " + sperfmIesp[s] + vpsp[v] + "?";
+                ps1eng = "When " + sperfmI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuándo " + sperfmYouesp[s] + vpsp[v] + "?";
+                ps2eng = "When " + sperfmYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuándo " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3eng = "When " + sperfmHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuándo " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3she = "When " + sperfmShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuándo " + sperfmItesp[s] + vpsp[v] + "eso?";
+                ps3it = "When " + sperfmIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuándo " + sperfmTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "When " + sperfmThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuándo " + sperfmWeesp[s] + vpsp[v] + "?";
+                ps5eng = "When " + sperfmWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuándo " + sperfmIespno[s] + vpsp[v] + "?";
+                ps1eng = "When " + sperfmIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuándo " + sperfmYouespno[s] + vpsp[v] + "?";
+                ps2eng = "When " + sperfmYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuándo " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3eng = "When " + sperfmHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuándo " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3she = "When " + sperfmShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuándo " + sperfmItespno[s] + vpsp[v] + "eso?";
+                ps3it = "When " + sperfmItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuándo " + sperfmTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "When " + sperfmTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuándo " + sperfmWeespno[s] + vpsp[v] + "?";
+                ps5eng = "When " + sperfmWedont[s] + vpeng[v] + "?";
+
+                break;
+        }
+    }//prueba
 }
 

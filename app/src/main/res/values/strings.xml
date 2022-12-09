@@ -21,6 +21,9 @@
         <item>When Simple</item>
         <item>When Continuous</item>
         <item>When Perfect</item>
+        <item>When Modals Simple</item>
+        <item>When Modals Continuous</item>
+        <item>When Modals Perfect</item>
 
     </string-array>
     <string-array name="structures">
@@ -58,8 +61,18 @@
         <item>Must Simple</item>
         <item>Must Continuous</item>
         //quede aqui
+        <item>What Simple</item>
         <item>What Continuous</item>
         <item>What Perfect</item>
+        <item>What Modals Simple</item>
+        <item>What Modals Continuous</item>
+        <item>What Modals Perfect</item>
+        <item>When Simple</item>
+        <item>When Continuous</item>
+        <item>When Perfect</item>
+        <item>When Modals Simple</item>
+        <item>When Modals Continuous</item>
+        <item>When Modals Perfect</item>
         <item>Reported Speech</item>
         <item>Want To</item>
         <item>For To</item>
