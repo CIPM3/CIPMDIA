@@ -25,32 +25,21 @@ public class VocabModeloPersistencia {
         this.isInintCon = isInintCon;
     }
 
-
-
-    public List<String> getNonBasicStructuresArray() {
-        return nonBasicStructuresArray;
-    }
-
-    public void setNonBasicStructuresArray(List<String> nonBasicStructuresArray) {
-        this.nonBasicStructuresArray = nonBasicStructuresArray;
-    }
-
-    public boolean isInintCon() {
-        return isInintCon;
-    }
-
-    public void setInintCon(boolean inintCon) {
-        isInintCon = inintCon;
-    }
-
-    public List<String> getBasicStructuresArray() {
-        return basicStructuresArray;
-    }
-
-    public void setBasicStructuresArray(List<String> basicStructuresArray) {
+    public VocabModeloPersistencia(List<String> resultArray, List<String> basicStructuresArray,List<String> nonBasicStructuresArray,
+                                   boolean isInVocab, boolean isInStructure, boolean isInSpanishInt,
+                                   boolean isInCulture, boolean isInPrager,
+                                   boolean isInTransition, boolean isInintCon) {
+        this.resultArray = resultArray;
         this.basicStructuresArray = basicStructuresArray;
+        this.isInVocab = isInVocab;
+        this.isInStructure = isInStructure;
+        this.isInSpanishInt = isInSpanishInt;
+        this.isInCulture = isInCulture;
+        this.isInPrager = isInPrager;
+        this.isInTransition = isInTransition;
+        this.isInintCon = isInintCon;
+        this.nonBasicStructuresArray=nonBasicStructuresArray;
     }
-
     public  VocabModeloPersistencia(){}
 
     public VocabModeloPersistencia(List<String> resultArray, boolean isInVocab,
@@ -79,6 +68,34 @@ public class VocabModeloPersistencia {
         this.isInTransition = isInTransition;
         this.basicStructuresArray = resultArrayStructure;
     }
+
+
+
+    public List<String> getNonBasicStructuresArray() {
+        return nonBasicStructuresArray;
+    }
+
+    public void setNonBasicStructuresArray(List<String> nonBasicStructuresArray) {
+        this.nonBasicStructuresArray = nonBasicStructuresArray;
+    }
+
+    public boolean isInintCon() {
+        return isInintCon;
+    }
+
+    public void setInintCon(boolean inintCon) {
+        isInintCon = inintCon;
+    }
+
+    public List<String> getBasicStructuresArray() {
+        return basicStructuresArray;
+    }
+
+    public void setBasicStructuresArray(List<String> basicStructuresArray) {
+        this.basicStructuresArray = basicStructuresArray;
+    }
+
+
 
     public List<String> getResultArray() {
         return resultArray;

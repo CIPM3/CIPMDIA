@@ -178,10 +178,12 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 // en cada actividad habra un is custom, con el array que le corresponda
                 // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
                 if(isCustom)
-                {docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                {
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                        assert vmp != null;
                         temp= vmp.resultArray.toArray(new String[0]);
                         ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
                         spin.setAdapter(adapter);
@@ -219,7 +221,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
                 // aqui empieza el plan personalizado
                 else {
-
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -255,7 +256,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
 
         }
-
         // si no es personalizado acesa a todas las funciones que le cooresponden
         // ya sea pagado o gratis
         else if (prefs.getPremium()==1){

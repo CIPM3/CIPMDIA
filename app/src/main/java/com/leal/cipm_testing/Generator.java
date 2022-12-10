@@ -5,18 +5,18 @@ public class Generator {
     public Generator() {
     }
 
-    String StandardConectors[] = {" because ", " since ", " for ", " therefore ", " that's why ", " consequently ",
-    " if ", " even if ", " but ", " however ", " whereas "
+    String StandardConectors[] = {"because ", "since ", "for ", "therefore ", "that's why ", "consequently ",
+    "if ", "even if ", "but ", "however ", "whereas "
     };
-    String ConectoresEstandar[]= {" por que ", " desde que ", " puesto que ", " por lo tanto ", " por eso ", " consequentemente ",
-    " sí ", " incluso sí ", " pero ", " sin embargo ", " mientras que "
+    String ConectoresEstandar[]= {"por que ", "desde que ", "puesto que ", "por lo tanto ", "por eso ", "conseqüentemente ",
+    "sí ", "incluso sí ", "pero ", "sin embargo ", "mientras que "
     };
 
-    String ConectoresCondicionales[]={" siempre y cuando ", " a menos que "};
-    String ConditionalConectors[]={" as long as ", " unless "};
+    String ConectoresCondicionales[]={"siempre y cuando ", "a menos que "};
+    String ConditionalConectors[]={"as long as ", "unless "};
 
-    String TimeConectors[]={" while ", " as "};
-    String ConectoresDeTiempo[ ]={" mientras ", " en lo que " };
+    String TimeConectors[]={"while ", "as "};
+    String ConectoresDeTiempo[ ]={"mientras ", "en lo que "};
 
 
     String starters[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas ", "yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
@@ -50274,8 +50274,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp2+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng2+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50288,15 +50288,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps2+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50318,8 +50318,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp3+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng3+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50332,15 +50332,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps3+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50362,8 +50362,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp4+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng4+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50376,15 +50376,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50406,8 +50406,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp5+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng5+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50420,15 +50420,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps3eso+ConectoresEstandar[con]+o2.ps3eso;
-                        gene = o.ps3it+StandardConectors[con]+o2.ps3it;
+                        gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50450,8 +50450,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp6+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng6+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50464,15 +50464,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps4+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50494,8 +50494,8 @@ public class Generator {
                     case 2:
                         Intrans i = new Intrans();
                         i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
+                        gens = i.sp7+ConectoresEstandar[con]+ItSegSp[rn];
+                        gene = i.eng7+StandardConectors[con]+ItSegEng[rn];
                         break;
 
                     case 3:
@@ -50508,15 +50508,15 @@ public class Generator {
                     case 4:
                         Oo o = new Oo();
                         o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 5:
                         Abstractos ab = new Abstractos();
                         ab.GenPresSimp1();
-                        gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
+                        gens = ab.ps5+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }

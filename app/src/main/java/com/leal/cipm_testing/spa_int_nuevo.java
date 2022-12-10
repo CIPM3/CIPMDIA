@@ -22,9 +22,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class spa_int_nuevo extends AppCompatActivity {
@@ -69,16 +77,31 @@ public class spa_int_nuevo extends AppCompatActivity {
     TextView txteng7;
 
     EditText answerinput;
-
+    Prefs prefs;
     String selection;
     String selection2;
     String selection3;
-    String anstxt;
-
     TextToSpeech tts;
     TextToSpeech ttr;
-    TextToSpeech tti;
     TextToSpeech tt1;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
+    String[] ArrayWithElementRemoved;
+    FirebaseAuth       mAuth;
+    int PositionOfElementsLeft=0;
+    String[] temp= {"Por Sujeto", "Por Preposición"
+    , "Por Objeto","Interferencia Reflexiva",
+    "Interferencia Pasiva"};
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    String userid;
+    String[] EmptyArray;
+    boolean isCustom;
+    boolean isNonBasics;
+    boolean isBasics;
+    boolean personalizedPlan;
+    ArrayAdapter<String> adapter;
+    ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     public static final int REC_CODE_SPEECH_INPUT = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,131 +146,13 @@ public class spa_int_nuevo extends AppCompatActivity {
         txteng5 = (TextView) findViewById(R.id.txteng5);
         txteng6 = (TextView) findViewById(R.id.txteng6);
         txteng7 = findViewById(R.id.txteng7);
-
+        mAuth= FirebaseAuth.getInstance();
+        userid = mAuth.getCurrentUser().getUid();
+        docref= db.collection(userid).document("WhereisStudent");
         vv = (VideoView) findViewById(R.id.videoView1);
         vf = (LinearLayout) findViewById(R.id.vf);
-
-        Prefs prefs = new Prefs(this);
-        if (prefs.getPremium()==1){
-            //Give the user all the premium features
-            //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinuno.setAdapter(adapter);
-            spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spinuno.getSelectedItem().toString();
-                    textspin1.setText(selection);
-                    ocultarlay();
-
-                    vv.setVisibility(View.GONE);
-                    vf.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinrango.setAdapter(adapter2);
-            spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection3 = spinrango.getSelectedItem().toString();
-                    textspin3.setText(selection3);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-
-            ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
-            adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinest.setAdapter(adapter3);
-            spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection2 = spinest.getSelectedItem().toString();
-                    textspin2.setText(selection2);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-        } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-
-
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinuno.setAdapter(adapter);
-            spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spinuno.getSelectedItem().toString();
-                    textspin1.setText(selection);
-
-                    ocultarlay();
-
-                    vv.setVisibility(View.GONE);
-                    vf.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinrango.setAdapter(adapter2);
-            spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection3 = spinrango.getSelectedItem().toString();
-                    textspin3.setText(selection3);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-
-            ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
-            adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinest.setAdapter(adapter3);
-            spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection2 = spinest.getSelectedItem().toString();
-                    textspin2.setText(selection2);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-        }
-
-
+         prefs = new Prefs(this);
+        PremiumAndArrayControler();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -258,7 +163,429 @@ public class spa_int_nuevo extends AppCompatActivity {
             }
         });
     }
+    private void PremiumAndArrayControler() {
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        if(personalizedPlan){
+            if(isCustom){
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinuno.setAdapter(adapter);
+                    spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spinuno.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            ocultarlay();
 
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinrango.setAdapter(adapter2);
+                    spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection3 = spinrango.getSelectedItem().toString();
+                            textspin3.setText(selection3);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                    adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinest.setAdapter(adapter3);
+                    spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spinest.getSelectedItem().toString();
+                            textspin2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+
+
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                            assert vmp != null;
+                            temp= vmp.resultArray.toArray(new String[0]);
+                            adapter = new ArrayAdapter<String>(spa_int_nuevo.this, android.R.layout.simple_list_item_1, temp);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spinuno.setAdapter(adapter);
+                            spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spinuno.getSelectedItem().toString();
+                                    textspin1.setText(selection);
+
+                                   /* vv.setVisibility(View.GONE);
+                                    vf.setVisibility(View.VISIBLE);*/
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinrango.setAdapter(adapter2);
+                    spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection3 = spinrango.getSelectedItem().toString();
+                            textspin3.setText(selection3);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                    adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinest.setAdapter(adapter3);
+                    spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spinest.getSelectedItem().toString();
+                            textspin2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+            }
+            else{
+
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinuno.setAdapter(adapter);
+                    spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spinuno.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            ocultarlay();
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinrango.setAdapter(adapter2);
+                    spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection3 = spinrango.getSelectedItem().toString();
+                            textspin3.setText(selection3);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                    adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinest.setAdapter(adapter3);
+                    spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spinest.getSelectedItem().toString();
+                            textspin2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+                else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinuno.setAdapter(adapter);
+                    spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spinuno.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            ocultarlay();
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinrango.setAdapter(adapter2);
+                    spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection3 = spinrango.getSelectedItem().toString();
+                            textspin3.setText(selection3);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                    ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                    adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinest.setAdapter(adapter3);
+                    spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spinest.getSelectedItem().toString();
+                            textspin2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+
+
+            }
+
+
+
+        }else{
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinuno.setAdapter(adapter);
+                spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spinuno.getSelectedItem().toString();
+                        textspin1.setText(selection);
+                        ocultarlay();
+
+                        vv.setVisibility(View.GONE);
+                        vf.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinrango.setAdapter(adapter2);
+                spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection3 = spinrango.getSelectedItem().toString();
+                        textspin3.setText(selection3);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+                ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinest.setAdapter(adapter3);
+                spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spinest.getSelectedItem().toString();
+                        textspin2.setText(selection2);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+            } else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+
+
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinuno.setAdapter(adapter);
+                spinuno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spinuno.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        ocultarlay();
+
+                        vv.setVisibility(View.GONE);
+                        vf.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinrango.setAdapter(adapter2);
+                spinrango.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection3 = spinrango.getSelectedItem().toString();
+                        textspin3.setText(selection3);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+                ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
+                adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinest.setAdapter(adapter3);
+                spinest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spinest.getSelectedItem().toString();
+                        textspin2.setText(selection2);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+            }
+
+        }
+    }
+    public void inWhatActivityisTheStudent(){
+
+        isInSpanishInt = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            Intent intent = new Intent(spa_int_nuevo.this,Transicion.class);
+            startActivity(intent);
+
+
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(selection);
+            //premiumControler updatea el array del spinner
+            PremiumAndArrayControler();
+            sendInfotoDb();
+        }
+    }
     public void showV(View vista){
         vv.setVisibility(View.VISIBLE);
         vf.setVisibility(View.GONE);
@@ -312,7 +639,6 @@ public class spa_int_nuevo extends AppCompatActivity {
 
         }
     }
-
     public void practice(View vista) {
         answer_lay.setVisibility(View.GONE);
         answer_pos.setVisibility(View.GONE);
@@ -863,7 +1189,6 @@ public class spa_int_nuevo extends AppCompatActivity {
         //engtx.setVisibility(View.INVISIBLE);
 
     }
-
     public void ocultarlay(){
         spanish_lay.setVisibility(View.GONE);
         input_lay.setVisibility(View.GONE);
@@ -871,14 +1196,12 @@ public class spa_int_nuevo extends AppCompatActivity {
         btn_check_lay.setVisibility(View.GONE);
         answer_lay.setVisibility(View.GONE);
     }
-
     public void mostrarlay(){
         spanish_lay.setVisibility(View.VISIBLE);
         input_lay.setVisibility(View.VISIBLE);
         btn_emp_lay.setVisibility(View.GONE);
         btn_check_lay.setVisibility(View.VISIBLE);
     }
-
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -889,11 +1212,9 @@ public class spa_int_nuevo extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
-
     public void speakdecir(View vista){
         iniciarentradavoz();
     }
-    
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
         ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
@@ -915,7 +1236,6 @@ public class spa_int_nuevo extends AppCompatActivity {
 
         ttr.speak(engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
     }
-
     public void checkans(View v){
         EditText text = (EditText)findViewById(R.id.answerinput);
         if (
@@ -946,6 +1266,10 @@ public class spa_int_nuevo extends AppCompatActivity {
                             }
                         });
                         ttr.speak("answer is correct",TextToSpeech.QUEUE_ADD,null, "one");
+
+                        if(personalizedPlan ){
+                            SubtractSelectionAndSendinfoToDb();
+                        }
 
 
                     }
@@ -1018,7 +1342,6 @@ public class spa_int_nuevo extends AppCompatActivity {
         }
 
     }
-
     public void possibleanswers(View view){
         answer_lay.setVisibility(View.GONE);
         answer_pos.setVisibility(View.VISIBLE);
@@ -1041,22 +1364,18 @@ public class spa_int_nuevo extends AppCompatActivity {
         }*/
 
     }
-
     public void main(View vist){
         Intent crispIntent = new Intent(this, MainActivity.class);
         startActivity(crispIntent);
     }
-
     public void profile(View vist) {
         Intent crispIntent = new Intent(this, profile.class);
         startActivity(crispIntent);
     }
-
     public void chat_maestro(View vist) {
         Intent crispIntent = new Intent(this, chat_maestro.class);
         startActivity(crispIntent);
     }
-
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
@@ -1070,4 +1389,6 @@ public class spa_int_nuevo extends AppCompatActivity {
         }
 
     }
+
+
 }

@@ -61,7 +61,6 @@ public class estructura_nuevo extends AppCompatActivity {
     EditText answerinp;
     TextToSpeech tts;
     TextToSpeech ttr;
-    TextToSpeech tti;
     TextToSpeech tt1;
     Prefs prefs;
     String algosele = "";
@@ -123,7 +122,7 @@ public class estructura_nuevo extends AppCompatActivity {
         });
 
         temp=arrayGetter.basicStructures;
-        EmptyArray= new String[]{"filler.temp", "shitfuckpisscockballs"};
+        EmptyArray= new String[]{"empty", "array"};
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
@@ -136,18 +135,28 @@ public class estructura_nuevo extends AppCompatActivity {
 
         PremiumControler();
     }
+    boolean isCustom;
+    boolean isNonBasics;
+    boolean isBasics;
+    boolean isBasicsArray;
+    boolean isNonBasicsArray;
 
     public void PremiumControler(){
+         Intent reciver = getIntent();
+         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+         isCustom = reciver.getBooleanExtra("isCustom",false);
+         isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
+         isBasics=reciver.getBooleanExtra("basicSctructures",false);
+        /* if(isNonBasicsCustom){
+             isBasics=false;
 
-        Intent reciver = getIntent();
-        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
-        boolean isCustom = reciver.getBooleanExtra("isCustom",false);
-        boolean isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
-        boolean isBasics=reciver.getBooleanExtra("basicSctructures",false);
 
+         }*/
         if(personalizedPlan){
-
             if(isCustom){
+                if(isNonBasicsArray){
+                    isBasicsArray=false;
+                }else {isBasicsArray=true;}
                 // aqui tiene que jalar de la base de datos el temp
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features
@@ -196,7 +205,9 @@ public class estructura_nuevo extends AppCompatActivity {
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
+
                             temp= vmp.basicStructuresArray.toArray(new String[0]);
+
                             adapter = new ArrayAdapter<String>(estructura_nuevo.this, android.R.layout.simple_list_item_1, temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
@@ -237,8 +248,12 @@ public class estructura_nuevo extends AppCompatActivity {
                     });
 
                 }
+
+
+
             }else if(isNonBasics) {
                 // aqui tiene que recivir basico o no basico
+                isNonBasicsArray=true;
                 temp=arrayGetter.nonBasicStructures;
                 if(prefs.getPremium()==1){
                     //Give the user all the premium features
@@ -282,8 +297,7 @@ public class estructura_nuevo extends AppCompatActivity {
                 } else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
-
-
+                    temp=arrayGetter.nonBasicStructures;
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
@@ -321,6 +335,9 @@ public class estructura_nuevo extends AppCompatActivity {
 
                 }
             }else if(isBasics){
+                if(isNonBasicsArray){
+                    isBasicsArray=false;
+                }else {isBasicsArray=true;}
                 if(prefs.getPremium()==1){
                     //Give the user all the premium features
                     //hide ads if you are showing ads
@@ -405,7 +422,6 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
             }
         }
-
         // si no es personalizado pasa a lo normal
         else {
             if (prefs.getPremium()==1){
@@ -489,7 +505,6 @@ public class estructura_nuevo extends AppCompatActivity {
 
             }
         }
-
     }
     public void inWhatActivityisTheStudent(){
 
@@ -520,10 +535,20 @@ public class estructura_nuevo extends AppCompatActivity {
 
     }
     public void SubtractSelectionAndSendinfoToDb(){
-        if(temp.length==10){
-            // si queda nada de arrays cambia de vocab a estructura
-            Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
-            startActivity(intent);
+        if(temp.length==1){
+           if(isBasicsArray){
+               Toast.makeText(this,"hay que cambiar array",Toast.LENGTH_SHORT).show();
+               temp= arrayGetter.nonBasicStructures;
+               isNonBasicsArray=true;
+               PremiumControler();
+               sendInfotoDb();
+           }else if(isNonBasicsArray){
+               Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
+               intent.putExtra("isThePlanPersonalized",personalizedPlan);
+               intent.putExtra("isCustom",isCustom);
+               startActivity(intent);
+           }
+
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
