@@ -827,40 +827,6 @@ public class Transicion extends AppCompatActivity {
                             }
                         });
                 break;
-            case "Conectores Standar Presente Simple X Interferencia Pasiva":
-                gen.GenConectoresStandarPresenteSimpleXIntPasiva();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
-                tts = new TextToSpeech(getApplicationContext(),
-                        new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tts.setLanguage(spanish);
-                                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-
-                                            // iniciarentradavoz();
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
-                                }
-
-                            }
-                        });
-                break;
-
         }
     }
     public void CheckAnswer(View view){

@@ -49487,42 +49487,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -49531,40 +49519,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49575,40 +49550,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49619,40 +49582,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49663,40 +49614,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49707,40 +49646,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49751,40 +49678,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49852,42 +49767,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -49896,40 +49799,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49940,40 +49830,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -49984,40 +49862,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50028,40 +49894,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50072,40 +49926,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50116,40 +49958,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50217,42 +50047,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50261,42 +50079,29 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps2+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps2eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50305,42 +50110,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps3eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50349,42 +50142,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps3she+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50393,42 +50174,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps3it+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50437,42 +50206,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps4+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps4eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50481,42 +50238,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab.ps5+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab.ps5eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50584,40 +50329,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50628,40 +50361,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50672,40 +50392,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50716,40 +50424,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50760,40 +50456,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50804,40 +50488,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50848,40 +50520,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -50949,42 +50609,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -50993,40 +50641,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51037,40 +50672,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51081,40 +50704,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51125,40 +50736,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51169,40 +50768,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51213,40 +50800,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51306,36 +50881,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
 
-                    case 2:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -51344,34 +50913,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-
-                    case 2:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51382,33 +50944,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
+
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51419,34 +50976,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
 
-                    case 2:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51457,33 +51008,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
+
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51494,33 +51040,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
+
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51531,34 +51072,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
 
-                    case 2:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 3:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 4:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51626,42 +51161,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -51670,40 +51193,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51714,40 +51224,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51758,40 +51256,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51802,40 +51288,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51846,40 +51320,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51890,40 +51352,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -51991,42 +51441,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -52035,40 +51473,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52079,40 +51504,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52123,40 +51536,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52167,40 +51568,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52211,40 +51600,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52255,40 +51632,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52358,42 +51723,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -52402,40 +51755,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52446,40 +51786,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52490,40 +51818,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52534,40 +51850,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52578,40 +51882,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52622,40 +51914,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenPresSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenPresSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52707,29 +51987,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
+
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -52738,28 +52019,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52770,28 +52050,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52802,28 +52082,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52834,28 +52114,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52866,28 +52146,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52898,28 +52178,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -52971,29 +52251,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
+
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -53002,28 +52283,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53034,28 +52314,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53066,28 +52346,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53098,28 +52378,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53130,28 +52410,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53162,28 +52442,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53251,42 +52531,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCanSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -53295,40 +52563,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCanSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53339,40 +52594,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCanSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53383,40 +52626,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCanSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53427,40 +52658,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53471,40 +52690,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCanSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53515,40 +52722,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCanSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53618,42 +52813,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
+                        o.GenShouldSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenShouldSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -53662,40 +52845,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53706,40 +52876,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53750,40 +52908,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenShouldSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53794,40 +52940,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
+                        o.GenShouldSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53838,40 +52972,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53882,40 +53004,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -53983,42 +53093,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCanSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -54027,40 +53125,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCanSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54071,40 +53156,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCanSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54115,40 +53188,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCanSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54159,40 +53220,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54203,40 +53252,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCanSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54247,40 +53284,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCanSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54348,42 +53373,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCanSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -54392,40 +53405,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCanSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54436,40 +53436,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCanSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54480,40 +53468,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCanSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54524,40 +53500,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54568,40 +53532,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCanSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54612,40 +53564,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCanSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54713,42 +53653,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCanSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -54757,40 +53685,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCanSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54801,40 +53716,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCanSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54845,40 +53748,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCanSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54889,40 +53780,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
+                        o.GenCanSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54933,40 +53812,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCanSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -54977,40 +53844,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCanSimp1();
+                        n.GenCanSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCanSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCanSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCanSimp1();
+                        p.GenCanSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCanSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCanSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCanSimp1();
+                        ab.GenCanSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55080,42 +53935,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
+                        o.GenCouldSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCouldSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -55124,40 +53967,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55168,40 +53998,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55212,40 +54030,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCouldSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55256,40 +54062,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
+                        o.GenCouldSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55300,40 +54094,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55344,40 +54126,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55430,30 +54200,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -55462,28 +54232,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55494,28 +54263,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55526,28 +54295,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55558,28 +54327,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55590,28 +54359,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55622,28 +54391,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55695,30 +54464,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -55727,28 +54496,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55759,28 +54527,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55791,28 +54559,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55823,28 +54591,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55855,28 +54623,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55887,28 +54655,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -55960,30 +54728,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenPresSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -55992,28 +54760,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56024,28 +54791,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56056,28 +54823,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56088,28 +54855,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56120,28 +54887,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56152,28 +54919,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56227,28 +54994,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56259,27 +55026,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenPresSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56290,28 +55057,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenPresSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56322,28 +55089,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenPresSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56354,28 +55121,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
+                        o.GenPresSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56386,28 +55153,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenPresSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56418,28 +55185,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenPresSimp1();
+                        n.GenPresSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
 
                     case 1:
                         People p = new People();
-                        p.GenPresSimp1();
+                        p.GenPresSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
                     case 2:
                         Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenPresSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
                     case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
+                        ab.GenPresSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56447,271 +55214,7 @@ public class Generator {
                 }
                 break;
         }
-    }//crashea
-    public void GenConectoresStandarPresenteSimpleXIntPasiva(){
-        int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 4);
-        int con = (int)(Math.random()*ConectoresEstandar.length );
-        String temp = pronombres[rand];
-        int rn = (int) (Math.random() * 6);
-        //nobles random
-        n1.intporpasiva0a100();
-        String NbSegSp [] = {
-                n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
-        };
-        String NbSegEng [] = {
-                n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
-        };
-        //people random
-        p2.intporpasiva0a100();
-        String PSegSp [] = {
-                p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
-        };
-        String PSegEng [] = {
-                p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
-        };
-        //Oo random
-        o2.intporpasiva0a100();
-        String OoSegSp [] = {
-                o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
-        };
-        String OoSegEng [] = {
-                o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
-        };
-        //Abstractos random
-        ab2.intporpasiva0a100();
-        String AbSegSp [] = {
-                ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
-        };
-        String AbSegEng [] = {
-                ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
-        };
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
-                        gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
-                        break;
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
-                        gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case 0:
-                        Nobles n = new Nobles();
-                        n.GenPresSimp1();
-                        gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
-                        gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
-                        break;
-
-                    case 1:
-                        People p = new People();
-                        p.GenPresSimp1();
-                        gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
-                        gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
-                        break;
-
-                    case 2:
-                        Oo o = new Oo();
-                        o.GenPresSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
-                        break;
-
-                    case 3:
-                        Abstractos ab = new Abstractos();
-                        ab.GenPresSimp1();
-                        gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
-                        break;
-
-                }
-                break;
-        }
-    }//crashea 
+    }
     public void GenConectoresStandarCouldSimpleXPresenteContinuo(){
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 6);
@@ -56771,42 +55274,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
+                        o.GenCouldSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenCouldSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -56815,40 +55306,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56859,40 +55337,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56903,40 +55369,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenCouldSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56947,40 +55401,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
+                        o.GenCouldSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -56991,40 +55433,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57035,40 +55465,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenCouldSimp1();
+                        n.GenCouldSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenCouldSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenCouldSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenCouldSimp1();
+                        p.GenCouldSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenCouldSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenCouldSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenCouldSimp1();
+                        ab.GenCouldSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57136,42 +55554,30 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps1+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps1eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp1+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng1+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp1+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng1+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps1+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps1eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
+                        o.GenShouldSimp2();
                         gens = o.ps1+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps1eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
-                        gens = ab2.ps1+ConectoresEstandar[con]+AbSegSp[rn];
-                        gene = ab2.ps1eng+StandardConectors[con]+AbSegEng[rn];
+                        ab.GenShouldSimp2();
+                        gens = ab.ps1+ConectoresEstandar[con]+AbSegSp[rn];
+                        gene = ab.ps1eng+StandardConectors[con]+AbSegEng[rn];
                         break;
 
                 }
@@ -57180,40 +55586,27 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps2+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps2eng+StandardConectors[con]+NbSegEng[rn];
                         break;
                     case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp2+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng2+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp2+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng2+StandardConectors[con]+ItSegEng[rn];
-                        break;
-
-                    case 3:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps2+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps2eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps2+ConectoresEstandar[con]+o2.ps2;
-                        gene = o.ps2eng+StandardConectors[con]+o2.ps2eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps2+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps2eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps2+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps2eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57224,40 +55617,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp3+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng3+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps3+ConectoresEstandar[con]+o2.ps3;
-                        gene = o.ps3eng+StandardConectors[con]+o2.ps3eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps3+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57268,40 +55649,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3ella+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3she+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3ella+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng3she+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp4+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng4+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3ella+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3she+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps3ella+ConectoresEstandar[con]+o2.ps3ella;
-                        gene = o.ps3she+StandardConectors[con]+o2.ps3she;
+                        o.GenShouldSimp2();
+                        gens = o.ps3ella+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps3she+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3ella+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3she+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57312,40 +55681,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps3eso+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps3it+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp3eso+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.sp3it+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp5+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng5+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps3eso+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps3it+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
+                        o.GenShouldSimp2();
                         gens = o.ps3eso+ConectoresEstandar[con]+OoSegSp[rn];
                         gene = o.ps3it+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps3eso+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps3it+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57356,40 +55713,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps4+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps4eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp4+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng4+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp6+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng6+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps4+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps4eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps4+ConectoresEstandar[con]+o2.ps4;
-                        gene = o.ps4eng+StandardConectors[con]+o2.ps4eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps4+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps4eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps4+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps4eng+StandardConectors[con]+AbSegEng[rn];
                         break;
@@ -57400,40 +55745,28 @@ public class Generator {
                 switch (verb) {
                     case 0:
                         Nobles n = new Nobles();
-                        n.GenShouldSimp1();
+                        n.GenShouldSimp2();
                         gens = n.ps5+ConectoresEstandar[con]+NbSegSp[rn];
                         gene = n.ps5eng+StandardConectors[con]+NbSegEng[rn];
                         break;
-                    case 1:
-                        Special s = new Special();
-                        s.GenShouldSimp1();
-                        gens = s.sp5+ConectoresEstandar[con]+SpSegSp[rn];
-                        gene = s.eng5+StandardConectors[con]+SpSegEng[rn];
-                        break;
-                    case 2:
-                        Intrans i = new Intrans();
-                        i.GenShouldSimp1();
-                        gens = i2.sp7+ConectoresEstandar[con]+ItSegSp[rn];
-                        gene = i2.eng7+StandardConectors[con]+ItSegEng[rn];
-                        break;
 
-                    case 3:
+                    case 1:
                         People p = new People();
-                        p.GenShouldSimp1();
+                        p.GenShouldSimp2();
                         gens = p.ps5+ConectoresEstandar[con]+PSegSp[rn];
                         gene = p.ps5eng+StandardConectors[con]+PSegEng[rn];
                         break;
 
-                    case 4:
+                    case 2:
                         Oo o = new Oo();
-                        o.GenShouldSimp1();
-                        gens = o.ps5+ConectoresEstandar[con]+o2.ps5;
-                        gene = o.ps5eng+StandardConectors[con]+o2.ps5eng;
+                        o.GenShouldSimp2();
+                        gens = o.ps5+ConectoresEstandar[con]+OoSegSp[rn];
+                        gene = o.ps5eng+StandardConectors[con]+OoSegEng[rn];
                         break;
 
-                    case 5:
+                    case 3:
                         Abstractos ab = new Abstractos();
-                        ab.GenShouldSimp1();
+                        ab.GenShouldSimp2();
                         gens = ab2.ps5+ConectoresEstandar[con]+AbSegSp[rn];
                         gene = ab2.ps5eng+StandardConectors[con]+AbSegEng[rn];
                         break;

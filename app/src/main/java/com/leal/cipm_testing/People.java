@@ -9221,7 +9221,7 @@ public class People {
     }  // por objeto- adapted
     public void intreflps0a100(){
         int control = (int)(Math.random()*2);
-        int v=(int)(Math.random()*vp1.length);
+        int v=(int)(Math.random()*15);
         switch (control){
             case 0:
                 ps1 = "me "+ vp1[v];
