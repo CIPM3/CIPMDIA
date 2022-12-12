@@ -5551,33 +5551,33 @@ public class Nobles {
 
     String vp1 []={"acuesto ", "afieto ", "divierto ",
             "olvido ", "duermo ",  "pongo ", "baño ",
-            "escondo ","como ", "quedo ", "levanto ",
+            "escondo ","como ","me comporto ", "quedo ", "levanto ",
             "quejo ", "marcho ", "meto a ", "muero ",
             "niego ", "dirigo a ", "acuerdo "
     };
 
     String vp2 []={"acuestas ", "afeitas ", "diviertes ",
             "olvidas ", "duermes ", "pones ", "bañas ",
-            "escondes ","comes ", "quedas ", "levantas ",
+            "escondes ","comes ","te comportas ", "quedas ", "levantas ",
             "quejas ", "marchas ", "metes a ", "mueres ",
             "niegas ", "diriges a ", "acuerdas "
     };
     String vp3 []={"acuesta ", "afeita ", "divierte ",
             "olvida ", "duerme ",  "pone ", "baña ",
-            "esconde ","come ", "queda ", "levanta ",
+            "esconde ","come ","se comporta ", "queda ", "levanta ",
             "queja ", "marcha ", "mete a ", "muere ",
             "niega ", "dirige a ", "acuerda "
     };
     String vp4 []={"acuestan ", "afeitan ", "divierten ",
             "olvidan ", "duermen ",  "ponen ", "bañan ",
-            "esconden ","comen ", "quedan ", "levantan ",
+            "esconden ","comen ","se comportan ", "quedan ", "levantan ",
             "quejan ", "marchan ", "meten a ", "mueren ",
             "niegan ", "dirigen a ", "acuerdan "
     };
 
     String vp5 []={"acostamos ", "afeitamos ", "divertimos ",
             "olvidamos ", "dormimos ","ponemos ", "bañamos ",
-            "escondemos ","comemos ", "quedamos ", "levantamos ",
+            "escondemos ","comemos ","nos comportamos ",     "quedamos ", "levantamos ",
             "quejamos ", "marchamos ", "metemos a ", "morimos ",
             "negamos ", "dirigimos a ", "acordamos "
     };
