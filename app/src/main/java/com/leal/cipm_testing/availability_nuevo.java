@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class availability_nuevo extends AppCompatActivity {
@@ -4381,6 +4382,10 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    public void holaMundo(View v){
+        Toast.makeText(this, "Actividad de Comprehension", Toast.LENGTH_SHORT).show();
     }
 
     private void openDialog(String s) {
