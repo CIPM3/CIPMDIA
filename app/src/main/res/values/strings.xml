@@ -12,18 +12,48 @@
         <item>Might Simple</item>
         <item>Can Simple</item>
         <item>Reported Speech</item>
+
         <item>What Simple</item>
         <item>What Continuous</item>
         <item>What Perfect</item>
         <item>What Modals Simple</item>
         <item>What Modals Continuous</item>
         <item>What Modals Perfect</item>
+
         <item>When Simple</item>
         <item>When Continuous</item>
         <item>When Perfect</item>
         <item>When Modals Simple</item>
         <item>When Modals Continuous</item>
         <item>When Modals Perfect</item>
+
+        <item>Where Simple</item>
+        <item>Where Continuous</item>
+        <item>Where Perfect</item>
+        <item>Where Modals Simple</item>
+        <item>Where Modals Continuous</item>
+        <item>Where Modals Perfect</item>
+
+        <item>Why Simple</item>
+        <item>Why Continuous</item>
+        <item>Why Perfect</item>
+        <item>Why Modals Simple</item>
+        <item>Why Modals Continuous</item>
+        <item>Why Modals Perfect</item>
+
+        <item>Who Simple</item>
+        <item>Who Continuous</item>
+        <item>Who Perfect</item>
+        <item>Who Modals Simple</item>
+        <item>Who Modals Continuous</item>
+        <item>Who Modals Perfect</item>
+
+        <item>How Simple</item>
+        <item>How Continuous</item>
+        <item>How Perfect</item>
+        <item>How Modals Simple</item>
+        <item>How Modals Continuous</item>
+        <item>How Modals Perfect</item>
 
     </string-array>
     <string-array name="structures">
