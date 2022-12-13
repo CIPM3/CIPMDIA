@@ -157,6 +157,23 @@
 
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="end"
+                android:onClick="holaMundo"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Actividad de Comprehension"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/azul"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
         </LinearLayout>
 
         <!--textview-->
