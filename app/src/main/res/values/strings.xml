@@ -55,6 +55,20 @@
         <item>How Modals Continuous</item>
         <item>How Modals Perfect</item>
 
+        <item>How Much Simple</item>
+        <item>How Much Continuous</item>
+        <item>How Much Perfect</item>
+        <item>How Much Modals Simple</item>
+        <item>How Much Modals Continuous</item>
+        <item>How Much Modals Perfect</item>
+
+        <item>How Many Simple</item>
+        <item>How Many Continuous</item>
+        <item>How Many Perfect</item>
+        <item>How Many Modals Simple</item>
+        <item>How Many Modals Continuous</item>
+        <item>How Many Modals Perfect</item>
+
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
