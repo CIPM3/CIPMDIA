@@ -12352,7 +12352,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Que " + vn1[v] + "?";
-                ps1eng = "What do i" + vnb[v] + "?";
+                ps1eng = "What do i " + vnb[v] + "?";
 
                 ps2 = "¿Que " + vn2[v] + "?";
                 ps2eng = "What do you " + vnb[v] + "?";
@@ -12885,7 +12885,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Cuándo " + vn1[v] + "?";
-                ps1eng = "When do i" + vnb[v] + "?";
+                ps1eng = "When do i " + vnb[v] + "?";
 
                 ps2 = "¿Cuándo " + vn2[v] + "?";
                 ps2eng = "When do you " + vnb[v] + "?";
@@ -13418,7 +13418,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Dónde " + vn1[v] + "?";
-                ps1eng = "Where do i" + vnb[v] + "?";
+                ps1eng = "Where do i " + vnb[v] + "?";
 
                 ps2 = "¿Dónde " + vn2[v] + "?";
                 ps2eng = "Where do you " + vnb[v] + "?";
@@ -13950,7 +13950,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Por qué " + vn1[v] + "?";
-                ps1eng = "Why do i" + vnb[v] + "?";
+                ps1eng = "Why do i " + vnb[v] + "?";
 
                 ps2 = "¿Por qué " + vn2[v] + "?";
                 ps2eng = "Why do you " + vnb[v] + "?";
@@ -14482,7 +14482,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Quién " + vn1[v] + "?";
-                ps1eng = "Who do i" + vnb[v] + "?";
+                ps1eng = "Who do i " + vnb[v] + "?";
 
                 ps2 = "¿Quién " + vn2[v] + "?";
                 ps2eng = "Who do you " + vnb[v] + "?";
@@ -15014,7 +15014,7 @@ public class Nobles {
             //Presente
             case 0:
                 ps1 = "¿Cómo " + vn1[v] + "?";
-                ps1eng = "How do i" + vnb[v] + "?";
+                ps1eng = "How do i " + vnb[v] + "?";
 
                 ps2 = "¿Cómo " + vn2[v] + "?";
                 ps2eng = "How do you " + vnb[v] + "?";
