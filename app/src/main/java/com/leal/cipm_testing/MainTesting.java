@@ -2920,7 +2920,7 @@ public class MainTesting extends AppCompatActivity {
 
         save.setVisibility(View.VISIBLE);
         audiorepeat.setVisibility(View.VISIBLE);
-    sptx.setText("escribe lo que escuchas");
+        sptx.setText("escribe lo que escuchas");
         if(countPos>19){
             // send info to database
 
@@ -3329,6 +3329,17 @@ public class MainTesting extends AppCompatActivity {
         countPos++;
 
 
+    }
+
+    public void repeatAudio (View v){
+        MediaPlayer mp = new MediaPlayer();
+        try {
+            mp.setDataSource(soundArray[rsa]);
+            mp.prepare();
+            mp.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     private void   turnTrue(@NonNull String CurrentStructure) {
 

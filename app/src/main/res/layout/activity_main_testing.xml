@@ -114,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Repeat audio"
+                android:onClick="repeatAudio"
                 android:visibility="invisible" />
 
             <Button
