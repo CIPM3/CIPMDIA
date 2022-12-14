@@ -56352,7 +56352,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhenCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -56434,7 +56434,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhenPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -56516,7 +56516,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //When Modales
     public void GenWhenModalsSimp1() {
@@ -56600,7 +56600,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhenModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -56682,7 +56682,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhenModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -56764,7 +56764,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Where
     public void GenWhereSimp1() {
@@ -56847,7 +56847,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhereCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -56929,7 +56929,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWherePerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57011,7 +57011,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Where Modales
     public void GenWhereModalsSimp1() {
@@ -57095,7 +57095,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhereModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57177,7 +57177,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhereModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57259,7 +57259,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Why
     public void GenWhySimp1() {
@@ -57342,7 +57342,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhyCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57424,7 +57424,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhyPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57506,7 +57506,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Why Modales
     public void GenWhyModalsSimp1() {
@@ -57590,7 +57590,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhyModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57672,7 +57672,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhyModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57754,7 +57754,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Who
     public void GenWhoSimp1() {
@@ -57837,7 +57837,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhoCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -57919,7 +57919,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhoPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58001,7 +58001,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //Who Modales
     public void GenWhoModalsSimp1() {
@@ -58085,7 +58085,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhoModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58167,7 +58167,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenWhoModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58249,7 +58249,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //How
     public void GenHowSimp1() {
@@ -58332,7 +58332,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenHowCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58414,7 +58414,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenHowPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58496,7 +58496,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
     //How Modales
     public void GenHowModalsSimp1() {
@@ -58580,7 +58580,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenHowModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58662,7 +58662,7 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
     public void GenHowModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 1);
@@ -58744,5 +58744,995 @@ public class Generator {
                 }
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
+
+    //How Much
+    public void GenHowMuchSimp1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowMuchCont1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowMuchPerf1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+
+    //How Much Modales
+    public void GenHowMuchModalsSimp1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowMuchModalsCont1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowMuchModalsPerf1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowMuchModalsPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+
+    //How Many
+    public void GenHowManySimp1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManySimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowManyCont1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowManyPerf1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+
+    //How Many Modales
+    public void GenHowManyModalsSimp1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowManyModalsCont1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
+    public void GenHowManyModalsPerf1() {
+        int rand = (int) (Math.random() * pronombres.length);
+        int verb = (int) (Math.random() * 1);
+        //int verb = 3;
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenHowManyModalsPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 13/12/2022
 }

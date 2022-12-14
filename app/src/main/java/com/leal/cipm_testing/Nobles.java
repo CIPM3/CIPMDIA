@@ -13067,7 +13067,7 @@ public class Nobles {
                 ps5eng = "When won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhenCont1() {
         switch (neg) {
             case 0:
@@ -13116,7 +13116,7 @@ public class Nobles {
                 ps5eng = "When " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhenPerf1() {
         switch (neg) {
             case 0:
@@ -13165,7 +13165,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //When Modales
    public void GenWhenModalsSimp1(){
@@ -13310,7 +13310,7 @@ public class Nobles {
                 break;
 
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhenModalsCont1() {
         switch (neg) {
             case 0:
@@ -13359,7 +13359,7 @@ public class Nobles {
                 ps5eng = "When " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhenModalsPerf1() {
         switch (neg) {
             case 0:
@@ -13408,7 +13408,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Where
    public void GenWhereSimp1() {
@@ -13599,7 +13599,7 @@ public class Nobles {
                 ps5eng = "Where won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhereCont1() {
         switch (neg) {
             case 0:
@@ -13648,7 +13648,7 @@ public class Nobles {
                 ps5eng = "Where " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWherePerf1() {
         switch (neg) {
             case 0:
@@ -13697,7 +13697,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Where Modales
    public void GenWhereModalsSimp1(){
@@ -13842,7 +13842,7 @@ public class Nobles {
                 break;
 
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhereModalsCont1() {
         switch (neg) {
             case 0:
@@ -13891,7 +13891,7 @@ public class Nobles {
                 ps5eng = "Where " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhereModalsPerf1() {
         switch (neg) {
             case 0:
@@ -13940,7 +13940,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Why
    public void GenWhySimp1() {
@@ -14131,7 +14131,7 @@ public class Nobles {
                 ps5eng = "Why won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhyCont1() {
         switch (neg) {
             case 0:
@@ -14180,7 +14180,7 @@ public class Nobles {
                 ps5eng = "Why " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhyPerf1() {
         switch (neg) {
             case 0:
@@ -14229,7 +14229,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Why Modales
    public void GenWhyModalsSimp1(){
@@ -14374,7 +14374,7 @@ public class Nobles {
                 break;
 
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhyModalsCont1() {
         switch (neg) {
             case 0:
@@ -14423,7 +14423,7 @@ public class Nobles {
                 ps5eng = "Why " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhyModalsPerf1() {
         switch (neg) {
             case 0:
@@ -14472,7 +14472,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Who
    public void GenWhoSimp1() {
@@ -14663,7 +14663,7 @@ public class Nobles {
                 ps5eng = "Who won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhoCont1() {
         switch (neg) {
             case 0:
@@ -14712,7 +14712,7 @@ public class Nobles {
                 ps5eng = "Who " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhoPerf1() {
         switch (neg) {
             case 0:
@@ -14761,7 +14761,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //Who Modales
    public void GenWhoModalsSimp1(){
@@ -14906,7 +14906,7 @@ public class Nobles {
                 break;
 
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhoModalsCont1() {
         switch (neg) {
             case 0:
@@ -14955,7 +14955,7 @@ public class Nobles {
                 ps5eng = "Who " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenWhoModalsPerf1() {
         switch (neg) {
             case 0:
@@ -15004,7 +15004,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //How
    public void GenHowSimp1() {
@@ -15195,7 +15195,7 @@ public class Nobles {
                 ps5eng = "How won't we " + vnb[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenHowCont1() {
         switch (neg) {
             case 0:
@@ -15244,7 +15244,7 @@ public class Nobles {
                 ps5eng = "How " + scontWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenHowPerf1() {
         switch (neg) {
             case 0:
@@ -15293,7 +15293,7 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
 
    //How Modales
    public void GenHowModalsSimp1(){
@@ -15438,7 +15438,7 @@ public class Nobles {
                 break;
 
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenHowModalsCont1() {
         switch (neg) {
             case 0:
@@ -15487,7 +15487,7 @@ public class Nobles {
                 ps5eng = "How " + scontmWedont[s] + vnbc[v] + "?";
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
    public void GenHowModalsPerf1() {
         switch (neg) {
             case 0:
@@ -15536,6 +15536,1070 @@ public class Nobles {
 
                 break;
         }
-    }//prueba
+    }//LR 13/12/2022
+
+   //How Much
+   public void GenHowMuchSimp1() {
+        int neg = (int) (Math.random() * 6);
+        int sr = (int) (Math.random() * 2);
+        switch (neg) {
+            //Presente
+            case 0:
+                ps1 = "¿Cuanto " + vn1[v] + "?";
+                ps1eng = "How much do i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto " + vn2[v] + "?";
+                ps2eng = "How much do you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto " + vn3[v] + "él?";
+                ps3eng = "How much does he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto " + vn3[v] + "ella?";
+                ps3she = "How much does she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto " + vn3[v] + "eso?";
+                ps3it = "How much does it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto " + vn4[v] + "?";
+                ps4eng = "How much do they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto " + vn5[v] + "?";
+                ps5eng = "How much do we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuanto no " + vn1[v] + "?";
+                ps1eng = "How much don't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto no " + vn2[v] + "?";
+                ps2eng = "How much don't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto no " + vn3[v] + "él?";
+                ps3eng = "How much doesn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto no " + vn3[v] + "ella?";
+                ps3she = "How much doesn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto no " + vn3[v] + "eso?";
+                ps3it = "How much doesn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto no " + vn4[v] + "?";
+                ps4eng = "How much don't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto no " + vn5[v] + "?";
+                ps5eng = "How much don't we " + vnb[v] + "?";
+                break;
+
+            //Pasado
+            case 2:
+                if (sr == 0) {
+                    ps1 = "¿Cuanto " + ps1pre[v] + "?";
+                    ps1eng = "How much did i" + vnb[v] + "?";
+
+                    ps2 = "¿Cuanto " + ps2pre[v] + "?";
+                    ps2eng = "How much did you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuanto " + ps3p[v] + "él?";
+                    ps3eng = "How much did he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuanto " + ps3p[v] + "ella?";
+                    ps3she = "How much did she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuanto " + ps3p[v] + "eso?";
+                    ps3it = "How much did it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuanto " + vn4p[v] + "?";
+                    ps4eng = "How much did they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuanto " + vn5p[v] + "?";
+                    ps5eng = "How much did we " + vnb[v] + "?";
+                } else {
+                    ps1 = "¿Cuanto " + ps1imp[v] + "?";
+                    ps1eng = "How much did i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuanto " + ps2imp[v] + "?";
+                    ps2eng = "How much did you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuanto " + ps3imp[v] + "él?";
+                    ps3eng = "How much did he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuanto " + ps3imp[v] + "ella?";
+                    ps3she = "How much did she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuanto " + ps3imp[v] + "eso?";
+                    ps3it = "How much did it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuanto " + vn4imp[v] + "?";
+                    ps4eng = "How much did they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuanto " + vn5imp[v] + "?";
+                    ps5eng = "How much did we " + vnb[v] + "?";
+                }
+                break;
+            case 3:
+                if (sr == 0) {
+                    ps1 = "¿Cuanto no " + ps1pre[v] + "?";
+                    ps1eng = "How much didn't i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuanto no " + ps2pre[v] + "?";
+                    ps2eng = "How much didn't you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuanto no " + ps3p[v] + "él?";
+                    ps3eng = "How much didn't he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuanto no " + ps3p[v] + "ella?";
+                    ps3she = "How much didn't she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuanto no " + ps3p[v] + "eso?";
+                    ps3it = "How much didn't it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuanto no " + vn4p[v] + "?";
+                    ps4eng = "How much didn't they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuanto no " + vn5p[v] + "?";
+                    ps5eng = "How much didn't we " + vnb[v] + "?";
+                } else {
+                    ps1 = "¿Cuanto no " + ps1imp[v] + "?";
+                    ps1eng = "How much didn't i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuanto no " + ps2imp[v] + "?";
+                    ps2eng = "How much didn't you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuanto no " + ps3imp[v] + "él?";
+                    ps3eng = "How much didn't he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuanto no " + ps3imp[v] + "ella?";
+                    ps3she = "How much didn't she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuanto no " + ps3imp[v] + "eso?";
+                    ps3it = "How much didn't it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuanto no " + vn4imp[v] + "?";
+                    ps4eng = "How much didn't they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuanto no " + vn5imp[v] + "?";
+                    ps5eng = "How much didn't we " + vnb[v] + "?";
+                }
+                break;
+
+            //Futuro
+            case 4:
+                ps1 = "¿Cuanto " + vn1f[v] + "?";
+                ps1eng = "How much will i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto " + vn2f[v] + "?";
+                ps2eng = "How much will you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto " + vn3f[v] + "él?";
+                ps3eng = "How much will he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto " + vn3f[v] + "ella?";
+                ps3she = "How much will she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto " + vn3f[v] + "eso?";
+                ps3it = "How much will it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto " + vn4f[v] + "?";
+                ps4eng = "How much will they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto " + vn5f[v] + "?";
+                ps5eng = "How much will we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Cuanto no " + vn1f[v] + "?";
+                ps1eng = "How much won't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto no " + vn2f[v] + "?";
+                ps2eng = "How much won't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto no " + vn3f[v] + "él?";
+                ps3eng = "How much won't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto no " + vn3f[v] + "ella?";
+                ps3she = "How much won't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto no " + vn3f[v] + "eso?";
+                ps3it = "How much won't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto no " + vn4f[v] + "?";
+                ps4eng = "How much won't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto no " + vn5f[v] + "?";
+                ps5eng = "How much won't we " + vnb[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowMuchCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuanto " + scontIesp[s] + vnbcs[v] + "?";
+                ps1eng = "How much " + scontI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuanto " + scontYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "How much " + scontYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuanto " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "How much " + scontHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuanto " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "How much " + scontShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuanto " + scontItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "How much " + scontIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuanto " + scontTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "How much " + scontThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuanto " + scontWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "How much " + scontWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Cuanto " + scontIespno[s] + vnbcs[v] + "?";
+                ps1eng = "How much " + scontIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuanto " + scontYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "How much " + scontYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuanto " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "How much " + scontHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuanto " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "How much " + scontShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuanto " + scontItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "How much " + scontItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuanto " + scontTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "How much " + scontTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuanto " + scontWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "How much " + scontWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowMuchPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuanto " + sperfIesp[s] + vpsp[v] + "?";
+                ps1eng = "How much " + sperfI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuanto " + sperfYouesp[s] + vpsp[v] + "?";
+                ps2eng = "How much " + sperfYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuanto " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3eng = "How much " + sperfHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuanto " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3she = "How much " + sperfShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuanto " + sperfItesp[s] + vpsp[v] + "eso?";
+                ps3it = "How much " + sperfIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuanto " + sperfTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "How much " + sperfThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuanto " + sperfWeesp[s] + vpsp[v] + "?";
+                ps5eng = "How much " + sperfWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuanto " + sperfIespno[s] + vpsp[v] + "?";
+                ps1eng = "How much " + sperfIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuanto " + sperfYouespno[s] + vpsp[v] + "?";
+                ps2eng = "How much " + sperfYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuanto " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3eng = "How much " + sperfHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuanto " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3she = "How much " + sperfShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuanto " + sperfItespno[s] + vpsp[v] + "eso?";
+                ps3it = "How much " + sperfItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuanto " + sperfTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "How much " + sperfTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuanto " + sperfWeespno[s] + vpsp[v] + "?";
+                ps5eng = "How much " + sperfWedont[s] + vpeng[v] + "?";
+
+                break;
+        }
+    }//LR 13/12/2022
+
+   //How Much Modales
+   public void GenHowMuchModalsSimp1(){
+        int neg = (int) (Math.random() * 6);
+        switch (neg){
+            //Would
+            case 0:
+                ps1 = "¿Cuanto " + vn1w[v] + "?";
+                ps1eng = "How much " + "would i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto " + vn2w[v] + "?";
+                ps2eng = "How much " + "would you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto " + vn3w[v] + "él?";
+                ps3eng = "How much " + "would he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto " + vn3w[v] + "ella?";
+                ps3she = "How much " + "would she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto " + vn3w[v] + "eso?";
+                ps3it = "How much " + "would it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto " + vn4w[v] + "?";
+                ps4eng = "How much " + "would they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto " + vn5w[v] + "?";
+                ps5eng = "How much " + "would we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuanto no " + vn1w[v] + "?";
+                ps1eng = "How much " + "wouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto no " + vn2w[v] + "?";
+                ps2eng = "How much " + "wouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto no " + vn3w[v] + "él?";
+                ps3eng = "How much " + "wouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto no " + vn3w[v] + "ella?";
+                ps3she = "How much " + "wouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto no " + vn3w[v] + "eso?";
+                ps3it = "How much " + "wouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto no " + vn4w[v] + "?";
+                ps4eng = "How much " + "wouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto no " + vn5w[v] + "?";
+                ps5eng = "How much " + "wouldn't we " + vnb[v] + "?";
+                break;
+
+            //Could
+            case 2:
+                ps1 = "¿Cuanto " + "podría " + vnbs[v] + "?";
+                ps1eng = "How much " + "could i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto " + "podrías " + vnbs[v] + "?";
+                ps2eng = "How much " + "could you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto " + "podría " + vnbs[v] + "él?";
+                ps3eng = "How much " + "could he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto " + "podría " + vnbs[v] + "ella?";
+                ps3she = "How much " + "could she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto " + "podría " + vnbs[v] + "eso?";
+                ps3it = "How much " + "could it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto " + "podrían " + vnbs[v] + "?";
+                ps4eng = "How much " + "could they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "How much " + "could we " + vnb[v] + "?";
+                break;
+            case 3:
+                ps1 = "¿Cuanto no " + "podría " + vnbs[v] + "?";
+                ps1eng = "How much " + "couldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto no " + "podrías " + vnbs[v] + "?";
+                ps2eng = "How much " + "couldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto no " + "podría " + vnbs[v] + "él?";
+                ps3eng = "How much " + "couldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto no " + "podría " + vnbs[v] + "ella?";
+                ps3she = "How much " + "couldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto no " + "podría " + vnbs[v] + "eso?";
+                ps3it = "How much " + "couldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto no " + "podrían " + vnbs[v] + "?";
+                ps4eng = "How much " + "couldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto no " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "How much " + "couldn't we " + vnb[v] + "?";
+                break;
+
+            //Should
+            case 4:
+                ps1 = "¿Cuanto " + "debería " + vnbs[v] + "?";
+                ps1eng = "How much " + "should i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto " + "deberías " + vnbs[v] + "?";
+                ps2eng = "How much " + "should you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto " + "debería " + vnbs[v] + "él?";
+                ps3eng = "How much " + "should he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto " + "debería " + vnbs[v] + "ella?";
+                ps3she = "How much " + "should she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto " + "debería " + vnbs[v] + "eso?";
+                ps3it = "How much " + "should it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto " + "deberían " + vnbs[v] + "?";
+                ps4eng = "How much " + "should they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "How much " + "should we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Cuanto no " + "debería " + vnbs[v] + "?";
+                ps1eng = "How much " + "shouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuanto no " + "deberías " + vnbs[v] + "?";
+                ps2eng = "How much " + "shouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuanto no " + "debería " + vnbs[v] + "él?";
+                ps3eng = "How much " + "shouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuanto no " + "debería " + vnbs[v] + "ella?";
+                ps3she = "How much " + "shouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuanto no " + "debería " + vnbs[v] + "eso?";
+                ps3it = "How much " + "shouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuanto no " + "deberían " + vnbs[v] + "?";
+                ps4eng = "How much " + "shouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuanto no " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "How much " + "shouldn't we " + vnb[v] + "?";
+                break;
+
+        }
+    }//LR 13/12/2022
+   public void GenHowMuchModalsCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuanto " + scontmIesp[s] + vnbcs[v] + "?";
+                ps1eng = "How much " + scontmI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuanto " + scontmYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "How much " + scontmYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuanto " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "How much " + scontmHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuanto " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "How much " + scontmShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuanto " + scontmItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "How much " + scontmIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuanto " + scontmTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "How much " + scontmThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuanto " + scontmWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "How much " + scontmWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Cuanto " + scontmIespno[s] + vnbcs[v] + "?";
+                ps1eng = "How much " + scontmIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuanto " + scontmYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "How much " + scontmYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuanto " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "How much " + scontmHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuanto " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "How much " + scontmShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuanto " + scontmItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "How much " + scontmItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuanto " + scontmTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "How much " + scontmTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuanto " + scontmWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "How much " + scontmWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowMuchModalsPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuanto " + sperfmIesp[s] + vpsp[v] + "?";
+                ps1eng = "How much " + sperfmI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuanto " + sperfmYouesp[s] + vpsp[v] + "?";
+                ps2eng = "How much " + sperfmYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuanto " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3eng = "How much " + sperfmHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuanto " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3she = "How much " + sperfmShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuanto " + sperfmItesp[s] + vpsp[v] + "eso?";
+                ps3it = "How much " + sperfmIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuanto " + sperfmTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "How much " + sperfmThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuanto " + sperfmWeesp[s] + vpsp[v] + "?";
+                ps5eng = "How much " + sperfmWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuanto " + sperfmIespno[s] + vpsp[v] + "?";
+                ps1eng = "How much " + sperfmIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuanto " + sperfmYouespno[s] + vpsp[v] + "?";
+                ps2eng = "How much " + sperfmYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuanto " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3eng = "How much " + sperfmHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuanto " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3she = "How much " + sperfmShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuanto " + sperfmItespno[s] + vpsp[v] + "eso?";
+                ps3it = "How much " + sperfmItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuanto " + sperfmTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "How much " + sperfmTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuanto " + sperfmWeespno[s] + vpsp[v] + "?";
+                ps5eng = "How much " + sperfmWedont[s] + vpeng[v] + "?";
+
+                break;
+        }
+    }//LR 13/12/2022
+
+   //How Many
+   public void GenHowManySimp1() {
+        int neg = (int) (Math.random() * 6);
+        int sr = (int) (Math.random() * 2);
+        switch (neg) {
+            //Presente
+            case 0:
+                ps1 = "¿Cuantos " + vn1[v] + "?";
+                ps1eng = "How many do i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos " + vn2[v] + "?";
+                ps2eng = "How many do you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos " + vn3[v] + "él?";
+                ps3eng = "How many does he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos " + vn3[v] + "ella?";
+                ps3she = "How many does she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos " + vn3[v] + "eso?";
+                ps3it = "How many does it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos " + vn4[v] + "?";
+                ps4eng = "How many do they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos " + vn5[v] + "?";
+                ps5eng = "How many do we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuantos no " + vn1[v] + "?";
+                ps1eng = "How many don't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos no " + vn2[v] + "?";
+                ps2eng = "How many don't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos no " + vn3[v] + "él?";
+                ps3eng = "How many doesn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos no " + vn3[v] + "ella?";
+                ps3she = "How many doesn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos no " + vn3[v] + "eso?";
+                ps3it = "How many doesn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos no " + vn4[v] + "?";
+                ps4eng = "How many don't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos no " + vn5[v] + "?";
+                ps5eng = "How many don't we " + vnb[v] + "?";
+                break;
+
+            //Pasado
+            case 2:
+                if (sr == 0) {
+                    ps1 = "¿Cuantos " + ps1pre[v] + "?";
+                    ps1eng = "How many did i" + vnb[v] + "?";
+
+                    ps2 = "¿Cuantos " + ps2pre[v] + "?";
+                    ps2eng = "How many did you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuantos " + ps3p[v] + "él?";
+                    ps3eng = "How many did he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuantos " + ps3p[v] + "ella?";
+                    ps3she = "How many did she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuantos " + ps3p[v] + "eso?";
+                    ps3it = "How many did it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuantos " + vn4p[v] + "?";
+                    ps4eng = "How many did they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuantos " + vn5p[v] + "?";
+                    ps5eng = "How many did we " + vnb[v] + "?";
+                } else {
+                    ps1 = "¿Cuantos " + ps1imp[v] + "?";
+                    ps1eng = "How many did i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuantos " + ps2imp[v] + "?";
+                    ps2eng = "How many did you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuantos " + ps3imp[v] + "él?";
+                    ps3eng = "How many did he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuantos " + ps3imp[v] + "ella?";
+                    ps3she = "How many did she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuantos " + ps3imp[v] + "eso?";
+                    ps3it = "How many did it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuantos " + vn4imp[v] + "?";
+                    ps4eng = "How many did they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuantos " + vn5imp[v] + "?";
+                    ps5eng = "How many did we " + vnb[v] + "?";
+                }
+                break;
+            case 3:
+                if (sr == 0) {
+                    ps1 = "¿Cuantos no " + ps1pre[v] + "?";
+                    ps1eng = "How many didn't i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuantos no " + ps2pre[v] + "?";
+                    ps2eng = "How many didn't you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuantos no " + ps3p[v] + "él?";
+                    ps3eng = "How many didn't he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuantos no " + ps3p[v] + "ella?";
+                    ps3she = "How many didn't she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuantos no " + ps3p[v] + "eso?";
+                    ps3it = "How many didn't it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuantos no " + vn4p[v] + "?";
+                    ps4eng = "How many didn't they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuantos no " + vn5p[v] + "?";
+                    ps5eng = "How many didn't we " + vnb[v] + "?";
+                } else {
+                    ps1 = "¿Cuantos no " + ps1imp[v] + "?";
+                    ps1eng = "How many didn't i " + vnb[v] + "?";
+
+                    ps2 = "¿Cuantos no " + ps2imp[v] + "?";
+                    ps2eng = "How many didn't you " + vnb[v] + "?";
+
+                    ps3 = "¿Cuantos no " + ps3imp[v] + "él?";
+                    ps3eng = "How many didn't he " + vnb[v] + "?";
+
+                    ps3ella = "¿Cuantos no " + ps3imp[v] + "ella?";
+                    ps3she = "How many didn't she " + vnb[v] + "?";
+
+                    ps3eso = "¿Cuantos no " + ps3imp[v] + "eso?";
+                    ps3it = "How many didn't it " + vnb[v] + "?";
+
+                    ps4 = "¿Cuantos no " + vn4imp[v] + "?";
+                    ps4eng = "How many didn't they " + vnb[v] + "?";
+
+                    ps5 = "¿Cuantos no " + vn5imp[v] + "?";
+                    ps5eng = "How many didn't we " + vnb[v] + "?";
+                }
+                break;
+
+            //Futuro
+            case 4:
+                ps1 = "¿Cuantos " + vn1f[v] + "?";
+                ps1eng = "How many will i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos " + vn2f[v] + "?";
+                ps2eng = "How many will you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos " + vn3f[v] + "él?";
+                ps3eng = "How many will he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos " + vn3f[v] + "ella?";
+                ps3she = "How many will she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos " + vn3f[v] + "eso?";
+                ps3it = "How many will it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos " + vn4f[v] + "?";
+                ps4eng = "How many will they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos " + vn5f[v] + "?";
+                ps5eng = "How many will we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Cuantos no " + vn1f[v] + "?";
+                ps1eng = "How many won't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos no " + vn2f[v] + "?";
+                ps2eng = "How many won't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos no " + vn3f[v] + "él?";
+                ps3eng = "How many won't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos no " + vn3f[v] + "ella?";
+                ps3she = "How many won't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos no " + vn3f[v] + "eso?";
+                ps3it = "How many won't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos no " + vn4f[v] + "?";
+                ps4eng = "How many won't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos no " + vn5f[v] + "?";
+                ps5eng = "How many won't we " + vnb[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowManyCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuantos " + scontIesp[s] + vnbcs[v] + "?";
+                ps1eng = "How many " + scontI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuantos " + scontYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "How many " + scontYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuantos " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "How many " + scontHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuantos " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "How many " + scontShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuantos " + scontItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "How many " + scontIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuantos " + scontTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "How many " + scontThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuantos " + scontWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "How many " + scontWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Cuantos " + scontIespno[s] + vnbcs[v] + "?";
+                ps1eng = "How many " + scontIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuantos " + scontYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "How many " + scontYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuantos " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "How many " + scontHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuantos " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "How many " + scontShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuantos " + scontItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "How many " + scontItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuantos " + scontTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "How many " + scontTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuantos " + scontWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "How many " + scontWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowManyPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuantos " + sperfIesp[s] + vpsp[v] + "?";
+                ps1eng = "How many " + sperfI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuantos " + sperfYouesp[s] + vpsp[v] + "?";
+                ps2eng = "How many " + sperfYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuantos " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3eng = "How many " + sperfHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuantos " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3she = "How many " + sperfShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuantos " + sperfItesp[s] + vpsp[v] + "eso?";
+                ps3it = "How many " + sperfIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuantos " + sperfTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "How many " + sperfThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuantos " + sperfWeesp[s] + vpsp[v] + "?";
+                ps5eng = "How many " + sperfWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuantos " + sperfIespno[s] + vpsp[v] + "?";
+                ps1eng = "How many " + sperfIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuantos " + sperfYouespno[s] + vpsp[v] + "?";
+                ps2eng = "How many " + sperfYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuantos " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3eng = "How many " + sperfHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuantos " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3she = "How many " + sperfShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuantos " + sperfItespno[s] + vpsp[v] + "eso?";
+                ps3it = "How many " + sperfItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuantos " + sperfTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "How many " + sperfTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuantos " + sperfWeespno[s] + vpsp[v] + "?";
+                ps5eng = "How many " + sperfWedont[s] + vpeng[v] + "?";
+
+                break;
+        }
+    }//LR 13/12/2022
+
+   //How Many Modales
+   public void GenHowManyModalsSimp1(){
+        int neg = (int) (Math.random() * 6);
+        switch (neg){
+            //Would
+            case 0:
+                ps1 = "¿Cuantos " + vn1w[v] + "?";
+                ps1eng = "How many " + "would i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos " + vn2w[v] + "?";
+                ps2eng = "How many " + "would you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos " + vn3w[v] + "él?";
+                ps3eng = "How many " + "would he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos " + vn3w[v] + "ella?";
+                ps3she = "How many " + "would she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos " + vn3w[v] + "eso?";
+                ps3it = "How many " + "would it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos " + vn4w[v] + "?";
+                ps4eng = "How many " + "would they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos " + vn5w[v] + "?";
+                ps5eng = "How many " + "would we " + vnb[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuantos no " + vn1w[v] + "?";
+                ps1eng = "How many " + "wouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos no " + vn2w[v] + "?";
+                ps2eng = "How many " + "wouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos no " + vn3w[v] + "él?";
+                ps3eng = "How many " + "wouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos no " + vn3w[v] + "ella?";
+                ps3she = "How many " + "wouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos no " + vn3w[v] + "eso?";
+                ps3it = "How many " + "wouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos no " + vn4w[v] + "?";
+                ps4eng = "How many " + "wouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos no " + vn5w[v] + "?";
+                ps5eng = "How many " + "wouldn't we " + vnb[v] + "?";
+                break;
+
+            //Could
+            case 2:
+                ps1 = "¿Cuantos " + "podría " + vnbs[v] + "?";
+                ps1eng = "How many " + "could i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos " + "podrías " + vnbs[v] + "?";
+                ps2eng = "How many " + "could you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos " + "podría " + vnbs[v] + "él?";
+                ps3eng = "How many " + "could he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos " + "podría " + vnbs[v] + "ella?";
+                ps3she = "How many " + "could she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos " + "podría " + vnbs[v] + "eso?";
+                ps3it = "How many " + "could it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos " + "podrían " + vnbs[v] + "?";
+                ps4eng = "How many " + "could they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "How many " + "could we " + vnb[v] + "?";
+                break;
+            case 3:
+                ps1 = "¿Cuantos no " + "podría " + vnbs[v] + "?";
+                ps1eng = "How many " + "couldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos no " + "podrías " + vnbs[v] + "?";
+                ps2eng = "How many " + "couldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos no " + "podría " + vnbs[v] + "él?";
+                ps3eng = "How many " + "couldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos no " + "podría " + vnbs[v] + "ella?";
+                ps3she = "How many " + "couldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos no " + "podría " + vnbs[v] + "eso?";
+                ps3it = "How many " + "couldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos no " + "podrían " + vnbs[v] + "?";
+                ps4eng = "How many " + "couldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos no " + "podríamos " + vnbs[v] + "?";
+                ps5eng = "How many " + "couldn't we " + vnb[v] + "?";
+                break;
+
+            //Should
+            case 4:
+                ps1 = "¿Cuantos " + "debería " + vnbs[v] + "?";
+                ps1eng = "How many " + "should i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos " + "deberías " + vnbs[v] + "?";
+                ps2eng = "How many " + "should you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos " + "debería " + vnbs[v] + "él?";
+                ps3eng = "How many " + "should he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos " + "debería " + vnbs[v] + "ella?";
+                ps3she = "How many " + "should she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos " + "debería " + vnbs[v] + "eso?";
+                ps3it = "How many " + "should it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos " + "deberían " + vnbs[v] + "?";
+                ps4eng = "How many " + "should they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "How many " + "should we " + vnb[v] + "?";
+                break;
+            case 5:
+                ps1 = "¿Cuantos no " + "debería " + vnbs[v] + "?";
+                ps1eng = "How many " + "shouldn't i " + vnb[v] + "?";
+
+                ps2 = "¿Cuantos no " + "deberías " + vnbs[v] + "?";
+                ps2eng = "How many " + "shouldn't you " + vnb[v] + "?";
+
+                ps3 = "¿Cuantos no " + "debería " + vnbs[v] + "él?";
+                ps3eng = "How many " + "shouldn't he " + vnb[v] + "?";
+
+                ps3ella = "¿Cuantos no " + "debería " + vnbs[v] + "ella?";
+                ps3she = "How many " + "shouldn't she " + vnb[v] + "?";
+
+                ps3eso = "¿Cuantos no " + "debería " + vnbs[v] + "eso?";
+                ps3it = "How many " + "shouldn't it " + vnb[v] + "?";
+
+                ps4 = "¿Cuantos no " + "deberían " + vnbs[v] + "?";
+                ps4eng = "How many " + "shouldn't they " + vnb[v] + "?";
+
+                ps5 = "¿Cuantos no " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = "How many " + "shouldn't we " + vnb[v] + "?";
+                break;
+
+        }
+    }//LR 13/12/2022
+   public void GenHowManyModalsCont1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuantos " + scontmIesp[s] + vnbcs[v] + "?";
+                ps1eng = "How many " + scontmI[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuantos " + scontmYouesp[s] + vnbcs[v] + "?";
+                ps2eng = "How many " + scontmYou[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuantos " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = "How many " + scontmHe[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuantos " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = "How many " + scontmShe[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuantos " + scontmItesp[s] + vnbcs[v] + "eso?";
+                ps3it = "How many " + scontmIt[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuantos " + scontmTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = "How many " + scontmThey[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuantos " + scontmWeesp[s] + vnbcs[v] + "?";
+                ps5eng = "How many " + scontmWe[s] + vnbc[v] + "?";
+                break;
+
+            case 1:
+                ps1 = "¿Cuantos " + scontmIespno[s] + vnbcs[v] + "?";
+                ps1eng = "How many " + scontmIdont[s] + vnbc[v] + "?";
+
+                ps2 = "¿Cuantos " + scontmYouespno[s] + vnbcs[v] + "?";
+                ps2eng = "How many " + scontmYoudont[s] + vnbc[v] + "?";
+
+                ps3 = "¿Cuantos " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = "How many " + scontmHedont[s] + vnbc[v] + "?";
+
+                ps3ella = "¿Cuantos " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = "How many " + scontmShedont[s] + vnbc[v] + "?";
+
+                ps3eso = "¿Cuantos " + scontmItespno[s] + vnbcs[v] + "eso?";
+                ps3it = "How many " + scontmItdont[s] + vnbc[v] + "?";
+
+                ps4 = "¿Cuantos " + scontmTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = "How many " + scontmTheydont[s] + vnbc[v] + "?";
+
+                ps5 = "¿Cuantos " + scontmWeespno[s] + vnbcs[v] + "?";
+                ps5eng = "How many " + scontmWedont[s] + vnbc[v] + "?";
+                break;
+        }
+    }//LR 13/12/2022
+   public void GenHowManyModalsPerf1() {
+        switch (neg) {
+            case 0:
+                ps1 = "¿Cuantos " + sperfmIesp[s] + vpsp[v] + "?";
+                ps1eng = "How many " + sperfmI[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuantos " + sperfmYouesp[s] + vpsp[v] + "?";
+                ps2eng = "How many " + sperfmYou[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuantos " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3eng = "How many " + sperfmHe[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuantos " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3she = "How many " + sperfmShe[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuantos " + sperfmItesp[s] + vpsp[v] + "eso?";
+                ps3it = "How many " + sperfmIt[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuantos " + sperfmTheyesp[s] + vpsp[v] + "?";
+                ps4eng = "How many " + sperfmThey[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuantos " + sperfmWeesp[s] + vpsp[v] + "?";
+                ps5eng = "How many " + sperfmWe[s] + vpeng[v] + "?";
+                break;
+            case 1:
+                ps1 = "¿Cuantos " + sperfmIespno[s] + vpsp[v] + "?";
+                ps1eng = "How many " + sperfmIdont[s] + vpeng[v] + "?";
+
+                ps2 = "¿Cuantos " + sperfmYouespno[s] + vpsp[v] + "?";
+                ps2eng = "How many " + sperfmYoudont[s] + vpeng[v] + "?";
+
+                ps3 = "¿Cuantos " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3eng = "How many " + sperfmHedont[s] + vpeng[v] + "?";
+
+                ps3ella = "¿Cuantos " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3she = "How many " + sperfmShedont[s] + vpeng[v] + "?";
+
+                ps3eso = "¿Cuantos " + sperfmItespno[s] + vpsp[v] + "eso?";
+                ps3it = "How many " + sperfmItdont[s] + vpeng[v] + "?";
+
+                ps4 = "¿Cuantos " + sperfmTheyespno[s] + vpsp[v] + "?";
+                ps4eng = "How many " + sperfmTheydont[s] + vpeng[v] + "?";
+
+                ps5 = "¿Cuantos " + sperfmWeespno[s] + vpsp[v] + "?";
+                ps5eng = "How many " + sperfmWedont[s] + vpeng[v] + "?";
+
+                break;
+        }
+    }//LR 13/12/2022
 }
 
