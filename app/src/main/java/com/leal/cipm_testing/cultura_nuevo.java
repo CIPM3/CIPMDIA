@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class cultura_nuevo extends AppCompatActivity {
@@ -426,6 +427,10 @@ public class cultura_nuevo extends AppCompatActivity {
             limpiarTxt();
             lay_txt.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void mideTuNivel(View v){
+        Toast.makeText(this, "Mide tu nivel de comprehesion", Toast.LENGTH_SHORT).show();
     }
 
     public void limpiarTxt(){
