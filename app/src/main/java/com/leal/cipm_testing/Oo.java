@@ -51,11 +51,11 @@ public class Oo {
             "exploran ", "expanden ", "operan ", "mejoran ", "distribuyen ", "adquieren "
     };
 
-    String vn5[] = {"creamos ", "disfrutamos ", "requeremos ", "construimos ", "recivimos ", "contenemos ",
+    String vn5[] = {"creamos ", "disfrutamos ", "requeremos ", "construimos ", "recibimos ", "contenemos ",
             "exploramos ", "expandimos ", "operamos ", "mejoramos ", "distribuimos ", "adquirimos "
     };
 
-    String vnbcs[] = {"creando ", "disfrutando ", "requeriendo ", "construyendo ", "reciviendo ", "conteniendo ",
+    String vnbcs[] = {"creando ", "disfrutando ", "requeriendo ", "construyendo ", "recibiendo ", "conteniendo ",
             "explorando ", "expandiendo ", "operando ", "mejorando ", "distribuyendo ", "adquiriendo "
     };
 
@@ -64,12 +64,12 @@ public class Oo {
     };
 
     // participios esp
-    String vpsp[] = {"creado ", "disfrutado ", "requerido ", "construido ", "recivido ", "contenido ",
+    String vpsp[] = {"creado ", "disfrutado ", "requerido ", "construido ", "recibido ", "contenido ",
             "explorado ", "expandido ", "operado ", "mejorado ", "distribuido ", "adquirido "
     };
 
     // participios esp masculino
-    String vpspM[] = {"creado ", "disfrutado ", "requerido ", "construido ", "recivido ", "contenido ",
+    String vpspM[] = {"creado ", "disfrutado ", "requerido ", "construido ", "recibido ", "contenido ",
             "explorado ", "expandido ", "operado ", "mejorado ", "distribuido ", "adquirido "
     };
 
