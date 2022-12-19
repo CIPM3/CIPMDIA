@@ -174,6 +174,7 @@ public class MainTesting extends AppCompatActivity {
     Timer timer;
     TimerTask timerTask;
     Double timen = 0.0;
+    String [] temp= {"Conscious Interference"};
 
 
     @Override
@@ -224,193 +225,202 @@ public class MainTesting extends AppCompatActivity {
 
 
         Prefs prefs = new Prefs(this);
-        if (prefs.getPremium()==1){
-            //Give the user all the premium features
-            //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
-                    (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
-            adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinv.setAdapter(adapterv);
-            spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selectionv = spinv.getSelectedItem().toString();
+        PremiumAndArrayControler(prefs);
+    }
+    boolean personalizedPlan;
+    private void PremiumAndArrayControler(Prefs prefs) {
 
-                    switch (selectionv){
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        if(personalizedPlan){
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
+                        (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
+                adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinv.setAdapter(adapterv);
+                spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selectionv = spinv.getSelectedItem().toString();
 
-                        case "Vocabulary":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setText("Choose a Range");
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocabPremium, android.R.layout.simple_spinner_item);
-                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapter);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Tutorial")) {
-                                        shownext();
+                        switch (selectionv){
+
+                            case "Vocabulary":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setText("Choose a Range");
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
                                     }
-                                }
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            break;
-
-
-                        case "Syntax":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
-                            adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapters);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-
-                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
-                                        shownext();
                                     }
-                                }
+                                });
+                                break;
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            break;
-                        case "Spanish Interference":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
-                            adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapterst);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView,
-                                                           View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Tutorial")) {
-                                        shownext();
+                            case "Syntax":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
+                                adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapters);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+
+                                        if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                            shownext();
+                                        }
                                     }
-                                }
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            shownext();
+                                    }
+                                });
+                                break;
+                            case "Spanish Interference":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
+                                adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapterst);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView,
+                                                               View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
 
-                            break;
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                        case "Conscious Interference":
-                            shownext();
-                            break;
+                                    }
+                                });
+                                shownext();
 
+                                break;
+
+                            case "Conscious Interference":
+                                shownext();
+                                break;
+
+
+                        }
 
                     }
 
-                }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
+                    }
+                });
 
 
-        } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-            ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
-                    (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
-            adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinv.setAdapter(adapterv);
-            spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selectionv = spinv.getSelectedItem().toString();
+            }
+            else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+                ArrayAdapter<String> adapterv = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
 
-                    switch (selectionv){
+                adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinv.setAdapter(adapterv);
+                spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selectionv = spinv.getSelectedItem().toString();
 
-                        case "Vocabulary":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setText("Choose a Range");
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocab, android.R.layout.simple_spinner_item);
-                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapter);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Tutorial")) {
-                                        shownext();
+                        switch (selectionv){
+
+                            case "Vocabulary":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setText("Choose a Range");
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainTesting.this, android.R.layout.simple_list_item_1, temp);
+                                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
                                     }
-                                }
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            break;
-
-
-                        case "Syntax":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
-                            adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapters);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Pick a Structure")) {
-                                        shownext();
                                     }
-                                }
+                                });
+                                break;
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            break;
-                        case "Spanish Interference":
-                            spin.setVisibility(View.VISIBLE);
-                            choose.setVisibility(View.VISIBLE);
-                            ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
-                            adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapterst);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    if(!selection.equalsIgnoreCase("Tutorial")) {
-                                        shownext();
+                            case "Syntax":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
+                                adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapters);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                            shownext();
+                                        }
                                     }
-                                }
 
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                }
-                            });
-                            Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
-                            shownext();
-                            break;
+                                    }
+                                });
+                                break;
+                            case "Spanish Interference":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
+                                adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapterst);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
 
-                        case "Conscious Interference":
-                            shownext();
-                            break;
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
+                                shownext();
+                                break;
+
+                            case "Conscious Interference":
+                                shownext();
+                                break;
 
 
 
@@ -418,27 +428,235 @@ public class MainTesting extends AppCompatActivity {
 
 
 
+
+                        }
 
                     }
 
-                }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
+                    }
+                });
 
 
 
+            }
+        }else {
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
+                        (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
+                adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinv.setAdapter(adapterv);
+                spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selectionv = spinv.getSelectedItem().toString();
+
+                        switch (selectionv){
+
+                            case "Vocabulary":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setText("Choose a Range");
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                break;
+
+
+                            case "Syntax":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
+                                adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapters);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+
+                                        if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                break;
+                            case "Spanish Interference":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
+                                adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapterst);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView,
+                                                               View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                shownext();
+
+                                break;
+
+                            case "Conscious Interference":
+                                shownext();
+                                break;
+
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+            }
+            else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+                ArrayAdapter<CharSequence> adapterv = ArrayAdapter.createFromResource
+                        (this, R.array.LevelofAbstraction, android.R.layout.simple_spinner_item);
+                adapterv.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinv.setAdapter(adapterv);
+                spinv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selectionv = spinv.getSelectedItem().toString();
+
+                        switch (selectionv){
+
+                            case "Vocabulary":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setText("Choose a Range");
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.vocab, android.R.layout.simple_spinner_item);
+                                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                break;
+
+
+                            case "Syntax":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(getApplicationContext(), R.array.structures, android.R.layout.simple_spinner_item);
+                                adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapters);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Pick a Structure")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                break;
+                            case "Spanish Interference":
+                                spin.setVisibility(View.VISIBLE);
+                                choose.setVisibility(View.VISIBLE);
+                                ArrayAdapter<CharSequence> adapterst = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Interference, android.R.layout.simple_spinner_item);
+                                adapterst.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spin.setAdapter(adapterst);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        if(!selection.equalsIgnoreCase("Tutorial")) {
+                                            shownext();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                                Toast.makeText(MainTesting.this, "inside int", Toast.LENGTH_SHORT).show();
+                                shownext();
+                                break;
+
+                            case "Conscious Interference":
+                                shownext();
+                                break;
+
+
+
+
+
+
+
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+
+            }
         }
 
-
-
-
-
-
     }
+
+
     public  void   start(View view){
         if(starttest.getText().equals(see)){
             vv.setVisibility(View.VISIBLE);
@@ -455,7 +673,6 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     private void   shownext() {
         mic.setVisibility(View.VISIBLE);
         sptx.setVisibility(View.VISIBLE);

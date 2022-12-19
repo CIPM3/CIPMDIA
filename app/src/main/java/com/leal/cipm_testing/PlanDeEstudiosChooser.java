@@ -235,7 +235,11 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
         }else if(isInTransition){
-            // no hay transicion todavia
+            intent = new Intent(PlanDeEstudiosChooser.this,Transicion.class);
+            intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
+            intent.putExtra("isCustom",isCustom);
+            startActivity(intent);
+
         }else if(isInPrager){
             intent = new Intent(PlanDeEstudiosChooser.this,availability_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);

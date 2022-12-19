@@ -20,7 +20,15 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Transicion extends AppCompatActivity {
@@ -33,7 +41,21 @@ public class Transicion extends AppCompatActivity {
     TextToSpeech tts;
     String selection;
     Generator gen= new Generator();
+    Prefs prefs ;
     public static final int REC_CODE_SPEECH_INPUT = 100;
+    FirebaseAuth mAuth;
+    String userid;
+    ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    String[] ArrayWithElementRemoved;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    boolean personalizedPlan,isCustom;
+    String[] temp = {"Conectores Standar Presente Simple","Conectores Standar Presente Continuo","Conectores Standar Presente Perfecto"
+    ,"Conectores Standar Presente Perfecto Continuo", "Conectores Standar Futuro Simple"
+    };
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
+    int PositionOfElementsLeft=0;
 
 
     @Override
@@ -47,24 +69,188 @@ public class Transicion extends AppCompatActivity {
         botonhablar=findViewById(R.id.micbtntrns);
         AnswerInput=findViewById(R.id.answerinputtrns);
         spin=findViewById(R.id.spintrns);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                (this, R.array.Transition, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
-        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selection = spin.getSelectedItem().toString();
-            }
+        prefs = new Prefs(this);
+        mAuth= FirebaseAuth.getInstance();
+        userid = mAuth.getCurrentUser().getUid();
+        docref = db.collection(userid).document("WhereisStudent");
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
 
-            }
-        });
+
+       PremiumAndArrayControler();
 
     }
+    private void PremiumAndArrayControler() {
+        // info que recive del plan de estudios chooser
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        Prefs prefs = new Prefs(Transicion.this);
+        //si es personalizado jala el array para empezar y luego el de la
+        // base de datos correspondiente
+        // este tiene que jalar un array al principio de lo que sea que sea su plan
+        if(personalizedPlan){
+            //al premium no se le ha movido
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                        (this, R.array.Transition, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected
+                            (AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+            }
+            // no es premium
+            else if (prefs.getPremium()==0){
+                // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
+                // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
+                // en cada actividad habra un is custom, con el array que le corresponda
+                // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
+                if(isCustom)
+                {
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                            assert vmp != null;
+                            temp= vmp.resultArray.toArray(new String[0]);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(Transicion.this, android.R.layout.simple_list_item_1,temp  );
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                        }
+                    });}
+                // si no es custom agarra el temp que ha sido inicializado arriba
+                // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
+                // aqui empieza el plan personalizado
+                else {
+                    Toast.makeText(this,"inside personalized not custom",Toast.LENGTH_SHORT).show();
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                }
+            }
+
+
+        }
+        // si no es personalizado acesa a todas las funciones que le cooresponden
+        // ya sea pagado o gratis
+        else if (prefs.getPremium()==1){
+            //Give the user all the premium features
+            //hide ads if you are showing ads
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                    (this, R.array.Transition, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selection = spin.getSelectedItem().toString();
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
+        } else if (prefs.getPremium()==0){
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                    (this, R.array.Transition , android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selection = spin.getSelectedItem().toString();
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
+        }
+    }
+    public void inWhatActivityisTheStudent(){
+
+        isInTransition = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            Intent intent = new Intent(Transicion.this,availability_nuevo.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            startActivity(intent);
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(selection);
+            //premiumControler updatea el array del spinner
+            PremiumAndArrayControler();
+            sendInfotoDb();
+        }
+    }
     public void practice(View vista){
         switch (selection){
             case "Conectores Standar Presente Simple":
@@ -829,9 +1015,6 @@ public class Transicion extends AppCompatActivity {
                 break;
         }
     }
-    public void CheckAnswer(View view){
-
-    }
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -866,8 +1049,6 @@ public class Transicion extends AppCompatActivity {
         String t = engSentence.getText().toString().trim();
         String t2 = AnswerInput.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
-
-
             tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int i) {
@@ -892,7 +1073,10 @@ public class Transicion extends AppCompatActivity {
                         // volvemos a llamar premium controler y re/setea el array
                         // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
 
-
+                        if(personalizedPlan){
+                            Toast.makeText(Transicion.this, "before subtract", Toast.LENGTH_SHORT).show();
+                            SubtractSelectionAndSendinfoToDb();
+                        }
                     }
                 }
             });
@@ -923,7 +1107,7 @@ public class Transicion extends AppCompatActivity {
                         });
 
                         tts.speak("answer is incorrect....the answer is..." + engSentence.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
-                        //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
+                        //trying to enable them when tts is speaking if clickable return so they can try again and hear answer, not done
                         //with this yet
 
                     }

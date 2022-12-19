@@ -93,10 +93,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     "Interferencia Pasiva"};
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String userid;
-    String[] EmptyArray;
     boolean isCustom;
-    boolean isNonBasics;
-    boolean isBasics;
     boolean personalizedPlan;
     ArrayAdapter<String> adapter;
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
@@ -163,10 +160,12 @@ public class spa_int_nuevo extends AppCompatActivity {
             }
         });
     }
+
     private void PremiumAndArrayControler() {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+
         if(personalizedPlan){
             if(isCustom){
                 if (prefs.getPremium()==1){
@@ -226,10 +225,10 @@ public class spa_int_nuevo extends AppCompatActivity {
                         }
                     });
 
-                } else if (prefs.getPremium()==0){
+                }
+                else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
-
 
                     docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
@@ -258,7 +257,6 @@ public class spa_int_nuevo extends AppCompatActivity {
 
                         }
                     });
-
 
                     ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
                     adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -575,9 +573,8 @@ public class spa_int_nuevo extends AppCompatActivity {
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
             Intent intent = new Intent(spa_int_nuevo.this,Transicion.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
             startActivity(intent);
-
-
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
@@ -586,6 +583,8 @@ public class spa_int_nuevo extends AppCompatActivity {
             sendInfotoDb();
         }
     }
+
+
     public void showV(View vista){
         vv.setVisibility(View.VISIBLE);
         vf.setVisibility(View.GONE);

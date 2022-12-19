@@ -1,9 +1,11 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -22,7 +24,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class conscisousinterference_nuevo extends AppCompatActivity {
@@ -44,14 +54,27 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     TextToSpeech tts;
     int control;
     public static final int REC_CODE_SPEECH_INPUT = 100;
-
     private ImageButton botonhablar;
+    boolean personalizedPlan,isCustom;
+    boolean isInVocab,isInStructure,
+            isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    String[] ArrayWithElementRemoved;
+    int PositionOfElementsLeft=0;
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();
+    String userid;
+    ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    String[] temp =objetoArrays.consciousInterferenciaGratis;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    int PositionOfSelection;
+    int CounterToSubtractSelection=0;
+    Prefs prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conscisousinterference_nuevo);
-
         vv = findViewById(R.id.vv);
         vf = findViewById(R.id.vf);
         spin = findViewById(R.id.spin1);
@@ -97,40 +120,424 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         respescu_3 = findViewById(R.id.respescu_3);
         respescu_4 = findViewById(R.id.respescu_4);
         respescu_5 = findViewById(R.id.respescu_5);
+        mAuth= FirebaseAuth.getInstance();
+        userid = mAuth.getCurrentUser().getUid();
 
+        prefs= new Prefs(this);
+        PremiumAndArrayControler();
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
-        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selection = spin.getSelectedItem().toString();
-                txt1.setText(selection);
-
-                vf.setVisibility(View.VISIBLE);
-                vv.setVisibility(View.GONE);
-
-                limpiar_inputs();
-                set_ans();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if(i==tts.SUCCESS){
-                    int lang = tts.setLanguage(Locale.ENGLISH);
-                }
-            }
-        });
 
     }
+
+    public void PremiumAndArrayControler(){
+
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        if(personalizedPlan){
+            if(isCustom){
+                if(prefs.getPremium()==1){
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            txt1.setText(selection);
+
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+
+                            limpiar_inputs();
+                            set_ans();
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            if(i==tts.SUCCESS){
+                                int lang = tts.setLanguage(Locale.ENGLISH);
+                            }
+                        }
+                    });
+
+                }
+                else if(prefs.getPremium()==0){
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                            vmp=documentSnapshot.toObject(VocabModeloPersistencia.class);
+                            temp= vmp.resultArray.toArray(new String[0]);
+                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(conscisousinterference_nuevo.this, R.array.rachel, android.R.layout.simple_spinner_item);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    txt1.setText(selection);
+
+                                    vf.setVisibility(View.VISIBLE);
+                                    vv.setVisibility(View.GONE);
+
+                                    limpiar_inputs();
+                                    set_ans();
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
+                            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                                @Override
+                                public void onInit(int i) {
+                                    if(i==tts.SUCCESS){
+                                        int lang = tts.setLanguage(Locale.ENGLISH);
+                                    }
+                                }
+                            });
+                        }
+                    });
+
+                }
+            }else{
+                if(prefs.getPremium()==1){
+                    ArrayAdapter<String> adapter =new  ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            txt1.setText(selection);
+
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+
+                            limpiar_inputs();
+                            set_ans();
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            if(i==tts.SUCCESS){
+                                int lang = tts.setLanguage(Locale.ENGLISH);
+                            }
+                        }
+                    });
+
+                }
+                else if(prefs.getPremium()==0){
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            txt1.setText(selection);
+
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+
+                            limpiar_inputs();
+                            set_ans();
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            if(i==tts.SUCCESS){
+                                int lang = tts.setLanguage(Locale.ENGLISH);
+                            }
+                        }
+                    });
+                }
+            }
+        }else {
+            if(prefs.getPremium()==1){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        txt1.setText(selection);
+
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+
+                        limpiar_inputs();
+                        set_ans();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+            } else if(prefs.getPremium()==0){
+                ArrayAdapter<CharSequence > adapter = ArrayAdapter.createFromResource(this, R.array.rachel ,android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        txt1.setText(selection);
+
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+
+                        limpiar_inputs();
+                        set_ans();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+            }
+        }
+
+    }
+    public void inWhatActivityisTheStudent(){
+
+        isinIntcon = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            // si queda nada de arrays cambia de vocab a estructura
+            isBasicStructures=true;
+            Intent intent = new Intent(conscisousinterference_nuevo.this,MainActivity.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            intent.putExtra("basicSctructures",isBasicStructures );
+            startActivity(intent);
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(selection);
+            //premiumControler updatea el array del spinner
+            PremiumAndArrayControler();
+            sendInfotoDb();
+        }
+    }
+    public void checkA(View view) {
+        condicionParaPasarEs(5);
+        switch (control){
+            case 1:
+                temp1 = ai1.getText().toString();
+                if (temp1.equalsIgnoreCase(r1)) {
+                    ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_1.setVisibility(View.VISIBLE);
+                    inc_1.setVisibility(View.GONE);
+                    mic_1.setVisibility(View.GONE);
+                    lay_resp_1.setVisibility(View.GONE);
+                    increaseCounter();
+
+                } else {
+                    ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_1.setVisibility(View.GONE);
+                    inc_1.setVisibility(View.VISIBLE);
+                    // mic_1.setVisibility(View.GONE);
+                    lay_resp_1.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 2:
+                temp2 = ai2.getText().toString();
+                if (temp2.equalsIgnoreCase(r2)) {
+                    ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_2.setVisibility(View.VISIBLE);
+
+                    inc_2.setVisibility(View.GONE);
+                    mic_2.setVisibility(View.GONE);
+
+                    lay_resp_2.setVisibility(View.GONE);
+                    increaseCounter();
+                } else {
+                    ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_2.setVisibility(View.GONE);
+
+                    inc_2.setVisibility(View.VISIBLE);
+                    mic_2.setVisibility(View.GONE);
+
+                    lay_resp_2.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 3:
+                temp3 = ai3.getText().toString();
+                if (temp3.equalsIgnoreCase(r3)) {
+                    ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_3.setVisibility(View.VISIBLE);
+
+                    inc_3.setVisibility(View.GONE);
+                    mic_3.setVisibility(View.GONE);
+
+                    lay_resp_3.setVisibility(View.GONE);
+                    increaseCounter();
+                } else {
+                    ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_3.setVisibility(View.GONE);
+
+                    inc_3.setVisibility(View.VISIBLE);
+                    mic_3.setVisibility(View.GONE);
+
+                    lay_resp_3.setVisibility(View.VISIBLE);
+                }
+                break;
+
+            case 4:
+                temp4 = ai4.getText().toString();
+                if (temp4.equalsIgnoreCase(r4)) {
+                    ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_4.setVisibility(View.VISIBLE);
+
+                    inc_4.setVisibility(View.GONE);
+                    mic_4.setVisibility(View.GONE);
+
+                    lay_resp_4.setVisibility(View.GONE);
+                    increaseCounter();
+                } else {
+                    ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_4.setVisibility(View.GONE);
+
+                    inc_4.setVisibility(View.VISIBLE);
+                    mic_4.setVisibility(View.GONE);
+
+                    lay_resp_4.setVisibility(View.VISIBLE);
+                }
+
+                break;
+
+            case 5:
+                temp5 = ai5.getText().toString();
+                if (temp5.equalsIgnoreCase(r5)) {
+                    ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    pass_5.setVisibility(View.VISIBLE);
+
+                    inc_5.setVisibility(View.GONE);
+                    mic_5.setVisibility(View.GONE);
+
+                    lay_resp_5.setVisibility(View.GONE);
+                    increaseCounter();
+                } else {
+                    ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    pass_5.setVisibility(View.GONE);
+
+                    inc_5.setVisibility(View.VISIBLE);
+                    mic_5.setVisibility(View.GONE);
+
+                    lay_resp_5.setVisibility(View.VISIBLE);
+                }
+
+                break;
+        }
+
+    }
+
+    public void condicionParaPasarEs(int condicionNumber){
+        if(CounterToSubtractSelection==condicionNumber){
+            DialogueBox("Cambiar de Video y seguir a siguiente clase?");
+        }
+    }
+    public void increaseCounter(){
+        CounterToSubtractSelection= ++CounterToSubtractSelection;
+        Toast.makeText(this, "increase counter called "+String.valueOf(CounterToSubtractSelection), Toast.LENGTH_SHORT).show();
+    }
+    public void resetCounter(){
+        CounterToSubtractSelection=0;
+        Toast.makeText(this, "Counter re-set"+String.valueOf(CounterToSubtractSelection), Toast.LENGTH_SHORT).show();
+
+    }
+    public void DialogueBox(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
+//set icon
+            .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+            .setTitle("Definición: ")
+//set message
+            .setMessage(message)
+//set positive button
+            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    SubtractSelectionAndSendinfoToDb();
+                    resetCounter();
+                    PremiumAndArrayControler();
+
+                }
+            })
+//set negative button
+            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //set what should happen when negative button is clicked
+
+                }
+            })
+            .show();}
+
+
 
     public void showv(View vista) {
         vf.setVisibility(View.GONE);
@@ -207,7 +614,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
         }
     }
-
     public void set_ans(){
 
         switch (selection){
@@ -266,7 +672,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         eng_4.setText(r4);
         eng_5.setText(r5);
     }
-
     public void show_aud(){
         switch (selection){
             case "Tutorial":
@@ -479,7 +884,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 break;
         }
     }
-
     public void showExp() {
         switch (selection) {
             case "Steve Jobs 1":
@@ -684,7 +1088,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 break;
         }
     }
-
     public void showAnswers(View view) {
         switch (control) {
             case 1:
@@ -708,119 +1111,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 break;
         }
     }
-
-    public void checkA(View view) {
-
-        switch (control){
-            case 1:
-                temp1 = ai1.getText().toString();
-                if (temp1.equalsIgnoreCase(r1)) {
-                    ai1.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_1.setVisibility(View.VISIBLE);
-
-                    inc_1.setVisibility(View.GONE);
-                    mic_1.setVisibility(View.GONE);
-
-                    lay_resp_1.setVisibility(View.GONE);
-                } else {
-                    ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_1.setVisibility(View.GONE);
-
-                    inc_1.setVisibility(View.VISIBLE);
-                    // mic_1.setVisibility(View.GONE);
-                    lay_resp_1.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 2:
-                temp2 = ai2.getText().toString();
-                if (temp2.equalsIgnoreCase(r2)) {
-                    ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_2.setVisibility(View.VISIBLE);
-
-                    inc_2.setVisibility(View.GONE);
-                    mic_2.setVisibility(View.GONE);
-
-                    lay_resp_2.setVisibility(View.GONE);
-                } else {
-                    ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_2.setVisibility(View.GONE);
-
-                    inc_2.setVisibility(View.VISIBLE);
-                    mic_2.setVisibility(View.GONE);
-
-                    lay_resp_2.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 3:
-                temp3 = ai3.getText().toString();
-                if (temp3.equalsIgnoreCase(r3)) {
-                    ai3.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_3.setVisibility(View.VISIBLE);
-
-                    inc_3.setVisibility(View.GONE);
-                    mic_3.setVisibility(View.GONE);
-
-                    lay_resp_3.setVisibility(View.GONE);
-                } else {
-                    ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_3.setVisibility(View.GONE);
-
-                    inc_3.setVisibility(View.VISIBLE);
-                    mic_3.setVisibility(View.GONE);
-
-                    lay_resp_3.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case 4:
-                temp4 = ai4.getText().toString();
-                if (temp4.equalsIgnoreCase(r4)) {
-                    ai4.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_4.setVisibility(View.VISIBLE);
-
-                    inc_4.setVisibility(View.GONE);
-                    mic_4.setVisibility(View.GONE);
-
-                    lay_resp_4.setVisibility(View.GONE);
-                } else {
-                    ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_4.setVisibility(View.GONE);
-
-                    inc_4.setVisibility(View.VISIBLE);
-                    mic_4.setVisibility(View.GONE);
-
-                    lay_resp_4.setVisibility(View.VISIBLE);
-                }
-
-                break;
-
-            case 5:
-                temp5 = ai5.getText().toString();
-                if (temp5.equalsIgnoreCase(r5)) {
-                    ai5.setBackgroundColor(Color.parseColor("#E6FBEB"));
-                    pass_5.setVisibility(View.VISIBLE);
-
-                    inc_5.setVisibility(View.GONE);
-                    mic_5.setVisibility(View.GONE);
-
-                    lay_resp_5.setVisibility(View.GONE);
-                } else {
-                    ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    pass_5.setVisibility(View.GONE);
-
-                    inc_5.setVisibility(View.VISIBLE);
-                    mic_5.setVisibility(View.GONE);
-
-                    lay_resp_5.setVisibility(View.VISIBLE);
-                }
-
-                break;
-        }
-
-    }
-
     public void hablar1(View vista){
         control = 1;
         iniciarentradavoz();
@@ -841,7 +1131,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         control = 5;
         iniciarentradavoz();
     }
-
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -851,7 +1140,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
-
     public void show_aud_1(View vista){
         control = 1;
         show_aud();
@@ -872,7 +1160,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         control = 5;
         show_aud();
     }
-
     public void showexp1(View vista){
         control = 1;
         showExp();
@@ -893,7 +1180,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         control = 5;
         showExp();
     }
-
     public void speak1(View vista){
 
         tts.speak(r1, TextToSpeech.QUEUE_ADD, null);
@@ -910,7 +1196,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     public void speak5(View vista){
         tts.speak(r5, TextToSpeech.QUEUE_ADD, null);
     }
-
     public void limpiar_inputs(){
         ai1.setText("");
         ai2.setText("");
@@ -948,7 +1233,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         lay_resp_4.setVisibility(View.GONE);
         lay_resp_5.setVisibility(View.GONE);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -984,19 +1268,20 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         }
 
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);
+    }
+
+    public void mideTuNivel(View view) {
+        Toast.makeText(this, "mide tu nivel cons", Toast.LENGTH_SHORT).show();
     }
 }

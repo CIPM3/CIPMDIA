@@ -1,8 +1,10 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ public class availability_nuevo extends AppCompatActivity {
     LinearLayout vf;
     String selection;
     String s;
+    boolean personalizedPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -4385,7 +4388,65 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void holaMundo(View v){
-        Toast.makeText(this, "Actividad de Comprehension", Toast.LENGTH_SHORT).show();
+        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
+//set icon
+                .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                .setTitle("Definición: ")
+//set message
+                .setMessage("Te llevara a hacer una actividad de comprensión lectora con un maestro en el app")
+//set positive button
+                .setPositiveButton("ir a chat con maestro", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent crispIntent = new Intent(availability_nuevo.this, chat_maestro.class);
+                        startActivity(crispIntent);
+
+
+                    }
+                })
+//set negative button
+                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
+
+
+    }
+    public void PasarACultura(View v){
+        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
+//set icon
+                .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                .setTitle("Definición: ")
+//set message
+                .setMessage("aqui te lleva a la siguiente parte de tu plan ")
+//set positive button
+                .setPositiveButton("pasar a cultura", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(availability_nuevo.this, cultura_nuevo.class);
+                        intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                        startActivity(intent);
+
+
+                    }
+                })
+//set negative button
+                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
+
+
     }
 
     private void openDialog(String s) {

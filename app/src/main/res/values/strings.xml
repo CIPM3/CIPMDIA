@@ -176,6 +176,14 @@
         <item>Conectores Standar Presente Simple X Por Preposicion</item>
         <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
     </string-array>
+    <string-array name="TransitionGratis">
+        <item>Conectores Standar Presente Simple</item>
+        <item>Conectores Standar Presente Continuo</item>
+        <item>Conectores Standar Presente Perfecto</item>
+        <item>Conectores Standar Presente Perfecto Continuo</item>
+        <item>Conectores Standar Futuro Simple</item>
+
+    </string-array>
     <string-array name="pragerPremium">
         <item>Tutorial</item>
         <item>Black Fathers</item>
@@ -254,6 +262,7 @@
         <item>Helicoptero 1</item>
         <item>Helicoptero 2</item>
     </string-array>
+
     <string-array name="LevelofAbstraction">
         <item>Pick a Level</item>
         <item>Vocabulary</item>

@@ -122,7 +122,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         boolean isCustom = reciver.getBooleanExtra("isCustom",false);
-
         Prefs prefs = new Prefs(vocabulary_nuevo.this);
 
         //si es personalizado jala el array para empezar y luego el de la
@@ -350,7 +349,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
         }
         PositionOfElementsLeft=0;
         return ArrayWithElementRemoved;
-
     }
     public void sendInfotoDb(){
         inWhatActivityisTheStudent();

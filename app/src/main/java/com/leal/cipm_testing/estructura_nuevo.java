@@ -249,8 +249,6 @@ public class estructura_nuevo extends AppCompatActivity {
 
                 }
 
-
-
             }else if(isNonBasics) {
                 // aqui tiene que recivir basico o no basico
                 isNonBasicsArray=true;
@@ -334,7 +332,8 @@ public class estructura_nuevo extends AppCompatActivity {
                     });
 
                 }
-            }else if(isBasics){
+            }
+            else if(isBasics){
                 if(isNonBasicsArray){
                     isBasicsArray=false;
                 }else {isBasicsArray=true;}
@@ -548,7 +547,6 @@ public class estructura_nuevo extends AppCompatActivity {
                intent.putExtra("isCustom",isCustom);
                startActivity(intent);
            }
-
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
@@ -557,7 +555,6 @@ public class estructura_nuevo extends AppCompatActivity {
             sendInfotoDb();
         }
     }
-
 
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);

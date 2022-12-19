@@ -1,8 +1,10 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +22,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Arrays;
 
 public class cultura_nuevo extends AppCompatActivity {
 
@@ -46,6 +55,22 @@ public class cultura_nuevo extends AppCompatActivity {
     LinearLayout txt_exp;
     String selection;
     boolean clip;
+    Prefs prefs;
+    boolean personalizedPlan,isCustom;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    String[] ArrayWithElementRemoved;
+    int PositionOfElementsLeft=0;
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();
+    String userid;
+    ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    String[] temp =objetoArrays.culturaGratis;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    int PositionOfSelection;
+    int CounterToSubtractSelection=0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,61 +99,195 @@ public class cultura_nuevo extends AppCompatActivity {
         get = findViewById(R.id.btnget);
         lay_txt = findViewById(R.id.lay_txt);
         txt_exp = findViewById(R.id.txt_exp);
-        Prefs prefs = new Prefs(this);
-        if (prefs.getPremium()==1){
-            //Give the user all the premium features
-            //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+         prefs = new Prefs(this);
+         CounterToSubtractSelection=1;
+        userid = mAuth.getCurrentUser().getUid();
+
+        PremiumAndArrayControler();
+
+    }
+    public void DialogueBox(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
+//set icon
+            .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+            .setTitle("Definición: ")
+//set message
+            .setMessage(message)
+//set positive button
+            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
-
-                    vf.setVisibility(View.VISIBLE);
-                    vv.setVisibility(View.GONE);
-                    lay_txt.setVisibility(View.GONE);
-                    txt_exp.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-
-        } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
-
-                    vf.setVisibility(View.VISIBLE);
-                    vv.setVisibility(View.GONE);
-                    lay_txt.setVisibility(View.GONE);
-                    txt_exp.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                public void onClick(DialogInterface dialogInterface, int i) {
+                   SubtractSelectionAndSendinfoToDb();
+                   resetCounter();
+                   PremiumAndArrayControler();
 
                 }
-            });
+            })
+//set negative button
+            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //set what should happen when negative button is clicked
+
+                }
+            })
+            .show();}
+    private void PremiumAndArrayControler()  {
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        if(personalizedPlan){
+            Toast.makeText(this, "is on personalized plan", Toast.LENGTH_SHORT).show();
+
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+                        lay_txt.setVisibility(View.GONE);
+                        txt_exp.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+            } else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(cultura_nuevo.this, android.R.layout.simple_list_item_1,temp);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+                        PositionOfSelection=i;
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+                        lay_txt.setVisibility(View.GONE);
+                        txt_exp.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
         }
 
+        else { if(prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+                        lay_txt.setVisibility(View.GONE);
+                        txt_exp.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+            } else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+                        PositionOfSelection=i;
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+                        lay_txt.setVisibility(View.GONE);
+                        txt_exp.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }}
+
+    }
+    public void inWhatActivityisTheStudent() {
+
+        isInCulture = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            startActivity(intent);
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(temp[PositionOfSelection]);
+            temp = RemoveApprovedElementFromArray(temp[PositionOfSelection-1]);
+            Toast.makeText(this, "se supone que ya quito el pedo ese", Toast.LENGTH_SHORT).show();
+
+            //premiumControler updatea el array del spinner
+            PremiumAndArrayControler();
+            sendInfotoDb();
+        }
     }
 
     //showV
     public void showv(View vista){
+        Toast.makeText(this, "video tarda 10 segundos en comenzar", Toast.LENGTH_SHORT).show();
         vf.setVisibility(View.GONE);
         vv.setVisibility(View.VISIBLE);
         txt_exp.setVisibility(View.GONE);
@@ -428,11 +587,9 @@ public class cultura_nuevo extends AppCompatActivity {
             lay_txt.setVisibility(View.VISIBLE);
         }
     }
-
     public void mideTuNivel(View v){
         Toast.makeText(this, "Mide tu nivel de comprehesion", Toast.LENGTH_SHORT).show();
     }
-
     public void limpiarTxt(){
         text1.setText("");
         text2.setText("");
@@ -447,16 +604,32 @@ public class cultura_nuevo extends AppCompatActivity {
         text11.setText("");
         text12.setText("");
     }
+    public void increaseCounter(){
+        CounterToSubtractSelection= ++CounterToSubtractSelection;
+        Toast.makeText(this, "increase counter called "+String.valueOf(CounterToSubtractSelection), Toast.LENGTH_SHORT).show();
+    }
+    public void resetCounter(){
+        CounterToSubtractSelection=0;
+        Toast.makeText(this, "Counter re-set"+String.valueOf(CounterToSubtractSelection), Toast.LENGTH_SHORT).show();
 
+    }
+    public void condicionParaPasarEs(int condicionNumber){
+        if(CounterToSubtractSelection>condicionNumber){
+            DialogueBox("Cambiar de Video y seguir a siguiente clase?");
+        }
+    }
     //getPos
-    public void getpos(View vista){
+    public void getpos(View vista)  {
+
         switch (selection){
             case "Moonlight Clip 1":
-
+                condicionParaPasarEs(6);
                 //Ain't no refund
                 if(clip){
+
                     int g=  vv.getCurrentPosition();
-                    if(g>36000&& g<38000){
+                    if(g>24000&& g<26000){
+                        increaseCounter();
                         String txt1 = "Ain't no refund";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -464,19 +637,23 @@ public class cultura_nuevo extends AppCompatActivity {
                         ClickableSpan txtone= new ClickableSpan() {
                             @Override
                             public void onClick(@NonNull View view) {
-                                vv.seekTo(36000);
+                                vv.seekTo(24000);
 
                             }
                         };
                         ss.setSpan(txtone,0,15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
                         text1.setText(ss);
                         text1.setMovementMethod(LinkMovementMethod.getInstance());
+
                     }
                 }
                 //Thought you was on vacation
                 if(clip){
+
                     int g=  vv.getCurrentPosition();
                     if(g>36000&& g<38000){
+                        increaseCounter();
+
                         String txt2 = "Thought you was on vacation";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -491,16 +668,14 @@ public class cultura_nuevo extends AppCompatActivity {
                         ss2.setSpan(txtwo,0,27, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
                         text2.setText(ss2);
                         text2.setMovementMethod(LinkMovementMethod.getInstance());
+
                     }
-
-
-
-
                 }
                 //How peanut working out
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>48000&& g<50000){
+                        increaseCounter();
                         String txt3 = "How peanut working out";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -515,15 +690,15 @@ public class cultura_nuevo extends AppCompatActivity {
                         text3.setText(ss3);
                         text3.setMovementMethod(LinkMovementMethod.getInstance());
                     }
-
-
-
-
                 }
                 //I got him in check
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>50000&& g<52000){
+                        increaseCounter();
+
                         String txt4 = "I got him in check";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -539,8 +714,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //I ain´t go let that go down
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>62800&& g<65000 || g>70000&& g<73000 ){
+                        increaseCounter();
+
                         String txt5 = "I ain´t go let that go down";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -556,8 +735,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //What´s up
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>93000 && g<95600){
+                        increaseCounter();
+
                         String txt6 = "What´s up";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -575,8 +758,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //it´s all good
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>96000 && g<96700 || g>103000 && g<105000 ){
+                        increaseCounter();
+
                         String txt7 = "it´s all good";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -594,8 +781,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //What are you doing
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>97000 && g<99000 ){
+                        increaseCounter();
+
                         String txt8 = "What are you doing";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -613,8 +804,11 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //What is wrong with you
                 if(clip){
+                    
                     int g=  vv.getCurrentPosition();
                     if(g>107000 && g<108000 ){
+                        increaseCounter();
+
                         String txt9 = "What is wrong with you";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -632,8 +826,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //Get the fuck out of here
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>115000 && g<116000 ){
+                        increaseCounter();
+
                         String txt10 = "Get the fuck out of here";
                         text10.setVisibility(View.VISIBLE);
                         text10.setText(txt10);
@@ -651,8 +849,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 }
                 //Have you ever
                 if(clip){
+                    
+
                     int g=  vv.getCurrentPosition();
                     if(g>179000 && g<180200 ){
+                        increaseCounter();
+
                         String txt11 = "Have you ever";
                         text11.setVisibility(View.VISIBLE);
                         text11.setText(txt11);
@@ -668,14 +870,14 @@ public class cultura_nuevo extends AppCompatActivity {
                         text11.setMovementMethod(LinkMovementMethod.getInstance());
                     }
                 }
-
                 break;
             case "Rick and Morty Clip 2":
-
+                condicionParaPasarEs(6);
                 //what's up
                 if(clip){
                     int g=  vv.getCurrentPosition();
-                    if(g>1000 && g<2000){
+                    if(g>0 && g<2000){
+                        increaseCounter();
                         String txt1 = "what's up";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -697,6 +899,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>5000 && g<7000){
+                        increaseCounter();
+
                         String txt2 = "no can do";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -718,6 +922,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>16000 && g<17500){
+                        increaseCounter();
+
                         String txt3 = "when i feel like it";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -739,6 +945,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>18000 && g<20000){
+                        increaseCounter();
+
                         String txt4 = "you need to chill out";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -760,6 +968,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>22000 && g<24000){
+                        increaseCounter();
+
                         String txt5 = "tryna - (trying to)";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -781,6 +991,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>24000 && g<25000){
+                        increaseCounter();
+
                         String txt6 = "you know what";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -802,6 +1014,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>26000 && g<28000){
+                        increaseCounter();
+
                         String txt7 = "hanging out";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -823,6 +1037,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>54000 && g<58000){
+                        increaseCounter();
+
                         String txt8 = "you're overthinking it";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -844,6 +1060,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>104000 && g<106000){
+                        increaseCounter();
                         String txt9 = "get your shit together";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -865,6 +1082,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>4000 && g<5000){
+                        increaseCounter();
                         String txt10 = "to be into";
                         text10.setVisibility(View.VISIBLE);
                         text10.setText(txt10);
@@ -886,11 +1104,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Do You Want Pepsi Clip 3":
-
+                condicionParaPasarEs(5);
                 //is there anything else a can get for you
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>0 && g<2000){
+                        increaseCounter();
                         String txt1 = "is there anything else a can get for you";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -912,6 +1131,9 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>6000 && g<7000){
+                        increaseCounter();
+
+
                         String txt2 = "ain't got no";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -933,6 +1155,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>7000 && g<8000){
+                        increaseCounter();
+
                         String txt3 = "do you want";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -954,7 +1178,9 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000 && g<16000){
-                        String txt4 = "i was just wondering";
+                        increaseCounter();
+
+                        String txt4 = "I was just wondering";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
                         SpannableString ss4= new SpannableString(txt4);
@@ -975,6 +1201,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>16000 && g<17000){
+                        increaseCounter();
+
                         String txt5 = "might as well";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -992,11 +1220,13 @@ public class cultura_nuevo extends AppCompatActivity {
                     }
 
                 }
-                //you fell me
+                //you feel me
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>17000 && g<18000){
-                        String txt6 = "you fell me";
+                        increaseCounter();
+
+                        String txt6 = "you feel me";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
                         SpannableString ss6= new SpannableString(txt6);
@@ -1017,6 +1247,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>28000 && g<30000){
+                        increaseCounter();
+
                         String txt7 = "is there a problem";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -1038,6 +1270,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>31000 && g<32000){
+                        increaseCounter();
+
                         String txt8 = "i didn't want";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -1059,6 +1293,8 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>33000 && g<35000 || g>36000 && g<37000){
+                        increaseCounter();
+
                         String txt9 = "why would you";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -1079,11 +1315,12 @@ public class cultura_nuevo extends AppCompatActivity {
 
                 break;
             case "Sangre Por Sangre Foodline Clip 4":
-
+                condicionParaPasarEs(3);
                 //you aint going to no prom soon
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>8000 && g<10000){
+                        increaseCounter();
                         String txt1 = "you ain't going to no prom soon";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1105,6 +1342,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000 && g<16000){
+                        increaseCounter();
                         String txt2 = "ain't nothing but";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1126,6 +1364,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>25000 && g<27000){
+                        increaseCounter();
                         String txt3 = "i ain't no muslim";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1147,6 +1386,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>31000 && g<33000){
+                        increaseCounter();
                         String txt4 = "i ain't no moving";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1168,6 +1408,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>61000 && g<63000){
+                        increaseCounter();
                         String txt5 = "there is a ray of sunshine";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1189,6 +1430,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>132000 && g<134000){
+                        increaseCounter();
                         String txt6 = "i ain't buying what's mine";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1210,6 +1452,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>155000 && g<158000){
+                        increaseCounter();
                         String txt7 = "you've getting by with that shit";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -1231,11 +1474,13 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Sangre Por Sangre Watch El Paisaje Clip 5":
+                condicionParaPasarEs(2);
 
                 //i'm here to jack you up
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>23000 && g<25000){
+                        increaseCounter();
                         String txt1 = "i'm here to jack you up";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1257,6 +1502,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>42000 && g<44000){
+                        increaseCounter();
                         String txt2 = "what do you want to do";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1278,6 +1524,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>45000 && g<47000){
+                        increaseCounter();
                         String txt3 = "you gotta pay your dues";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1299,6 +1546,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>48000 && g<50000){
+                        increaseCounter();
                         String txt4 = "you wanna throw down";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1320,6 +1568,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>82000 && g<85000){
+                        increaseCounter();
                         String txt5 = "catch you on the rebound";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1341,6 +1590,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>135000 && g<137000){
+                        increaseCounter();
                         String txt6 = "should't done that";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1362,11 +1612,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Training Day Rabbit Has The Gun Clip 6":
-
+                condicionParaPasarEs(6);
                 //is no fun
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>12000 && g<14000){
+                        increaseCounter();
                         String txt1 = "is no fun";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1388,6 +1639,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>32000 && g<34000 || g>35000 && g<37000){
+                        increaseCounter();
                         String txt2 = "who want to get paid";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1409,6 +1661,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>49000 && g<51000){
+                        increaseCounter();
                         String txt3 = "i'm glad to hear that";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1430,6 +1683,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>57000 && g<59000){
+                        increaseCounter();
                         String txt4 = "what are you gonna do";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1451,6 +1705,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>67000 && g<69000){
+                        increaseCounter();
                         String txt5 = "there it is";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1472,6 +1727,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>73000 && g<75000){
+                        increaseCounter();
                         String txt6 = "haven't ever - ain't never";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1493,6 +1749,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>118000 && g<120000){
+                        increaseCounter();
                         String txt7 = "you get me twisted";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -1514,6 +1771,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>139000 && g<141000 || g>176000 && g<178000){
+                        increaseCounter();
                         String txt8 = "ain't got it in you";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -1535,6 +1793,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>152000 && g<154000 || g>155000 && g<157000 || g>173000 && g<174000 || g>175000 && g<177000){
+                        increaseCounter();
                         String txt9 = "ima get - i'm going to get";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -1556,6 +1815,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>156000 && g<158000 || g>158000 && g<160000 ){
+                        increaseCounter();
                         String txt10 = "you ain't go";
                         text10.setVisibility(View.VISIBLE);
                         text10.setText(txt10);
@@ -1573,15 +1833,14 @@ public class cultura_nuevo extends AppCompatActivity {
                     }
 
                 }
-
                 break;
-
             case "Hancock Train Clip 7":
-
+                condicionParaPasarEs(2);
                 //i'm on my way
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>1000 && g<3000){
+                        increaseCounter();
                         String txt1 = "i'm on my way";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1603,6 +1862,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000 && g<18000){
+                        increaseCounter();
                         String txt2 = "i'll see you in about";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1624,6 +1884,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>76000 && g<78000){
+                        increaseCounter();
                         String txt3 = "i'll see you in about";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1645,6 +1906,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>126000 && g<129000){
+                        increaseCounter();
                         String txt4 = "you're the one who/that";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1666,6 +1928,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>126000 && g<129000){
+                        increaseCounter();
                         String txt5 = "why didn't you just";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1687,6 +1950,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>175000 && g<178000){
+                        increaseCounter();
                         String txt6 = "coulda shoulda - could/should have";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1708,11 +1972,13 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Malcom in the Middle Teacher Clip 8":
+                condicionParaPasarEs(3);
 
                 //you're nothing but a
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>0 && g<2000){
+                        increaseCounter();
                         String txt1 = "you're nothing but a";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1734,6 +2000,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>9000 && g<10000){
+                        increaseCounter();
                         String txt2 = "took you long enough";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1755,6 +2022,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>11000 && g<13000){
+                        increaseCounter();
                         String txt3 = "i've been trynna / trying to";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1776,6 +2044,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>18000 && g<20000){
+                        increaseCounter();
                         String txt4 = "what do you want";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1797,6 +2066,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>32000 && g<34000){
+                        increaseCounter();
                         String txt5 = "it's just a bunch of";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1818,6 +2088,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>88000 && g<90000){
+                        increaseCounter();
                         String txt6 = "rub somebody the wrong way";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1839,11 +2110,14 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Sangre Por Sangre Comedor Clip 9":
+                condicionParaPasarEs(3);
+
 
                 //you wanna buy
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>17000 && g<19000){
+                        increaseCounter();
                         String txt1 = "you wanna buy";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -1865,6 +2139,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>26000 && g<28000){
+                        increaseCounter();
                         String txt2 = "get your hands off";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -1886,6 +2161,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>120000 && g<123000){
+                        increaseCounter();
                         String txt3 = "give it to one of my";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -1907,6 +2183,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>200000 && g<203000){
+                        increaseCounter();
                         String txt4 = "i'm gonna have to";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -1928,6 +2205,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>205000 && g<206000){
+                        increaseCounter();
                         String txt5 = "what's the matter";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -1949,6 +2227,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>207000 && g<209000){
+                        increaseCounter();
                         String txt6 = "ain't you ever";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -1970,6 +2249,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>260000 && g<262000){
+                        increaseCounter();
                         String txt7 = "what are you looking for";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -1991,11 +2271,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Dave Chapelle Man Rape Clip 10":
-
+                condicionParaPasarEs(1);
                 //i'm one of those people
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>1000 && g<3000 || g>13000 && g<15000){
+                        increaseCounter();
                         String txt1 = "i'm one of those people";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2017,6 +2298,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>6000 && g<8000 || g>20000 && g<22000){
+                        increaseCounter();
                         String txt2 = "and i'm scared to live";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2038,11 +2320,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Análisis de cultura Gringa y Frases Coloquiales 2 Clip 11":
-
+                condicionParaPasarEs(3);
                 //If ther is some firing Going on✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>1000 && g<3000){
+                        increaseCounter();
                         String txt1 = "If ther is some firing Going on";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2064,6 +2347,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>3000 && g<7000){
+                        increaseCounter();
                         String txt2 = "We first So we pretty much expect it";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2085,6 +2369,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>7600 && g<9000){
+                        increaseCounter();
                         String txt3 = "I know what im Talking about";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -2106,6 +2391,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>8900 && g<10000){
+                        increaseCounter();
                         String txt4 = "I done had a lot of jobs";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -2127,6 +2413,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>10000 && g<12000){
+                        increaseCounter();
                         String txt5 = "Got into";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -2148,6 +2435,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000 && g<16500){
+                        increaseCounter();
                         String txt6 = "Out of them";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -2169,11 +2457,13 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Boys in the Hood Clip 12":
+                condicionParaPasarEs(4);
 
                 //What’s wrong with you✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>12000 && g<14000){
+                        increaseCounter();
                         String txt1 = "What’s wrong with you";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2195,6 +2485,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000  && g<17000){
+                        increaseCounter();
                         String txt2 = "What the fuck are you looking at";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2216,6 +2507,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>16800 && g<19000){
+                        increaseCounter();
                         String txt3 = "I’m Still trying to find out “Tryna”";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -2237,6 +2529,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>21000 && g<23000){
+                        increaseCounter();
                         String txt4 = "We got a problem here?";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -2258,6 +2551,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>55000 && g<57000){
+                        increaseCounter();
                         String txt5 = "Start some shit";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -2279,6 +2573,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>61000 && g<63000){
+                        increaseCounter();
                         String txt6 = "That’s why fool be getting shot all the time";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -2300,6 +2595,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>64000 && g<66000){
+                        increaseCounter();
                         String txt7 = "Tryna show how hard they is";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -2321,6 +2617,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>69000 && g<72000){
+                        increaseCounter();
                         String txt8 = "You be doing that shit, too";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -2342,6 +2639,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>102000 && g<106000){
+                        increaseCounter();
                         String txt9 = "I’m getting the fuck out of LA";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -2363,11 +2661,12 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
 
             case "Cultura y Fonética Clip 13":
-
+                condicionParaPasarEs(6);
                 //Look man I don’t mean no disrespect or nothing G✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>150 && g<2080){
+                        increaseCounter();
                         String txt1 = "Look man I don’t mean no disrespect or nothing G";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2388,6 +2687,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>2250 && g<3000){
+                        increaseCounter();
                         String txt2 = "I’m just trying to see";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2408,6 +2708,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>3050 && g<3450){
+                        increaseCounter();
                         String txt3 = "If can get a little bro";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -2428,6 +2729,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>4000 && g<5000){
+                        increaseCounter();
                         String txt4 = "You can’t get nothing man";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -2448,6 +2750,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>5000 && g<6000){
+                        increaseCounter();
                         String txt5 = "You know what time it is";
                         text5.setVisibility(View.VISIBLE);
                         text5.setText(txt5);
@@ -2468,6 +2771,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>6900 && g<7500){
+                        increaseCounter();
                         String txt6 = "I keep looking out for you";
                         text6.setVisibility(View.VISIBLE);
                         text6.setText(txt6);
@@ -2488,6 +2792,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>8000 && g<8800){
+                        increaseCounter();
                         String txt7 = "Just a little something man";
                         text7.setVisibility(View.VISIBLE);
                         text7.setText(txt7);
@@ -2508,6 +2813,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>9000 && g<10800){
+                        increaseCounter();
                         String txt8 = "All my soothing cost a little something";
                         text8.setVisibility(View.VISIBLE);
                         text8.setText(txt8);
@@ -2528,6 +2834,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>11000 && g<12070){
+                        increaseCounter();
                         String txt9 = "If you ain’t got it get to stepping";
                         text9.setVisibility(View.VISIBLE);
                         text9.setText(txt9);
@@ -2548,6 +2855,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>13050 && g<14000){
+                        increaseCounter();
                         String txt10 = "I am not fixing to repeat myself";
                         text10.setVisibility(View.VISIBLE);
                         text10.setText(txt10);
@@ -2567,10 +2875,12 @@ public class cultura_nuevo extends AppCompatActivity {
 
                 break;
             case "Kings of the Hills Drugs Clip 14":
+                condicionParaPasarEs(2);
                 //what do you want✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>10900 && g<11200){
+                        increaseCounter();
                         String txt1 = "what do you want";
                         text1.setVisibility(View.VISIBLE);
                         text1.setText(txt1);
@@ -2592,6 +2902,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>15000  && g<17000){
+                        increaseCounter();
                         String txt2 = "Are you looking to";
                         text2.setVisibility(View.VISIBLE);
                         text2.setText(txt2);
@@ -2613,6 +2924,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>22000 && g<24000){
+                        increaseCounter();
                         String txt3 = "I have been thinking about";
                         text3.setVisibility(View.VISIBLE);
                         text3.setText(txt3);
@@ -2634,6 +2946,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>24000 && g<26000){
+                        increaseCounter();
                         String txt4 = "What do you need";
                         text4.setVisibility(View.VISIBLE);
                         text4.setText(txt4);
@@ -2654,7 +2967,6 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
         }
     }
-
     //showans
     public void showans(View vista){
         switch (selection){
@@ -2668,7 +2980,7 @@ public class cultura_nuevo extends AppCompatActivity {
                     ClickableSpan txtone= new ClickableSpan() {
                         @Override
                         public void onClick(@NonNull View view) {
-                            vv.seekTo(36000);
+                            vv.seekTo(24500);
 
                         }
                     };
@@ -4246,19 +4558,17 @@ public class cultura_nuevo extends AppCompatActivity {
 
         }
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);
     }
+
 }
