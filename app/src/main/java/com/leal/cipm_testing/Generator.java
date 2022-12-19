@@ -51415,7 +51415,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenPresSimp1();
+        n1.GenPresSimp2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -51423,7 +51423,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenPresSimp1();
+        p2.GenPresSimp2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -51431,7 +51431,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenPresSimp1();
+        o2.GenPresSimp2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -51439,7 +51439,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenPresSimp1();
+        ab2.GenPresSimp2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -51447,7 +51447,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenPresSimp1();
+        s1.GenPresSimp2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -51455,7 +51455,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenPresSimp1();
+        i2.GenPresSimp2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -51695,7 +51695,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenPresCont1();
+        n1.GenPresCont2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -51703,7 +51703,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenPresCont1();
+        p2.GenPresCont2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -51711,7 +51711,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenPresCont1();
+        o2.GenPresCont2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -51719,7 +51719,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenPresCont1();
+        ab2.GenPresCont2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -51727,7 +51727,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenPresCont1();
+        s1.GenPresCont2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -51735,7 +51735,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenPresCont1();
+        i2.GenPresCont2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -51975,7 +51975,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenPresPerf1();
+        n1.GenPresPerf2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -51983,7 +51983,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenPresPerf1();
+        p2.GenPresPerf2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -51991,7 +51991,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenPresPerf1();
+        o2.GenPresPerf2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -51999,7 +51999,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenPresPerf1();
+        ab2.GenPresPerf2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -52007,7 +52007,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenPresPerf1();
+        s1.GenPresPerf2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -52015,7 +52015,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenPresPerf1();
+        i2.GenPresPerf2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -52257,7 +52257,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenPresPerfCont1();
+        n1.GenPresPerfCont2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -52265,7 +52265,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenPresPerfCont1();
+        p2.GenPresPerfCont2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -52273,7 +52273,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenPresPerfCont1();
+        o2.GenPresPerfCont2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -52281,7 +52281,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenPresPerfCont1();
+        ab2.GenPresPerfCont2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -52289,7 +52289,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenPresPerfCont1();
+        s1.GenPresPerfCont2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -52297,7 +52297,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenPresPerfCont1();
+        i2.GenPresPerfCont2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -52537,7 +52537,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenFutSimp1();
+        n1.GenFutSimp2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -52545,7 +52545,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenFutSimp1();
+        p2.GenFutSimp2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -52553,7 +52553,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenFutSimp1();
+        o2.GenFutSimp2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -52561,7 +52561,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenFutSimp1();
+        ab2.GenFutSimp2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -52569,7 +52569,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenFutSimp1();
+        s1.GenFutSimp2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -52577,7 +52577,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenFutSimp1();
+        i2.GenFutSimp2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -53089,7 +53089,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenMustSimp1();
+        n1.GenMustSimp2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -53097,7 +53097,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenMustSimp1();
+        p2.GenMustSimp2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -53105,7 +53105,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenMustSimp1();
+        o2.GenMustSimp2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -53113,7 +53113,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenMustSimp1();
+        ab2.GenMustSimp2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -53121,7 +53121,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenMustSimp1();
+        s1.GenMustSimp2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -53129,7 +53129,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenMustSimp1();
+        i2.GenMustSimp2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -53369,7 +53369,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenCanSimp1();
+        n1.GenCanSimp2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -53377,7 +53377,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenCanSimp1();
+        p2.GenCanSimp2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -53385,7 +53385,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenCanSimp1();
+        o2.GenCanSimp2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -53393,7 +53393,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenCanSimp1();
+        ab2.GenCanSimp2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -53401,7 +53401,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenCanSimp1();
+        s1.GenCanSimp2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -53409,7 +53409,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenCanSimp1();
+        i2.GenCanSimp2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -53651,7 +53651,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.WantYouTo1();
+        n1.WantYouTo2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -53659,7 +53659,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.WantYouTo1();
+        p2.WantYouTo2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -53667,7 +53667,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.WantYouTo1();
+        o2.WantYouTo2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -53675,7 +53675,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.WantYouTo1();
+        ab2.WantYouTo2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -53683,7 +53683,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.wantyouto1();
+        s1.wantyouto2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -53691,7 +53691,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.wantyouto1();
+        i2.wantyouto2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
@@ -54459,7 +54459,7 @@ public class Generator {
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
         //nobles random
-        n1.GenCanSimp1();
+        n1.GenCanSimp2();
         String NbSegSp [] = {
                 n1.ps1,n1.ps2,n1.ps3,n1.ps3ella,n1.ps3eso,n1.ps4,n1.ps5
         };
@@ -54467,7 +54467,7 @@ public class Generator {
                 n1.ps1eng,n1.ps2eng,n1.ps3eng,n1.ps3she,n1.ps3it,n1.ps4eng,n1.ps5eng
         };
         //people random
-        p2.GenCanSimp1();
+        p2.GenCanSimp2();
         String PSegSp [] = {
                 p2.ps1,p2.ps2,p2.ps3,p2.ps3ella,p2.ps3eso,p2.ps4,p2.ps5
         };
@@ -54475,7 +54475,7 @@ public class Generator {
                 p2.ps1eng,p2.ps2eng,p2.ps3eng,p2.ps3she,p2.ps3it,p2.ps4eng,p2.ps5eng
         };
         //Oo random
-        o2.GenCanSimp1();
+        o2.GenCanSimp2();
         String OoSegSp [] = {
                 o2.ps1,o2.ps2,o2.ps3,o2.ps3ella,o2.ps3eso,o2.ps4,o2.ps5
         };
@@ -54483,7 +54483,7 @@ public class Generator {
                 o2.ps1eng,o2.ps2eng,o2.ps3eng,o2.ps3she,o2.ps3it,o2.ps4eng,o2.ps5eng
         };
         //Abstractos random
-        ab2.GenCanSimp1();
+        ab2.GenCanSimp2();
         String AbSegSp [] = {
                 ab2.ps1,ab2.ps2,ab2.ps3,ab2.ps3ella,ab2.ps3eso,ab2.ps4,ab2.ps5
         };
@@ -54491,7 +54491,7 @@ public class Generator {
                 ab2.ps1eng,ab2.ps2eng,ab2.ps3eng,ab2.ps3she,ab2.ps3it,ab2.ps4eng,ab2.ps5eng
         };
         //Special random
-        s1.GenCanSimp1();
+        s1.GenCanSimp2();
         String SpSegSp [] = {
                 s1.sp1,s1.sp2,s1.sp3,s1.sp3ella,s1.sp3eso,s1.sp4,s1.sp5
         };
@@ -54499,7 +54499,7 @@ public class Generator {
                 s1.eng1,s1.eng2,s1.eng3,s1.eng3she,s1.sp3it,s1.eng4,s1.eng5
         };
         //Intrans random
-        i2.GenCanSimp1();
+        i2.GenCanSimp2();
         String ItSegSp [] = {
                 i2.sp1,i2.sp2,i2.sp3,i2.sp4,i2.sp5,i2.sp6,i2.sp7
         };
