@@ -11924,4 +11924,76 @@ public class Oo {
         }
     }//PD 28/11/2022
 
+    //Incremento Paralelo
+    public void IncrementoParalelo(){
+        //int neg = (int) (Math.random() * 2);
+        int neg = 0;
+
+        //subject
+        String RsSj[] = {"I ","you ","he ","she ","she ","they ","we "};
+
+        //subject esp
+        String RsSjesp[] = {"yo ","tu ","el ","ella ","ella ","ellos ","nosotros "};
+
+        //second subject
+        String RsS2j[] = {"I ","you ","he ","she ","she ","they ","we "};
+
+        //second subject esp
+        String RsS2jesp[] = {"yo ","tu ","el ","ella ","ella ","ellos ", "nosotros "};
+
+        //ps1pre
+        //vnbp
+        int v2 = (int) (Math.random() * vnb.length);
+        if(v == v2){
+            v2 = (int) (Math.random() * vnb.length);
+        }
+
+        switch (neg){
+            case 0:
+                ps1 = "entre mas " + RsSjesp[0] + vn1[v] + "mas " + vn1[v2];
+                ps1eng = "the more "+ RsSj[0] + vnb[v] + "the more " + RsS2j[0] + vnb[v2];
+
+                ps2 = "entre mas " + RsSjesp[1] + vn2[v] + "mas " + vn2[v2];
+                ps2eng = "the more "+ RsSj[1] + vnb[v] + "the more " + RsS2j[1] + vnb[v2];
+
+                ps3 = "entre mas " + RsSjesp[2] + vnb3[v] + "mas " + vnb3[v2];
+                ps3eng = "the more "+ RsSj[2] + vnb[v] + "the more " + RsS2j[2] + vnb[v2];
+
+                ps3ella = "entre mas " + RsSjesp[3] + vnb3[v] + "mas " + vnb3[v2];
+                ps3she = "the more "+ RsSj[3] + vnb[v] + "the more " + RsS2j[3] + vnb[v2];
+
+                ps3eso = "entre mas " + RsSjesp[4] + vnb3[v] + "mas " + vnb3[v2];
+                ps3it = "the more "+ RsSj[4] + vnb[v] + "the more " + RsS2j[4] + vnb[v2];
+
+                ps4 = "entre mas " + RsSjesp[5] + vn4[v] + "mas " + vn4[v2];
+                ps4eng = "the more "+ RsSj[5] + vnb[v] + "the more " + RsS2j[5] + vnb[v2];
+
+                ps5 = "entre mas " + RsSjesp[6] + vn5[v] + "mas " + vn5[v2];
+                ps5eng = "the more "+ RsSj[6] + vnb[v] + "the more " + RsS2j[6] + vnb[v2];
+                break;
+            case 1:
+                ps1 = "Prueba negativo";
+                ps1eng = "";
+
+                ps2 = "";
+                ps2eng = "";
+
+                ps3 = "";
+                ps3eng = "";
+
+                ps3ella = "";
+                ps3she = "";
+
+                ps3eso = "";
+                ps3it = "";
+
+                ps4 = "";
+                ps4eng = "";
+
+                ps5 = "";
+                ps5eng = "";
+                break;
+        }
+    }//PD 20/12/2022
+
 }
