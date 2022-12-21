@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -13,12 +14,13 @@ import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,60 +33,83 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class Transicion extends AppCompatActivity {
+public class Transicion_nuevo extends AppCompatActivity {
 
-    Button checkAnswer;
-    ImageButton botonhablar;
-    TextView spSentence,engSentence;
-    EditText AnswerInput;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    VideoView vv;
+    LinearLayout vf;
+    LinearLayout opclay;
+    LinearLayout resppass;
+    LinearLayout respescu;
+    LinearLayout respinc;
+    LinearLayout answer_lay;
+    LinearLayout spanish_lay;
+    LinearLayout input_lay;
+    LinearLayout btn_check_lay;
+    LinearLayout btn_emp_lay;
+    LinearLayout btn_cont_lay;
+    LinearLayout txt_exp;
     Spinner spin;
-    TextToSpeech tts;
     String selection;
-    Generator gen= new Generator();
-    Prefs prefs ;
-    public static final int REC_CODE_SPEECH_INPUT = 100;
+    TextView sptx;
+    TextView engtx;
+    EditText answerinp;
+    TextView textspin1;
+    TextToSpeech ttr;
+    TextToSpeech tts;
     FirebaseAuth mAuth;
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    String[] temp =objetoArrays.arrayVocab;
+    Generator gen1 = new Generator();
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     String[] ArrayWithElementRemoved;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    boolean personalizedPlan,isCustom;
-    String[] temp = {"Conectores Standar Presente Simple","Conectores Standar Presente Continuo","Conectores Standar Presente Perfecto"
-    ,"Conectores Standar Presente Perfecto Continuo", "Conectores Standar Futuro Simple"
-    };
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
     int PositionOfElementsLeft=0;
-
+    public static final int REC_CODE_SPEECH_INPUT = 100;
+    boolean v;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    boolean personalizedPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transicion);
-        spSentence=findViewById(R.id.sptrnstxt);
-        engSentence=findViewById(R.id.engtrnstxt);
-        engSentence.setVisibility(View.INVISIBLE);
-        checkAnswer=findViewById(R.id.checkanswertrnsbtn);
-        botonhablar=findViewById(R.id.micbtntrns);
-        AnswerInput=findViewById(R.id.answerinputtrns);
-        spin=findViewById(R.id.spintrns);
-        prefs = new Prefs(this);
+        setContentView(R.layout.activity_transicion_nuevo);
+        textspin1 = findViewById(R.id.textspin1);
+        spin = findViewById(R.id.spinuno);
+        vf = findViewById(R.id.vf);
+        vv = findViewById(R.id.vv);
+
+        sptx = findViewById(R.id.spanishsentence);
+        engtx = findViewById(R.id.txteng);
+        answerinp = findViewById(R.id.answerinput1);
+        opclay = findViewById(R.id.opclay);
+
+        resppass = findViewById(R.id.resppass);
+        respescu = findViewById(R.id.respescu);
+        respinc = findViewById(R.id.respinc);
+        answer_lay = findViewById(R.id.answer_lay);
+        spanish_lay = findViewById(R.id.spanish_lay);
+        input_lay = findViewById(R.id.input_lay);
+        btn_check_lay = findViewById(R.id.btn_check_lay);
+        btn_emp_lay = findViewById(R.id.btn_emp_lay);
+        btn_cont_lay = findViewById(R.id.btn_cont_lay);
+        txt_exp = findViewById(R.id.txt_exp);
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
 
-
-
-       PremiumAndArrayControler();
-
+        PremiumAndArrayControler();
     }
+    //DB
     private void PremiumAndArrayControler() {
+
         // info que recive del plan de estudios chooser
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
-        isCustom = reciver.getBooleanExtra("isCustom",false);
-        Prefs prefs = new Prefs(Transicion.this);
+        boolean isCustom = reciver.getBooleanExtra("isCustom",false);
+        Prefs prefs = new Prefs(Transicion_nuevo.this);
+
         //si es personalizado jala el array para empezar y luego el de la
         // base de datos correspondiente
         // este tiene que jalar un array al principio de lo que sea que sea su plan
@@ -94,16 +119,34 @@ public class Transicion extends AppCompatActivity {
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                        (this, R.array.Transition, android.R.layout.simple_spinner_item);
+                        (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                 spin.setAdapter(adapter);
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
-                    public void onItemSelected
-                            (AdapterView<?> adapterView, View view, int i, long l) {
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                         selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
 
+                        vf.setVisibility(View.VISIBLE);
+                        vv.setVisibility(View.GONE);
+
+                        txt_exp.setVisibility(View.VISIBLE);
+                        btn_emp_lay.setVisibility(View.VISIBLE);
+
+                        spanish_lay.setVisibility(View.GONE);
+                        input_lay.setVisibility(View.GONE);
+
+                        btn_check_lay.setVisibility(View.GONE);
+                        btn_cont_lay.setVisibility(View.GONE);
+
+                        resppass.setVisibility(View.GONE);
+                        respescu.setVisibility(View.GONE);
+                        respinc.setVisibility(View.GONE);
+
+                        answerinp.setBackgroundColor(Color.WHITE);
+                        opclay.setBackgroundColor(Color.WHITE);
                     }
 
                     @Override
@@ -127,13 +170,29 @@ public class Transicion extends AppCompatActivity {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
                             temp= vmp.resultArray.toArray(new String[0]);
-                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(Transicion.this, android.R.layout.simple_list_item_1,temp  );
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(Transicion_nuevo.this, android.R.layout.simple_list_item_1,temp  );
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
+                                    textspin1.setText(selection);
+                                    vf.setVisibility(View.VISIBLE);
+                                    vv.setVisibility(View.GONE);
+                                    txt_exp.setVisibility(View.VISIBLE);
+                                    btn_emp_lay.setVisibility(View.VISIBLE);
+                                    spanish_lay.setVisibility(View.GONE);
+                                    input_lay.setVisibility(View.GONE);
 
+                                    btn_check_lay.setVisibility(View.GONE);
+                                    btn_cont_lay.setVisibility(View.GONE);
+
+                                    resppass.setVisibility(View.GONE);
+                                    respescu.setVisibility(View.GONE);
+                                    respinc.setVisibility(View.GONE);
+
+                                    answerinp.setBackgroundColor(Color.WHITE);
+                                    opclay.setBackgroundColor(Color.WHITE);
                                 }
 
                                 @Override
@@ -147,14 +206,29 @@ public class Transicion extends AppCompatActivity {
                 // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
                 // aqui empieza el plan personalizado
                 else {
-                    Toast.makeText(this,"inside personalized not custom",Toast.LENGTH_SHORT).show();
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                            btn_emp_lay.setVisibility(View.VISIBLE);
+                            spanish_lay.setVisibility(View.GONE);
+                            input_lay.setVisibility(View.GONE);
 
+                            btn_check_lay.setVisibility(View.GONE);
+                            btn_cont_lay.setVisibility(View.GONE);
+
+                            resppass.setVisibility(View.GONE);
+                            respescu.setVisibility(View.GONE);
+                            respinc.setVisibility(View.GONE);
+
+                            answerinp.setBackgroundColor(Color.WHITE);
+                            opclay.setBackgroundColor(Color.WHITE);
                         }
 
                         @Override
@@ -181,7 +255,26 @@ public class Transicion extends AppCompatActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     selection = spin.getSelectedItem().toString();
+                    textspin1.setText(selection);
 
+                    vf.setVisibility(View.VISIBLE);
+                    vv.setVisibility(View.GONE);
+
+                    txt_exp.setVisibility(View.VISIBLE);
+                    btn_emp_lay.setVisibility(View.VISIBLE);
+
+                    spanish_lay.setVisibility(View.GONE);
+                    input_lay.setVisibility(View.GONE);
+
+                    btn_check_lay.setVisibility(View.GONE);
+                    btn_cont_lay.setVisibility(View.GONE);
+
+                    resppass.setVisibility(View.GONE);
+                    respescu.setVisibility(View.GONE);
+                    respinc.setVisibility(View.GONE);
+
+                    answerinp.setBackgroundColor(Color.WHITE);
+                    opclay.setBackgroundColor(Color.WHITE);
                 }
 
                 @Override
@@ -192,14 +285,30 @@ public class Transicion extends AppCompatActivity {
 
         } else if (prefs.getPremium()==0){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                    (this, R.array.Transition , android.R.layout.simple_spinner_item);
+                    (this, R.array.TransitionGratis, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     selection = spin.getSelectedItem().toString();
+                    textspin1.setText(selection);
+                    vf.setVisibility(View.VISIBLE);
+                    vv.setVisibility(View.GONE);
+                    txt_exp.setVisibility(View.VISIBLE);
+                    btn_emp_lay.setVisibility(View.VISIBLE);
+                    spanish_lay.setVisibility(View.GONE);
+                    input_lay.setVisibility(View.GONE);
 
+                    btn_check_lay.setVisibility(View.GONE);
+                    btn_cont_lay.setVisibility(View.GONE);
+
+                    resppass.setVisibility(View.GONE);
+                    respescu.setVisibility(View.GONE);
+                    respinc.setVisibility(View.GONE);
+
+                    answerinp.setBackgroundColor(Color.WHITE);
+                    opclay.setBackgroundColor(Color.WHITE);
                 }
 
                 @Override
@@ -240,7 +349,7 @@ public class Transicion extends AppCompatActivity {
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(Transicion.this,availability_nuevo.class);
+            Intent intent = new Intent(Transicion_nuevo.this,availability_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             startActivity(intent);
         }else{
@@ -251,12 +360,32 @@ public class Transicion extends AppCompatActivity {
             sendInfotoDb();
         }
     }
-    public void practice(View vista){
+
+    //Metodos
+    public void practice(View v){
+        txt_exp.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.GONE);
+
+        spanish_lay.setVisibility(View.VISIBLE);
+        input_lay.setVisibility(View.VISIBLE);
+
+        btn_check_lay.setVisibility(View.VISIBLE);
+        btn_cont_lay.setVisibility(View.VISIBLE);
+        answer_lay.setVisibility(View.GONE);
+
+        resppass.setVisibility(View.GONE);
+        respescu.setVisibility(View.GONE);
+        respinc.setVisibility(View.GONE);
+
+        answerinp.setBackgroundColor(Color.WHITE);
+        answerinp.setText("");
+        opclay.setBackgroundColor(Color.WHITE);
+
         switch (selection){
             case "Conectores Standar Presente Simple":
-                gen.GenConectoresStandarPresenteSimpleXPresenteSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPresenteSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -280,7 +409,7 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
@@ -288,9 +417,9 @@ public class Transicion extends AppCompatActivity {
                 break;
 
             case "Conectores Standar Presente Continuo":
-                gen.GenConectoresStandarPresenteSimpleXPresenteContinuo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPresenteContinuo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -314,16 +443,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Perfecto":
-                gen.GenConectoresStandarPresenteSimpleXPresentePerfecto();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPresentePerfecto();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -347,16 +476,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Perfecto Continuo":
-                gen.GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -380,16 +509,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Futuro Simple":
-                gen.GenConectoresStandarPresenteSimpleXFuturoSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXFuturoSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -413,16 +542,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Reported Speech":
-                gen.GenConectoresStandarPresenteSimpleXReportedSpeech();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXReportedSpeech();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -446,16 +575,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Must Simple":
-                gen.GenConectoresStandarPresenteSimpleXMustSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXMustSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -479,16 +608,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Can Simple":
-                gen.GenConectoresStandarPresenteSimpleXCanSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXCanSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -512,16 +641,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Want To":
-                gen.GenConectoresStandarPresenteSimpleXWantTo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXWantTo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -545,16 +674,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Supposed To":
-                gen.GenConectoresStandarPresenteSimpleXSupposedTo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXSupposedTo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -578,16 +707,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Be Used To":
-                gen.GenConectoresStandarPresenteSimpleXBeUsedTo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXBeUsedTo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -611,16 +740,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Can Simple X Can Simple":
-                gen.GenConectoresStandarCanSimpleXCanSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCanSimpleXCanSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -644,16 +773,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Should Simple X Presente Simple":
-                gen.GenConectoresStandarShouldSimpleXCanSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarShouldSimpleXCanSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -677,16 +806,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Can Simple X Presente Simple":
-                gen.GenConectoresStandarCanSimpleXPresenteSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCanSimpleXPresenteSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -710,16 +839,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Can Simple X Presente Continuo":
-                gen.GenConectoresStandarCanSimpleXPresenteContinuo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCanSimpleXPresenteContinuo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -743,16 +872,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Can Simple X Presente Perfecto":
-                gen.GenConectoresStandarCanSimpleXPresentePerfecto();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCanSimpleXPresentePerfecto();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -776,16 +905,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Could Simple X Presente Simple":
-                gen.GenConectoresStandarCouldSimpleXPresenteSimple();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCouldSimpleXPresenteSimple();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -809,16 +938,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Por Sujeto":
-                gen.GenConectoresStandarPresenteSimpleXPorSujeto();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPorSujeto();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -842,16 +971,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Por Objeto":
-                gen.GenConectoresStandarPresenteSimpleXPorObjeto();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPorObjeto();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -875,16 +1004,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Por Preposicion":
-                gen.GenConectoresStandarPresenteSimpleXPorPreposicion();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXPorPreposicion();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -908,16 +1037,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Should Simple X Prensente Continuo":
-                gen.GenConectoresStandarShouldSimpleXPresenteContinuo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarShouldSimpleXPresenteContinuo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -941,16 +1070,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Could Simple X Presente Continuo":
-                gen.GenConectoresStandarCouldSimpleXPresenteContinuo();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarCouldSimpleXPresenteContinuo();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -974,16 +1103,16 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
                                 }
 
                             }
                         });
                 break;
             case "Conectores Standar Presente Simple X Interferencia Reflexiva":
-                gen.GenConectoresStandarPresenteSimpleXIntReflexiva();
-                spSentence.setText(gen.gens);
-                engSentence.setText(gen.gene);
+                gen1.GenConectoresStandarPresenteSimpleXIntReflexiva();
+                sptx.setText(gen1.gens);
+                engtx.setText(gen1.gene);
                 tts = new TextToSpeech(getApplicationContext(),
                         new TextToSpeech.OnInitListener() {
                             @Override
@@ -1007,7 +1136,8 @@ public class Transicion extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + spSentence.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+
                                 }
 
                             }
@@ -1015,6 +1145,135 @@ public class Transicion extends AppCompatActivity {
                 break;
         }
     }
+    public void hablar(View view){
+        iniciarentradavoz();
+    }
+    public void showV(View vista) {
+
+        if(selection != null){
+
+        }else{
+            vf.setVisibility(View.GONE);
+            vv.setVisibility(View.VISIBLE);
+        }
+
+        switch (selection) {
+            default:
+                Toast.makeText(this, "Por ahora no tenemos videos disponibles.", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+    }
+    public void checkanswer(View v){
+        //v = false;
+        String t = engtx.getText().toString().trim();
+        String t2 = answerinp.getText().toString().trim();
+        if (t.equalsIgnoreCase(t2)) {
+            answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
+
+            resppass.setVisibility(View.VISIBLE);
+            respescu.setVisibility(View.VISIBLE);
+            respinc.setVisibility(View.GONE);
+
+            answer_lay.setVisibility(View.GONE);
+
+            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if (i == TextToSpeech.SUCCESS) {
+                        ttr.setLanguage(Locale.ENGLISH);
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                            }
+                        });
+                        ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
+                        // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
+                        // volvemos a llamar premium controler y re/setea el array
+                        // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
+
+                        if(personalizedPlan ){
+                            SubtractSelectionAndSendinfoToDb();
+                        }
+                    }
+                }
+            });
+        }
+        else {
+            answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
+
+            resppass.setVisibility(View.GONE);
+            respescu.setVisibility(View.VISIBLE);
+            respinc.setVisibility(View.VISIBLE);
+
+            answer_lay.setVisibility(View.VISIBLE);
+            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if (i == TextToSpeech.SUCCESS) {
+                        engtx.setTextColor(Color.BLACK);
+                        ttr.setLanguage(Locale.ENGLISH);
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+
+
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                            }
+                        });
+
+                        ttr.speak("answer is incorrect....the answer is..." + engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+                        //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
+                        //with this yet
+
+                    }
+                }
+            });
+        }
+
+    }
+    public void speakans(View vista){
+        ttr.setLanguage(Locale.ENGLISH);
+        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            @Override
+            public void onStart(String s) {
+
+            }
+
+            @Override
+            public void onDone(String utteranceId) {
+
+
+            }
+
+            @Override
+            public void onError(String s) {
+            }
+        });
+
+        ttr.speak(engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+    }
+
+    //Plugins
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -1033,93 +1292,16 @@ public class Transicion extends AppCompatActivity {
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-                    AnswerInput.setText(result.get(0));
+                    answerinp.setText(result.get(0));
 
                 }
                 break;
         }
 
     }
-    public void hablar(View view){
-        iniciarentradavoz();
+
+    //rutas
+    public void main(View v){
+        startActivity(new Intent(Transicion_nuevo.this,MainActivity.class));
     }
-    public void checkanswer(View vista) {
-        engSentence.setVisibility(View.VISIBLE);
-        engSentence.setBackgroundColor(Color.GREEN);
-        String t = engSentence.getText().toString().trim();
-        String t2 = AnswerInput.getText().toString().trim();
-        if (t.equalsIgnoreCase(t2)) {
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i == TextToSpeech.SUCCESS) {
-                        tts.setLanguage(Locale.ENGLISH);
-                        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                            @Override
-                            public void onStart(String s) {
-                            }
-
-                            @Override
-                            public void onDone(String utteranceId) {
-
-                            }
-
-                            @Override
-                            public void onError(String s) {
-                            }
-                        });
-                        tts.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
-                        // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
-                        // volvemos a llamar premium controler y re/setea el array
-                        // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
-
-                        if(personalizedPlan){
-                            Toast.makeText(Transicion.this, "before subtract", Toast.LENGTH_SHORT).show();
-                            SubtractSelectionAndSendinfoToDb();
-                        }
-                    }
-                }
-            });
-        }
-        else {
-
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i == TextToSpeech.SUCCESS) {
-                        engSentence.setTextColor(Color.BLACK);
-                        tts.setLanguage(Locale.ENGLISH);
-                        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                            @Override
-                            public void onStart(String s) {
-
-                            }
-
-                            @Override
-                            public void onDone(String utteranceId) {
-
-
-                            }
-
-                            @Override
-                            public void onError(String s) {
-                            }
-                        });
-
-                        tts.speak("answer is incorrect....the answer is..." + engSentence.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
-                        //trying to enable them when tts is speaking if clickable return so they can try again and hear answer, not done
-                        //with this yet
-
-                    }
-                }
-            });
-        }
-
-    }
-
-    public void InterfazNueva(View v){
-        //Toast.makeText(this, "Btn Transicion", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(Transicion.this,Transicion_nuevo.class));
-    }
-
 }
