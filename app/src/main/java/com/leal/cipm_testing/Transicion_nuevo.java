@@ -1304,4 +1304,12 @@ public class Transicion_nuevo extends AppCompatActivity {
     public void main(View v){
         startActivity(new Intent(Transicion_nuevo.this,MainActivity.class));
     }
+    public void profile(View vist) {
+        Intent crispIntent = new Intent(this, profile.class);
+        startActivity(crispIntent);
+    }
+    public void chat_maestro(View vist) {
+        Intent crispIntent = new Intent(this, chat_maestro.class);
+        startActivity(crispIntent);
+    }
 }

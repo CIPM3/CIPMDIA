@@ -11859,8 +11859,7 @@ public class Abstractos {
 
     //Incremento Paralelo
     public void IncrementoParalelo(){
-        //int neg = (int) (Math.random() * 2);
-        int neg = 0;
+        int neg = (int) (Math.random() * 2);
 
         //subject
         String RsSj[] = {"I ","you ","he ","she ","she ","they ","we "};
@@ -11905,26 +11904,26 @@ public class Abstractos {
                 ps5eng = "the more "+ RsSj[6] + vnb[v] + "the more " + RsS2j[6] + vnb[v2];
                 break;
             case 1:
-                ps1 = "Prueba negativo";
-                ps1eng = "";
+                ps1 = "entre menos " + RsSjesp[0] + vn1[v] + "menos " + vn1[v2];
+                ps1eng = "the less "+ RsSj[0] + vnb[v] + "the less " + RsS2j[0] + vnb[v2];
 
-                ps2 = "";
-                ps2eng = "";
+                ps2 = "entre menos " + RsSjesp[1] + vn2[v] + "menos " + vn2[v2];
+                ps2eng = "the less "+ RsSj[1] + vnb[v] + "the less " + RsS2j[1] + vnb[v2];
 
-                ps3 = "";
-                ps3eng = "";
+                ps3 = "entre menos " + RsSjesp[2] + vnb3[v] + "menos " + vnb3[v2];
+                ps3eng = "the less "+ RsSj[2] + vnb[v] + "the less " + RsS2j[2] + vnb[v2];
 
-                ps3ella = "";
-                ps3she = "";
+                ps3ella = "entre menos " + RsSjesp[3] + vnb3[v] + "menos " + vnb3[v2];
+                ps3she = "the less "+ RsSj[3] + vnb[v] + "the less " + RsS2j[3] + vnb[v2];
 
-                ps3eso = "";
-                ps3it = "";
+                ps3eso = "entre menos " + RsSjesp[4] + vnb3[v] + "menos " + vnb3[v2];
+                ps3it = "the less "+ RsSj[4] + vnb[v] + "the less " + RsS2j[4] + vnb[v2];
 
-                ps4 = "";
-                ps4eng = "";
+                ps4 = "entre menos " + RsSjesp[5] + vn4[v] + "menos " + vn4[v2];
+                ps4eng = "the less "+ RsSj[5] + vnb[v] + "the less " + RsS2j[5] + vnb[v2];
 
-                ps5 = "";
-                ps5eng = "";
+                ps5 = "entre menos " + RsSjesp[6] + vn5[v] + "menos " + vn5[v2];
+                ps5eng = "the less "+ RsSj[6] + vnb[v] + "the less " + RsS2j[6] + vnb[v2];
                 break;
         }
     }//PD 20/12/2022

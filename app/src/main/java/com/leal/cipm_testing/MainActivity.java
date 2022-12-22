@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
     public void tutorialGeneral(View vista) {
-        Intent intento = new Intent(this, Transicion.class);
+        Intent intento = new Intent(this, Transicion_nuevo.class);
         startActivity(intento);
     }
     public void vocabulary(View vista) {
