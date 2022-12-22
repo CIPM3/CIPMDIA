@@ -544,7 +544,7 @@ public class estructura_nuevo extends AppCompatActivity {
            }else if(isNonBasicsArray){
                Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
                intent.putExtra("isThePlanPersonalized",personalizedPlan);
-               intent.putExtra("isCustom",isCustom);
+               intent.putExtra("isCustom",false);
                startActivity(intent);
            }
         }else{

@@ -9,6 +9,7 @@ public class ArraysdeLosPlanesPersonalizados {
             "Kot Fishing 2", "Helicoptero 1","Helicoptero 2"
 
     };
+    String[] pragerGratis= {"Tutorial","Black Fathers","Is America Racist?"};
     String[] arrayVocab= {"0 to 50", "50 to 100"};
     // faltan los demas modales
     String[] basicStructures = {"Present Simple", "Present Continuous","Present Perfect","Present Perfect Continuous",

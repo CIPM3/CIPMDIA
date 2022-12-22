@@ -367,6 +367,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
             Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("basicSctructures",isBasicStructures );
+            intent.putExtra("isCustom",false);
             startActivity(intent);
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on

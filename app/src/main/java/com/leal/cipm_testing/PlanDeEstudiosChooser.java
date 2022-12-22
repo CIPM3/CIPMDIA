@@ -35,7 +35,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     DocumentReference docref;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     boolean isCustom,basics,nonbasics;
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
+    boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
 
 
     @Override
@@ -68,6 +68,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 isInTransition=vmp.isInTransition;
                 isInPrager=vmp.isInPrager;
                 isInCulture=vmp.isInCulture;
+                isInintCons= vmp.isInintCon ;
+
             }
         });
     }
@@ -214,6 +216,30 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 })
                 .show();
     }
+    public void DialogueBox(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
+//set icon
+            .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+            .setTitle("Definición: ")
+//set message
+            .setMessage(message)
+//set positive button
+            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                }
+            })
+//set negative button
+            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //set what should happen when negative button is clicked
+
+                }
+            })
+            .show();}
 
     public void continueMyPlan(View view){
         isCustom=true;
@@ -251,7 +277,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
         }else if(isInintCons ){
-
             //esta no esta en la base de datos
             intent = new Intent(PlanDeEstudiosChooser.this,conscisousinterference_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);

@@ -574,6 +574,7 @@ public class spa_int_nuevo extends AppCompatActivity {
         if(temp.length==1){
             Intent intent = new Intent(spa_int_nuevo.this,Transicion.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            intent.putExtra("isCustom",false);
             startActivity(intent);
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on

@@ -120,8 +120,11 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         respescu_3 = findViewById(R.id.respescu_3);
         respescu_4 = findViewById(R.id.respescu_4);
         respescu_5 = findViewById(R.id.respescu_5);
+
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
+        docref= db.collection(userid).document("WhereisStudent");
+
 
         prefs= new Prefs(this);
         PremiumAndArrayControler();
@@ -172,10 +175,10 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
-
                             vmp=documentSnapshot.toObject(VocabModeloPersistencia.class);
+                            assert vmp != null;
                             temp= vmp.resultArray.toArray(new String[0]);
-                            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(conscisousinterference_nuevo.this, R.array.rachel, android.R.layout.simple_spinner_item);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(conscisousinterference_nuevo.this, android.R.layout.simple_spinner_item,temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -206,7 +209,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                             });
                         }
                     });
-
                 }
             }else{
                 if(prefs.getPremium()==1){
@@ -379,10 +381,17 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             //premiumControler updatea el array del spinner
             PremiumAndArrayControler();
             sendInfotoDb();
+            if(temp.length==1){
+                // si queda nada de arrays cambia de vocab a estructura
+                isBasicStructures=true;
+                Intent intent = new Intent(conscisousinterference_nuevo.this,MainTesting.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                intent.putExtra("basicSctructures",isBasicStructures );
+                startActivity(intent);
+            }
         }
     }
     public void checkA(View view) {
-        condicionParaPasarEs(5);
         switch (control){
             case 1:
                 temp1 = ai1.getText().toString();
@@ -393,6 +402,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     mic_1.setVisibility(View.GONE);
                     lay_resp_1.setVisibility(View.GONE);
                     increaseCounter();
+                    condicionParaPasarEs(5);
+
 
                 } else {
                     ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
@@ -414,6 +425,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
                     lay_resp_2.setVisibility(View.GONE);
                     increaseCounter();
+                    condicionParaPasarEs(5);
+
                 } else {
                     ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_2.setVisibility(View.GONE);
@@ -436,6 +449,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
                     lay_resp_3.setVisibility(View.GONE);
                     increaseCounter();
+                    condicionParaPasarEs(5);
+
                 } else {
                     ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_3.setVisibility(View.GONE);
@@ -458,6 +473,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
                     lay_resp_4.setVisibility(View.GONE);
                     increaseCounter();
+                    condicionParaPasarEs(5);
+
                 } else {
                     ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_4.setVisibility(View.GONE);
@@ -481,6 +498,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
                     lay_resp_5.setVisibility(View.GONE);
                     increaseCounter();
+                    condicionParaPasarEs(5);
+
                 } else {
                     ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_5.setVisibility(View.GONE);

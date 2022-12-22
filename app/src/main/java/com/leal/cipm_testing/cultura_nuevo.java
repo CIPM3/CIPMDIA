@@ -23,9 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Arrays;
@@ -70,8 +72,6 @@ public class cultura_nuevo extends AppCompatActivity {
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +102,8 @@ public class cultura_nuevo extends AppCompatActivity {
          prefs = new Prefs(this);
          CounterToSubtractSelection=1;
         userid = mAuth.getCurrentUser().getUid();
+        docref= db.collection(userid).document("WhereisStudent");
+
 
         PremiumAndArrayControler();
 
@@ -138,56 +140,119 @@ public class cultura_nuevo extends AppCompatActivity {
         isCustom = reciver.getBooleanExtra("isCustom",false);
         if(personalizedPlan){
             Toast.makeText(this, "is on personalized plan", Toast.LENGTH_SHORT).show();
+            if(isCustom){
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
 
-            if (prefs.getPremium()==1){
-                //Give the user all the premium features
-                //hide ads if you are showing ads
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        textspin1.setText(selection);
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            lay_txt.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                        }
 
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
-                        lay_txt.setVisibility(View.GONE);
-                        txt_exp.setVisibility(View.VISIBLE);
-                    }
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
+                        }
+                    });
 
 
-            } else if (prefs.getPremium()==0){
-                //remove user all the premium features
-                //show ads to the user
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(cultura_nuevo.this, android.R.layout.simple_list_item_1,temp);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        textspin1.setText(selection);
-                        PositionOfSelection=i;
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
-                        lay_txt.setVisibility(View.GONE);
-                        txt_exp.setVisibility(View.VISIBLE);
-                    }
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            vmp=documentSnapshot.toObject(VocabModeloPersistencia.class );
+                            assert vmp != null;
+                            temp= vmp.resultArray.toArray(new String[0]);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(cultura_nuevo.this, android.R.layout.simple_list_item_1,temp);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection = spin.getSelectedItem().toString();
+                                    textspin1.setText(selection);
+                                    PositionOfSelection=i;
+                                    vf.setVisibility(View.VISIBLE);
+                                    vv.setVisibility(View.GONE);
+                                    lay_txt.setVisibility(View.GONE);
+                                    txt_exp.setVisibility(View.VISIBLE);
+                                }
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
 
-                    }
-                });
+                                }
+                            });
+                        }
+                    }) ;
+
+
+
+                }
+            }else {
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            lay_txt.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(cultura_nuevo.this, android.R.layout.simple_list_item_1,temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+                            PositionOfSelection=i;
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+                            lay_txt.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                }
             }
+
         }
 
         else { if(prefs.getPremium()==1){
@@ -278,10 +343,15 @@ public class cultura_nuevo extends AppCompatActivity {
             temp = RemoveApprovedElementFromArray(temp[PositionOfSelection]);
             temp = RemoveApprovedElementFromArray(temp[PositionOfSelection-1]);
             Toast.makeText(this, "se supone que ya quito el pedo ese", Toast.LENGTH_SHORT).show();
-
             //premiumControler updatea el array del spinner
             PremiumAndArrayControler();
             sendInfotoDb();
+            if(temp.length==1){
+                Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                startActivity(intent);
+            }
+
         }
     }
 
@@ -618,10 +688,18 @@ public class cultura_nuevo extends AppCompatActivity {
             DialogueBox("Cambiar de Video y seguir a siguiente clase?");
         }
     }
+
     //getPos
     public void getpos(View vista)  {
 
         switch (selection){
+           case "Tutorial":
+                if(temp.length==1){
+                    SubtractSelectionAndSendinfoToDb();
+                }
+
+                break;
+
             case "Moonlight Clip 1":
                 condicionParaPasarEs(6);
                 //Ain't no refund

@@ -51,7 +51,8 @@ public class Transicion extends AppCompatActivity {
     String[] ArrayWithElementRemoved;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     boolean personalizedPlan,isCustom;
-    String[] temp = {"Conectores Standar Presente Simple","Conectores Standar Presente Continuo","Conectores Standar Presente Perfecto"
+    String[] temp = {"Conectores Standar Presente Simple",
+            "Conectores Standar Presente Continuo","Conectores Standar Presente Perfecto"
     ,"Conectores Standar Presente Perfecto Continuo", "Conectores Standar Futuro Simple"
     };
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
@@ -242,6 +243,7 @@ public class Transicion extends AppCompatActivity {
         if(temp.length==1){
             Intent intent = new Intent(Transicion.this,availability_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            intent.putExtra("isCustom",false);
             startActivity(intent);
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on

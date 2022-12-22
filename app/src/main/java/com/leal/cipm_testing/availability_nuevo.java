@@ -23,6 +23,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Arrays;
+
 public class availability_nuevo extends AppCompatActivity {
     TextView tv;
     TextView textspin1;
@@ -31,7 +38,20 @@ public class availability_nuevo extends AppCompatActivity {
     LinearLayout vf;
     String selection;
     String s;
-    boolean personalizedPlan;
+    boolean personalizedPlan,isCustom;
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();
+    String userid;
+    ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
+    String[] temp =objetoArrays.pragerGratis;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    int PositionOfSelection;
+    int CounterToSubtractSelection=0;
+    DocumentReference docref ;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    String[] ArrayWithElementRemoved;
+    int PositionOfElementsLeft=0;
+    Prefs prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,65 +63,229 @@ public class availability_nuevo extends AppCompatActivity {
         spin = findViewById(R.id.spinuno);
         vv = findViewById(R.id.vv);
         vf = findViewById(R.id.vf);
+        userid = mAuth.getCurrentUser().getUid();
+        docref= db.collection(userid).document("WhereisStudent");
 
-        Prefs prefs = new Prefs(this);
-        if (prefs.getPremium()==1){
-            //Give the user all the premium features
-            //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
-                    android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
 
-                    vv.setVisibility(View.GONE);
-                    vf.setVisibility(View.VISIBLE);
+        PremiumAndArrayControler();
 
-                    tv.setText("");
+    }
+
+    private void PremiumAndArrayControler() {
+        prefs = new Prefs(this);
+        Intent reciver = getIntent();
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+
+        if(personalizedPlan){
+
+            if(isCustom){
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
+                            android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+
+                            tv.setText("");
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager,
+                            android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+
+                            tv.setText("");
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
                 }
+            }else {
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
+                            android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
 
+                            tv.setText("");
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                            android.R.layout.simple_spinner_item,temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+
+                            tv.setText("");
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
                 }
-            });
+            }
+        }else {
+            if (prefs.getPremium()==1){
+                //Give the user all the premium features
+                //hide ads if you are showing ads
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
+                        android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
 
-        } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager,
-                    android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
+                        vv.setVisibility(View.GONE);
+                        vf.setVisibility(View.VISIBLE);
 
-                    vv.setVisibility(View.GONE);
-                    vf.setVisibility(View.VISIBLE);
+                        tv.setText("");
+                    }
 
-                    tv.setText("");
-                }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                    }
+                });
 
-                }
-            });
+            } else if (prefs.getPremium()==0){
+                //remove user all the premium features
+                //show ads to the user
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager,
+                        android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        vv.setVisibility(View.GONE);
+                        vf.setVisibility(View.VISIBLE);
+
+                        tv.setText("");
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
         }
 
     }
+    public void inWhatActivityisTheStudent(){
+
+        isInPrager = true;
+
+
+    }
+    public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
+        ArrayWithElementRemoved = new String[temp.length-1];
+        for (String s : temp) {
+            if (!elementToBeRemoved.equalsIgnoreCase(s)) {
+                ArrayWithElementRemoved[PositionOfElementsLeft] = s;
+                PositionOfElementsLeft++;
+            }
+        }
+        PositionOfElementsLeft=0;
+        return ArrayWithElementRemoved;
+    }
+    public void sendInfotoDb(){
+        inWhatActivityisTheStudent();
+        CollectionReference uid = db.collection(userid);
+        VocabModeloPersistencia user  = new
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon
+        );
+        uid.document("WhereisStudent").set(user);
+
+    }
+    public void SubtractSelectionAndSendinfoToDb(){
+        if(temp.length==1){
+            // si queda nada de arrays cambia de vocab a estructura
+            isBasicStructures=true;
+            Intent intent = new Intent(availability_nuevo.this,estructura_nuevo.class);
+            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+            intent.putExtra("basicSctructures",isBasicStructures );
+            intent.putExtra("isCustom",false);
+            startActivity(intent);
+        }else{
+            // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
+            temp = RemoveApprovedElementFromArray(selection);
+            //premiumControler updatea el array del spinner
+            PremiumAndArrayControler();
+            sendInfotoDb();
+        }
+    }
+
 
     public void select(View v) {
         vv.setVisibility(View.VISIBLE);
         vf.setVisibility(View.GONE);
-
+        sendInfotoDb();
         switch (selection) {
 
             case "Tutorial":
@@ -4386,7 +4570,6 @@ public class availability_nuevo extends AppCompatActivity {
 
         }
     }
-
     public void holaMundo(View v){
         AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
 //set icon
@@ -4431,6 +4614,7 @@ public class availability_nuevo extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(availability_nuevo.this, cultura_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                        intent.putExtra("isCustom",false);
                         startActivity(intent);
 
 
@@ -4448,13 +4632,11 @@ public class availability_nuevo extends AppCompatActivity {
 
 
     }
-
     private void openDialog(String s) {
         Dialog d = new Dialog(s);
         d.show(getSupportFragmentManager(), "");
 
     }
-
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);

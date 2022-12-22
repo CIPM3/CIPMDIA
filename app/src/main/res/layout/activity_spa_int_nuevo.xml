@@ -334,8 +334,8 @@
                     >
                     <LinearLayout
                         android:id="@+id/respdecir"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:background="@drawable/ic_microfono"
                         android:layout_marginLeft="5dp"
