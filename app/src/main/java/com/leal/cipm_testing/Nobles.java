@@ -20842,5 +20842,58 @@ public class Nobles {
                 break;
         }
     }//LR 13/12/2022
+
+    //Feel Like Simple
+    public void GenFeelLikeSimp1() {
+        int neg = (int) (Math.random() * 2);
+        int sr = (int) (Math.random() * 2);
+        switch (neg) {
+            //Presente
+            case 0:
+                ps1 = "Tengo ganas de " + vnbs[v];
+                ps1eng = "I feel like " + vnbc[v];
+
+                ps2 = "Tienes ganas de " + vnbs[v];
+                ps2eng = "You feel like " + vnbc[v];
+
+                ps3 = "Él tiene ganas de " + vnbs[v];
+                ps3eng = "He feels like " + vnbc[v];
+
+                ps3ella = "Ella tiene ganas de " + vnbs[v];
+                ps3she = "She feels like " + vnbc[v];
+
+                ps3eso = "Eso tiene ganas de " + vnbs[v];
+                ps3it = "It feels like " + vnbc[v];
+
+                ps4 = "Tienen ganas de " + vnbs[v];
+                ps4eng = "They feel like " + vnbc[v];
+
+                ps5 = "Tienemos ganas de " + vnbs[v];
+                ps5eng = "We feel like " + vnbc[v];
+                break;
+            case 1:
+                ps1 = "No tengo ganas de " + vnbs[v];
+                ps1eng = "I don't feel like " + vnbc[v];
+
+                ps2 = "No tienes ganas de " + vnbs[v];
+                ps2eng = "You don't feel like " + vnbc[v];
+
+                ps3 = "Él no tiene ganas de " + vnbs[v];
+                ps3eng = "He doesn't feels like " + vnbc[v];
+
+                ps3ella = "Ella no tiene ganas de " + vnbs[v];
+                ps3she = "She doesn't feels like " + vnbc[v];
+
+                ps3eso = "Eso no tiene ganas de " + vnbs[v];
+                ps3it = "It doesn't feels like " + vnbc[v];
+
+                ps4 = "No tienen ganas de " + vnbs[v];
+                ps4eng = "They don't feel like " + vnbc[v];
+
+                ps5 = "No tienemos ganas de " + vnbs[v];
+                ps5eng = "We don't feel like " + vnbc[v];
+                break;
+        }
+    }//LR 13/12/2022
 }
 
