@@ -53596,7 +53596,7 @@ public class Generator {
     // vamos a usar solo estos 5 por ahora
     public void GenConectoresStandarPresenteSimpleXPresenteSimple() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -53876,7 +53876,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXPresenteContinuo() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -54156,7 +54156,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXPresentePerfecto(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -54436,7 +54436,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXPresentePerfectoContinuo(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -54716,7 +54716,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXFuturoSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -54998,7 +54998,7 @@ public class Generator {
 
     public void GenConectoresStandarPresenteSimpleXReportedSpeech(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -55270,7 +55270,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXMustSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -55550,7 +55550,7 @@ public class Generator {
     }
     public void GenConectoresStandarPresenteSimpleXCanSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -55832,7 +55832,7 @@ public class Generator {
     //PD 05/12/2022
     public void GenConectoresStandarPresenteSimpleXWantTo(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -56640,7 +56640,7 @@ public class Generator {
     }
     public void GenConectoresStandarCanSimpleXCanSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -56922,7 +56922,7 @@ public class Generator {
     //PD 06/12/2022
     public void GenConectoresStandarShouldSimpleXCanSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -57202,7 +57202,7 @@ public class Generator {
     }
     public void GenConectoresStandarCanSimpleXPresenteSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -57482,7 +57482,7 @@ public class Generator {
     }
     public void GenConectoresStandarCanSimpleXPresenteContinuo(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -57762,7 +57762,7 @@ public class Generator {
     }
     public void GenConectoresStandarCanSimpleXPresentePerfecto(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -58044,7 +58044,7 @@ public class Generator {
     //PD 07/12/2022
     public void GenConectoresStandarCouldSimpleXPresenteSimple(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -59383,7 +59383,7 @@ public class Generator {
     }
     public void GenConectoresStandarCouldSimpleXPresenteContinuo(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
@@ -59663,7 +59663,7 @@ public class Generator {
     }
     public void GenConectoresStandarShouldSimpleXPresenteContinuo(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        int verb = (int) (Math.random() * 4);
         int con = (int)(Math.random()*ConectoresEstandar.length );
         String temp = pronombres[rand];
         int rn = (int) (Math.random() * 6);
