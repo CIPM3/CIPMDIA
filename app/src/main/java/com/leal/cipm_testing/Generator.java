@@ -53528,8 +53528,8 @@ public class Generator {
                 Nobles p2 = new Nobles();
                 p.intporpasiva0a100();
                 p2.GenPresCont1();
-                gens= p2.ps1 +ConectoresEstandar[con]+ p.ps3;
-                gene=p2.ps1eng+StandardConectors[con]+p.ps3eng;
+                gens=p.ps3;
+                gene=p.ps3eng;
                 gene2=p.ps3she;
                 gene3=p.ps3it;
                 gene4=p.ps4eng;

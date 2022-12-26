@@ -73,7 +73,7 @@ public class fiftytohundred {
     String nouns[] = {"years ", "days ", "men ",};
     String sust[] = {"años ", "dias ", "hombres ",};
 
-    String adj[] = {"muchos ", "mas ", "dos ", "estos ", "nuestros ", "sus ", "otros ", "tu ", "nuevos ", "primeros ", "algunos ", "solo ", "cuales "};
+    String adj[] = {"muchos ", "mas ", "dos ", "estos ", "nuestros ", "sus ", "otros ", "tus ", "nuevos ", "primeros ", "algunos ", "solo ", "cuales "};
     String adjeng[] = {"many ", "more ", "two ", "these ", "our ", "its ", "other ", "your ", "new ", "first ", "some ", "just ", "which "};
 
     String gens;

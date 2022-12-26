@@ -9720,59 +9720,50 @@ public class Nobles {
     String objthem[]= {"me ","him ", "you ","it ", "her ", "us "};
     String objus[]= {"him ", "you ","it ", "them ", "her "};
 
-    String vp1 []={"acuesto ", "afieto ", "divierto ",
-            "olvido ", "duermo ",  "pongo ", "baño ",
-            "escondo ","como ","me comporto ", "quedo ", "levanto ",
-            "quejo ", "marcho ", "meto a ", "muero ",
-            "niego ", "dirigo a ", "acuerdo "
+    String vp1 []={"acuesto ", "afieto ", "divierto ", "olvido ", "duermo ", "pongo ",
+            "baño ", "escondo ","como ","me comporto ", "quedo ", "levanto ", "quejo ",
+            "marcho ", "meto a ", "muero ", "niego ", "dirigo a ", "acuerdo "
     };
 
-    String vp2 []={"acuestas ", "afeitas ", "diviertes ",
-            "olvidas ", "duermes ", "pones ", "bañas ",
-            "escondes ","comes ","te comportas ", "quedas ", "levantas ",
-            "quejas ", "marchas ", "metes a ", "mueres ",
-            "niegas ", "diriges a ", "acuerdas "
+    String vp2 []={"acuestas ", "afeitas ", "diviertes ", "olvidas ", "duermes ", "pones ",
+            "bañas ", "escondes ","comes ","te comportas ", "quedas ", "levantas ",
+            "quejas ", "marchas ", "metes a ", "mueres ", "niegas ", "diriges a ", "acuerdas "
     };
-    String vp3 []={"acuesta ", "afeita ", "divierte ",
-            "olvida ", "duerme ",  "pone ", "baña ",
-            "esconde ","come ","se comporta ", "queda ", "levanta ",
-            "queja ", "marcha ", "mete a ", "muere ",
-            "niega ", "dirige a ", "acuerda "
+    String vp3 []={"acuesta ", "afeita ", "divierte ", "olvida ", "duerme ", "pone ",
+            "baña ", "esconde ", "come ", "se comporta ", "queda ", "levanta ", "queja ",
+            "marcha ", "mete a ", "muere ", "niega ", "dirige a ", "acuerda "
     };
-    String vp4 []={"acuestan ", "afeitan ", "divierten ",
-            "olvidan ", "duermen ",  "ponen ", "bañan ",
-            "esconden ","comen ","se comportan ", "quedan ", "levantan ",
-            "quejan ", "marchan ", "meten a ", "mueren ",
-            "niegan ", "dirigen a ", "acuerdan "
+    String vp4 []={"acuestan ", "afeitan ", "divierten ", "olvidan ", "duermen ", "ponen ",
+            "bañan ", "esconden ","comen ","se comportan ", "quedan ", "levantan ", "quejan ",
+            "marchan ", "meten a ", "mueren ", "niegan ", "dirigen a ", "acuerdan "
     };
 
-    String vp5 []={"acostamos ", "afeitamos ", "divertimos ",
-            "olvidamos ", "dormimos ","ponemos ", "bañamos ",
-            "escondemos ","comemos ","nos comportamos ",     "quedamos ", "levantamos ",
-            "quejamos ", "marchamos ", "metemos a ", "morimos ",
-            "negamos ", "dirigimos a ", "acordamos "
+    String vp5 []={"acostamos ", "afeitamos ", "divertimos ", "olvidamos ", "dormimos ",
+            "ponemos ", "bañamos ", "escondemos ","comemos ", "nos comportamos ",
+            "quedamos ", "levantamos ", "quejamos ", "marchamos ", "metemos a ",
+            "morimos ", "negamos ", "dirigimos a ", "acordamos "
     };
 
     // verbos pronominativos ingl[es
     String vpe1[]={"lay down ", "shave ", "have fun " , "forget ",  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
     String vpe2[]={"lay down ", "shave ", "have fun " , "forget ", "sleep ","wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
-    String vpe3[]={"lays down ", "shaves ", "has fun " , "forget ", "sleeps ","wears ",
-            "showers ", "hides ", "eats ","behaves ", "stays ", "gets up ", "complaints "
+    String vpe3[]={"lays down ", "shaves ", "has fun ", "forget ", "sleeps ","wears ",
+            "showers ", "hides ", "eats ","behaves ", "stays ", "gets up ", "complains "
             ,"leaves ", "gets in ", "dies ", "refuses ", "heads to ", "remembers "
     };
     String vpe4[]={"lay down ", "shave ", "have fun " , "forget ", "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ", "behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
 
     String vpe5[]={"lay down ", "shave ", "have fun " , "forget ", "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
 
@@ -9800,7 +9791,7 @@ public class Nobles {
 
     String vgeng[]={"angry ", "bored ", "confused ", "tired ", "happy ",
             "lost ", "impressed ", "scared ", "filled ", "high ", "agitated ",
-            "excited ", "embarrased ", "depressed ", "married ", "pregnant "
+            "excited ", "embarrassed ", "depressed ", "married ", "pregnant "
     };
     //dificultad 3
     public void WantYouTo3() {
@@ -13954,26 +13945,26 @@ public class Nobles {
         int v=(int)(Math.random()*15);
         switch (control){
             case 0:
-                ps1 = "me "+ vp1[v];
-                ps1eng = "I "+ vpe1[v];
+                ps1 = "me " + vp1[v];
+                ps1eng = "I " + vpe1[v];
 
-                ps2= "te "+ vp2[v];
-                ps2eng ="you "+vpe2[v];
+                ps2= "te " + vp2[v];
+                ps2eng ="you " + vpe2[v];
 
-                ps3= "él se "+ vp3[v];
-                ps3eng ="he "+vpe3[v];
+                ps3= "él se " + vp3[v];
+                ps3eng ="he " + vpe3[v];
 
-                ps3ella= "ella se "+vp3[v];
-                ps3she= "she "+vpe3[v];
+                ps3ella= "ella se " + vp3[v];
+                ps3she= "she " + vpe3[v];
 
-                ps3eso= "eso se "+vp3[v];
-                ps3it="it "+vpe3[v];
+                ps3eso= "eso se " + vp3[v];
+                ps3it="it " + vpe3[v];
 
-                ps4= "se "+vp4[v];
-                ps4eng = "they "+vpe4[v];
+                ps4= "se " + vp4[v];
+                ps4eng = "they " + vpe4[v];
 
-                ps5 = "nos "+vp5[v];
-                ps5eng="we "+vpe5[v];
+                ps5 = "nos " + vp5[v];
+                ps5eng="we " + vpe5[v];
                 break;
 
             case 1:
@@ -16547,13 +16538,13 @@ public class Nobles {
                 ps2eng = "the more "+ RsSj[1] + vnb[v] + "the more " + RsS2j[1] + vnb[v2];
 
                 ps3 = "entre mas " + RsSjesp[2] + vn3[v] + "mas " + vn3[v2];
-                ps3eng = "the more "+ RsSj[2] + vnb[v] + "the more " + RsS2j[2] + vnb[v2];
+                ps3eng = "the more "+ RsSj[2] + vnb3[v] + "the more " + RsS2j[2] + vnb3[v2];
 
                 ps3ella = "entre mas " + RsSjesp[3] + vn3[v] + "mas " + vn3[v2];
-                ps3she = "the more "+ RsSj[3] + vnb[v] + "the more " + RsS2j[3] + vnb[v2];
+                ps3she = "the more "+ RsSj[3] + vnb3[v] + "the more " + RsS2j[3] + vnb3[v2];
 
                 ps3eso = "entre mas " + RsSjesp[4] + vn3[v] + "mas " + vn3[v2];
-                ps3it = "the more "+ RsSj[4] + vnb[v] + "the more " + RsS2j[4] + vnb[v2];
+                ps3it = "the more "+ RsSj[4] + vnb3[v] + "the more " + RsS2j[4] + vnb3[v2];
 
                 ps4 = "entre mas " + RsSjesp[5] + vn4[v] + "mas " + vn4[v2];
                 ps4eng = "the more "+ RsSj[5] + vnb[v] + "the more " + RsS2j[5] + vnb[v2];

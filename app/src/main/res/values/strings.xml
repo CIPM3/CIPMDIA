@@ -16,6 +16,54 @@
 
         <item>What Simple</item>
         <item>What Continuous</item>
+        <item>What Modals Simple</item>
+
+    </string-array>
+    <string-array name="structures">
+        <item>Tutorial</item>
+
+        <item>Present Simple</item>
+        <item>Present Continuous</item>
+        <item>Present Perfect</item>
+        <item>Present Perfect Continuous</item>
+
+        <item>Past Simple</item>
+        <item>Past Continuous</item>
+        <item>Past Perfect</item>
+        <item>Past Perfect Continuous</item>
+
+        <item>Future Simple</item>
+        <item>Future Continuous</item>
+        <item>Future Perfect</item>
+        <item>Future Perfect Continuous</item>
+
+        <item>Would Simple</item>
+        <item>Would Continuous</item>
+        <item>Would Perfect</item>
+        <item>Would Perfect Continuous</item>
+
+        <item>Could Simple</item>
+        <item>Could Continuous</item>
+        <item>Could Perfect</item>
+        <item>Could Perfect Continuous</item>
+
+        <item>Might Simple</item>
+        <item>Might Continuous</item>
+        <item>Might Perfect</item>
+        <item>Might Perfect Continuous</item>
+
+        <item>Should Simple</item>
+        <item>Should Continuous</item>
+        <item>Should Perfect</item>
+        <item>Should Perfect Continuous</item>
+
+        <item>Can Simple</item>
+        <item>Can Continuous</item>
+        <item>Must Simple</item>
+        <item>Must Continuous</item>
+
+        <item>What Simple</item>
+        <item>What Continuous</item>
         <item>What Perfect</item>
         <item>What Modals Simple</item>
         <item>What Modals Continuous</item>
@@ -72,54 +120,7 @@
 
         <item>Feel Like Simple</item>
 
-    </string-array>
-    <string-array name="structures">
-        <item>Tutorial</item>
-        <item>Present Simple</item>
-        <item>Present Continuous</item>
-        <item>Present Perfect</item>
-        <item>Present Perfect Continuous</item>
-        <item>Past Simple</item>
-        <item>Past Continuous</item>
-        <item>Past Perfect</item>
-        <item>Past Perfect Continuous</item>
-        <item>Future Simple</item>
-        <item>Future Continuous</item>
-        <item>Future Perfect</item>
-        <item>Future Perfect Continuous</item>
-        <item>Would Simple</item>
-        <item>Would Continuous</item>
-        <item>Would Perfect</item>
-        <item>Would Perfect Continuous</item>
-        <item>Could Simple</item>
-        <item>Could Continuous</item>
-        <item>Could Perfect</item>
-        <item>Could Perfect Continuous</item>
-        <item>Might Simple</item>
-        <item>Might Continuous</item>
-        <item>Might Perfect</item>
-        <item>Might Perfect Continuous</item>
-        <item>Should Simple</item>
-        <item>Should Continuous</item>
-        <item>Should Perfect</item>
-        <item>Should Perfect Continuous</item>
-        <item>Can Simple</item>
-        <item>Can Continuous</item>
-        <item>Must Simple</item>
-        <item>Must Continuous</item>
         //quede aqui
-        <item>What Simple</item>
-        <item>What Continuous</item>
-        <item>What Perfect</item>
-        <item>What Modals Simple</item>
-        <item>What Modals Continuous</item>
-        <item>What Modals Perfect</item>
-        <item>When Simple</item>
-        <item>When Continuous</item>
-        <item>When Perfect</item>
-        <item>When Modals Simple</item>
-        <item>When Modals Continuous</item>
-        <item>When Modals Perfect</item>
         <item>Reported Speech</item>
         <item>Want To</item>
         <item>For To</item>

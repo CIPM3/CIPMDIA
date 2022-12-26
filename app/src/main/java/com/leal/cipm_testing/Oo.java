@@ -9148,24 +9148,24 @@ public class Oo {
 
     // verbos pronominativos ingl[es
     String vpe1[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
     String vpe2[]={"lay down ", "shave ", "have fun " ,  "sleep ","wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
     String vpe3[]={"lays down ", "shaves ", "has fun " ,  "sleeps ","wears ",
-            "showers ", "hides ", "eats ","behaves ", "stays ", "gets up ", "complaints "
+            "showers ", "hides ", "eats ","behaves ", "stays ", "gets up ", "complains "
             ,"leaves ", "gets in ", "dies ", "refuses ", "heads to ", "remembers "
     };
     String vpe4[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
 
     String vpe5[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complaint "
+            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
             ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
     };
 
@@ -9193,7 +9193,7 @@ public class Oo {
 
     String vgeng[]={"angry ", "bored ", "confused ", "tired ", "happy ",
             "lost ", "impressed ", "scared ", "filled ", "high ", "agitated ",
-            "excited ", "embarrased ", "depressed ", "married ", "pregnant "
+            "excited ", "embarrassed ", "depressed ", "married ", "pregnant "
     };
     // interferencias, 0 a 100,presente simple
     Intrans prep = new Intrans();
@@ -11956,13 +11956,13 @@ public class Oo {
                 ps2eng = "the more "+ RsSj[1] + vnb[v] + "the more " + RsS2j[1] + vnb[v2];
 
                 ps3 = "entre mas " + RsSjesp[2] + vnb3[v] + "mas " + vnb3[v2];
-                ps3eng = "the more "+ RsSj[2] + vnb[v] + "the more " + RsS2j[2] + vnb[v2];
+                ps3eng = "the more "+ RsSj[2] + vn3[v] + "the more " + RsS2j[2] + vn3[v2];
 
                 ps3ella = "entre mas " + RsSjesp[3] + vnb3[v] + "mas " + vnb3[v2];
-                ps3she = "the more "+ RsSj[3] + vnb[v] + "the more " + RsS2j[3] + vnb[v2];
+                ps3she = "the more "+ RsSj[3] + vn3[v] + "the more " + RsS2j[3] + vn3[v2];
 
                 ps3eso = "entre mas " + RsSjesp[4] + vnb3[v] + "mas " + vnb3[v2];
-                ps3it = "the more "+ RsSj[4] + vnb[v] + "the more " + RsS2j[4] + vnb[v2];
+                ps3it = "the more "+ RsSj[4] + vn3[v] + "the more " + RsS2j[4] + vn3[v2];
 
                 ps4 = "entre mas " + RsSjesp[5] + vn4[v] + "mas " + vn4[v2];
                 ps4eng = "the more "+ RsSj[5] + vnb[v] + "the more " + RsS2j[5] + vnb[v2];
