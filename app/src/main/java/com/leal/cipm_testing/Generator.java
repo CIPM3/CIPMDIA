@@ -52996,8 +52996,6 @@ public class Generator {
                         gene2= n.ps3she;
                         gene3=n.ps3it;
 
-
-
                         break;
                     case 1:
                         Oo o = new Oo();

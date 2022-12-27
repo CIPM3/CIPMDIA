@@ -60,7 +60,10 @@ public class Transicion_nuevo extends AppCompatActivity {
     FirebaseAuth mAuth;
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
-    String[] temp =objetoArrays.arrayVocab;
+    String[] temp ={"Conectores Standar Presente Simple",
+            "Conectores Standar Presente Continuo","Conectores Standar Presente Perfecto"
+            ,"Conectores Standar Presente Perfecto Continuo", "Conectores Standar Futuro Simple"
+    };
     Generator gen1 = new Generator();
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
@@ -70,6 +73,10 @@ public class Transicion_nuevo extends AppCompatActivity {
     boolean v;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
     boolean personalizedPlan;
+    boolean isCustom,isPlanIntermedio;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan;
+    boolean isFromListeningPlanDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,18 +109,26 @@ public class Transicion_nuevo extends AppCompatActivity {
         PremiumAndArrayControler();
     }
     //DB
+    boolean     isFromListeningPlan;
     private void PremiumAndArrayControler() {
 
         // info que recive del plan de estudios chooser
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
-        boolean isCustom = reciver.getBooleanExtra("isCustom",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        isPlanIntermedio=reciver.getBooleanExtra("planintermedio",false);
+        isFromListeningPlan = reciver.getBooleanExtra("BasicListeningPlan", false);
+        isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
+
+
+
         Prefs prefs = new Prefs(Transicion_nuevo.this);
 
         //si es personalizado jala el array para empezar y luego el de la
         // base de datos correspondiente
         // este tiene que jalar un array al principio de lo que sea que sea su plan
         if(personalizedPlan){
+
             //al premium no se le ha movido
             if (prefs.getPremium()==1){
                 //Give the user all the premium features
@@ -206,7 +221,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                 // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
                 // aqui empieza el plan personalizado
                 else {
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                            android.R.layout.simple_list_item_1, temp);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -322,6 +338,10 @@ public class Transicion_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent(){
 
         isInTransition = true;
+        if(isFromListeningPlan ||isFromListeningPlanDb){
+            isListeningPlan=true;
+        }
+
 
 
     }
@@ -341,17 +361,31 @@ public class Transicion_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(Transicion_nuevo.this,availability_nuevo.class);
-            intent.putExtra("isThePlanPersonalized",personalizedPlan);
-            startActivity(intent);
+
+            if(isPlanIntermedio){
+                Intent intent = new Intent(Transicion_nuevo.this,conscisousinterference_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                startActivity(intent);
+            }else {
+                Intent intent = new Intent(Transicion_nuevo.this,availability_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
+                startActivity(intent);
+            }
+
+
+
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
@@ -1202,7 +1236,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                         // volvemos a llamar premium controler y re/setea el array
                         // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
 
-                        if(personalizedPlan ){
+                        if(true){
+                            Toast.makeText(Transicion_nuevo.this, "before subtract", Toast.LENGTH_SHORT).show();
                             SubtractSelectionAndSendinfoToDb();
                         }
                     }

@@ -98,6 +98,11 @@ public class spa_int_nuevo extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
     DocumentReference docref ;
+    boolean isplanintermedio,isFromListeningPlan;
+    boolean isFromListeningPlanDb;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan;
+
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     public static final int REC_CODE_SPEECH_INPUT = 100;
     @Override
@@ -160,11 +165,13 @@ public class spa_int_nuevo extends AppCompatActivity {
             }
         });
     }
-
     private void PremiumAndArrayControler() {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+        isplanintermedio=reciver.getBooleanExtra("planIntermedio",false);
+        isFromListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
+        isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
 
         if(personalizedPlan){
             if(isCustom){
@@ -545,6 +552,9 @@ public class spa_int_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent(){
 
         isInSpanishInt = true;
+        if(isFromListeningPlan ||isFromListeningPlanDb){
+            isListeningPlan=true;
+        }
 
 
     }
@@ -564,17 +574,23 @@ public class spa_int_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(spa_int_nuevo.this,Transicion.class);
+            Intent intent = new Intent(spa_int_nuevo.this,Transicion_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("isCustom",false);
+            intent.putExtra("planintermedio",isplanintermedio);
+            intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
+
             startActivity(intent);
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on

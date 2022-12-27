@@ -180,7 +180,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="end"
-                android:onClick="PasarACultura"
+                android:onClick="PasarSiguienteEstructura"
                 >
                 <TextView
                     android:layout_width="match_parent"

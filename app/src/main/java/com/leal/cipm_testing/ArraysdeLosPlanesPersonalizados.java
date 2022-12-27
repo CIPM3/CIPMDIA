@@ -17,7 +17,7 @@ public class ArraysdeLosPlanesPersonalizados {
             "Future Continuous", "Future Perfect", "Future Perfect Continuous", "Would Simple", "Would Continuous",
             "Would Perfect", "Would Perfect Continuous" };
     String[] nonBasicStructures =
-            {"For Me To","Want To", "Supposed To Present", "Wish Past Perfect","Used To", "Be Used To"};
+            {"For To","Want To", "Supposed To Present", "Wish Past Perfect","Used To", "Be Used To"};
 
     String culturaGratis[] = {"Tutorial"
     , "Moonlight Explanation 1", "Moonlight Clip 1",

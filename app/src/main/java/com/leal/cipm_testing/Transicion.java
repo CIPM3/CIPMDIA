@@ -1121,7 +1121,10 @@ public class Transicion extends AppCompatActivity {
 
     public void InterfazNueva(View v){
         //Toast.makeText(this, "Btn Transicion", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(Transicion.this,Transicion_nuevo.class));
+        Intent intent = new Intent(Transicion.this,Transicion_nuevo.class);
+        intent.putExtra("isThePlanPersonalized",personalizedPlan);
+        intent.putExtra("isCustom",false);
+        startActivity(intent);
     }
 
 }

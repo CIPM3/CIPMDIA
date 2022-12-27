@@ -36,6 +36,10 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     boolean isCustom,basics,nonbasics;
     boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,isCustomPlan,isListeningPlan,isAdvancedPlan
+            ,BasicListeningPlan
+            ;
+
 
 
     @Override
@@ -69,11 +73,17 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 isInPrager=vmp.isInPrager;
                 isInCulture=vmp.isInCulture;
                 isInintCons= vmp.isInintCon ;
+                isPlanIntermedioStandard=vmp.isPlanIntermedioStandard;
+                isPlanBasicRecommended=vmp.isPlanBasicRecommended;
+                isCustomPlan=vmp.isCustomPlan;
+                isListeningPlan=vmp.isListeningPlan;
+                isAdvancedPlan=vmp.isAdvancedPlan;
+                BasicListeningPlan=vmp.isListeningPlan;
+
 
             }
         });
     }
-
     public void BasicRecomendedPlan(View vista ){
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
@@ -86,8 +96,10 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        isPlanBasicRecommended= true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
+                        intent.putExtra("BasicRecomendedPlan",isPlanBasicRecommended);
                         startActivity(intent);
 
                     }
@@ -114,8 +126,10 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        BasicListeningPlan=true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,cultura_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
+                        intent.putExtra("BasicListeningPlan",BasicListeningPlan);
                         startActivity(intent);
                     }
                 })
@@ -142,8 +156,10 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //no hemos decidido a donde mandarlo todavia despues del examen
+                        isCustomPlan=true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
+                        intent.putExtra("Custom100Plan",isCustomPlan);
                         startActivity(intent);
                     }
                 })
@@ -164,16 +180,17 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 //set title
                 .setTitle("Definición: ")
 //set message
-                .setMessage("Plan Basico Recomendado, Continuar?")
+                .setMessage("Plan Intermedio Recomendado, Continuar?")
 //set positive button
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         nonbasics=true;
+                        isPlanIntermedioStandard=true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("isNonBasics",nonbasics);
-                        intent.putExtra("isBasics",basics);
+                        intent.putExtra("isPlanIntermedioStandard",isPlanIntermedioStandard);
                         startActivity(intent);
 
                     }
@@ -200,8 +217,11 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        isAdvancedPlan=true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,conscisousinterference_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
+                        intent.putExtra("AdvancedPlan",isAdvancedPlan);
+
                         startActivity(intent);
 
                     }
@@ -240,7 +260,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 }
             })
             .show();}
-
     public void continueMyPlan(View view){
         isCustom=true;
         Intent intent;
@@ -254,14 +273,19 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("isFromListeningDb",isListeningPlan) ;
+
             startActivity(intent);
         }else if(isInSpanishInt){
             intent = new Intent(PlanDeEstudiosChooser.this,spa_int_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("isFromListeningDb",isListeningPlan) ;
+
             startActivity(intent);
-        }else if(isInTransition){
-            intent = new Intent(PlanDeEstudiosChooser.this,Transicion.class);
+        }
+        else if(isInTransition){
+            intent = new Intent(PlanDeEstudiosChooser.this,Transicion_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
@@ -270,11 +294,15 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent = new Intent(PlanDeEstudiosChooser.this,availability_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("FromListeningDb",isListeningPlan);
+
             startActivity(intent);
         }else if(isInCulture){
             intent = new Intent(PlanDeEstudiosChooser.this,cultura_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("FromBasicRecomended",isPlanBasicRecommended);
+            intent.putExtra("FromListening",isListeningPlan);
             startActivity(intent);
         }else if(isInintCons ){
             //esta no esta en la base de datos

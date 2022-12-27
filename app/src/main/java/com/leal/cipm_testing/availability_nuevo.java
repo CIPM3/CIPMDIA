@@ -48,10 +48,13 @@ public class availability_nuevo extends AppCompatActivity {
     int CounterToSubtractSelection=0;
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    boolean isInVocab,
+            isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,
+            isinIntcon,isBasicStructures,BasicListeningPlan;
     String[] ArrayWithElementRemoved;
     int PositionOfElementsLeft=0;
     Prefs prefs;
+    boolean BasicListeningPlanFromDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,9 @@ public class availability_nuevo extends AppCompatActivity {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+        BasicListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
+        BasicListeningPlanFromDb=reciver.getBooleanExtra("FromListeningDb",false);
+
 
         if(personalizedPlan){
 
@@ -279,6 +285,77 @@ public class availability_nuevo extends AppCompatActivity {
             PremiumAndArrayControler();
             sendInfotoDb();
         }
+    }
+    public void PasarSiguienteEstructura(View v){
+        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
+//set icon
+                .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                .setTitle("Definición: ")
+//set message
+                .setMessage("aqui te lleva a la siguiente parte de tu plan ")
+//set positive button
+                .setPositiveButton("pasar a cultura", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if(BasicListeningPlan||BasicListeningPlanFromDb){
+                            Intent intent = new Intent(availability_nuevo.this, conscisousinterference_nuevo.class);
+                            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                            intent.putExtra("isCustom",false);
+                            startActivity(intent);
+                        }else {
+                            Intent intent = new Intent(availability_nuevo.this, cultura_nuevo.class);
+                            intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                            intent.putExtra("isCustom",false);
+                            startActivity(intent);
+                        }
+
+
+
+
+                    }
+                })
+//set negative button
+                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
+
+
+    }
+    public void holaMundo(View v){
+        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
+//set icon
+                .setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                .setTitle("Definición: ")
+//set message
+                .setMessage("Te llevara a hacer una actividad de comprensión lectora con un maestro en el app")
+//set positive button
+                .setPositiveButton("ir a chat con maestro", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent crispIntent = new Intent(availability_nuevo.this, chat_maestro.class);
+                        startActivity(crispIntent);
+
+
+                    }
+                })
+//set negative button
+                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
+
+
     }
 
 
@@ -4570,68 +4647,6 @@ public class availability_nuevo extends AppCompatActivity {
 
         }
     }
-    public void holaMundo(View v){
-        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
-//set icon
-                .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-                .setTitle("Definición: ")
-//set message
-                .setMessage("Te llevara a hacer una actividad de comprensión lectora con un maestro en el app")
-//set positive button
-                .setPositiveButton("ir a chat con maestro", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent crispIntent = new Intent(availability_nuevo.this, chat_maestro.class);
-                        startActivity(crispIntent);
-
-
-                    }
-                })
-//set negative button
-                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
-                    }
-                })
-                .show();
-
-
-    }
-    public void PasarACultura(View v){
-        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
-//set icon
-                .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-                .setTitle("Definición: ")
-//set message
-                .setMessage("aqui te lleva a la siguiente parte de tu plan ")
-//set positive button
-                .setPositiveButton("pasar a cultura", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(availability_nuevo.this, cultura_nuevo.class);
-                        intent.putExtra("isThePlanPersonalized",personalizedPlan);
-                        intent.putExtra("isCustom",false);
-                        startActivity(intent);
-
-
-                    }
-                })
-//set negative button
-                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
-                    }
-                })
-                .show();
-
-
-    }
     private void openDialog(String s) {
         Dialog d = new Dialog(s);
         d.show(getSupportFragmentManager(), "");
@@ -4641,12 +4656,10 @@ public class availability_nuevo extends AppCompatActivity {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-
     public void chat_maestro(View vista) {
         Intent intento = new Intent(this, chat_maestro.class);
         startActivity(intento);
     }
-
     public void profile(View vista) {
         Intent intento = new Intent(this, profile.class);
         startActivity(intento);

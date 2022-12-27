@@ -71,7 +71,8 @@ public class estructura_nuevo extends AppCompatActivity {
     Button btndif4;
     String[] temp;
     boolean personalizedPlan;
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
+            isInTransition,isinIntcon,isPlanIntermedio,isFromListeningPlan,isFromListeningPlanDb;
     String[] ArrayWithElementRemoved;
     int PositionOfElementsLeft=0;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -81,6 +82,8 @@ public class estructura_nuevo extends AppCompatActivity {
     DocumentReference docref ;
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan;
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     @Override
@@ -121,14 +124,27 @@ public class estructura_nuevo extends AppCompatActivity {
             }
         });
 
-        temp=arrayGetter.basicStructures;
+        Intent reciver = getIntent();
+
+        isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
+        isBasics=reciver.getBooleanExtra("basicSctructures",false);
+        isPlanIntermedio= reciver.getBooleanExtra("isPlanIntermedioStandard",false);
+        isFromListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
+        isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
+        personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+
+        if(isNonBasics){
+            temp= arrayGetter.nonBasicStructures;
+        }else {
+            temp=arrayGetter.basicStructures;
+
+        }
+
         EmptyArray= new String[]{"empty", "array"};
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
-
-
-
 
 
         prefs = new Prefs(this);
@@ -142,11 +158,7 @@ public class estructura_nuevo extends AppCompatActivity {
     boolean isNonBasicsArray;
 
     public void PremiumControler(){
-         Intent reciver = getIntent();
-         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
-         isCustom = reciver.getBooleanExtra("isCustom",false);
-         isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
-         isBasics=reciver.getBooleanExtra("basicSctructures",false);
+
         /* if(isNonBasicsCustom){
              isBasics=false;
 
@@ -252,7 +264,9 @@ public class estructura_nuevo extends AppCompatActivity {
             }else if(isNonBasics) {
                 // aqui tiene que recivir basico o no basico
                 isNonBasicsArray=true;
-                temp=arrayGetter.nonBasicStructures;
+
+
+
                 if(prefs.getPremium()==1){
                     //Give the user all the premium features
                     //hide ads if you are showing ads
@@ -295,7 +309,6 @@ public class estructura_nuevo extends AppCompatActivity {
                 } else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
-                    temp=arrayGetter.nonBasicStructures;
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
@@ -508,6 +521,9 @@ public class estructura_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent(){
 
         isInStructure = true;
+        if(isFromListeningPlan ||isFromListeningPlanDb){
+            isListeningPlan=true;
+        }
 
 
     }
@@ -527,8 +543,11 @@ public class estructura_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(EmptyArray),Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 
@@ -542,9 +561,13 @@ public class estructura_nuevo extends AppCompatActivity {
                PremiumControler();
                sendInfotoDb();
            }else if(isNonBasicsArray){
+
                Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+               intent.putExtra("planIntermedio",isPlanIntermedio);
                intent.putExtra("isCustom",false);
+               intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
+
                startActivity(intent);
            }
         }else{
@@ -27846,6 +27869,8 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         if(personalizedPlan ){
                             SubtractSelectionAndSendinfoToDb();
+                            Toast.makeText(estructura_nuevo.this, "is in personalized", Toast.LENGTH_SHORT).show();
+
                         }
 
                     }

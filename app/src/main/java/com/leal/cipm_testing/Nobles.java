@@ -7,7 +7,7 @@ public class Nobles {
     String vnb[] = {"have ", "get ", "see ", "need ", "know ", "find ", "take ", "want ", "include ",
             "thank ", "add ", "choose ", "develop ", "remember ", "bring ", "protect ",
             "avoid ", "describe ", "prefer ", "discover ", "expect ", "lose ", "hear ", "represent ",
-            "forget ", "accept ", "compare ", "imagine ", "recognize ", "replace ", "borrow ", "examine ",
+            "forget ", "accept ", "share ", "imagine ", "recognize ", "replace ", "borrow ", "examine ",
             "owe ", "incorporate ", "organize "
     };
 
@@ -23,7 +23,7 @@ public class Nobles {
     String vnb3[] = {"has ", "gets ", "sees ", "needs ", "knows ", "finds ", "takes ", "wants ", "includes ",
             "thanks ", "adds ", "chooses ", "develops ", "remembers ", "brings ", "protects ",
             "avoids ", "describes ", "prefers ", "discovers ", "expects ", "loses ", "hears ", "represents ",
-            "forgets ", "accepts ", "compares ", "imagines ", "recognizes ", "replaces ", "borrows ", "examines ",
+            "forgets ", "accepts ", "shares ", "imagines ", "recognizes ", "replaces ", "borrows ", "examines ",
             "owes ", "incorporates ", "organizes "
     };
 
@@ -375,7 +375,7 @@ public class Nobles {
     String vnbp[] = {"had ", "got ", "saw ", "needed ", "knew ", "found ", "took ", "wanted ", "included ",
             "thanked ", "added ", "chose ", "developed ", "remembered ", "brought ", "protected ",
             "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgot ", "accepted ", "compared ", "imagined ", "recognized ", "replaced ", "borrowed ", "examined ",
+            "forgot ", "accepted ", "shared ", "imagined ", "recognized ", "replaced ", "borrowed ", "examined ",
             "owed ", "incorporated ", "organized "
     };
 
@@ -468,7 +468,7 @@ public class Nobles {
     String vnbc[] = {"having ", "getting ", "seeing ", "needing ", "knowing ", "finding ", "taking ", "wanting ", "including ",
             "thanking ", "adding ", "choosing ", "developing ", "remembering ", "bringing ", "protecting ",
             "avoiding ", "describing ", "prefering ", "discovering ", "expecting ", "losing ", "hearing ", "representing ",
-            "forgetting ", "accepting ", "comparing ", "imagining ", "recognizing ", "replacing ", "borrowing ", "examining ",
+            "forgetting ", "accepting ", "sharing ", "imagining ", "recognizing ", "replacing ", "borrowing ", "examining ",
             "owing ", "incorporating ", "organizing "};
 
     //vnb verbos nobles top 100 continuo spanish
@@ -487,14 +487,14 @@ public class Nobles {
     String vpeng[] = {"had ", "gotten ", "seen ", "needed ", "known ", "found ", "taken ", "wanted ", "included ",
             "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
             "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgotten ", "accepted ", "compared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
+            "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
             "owed ", "incorporated ", "organized "};
 
     //verbos participios inglés Femenino
     String vpengF[] = {"had ", "gotten ", "seen ", "needed ", "found ", "taken ", "wanted ", "included ",
             "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
             "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgotten ", "accepted ", "compared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
+            "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
             "owed ", "incorporated ", "organized "};
 
     //vnb verbos participios  spanish Masculino

@@ -58,8 +58,11 @@ public class cultura_nuevo extends AppCompatActivity {
     String selection;
     boolean clip;
     Prefs prefs;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan;
     boolean personalizedPlan,isCustom;
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
+            isInTransition,isinIntcon,isBasicStructures;
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     String[] ArrayWithElementRemoved;
@@ -71,6 +74,7 @@ public class cultura_nuevo extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
+    boolean BasicListeningPlanFromDb,StandardBasicPlan,BasicListeningPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,9 +141,16 @@ public class cultura_nuevo extends AppCompatActivity {
     private void PremiumAndArrayControler()  {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
+        BasicListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
+
+        //estas tres de abajo vienen dela db
+        BasicListeningPlanFromDb=reciver.getBooleanExtra("FromListening",false);
+        StandardBasicPlan=reciver.getBooleanExtra("FromBasicRecomended",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+
+
         if(personalizedPlan){
-            Toast.makeText(this, "is on personalized plan", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "is on personalized plan"+String.valueOf(BasicListeningPlan), Toast.LENGTH_SHORT).show();
             if(isCustom){
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features
@@ -309,6 +320,10 @@ public class cultura_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent() {
 
         isInCulture = true;
+        if(BasicListeningPlan || BasicListeningPlanFromDb){
+            isListeningPlan=true;
+        }
+
 
 
     }
@@ -327,29 +342,52 @@ public class cultura_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
-            intent.putExtra("isThePlanPersonalized",personalizedPlan);
-            startActivity(intent);
+
+            if(BasicListeningPlan || BasicListeningPlanFromDb ){
+                Intent intent = new Intent(cultura_nuevo.this,estructura_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                intent.putExtra("basicSctructures",true);
+                intent.putExtra("BasicListeningPlan",BasicListeningPlan || BasicListeningPlanFromDb);
+                startActivity(intent);
+            }else{
+                Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                startActivity(intent);
+            }
+
+
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(temp[PositionOfSelection]);
             temp = RemoveApprovedElementFromArray(temp[PositionOfSelection-1]);
-            Toast.makeText(this, "se supone que ya quito el pedo ese", Toast.LENGTH_SHORT).show();
             //premiumControler updatea el array del spinner
             PremiumAndArrayControler();
             sendInfotoDb();
             if(temp.length==1){
-                Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
-                intent.putExtra("isThePlanPersonalized",personalizedPlan);
-                startActivity(intent);
+
+                if(BasicListeningPlan || BasicListeningPlanFromDb ){
+                    Intent intent = new Intent(cultura_nuevo.this,estructura_nuevo.class);
+                    intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                    intent.putExtra("basicSctructures",true);
+                    intent.putExtra("BasicListeningPlan",BasicListeningPlan || BasicListeningPlanFromDb);
+
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(cultura_nuevo.this,conscisousinterference_nuevo.class);
+                    intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                    startActivity(intent);
+                }
             }
 
         }
