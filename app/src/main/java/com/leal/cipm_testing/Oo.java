@@ -9113,82 +9113,142 @@ public class Oo {
     String objthem[]= {"me ","him ", "you ","it ", "her ", "us "};
     String objus[]= {"him ", "you ","it ", "them ", "her "};
 
-    String vp1 []={"acuesto ", "afieto ", "divierto ",
-            "olvido ", "duermo ",  "pongo ", "baño ",
-            "escondo ","como ", "quedo ", "levanto ",
-            "quejo ", "marcho ", "meto a ", "muero ",
-            "niego ", "dirigo a ", "acuerdo "
+    String vp1 []={
+            "acuesto ", "afieto ", "divierto ",
+            "olvido ", "duermo ",  "pongo ",
+            "baño ", "escondo ","como ",
+            "comporto ", "quedo ", "levanto ",
+            "quejo ", "marcho ", "meto a ",
+            "muero ", "niego ", "dirigo a ",
+            "acuerdo "
     };
 
-    String vp2 []={"acuestas ", "afeitas ", "diviertes ",
-            "olvidas ", "duermes ", "pones ", "bañas ",
-            "escondes ","comes ", "quedas ", "levantas ",
-            "quejas ", "marchas ", "metes a ", "mueres ",
-            "niegas ", "diriges a ", "acuerdas "
+    String vp2 []={
+            "acuestas ", "afeitas ", "diviertes ",
+            "olvidas ", "duermes ", "pones ",
+            "bañas ", "escondes ","comes ",
+            "comportas ", "quedas ", "levantas ",
+            "quejas ", "marchas ", "metes a ",
+            "mueres ", "niegas ", "diriges a ",
+            "acuerdas "
     };
-    String vp3 []={"acuesta ", "afeita ", "divierte ",
-            "olvida ", "duerme ",  "pone ", "baña ",
-            "esconde ","come ", "queda ", "levanta ",
-            "queja ", "marcha ", "mete a ", "muere ",
-            "niega ", "dirige a ", "acuerda "
+    String vp3 []={
+            "acuesta ", "afeita ", "divierte ",
+            "olvida ", "duerme ",  "pone ",
+            "baña ", "esconde ","come ",
+            "comporta ","queda ", "levanta ",
+            "queja ", "marcha ", "mete a ",
+            "muere ", "niega ", "dirige a ",
+            "acuerda "
     };
-    String vp4 []={"acuestan ", "afeitan ", "divierten ",
-            "olvidan ", "duermen ",  "ponen ", "bañan ",
-            "esconden ","comen ", "quedan ", "levantan ",
-            "quejan ", "marchan ", "meten a ", "mueren ",
-            "niegan ", "dirigen a ", "acuerdan "
+    String vp4 []={
+            "acuestan ", "afeitan ", "divierten ",
+            "olvidan ", "duermen ",  "ponen ",
+            "bañan ", "esconden ","comen ",
+            "comportan ", "quedan ", "levantan ",
+            "quejan ", "marchan ", "meten a ",
+            "mueren ", "niegan ", "dirigen a ",
+            "acuerdan "
     };
 
-    String vp5 []={"acostamos ", "afeitamos ", "divertimos ",
-            "olvidamos ", "dormimos ","ponemos ", "bañamos ",
-            "escondemos ","comemos ", "quedamos ", "levantamos ",
-            "quejamos ", "marchamos ", "metemos a ", "morimos ",
-            "negamos ", "dirigimos a ", "acordamos "
+    String vp5 []={
+            "acostamos ", "afeitamos ", "divertimos ",
+            "olvidamos ", "dormimos ","ponemos ",
+            "bañamos ", "escondemos ","comemos ",
+            "comportamos ","quedamos ", "levantamos ",
+            "quejamos ", "marchamos ", "metemos a ",
+            "morimos ", "negamos ", "dirigimos a ",
+            "acordamos "
     };
 
     // verbos pronominativos ingl[es
-    String vpe1[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
-            ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
+    String vpe1[]={
+            "lay down ", "shave ", "have fun " ,
+            "forget ","sleep ", "wear ",
+            "shower ", "hide ", "eat ",
+            "behave ", "stay ", "get up ",
+            "complain ","leave ", "get in ",
+            "die ", "refuse ", "head to ",
+            "remember "
     };
-    String vpe2[]={"lay down ", "shave ", "have fun " ,  "sleep ","wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
-            ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
+    String vpe2[]={
+            "lay down ", "shave ", "have fun " ,
+            "forget ","sleep ","wear ",
+            "shower ", "hide ", "eat ",
+            "behave ", "stay ", "get up ",
+            "complain ","leave ", "get in ",
+            "die ", "refuse ", "head to ",
+            "remember "
     };
-    String vpe3[]={"lays down ", "shaves ", "has fun " ,  "sleeps ","wears ",
-            "showers ", "hides ", "eats ","behaves ", "stays ", "gets up ", "complains "
-            ,"leaves ", "gets in ", "dies ", "refuses ", "heads to ", "remembers "
+    String vpe3[]={
+            "lays down ", "shaves ", "has fun " ,
+            "forget ","sleeps ","wears ",
+            "showers ", "hides ", "eats ",
+            "behaves ", "stays ", "gets up ",
+            "complains ","leaves ", "gets in ",
+            "dies ", "refuses ", "heads to ",
+            "remembers "
     };
-    String vpe4[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
-            ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
-    };
-
-    String vpe5[]={"lay down ", "shave ", "have fun " ,  "sleep ", "wear ",
-            "shower ", "hide ", "eat ","behave ", "stay ", "get up ", "complain "
-            ,"leave ", "get in ", "die ", "refuse ", "head to ", "remember "
-    };
-
-    String vg1[]={"enojo ", "aburro ", "confundo ", "canso ", "alegro ",
-            "pierdo ", "impresiono ", "asusto ", "lleno ", "drogo ", "agito ",
-            "emociono ", "averguenzo ", "deprimo ", "caso ", "embarazo "
-    };
-    String vg2[]={"enojas ", "aburres ", "confundes ", "cansas ", "alegras ",
-            "pierdes ", "impresionas ", "asustas ", "llenas ", "drogas ", "agitas ",
-            "emocionas ", "averguenzas ", "deprimes ", "casas ", "embarazas "
-    };
-    String vg3[]={"enoja ", "aburre ", "confunde ", "cansa ", "alegra ",
-            "pierde ", "impresiona ", "asusta ", "llena ", "droga ", "agita ",
-            "emociona ", "averguenza ", "deprime ", "casa ", "embaraza "
-    };
-    String vg4[]={"enojan ", "aburren ", "confunden ", "cansan ", "alegran ",
-            "pierden ", "impresionan ", "asustan ", "llenan ", "drogan ", "agitan ",
-            "emocionan ", "averguenzan ", "deprimen ", "casan ", "embarazan "
+    String vpe4[]={
+            "lay down ", "shave ", "have fun " ,
+            "forget ","sleep ", "wear ",
+            "shower ", "hide ", "eat ",
+            "behave ", "stay ", "get up ",
+            "complain ", "leave ", "get in ",
+            "die ", "refuse ", "head to ",
+            "remember "
     };
 
-    String vg5[]={"enojamos ", "aburrimos ", "confundimos ", "cansamos ", "alegramos ",
-            "perdemos ", "impresionamos ", "asustamos ", "llenamos ", "drogamos ", "agitamos ",
-            "emocionamos ", "avergonzamos ", "deprimimos ", "casamos ", "embarazamos "
+    String vpe5[]={
+            "lay down ", "shave ", "have fun " ,
+            "forget ","sleep ", "wear ",
+            "shower ", "hide ", "eat ",
+            "behave ", "stay ", "get up ",
+            "complain ","leave ", "get in ",
+            "die ", "refuse ", "head to ",
+            "remember "
+    };
+
+    String vg1[]={
+            "enojo ", "aburro ", "confundo ",
+            "canso ", "alegro ", "pierdo ",
+            "impresiono ", "asusto ", "lleno ",
+            "drogo ", "agito ", "emociono ",
+            "averguenzo ", "deprimo ", "caso ",
+            "embarazo "
+    };
+    String vg2[]={
+            "enojas ", "aburres ", "confundes ",
+            "cansas ", "alegras ", "pierdes ",
+            "impresionas ", "asustas ", "llenas ",
+            "drogas ", "agitas ", "emocionas ",
+            "averguenzas ", "deprimes ", "casas ",
+            "embarazas "
+    };
+    String vg3[]={
+            "enoja ", "aburre ", "confunde ",
+            "cansa ", "alegra ", "pierde ",
+            "impresiona ", "asusta ", "llena ",
+            "droga ", "agita ", "emociona ",
+            "averguenza ", "deprime ", "casa ",
+            "embaraza "
+    };
+    String vg4[]={
+            "enojan ", "aburren ", "confunden ",
+            "cansan ", "alegran ", "pierden ",
+            "impresionan ", "asustan ", "llenan ",
+            "drogan ", "agitan ", "emocionan ",
+            "averguenzan ", "deprimen ", "casan ",
+            "embarazan "
+    };
+
+    String vg5[]={
+            "enojamos ", "aburrimos ", "confundimos ",
+            "cansamos ", "alegramos ", "perdemos ",
+            "impresionamos ", "asustamos ", "llenamos ",
+            "drogamos ", "agitamos ", "emocionamos ",
+            "avergonzamos ", "deprimimos ", "casamos ",
+            "embarazamos "
     };
 
     String vgeng[]={"angry ", "bored ", "confused ", "tired ", "happy ",
@@ -9356,7 +9416,7 @@ public class Oo {
     }  // por objeto- adapted
     public void intreflps0a100(){
         int control = (int)(Math.random()*2);
-        int v=(int)(Math.random()*15);
+        int v = (int)(Math.random()*15);
         switch (control){
             case 0:
                 ps1 = "me "+ vp1[v];
@@ -9391,11 +9451,11 @@ public class Oo {
                 ps3= "él se "+ vg3[v];
                 ps3eng ="he gets "+vgeng[v];
 
-                ps3ella= "ella se "+vg3[v];
-                ps3she= "she gets "+vgeng[v];
+                ps3ella= "ella se "+ vg3[v];
+                ps3she= "she gets "+ vgeng[v];
 
-                ps3eso= "eso se "+vg3[v];
-                ps3it="it gets "+vgeng[v];
+                ps3eso= "eso se "+ vg3[v];
+                ps3it="it gets "+ vgeng[v];
 
                 ps4= "se "+vg4[v];
                 ps4eng = "they get "+vgeng[v];
