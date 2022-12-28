@@ -83,7 +83,7 @@ public class estructura_nuevo extends AppCompatActivity {
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
-            isCustomPlan,isListeningPlan,isAdvancedPlan;
+            isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     @Override
@@ -133,6 +133,8 @@ public class estructura_nuevo extends AppCompatActivity {
         isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+        isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
+
 
         if(isNonBasics){
             temp= arrayGetter.nonBasicStructures;
@@ -524,6 +526,9 @@ public class estructura_nuevo extends AppCompatActivity {
         if(isFromListeningPlan ||isFromListeningPlanDb){
             isListeningPlan=true;
         }
+        if(isPlanIntermedio  ||isplanintermedioFromDb){
+            isPlanIntermedioStandard=true;
+        }
 
 
     }
@@ -564,7 +569,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
                intent.putExtra("isThePlanPersonalized",personalizedPlan);
-               intent.putExtra("planIntermedio",isPlanIntermedio);
+               intent.putExtra("PlanIntermedioStandard",isPlanIntermedio||isplanintermedioFromDb);
                intent.putExtra("isCustom",false);
                intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
 

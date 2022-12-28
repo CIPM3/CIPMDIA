@@ -274,6 +274,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("isFromListeningDb",isListeningPlan) ;
+            intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
 
             startActivity(intent);
         }else if(isInSpanishInt){
@@ -281,6 +282,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("isFromListeningDb",isListeningPlan) ;
+            intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
+
 
             startActivity(intent);
         }
@@ -288,6 +291,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent = new Intent(PlanDeEstudiosChooser.this,Transicion_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("FromListeningDb",isListeningPlan);
+            intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
             startActivity(intent);
 
         }else if(isInPrager){
@@ -309,6 +314,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent = new Intent(PlanDeEstudiosChooser.this,conscisousinterference_nuevo.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
+            intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
+            intent.putExtra("isFromAdvancedPlanFromDb",isAdvancedPlan);
             startActivity(intent);
         }
 

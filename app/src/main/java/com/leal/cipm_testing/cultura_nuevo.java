@@ -150,7 +150,7 @@ public class cultura_nuevo extends AppCompatActivity {
 
 
         if(personalizedPlan){
-            Toast.makeText(this, "is on personalized plan"+String.valueOf(BasicListeningPlan), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "is on personalized plan"+String.valueOf(BasicListeningPlanFromDb), Toast.LENGTH_SHORT).show();
             if(isCustom){
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features

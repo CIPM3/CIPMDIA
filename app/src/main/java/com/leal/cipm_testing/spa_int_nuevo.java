@@ -101,7 +101,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     boolean isplanintermedio,isFromListeningPlan;
     boolean isFromListeningPlanDb;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
-            isCustomPlan,isListeningPlan,isAdvancedPlan;
+            isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
 
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     public static final int REC_CODE_SPEECH_INPUT = 100;
@@ -169,9 +169,11 @@ public class spa_int_nuevo extends AppCompatActivity {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
-        isplanintermedio=reciver.getBooleanExtra("planIntermedio",false);
+        isplanintermedio=reciver.getBooleanExtra("PlanIntermedioStandard",false);
         isFromListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
         isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
+        isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
+
 
         if(personalizedPlan){
             if(isCustom){
@@ -555,6 +557,9 @@ public class spa_int_nuevo extends AppCompatActivity {
         if(isFromListeningPlan ||isFromListeningPlanDb){
             isListeningPlan=true;
         }
+        if(isplanintermedio||isplanintermedioFromDb){
+            isPlanIntermedioStandard=true;
+        }
 
 
     }
@@ -588,7 +593,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             Intent intent = new Intent(spa_int_nuevo.this,Transicion_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("isCustom",false);
-            intent.putExtra("planintermedio",isplanintermedio);
+            intent.putExtra("planintermedio",isplanintermedio||isplanintermedioFromDb);
             intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
 
             startActivity(intent);

@@ -39,6 +39,8 @@ public class availability_nuevo extends AppCompatActivity {
     String selection;
     String s;
     boolean personalizedPlan,isCustom;
+    boolean isplanintermedio,isFromListeningPlan;
+    boolean isFromListeningPlanDb;
     FirebaseAuth mAuth=FirebaseAuth.getInstance();
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
@@ -54,6 +56,8 @@ public class availability_nuevo extends AppCompatActivity {
     String[] ArrayWithElementRemoved;
     int PositionOfElementsLeft=0;
     Prefs prefs;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan;
     boolean BasicListeningPlanFromDb;
 
     @Override
@@ -71,6 +75,7 @@ public class availability_nuevo extends AppCompatActivity {
 
 
         PremiumAndArrayControler();
+        sendInfotoDb();
 
     }
 
@@ -245,6 +250,10 @@ public class availability_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent(){
 
         isInPrager = true;
+        if(BasicListeningPlan ||BasicListeningPlanFromDb){
+            isListeningPlan=true;
+        }
+
 
 
     }
@@ -263,8 +272,11 @@ public class availability_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 

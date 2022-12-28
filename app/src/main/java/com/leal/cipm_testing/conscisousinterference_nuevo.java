@@ -57,7 +57,9 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     private ImageButton botonhablar;
     boolean personalizedPlan,isCustom;
     boolean isInVocab,isInStructure,
-            isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
+            isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,
+            isPlanIntermedioFromDb,
+    isBasicStructures,isPlanIntermedio;
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     String[] ArrayWithElementRemoved;
@@ -69,6 +71,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
+            isCustomPlan,isListeningPlan,isAdvancedPlan,AdvancedPlan,AdvancedPlanFromDb;
     Prefs prefs;
 
     @Override
@@ -137,6 +141,11 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
+        isPlanIntermedio=reciver.getBooleanExtra("planintermedio",false);
+        isPlanIntermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
+        AdvancedPlan = reciver.getBooleanExtra("AdvancedPlan",false);
+        AdvancedPlanFromDb= reciver.getBooleanExtra("isFromAdvancedPlanFromDb",false);
+
         if(personalizedPlan){
             if(isCustom){
                 if(prefs.getPremium()==1){
@@ -343,7 +352,9 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     public void inWhatActivityisTheStudent(){
 
         isinIntcon = true;
-
+        if(isPlanIntermedio||isPlanIntermedioFromDb){
+            isPlanIntermedioStandard=true;
+        }
 
     }
     public  String[] RemoveApprovedElementFromArray(String elementToBeRemoved){
@@ -361,8 +372,11 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         inWhatActivityisTheStudent();
         CollectionReference uid = db.collection(userid);
         VocabModeloPersistencia user  = new
-                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,isInStructure,isInSpanishInt,
-                isInCulture,isInPrager,isInTransition,isinIntcon
+                VocabModeloPersistencia(Arrays.asList(temp),isInVocab,
+                isInStructure,isInSpanishInt,
+                isInCulture,isInPrager,isInTransition,isinIntcon,
+                isPlanIntermedioStandard,isPlanBasicRecommended,
+                isCustomPlan,isListeningPlan,isAdvancedPlan
         );
         uid.document("WhereisStudent").set(user);
 
@@ -371,10 +385,14 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         if(temp.length==1){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(conscisousinterference_nuevo.this,MainActivity.class);
-            intent.putExtra("isThePlanPersonalized",personalizedPlan);
-            intent.putExtra("basicSctructures",isBasicStructures );
-            startActivity(intent);
+            if(AdvancedPlan||AdvancedPlanFromDb){
+                DialogueBox("Pasar Con Maestro Para Determinar tu Nivel?");
+
+            }else {
+                Intent intent = new Intent(conscisousinterference_nuevo.this,MainActivity.class);
+                startActivity(intent);
+            }
+
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
@@ -384,10 +402,13 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             if(temp.length==1){
                 // si queda nada de arrays cambia de vocab a estructura
                 isBasicStructures=true;
-                Intent intent = new Intent(conscisousinterference_nuevo.this,MainTesting.class);
-                intent.putExtra("isThePlanPersonalized",personalizedPlan);
-                intent.putExtra("basicSctructures",isBasicStructures );
-                startActivity(intent);
+                if(AdvancedPlan||AdvancedPlanFromDb){
+                    DialogueBox("Pasar Con Maestro Para Determinar tu Nivel?");
+
+                }else {
+                    Intent intent = new Intent(conscisousinterference_nuevo.this,MainActivity.class);
+                    startActivity(intent);
+                }
             }
         }
     }
@@ -540,9 +561,15 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    SubtractSelectionAndSendinfoToDb();
-                    resetCounter();
-                    PremiumAndArrayControler();
+                    if(message.equalsIgnoreCase("Pasar Con Maestro Para Determinar tu Nivel?"))
+                    { Intent intent = new Intent(conscisousinterference_nuevo.this,chat_maestro.class);
+                        startActivity(intent);
+                    }else {
+                        SubtractSelectionAndSendinfoToDb();
+                        resetCounter();
+                        PremiumAndArrayControler();
+                    }
+
 
                 }
             })

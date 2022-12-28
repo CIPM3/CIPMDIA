@@ -76,7 +76,7 @@ public class Transicion_nuevo extends AppCompatActivity {
     boolean isCustom,isPlanIntermedio;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan;
-    boolean isFromListeningPlanDb;
+    boolean isFromListeningPlanDb,isPlanIntermedioFromDb,isFromListeningPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +109,6 @@ public class Transicion_nuevo extends AppCompatActivity {
         PremiumAndArrayControler();
     }
     //DB
-    boolean     isFromListeningPlan;
     private void PremiumAndArrayControler() {
 
         // info que recive del plan de estudios chooser
@@ -119,6 +118,8 @@ public class Transicion_nuevo extends AppCompatActivity {
         isPlanIntermedio=reciver.getBooleanExtra("planintermedio",false);
         isFromListeningPlan = reciver.getBooleanExtra("BasicListeningPlan", false);
         isFromListeningPlanDb= reciver.getBooleanExtra("isFromListeningDb",false);
+        isPlanIntermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
+
 
 
 
@@ -342,6 +343,10 @@ public class Transicion_nuevo extends AppCompatActivity {
             isListeningPlan=true;
         }
 
+        if(isPlanIntermedio||isPlanIntermedioFromDb){
+            isPlanIntermedioStandard=true;
+        }
+
 
 
     }
@@ -373,9 +378,11 @@ public class Transicion_nuevo extends AppCompatActivity {
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
 
-            if(isPlanIntermedio){
+            if(isPlanIntermedio||isPlanIntermedioFromDb){
                 Intent intent = new Intent(Transicion_nuevo.this,conscisousinterference_nuevo.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                intent.putExtra("planintermedio",isPlanIntermedio);
+
                 startActivity(intent);
             }else {
                 Intent intent = new Intent(Transicion_nuevo.this,availability_nuevo.class);
