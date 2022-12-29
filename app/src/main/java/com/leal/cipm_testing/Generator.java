@@ -63982,4 +63982,40 @@ public class Generator {
                 break;
         }
     }//LR 13/12/2022
+
+    //Verbal Adjectives
+    public void GenVerbalAdjectives(){
+        int verb = (int) (Math.random() * 4);
+        String temp = "yo ";
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Abstractos ab = new Abstractos();
+                        ab.VerbalAdjectives();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        break;
+                    case 1:
+                        Nobles n = new Nobles();
+                        n.VerbalAdjectives();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                    case 2:
+                        Oo o = new Oo();
+                        o.VerbalAdjectives();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+                    case 3:
+                        People p = new People();
+                        p.VerbalAdjectives();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        break;
+                }
+                break;
+        }
+    }//PD 28/12/2022
 }

@@ -7,6 +7,11 @@ public class Abstractos {
     String vnbs[] = {"conocer ", "aprender ", "entender ",
             "considerar ", "mantener ", "explicar ", "enfatizar "};
 
+    String vb[]={
+            "conoce ","aprende ","entiende ","considera ","mantiene ",
+            "mantiene ","explica ","enfatiza "
+    };
+
     String vnb[] = {"know ", "learn ", "understand ", "consider ", "maintain ", "explain ", "emphasize "};
     String vn3[] = {"knows ", "learns ", "understands ", "considers ", "maintains ", "explains ", "emphasizes "};
 
@@ -154,51 +159,17 @@ public class Abstractos {
             "el artículo ", "la diferencia ", "las noticias ", "el crecimiento "
     };
 
-    String nnoblesM[]={
-            "the art ",
-            "the system ",  "the method ",
-            "the data ",   "the problems ",
-            "the software ",   "the love ",
-            "the story ",  "the development ", "the language ",
-            "the analysis ",  "the thought ",
-            "the writing ",
-            "the article ",  "the growth "
-    };
-
-    String nnoblesF[]={
-            "the history ","the information ","the music ","the theory ",
-            "the law ", "the literature ","the ability ","the economy ",
-            "the reading ","the science ",
-            "nature ", "the idea ", "the temperature ", "the investment ",
-            "the safety ", "the quality ","the variety ", "the organization ",
-            "the physics ", "the policy ","the series ","the technology ",
-            "the freedom ", "the instance ","the difference ", "the goal ",
-            "the news ","the society "
-
-    };
-
-    String nnoblesespM[]={
-            "el arte ",
-            "el sistema ",  "el método ",
-            "los datos ",  "los problemas ",
-            "el software ",  "el amor ",
-            "el cuento ",  "el desarrollo ", "el idioma ",
-            "el análisis ",  "el pensamiento ",
-            "el escrito ",
-            "el artículo ",  "el crecimiento "
-    };
-
-    String nnoblesespF[]={
-            "la historia ","la información ","la música ",
-            "la teoría ", "la ley ", "la literatura ",
-            "la habilidad ", "la economia ","la lectura ",
-            "la ciencia ", "la naturaleza ",
-            "la idea ", "la temperatura ","la inversión ",
-            "la seguridad ", "la calidad ","la variedad ", "la organización ",
-            "la fisica ", "la politica ","la serie ",
-            "la tecnología ", "la libertad ", "la instancia ",
-            "la diferencia ","las noticias ",
-            "la sociedad ",
+    String nnoblesW[] = {
+            "history ", "art ", "information ",
+            "system ", "music ", "method ", "reading ",
+            "data ", "theory ", "law ", "literature ", "problems ",
+            "software ", "ability ", "economy ", "love ", "science ",
+            "nature ", "idea ", "temperature ", "investment ", "society "
+            , "story ", "safety ", "quality ", "development ", "language ",
+            "variety ", "organization ", "physics ", "policy ",
+            "analysis ", "policy ", "series ", "thought ",
+            "technology ", "freedom ", "instance ", "writing ",
+            "article ", "difference ",  "news ", "growth "
     };
 
     String ps1;
@@ -11965,5 +11936,16 @@ public class Abstractos {
         }
     }//PD 20/12/2022
 
+    public void VerbalAdjectives(){
+        int neg = 0;
+
+        switch (neg) {
+            case 0:
+                ps1 = nnoblesesp[v] + "que " + vb[v];
+                ps1eng = "the " + vnbc[v] + nnoblesW[v];
+                break;
+        }
+
+    }//PD 28/12/2022
 }
 

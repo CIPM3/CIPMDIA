@@ -11,6 +11,13 @@ public class Nobles {
             "owe ", "incorporate ", "organize "
     };
 
+    String vb[] = {
+            "tiene ","obtiene ","ve ","necesita ","sabe ","encuentra ","toma ","quiere ","incluye ",
+            "agradece ","agrega ","elige ","desarrolla ","recuerda ","trae ","protege ",
+            "evita ","describe ","prefiere ","descubre ","espera ","pierde ","oye ","representa ",
+            "olvida ","acepta ","compara ","imagina ","reconoce ","reemplaza ","pide prestado ","examina ",
+            "debe ","incorpora ","organiza "
+    };
 
     // verbos nobles base spanish
     String vnbs[] = {"tener ", "obtener ", "ver ", "necesitar ", "saber ", "encontrar ", "tomar ", "querer ", "incluir ",
@@ -160,6 +167,33 @@ public class Nobles {
             "el papel ", "el medio ambiente ", "el niño ", "los niños ", "la instancia ", "el mes ", "los meses ",
             "la verdad ", "el marketing ", "la universidad ", "la escritura ", "el artículo ", "el departamento ",
             "la diferencia ", "la meta ", "las noticias ", "a la audiencia ", "el crecimiento ", "un bloque de queso "
+    };
+
+    String nnoblesW[] = {
+            "people ", "history ", "art ", "money ", "world ", "worlds ", "information ",
+            "map ", "maps ", "family ", "government ", "governments ", "health ", "system ",
+
+            "systems ", "computer ", "computers ", "meat ", "year ", " years ", "thanks ",
+            "music ", "person ", "reading ", "method ", "methods ",
+
+            "data ", "food ", "understanding ", "theory ", "law ", "bird ", "birds ",
+            "literature ", "problem ", "problems ", "software ", "control ", "knowledge ",
+            "power ", "ability ", "love ",
+
+            "internet ", "television ", "televisions ", "science ", "library ","nature ",
+            "fact ", "facts ", "product ", "products ", "idea ", "ideas ", "temperature ",
+            "investment ", "area ", "areas ", "society ", "activity ", "story ", "industry ",
+            "media ", "thing ", "things ", "oven ", "ovens ", "community ", "communities ",
+            "safety ", "quality ", "development ", "language ",
+
+            "management ", "player ", "variety ", "video ", "videos ", "week ", "country ",
+            "exam ", "movie ", "organization ", "equipment ", "phisics ", "analysis ",
+            "policy ", "series ", "thought ", "basis ", "boyfriend ", "direction ", "strategy ",
+            "technology ", "army ", "armies ", "camera ", "cameras ", "freedom ",
+
+            "paper ",  "environment ", "child ", "children ", "instance ", "month ", "months ",
+            "truth ", "marketing ", "university ", "writing ", "article ", "department ",
+            "difference ", "goal ", "news ", "audience ","growth ", "a block of cheese "
     };
 
     //What Continuo
@@ -20934,5 +20968,17 @@ public class Nobles {
                 break;
         }
     }//LR 13/12/2022
+
+    public void VerbalAdjectives(){
+        int neg = 0;
+
+        switch (neg) {
+            case 0:
+                ps1 = nnoblesesp[v] + "que " + vb[v];
+                ps1eng = "the " + vnbc[v] + nnoblesW[v];
+                break;
+        }
+
+    }//PD 29/12/2022
 }
 

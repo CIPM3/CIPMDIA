@@ -26,6 +26,11 @@ public class Oo {
             "operar ", "mejorar ", "distribuir ", "adquirir "
     };
 
+    String vb[]={
+      "crea ","disfruta ","requiere ","contruye ","recibe ","contiene ",
+      "explora ","expande ","opera ","mejora ","distribuye ","adquiere "
+    };
+
     String vnb[] = {"create ", "enjoy ", "require ", "build ", "receive ", "contain ", "explore ",
             "expand ", "operate ", "improve ", "distribute ", "acquire "
     };
@@ -241,46 +246,19 @@ public class Oo {
             "la universidad ", "la escritura ", "el artículo ", "el departamento "
     };
 
-    String nnoblesM[]={
-            "the method ","the art ", "the money ",
-            "the map ", "the system ",
-            "the data ","the problem ", "the software ",
-            "the power ", "the love ","the internet ",
-            "the product ",  "the area ","the oven ",  "the language ",
-            "the video ",  "the country ", "the equipment ",
-            "the army ","the marketing ",
-            "the article ", "the department "
-    };
-    String nnoblesF[]={
-            "the history ","the computer ","the music ","the literature ",
-            "the food ","the science ","the idea ","the society ",
-            "the industry ","the thing ","the community ","the variety ",
-            "the movie ","the organization ","the security ",
-            "the technology ","the camera ","the truth ",
-            "the university ", "the writing ","the meat ","the food ",
-            "the television ",
-    };
-
-    String nnoblesespM[]={
-            "un método ","el arte ", "el dinero ",
-            "el mapa ", "el sistema ",
-            "el método ",  "los datos ", "el problema ", "el software ",
-            "el poder ", "el amor ", "el internet ",
-            "la televisión ",  "el producto ", "el área ",
-            "el horno ",  "el idioma ",
-            "el video ", "el país ",
-            "el equipo ",
-            "el ejército ",   "el marketing ",
-            "el artículo ", "el departamento "
-    };
-    String nnoblesespF[]={
-            "la historia ","la computadora ","la música ","la literatura ",
-            "la comida ","la ciencia ","la idea ","la sociedad ",
-            "la industria ","la cosa ","la comunidad ",
-            "la variedad ","la pelicula ","la organización ","la seguridad ",
-            "la tecnología ","la cámara ","la verdad ",
-            "la universidad ", "la escritura ","la carne ","la comida ",
-            "la television "
+    String nnoblesW[] = {
+            "history ", "art ", "money ",
+            "information ", "map ", "system ", "computer ", "meat ",
+            "music ", "method ", "a method ", "data ",
+            "food ", "literature ", "problem ", "software ",
+            "power ", "love ", "internet ", "televisions ",
+            "television ", "science ", "product ", "idea ", "area ",
+            "society ", "story ", "industry ",
+            "thing ", "oven ", "community ", "language ",
+            "variety ", "video ", "security ", "country ", "movie ",
+            "organization ", "equipment ", "technology ",
+            "army ", "camera ", "cameras ", "truth ", "marketing ",
+            "university ", "writing ", "article ", "department "
     };
 
 
@@ -12055,4 +12033,15 @@ public class Oo {
         }
     }//PD 20/12/2022
 
+    public void VerbalAdjectives(){
+        int neg = 0;
+
+        switch (neg) {
+            case 0:
+                ps1 = nnoblesesp[v] + "que " + vb[v];
+                ps1eng = "the " + vnbc[v] + nnoblesW[v];
+                break;
+        }
+
+    }//PD 28/12/2022
 }

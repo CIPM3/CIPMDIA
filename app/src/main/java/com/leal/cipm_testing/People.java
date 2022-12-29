@@ -10,6 +10,10 @@ public class People {
     String vnbs[] = {"identificar ", "creer ", "involucrar ",
             "motivar ", "habilitar ", "seguir ", "entender "};
 
+    String vb[] = {
+            "identifica ","crea ","involucra ",
+            "motiva ","habilita ","sigue ","entiende "
+    };
 
     String vnb[] = {"identify ", "believe ", "involve ", "encourage ", "enable ", "follow ", "understand "};
     String vn3[] = {"identifies ", "believes ", "involves ", "encourages ", "enables ", "follows ", "understands "};
@@ -100,6 +104,11 @@ public class People {
             "a el país ", "a la organización ", "a el ejército ", "a el niño ", "a la verdad ", "a la audiencia "
     };
 
+    String nnoblesespW[] = {" la gente ", " la familia ", " el gobierno ", " el sistema ", " la persona ", " el amor ",
+            " la ciencia ", " la sociedad ", " la industria ", " la idea ", " los medios de comunicación ", " la comunidad ", " el jugador ",
+            " el país ", " la organización ", " el ejército ", " el niño ", " la verdad ", " la audiencia "
+    };
+
     // objetos persona
     String nnobles1[] = {"the people ", "the family ", "the government ", "the system ",
             "the person ", "the love ", "the science ", "society ", "the industry ",
@@ -113,30 +122,11 @@ public class People {
             " el país ", " la organización ", " el ejército ", " el niño ", " la verdad ", " la audiencia "
     };
 
-    String nnoblesM[]={
-            "the government ", "the system ",
-            "the love ",
-            "the media ",  "the player ",
-            "the country ", "the army ", "the child ",
-    };
-    String nnoblesF[]={
-            "the people ", "the family ","the person ",
-            "the science ", "the society ","the industry ",
-            "the idea ","the community ","the organization ",
-            "the truth ", "the audience "
-    };
-
-    String nnoblesespM[]={
-            " el gobierno ", " el sistema ",
-            " el amor ",
-            " los medios de comunicación ",  " el jugador ",
-            " el país ",  " el ejército ", " el niño ",
-    };
-    String nnoblesespF[]={
-            " la gente ", " la familia "," la persona "," la ciencia ",
-            " la sociedad ", " la industria ", " la idea ",
-            " la comunidad "," la organización "," la verdad ",
-            " la audiencia "
+    String nnoblesW[] = {
+            "people ", "family ", "government ", "system ",
+            "person ", "love ", "science ", "society ", "industry ",
+            "idea ", "media ", "community ", "player ", "country ",
+            "organization ", "army ", "child ", "truth ", "audience "
     };
 
 
@@ -11896,4 +11886,16 @@ public class People {
                 break;
         }
     }//PD 20/12/2022
+
+    public void VerbalAdjectives(){
+        int neg = 0;
+
+        switch (neg) {
+            case 0:
+                ps1 = nnoblesespW[v] + "que " + vb[v];
+                ps1eng = "the " + vnbc[v] + nnoblesW[v];
+                break;
+        }
+
+    }//PD 29/12/2022
 }
