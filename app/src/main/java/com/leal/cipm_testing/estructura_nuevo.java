@@ -935,6 +935,30 @@ public class estructura_nuevo extends AppCompatActivity {
                 vv.start();
                 break;
 
+            case "Incremento Paralelo":
+                Uri uri53 = Uri.parse("https://adrianlealcaldera.com/incrementoParalelo.mp4");
+                vv.setVideoURI(uri53);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Verbal Adjectives":
+                Uri uri54 = Uri.parse("https://adrianlealcaldera.com/verlbaladjectives.mp4");
+                vv.setVideoURI(uri54);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Reported Speech":
+                Uri uri55 = Uri.parse("https://adrianlealcaldera.com/reportedspeech.mp4");
+                vv.setVideoURI(uri55);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
         }
 
     }

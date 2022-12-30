@@ -111,6 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
 
@@ -128,6 +129,8 @@
                     android:id="@+id/videoView1"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
                     android:visibility="invisible"
                     />
             </LinearLayout>
