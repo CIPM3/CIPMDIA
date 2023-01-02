@@ -598,6 +598,7 @@ public class estructura_nuevo extends AppCompatActivity {
         startActivity(intento);
     }
     public void showV(View vista) {
+        Toast.makeText(this, "Video tarda unos segundos", Toast.LENGTH_SHORT).show();
 
         vv.setVisibility(View.VISIBLE);
         vf.setVisibility(View.GONE);
