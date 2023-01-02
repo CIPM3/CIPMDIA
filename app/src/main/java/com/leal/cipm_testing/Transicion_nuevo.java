@@ -1191,12 +1191,10 @@ public class Transicion_nuevo extends AppCompatActivity {
     }
     public void showV(View vista) {
 
-        if(selection != null){
+        Toast.makeText(this, "Hola mundo" + selection, Toast.LENGTH_SHORT).show();
 
-        }else{
-            vf.setVisibility(View.GONE);
-            vv.setVisibility(View.VISIBLE);
-        }
+        vf.setVisibility(View.GONE);
+        vv.setVisibility(View.VISIBLE);
 
         switch (selection) {
             case "Transiciones":
@@ -1212,9 +1210,6 @@ public class Transicion_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
-                break;
-            default:
-                Toast.makeText(this, "Por ahora no tenemos videos disponibles.", Toast.LENGTH_SHORT).show();
                 break;
         }
 
