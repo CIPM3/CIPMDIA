@@ -2,8 +2,10 @@ package com.leal.cipm_testing;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     FirebaseUser user;
+    Prefs prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setVisibility(View.GONE);
         btn_menu_open.setVisibility(View.VISIBLE);
         btn_menu_closed.setVisibility(View.GONE);
-        Prefs prefs = new Prefs(this);
+         prefs = new Prefs(this);
         if (prefs.getPremium()==1){
             //Give the user all the premium features
             //hide ads if you are showing ads
@@ -81,15 +84,17 @@ public class MainActivity extends AppCompatActivity {
         gsc = GoogleSignIn.getClient(this, gso);
 
     }
-
-
     public void starttest(View view){
-        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
+
+        Intent crispIntent = new Intent(this, chat_maestro.class);
+        startActivity(crispIntent);
+
+      /*  if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
             Toast.makeText(this, "Favor de registrarse con email y password para hacer examen", Toast.LENGTH_SHORT).show();
         }else{
             startActivity(new Intent(MainActivity.this,MainTesting.class));
 
-        }
+        }                */
     }
    /* public void createRequest(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -145,43 +150,86 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
     public void tutorialGeneral(View vista) {
-        Intent intento = new Intent(this, Transicion_nuevo.class);
-        startActivity(intento);
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, Transicion_nuevo.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
     }
     public void vocabulary(View vista) {
-        Intent intento = new Intent(this, vocabulary.class);
-        startActivity(intento);
+
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, vocabulary.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
 
     }
     public void availability(View vista) {
-        Intent intento = new Intent(this, availability.class);
-        startActivity(intento);
+
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, availability.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 
 
     //billing
     public void Cultura(View vista) {
-        Intent intento = new Intent(this, Culture.class);
-        startActivity(intento);
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(MainActivity.this, Culture.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
     }
     public void myPlan(View vist){
-        Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
-        intent.putExtra("key", user.getUid());
-        startActivity(intent);
+        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
+            Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
+        }else{
+
+            if(prefs.getPremium()==1){
+                Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+                intent.putExtra("key", user.getUid());
+                startActivity(intent);
+            }else if(prefs.getPremium()==0){
+                Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+            }
+
+
+
+        }
+
+
     }
     public void ConInt(View vista) {
-        Intent intento = new Intent(this, rachel.class);
-        startActivity(intento);
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, rachel.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
     public void premium(View vist) {
         Intent intent = new Intent(this, StoreActivity.class);
         startActivity(intent);
     }
     public void profile(View vist) {
-        Intent crispIntent = new Intent(this, profile.class);
-        startActivity(crispIntent);
+
+        Toast.makeText(this, "Funcion no disponible por el momento", Toast.LENGTH_SHORT).show();
+
     }
+
     public void chat_maestro(View vist) {
         Intent crispIntent = new Intent(this, chat_maestro.class);
         startActivity(crispIntent);
@@ -200,20 +248,44 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
     public void chose_cultura(View vista) {
-        Intent intento = new Intent(this, chose_cultura.class);
-        startActivity(intento);
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(MainActivity.this, chose_cultura.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
     }
     public void chose_aval(View vista) {
-        Intent intento = new Intent(this, availability_nuevo.class);
-        startActivity(intento);
+
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, availability_nuevo.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
     public void chose_conscis(View vista) {
-        Intent intento = new Intent(this, conscisousinterference_nuevo.class);
-        startActivity(intento);
+
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, conscisousinterference_nuevo.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
     }
     public void chose_spa_int(View vista) {
-        Intent intento = new Intent(this, spa_int_nuevo.class);
-        startActivity(intento);
+        if(prefs.getPremium()==1){
+            Intent intento = new Intent(this, spa_int_nuevo.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
+
         //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
     }
 

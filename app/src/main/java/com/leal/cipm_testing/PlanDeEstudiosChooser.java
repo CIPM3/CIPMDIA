@@ -150,17 +150,19 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 //set title
                 .setTitle("Definición: ")
 //set message
-                .setMessage("Plan 100% Personalizado, Continuar?")
+                .setMessage("Todavía no esta funcional")
 //set positive button
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //no hemos decidido a donde mandarlo todavia despues del examen
-                        isCustomPlan=true;
+                      /*  isCustomPlan=true;
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("Custom100Plan",isCustomPlan);
-                        startActivity(intent);
+                        startActivity(intent);*/
+                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+
                     }
                 })
 //set negative button

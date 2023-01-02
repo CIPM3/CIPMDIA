@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#3949AB"
                     android:onClick="starttest"
-                    android:text="cuantas estructuras de lenguaje sabes?/click here"
+                    android:text="Quieres determinar tu nivel de inglés? click aqui y habla con un maestro en el app"
                     android:textColor="#FDD835" />
 
                 <Button
