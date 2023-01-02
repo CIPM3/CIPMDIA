@@ -152,7 +152,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Practice it"
+                        android:text="Elige dificultad"
                         android:textColor="@color/azul"
                         android:textSize="19dp"
                         android:textStyle="normal" />
@@ -244,7 +244,7 @@
                         android:layout_marginRight="15dp"
                         android:textColor="@color/azul"
                         android:textSize="14dp"
-                        android:onClick="dificulty1"
+                        android:onClick="dificulty1Activation"
                         />
 
                     <Button
@@ -252,11 +252,10 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/ic_rect_ngulo_btnnocheck"
-                        android:onClick="dificulty2"
+                        android:onClick="dificulty2Activation"
                         android:text="Normal"
                         android:textColor="@color/azul"
                         android:textSize="14dp" />
-
 
                     <Button
                         android:id="@+id/dif3"
@@ -264,7 +263,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/ic_rect_ngulo_btnnocheck"
-                        android:onClick="dificulty3"
+                        android:onClick="dificulty3Activation"
                         android:text="Intermedio"
                         android:textColor="@color/azul"
                         android:textSize="14dp" />
@@ -278,7 +277,7 @@
                         android:text="Avanzado"
                         android:textColor="@color/azul"
                         android:textSize="14dp"
-                        android:onClick="dificulty4"
+                        android:onClick="dificulty4Activation"
                         />
 
                 </LinearLayout>
@@ -318,7 +317,7 @@
                         android:id="@+id/spanishsentence"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Spanish"
+                        android:text="click siguiente oración"
                         android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
@@ -463,13 +462,39 @@
 
             <!--btn check o intentar-->
             <LinearLayout
+                android:id="@+id/btn_cont_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:gravity="center"
+                    android:onClick="practice"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Siguiente oración"
+                        android:textAlignment="center"
+                        android:textColor="@color/azul"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/btn_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="30dp"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical"
-                android:layout_marginBottom="45dp"
+                android:layout_marginBottom="5dp"
                 android:visibility="gone"
                 >
                 <LinearLayout
@@ -489,6 +514,7 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+
 
         </LinearLayout>
 
