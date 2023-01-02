@@ -178,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:text="Pon en práctica lo aprendido en clase. "
+                        android:text="Elige un rango de palabras o ve tutorial"
 
                         android:textColor="@color/black"
                         android:textSize="7pt" />
@@ -217,7 +217,7 @@
                             android:id="@+id/spanishsentence"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Spanish"
+                            android:text="click continuar"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
                     </LinearLayout>
