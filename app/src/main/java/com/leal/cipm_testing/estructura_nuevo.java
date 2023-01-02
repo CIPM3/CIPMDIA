@@ -960,6 +960,14 @@ public class estructura_nuevo extends AppCompatActivity {
                 vv.start();
                 break;
 
+            case "Transiciones":
+                Uri uri56 = Uri.parse("https://adrianlealcaldera.com/transiciones.mp4");
+                vv.setVideoURI(uri56);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
         }
 
     }
