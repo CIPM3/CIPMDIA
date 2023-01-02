@@ -1199,6 +1199,20 @@ public class Transicion_nuevo extends AppCompatActivity {
         }
 
         switch (selection) {
+            case "Transiciones":
+                Uri uri1 = Uri.parse("https://adrianlealcaldera.com/transiciones.mp4");
+                vv.setVideoURI(uri1);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Tutorial para Transiciones":
+                Uri uri2 = Uri.parse("https://adrianlealcaldera.com/app%20transici%C3%B3n.mp4");
+                vv.setVideoURI(uri2);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
             default:
                 Toast.makeText(this, "Por ahora no tenemos videos disponibles.", Toast.LENGTH_SHORT).show();
                 break;

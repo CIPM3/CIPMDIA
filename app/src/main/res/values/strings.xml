@@ -14,7 +14,7 @@
         <item>Reported Speech</item>
         <item>Incremento Paralelo</item>
         <item>Verbal Adjectives</item>
-        <item>Transiciones</item>
+
 
         <item>What Simple</item>
         <item>What Continuous</item>
@@ -158,6 +158,8 @@
         <item>Is America Racist?</item>
     </string-array>
     <string-array name="Transition">
+        <item>Tutorial para Transiciones</item>
+        <item>Transiciones</item>
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
@@ -183,6 +185,8 @@
         <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
     </string-array>
     <string-array name="TransitionGratis">
+        <item>Tutorial para Transiciones</item>
+        <item>Transiciones</item>
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
