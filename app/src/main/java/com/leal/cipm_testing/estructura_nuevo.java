@@ -963,7 +963,359 @@ public class estructura_nuevo extends AppCompatActivity {
 
 
 
+            case "What Simple":
+                Uri uri57 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri57);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "What Continuous":
+                Uri uri58 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri58);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "What Perfect":
+                Uri uri59 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri59);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "What Modals Simple":
+                Uri uri60 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri60);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "What Modals Continuous":
+                Uri uri61 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri61);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "What Modals Perfect":
+                Uri uri62 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri62);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "When Simple":
+                Uri uri63 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri63);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "When Continuous":
+                Uri uri64 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri64);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "When Perfect":
+                Uri uri65 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri65);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "When Modals Simple":
+                Uri uri66 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri66);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "When Modals Continuous":
+                Uri uri67 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri67);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "When Modals Perfect":
+                Uri uri68 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri68);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Where Simple":
+                Uri uri69 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri69);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Where Continuous":
+                Uri uri70 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri70);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Where Perfect":
+                Uri uri71 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri71);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Where Modals Simple":
+                Uri uri72 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri72);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Where Modals Continuous":
+                Uri uri73 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri73);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Where Modals Perfect":
+                Uri uri74 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri74);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Why Simple":
+                Uri uri75 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri75);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Why Continuous":
+                Uri uri76 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri76);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Why Perfect":
+                Uri uri77 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri77);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Why Modals Simple":
+                Uri uri78 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri78);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Why Modals Continuous":
+                Uri uri79 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri79);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Why Modals Perfect":
+                Uri uri80 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri80);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Who Simple":
+                Uri uri81 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri81);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Who Continuous":
+                Uri uri82 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri82);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Who Perfect":
+                Uri uri83 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri83);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Who Modals Simple":
+                Uri uri84 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri84);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Who Modals Continuous":
+                Uri uri85 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri85);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "Who Modals Perfect":
+                Uri uri86 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri86);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "How Simple":
+                Uri uri87 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri87);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Continuous":
+                Uri uri88 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri88);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Perfect":
+                Uri uri89 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri89);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Modals Simple":
+                Uri uri90 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri90);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Modals Continuous":
+                Uri uri91 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri91);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Modals Perfect":
+                Uri uri92 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri92);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "How Much Simple":
+                Uri uri93 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri93);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Much Continuous":
+                Uri uri94 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri94);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Much Perfect":
+                Uri uri95 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri95);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Much Modals Simple":
+                Uri uri96 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri96);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Much Modals Continuous":
+                Uri uri97 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri97);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Much Modals Perfect":
+                Uri uri98 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri98);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "How Many Simple":
+                Uri uri99 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri99);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Many Continuous":
+                Uri uri100 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri100);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Many Perfect":
+                Uri uri101 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri101);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Many Modals Simple":
+                Uri uri102 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri102);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Many Modals Continuous":
+                Uri uri103 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri103);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+            case "How Many Modals Perfect":
+                Uri uri104 = Uri.parse("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                vv.setVideoURI(uri104);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Feel Like Simple":
+                Uri uri105 = Uri.parse("https://adrianlealcaldera.com/Feel%20Like.mp4");
+                vv.setVideoURI(uri105);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
         }
+
 
     }
     public void dificulty1(View vista){
