@@ -8,9 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="azul">#407BFB</color>
+    <color name="azul_dark">#00459E</color>
     <color name="amarillo">#F8D22F</color>
     <color name="success">#0ED53C</color>
     <color name="error">#F00E0E</color>
-
+    <color name="gray">#747474</color>
+    <color name="rojo">#EC6565</color>
 
 </resources>
