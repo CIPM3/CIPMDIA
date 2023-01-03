@@ -83,7 +83,7 @@ public class Login2023 extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-    }
+    }*/
     @Override
     protected void onStart() {
         super.onStart();
@@ -92,7 +92,7 @@ public class Login2023 extends AppCompatActivity {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
-    }*/
+    }
 
     // email-password sign in
     private void loginUser() {
