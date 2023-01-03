@@ -1,7 +1,7 @@
 package com.leal.cipm_testing;
 
 
-public class Generator {
+public class Generator<vib> {
     public Generator() {
     }
 
@@ -24,6 +24,7 @@ public class Generator {
     String pronombres[] = {"yo ", "tú ", "él ", "ella ", "eso ", "ellos ", "nosotros "};
     String articles[] = {"the ", "the ", "the ", "the ", "a ", "a ", "some ", "some "};
     String articulos[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas "};
+    String tercerpro[] = {"él ", "ella "};
 
 
     // verbos intransitivos base top 100, verbos que pueden ser usados como intrans
@@ -63924,4 +63925,35 @@ public class Generator {
                 break;
         }
     }//PD 28/12/2022
+
+    //Relative Clauses
+    public void GenRelativeClauses1() {
+        int rand = (int) (Math.random() * tercerpro.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = tercerpro[rand];
+        switch (temp) {
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenRelativeClauses1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenRelativeClauses1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+        }
+}
 }

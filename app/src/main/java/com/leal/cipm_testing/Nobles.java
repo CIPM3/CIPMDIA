@@ -20971,7 +20971,6 @@ public class Nobles {
 
     public void VerbalAdjectives(){
         int neg = 0;
-
         switch (neg) {
             case 0:
                 ps1 = nnoblesesp[v] + "que " + vb[v];
@@ -20980,5 +20979,37 @@ public class Nobles {
         }
 
     }//PD 29/12/2022
+
+    String smsc[] = {"the man ", "the boy ", "the the doctor "};
+    String smscesp[] = {"el hombre ", "el chico ", "el doctoro "};
+
+    String sfsc[] = {"the woman ", "the girl ", "the teacher "};
+    String sfscesp[] = {"la mujer ", "la chica ", "la maestra "};
+
+    int l = (int) (Math.random() * smsc.length);
+
+
+    //Relative Clauses
+    public void GenRelativeClauses1() {
+        Oo o = new Oo();
+        int ob= (int)(Math.random()*o.vnb3.length );
+        switch (neg) {
+            case 0:
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + "él " + o.vnb3[ob];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + "he " + o.vn3[ob];
+
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + "ella " + o.vnb3[ob];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + "she " + o.vn3[ob];
+                break;
+
+            case 1:
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + "él no " + o.vnb3[ob];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + "he doesn't " + o.vn3[ob];
+
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + "ella no " + o.vnb3[ob];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + "she doesn't " + o.vn3[ob];
+                break;
+        }
+    }//prueba
 }
 
