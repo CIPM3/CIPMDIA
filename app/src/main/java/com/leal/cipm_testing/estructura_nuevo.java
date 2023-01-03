@@ -114,8 +114,17 @@ public class estructura_nuevo extends AppCompatActivity {
 
         btndif1 = (Button) findViewById(R.id.dif1);
         btndif2 = (Button) findViewById(R.id.dif2);
+
         btndif3 = (Button) findViewById(R.id.dif3);
         btndif4 = (Button) findViewById(R.id.dif4);
+        prefs = new Prefs(this);
+
+
+
+
+
+
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
@@ -150,7 +159,6 @@ public class estructura_nuevo extends AppCompatActivity {
         docref = db.collection(userid).document("WhereisStudent");
 
 
-        prefs = new Prefs(this);
 
         PremiumControler();
     }
@@ -478,10 +486,12 @@ public class estructura_nuevo extends AppCompatActivity {
                 });
 
 
+
             } else if (prefs.getPremium()==0){
                 //remove user all the premium features
                 //show ads to the user
-
+                btndif4.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
 
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -5734,6 +5744,7 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "What Simple":
+                btndif2.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -9143,6 +9154,45 @@ public class estructura_nuevo extends AppCompatActivity {
 
                     case "300 a 400":
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
+
+            case "Relative Clause":
+                switch (selection2){
+                    case "0 a 100":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenRelativeClauses1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
                 }
                 break;
@@ -13564,6 +13614,10 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "What Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
+
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -13605,6 +13659,10 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "What Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
+
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -13646,6 +13704,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "What Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -13688,6 +13749,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "What Modals Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -13728,6 +13792,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "What Modals Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -13768,6 +13835,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "What Modals Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14544,6 +14614,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "Who Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14585,6 +14658,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "Who Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14626,6 +14702,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "Who Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14668,6 +14747,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "Who Modals Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14708,6 +14790,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "Who Modals Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -14748,6 +14833,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "Who Modals Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15279,6 +15367,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "How Many Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15320,6 +15411,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "How Many Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15361,6 +15455,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "How Many Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15403,6 +15500,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
 
             case "How Many Modals Simple":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15443,6 +15543,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "How Many Modals Continuous":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -15483,6 +15586,9 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "How Many Modals Perfect":
+                btndif2.setVisibility(View.INVISIBLE);
+                btndif3.setVisibility(View.INVISIBLE);
+                btndif4.setVisibility(View.INVISIBLE);
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -16927,6 +17033,7 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
             case "Verbal Adjectives":
+                btndif2.setVisibility(View.INVISIBLE);
                 switch (selection2){
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -16976,6 +17083,46 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
                 }
                 break;
+
+            case "Relative Clause":
+                switch (selection2){
+                    case "0 a 100":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenRelativeClauses1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                        break;
+                }
+                break;
+
         }
     }
     public void dificulty1Activation(View vista){
