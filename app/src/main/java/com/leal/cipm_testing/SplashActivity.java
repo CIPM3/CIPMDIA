@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, SignIn.class));
+                startActivity(new Intent(SplashActivity.this, Login2023.class));
                 finish();
             }
         }, 500);
@@ -41,7 +41,8 @@ public class SplashActivity extends AppCompatActivity {
 
     void checkSubscription() {
 
-        billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener((billingResult, list) -> {
+        billingClient = BillingClient.newBuilder(this)
+                .enablePendingPurchases().setListener((billingResult, list) -> {
         }).build();
 
         final BillingClient finalBillingClient = billingClient;
@@ -52,9 +53,9 @@ public class SplashActivity extends AppCompatActivity {
             }
             @Override
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
-
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                    finalBillingClient.queryPurchasesAsync(BillingClient.SkuType.SUBS, (billingResult1, list) -> {
+                    finalBillingClient.queryPurchasesAsync(BillingClient
+                            .SkuType.SUBS, (billingResult1, list) -> {
                         //this "list" will contain all the sub purchases.
                         if (billingResult1.getResponseCode() == BillingClient.BillingResponseCode.OK && list.size() > 0) {
                             //list is more than 0 meaning there is an active subscription available

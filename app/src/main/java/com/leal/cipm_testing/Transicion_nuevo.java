@@ -423,6 +423,14 @@ public class Transicion_nuevo extends AppCompatActivity {
         opclay.setBackgroundColor(Color.WHITE);
 
         switch (selection){
+
+            case "Tutorial para Transiciones":
+                Toast.makeText(this, "estas en tutorial, elige una estructura", Toast.LENGTH_SHORT).show();
+                break;
+            case "Transiciones":
+                Toast.makeText(this, "estas en tutorial, elige una estructura", Toast.LENGTH_SHORT).show();
+                break;
+
             case "Conectores Standar Presente Simple":
                 gen1.GenConectoresStandarPresenteSimpleXPresenteSimple();
                 sptx.setText(gen1.gens);

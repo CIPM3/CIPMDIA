@@ -69,7 +69,8 @@ public class RegisterActivity extends AppCompatActivity {
             etRegPassword.setError("password cannot be empty");
             etRegPassword.requestFocus();
         }else {
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            mAuth.createUserWithEmailAndPassword(email,password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
