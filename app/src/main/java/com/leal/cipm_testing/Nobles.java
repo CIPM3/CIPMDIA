@@ -20995,19 +20995,19 @@ public class Nobles {
         int ob= (int)(Math.random()*o.vnb3.length );
         switch (neg) {
             case 0:
-                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + "él " + o.vnb3[ob];
-                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + "he " + o.vn3[ob];
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + ", " + o.vnb3[ob] + nnoblesesp[n];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + ", " + o.vn3[ob] + nnobles[n];
 
-                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + "ella " + o.vnb3[ob];
-                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + "she " + o.vn3[ob];
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + ", " + o.vnb3[ob] + nnoblesesp[n];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + ", " + o.vn3[ob] + nnobles[n];
                 break;
 
             case 1:
-                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + "él no " + o.vnb3[ob];
-                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + "he doesn't " + o.vn3[ob];
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + ", no " + o.vnb3[ob] + nnoblesesp[n];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + ", doesn't " + o.vn3[ob] + nnobles[n];
 
-                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + "ella no " + o.vnb3[ob];
-                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + "she doesn't " + o.vn3[ob];
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + ", no " + o.vnb3[ob] + nnoblesesp[n];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + ", doesn't " + o.vn3[ob] + nnobles[n];
                 break;
         }
     }//prueba
