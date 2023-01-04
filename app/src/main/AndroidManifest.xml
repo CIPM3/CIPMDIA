@@ -15,13 +15,17 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".main_2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Registro2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Login2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Transicion_nuevo"
             android:exported="false" />

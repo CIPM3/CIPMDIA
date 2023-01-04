@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }*/
-        Intent intento = new Intent(this, Login2023.class);
+        Intent intento = new Intent(this, main_2023.class);
         startActivity(intento);
 
     }
