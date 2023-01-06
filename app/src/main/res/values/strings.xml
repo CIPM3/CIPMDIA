@@ -161,6 +161,7 @@
     <string-array name="Transition">
         <item>Tutorial para Transiciones</item>
         <item>Transiciones</item>
+        <item>Random</item>
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
@@ -188,6 +189,7 @@
     <string-array name="TransitionGratis">
         <item>Tutorial para Transiciones</item>
         <item>Transiciones</item>
+        <item>Random</item>
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
