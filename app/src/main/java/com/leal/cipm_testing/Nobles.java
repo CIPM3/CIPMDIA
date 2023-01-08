@@ -21299,5 +21299,240 @@ public class Nobles {
                 break;
         }
     }//LR 13/12/2022
+
+    public void GenQuestionStructureModals1() {
+        int neg = (int) (Math.random() * 10);
+        int sr = (int) (Math.random() * 2);
+        switch (neg) {
+            case 0:
+                ps1 = queststruesp[s] + vn1w[v] + "?";
+                ps1eng = queststru[s] + "would i " + vnb[v];
+
+                ps2 = queststruesp[s] + vn2w[v] + "?";
+                ps2eng = queststru[s] + "would you " + vnb[v];
+
+                ps3 = queststruesp[s] + vn3w[v] + "él?";
+                ps3eng = queststru[s] + "would he " + vnb[v];
+
+                ps3ella = queststruesp[s] + vn3w[v] + "ella?";
+                ps3she = queststru[s] + "would she " + vnb[v];
+
+                ps3eso = queststruesp[s] + vn3w[v] + "eso?";
+                ps3it = queststru[s] + "would it " + vnb[v];
+
+                ps4 = queststruesp[s] + vn4w[v] + "?";
+                ps4eng = queststru[s] + "would they " + vnb[v];
+
+                ps5 = queststruesp[s] + vn5w[v] + "?";
+                ps5eng = queststru[s] + "would we " + vnb[v];
+                break;
+            case 1:
+                ps1 = queststru[s] + "no " + vn1w[v] + "?";
+                ps1eng = queststru[s] + "wouldn't i " + vnb[v];
+
+                ps2 = queststru[s] + "no " + vn2w[v] + "?";
+                ps2eng = queststru[s] + "wouldn't you " + vnb[v];
+
+                ps3 = queststru[s] + "no " + vn3w[v] + "él?";
+                ps3eng = queststru[s] + "wouldn't he " + vnb[v];
+
+                ps3ella = queststru[s] + "no " + vn3w[v] + "ella?";
+                ps3she = queststru[s] + "wouldn't she " + vnb[v];
+
+                ps3eso = queststru[s] + "no " + vn3w[v] + "eso?";
+                ps3it = queststru[s] + "wouldn't it " + vnb[v];
+
+                ps4 = queststru[s] + "no " + vn4w[v] + "?";
+                ps4eng = queststru[s] + "wouldn't they " + vnb[v];
+
+                ps5 = queststru[s] + "no " + vn5w[v] + "?";
+                ps5eng = queststru[s] + "wouldn't we " + vnb[v];
+                break;
+
+            //Could
+            case 2:
+                ps1 = queststruesp[s] + "podría " + vnbs[v] + "?";
+                ps1eng = queststru[s] + "could i " + vnb[v];
+
+                ps2 = queststruesp[s] + "podrías " + vnbs[v] + "?";
+                ps2eng = queststru[s] + "could you " + vnb[v];
+
+                ps3 = queststruesp[s] + "podría " + vnbs[v] + "él?";
+                ps3eng = queststru[s] + "could he " + vnb[v];
+
+                ps3ella = queststruesp[s] + "podría " + vnbs[v] + "ella?";
+                ps3she = queststru[s] + "could she " + vnb[v];
+
+                ps3eso = queststruesp[s] + "podría " + vnbs[v] + "eso?";
+                ps3it = queststru[s] + "could it " + vnb[v];
+
+                ps4 = queststruesp[s] + "podrían " + vnbs[v] + "?";
+                ps4eng = queststru[s] + "could they " + vnb[v];
+
+                ps5 = queststruesp[s] + "podríamos " + vnbs[v] + "?";
+                ps5eng = queststru[s] + "could we " + vnb[v];
+                break;
+            case 3:
+                ps1 = queststru[s] + "no " + "podría " + vnbs[v] + "?";
+                ps1eng = queststru[s] + "couldn't i " + vnb[v];
+
+                ps2 = queststru[s] + "no " + "podrías " + vnbs[v] + "?";
+                ps2eng = queststru[s] + "couldn't you " + vnb[v];
+
+                ps3 = queststru[s] + "no " + "podría " + vnbs[v] + "él?";
+                ps3eng = queststru[s] + "couldn't he " + vnb[v];
+
+                ps3ella = queststru[s] + "no " + "podría " + vnbs[v] + "ella?";
+                ps3she = queststru[s] + "couldn't she " + vnb[v];
+
+                ps3eso = queststru[s] + "no " + "podría " + vnbs[v] + "eso?";
+                ps3it = queststru[s] + "couldn't it " + vnb[v];
+
+                ps4 = queststru[s] + "no " + "podrían " + vnbs[v] + "?";
+                ps4eng = queststru[s] + "couldn't they " + vnb[v];
+
+                ps5 = queststru[s] + "no " + "podríamos " + vnbs[v] + "?";
+                ps5eng = queststru[s] + "couldn't we " + vnb[v];
+                break;
+
+            //Should
+            case 4:
+                ps1 = queststruesp[s] + "debería " + vnbs[v] + "?";
+                ps1eng = queststru[s] + "should i " + vnb[v];
+
+                ps2 = queststruesp[s] + "deberías " + vnbs[v] + "?";
+                ps2eng = queststru[s] + "should you " + vnb[v];
+
+                ps3 = queststruesp[s] + "debería " + vnbs[v] + "él?";
+                ps3eng = queststru[s] + "should he " + vnb[v];
+
+                ps3ella = queststruesp[s] + "debería " + vnbs[v] + "ella?";
+                ps3she = queststru[s] + "should she " + vnb[v];
+
+                ps3eso = queststruesp[s] + "debería " + vnbs[v] + "eso?";
+                ps3it = queststru[s] + "should it " + vnb[v];
+
+                ps4 = queststruesp[s] + "deberían " + vnbs[v] + "?";
+                ps4eng = queststru[s] + "should they " + vnb[v];
+
+                ps5 = queststruesp[s] + "deberíamos " + vnbs[v] + "?";
+                ps5eng = queststru[s] + "should we " + vnb[v];
+                break;
+            case 5:
+                ps1 = queststru[s] + "no " + "debería " + vnbs[v] + "?";
+                ps1eng = queststru[s] + "shouldn't i " + vnb[v];
+
+                ps2 = queststru[s] + "no " + "deberías " + vnbs[v] + "?";
+                ps2eng = queststru[s] + "shouldn't you " + vnb[v];
+
+                ps3 = queststru[s] + "no " + "debería " + vnbs[v] + "él?";
+                ps3eng = queststru[s] + "shouldn't he " + vnb[v];
+
+                ps3ella = queststru[s] + "no " + "debería " + vnbs[v] + "ella?";
+                ps3she = queststru[s] + "shouldn't she " + vnb[v];
+
+                ps3eso = queststru[s] + "no " + "debería " + vnbs[v] + "eso?";
+                ps3it = queststru[s] + "shouldn't it " + vnb[v];
+
+                ps4 = queststru[s] + "no " + "deberían " + vnbs[v] + "?";
+                ps4eng = queststru[s] + "shouldn't they " + vnb[v];
+
+                ps5 = queststru[s] + "no " + "deberíamos " + vnbs[v] + "?";
+                ps5eng = queststru[s] + "shouldn't we " + vnb[v];
+                break;
+
+            case 6:
+                ps1 = queststruesp[s] + scontmIesp[s] + vnbcs[v] + "?";
+                ps1eng = queststru[s] + scontmI[s] + vnbc[v];
+
+                ps2 = queststruesp[s] + scontmYouesp[s] + vnbcs[v] + "?";
+                ps2eng = queststru[s] + scontmYou[s] + vnbc[v];
+
+                ps3 = queststruesp[s] + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3eng = queststru[s] + scontmHe[s] + vnbc[v];
+
+                ps3ella = queststruesp[s] + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3she = queststru[s] + scontmShe[s] + vnbc[v];
+
+                ps3eso = queststruesp[s] + scontmItesp[s] + vnbcs[v] + "eso?";
+                ps3it = queststru[s] + scontmIt[s] + vnbc[v];
+
+                ps4 = queststruesp[s] + scontmTheyesp[s] + vnbcs[v] + "?";
+                ps4eng = queststru[s] + scontmThey[s] + vnbc[v];
+
+                ps5 = queststruesp[s] + scontmWeesp[s] + vnbcs[v] + "?";
+                ps5eng = queststru[s] + scontmWe[s] + vnbc[v];
+                break;
+
+            case 7:
+                ps1 = queststruesp[s] + scontmIespno[s] + vnbcs[v] + "?";
+                ps1eng = queststru[s] + scontmIdont[s] + vnbc[v];
+
+                ps2 = queststruesp[s] + scontmYouespno[s] + vnbcs[v] + "?";
+                ps2eng = queststru[s] + scontmYoudont[s] + vnbc[v];
+
+                ps3 = queststruesp[s] + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3eng = queststru[s] + scontmHedont[s] + vnbc[v];
+
+                ps3ella = queststruesp[s] + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3she = queststru[s] + scontmShedont[s] + vnbc[v];
+
+                ps3eso = queststruesp[s] + scontmItespno[s] + vnbcs[v] + "eso?";
+                ps3it = queststru[s] + scontmItdont[s] + vnbc[v];
+
+                ps4 = queststruesp[s] + scontmTheyespno[s] + vnbcs[v] + "?";
+                ps4eng = queststru[s] + scontmTheydont[s] + vnbc[v];
+
+                ps5 = queststruesp[s] + scontmWeespno[s] + vnbcs[v] + "?";
+                ps5eng = queststru[s] + scontmWedont[s] + vnbc[v];
+                break;
+
+            case 8:
+                ps1 = queststruesp[s] + sperfmIesp[s] + vpsp[v] + "?";
+                ps1eng = queststru[s] + sperfmI[s] + vpeng[v];
+
+                ps2 = queststruesp[s] + sperfmYouesp[s] + vpsp[v] + "?";
+                ps2eng = queststru[s] + sperfmYou[s] + vpeng[v];
+
+                ps3 = queststruesp[s] + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3eng = queststru[s] + sperfmHe[s] + vpeng[v];
+
+                ps3ella = queststruesp[s] + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3she = queststru[s] + sperfmShe[s] + vpeng[v];
+
+                ps3eso = queststruesp[s] + sperfmItesp[s] + vpsp[v] + "eso?";
+                ps3it = queststru[s] + sperfmIt[s] + vpeng[v];
+
+                ps4 = queststruesp[s] + sperfmTheyesp[s] + vpsp[v] + "?";
+                ps4eng = queststru[s] + sperfmThey[s] + vpeng[v];
+
+                ps5 = queststruesp[s] + sperfmWeesp[s] + vpsp[v] + "?";
+                ps5eng = queststru[s] + sperfmWe[s] + vpeng[v];
+                break;
+            case 9:
+                ps1 = queststruesp[s] + sperfmIespno[s] + vpsp[v] + "?";
+                ps1eng = queststru[s] + sperfmIdont[s] + vpeng[v];
+
+                ps2 = queststruesp[s] + sperfmYouespno[s] + vpsp[v] + "?";
+                ps2eng = queststru[s] + sperfmYoudont[s] + vpeng[v];
+
+                ps3 = queststruesp[s] + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3eng = queststru[s] + sperfmHedont[s] + vpeng[v];
+
+                ps3ella = queststruesp[s] + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3she = queststru[s] + sperfmShedont[s] + vpeng[v];
+
+                ps3eso = queststruesp[s] + sperfmItespno[s] + vpsp[v] + "eso?";
+                ps3it = queststru[s] + sperfmItdont[s] + vpeng[v];
+
+                ps4 = queststruesp[s] + sperfmTheyespno[s] + vpsp[v] + "?";
+                ps4eng = queststru[s] + sperfmTheydont[s] + vpeng[v];
+
+                ps5 = queststruesp[s] + sperfmWeespno[s] + vpsp[v] + "?";
+                ps5eng = queststru[s] + sperfmWedont[s] + vpeng[v];
+
+                break;
+        }
+    }//LR 13/12/2022
 }
 
