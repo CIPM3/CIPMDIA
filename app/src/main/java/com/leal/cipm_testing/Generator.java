@@ -512,7 +512,8 @@ public class Generator<vib> {
     }
     public void GenPresCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -556,6 +557,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps1;
                         gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -600,6 +602,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps2;
                         gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -644,6 +647,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps3;
                         gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -687,6 +691,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps3ella;
                         gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -730,6 +735,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps3eso;
                         gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -773,6 +779,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps4;
                         gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -816,6 +823,7 @@ public class Generator<vib> {
                         ab.GenPresCont1();
                         gens = ab.ps5;
                         gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -13141,7 +13149,8 @@ public class Generator<vib> {
     }
     public void GenPresCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -13184,6 +13193,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps1;
                         gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -13228,6 +13238,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps2;
                         gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -13272,6 +13283,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps3;
                         gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -13315,6 +13327,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps3ella;
                         gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -13358,6 +13371,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps3eso;
                         gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -13401,6 +13415,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps4;
                         gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -13444,6 +13459,7 @@ public class Generator<vib> {
                         ab.GenPresCont2();
                         gens = ab.ps5;
                         gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -29316,7 +29332,8 @@ public class Generator<vib> {
     }
     public void GenPresCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -29361,6 +29378,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps1;
                         gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -29407,6 +29425,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps2;
                         gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -29453,6 +29472,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps3;
                         gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -29498,6 +29518,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps3ella;
                         gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -29543,6 +29564,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps3eso;
                         gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -29588,6 +29610,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps4;
                         gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -29633,6 +29656,7 @@ public class Generator<vib> {
                         ab.GenPresCont3();
                         gens = ab.ps5;
                         gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -41407,7 +41431,8 @@ public class Generator<vib> {
     }
     public void GenPresCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 5);
+        int verb = 4;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -41445,6 +41470,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps1;
                         gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -41484,6 +41510,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps2;
                         gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -41523,6 +41550,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps3;
                         gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -41561,6 +41589,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps3ella;
                         gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -41599,6 +41628,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps3eso;
                         gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -41637,6 +41667,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps4;
                         gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -41675,6 +41706,7 @@ public class Generator<vib> {
                         ab.GenPresCont4();
                         gens = ab.ps5;
                         gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;

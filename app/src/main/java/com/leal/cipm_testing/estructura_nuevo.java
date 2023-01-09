@@ -58,6 +58,7 @@ public class estructura_nuevo extends AppCompatActivity {
     VideoView vv;
     TextView sptx;
     TextView txteng;
+    TextView txteng2;
     EditText answerinp;
     TextToSpeech tts;
     TextToSpeech ttr;
@@ -93,6 +94,7 @@ public class estructura_nuevo extends AppCompatActivity {
         spin = (Spinner) findViewById(R.id.spinuno);
         txt1 = (TextView) findViewById(R.id.textspin1);
         txteng = (TextView) findViewById(R.id.txteng);
+        txteng2 = (TextView) findViewById(R.id.txteng2);
         spin2 = (Spinner) findViewById(R.id.spinrango);
         txt2 = (TextView) findViewById(R.id.textspin2);
         vv = (VideoView) findViewById(R.id.videoView1);
@@ -516,7 +518,7 @@ public class estructura_nuevo extends AppCompatActivity {
         }
         // si no es personalizado pasa a lo normal
         else {
-            if (prefs.getPremium()==1){
+            if (prefs.getPremium()==0){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
@@ -3191,6 +3193,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -11083,7 +11086,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -19038,6 +19041,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -26684,6 +26688,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -34338,6 +34343,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -40069,6 +40075,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -45806,6 +45813,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -51494,6 +51502,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -57074,9 +57083,12 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void checkanswer(View vista) {
         String t = txteng.getText().toString().trim();
-        String te2; // esta la usariamos para la segunda opcion
+        String te2 = txteng2.getText().toString().trim(); // esta la usariamos para la segunda opcion
         String t2 = answerinp.getText().toString().trim();
-        if (t.equalsIgnoreCase(t2) ) {
+
+        Toast.makeText(this, ""+ t + " o " + te2, Toast.LENGTH_SHORT).show();
+
+        if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2)) {
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
             resppass.setVisibility(View.VISIBLE);
