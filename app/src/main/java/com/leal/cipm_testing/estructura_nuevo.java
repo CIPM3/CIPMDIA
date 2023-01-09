@@ -69,8 +69,8 @@ public class estructura_nuevo extends AppCompatActivity {
     Button btndif2;
     Button btndif3;
     Button btndif4;
-    String[] temp;
-    boolean personalizedPlan;
+    String[] temp,isFromCustom100Db;
+    boolean personalizedPlan,iscustom100;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
             isInTransition,isinIntcon,isPlanIntermedio,isFromListeningPlan,isFromListeningPlanDb;
     String[] ArrayWithElementRemoved;
@@ -119,12 +119,6 @@ public class estructura_nuevo extends AppCompatActivity {
         btndif4 = (Button) findViewById(R.id.dif4);
         prefs = new Prefs(this);
 
-
-
-
-
-
-
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
@@ -144,6 +138,8 @@ public class estructura_nuevo extends AppCompatActivity {
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
         isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
+        iscustom100= reciver.getBooleanExtra("Custom100Plan",false);
+        isFromCustom100Db=reciver.getStringArrayExtra("CustomArrayStructuresFromDb");
 
 
         if(isNonBasics){
@@ -170,6 +166,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
     public void PremiumControler(){
 
+
         /* if(isNonBasicsCustom){
              isBasics=false;
 
@@ -177,6 +174,7 @@ public class estructura_nuevo extends AppCompatActivity {
          }*/
         if(personalizedPlan){
             if(isCustom){
+
                 if(isNonBasicsArray){
                     isBasicsArray=false;
                 }else {isBasicsArray=true;}
@@ -272,7 +270,9 @@ public class estructura_nuevo extends AppCompatActivity {
 
                 }
 
-            }else if(isNonBasics) {
+            }
+            else if(isNonBasics) {
+
                 // aqui tiene que recivir basico o no basico
                 isNonBasicsArray=true;
 
@@ -358,6 +358,7 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
             }
             else if(isBasics){
+
                 if(isNonBasicsArray){
                     isBasicsArray=false;
                 }else {isBasicsArray=true;}
@@ -443,6 +444,74 @@ public class estructura_nuevo extends AppCompatActivity {
                     });
 
                 }
+            }
+            else if(iscustom100){
+                Toast.makeText(this, "custom100", Toast.LENGTH_SHORT).show();
+
+                // aqui tiene que jalar de la base de datos el temp
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    temp= isFromCustom100Db;
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                              selection = spin.getSelectedItem().toString();
+                            txt1.setText(selection);
+
+                            vv.setVisibility(View.GONE);
+                            vf.setVisibility(View.VISIBLE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adapter2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spin2.getSelectedItem().toString();
+                            txt2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                } else if (prefs.getPremium()==0){
+                    //remove user all the premium features
+                    //show ads to the user
+                   temp=  isFromCustom100Db;
+
+                    //espacio.......................................
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adapter2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection2 = spin2.getSelectedItem().toString();
+                            txt2.setText(selection2);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+
             }
         }
         // si no es personalizado pasa a lo normal
@@ -9411,6 +9480,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -55420,8 +55490,9 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void checkanswer(View vista) {
         String t = txteng.getText().toString().trim();
+        String te2; // esta la usariamos para la segunda opcion
         String t2 = answerinp.getText().toString().trim();
-        if (t.equalsIgnoreCase(t2)) {
+        if (t.equalsIgnoreCase(t2) ) {
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
             resppass.setVisibility(View.VISIBLE);

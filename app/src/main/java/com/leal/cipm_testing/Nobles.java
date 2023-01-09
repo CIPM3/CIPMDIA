@@ -777,6 +777,7 @@ public class Nobles {
             case 0:
                 ps1 = "yo " + "estoy " + vnbcs[v] + nnoblesesp[n];
                 ps1eng = "I " + "am " + vnbc[v] + nnobles[n];
+                /*ps1eng = "I´m " + "" + vnbc[v] + nnobles[n];*/
 
                 ps2 = "tú " + "estás " + vnbcs[v] + nnoblesesp[n];
                 ps2eng = "you " + "are " + vnbc[v] + nnobles[n];
@@ -803,6 +804,7 @@ public class Nobles {
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n];
                 ps2eng = "you " + "aren't " + vnbc[v] + nnobles[n];
+                /*ps2eng = "you're " + "not " + vnbc[v] + nnobles[n];*/
 
                 ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
                 ps3eng = "he " + "isn't " + vnbc[v] + nnobles[n];

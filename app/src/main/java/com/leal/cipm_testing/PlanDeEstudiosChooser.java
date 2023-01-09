@@ -1,30 +1,25 @@
 package com.leal.cipm_testing;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class PlanDeEstudiosChooser extends AppCompatActivity {
     Button basicPlanRecommendedBtn;
@@ -32,15 +27,20 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     String userid;
-    DocumentReference docref;
+    DocumentReference docref,docrefStructure;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    StudentVocabRestultsModel svrm = new StudentVocabRestultsModel();
+    Student studentObject = new Student();
     boolean isCustom,basics,nonbasics;
     boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
-    boolean isPlanIntermedioStandard,isPlanBasicRecommended,isCustomPlan,isListeningPlan,isAdvancedPlan
+    boolean isPlanIntermedioStandard,isPlanBasicRecommended, isCustomPlan100,isListeningPlan,isAdvancedPlan
             ,BasicListeningPlan
             ;
+    boolean psFromDb;
 
-
+    boolean candb;
+    private String[] ArrayWithElementRemoved;
+    private int PositionOfElementsLeft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,9 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         isOnPersonalizedPlan = true;
         basicPlanRecommendedBtn= findViewById(R.id.basicplanbtn);
         docref=db.collection(userid).document("WhereisStudent");
+        docrefStructure = db.collection(userid).document("structures");
+        getInfoFromDbStructure();
+
     }
     public boolean isOnPersonalizedPlanMethod() {
         return isOnPersonalizedPlan;
@@ -59,7 +62,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     public void setOnPersonalizedPlan(boolean onPersonalizedPlan) {
         isOnPersonalizedPlan = onPersonalizedPlan;
     }
-
     public void getDBState(){
         docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -75,15 +77,81 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 isInintCons= vmp.isInintCon ;
                 isPlanIntermedioStandard=vmp.isPlanIntermedioStandard;
                 isPlanBasicRecommended=vmp.isPlanBasicRecommended;
-                isCustomPlan=vmp.isCustomPlan;
+                isCustomPlan100 =vmp.isCustomPlan;
                 isListeningPlan=vmp.isListeningPlan;
                 isAdvancedPlan=vmp.isAdvancedPlan;
                 BasicListeningPlan=vmp.isListeningPlan;
 
 
+
             }
         });
     }
+    String[] DbResultStructure = new String[99];
+    String[] structureArray= new String[99];
+    int numbertoSubtract;
+    boolean[] temporal= new boolean[99];
+    List<String> stringList;
+
+    public void getInfoFromDbStructure(){
+        docrefStructure.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                studentObject=  documentSnapshot.toObject(Student.class);
+                assert studentObject != null;
+                PullsTrueStructuresFromDb();
+            }
+        });
+    }
+
+    private void PullsTrueStructuresFromDb() {
+        //asks if the boolean stored at Db that was
+        // put there by the test is true or false
+        // puts it into an array
+        temporal[0]=studentObject.presentesimple;
+        temporal[1]=studentObject.presenteContinuo;
+        temporal[2]=studentObject.presentePerfecto;
+        temporal[3]=studentObject.presentePerfectoContinuo;
+
+        if(temporal[0]){
+            structureArray[0]="Present Simple";
+        }else {
+            structureArray[0]="";
+
+        }
+        if(temporal[1]){
+            structureArray[1]="Present Continuos";
+        }else {
+            structureArray[0]="";
+
+        }
+        if(temporal[2]){
+            structureArray[2]="Present Perfect";
+        }else {
+            structureArray[0]="";
+
+        }
+        if(temporal[3]){
+            structureArray[3]="Present Perfect Continuos";
+        }else {
+            structureArray[0]="";
+
+        }
+
+        for(int i=0; i<structureArray.length;i++){
+            DbResultStructure[i]=structureArray[i];
+       }
+        List<String> list = new ArrayList<String>();
+
+        for(String s : DbResultStructure) {
+            if(s != null && s.length() > 0) {
+                list.add(s);
+            }
+        }
+        DbResultStructure = list.toArray(new String[list.size()]);
+
+    }
+
     public void BasicRecomendedPlan(View vista ){
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
@@ -156,12 +224,13 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //no hemos decidido a donde mandarlo todavia despues del examen
-                      /*  isCustomPlan=true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
+                        isCustomPlan100 =true;
+
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
-                        intent.putExtra("Custom100Plan",isCustomPlan);
-                        startActivity(intent);*/
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+                        intent.putExtra("Custom100Plan", isCustomPlan100);
+                        intent.putExtra("CustomArrayStructuresFromDb",DbResultStructure);
+                        startActivity(intent);
 
                     }
                 })
@@ -169,8 +238,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+
                     }
                 })
                 .show();
@@ -324,5 +392,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
 
     }
+
+
 
 }

@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void starttest(View view){
 
-        Intent crispIntent = new Intent(this, chat_maestro.class);
+        Intent crispIntent = new Intent(this, MainTesting.class);
         startActivity(crispIntent);
 
       /*  if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
@@ -180,8 +180,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
     //billing
     public void Cultura(View vista) {
         if(prefs.getPremium()==1){
@@ -192,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void myPlan(View vist){
-        /*if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
+        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
             Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
         }else{
 
@@ -206,10 +204,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        }*/
-        Intent intento = new Intent(this, main_2023.class);
+        }
+        /*Intent intento = new Intent(this, main_2023.class);
         startActivity(intento);
-
+*/
     }
     public void ConInt(View vista) {
         if(prefs.getPremium()==1){

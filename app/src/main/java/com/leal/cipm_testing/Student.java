@@ -15,7 +15,11 @@ public class Student {
     boolean mightsimple,mightContinuo,mightPerfecto,mightPerfectoContinuo;
     boolean cansimple,canContinuo,mustsimple,mustContinuo;
     boolean shouldsimple,shouldContinuo,shouldPerfecto,shouldPerfectoContinuo;
-    boolean wantTo,forTo,supposedToPresent,wishPastPerfect,usedTo,beUsedTo;
+    boolean wantTo,forTo,supposedToPresent,
+            wishPastPerfect,usedTo,beUsedTo;
+
+
+
     boolean vocab0a50;
     boolean vocab50a100;
     boolean vocab100a150;

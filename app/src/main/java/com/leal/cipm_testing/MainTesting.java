@@ -2,7 +2,6 @@ package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
@@ -5823,7 +5822,7 @@ public class MainTesting extends AppCompatActivity {
     public void answerchecker(View view){
         switch (selectionv){
             case "Syntax":
-                dbtesting();
+                SendStructureInfoToDb();
                 break;
             case "Vocabulary":
                 vocabdbtesting();
@@ -5837,7 +5836,7 @@ public class MainTesting extends AppCompatActivity {
         }
     }
     //4 crear en un userput con la estructura time
-    public void      dbtesting()  {
+    public void SendStructureInfoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
@@ -5931,6 +5930,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("mustsimpletime", mussec);
         user.put("mustContinuo", muc);
         user.put("mustContinuotime", mucsec);
+
         user.put("shouldsimple", ss);
         user.put("shouldsimpletime", sssec);
         user.put("shouldContinuo", sc);
