@@ -20,6 +20,7 @@
         <item>What Modals Simple</item>
         <item>Relative Clause</item>
         <item>Question Structure</item>
+        <item>Question Structure Modals</item>
 
     </string-array>
     <string-array name="structures">
@@ -120,6 +121,9 @@
         <item>How Many Modals Simple</item>
         <item>How Many Modals Continuous</item>
         <item>How Many Modals Perfect</item>
+
+        <item>Question Structure</item>
+        <item>Question Structure Modals</item>
 
         <item>Feel Like Simple</item>
 
