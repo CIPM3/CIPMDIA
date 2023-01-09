@@ -291,27 +291,27 @@ public class Abstractos {
                 ps1eng2 = "I'm " + "not " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n];
-                ps2eng = "you " + "are not " + vnbc[v] + nnobles[n];
+                ps2eng = "you're " + "not " + vnbc[v] + nnobles[n];
                 ps2eng2 = "you " + "aren't " + vnbc[v] + nnobles[n];
 
                 ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3eng = "he " + "is not " + vnbc[v] + nnobles[n];
+                ps3eng = "he's " + "not " + vnbc[v] + nnobles[n];
                 ps3eng2 = "he " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3she = "she " + "is not " + vnbc[v] + nnobles[n];
+                ps3she = "she's " + "not " + vnbc[v] + nnobles[n];
                 ps3she2 = "she " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso " + "no " + "está " + vnbcs[v] + nnoblesesp[n];
-                ps3it = "it " + "is not " + vnbc[v] + nnobles[n];
+                ps3it = "it's " + "not " + vnbc[v] + nnobles[n];
                 ps3it2 = "it " + "isn't " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n];
-                ps4eng = "they " + "are not " + vnbc[v] + nnobles[n];
+                ps4eng = "they're " + "not " + vnbc[v] + nnobles[n];
                 ps4eng2 = "they " + "aren't " + vnbc[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n];
-                ps5eng = "we " + "are not " + vnbc[v] + nnobles[n];
+                ps5eng = "we're " + "not " + vnbc[v] + nnobles[n];
                 ps5eng2 = "we " + "aren't " + vnbc[v] + nnobles[n];
                 break;
         }
@@ -2003,27 +2003,27 @@ public class Abstractos {
                 ps1eng2 = "I'm " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you " + "are not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you're " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you " + "aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he " + "is not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he's " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he " + "isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3ella = "ella " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she " + "is not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she = "she's " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she " + "isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3eso = "eso " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it " + "is not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it = "it's " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps3it2 = "it " + "isn't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they " + "are not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they're " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they " + "aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we " + "are not " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we're " + "not " + vnbc[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we " + "aren't " + vnbc[v] + nnobles[n] + frequadv[r];
                 break;
         }
@@ -5817,62 +5817,62 @@ public class Abstractos {
         int p2=(int)(Math.random()*prep.absspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "yo " + "estoy " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps1 = "yo " + "estoy " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps1eng = "I " + "am " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps1eng2 = "I'm " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps2 = "tú " + "estás " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps2 = "tú " + "estás " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps2eng = "you " + "are " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you're " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3 = "él " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps3eng = "he " + "is " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he's " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3ella = "ella " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3ella = "ella " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps3she = "she " + "is " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3she2 = "she's " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3eso = "eso " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3eso = "eso " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps3it = "it " + "is " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3it2 = "it's " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps4 = "ellos " + "están " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "están " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps4eng = "they " + "are " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they're " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps5 = "nosotros " + "estamos " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps5 = "nosotros " + "estamos " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps5eng = "we " + "are " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps5eng2 = "we're " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 break;
 
             case 1:
-                ps1 = "yo " + "no " + "estoy " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps1 = "yo " + "no " + "estoy " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
                 ps1eng = "I am " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps1eng2 = "I'm " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps2eng = "you " + "are not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps2 = "tú " + "no " + "estás " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps2eng = "you're " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "you " + "aren't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps3eng = "he " + "is not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3 = "él " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps3eng = "he's " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3eng2 = "he " + "isn't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3ella = "ella " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps3she = "she " + "is not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3ella = "ella " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps3she = "she's " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3she2 = "she " + "isn't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps3eso = "eso " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps3it = "it " + "is not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3eso = "eso " + "no " + "está " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps3it = "it's " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3it2 = "it " + "isn't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps4eng = "they " + "are not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps4 = "ellos no " + "están " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps4eng = "they're " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they " + "aren't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
-                ps5eng = "we " + "are not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n] + prep.absspecial[p][p2] +advfrequ[r];
+                ps5eng = "we're " + "not " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps5eng2 = "we " + "aren't " + vnbc[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 break;
         }
@@ -9573,27 +9573,27 @@ public class Abstractos {
                 ps1eng2 = "I'm " + "not " + vnbc[v];
 
                 ps2 = "tú " + "no " + "estás " + vnbcs[v];
-                ps2eng = "you " + "are not " + vnbc[v];
+                ps2eng = "you're " + "not " + vnbc[v];
                 ps2eng2 = "you " + "aren't " + vnbc[v];
 
                 ps3 = "él " + "no " + "está " + vnbcs[v];
-                ps3eng = "he " + "is not " + vnbc[v];
+                ps3eng = "he's " + "not " + vnbc[v];
                 ps3eng2 = "he " + "isn't " + vnbc[v];
 
                 ps3ella = "ella " + "no " + "está " + vnbcs[v];
-                ps3she = "she " + "is not " + vnbc[v];
+                ps3she = "she's " + "not " + vnbc[v];
                 ps3she2 = "she " + "isn't " + vnbc[v];
 
                 ps3eso = "eso " + "no " + "está " + vnbcs[v];
-                ps3it = "it " + "is not " + vnbc[v];
+                ps3it = "it's " + "not " + vnbc[v];
                 ps3it2 = "it " + "isn't " + vnbc[v];
 
                 ps4 = "ellos no " + "están " + vnbcs[v];
-                ps4eng = "they " + "are not " + vnbc[v];
+                ps4eng = "they're " + "not " + vnbc[v];
                 ps4eng2 = "they " + "aren't " + vnbc[v];
 
                 ps5 = "nosotros no " + "estamos " + vnbcs[v];
-                ps5eng = "we " + "are not " + vnbc[v];
+                ps5eng = "we're " + "not " + vnbc[v];
                 ps5eng2 = "we " + "aren't " + vnbc[v];
                 break;
         }
