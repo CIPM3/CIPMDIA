@@ -24922,7 +24922,6 @@ public class Generator2 {
                         gene = s.eng3she;
                         break;
 
-
                     case 2:
                         People2 p = new People2();
                         p.GenPresCont4();
