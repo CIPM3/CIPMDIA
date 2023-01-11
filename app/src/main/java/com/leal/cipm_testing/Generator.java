@@ -6987,7 +6987,8 @@ public class Generator<vib> {
     }
     public void GenShouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -6997,37 +6998,45 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenShouldCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenShouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenShouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenShouldCont1();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -7039,19 +7048,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -7059,19 +7070,23 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -7083,18 +7098,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -7102,19 +7120,23 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -7125,20 +7147,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -7146,19 +7169,23 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -7169,19 +7196,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -7189,19 +7218,23 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -7212,18 +7245,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -7231,19 +7267,23 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -7254,18 +7294,21 @@ public class Generator<vib> {
                         n.GenShouldCont1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenShouldCont1();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont1();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -7273,21 +7316,29 @@ public class Generator<vib> {
                         p.GenShouldCont1();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
+
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenShouldCont1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont1();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
     public void GenShouldPerf1() {
@@ -8216,7 +8267,8 @@ public class Generator<vib> {
     }
     public void GenMightCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -8226,37 +8278,45 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMightCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMightCont1();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMightCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMightCont1();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -8268,19 +8328,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -8288,19 +8350,23 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -8312,18 +8378,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -8331,19 +8400,23 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -8354,20 +8427,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -8375,19 +8449,23 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -8398,19 +8476,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -8418,19 +8498,23 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -8441,18 +8525,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -8460,19 +8547,23 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -8483,18 +8574,21 @@ public class Generator<vib> {
                         n.GenMightCont1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMightCont1();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont1();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -8502,19 +8596,24 @@ public class Generator<vib> {
                         p.GenMightCont1();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMightCont1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont1();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -9448,7 +9547,8 @@ public class Generator<vib> {
     }
     public void GenCanCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -9458,37 +9558,45 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenCanCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenCanCont1();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenCanCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenCanCont1();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -9500,19 +9608,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -9520,19 +9630,23 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -9544,18 +9658,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -9563,19 +9680,23 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -9586,20 +9707,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -9607,19 +9729,23 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -9630,19 +9756,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -9650,19 +9778,23 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -9673,18 +9805,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -9692,19 +9827,23 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -9715,18 +9854,21 @@ public class Generator<vib> {
                         n.GenCanCont1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenCanCont1();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont1();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -9734,22 +9876,29 @@ public class Generator<vib> {
                         p.GenCanCont1();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenCanCont1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont1();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
 
@@ -10062,7 +10211,8 @@ public class Generator<vib> {
     }
     public void GenMustCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -10072,37 +10222,45 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMustCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMustCont1();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMustCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMustCont1();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -10114,19 +10272,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -10134,19 +10294,23 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -10158,18 +10322,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -10177,19 +10344,23 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -10200,20 +10371,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -10221,19 +10393,23 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -10244,19 +10420,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -10264,19 +10442,23 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -10287,18 +10469,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -10306,19 +10491,23 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -10329,18 +10518,21 @@ public class Generator<vib> {
                         n.GenMustCont1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMustCont1();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont1();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -10348,19 +10540,24 @@ public class Generator<vib> {
                         p.GenMustCont1();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont1();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMustCont1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont1();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -19837,7 +20034,8 @@ public class Generator<vib> {
     }
     public void GenShouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -19847,37 +20045,45 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenShouldCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenShouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenShouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenShouldCont2();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -19889,19 +20095,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -19909,19 +20117,23 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -19933,18 +20145,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -19952,19 +20167,23 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -19975,20 +20194,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -19996,19 +20216,23 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -20019,19 +20243,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -20039,19 +20265,23 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -20062,18 +20292,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -20081,19 +20314,23 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -20104,18 +20341,21 @@ public class Generator<vib> {
                         n.GenShouldCont2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenShouldCont2();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont2();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -20123,21 +20363,29 @@ public class Generator<vib> {
                         p.GenShouldCont2();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
+
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont2();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenShouldCont2();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont2();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
     public void GenShouldPerf2() {
@@ -21066,7 +21314,8 @@ public class Generator<vib> {
     }
     public void GenMightCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -21076,37 +21325,45 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMightCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMightCont2();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMightCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMightCont2();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -21118,19 +21375,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -21138,19 +21397,23 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -21162,18 +21425,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -21181,19 +21447,23 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -21204,20 +21474,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -21225,19 +21496,23 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -21248,19 +21523,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -21268,19 +21545,23 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -21291,18 +21572,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -21310,19 +21594,23 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -21333,18 +21621,21 @@ public class Generator<vib> {
                         n.GenMightCont2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMightCont2();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont2();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -21352,19 +21643,24 @@ public class Generator<vib> {
                         p.GenMightCont2();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont2();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMightCont2();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont2();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -22298,7 +22594,8 @@ public class Generator<vib> {
     }
     public void GenCanCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -22308,37 +22605,45 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenCanCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenCanCont2();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenCanCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenCanCont2();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -22350,19 +22655,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -22370,19 +22677,23 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -22394,18 +22705,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -22413,19 +22727,23 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -22436,20 +22754,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -22457,19 +22776,23 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -22480,19 +22803,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -22500,19 +22825,23 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -22523,18 +22852,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -22542,19 +22874,23 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -22565,18 +22901,21 @@ public class Generator<vib> {
                         n.GenCanCont2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenCanCont2();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont2();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -22584,22 +22923,29 @@ public class Generator<vib> {
                         p.GenCanCont2();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont2();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenCanCont2();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont2();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
 
@@ -22912,7 +23258,8 @@ public class Generator<vib> {
     }
     public void GenMustCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -22922,37 +23269,45 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMustCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMustCont2();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMustCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMustCont2();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -22964,19 +23319,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -22984,19 +23341,23 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -23008,18 +23369,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -23027,19 +23391,23 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -23050,20 +23418,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -23071,19 +23440,23 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -23094,19 +23467,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -23114,19 +23489,23 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -23137,18 +23516,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -23156,19 +23538,23 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -23179,18 +23565,21 @@ public class Generator<vib> {
                         n.GenMustCont2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMustCont2();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont2();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -23198,19 +23587,24 @@ public class Generator<vib> {
                         p.GenMustCont2();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont2();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMustCont2();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont2();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -36144,7 +36538,8 @@ public class Generator<vib> {
     }
     public void GenShouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -36154,37 +36549,45 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenShouldCont3();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenShouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenShouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenShouldCont3();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -36196,19 +36599,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -36216,19 +36621,23 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -36240,18 +36649,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -36259,19 +36671,23 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -36282,20 +36698,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -36303,19 +36720,23 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -36326,19 +36747,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -36346,19 +36769,23 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -36369,18 +36796,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -36388,19 +36818,23 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -36411,18 +36845,21 @@ public class Generator<vib> {
                         n.GenShouldCont3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont3();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenShouldCont3();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont3();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenShouldCont3();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -36430,21 +36867,29 @@ public class Generator<vib> {
                         p.GenShouldCont3();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
+
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont3();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenShouldCont3();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenShouldCont3();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
     public void GenShouldPerf3() {
@@ -37373,7 +37818,8 @@ public class Generator<vib> {
     }
     public void GenMightCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -37383,37 +37829,45 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMightCont3();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMightCont3();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMightCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMightCont3();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -37425,19 +37879,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -37445,19 +37901,23 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -37469,18 +37929,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -37488,19 +37951,23 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -37511,20 +37978,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -37532,19 +38000,23 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -37555,19 +38027,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -37575,19 +38049,23 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -37598,18 +38076,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -37617,19 +38098,23 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -37640,18 +38125,21 @@ public class Generator<vib> {
                         n.GenMightCont3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont3();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMightCont3();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont3();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMightCont3();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -37659,19 +38147,24 @@ public class Generator<vib> {
                         p.GenMightCont3();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont3();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMightCont3();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMightCont3();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -38605,7 +39098,8 @@ public class Generator<vib> {
     }
     public void GenCanCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -38615,37 +39109,45 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenCanCont3();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenCanCont3();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenCanCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenCanCont3();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -38657,19 +39159,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -38677,19 +39181,23 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -38701,18 +39209,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -38720,19 +39231,23 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -38743,20 +39258,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -38764,19 +39280,23 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -38787,19 +39307,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -38807,19 +39329,23 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -38830,18 +39356,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -38849,19 +39378,23 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -38872,18 +39405,21 @@ public class Generator<vib> {
                         n.GenCanCont3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont3();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenCanCont3();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont3();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenCanCont3();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -38891,22 +39427,29 @@ public class Generator<vib> {
                         p.GenCanCont3();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont3();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenCanCont3();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenCanCont3();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
+
+
         }
     }
 
@@ -39219,7 +39762,8 @@ public class Generator<vib> {
     }
     public void GenMustCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 5;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -39229,37 +39773,45 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps1;
                         gene = n.ps1eng;
-                        break;
-                    case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case 2:
-                        People p = new People();
-                        p.GenMustCont3();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
-                    case 3:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case 4:
+                    case 1:
                         Special s = new Special();
                         s.GenMustCont3();
                         gens = s.sp1;
                         gene = s.eng1;
                         break;
-                    case 5:
+
+                    case 2:
                         Intrans i = new Intrans();
                         i.GenMustCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        break;
+
+                    case 3:
+                        People p = new People();
+                        p.GenMustCont3();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
+                        break;
+
+                    case 4:
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        break;
+
+                    case 5:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
                         break;
 
                 }
@@ -39271,19 +39823,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp2;
+                        gene = i.eng2;
                         break;
 
                     case 3:
@@ -39291,19 +39845,23 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps2;
                         gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp2;
-                        gene = s.eng2;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp2;
-                        gene = i.eng2;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
                         break;
 
                 }
@@ -39315,18 +39873,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp3;
+                        gene = i.eng3;
                         break;
 
                     case 3:
@@ -39334,19 +39895,23 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps3;
                         gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp3;
-                        gene = s.eng3;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp3;
-                        gene = i.eng3;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
                         break;
                 }
                 break;
@@ -39357,20 +39922,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
 
+                    case 2:
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp4;
+                        gene = i.eng4;
                         break;
 
                     case 3:
@@ -39378,19 +39944,23 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps3ella;
                         gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp4;
-                        gene = i.eng4;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
                         break;
                 }
                 break;
@@ -39401,19 +39971,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
-                    case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
 
+                    case 1:
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp5;
+                        gene = i.eng5;
                         break;
 
                     case 3:
@@ -39421,19 +39993,23 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp5;
-                        gene = i.eng5;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
                 }
                 break;
@@ -39444,18 +40020,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp6;
+                        gene = i.eng6;
                         break;
 
                     case 3:
@@ -39463,19 +40042,23 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp4;
-                        gene = s.eng4;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp6;
-                        gene = i.eng6;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
                         break;
                 }
                 break;
@@ -39486,18 +40069,21 @@ public class Generator<vib> {
                         n.GenMustCont3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
+
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont3();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
+                        Special s = new Special();
+                        s.GenMustCont3();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont3();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
+                        Intrans i = new Intrans();
+                        i.GenMustCont3();
+                        gens = i.sp7;
+                        gene = i.eng7;
                         break;
 
                     case 3:
@@ -39505,19 +40091,24 @@ public class Generator<vib> {
                         p.GenMustCont3();
                         gens = p.ps5;
                         gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont3();
-                        gens = s.sp5;
-                        gene = s.eng5;
+                        Oo o = new Oo();
+                        o.GenMustCont3();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
                         break;
+
                     case 5:
-                        Intrans i = new Intrans();
-                        i.GenMustCont3();
-                        gens = i.sp7;
-                        gene = i.eng7;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
                         break;
                 }
                 break;
@@ -47730,7 +48321,8 @@ public class Generator<vib> {
     }
     public void GenShouldCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 5);
+        int verb = 4;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -47740,18 +48332,23 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
+                        Special s = new Special();
+                        s.GenShouldCont4();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
+
+
                     case 2:
                         People p = new People();
                         p.GenShouldCont4();
                         gens = p.ps1;
                         gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
                         break;
 
                     case 3:
@@ -47760,13 +48357,14 @@ public class Generator<vib> {
                         gens = o.ps1;
                         gene = o.ps1eng;
                         break;
-                    case 4:
-                        Special s = new Special();
-                        s.GenShouldCont4();
-                        gens = s.sp1;
-                        gene = s.eng1;
-                        break;
 
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
 
                 }
                 break;
@@ -47777,35 +48375,39 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenShouldCont4();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenShouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenShouldCont4();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
 
                 }
                 break;
@@ -47816,34 +48418,39 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenShouldCont4();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenShouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenShouldCont4();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
@@ -47853,36 +48460,39 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenShouldCont4();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenShouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenShouldCont4();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
@@ -47892,35 +48502,39 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-
+                        Special s = new Special();
+                        s.GenShouldCont4();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-
-                    case 3:
                         People p = new People();
                         p.GenShouldCont4();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenShouldCont4();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
-
                 }
                 break;
             case "ellos ":
@@ -47930,34 +48544,39 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenShouldCont4();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenShouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenShouldCont4();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -47967,35 +48586,43 @@ public class Generator<vib> {
                         n.GenShouldCont4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenShouldCont4();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenShouldCont4();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenShouldCont4();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case 4:
                         Special s = new Special();
                         s.GenShouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenShouldCont4();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenShouldCont4();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenShouldCont4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
                 }
                 break;
+
+
         }
     }
     public void GenShouldPerf4() {
@@ -48819,7 +49446,8 @@ public class Generator<vib> {
     }
     public void GenMightCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 5);
+        int verb = 4;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -48829,18 +49457,23 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
+                        Special s = new Special();
+                        s.GenMightCont4();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
+
+
                     case 2:
                         People p = new People();
                         p.GenMightCont4();
                         gens = p.ps1;
                         gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
                         break;
 
                     case 3:
@@ -48849,13 +49482,14 @@ public class Generator<vib> {
                         gens = o.ps1;
                         gene = o.ps1eng;
                         break;
-                    case 4:
-                        Special s = new Special();
-                        s.GenMightCont4();
-                        gens = s.sp1;
-                        gene = s.eng1;
-                        break;
 
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
 
                 }
                 break;
@@ -48866,35 +49500,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMightCont4();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMightCont4();
                         gens = s.sp2;
                         gene = s.eng2;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMightCont4();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
 
                 }
                 break;
@@ -48905,34 +49543,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMightCont4();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMightCont4();
                         gens = s.sp3;
                         gene = s.eng3;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMightCont4();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
@@ -48942,36 +49585,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMightCont4();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMightCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMightCont4();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
@@ -48981,35 +49627,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-
+                        Special s = new Special();
+                        s.GenMightCont4();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-
-                    case 3:
                         People p = new People();
                         p.GenMightCont4();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMightCont4();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
-
                 }
                 break;
             case "ellos ":
@@ -49019,34 +49669,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMightCont4();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMightCont4();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMightCont4();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -49056,34 +49711,39 @@ public class Generator<vib> {
                         n.GenMightCont4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMightCont4();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMightCont4();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMightCont4();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMightCont4();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMightCont4();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMightCont4();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMightCont4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
                 }
                 break;
 
@@ -49911,7 +50571,8 @@ public class Generator<vib> {
     }
     public void GenCanCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 5);
+        int verb = 4;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -49921,18 +50582,23 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
+                        Special s = new Special();
+                        s.GenCanCont4();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
+
+
                     case 2:
                         People p = new People();
                         p.GenCanCont4();
                         gens = p.ps1;
                         gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
                         break;
 
                     case 3:
@@ -49941,13 +50607,14 @@ public class Generator<vib> {
                         gens = o.ps1;
                         gene = o.ps1eng;
                         break;
-                    case 4:
-                        Special s = new Special();
-                        s.GenCanCont4();
-                        gens = s.sp1;
-                        gene = s.eng1;
-                        break;
 
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
 
                 }
                 break;
@@ -49958,35 +50625,39 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenCanCont4();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenCanCont4();
                         gens = s.sp2;
                         gene = s.eng2;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenCanCont4();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
 
                 }
                 break;
@@ -49997,34 +50668,39 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenCanCont4();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenCanCont4();
                         gens = s.sp3;
                         gene = s.eng3;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenCanCont4();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
@@ -50034,36 +50710,39 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenCanCont4();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenCanCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenCanCont4();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
@@ -50073,35 +50752,39 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-
+                        Special s = new Special();
+                        s.GenCanCont4();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-
-                    case 3:
                         People p = new People();
                         p.GenCanCont4();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenCanCont4();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
-
                 }
                 break;
             case "ellos ":
@@ -50111,34 +50794,39 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenCanCont4();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenCanCont4();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenCanCont4();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -50148,36 +50836,43 @@ public class Generator<vib> {
                         n.GenCanCont4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenCanCont4();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenCanCont4();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenCanCont4();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenCanCont4();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenCanCont4();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenCanCont4();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenCanCont4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
                 }
                 break;
+
+
         }
     }
 
@@ -50455,7 +51150,8 @@ public class Generator<vib> {
     }
     public void GenMustCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 5);
+        int verb = 4;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -50465,18 +51161,23 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
+                        Special s = new Special();
+                        s.GenMustCont4();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
+
+
                     case 2:
                         People p = new People();
                         p.GenMustCont4();
                         gens = p.ps1;
                         gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+
                         break;
 
                     case 3:
@@ -50485,13 +51186,14 @@ public class Generator<vib> {
                         gens = o.ps1;
                         gene = o.ps1eng;
                         break;
-                    case 4:
-                        Special s = new Special();
-                        s.GenMustCont4();
-                        gens = s.sp1;
-                        gene = s.eng1;
-                        break;
 
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
 
                 }
                 break;
@@ -50502,35 +51204,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMustCont4();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMustCont4();
                         gens = s.sp2;
                         gene = s.eng2;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMustCont4();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
 
                 }
                 break;
@@ -50541,34 +51247,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMustCont4();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMustCont4();
                         gens = s.sp3;
                         gene = s.eng3;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMustCont4();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
@@ -50578,36 +51289,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMustCont4();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMustCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMustCont4();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
@@ -50617,35 +51331,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        gene2 = n.ps3it2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-
+                        Special s = new Special();
+                        s.GenMustCont4();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
+
+
                     case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-
-                    case 3:
                         People p = new People();
                         p.GenMustCont4();
                         gens = p.ps3eso;
                         gene = p.ps3it;
+                        gene2 = p.ps3it2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
                         break;
 
                     case 4:
-                        Special s = new Special();
-                        s.GenMustCont4();
-                        gens = s.sp3eso;
-                        gene = s.sp3it;
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
                         break;
-
                 }
                 break;
             case "ellos ":
@@ -50655,34 +51373,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMustCont4();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMustCont4();
                         gens = s.sp4;
                         gene = s.eng4;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMustCont4();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
@@ -50692,34 +51415,39 @@ public class Generator<vib> {
                         n.GenMustCont4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
-                        Oo o = new Oo();
-                        o.GenMustCont4();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case 2:
-                        Abstractos ab = new Abstractos();
-                        ab.GenMustCont4();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-
-                    case 3:
-                        People p = new People();
-                        p.GenMustCont4();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-
-                    case 4:
                         Special s = new Special();
                         s.GenMustCont4();
                         gens = s.sp5;
                         gene = s.eng5;
                         break;
 
+
+                    case 2:
+                        People p = new People();
+                        p.GenMustCont4();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+
+                        break;
+
+                    case 3:
+                        Oo o = new Oo();
+                        o.GenMustCont4();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        break;
+
+                    case 4:
+                        Abstractos ab = new Abstractos();
+                        ab.GenMustCont4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
                 }
                 break;
 
