@@ -513,6 +513,7 @@ public class Generator<vib> {
     public void GenPresCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 6);
+
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -537,6 +538,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -545,6 +547,7 @@ public class Generator<vib> {
                         gens = p.ps1;
                         gene = p.ps1eng;
                         gene2 = p.ps1eng2;
+
                         break;
 
                     case 4:
@@ -587,6 +590,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -638,6 +642,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -688,6 +693,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -738,6 +744,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -788,6 +795,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -838,6 +846,7 @@ public class Generator<vib> {
                         i.GenPresCont1();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -1830,7 +1839,7 @@ public class Generator<vib> {
     public void GenPassCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -1852,9 +1861,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -1902,9 +1912,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -1952,9 +1963,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -2001,9 +2013,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -2050,9 +2063,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -2099,9 +2113,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -2148,9 +2163,10 @@ public class Generator<vib> {
 
                     case 2:
                         Intrans i = new Intrans();
-                        i.GenPassCont1();
+                        i.GenPastCont1();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -3150,7 +3166,7 @@ public class Generator<vib> {
     public void GenFutCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -3175,6 +3191,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -3225,6 +3242,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -3275,6 +3293,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -3324,6 +3343,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -3373,6 +3393,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -3422,6 +3443,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -3471,6 +3493,7 @@ public class Generator<vib> {
                         i.GenFutCont1();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -4429,7 +4452,7 @@ public class Generator<vib> {
     public void GenWouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -4454,6 +4477,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -4504,6 +4528,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -4554,6 +4579,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -4603,6 +4629,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -4652,6 +4679,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -4701,6 +4729,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -4750,6 +4779,7 @@ public class Generator<vib> {
                         i.GenWouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -5707,7 +5737,7 @@ public class Generator<vib> {
     public void GenCouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -5732,6 +5762,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -5782,6 +5813,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -5832,6 +5864,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -5881,6 +5914,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -5930,6 +5964,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -5979,6 +6014,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -6028,6 +6064,7 @@ public class Generator<vib> {
                         i.GenCouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -6988,7 +7025,7 @@ public class Generator<vib> {
     public void GenShouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -8268,7 +8305,7 @@ public class Generator<vib> {
     public void GenMightCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -9548,7 +9585,7 @@ public class Generator<vib> {
     public void GenCanCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -10212,7 +10249,7 @@ public class Generator<vib> {
     public void GenMustCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -13556,6 +13593,7 @@ public class Generator<vib> {
     public void GenPresCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 6);
+
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -13580,6 +13618,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -13631,6 +13670,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -13682,6 +13722,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -13732,6 +13773,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -13782,6 +13824,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -13832,6 +13875,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -13882,6 +13926,7 @@ public class Generator<vib> {
                         i.GenPresCont2();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -14873,7 +14918,7 @@ public class Generator<vib> {
     public void GenPastCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -14898,6 +14943,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -14948,6 +14994,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -14998,6 +15045,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -15047,6 +15095,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -15096,6 +15145,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -15145,6 +15195,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -15194,6 +15245,7 @@ public class Generator<vib> {
                         i.GenPastCont2();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -16193,7 +16245,7 @@ public class Generator<vib> {
     public void GenFutCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -16218,6 +16270,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -16268,6 +16321,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -16318,6 +16372,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -16367,6 +16422,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -16416,6 +16472,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -16465,6 +16522,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -16514,6 +16572,7 @@ public class Generator<vib> {
                         i.GenFutCont2();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -17476,7 +17535,7 @@ public class Generator<vib> {
     public void GenWouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -17501,6 +17560,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -17551,6 +17611,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -17601,6 +17662,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -17650,6 +17712,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -17699,6 +17762,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -17748,6 +17812,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -17797,6 +17862,7 @@ public class Generator<vib> {
                         i.GenWouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -18754,7 +18820,7 @@ public class Generator<vib> {
     public void GenCouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -18779,6 +18845,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -18829,6 +18896,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -18879,6 +18947,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -18928,6 +18997,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -18977,6 +19047,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -19026,6 +19097,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -19075,6 +19147,7 @@ public class Generator<vib> {
                         i.GenCouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -20035,7 +20108,7 @@ public class Generator<vib> {
     public void GenShouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -21315,7 +21388,7 @@ public class Generator<vib> {
     public void GenMightCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -22595,7 +22668,7 @@ public class Generator<vib> {
     public void GenCanCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -23259,7 +23332,7 @@ public class Generator<vib> {
     public void GenMustCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -30172,6 +30245,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -30223,6 +30297,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -30274,6 +30349,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -30324,6 +30400,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -30374,6 +30451,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -30424,6 +30502,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -30474,6 +30553,7 @@ public class Generator<vib> {
                         i.GenPresCont3();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -31377,7 +31457,7 @@ public class Generator<vib> {
     public void GenPastCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -31402,6 +31482,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -31452,6 +31533,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -31502,6 +31584,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -31551,6 +31634,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -31600,6 +31684,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -31649,6 +31734,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -31698,6 +31784,7 @@ public class Generator<vib> {
                         i.GenPastCont3();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -32697,7 +32784,7 @@ public class Generator<vib> {
     public void GenFutCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -32722,6 +32809,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -32772,6 +32860,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -32822,6 +32911,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -32871,6 +32961,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -32920,6 +33011,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -32969,6 +33061,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -33018,6 +33111,7 @@ public class Generator<vib> {
                         i.GenFutCont3();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -33980,7 +34074,7 @@ public class Generator<vib> {
     public void GenWouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -34005,6 +34099,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -34055,6 +34150,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -34105,6 +34201,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -34154,6 +34251,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -34203,6 +34301,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -34252,6 +34351,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -34301,6 +34401,7 @@ public class Generator<vib> {
                         i.GenWouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -35258,7 +35359,7 @@ public class Generator<vib> {
     public void GenCouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -35283,6 +35384,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -35333,6 +35435,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -35383,6 +35486,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -35432,6 +35536,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -35481,6 +35586,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -35530,6 +35636,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -35579,6 +35686,7 @@ public class Generator<vib> {
                         i.GenCouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -36539,7 +36647,7 @@ public class Generator<vib> {
     public void GenShouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -37819,7 +37927,7 @@ public class Generator<vib> {
     public void GenMightCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -39099,7 +39207,7 @@ public class Generator<vib> {
     public void GenCanCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -39763,7 +39871,7 @@ public class Generator<vib> {
     public void GenMustCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 5;
+        int verb = 2;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
