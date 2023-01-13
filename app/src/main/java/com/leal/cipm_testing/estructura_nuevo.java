@@ -52855,11 +52855,9 @@ public class estructura_nuevo extends AppCompatActivity {
         btn_cont_lay.setVisibility(View.VISIBLE);
     }
     public void checkanswer(View vista) {
-        String t = txteng.getText().toString().trim();
-        String te2 = txteng2.getText().toString().trim(); // esta la usariamos para la segunda opcion
-        String t2 = answerinp.getText().toString().trim();
-
-        Toast.makeText(this, ""+ t + " o " + te2, Toast.LENGTH_SHORT).show();
+        String t = txteng.getText().toString().trim().toLowerCase();
+        String te2 = txteng2.getText().toString().trim().toLowerCase(); // esta la usariamos para la segunda opcion
+        String t2 = answerinp.getText().toString().trim().toLowerCase();
 
         if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2)) {
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
