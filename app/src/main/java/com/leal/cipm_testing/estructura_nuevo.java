@@ -10916,10 +10916,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty1() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif1";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 0;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -11223,7 +11223,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -11809,7 +11809,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPassPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -12383,7 +12383,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenFutPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -12957,7 +12957,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -13531,7 +13531,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenCouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -14105,7 +14105,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenMightPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -14679,7 +14679,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenShouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -24268,10 +24268,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty2() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif2";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 1;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -24575,7 +24575,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -25161,7 +25161,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPastPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -25735,7 +25735,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenFutPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -26309,7 +26309,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWouldPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -26883,7 +26883,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenCouldPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -27457,7 +27457,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenMightPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -28031,7 +28031,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenShouldPerf2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -35706,10 +35706,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty3() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif3";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 2;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -36013,7 +36013,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -36599,7 +36599,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPastPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -37173,7 +37173,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenFutPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -37747,7 +37747,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -38321,7 +38321,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenCouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -38895,7 +38895,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenMightPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -39469,7 +39469,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenShouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -47407,7 +47407,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPresPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -47993,7 +47993,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenPastPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -48567,7 +48567,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenFutPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -49141,7 +49141,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenWouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -49715,7 +49715,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenCouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -50289,7 +50289,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenMightPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -50863,7 +50863,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                     gen1.GenShouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
-
+                                    txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
