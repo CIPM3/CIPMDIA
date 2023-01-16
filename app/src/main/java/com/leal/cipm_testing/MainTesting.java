@@ -25,8 +25,11 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.IOException;
@@ -50,120 +53,6 @@ public class MainTesting extends AppCompatActivity {
     GoogleSignInClient gsc;
     String t0, t1, t2, t3, t4, t5, t6,engtx;
     int prom;
-
-
-    public static final int REC_CODE_SPEECH_INPUT = 100;
-    //p-present,pa-past,mi=might,m-must, vj=verbos juntos
-
-    //1
-    boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
-    boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
-    boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
-    //1 crear string time
-
-    //PD
-    String pssec ,pcsec ,ppsec ,ppcsec ,psssec ,pscsec ,
-            pspsec ,pspcsec ,fssec ,fcsec ,fpsec ,fpcsec ,
-            wssec ,wcsec ,wpsec ,wpcsec , cossec ,cocsec ,copsec ,
-            copcsec
-    ;
-
-    //LR
-    String mssec ,mcsec ,mpsec ,mpcsec ,cssec ,ccsec ,mussec ,mucsec,
-            sssec ,scsec ,spsec ,spcsec ,wtsec ,ftsec ,stpsec ,wppsec ,
-            utsec ,butsec
-            ;
-
-    // booleanos de los primeros 50 palabras
-    boolean the,tobe,and,of,a,in,to,tohave,it,I,
-            that1,that2,for1,for2,you,he,with,on,todo,tosay,
-            this1,they,at,but1,we,his,from1,from2,since,by,she,
-            or,as1,as2,what1,what2,togo,their,can,who,toget,if1,
-            would,her,all,my,tomake,about1,about2,toknow,will,up;
-
-    //50 a 100 booleanos
-    boolean one,time,there,year,so,think,when,which,
-            them,some,me,people,take,out,into,just,
-            see1,him,your,come,could,now,than,like,other,
-            how,then,its,our,two,more,these,want,way,look,
-            first,also,new1,because,day,more1,use,no,man,
-            find,here,thing,give,many,well;
-
-    //100 a 150 booleanos
-    boolean only ,those ,tell ,one2 ,very ,her1 ,even ,
-            back ,any ,good ,woman ,through ,us ,life ,child ,
-            there1 ,work ,down ,may ,after ,should ,call ,world ,
-            over ,school ,still ,try1 ,in1 ,as ,last ,ask ,need ,
-            too ,feel ,three ,when1 ,state ,never ,become ,between ,
-            high ,really ,something ,most ,another ,much ,
-            another1 ,much1 ,family ,own ,out1 ,leave ,put;
-
-    //150 a 200 booleanos
-    boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
-            let ,great ,same ,big ,group ,begin ,seem ,
-            country ,help ,talk ,where ,turn ,problem ,
-            every ,start ,hand ,might ,american ,show ,
-            part ,about ,against ,place ,over2 ,such ,
-            again ,few ,case1 ,most2 ,week ,company ,
-            where2 ,system ,each ,right ,program ,hear ,
-            so2 ,question ,during ,work2 ,play ;
-
-    //200 a 250 booleanos
-    boolean goverment ,run ,small ,number ,off ,always ,move ,
-            like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
-            happen ,next ,without ,before ,large ,all2 ,million ,must ,
-            home ,under ,water ,room ,write ,mother ,area ,national ,
-            money ,story ,young ,fact ,month ,different ,lot ,right2 ,
-            study ,book ,eye ,job ,word ,though ,business ,issue ,
-            side ,kind ;
-
-    //250 a 300 booleanos
-    boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
-            after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
-            important ,father ,sit ,away ,until ,power ,hour ,
-            game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
-            bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
-            almost ,include ,continue1 ,set ,later ,community,much2,
-            name;
-
-    //300 a 350 booleanos
-    boolean  five ,once ,white ,least ,president ,learn ,
-             real ,change2 ,team ,minute ,best ,several ,
-             idea ,kid ,body ,information ,nothing ,ago ,
-             right3 ,lead ,social ,understand ,whether ,
-             back2 ,watch ,together ,follow ,around2 ,parent ,
-             only2 ,stop ,face ,anything ,create ,public2 ,
-             already ,speak ,others ,read ,level ,allow ,
-             add ,office ,spend ,door ,health ,person ,
-             art ,sure ,such2 ;
-
-    //350 a 400 booleanos
-    boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
-            morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
-            food ,before2 ,moment ,himself ,toair , teacher ,toforce ,tooffer ,
-            enough ,both ,education ,across ,although ,toremember ,foot ,second ,
-            boy ,maybe ,toward , able ,age ,off2  ,policy ,everything ,love ,
-            toprocess ,music ,including ,toconsider ,toappear ,actually ,
-            tobuy , probably  ;
-
-    //400 a 450 booleanos
-    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
-            tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
-            death ,course ,someone ,experience ,behind ,reach ,local ,
-            tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
-            control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
-            else2 ,topass , former ,sell ,major ,sometimes ,require ,along ,
-            development ,themselves ;
-
-    //450 a 500 booleanos
-    boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
-            possible ,heart ,drug ,toshow ,leader ,light ,voice , wife ,whole ,police ,
-            mind ,finally2 ,topull ,toreturn ,free ,military ,price ,report2 ,
-            less ,accordingto,decision ,toexplain , son ,hope ,even2 ,todevelop ,
-            view ,relationship ,carry ,town , road ,todrive ,arm ,true2 ,federal ,
-            tobreak ,better2 ,difference , tothank  ,toreceive ,value ;
-
-
     String selection,selectionv;
     int cp,cn;
     VideoView vv;
@@ -174,8 +63,13 @@ public class MainTesting extends AppCompatActivity {
     TimerTask timerTask;
     Double timen = 0.0;
     String [] temp= {"Conscious Interference"};
-
-
+    String url = "https://adrianlealcaldera.com/kermet.mp3";
+    int countPos=0;
+    int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
+    int rsa;
+    int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
+    int ScoreFinal;
+    DocumentReference docrefStructure ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,10 +111,10 @@ public class MainTesting extends AppCompatActivity {
         save = findViewById(R.id.sendinfo);
         save.setVisibility(View.GONE);
         mAuth= FirebaseAuth.getInstance();
-
         // este es el id que identifica al usuario-aparentemente jala con los 3 diferentes tipos de auth
         userid = mAuth.getCurrentUser().getUid();
         // este culero de arriba es el user id del usuario jala con los 3 aparentemente
+        docrefStructure=db.collection(userid).document("structures");
 
 
         Prefs prefs = new Prefs(this);
@@ -483,11 +377,6 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-
-    //2 cambiar en onDone de cada uno por
-    //if(timerTask == null){
-    //                                                startTimer();
-    //                                            }
     public  void   startTest(){
 
         save.setVisibility(View.VISIBLE);
@@ -2487,464 +2376,6 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-    String url = "https://adrianlealcaldera.com/kermet.mp3";
-
-    //PD
-    String soundArray[]={
-            "https://adrianlealcaldera.com/Come%20rain%20or%20shine.mp3",
-            "https://adrianlealcaldera.com/Come%20rain%20or%20shine%202.mp3",
-            "https://adrianlealcaldera.com/Come%20rain%20or%20shine%203.mp3",
-            "https://adrianlealcaldera.com/Calm%20before%20the%20storm.mp3",
-            "https://adrianlealcaldera.com/Calm%20before%20the%20storm%202.mp3",
-            "https://adrianlealcaldera.com/Calm%20before%20the%20storm%203.mp3",
-            "https://adrianlealcaldera.com/Burn%20bridges.mp3",
-            "https://adrianlealcaldera.com/Burn%20bridges%202.mp3",
-            "https://adrianlealcaldera.com/Burn%20bridges%203.mp3",
-            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue.mp3",
-            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue%202.mp3",
-            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue%203.mp3",
-            "https://adrianlealcaldera.com/As%20right%20as%20rain.mp3",
-            "https://adrianlealcaldera.com/As%20right%20as%20rain%202.mp3",
-            "https://adrianlealcaldera.com/As%20right%20as%20rain%203.mp3",
-            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure.mp3",
-            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure%202.mp3",
-            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure%203.mp3",
-            "https://adrianlealcaldera.com/An%20apple%20a%20day%20keeps%20the%20doctor%20away.mp3",
-            "https://adrianlealcaldera.com/An%20apple%20a%20day%20keeps%20the%20doctor%20away%202.mp3",
-            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup.mp3",
-            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup%202.mp3",
-            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup%203.mp3",
-            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
-            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine%202.mp3",
-            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine%203.mp3",
-            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
-            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell%202.mp3",
-            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell%203.mp3",
-            "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
-            "https://adrianlealcaldera.com/A%20snowball%20effect%202.mp3",
-            "https://adrianlealcaldera.com/A%20snowball%20effect%203.mp3",
-            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3",
-            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing%202.mp3",
-            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat.mp3",
-            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat%202.mp3",
-            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat%203.mp3",
-            "https://adrianlealcaldera.com/Cut%20the%20mustard.mp3",
-            "https://adrianlealcaldera.com/Cut%20the%20mustard%202.mp3",
-            "https://adrianlealcaldera.com/Cut%20the%20mustard%203.mp3",
-            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse.mp3",
-            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse%202.mp3",
-            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse%203.mp3",
-            "https://adrianlealcaldera.com/Every%20dog%20has%20his%20day.mp3",
-            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt.mp3",
-            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt%202.mp3",
-            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt%203.mp3",
-            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle.mp3",
-            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle%202.mp3",
-            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle%203.mp3",
-            "https://adrianlealcaldera.com/Get%20a%20second%20wind.mp3",
-            "https://adrianlealcaldera.com/Get%20a%20second%20wind%202.mp3",
-            "https://adrianlealcaldera.com/Get%20a%20second%20wind%203.mp3",
-            "https://adrianlealcaldera.com/Get%20wind%20of%20something.mp3",
-            "https://adrianlealcaldera.com/Get%20wind%20of%20something%202.mp3",
-            "https://adrianlealcaldera.com/Go%20down%20in%20flames.mp3",
-            "https://adrianlealcaldera.com/Go%20down%20in%20flames%202.mp3",
-            "https://adrianlealcaldera.com/Go%20down%20in%20flames%203.mp3",
-            "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
-            "https://adrianlealcaldera.com/Haste%20makes%20waste%202.mp3",
-            "https://adrianlealcaldera.com/Haste%20makes%20waste%203.mp3",
-            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
-            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds%202.mp3",
-            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds%203.mp3",
-            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
-            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth%202.mp3",
-            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth%203.mp3",
-            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3",
-            "https://adrianlealcaldera.com/He's%20sitting%20on%20the%20fence.mp3",
-            "https://adrianlealcaldera.com/It%20is%20always%20darkest%20before%20the%20dawn.mp3",
-            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango.mp3",
-            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango%202.mp3",
-            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango%203.mp3",
-            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon.mp3",
-            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon%202.mp3",
-            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon%203.mp3",
-            "https://adrianlealcaldera.com/Know%20which%20way%20the%20wind%20is%20blowing.mp3",
-            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned.mp3",
-            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned%202.mp3",
-            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned%203.mp3",
-            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
-            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie%202.mp3",
-            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie%203.mp3",
-            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
-            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle%202.mp3",
-            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle%203.mp3",
-            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
-            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod%202.mp3",
-            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod%203.mp3",
-            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3",
-            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines%202.mp3",
-            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines%203.mp3",
-            "https://adrianlealcaldera.com/On%20cloud%20nine.mp3",
-            "https://adrianlealcaldera.com/On%20cloud%20nine%202.mp3",
-            "https://adrianlealcaldera.com/On%20cloud%20nine%203.mp3",
-            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy.mp3",
-            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy%202.mp3",
-            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy%203.mp3",
-            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire.mp3",
-            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire%202.mp3",
-            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire%203.mp3",
-            "https://adrianlealcaldera.com/Run%20like%20the%20wind.mp3",
-            "https://adrianlealcaldera.com/Run%20like%20the%20wind%202.mp3",
-            "https://adrianlealcaldera.com/Run%20like%20the%20wind%203.mp3",
-            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out.mp3",
-            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out%202.mp3",
-            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out%203.mp3",
-            "https://adrianlealcaldera.com/Snowed%20under.mp3",
-            "https://adrianlealcaldera.com/Snowed%20under%202.mp3",
-            "https://adrianlealcaldera.com/Snowed%20under%203.mp3",
-            "https://adrianlealcaldera.com/That%20ship%20has%20sailed.mp3",
-            "https://adrianlealcaldera.com/That%20ship%20has%20sailed%202.mp3",
-            "https://adrianlealcaldera.com/That%20ship%20has%20sailed%202.mp3",
-            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black.mp3",
-            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black%202.mp3",
-            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black%202.mp3",
-            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon.mp3",
-            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon%202.mp3",
-            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon%203.mp3",
-            "https://adrianlealcaldera.com/Through%20thick%20and%20thin.mp3",
-            "https://adrianlealcaldera.com/Through%20thick%20and%20thin%202.mp3",
-            "https://adrianlealcaldera.com/Through%20thick%20and%20thin%203.mp3",
-            "https://adrianlealcaldera.com/Time%20is%20money.mp3",
-            "https://adrianlealcaldera.com/Time%20is%20money%202.mp3",
-            "https://adrianlealcaldera.com/Time%20is%20money%203.mp3",
-            "https://adrianlealcaldera.com/Waste%20not%20want%20not.mp3",
-            "https://adrianlealcaldera.com/Waste%20not%20want%20not%202.mp3",
-            "https://adrianlealcaldera.com/Waste%20not%20want%20not%203.mp3",
-            "https://adrianlealcaldera.com/We%20see%20eye%20to%20eye.mp3",
-            "https://adrianlealcaldera.com/We%20see%20eye%20to%20eye%202.mp3",
-            "https://adrianlealcaldera.com/Weather%20the%20storm.mp3",
-            "https://adrianlealcaldera.com/Weather%20the%20storm%202.mp3",
-            "https://adrianlealcaldera.com/Weather%20the%20storm%203.mp3",
-            "https://adrianlealcaldera.com/Well%20begun%20is%20half%20done.mp3",
-            "https://adrianlealcaldera.com/Well%20begun%20is%20half%20done%202.mp3",
-            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours.mp3",
-            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours%202.mp3",
-            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours%203.mp3",
-            "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar.mp3",
-            "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar%202.mp3",
-            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink.mp3",
-            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink%202.mp3",
-            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink%203.mp3",
-            "https://adrianlealcaldera.com/You%20can't%20make%20an%20omelet%20without%20breaking%20some%20eggs.mp3",
-
-            //122...
-
-            //LR
-            "https://adrianlealcaldera.com/A%20penny%20for%20your%20thoughts.mp3",
-            "https://adrianlealcaldera.com/A%20penny%20for%20your%20thoughts2.mp3",
-            "https://adrianlealcaldera.com/A%20penny%20saved%20is%20a%20penny%20earned.mp3",
-            "https://adrianlealcaldera.com/A%20penny%20saved%20is%20a%20penny%20earned2.mp3",
-            "https://adrianlealcaldera.com/A%20perfect%20storm.mp3",
-            "https://adrianlealcaldera.com/A%20perfect%20storm2.mp3",
-            "https://adrianlealcaldera.com/A%20picture%20is%20worth%201000%20words.mp3",
-            "https://adrianlealcaldera.com/Actions%20speak%20louder%20than%20words.mp3",
-            "https://adrianlealcaldera.com/Actions%20speak%20louder%20than%20words2.mp3",
-            "https://adrianlealcaldera.com/Add%20insult%20to%20injury.mp3",
-            "https://adrianlealcaldera.com/Add%20insult%20to%20injury2.mp3",
-            "https://adrianlealcaldera.com/Barking%20up%20the%20wrong%20tree.mp3",
-            "https://adrianlealcaldera.com/Barking%20up%20the%20wrong%20tree2.mp3",
-            "https://adrianlealcaldera.com/Birds%20of%20a%20feather%20flock%20together.mp3",
-            "https://adrianlealcaldera.com/Birds%20of%20a%20feather%20flock%20together2.mp3",
-            "https://adrianlealcaldera.com/Bite%20off%20more%20than%20you%20can%20chew.mp3",
-            "https://adrianlealcaldera.com/Break%20the%20ice.mp3",
-            "https://adrianlealcaldera.com/Break%20the%20ice2.mp3",
-            "https://adrianlealcaldera.com/By%20the%20skin%20of%20your%20teeth.mp3",
-            "https://adrianlealcaldera.com/By%20the%20skin%20of%20your%20teeth2.mp3",
-            "https://adrianlealcaldera.com/Comparing%20apples%20to%20oranges.mp3",
-            "https://adrianlealcaldera.com/Comparing%20apples%20to%20oranges2.mp3",
-            "https://adrianlealcaldera.com/Costs%20an%20arm%20and%20a%20leg.mp3",
-            "https://adrianlealcaldera.com/Do%20something%20at%20the%20drop%20of%20a%20hat.mp3",
-            "https://adrianlealcaldera.com/Do%20unto%20others%20as%20you%20would%20have%20them%20do%20unto%20you.mp3",
-            "https://adrianlealcaldera.com/Don't%20count%20your%20chickens%20before%20they%20hatch.mp3",
-            "https://adrianlealcaldera.com/Don't%20cry%20over%20spilt%20milk.mp3",
-            "https://adrianlealcaldera.com/Don't%20give%20up%20your%20day%20job.mp3",
-            "https://adrianlealcaldera.com/Don't%20put%20all%20your%20eggs%20in%20one%20basket.mp3",
-            "https://adrianlealcaldera.com/Every%20cloud%20has%20a%20silver%20lining.mp3",
-            "https://adrianlealcaldera.com/Every%20cloud%20has%20a%20silver%20lining2.mp3",
-            "https://adrianlealcaldera.com/Give%20someone%20the%20cold%20shoulder.mp3",
-            "https://adrianlealcaldera.com/Give%20someone%20the%20cold%20shoulder2.mp3",
-            "https://adrianlealcaldera.com/Go%20on%20a%20wild%20goose%20chase.mp3",
-            "https://adrianlealcaldera.com/Good%20things%20come%20to%20those%20who%20wait.mp3",
-            "https://adrianlealcaldera.com/Good%20things%20come%20to%20those%20who%20wait2.mp3",
-            "https://adrianlealcaldera.com/Hit%20the%20nail%20on%20the%20head.mp3",
-            "https://adrianlealcaldera.com/Hit%20the%20nail%20on%20the%20head2.mp3",
-            "https://adrianlealcaldera.com/Ignorance%20is%20bliss.mp3",
-            "https://adrianlealcaldera.com/Ignorance%20is%20bliss2.mp3",
-            "https://adrianlealcaldera.com/It%20takes%20one%20to%20know%20one.mp3",
-            "https://adrianlealcaldera.com/It's%20a%20piece%20of%20cake.mp3",
-            "https://adrianlealcaldera.com/It's%20a%20piece%20of%20cake2.mp3",
-            "https://adrianlealcaldera.com/It's%20raining%20cats%20and%20dogs.mp3",
-            "https://adrianlealcaldera.com/It's%20raining%20cats%20and%20dogs2.mp3",
-            "https://adrianlealcaldera.com/Kill%20two%20birds%20with%20one%20stone.mp3",
-            "https://adrianlealcaldera.com/Let%20the%20cat%20out%20of%20the%20bag.mp3",
-            "https://adrianlealcaldera.com/Live%20and%20learn.mp3",
-            "https://adrianlealcaldera.com/Live%20and%20learn2.mp3",
-            "https://adrianlealcaldera.com/Look%20before%20you%20leap.mp3",
-            "https://adrianlealcaldera.com/Look%20before%20you%20leap2.mp3",
-            "https://adrianlealcaldera.com/On%20thin%20ice.mp3",
-            "https://adrianlealcaldera.com/On%20thin%20ice2.mp3",
-            "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon.mp3",
-            "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon2.mp3",
-            "https://adrianlealcaldera.com/Play%20devil's%20advocate.mp3",
-            "https://adrianlealcaldera.com/Play%20devil's%20advocate2.mp3",
-            "https://adrianlealcaldera.com/Put%20something%20on%20ice.mp3",
-            "https://adrianlealcaldera.com/Saving%20for%20a%20rainy%20day.mp3",
-            "https://adrianlealcaldera.com/Saving%20for%20a%20rainy%20day2.mp3",
-            "https://adrianlealcaldera.com/Slow%20and%20steady%20wins%20the%20race.mp3",
-            "https://adrianlealcaldera.com/Slow%20and%20steady%20wins%20the%20race2.mp3",
-            "https://adrianlealcaldera.com/Spill%20the%20beans.mp3",
-            "https://adrianlealcaldera.com/Spill%20the%20beans2.mp3",
-            "https://adrianlealcaldera.com/Take%20a%20rain%20check.mp3",
-            "https://adrianlealcaldera.com/Take%20it%20with%20a%20grain%20of%20salt.mp3",
-            "https://adrianlealcaldera.com/The%20ball%20is%20in%20your%20court.mp3",
-            "https://adrianlealcaldera.com/The%20best%20thing%20since%20sliced%20bread.mp3",
-            "https://adrianlealcaldera.com/The%20devil%20is%20in%20the%20details.mp3",
-            "https://adrianlealcaldera.com/The%20early%20bird%20gets%20the%20worm.mp3",
-            "https://adrianlealcaldera.com/The%20early%20bird%20gets%20the%20worm2.mp3",
-            "https://adrianlealcaldera.com/The%20elephant%20in%20the%20room.mp3",
-            "https://adrianlealcaldera.com/The%20elephant%20in%20the%20room2.mp3",
-            "https://adrianlealcaldera.com/The%20whole%20nine%20yards.mp3",
-            "https://adrianlealcaldera.com/The%20whole%20nine%20yards2.mp3",
-            "https://adrianlealcaldera.com/There's%20no%20such%20thing%20as%20a%20free%20lunch.mp3",
-    };
-    String soundArrayRobot[] = {
-            "Come rain or shine",
-            "Come rain or shine 2",
-            "Come rain or shine 3",
-            "the calm before the storm",
-            "the calm before the storm 2",
-            "the calm before the storm 3",
-            "burn bridges",
-            "burn bridges 2",
-            "burn bridges 3",
-            "bolt from the blue",
-            "bolt from the blue 2",
-            "bolt from the blue 3",
-            "as right as rain",
-            "as right as rain 2",
-            "as right as rain 3",
-            "an ounce of prevention is worth a pound of cure",
-            "an ounce of prevention is worth a pound of cure 2",
-            "an ounce of prevention is worth a pound of cure 3",
-            "an apple a day keeps the doctor away",
-            "an apple a day keeps the doctor away 2",
-            "a storm in a teacup",
-            "a storm in a teacup 2",
-            "a storm in a teacup 3",
-            "a stitch in time saves nine",
-            "a stitch in time saves nine 2",
-            "a stitch in time saves nine 3",
-            "a snowball's chance in hell",
-            "a snowball's chance in hell 2",
-            "a snowball's chance in hell 3",
-            "a snowball effect",
-            "a snowball effect 2",
-            "a snowball effect 3",
-            "a little learning is a dangerous thing",
-            "a little learning is a dangerous thing 2",
-            "Curiosity killed the cat",
-            "Curiosity killed the cat 2",
-            "Curiosity killed the cat 3",
-            "Cut the mustard",
-            "Cut the mustard 2",
-            "Cut the mustard 3",
-            "Don't beat a dead horse",
-            "Don't beat a dead horse 2",
-            "Don't beat a dead horse 3",//variantes
-            "Every dog has his day",
-            "Familiarity breeds contempt",
-            "Familiarity breeds contempt 2",
-            "Familiarity breeds contempt 3",
-            "Fit as a fiddle",
-            "Fit as a fiddle 2",
-            "Fit as a fiddle 3",
-            "Get a second wind",
-            "Get a second wind 2",
-            "Get a second wind 3",
-            "Get wind of something",
-            "Get wind of something 2",
-            "Go down in flames",
-            "Go down in flames 2",
-            "Go down in flames 3",
-            "Haste makes waste",
-            "Haste makes waste 2",
-            "Haste makes waste 3",
-            "Have your head in the clouds",
-            "Have your head in the clouds 2",
-            "Have your head in the clouds 3",
-            "Hear something straight from the horse's mouth",
-            "Hear something straight from the horse's mouth 2",
-            "Hear something straight from the horse's mouth 3",
-            "He's off his rocker",
-            "He's sitting on the fence",
-            "It is always darkest before the dawn",
-            "It takes two to tango",
-            "It takes two to tango 2",
-            "It takes two to tango 3",
-            "Jump on the bandwagon",
-            "Jump on the bandwagon 2",
-            "Jump on the bandwagon 3",
-            "Know which way the wind is blowing",
-            "Leave no stone unturned",
-            "Leave no stone unturned 2",
-            "Leave no stone unturned 3",
-            "Let sleeping dogs lie",
-            "Let sleeping dogs lie 2",
-            "Let sleeping dogs lie 3",
-            "Like riding a bicycle",
-            "Like riding a bicycle 2",
-            "Like riding a bicycle 3",
-            "Like two peas in a pod",
-            "Like two peas in a pod 2",
-            "Like two peas in a pod 3",
-            "Make hay while the sun shines",
-            "Make hay while the sun shines 2",
-            "Make hay while the sun shines 3",
-            "On cloud nine",
-            "On cloud nine 2",
-            "On cloud nine 3",
-            "Once bitten twice shy",
-            "Once bitten twice shy 2",
-            "Once bitten twice shy 3",
-            "Out of the frying pan and into the fire",
-            "Out of the frying pan and into the fire 2",
-            "Out of the frying pan and into the fire 3",
-            "Run like the wind",
-            "Run like the wind 2",
-            "Run like the wind 3",
-            "Shape up or ship out",
-            "Shape up or ship out 2",
-            "Shape up or ship out 3",
-            "Snowed under",
-            "Snowed under 2",
-            "Snowed under 3",
-            "That ship has sailed",
-            "That ship has sailed 2",
-            "That ship has sailed 3",
-            "The pot calling the kettle black",
-            "The pot calling the kettle black 2",
-            "The pot calling the kettle black 3",
-            "There are clouds on the horizon",
-            "There are clouds on the horizon 2",
-            "There are clouds on the horizon 3",
-            "Through thick and thin",
-            "Through thick and thin 2",
-            "Through thick and thin 3",
-            "Time is money",
-            "Time is money 2",
-            "Time is money 3",
-            "Waste not want not",
-            "Waste not want not 2",
-            "Waste not want not 3",
-            "We see eye to eye",
-            "We see eye to eye 2",
-            "Weather the storm",
-            "Weather the storm 2",
-            "Weather the storm 3",
-            "Well begun is half done",
-            "Well begun is half done 2",
-            "When it rains it pours",
-            "When it rains it pours 2",
-            "When it rains it pours 3",
-            "You can catch more flies with honey than you can with vinegar",
-            "You can catch more flies with honey than you can with vinegar 2",
-            "You can lead a horse to water but you can't make him drink",
-            "You can lead a horse to water but you can't make him drink 2",
-            "You can lead a horse to water but you can't make him drink 3",
-            "You can't make an omelet without breaking some eggs",//corregidos
-
-            //LR
-            "A penny for your thoughts",
-            "A penny for your thoughts 2",
-            "A penny saved is a penny earned",
-            "A penny saved is a penny earned 2",
-            "A perfect storm",
-            "A perfect storm 2",
-            "A picture is worth 1000 words",
-            "Actions speak louder than words",
-            "Actions speak louder than words 2",
-            "Add insult to injury",
-            "Add insult to injury 2",
-            "Barking up the wrong tree",
-            "Barking up the wrong tree 2",
-            "Birds of a feather flock together",
-            "Birds of a feather flock together 2",
-            "Bite off more than you can chew",
-            "Break the ice",
-            "Break the ice 2",
-            "By the skin of your teeth",
-            "By the skin of your teeth 2",
-            "Comparing apples to oranges",
-            "Comparing apples to oranges 2",
-            "Costs an arm and a leg",
-            "Do something at the drop of a hat",
-            "Do unto others as you would have them do unto you",
-            "Don't count your chickens before they hatch",
-            "Don't cry over spilt milk",
-            "Don't give up your day job",
-            "Don't put all your eggs in one basket",
-            "Every cloud has a silver lining",
-            "Every cloud has a silver lining 2",
-            "Give someone the cold shoulder",
-            "Give someone the cold shoulder 2",
-            "Go on a wild goose chase",
-            "Good things come to those who wait",
-            "Good things come to those who wait 2",
-            "Hit the nail on the head",
-            "Hit the nail on the head 2",
-            "Ignorance is bliss",
-            "Ignorance is bliss 2",
-            "It takes one to know one",
-            "It's a piece of cake",
-            "It's a piece of cake 2",
-            "It's raining cats and dogs",
-            "It's raining cats and dogs2 ",
-            "Kill two birds with one stone",
-            "Let the cat out of the bag",
-            "Live and learn",
-            "Live and learn 2",
-            "Look before you leap",
-            "Look before you leap 2",
-            "On thin ice",
-            "On thin ice 2",
-            "Once in a blue moon",
-            "Once in a blue moon 2",
-            "Play devil's advocate",
-            "Play devil's advocate2 ",
-            "Put something on ice",
-            "Saving for a rainy day",
-            "Saving for a rainy day 2",
-            "Slow and steady wins the race",
-            "Slow and steady wins the race 2",
-            "Spill the beans",
-            "Spill the beans 2",
-            "Take a rain check",
-            "Take it with a grain of salt",
-            "The ball is in your court",
-            "The best thing since sliced bread",
-            "The devil is in the details",
-            "The early bird gets the worm",
-            "The early bird gets the worm 2",
-            "The elephant in the room",
-            "The elephant in the room 2",
-            "The whole nine yards",
-            "The whole nine yards 2",
-            "There's no such thing as a free lunch",
-
-    };
-
-    int countPos=0;
-    int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
-    int rsa;
     public void soundtest(){
 
         save.setVisibility(View.VISIBLE);
@@ -3359,7 +2790,6 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     public void repeatAudio (View v){
         MediaPlayer mp = new MediaPlayer();
         try {
@@ -5027,7 +4457,6 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-    //3 poner las variables de segundos en cada case
     private void   turnTrueTime(@NonNull String CurrentStructure, String segundos) {
 
         switch (CurrentStructure){
@@ -5825,7 +5254,7 @@ public class MainTesting extends AppCompatActivity {
                 SendStructureInfoToDb();
                 break;
             case "Vocabulary":
-                vocabdbtesting();
+                SendVocabIntoToDb();
                 break;
             case "Spanish Interference":
                 spintdbtesting();
@@ -5835,7 +5264,8 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-    //4 crear en un userput con la estructura time
+    Student studentObject= new Student();
+    boolean[] temporal= new boolean[99] ;
     public void SendStructureInfoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -5843,7 +5273,6 @@ public class MainTesting extends AppCompatActivity {
             cp = cp + 1;
             Toast.makeText(this, "inside good" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
             prom = rounded / 4;
-
 
         } else {
             cn = cn + 1;
@@ -5861,101 +5290,242 @@ public class MainTesting extends AppCompatActivity {
                 timerTask.cancel();
             }
             timerTask = null;
-
+            GetStateOfStructureSendInfoToDb();
         } else if (cn == 4) {
             Toast.makeText(this, selection + "not passed Pasa a otra estructura" + String.valueOf(cn), Toast.LENGTH_SHORT).show();
             cn = 0;
             cp = 0;
-
-
         }
-        CollectionReference uid = db.collection(userid);
-        // completar esta pendejada con las keys iguales a las de student
-        Map<String, Object> user = new HashMap<>();
-        user.put("name", Answerinput.getText().toString());
-        user.put("presentesimple", ps);
-        user.put("presentesimpletime", pssec);
-        user.put("presenteContinuo", pc);
-        user.put("presentecontinuotime", pcsec);
-        user.put("presentePerfecto", pp);
-        user.put("presenteperfectotime", ppsec);
-        user.put("presentePerfectoContinuo", ppc);
-        user.put("presenteperfectocontinuo", ppcsec);
-        user.put("pastsimple", pss);
-        user.put("pastsimpletime", psssec);
-        user.put("pastContinuo", psc);
-        user.put("pastcontinuotime", pscsec);
-        user.put("pastPerfecto", psp);
-        user.put("pastperfectotime", pspsec);
-        user.put("pastPerfectoContinuo", pspc);
-        user.put("pastperfectocontinuotime", pspcsec);
-        user.put("futuresimple", fs);
-        user.put("futuresimpletime", fssec);
-        user.put("futureContinuo", fc);
-        user.put("futurecontinuotime", fcsec);
-        user.put("futurePerfecto", fp);
-        user.put("futureperfectotime", fpsec);
-        user.put("futurePerfectoContinuo", fpc);
-        user.put("futureperfectocontinuotime", fpcsec);
-        user.put("wouldsimple", ws);
-        user.put("wouldsimpletime", wssec);
-        user.put("wouldContinuo", wc);
-        user.put("wouldcontinuotime", wcsec);
-        user.put("wouldPerfecto", wp);
-        user.put("wouldperfectotime", wpsec);
-        user.put("wouldPerfectoContinuo", wpc);
-        user.put("wouldperfectocontinuotime", wpcsec);
-        user.put("couldsimple", cos);
-        user.put("couldsimpletime", cossec);
-        user.put("couldContinuo", coc);
-        user.put("couldcontinuotime", cocsec);
-        user.put("couldPerfecto", cop);
-        user.put("couldperfectotime", copsec);
-        user.put("couldPerfectoContinuo", copc);
-        user.put("couldperfectocontinuotime", copcsec);
-        //LR
-        user.put("mightsimple", ms);
-        user.put("mightsimpletime", mssec);
-        user.put("mightContinuo", mc);
-        user.put("mightContinuotime", mcsec);
-        user.put("mightPerfecto", mp);
-        user.put("mightPerfectotime", mpsec);
-        user.put("mightPerfectoContinuo", mpc);
-        user.put("mightPerfectoContinuotime", mpcsec);
-        user.put("cansimple", cs);
-        user.put("cansimpletime", cssec);
-        user.put("canContinuo", cc);
-        user.put("canContinuotime", ccsec);
-        user.put("mustsimple", mus);
-        user.put("mustsimpletime", mussec);
-        user.put("mustContinuo", muc);
-        user.put("mustContinuotime", mucsec);
-
-        user.put("shouldsimple", ss);
-        user.put("shouldsimpletime", sssec);
-        user.put("shouldContinuo", sc);
-        user.put("shouldContinuotime", scsec);
-        user.put("shouldPerfecto", sp);
-        user.put("shouldPerfectotime", spsec);
-        user.put("shouldPerfectoContinuo", spc);
-        user.put("shouldPerfectoContinuotime", spcsec);
-        user.put("wantTo", wt);
-        user.put("wantTotime", wtsec);
-        user.put("forTo", ft);
-        user.put("forTotime", ftsec);
-        user.put("supposedToPresent", stp);
-        user.put("supposedToPresenttime", stpsec);
-        user.put("wishPastPerfect", wpp);
-        user.put("wishPastPerfecttime", wppsec);
-        user.put("usedTo", ut);
-        user.put("usedTotime", utsec);
-        user.put("beUsedTo", but);
-        user.put("beUsedTotime", butsec);
-        uid.document("structures").set(user);
 
 
     }
-    public void vocabdbtesting()  {
+
+    private void GetStateOfStructureSendInfoToDb() {
+        CollectionReference uid = db.collection(userid);
+        Map<String, Object> user = new HashMap<>();
+        docrefStructure.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                studentObject = documentSnapshot.toObject(Student.class);
+                assert studentObject != null;
+
+
+
+                if(studentObject.presentesimple){
+                    ps=true;
+                }
+                if(studentObject.presenteContinuo){
+                    pc=true;
+                }
+                if(studentObject.presentePerfecto){
+                    pp=true;
+                }
+                if(studentObject.presentePerfectoContinuo){
+                    ppc=true;
+                }
+                //pasados
+                if(studentObject.pastsimple){
+                    pss=true;
+                }
+                if(studentObject.pastContinuo){
+                    psc=true;
+                }
+                if(studentObject.pastPerfecto){
+                    psp=true;
+                }
+                if(studentObject.pastPerfectoContinuo){
+                    pspc=true;
+                }
+                //futuros
+
+                if(studentObject.futuresimple){
+                    fs=true;
+                }
+                if(studentObject.futureContinuo){
+                    fc=true;
+                }
+                if(studentObject.futurePerfecto){
+                    fp=true;
+                }
+                if(studentObject.futurePerfectoContinuo){
+                    fpc=true;
+                }
+                // woulds
+                if(studentObject.wouldsimple){
+                    ws=true;
+                }
+                if(studentObject.wouldContinuo){
+                    wc=true;
+                }
+                if(studentObject.wouldPerfecto){
+                    wp=true;
+                }
+                if(studentObject.wouldPerfectoContinuo){
+                    wpc=true;
+                }
+                // coulds
+                if(studentObject.couldsimple){
+                    cos=true;
+                }
+                if(studentObject.couldContinuo){
+                    coc=true;
+                }
+                if(studentObject.couldPerfecto){
+                    cop=true;
+                }
+                if(studentObject.couldPerfectoContinuo){
+                    copc=true;
+                }
+                // might
+                if(studentObject.mightsimple){
+                    ms=true;
+                }
+                if(studentObject.mightContinuo){
+                    mc=true;
+                }
+                if(studentObject.mightPerfecto){
+                    mp=true;
+                }
+                if(studentObject.mightPerfectoContinuo){
+                    mpc=true;
+                }
+                //can
+                if(studentObject.cansimple){
+                    cs=true;
+                }
+                if(studentObject.canContinuo){
+                    cc=true;
+                }
+                //must
+                if(studentObject.mustsimple){
+                    mus=true;
+                }
+                if(studentObject.mustContinuo){
+                    muc=true;
+                }
+                //shoulds
+                if(studentObject.shouldsimple){
+                    ss=true;
+                }
+                if(studentObject.shouldContinuo){
+                    sc=true;
+                }
+                if(studentObject.shouldPerfecto){
+                    sp=true;
+                }
+                if(studentObject.shouldPerfectoContinuo){
+                    spc=true;
+                }
+                if(studentObject.wantTo){
+                    wt=true;
+                }
+                if(studentObject.forTo){
+                    ft=true;
+                }
+                if(studentObject.supposedToPresent){
+                    stp=true;
+                }
+                if(studentObject.wishPastPerfect){
+                    wpp=true;
+                }
+                if(studentObject.usedTo){
+                    ut=true;
+                }
+                if(studentObject.beUsedTo){
+                    but=true;
+                }
+
+
+
+                user.put("name", Answerinput.getText().toString());
+                user.put("presentesimple", ps);
+                user.put("presentesimpletime", pssec);
+                user.put("presenteContinuo", pc);
+                user.put("presentecontinuotime", pcsec);
+                user.put("presentePerfecto", pp);
+                user.put("presenteperfectotime", ppsec);
+                user.put("presentePerfectoContinuo", ppc);
+                user.put("presenteperfectocontinuo", ppcsec);
+                user.put("pastsimple", pss);
+                user.put("pastsimpletime", psssec);
+                user.put("pastContinuo", psc);
+                user.put("pastcontinuotime", pscsec);
+                user.put("pastPerfecto", psp);
+                user.put("pastperfectotime", pspsec);
+                user.put("pastPerfectoContinuo", pspc);
+                user.put("pastperfectocontinuotime", pspcsec);
+                user.put("futuresimple", fs);
+                user.put("futuresimpletime", fssec);
+                user.put("futureContinuo", fc);
+                user.put("futurecontinuotime", fcsec);
+                user.put("futurePerfecto", fp);
+                user.put("futureperfectotime", fpsec);
+                user.put("futurePerfectoContinuo", fpc);
+                user.put("futureperfectocontinuotime", fpcsec);
+                user.put("wouldsimple", ws);
+                user.put("wouldsimpletime", wssec);
+                user.put("wouldContinuo", wc);
+                user.put("wouldcontinuotime", wcsec);
+                user.put("wouldPerfecto", wp);
+                user.put("wouldperfectotime", wpsec);
+                user.put("wouldPerfectoContinuo", wpc);
+                user.put("wouldperfectocontinuotime", wpcsec);
+                user.put("couldsimple", cos);
+                user.put("couldsimpletime", cossec);
+                user.put("couldContinuo", coc);
+                user.put("couldcontinuotime", cocsec);
+                user.put("couldPerfecto", cop);
+                user.put("couldperfectotime", copsec);
+                user.put("couldPerfectoContinuo", copc);
+                user.put("couldperfectocontinuotime", copcsec);
+                //LR
+                user.put("mightsimple", ms);
+                user.put("mightsimpletime", mssec);
+                user.put("mightContinuo", mc);
+                user.put("mightContinuotime", mcsec);
+                user.put("mightPerfecto", mp);
+                user.put("mightPerfectotime", mpsec);
+                user.put("mightPerfectoContinuo", mpc);
+                user.put("mightPerfectoContinuotime", mpcsec);
+                user.put("cansimple", cs);
+                user.put("cansimpletime", cssec);
+                user.put("canContinuo", cc);
+                user.put("canContinuotime", ccsec);
+                user.put("mustsimple", mus);
+                user.put("mustsimpletime", mussec);
+                user.put("mustContinuo", muc);
+                user.put("mustContinuotime", mucsec);
+
+                user.put("shouldsimple", ss);
+                user.put("shouldsimpletime", sssec);
+                user.put("shouldContinuo", sc);
+                user.put("shouldContinuotime", scsec);
+                user.put("shouldPerfecto", sp);
+                user.put("shouldPerfectotime", spsec);
+                user.put("shouldPerfectoContinuo", spc);
+                user.put("shouldPerfectoContinuotime", spcsec);
+
+                user.put("wantTo", wt);
+                user.put("wantTotime", wtsec);
+                user.put("forTo", ft);
+                user.put("forTotime", ftsec);
+                user.put("supposedToPresent", stp);
+                user.put("supposedToPresenttime", stpsec);
+                user.put("wishPastPerfect", wpp);
+                user.put("wishPastPerfecttime", wppsec);
+                user.put("usedTo", ut);
+                user.put("usedTotime", utsec);
+                user.put("beUsedTo", but);
+                user.put("beUsedTotime", butsec);
+                uid.document("structures").set(user);
+
+
+            }
+        });
+
+
+    }
+    public void SendVocabIntoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
@@ -6527,10 +6097,6 @@ public class MainTesting extends AppCompatActivity {
 
         uid.document("Interferencias").set(user);
     }
-
-    int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
-    int ScoreFinal;
-
     public void Conintdbtesting(){
 
         String ansin = Answerinput.getText().toString().trim();
@@ -6706,7 +6272,6 @@ public class MainTesting extends AppCompatActivity {
         vv.start();
 
     }
-
     private void startTimer() {
         timerTask = new TimerTask()
         {
@@ -6745,6 +6310,569 @@ public class MainTesting extends AppCompatActivity {
         return String.format("%02d",hours) + " : " + String.format("%02d",minutes) + " : " + String.format("%02d",seconds);
     }
 
+    //PD
+    String soundArray[]={
+            "https://adrianlealcaldera.com/Come%20rain%20or%20shine.mp3",
+            "https://adrianlealcaldera.com/Come%20rain%20or%20shine%202.mp3",
+            "https://adrianlealcaldera.com/Come%20rain%20or%20shine%203.mp3",
+            "https://adrianlealcaldera.com/Calm%20before%20the%20storm.mp3",
+            "https://adrianlealcaldera.com/Calm%20before%20the%20storm%202.mp3",
+            "https://adrianlealcaldera.com/Calm%20before%20the%20storm%203.mp3",
+            "https://adrianlealcaldera.com/Burn%20bridges.mp3",
+            "https://adrianlealcaldera.com/Burn%20bridges%202.mp3",
+            "https://adrianlealcaldera.com/Burn%20bridges%203.mp3",
+            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue.mp3",
+            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue%202.mp3",
+            "https://adrianlealcaldera.com/Bolt%20from%20the%20blue%203.mp3",
+            "https://adrianlealcaldera.com/As%20right%20as%20rain.mp3",
+            "https://adrianlealcaldera.com/As%20right%20as%20rain%202.mp3",
+            "https://adrianlealcaldera.com/As%20right%20as%20rain%203.mp3",
+            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure.mp3",
+            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure%202.mp3",
+            "https://adrianlealcaldera.com/An%20ounce%20of%20prevention%20is%20worth%20a%20pound%20of%20cure%203.mp3",
+            "https://adrianlealcaldera.com/An%20apple%20a%20day%20keeps%20the%20doctor%20away.mp3",
+            "https://adrianlealcaldera.com/An%20apple%20a%20day%20keeps%20the%20doctor%20away%202.mp3",
+            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup.mp3",
+            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup%202.mp3",
+            "https://adrianlealcaldera.com/A%20storm%20in%20a%20teacup%203.mp3",
+            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine.mp3",
+            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine%202.mp3",
+            "https://adrianlealcaldera.com/A%20stitch%20in%20time%20saves%20nine%203.mp3",
+            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell.mp3",
+            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell%202.mp3",
+            "https://adrianlealcaldera.com/A%20snowball's%20chance%20in%20hell%203.mp3",
+            "https://adrianlealcaldera.com/A%20snowball%20effect.mp3",
+            "https://adrianlealcaldera.com/A%20snowball%20effect%202.mp3",
+            "https://adrianlealcaldera.com/A%20snowball%20effect%203.mp3",
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing.mp3",
+            "https://adrianlealcaldera.com/A%20little%20learning%20is%20a%20dangerous%20thing%202.mp3",
+            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat.mp3",
+            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat%202.mp3",
+            "https://adrianlealcaldera.com/Curiosity%20killed%20the%20cat%203.mp3",
+            "https://adrianlealcaldera.com/Cut%20the%20mustard.mp3",
+            "https://adrianlealcaldera.com/Cut%20the%20mustard%202.mp3",
+            "https://adrianlealcaldera.com/Cut%20the%20mustard%203.mp3",
+            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse.mp3",
+            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse%202.mp3",
+            "https://adrianlealcaldera.com/Don't%20beat%20a%20dead%20horse%203.mp3",
+            "https://adrianlealcaldera.com/Every%20dog%20has%20his%20day.mp3",
+            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt.mp3",
+            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt%202.mp3",
+            "https://adrianlealcaldera.com/Familiarity%20breeds%20contempt%203.mp3",
+            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle.mp3",
+            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle%202.mp3",
+            "https://adrianlealcaldera.com/Fit%20as%20a%20fiddle%203.mp3",
+            "https://adrianlealcaldera.com/Get%20a%20second%20wind.mp3",
+            "https://adrianlealcaldera.com/Get%20a%20second%20wind%202.mp3",
+            "https://adrianlealcaldera.com/Get%20a%20second%20wind%203.mp3",
+            "https://adrianlealcaldera.com/Get%20wind%20of%20something.mp3",
+            "https://adrianlealcaldera.com/Get%20wind%20of%20something%202.mp3",
+            "https://adrianlealcaldera.com/Go%20down%20in%20flames.mp3",
+            "https://adrianlealcaldera.com/Go%20down%20in%20flames%202.mp3",
+            "https://adrianlealcaldera.com/Go%20down%20in%20flames%203.mp3",
+            "https://adrianlealcaldera.com/Haste%20makes%20waste.mp3",
+            "https://adrianlealcaldera.com/Haste%20makes%20waste%202.mp3",
+            "https://adrianlealcaldera.com/Haste%20makes%20waste%203.mp3",
+            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds.mp3",
+            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds%202.mp3",
+            "https://adrianlealcaldera.com/Have%20your%20head%20in%20the%20clouds%203.mp3",
+            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth.mp3",
+            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth%202.mp3",
+            "https://adrianlealcaldera.com/Hear%20something%20straight%20from%20the%20horse's%20mouth%203.mp3",
+            "https://adrianlealcaldera.com/He's%20off%20his%20rocker.mp3",
+            "https://adrianlealcaldera.com/He's%20sitting%20on%20the%20fence.mp3",
+            "https://adrianlealcaldera.com/It%20is%20always%20darkest%20before%20the%20dawn.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango%202.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20two%20to%20tango%203.mp3",
+            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon.mp3",
+            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon%202.mp3",
+            "https://adrianlealcaldera.com/Jump%20on%20the%20bandwagon%203.mp3",
+            "https://adrianlealcaldera.com/Know%20which%20way%20the%20wind%20is%20blowing.mp3",
+            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned.mp3",
+            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned%202.mp3",
+            "https://adrianlealcaldera.com/Leave%20no%20stone%20unturned%203.mp3",
+            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie.mp3",
+            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie%202.mp3",
+            "https://adrianlealcaldera.com/Let%20sleeping%20dogs%20lie%203.mp3",
+            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle.mp3",
+            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle%202.mp3",
+            "https://adrianlealcaldera.com/Like%20riding%20a%20bicycle%203.mp3",
+            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod.mp3",
+            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod%202.mp3",
+            "https://adrianlealcaldera.com/Like%20two%20peas%20in%20a%20pod%203.mp3",
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines.mp3",
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines%202.mp3",
+            "https://adrianlealcaldera.com/Make%20hay%20while%20the%20sun%20shines%203.mp3",
+            "https://adrianlealcaldera.com/On%20cloud%20nine.mp3",
+            "https://adrianlealcaldera.com/On%20cloud%20nine%202.mp3",
+            "https://adrianlealcaldera.com/On%20cloud%20nine%203.mp3",
+            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy.mp3",
+            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy%202.mp3",
+            "https://adrianlealcaldera.com/Once%20bitten%20twice%20shy%203.mp3",
+            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire.mp3",
+            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire%202.mp3",
+            "https://adrianlealcaldera.com/Out%20of%20the%20frying%20pan%20and%20into%20the%20fire%203.mp3",
+            "https://adrianlealcaldera.com/Run%20like%20the%20wind.mp3",
+            "https://adrianlealcaldera.com/Run%20like%20the%20wind%202.mp3",
+            "https://adrianlealcaldera.com/Run%20like%20the%20wind%203.mp3",
+            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out.mp3",
+            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out%202.mp3",
+            "https://adrianlealcaldera.com/Shape%20up%20or%20ship%20out%203.mp3",
+            "https://adrianlealcaldera.com/Snowed%20under.mp3",
+            "https://adrianlealcaldera.com/Snowed%20under%202.mp3",
+            "https://adrianlealcaldera.com/Snowed%20under%203.mp3",
+            "https://adrianlealcaldera.com/That%20ship%20has%20sailed.mp3",
+            "https://adrianlealcaldera.com/That%20ship%20has%20sailed%202.mp3",
+            "https://adrianlealcaldera.com/That%20ship%20has%20sailed%202.mp3",
+            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black.mp3",
+            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black%202.mp3",
+            "https://adrianlealcaldera.com/The%20pot%20calling%20the%20kettle%20black%202.mp3",
+            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon.mp3",
+            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon%202.mp3",
+            "https://adrianlealcaldera.com/There%20are%20clouds%20on%20the%20horizon%203.mp3",
+            "https://adrianlealcaldera.com/Through%20thick%20and%20thin.mp3",
+            "https://adrianlealcaldera.com/Through%20thick%20and%20thin%202.mp3",
+            "https://adrianlealcaldera.com/Through%20thick%20and%20thin%203.mp3",
+            "https://adrianlealcaldera.com/Time%20is%20money.mp3",
+            "https://adrianlealcaldera.com/Time%20is%20money%202.mp3",
+            "https://adrianlealcaldera.com/Time%20is%20money%203.mp3",
+            "https://adrianlealcaldera.com/Waste%20not%20want%20not.mp3",
+            "https://adrianlealcaldera.com/Waste%20not%20want%20not%202.mp3",
+            "https://adrianlealcaldera.com/Waste%20not%20want%20not%203.mp3",
+            "https://adrianlealcaldera.com/We%20see%20eye%20to%20eye.mp3",
+            "https://adrianlealcaldera.com/We%20see%20eye%20to%20eye%202.mp3",
+            "https://adrianlealcaldera.com/Weather%20the%20storm.mp3",
+            "https://adrianlealcaldera.com/Weather%20the%20storm%202.mp3",
+            "https://adrianlealcaldera.com/Weather%20the%20storm%203.mp3",
+            "https://adrianlealcaldera.com/Well%20begun%20is%20half%20done.mp3",
+            "https://adrianlealcaldera.com/Well%20begun%20is%20half%20done%202.mp3",
+            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours.mp3",
+            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours%202.mp3",
+            "https://adrianlealcaldera.com/When%20it%20rains%20it%20pours%203.mp3",
+            "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar.mp3",
+            "https://adrianlealcaldera.com/You%20can%20catch%20more%20flies%20with%20honey%20than%20you%20can%20with%20vinegar%202.mp3",
+            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink.mp3",
+            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink%202.mp3",
+            "https://adrianlealcaldera.com/You%20can%20lead%20a%20horse%20to%20water%20but%20you%20can't%20make%20him%20drink%203.mp3",
+            "https://adrianlealcaldera.com/You%20can't%20make%20an%20omelet%20without%20breaking%20some%20eggs.mp3",
+
+            //122...
+
+            //LR
+            "https://adrianlealcaldera.com/A%20penny%20for%20your%20thoughts.mp3",
+            "https://adrianlealcaldera.com/A%20penny%20for%20your%20thoughts2.mp3",
+            "https://adrianlealcaldera.com/A%20penny%20saved%20is%20a%20penny%20earned.mp3",
+            "https://adrianlealcaldera.com/A%20penny%20saved%20is%20a%20penny%20earned2.mp3",
+            "https://adrianlealcaldera.com/A%20perfect%20storm.mp3",
+            "https://adrianlealcaldera.com/A%20perfect%20storm2.mp3",
+            "https://adrianlealcaldera.com/A%20picture%20is%20worth%201000%20words.mp3",
+            "https://adrianlealcaldera.com/Actions%20speak%20louder%20than%20words.mp3",
+            "https://adrianlealcaldera.com/Actions%20speak%20louder%20than%20words2.mp3",
+            "https://adrianlealcaldera.com/Add%20insult%20to%20injury.mp3",
+            "https://adrianlealcaldera.com/Add%20insult%20to%20injury2.mp3",
+            "https://adrianlealcaldera.com/Barking%20up%20the%20wrong%20tree.mp3",
+            "https://adrianlealcaldera.com/Barking%20up%20the%20wrong%20tree2.mp3",
+            "https://adrianlealcaldera.com/Birds%20of%20a%20feather%20flock%20together.mp3",
+            "https://adrianlealcaldera.com/Birds%20of%20a%20feather%20flock%20together2.mp3",
+            "https://adrianlealcaldera.com/Bite%20off%20more%20than%20you%20can%20chew.mp3",
+            "https://adrianlealcaldera.com/Break%20the%20ice.mp3",
+            "https://adrianlealcaldera.com/Break%20the%20ice2.mp3",
+            "https://adrianlealcaldera.com/By%20the%20skin%20of%20your%20teeth.mp3",
+            "https://adrianlealcaldera.com/By%20the%20skin%20of%20your%20teeth2.mp3",
+            "https://adrianlealcaldera.com/Comparing%20apples%20to%20oranges.mp3",
+            "https://adrianlealcaldera.com/Comparing%20apples%20to%20oranges2.mp3",
+            "https://adrianlealcaldera.com/Costs%20an%20arm%20and%20a%20leg.mp3",
+            "https://adrianlealcaldera.com/Do%20something%20at%20the%20drop%20of%20a%20hat.mp3",
+            "https://adrianlealcaldera.com/Do%20unto%20others%20as%20you%20would%20have%20them%20do%20unto%20you.mp3",
+            "https://adrianlealcaldera.com/Don't%20count%20your%20chickens%20before%20they%20hatch.mp3",
+            "https://adrianlealcaldera.com/Don't%20cry%20over%20spilt%20milk.mp3",
+            "https://adrianlealcaldera.com/Don't%20give%20up%20your%20day%20job.mp3",
+            "https://adrianlealcaldera.com/Don't%20put%20all%20your%20eggs%20in%20one%20basket.mp3",
+            "https://adrianlealcaldera.com/Every%20cloud%20has%20a%20silver%20lining.mp3",
+            "https://adrianlealcaldera.com/Every%20cloud%20has%20a%20silver%20lining2.mp3",
+            "https://adrianlealcaldera.com/Give%20someone%20the%20cold%20shoulder.mp3",
+            "https://adrianlealcaldera.com/Give%20someone%20the%20cold%20shoulder2.mp3",
+            "https://adrianlealcaldera.com/Go%20on%20a%20wild%20goose%20chase.mp3",
+            "https://adrianlealcaldera.com/Good%20things%20come%20to%20those%20who%20wait.mp3",
+            "https://adrianlealcaldera.com/Good%20things%20come%20to%20those%20who%20wait2.mp3",
+            "https://adrianlealcaldera.com/Hit%20the%20nail%20on%20the%20head.mp3",
+            "https://adrianlealcaldera.com/Hit%20the%20nail%20on%20the%20head2.mp3",
+            "https://adrianlealcaldera.com/Ignorance%20is%20bliss.mp3",
+            "https://adrianlealcaldera.com/Ignorance%20is%20bliss2.mp3",
+            "https://adrianlealcaldera.com/It%20takes%20one%20to%20know%20one.mp3",
+            "https://adrianlealcaldera.com/It's%20a%20piece%20of%20cake.mp3",
+            "https://adrianlealcaldera.com/It's%20a%20piece%20of%20cake2.mp3",
+            "https://adrianlealcaldera.com/It's%20raining%20cats%20and%20dogs.mp3",
+            "https://adrianlealcaldera.com/It's%20raining%20cats%20and%20dogs2.mp3",
+            "https://adrianlealcaldera.com/Kill%20two%20birds%20with%20one%20stone.mp3",
+            "https://adrianlealcaldera.com/Let%20the%20cat%20out%20of%20the%20bag.mp3",
+            "https://adrianlealcaldera.com/Live%20and%20learn.mp3",
+            "https://adrianlealcaldera.com/Live%20and%20learn2.mp3",
+            "https://adrianlealcaldera.com/Look%20before%20you%20leap.mp3",
+            "https://adrianlealcaldera.com/Look%20before%20you%20leap2.mp3",
+            "https://adrianlealcaldera.com/On%20thin%20ice.mp3",
+            "https://adrianlealcaldera.com/On%20thin%20ice2.mp3",
+            "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon.mp3",
+            "https://adrianlealcaldera.com/Once%20in%20a%20blue%20moon2.mp3",
+            "https://adrianlealcaldera.com/Play%20devil's%20advocate.mp3",
+            "https://adrianlealcaldera.com/Play%20devil's%20advocate2.mp3",
+            "https://adrianlealcaldera.com/Put%20something%20on%20ice.mp3",
+            "https://adrianlealcaldera.com/Saving%20for%20a%20rainy%20day.mp3",
+            "https://adrianlealcaldera.com/Saving%20for%20a%20rainy%20day2.mp3",
+            "https://adrianlealcaldera.com/Slow%20and%20steady%20wins%20the%20race.mp3",
+            "https://adrianlealcaldera.com/Slow%20and%20steady%20wins%20the%20race2.mp3",
+            "https://adrianlealcaldera.com/Spill%20the%20beans.mp3",
+            "https://adrianlealcaldera.com/Spill%20the%20beans2.mp3",
+            "https://adrianlealcaldera.com/Take%20a%20rain%20check.mp3",
+            "https://adrianlealcaldera.com/Take%20it%20with%20a%20grain%20of%20salt.mp3",
+            "https://adrianlealcaldera.com/The%20ball%20is%20in%20your%20court.mp3",
+            "https://adrianlealcaldera.com/The%20best%20thing%20since%20sliced%20bread.mp3",
+            "https://adrianlealcaldera.com/The%20devil%20is%20in%20the%20details.mp3",
+            "https://adrianlealcaldera.com/The%20early%20bird%20gets%20the%20worm.mp3",
+            "https://adrianlealcaldera.com/The%20early%20bird%20gets%20the%20worm2.mp3",
+            "https://adrianlealcaldera.com/The%20elephant%20in%20the%20room.mp3",
+            "https://adrianlealcaldera.com/The%20elephant%20in%20the%20room2.mp3",
+            "https://adrianlealcaldera.com/The%20whole%20nine%20yards.mp3",
+            "https://adrianlealcaldera.com/The%20whole%20nine%20yards2.mp3",
+            "https://adrianlealcaldera.com/There's%20no%20such%20thing%20as%20a%20free%20lunch.mp3",
+    };
+    String soundArrayRobot[] = {
+            "Come rain or shine",
+            "Come rain or shine 2",
+            "Come rain or shine 3",
+            "the calm before the storm",
+            "the calm before the storm 2",
+            "the calm before the storm 3",
+            "burn bridges",
+            "burn bridges 2",
+            "burn bridges 3",
+            "bolt from the blue",
+            "bolt from the blue 2",
+            "bolt from the blue 3",
+            "as right as rain",
+            "as right as rain 2",
+            "as right as rain 3",
+            "an ounce of prevention is worth a pound of cure",
+            "an ounce of prevention is worth a pound of cure 2",
+            "an ounce of prevention is worth a pound of cure 3",
+            "an apple a day keeps the doctor away",
+            "an apple a day keeps the doctor away 2",
+            "a storm in a teacup",
+            "a storm in a teacup 2",
+            "a storm in a teacup 3",
+            "a stitch in time saves nine",
+            "a stitch in time saves nine 2",
+            "a stitch in time saves nine 3",
+            "a snowball's chance in hell",
+            "a snowball's chance in hell 2",
+            "a snowball's chance in hell 3",
+            "a snowball effect",
+            "a snowball effect 2",
+            "a snowball effect 3",
+            "a little learning is a dangerous thing",
+            "a little learning is a dangerous thing 2",
+            "Curiosity killed the cat",
+            "Curiosity killed the cat 2",
+            "Curiosity killed the cat 3",
+            "Cut the mustard",
+            "Cut the mustard 2",
+            "Cut the mustard 3",
+            "Don't beat a dead horse",
+            "Don't beat a dead horse 2",
+            "Don't beat a dead horse 3",//variantes
+            "Every dog has his day",
+            "Familiarity breeds contempt",
+            "Familiarity breeds contempt 2",
+            "Familiarity breeds contempt 3",
+            "Fit as a fiddle",
+            "Fit as a fiddle 2",
+            "Fit as a fiddle 3",
+            "Get a second wind",
+            "Get a second wind 2",
+            "Get a second wind 3",
+            "Get wind of something",
+            "Get wind of something 2",
+            "Go down in flames",
+            "Go down in flames 2",
+            "Go down in flames 3",
+            "Haste makes waste",
+            "Haste makes waste 2",
+            "Haste makes waste 3",
+            "Have your head in the clouds",
+            "Have your head in the clouds 2",
+            "Have your head in the clouds 3",
+            "Hear something straight from the horse's mouth",
+            "Hear something straight from the horse's mouth 2",
+            "Hear something straight from the horse's mouth 3",
+            "He's off his rocker",
+            "He's sitting on the fence",
+            "It is always darkest before the dawn",
+            "It takes two to tango",
+            "It takes two to tango 2",
+            "It takes two to tango 3",
+            "Jump on the bandwagon",
+            "Jump on the bandwagon 2",
+            "Jump on the bandwagon 3",
+            "Know which way the wind is blowing",
+            "Leave no stone unturned",
+            "Leave no stone unturned 2",
+            "Leave no stone unturned 3",
+            "Let sleeping dogs lie",
+            "Let sleeping dogs lie 2",
+            "Let sleeping dogs lie 3",
+            "Like riding a bicycle",
+            "Like riding a bicycle 2",
+            "Like riding a bicycle 3",
+            "Like two peas in a pod",
+            "Like two peas in a pod 2",
+            "Like two peas in a pod 3",
+            "Make hay while the sun shines",
+            "Make hay while the sun shines 2",
+            "Make hay while the sun shines 3",
+            "On cloud nine",
+            "On cloud nine 2",
+            "On cloud nine 3",
+            "Once bitten twice shy",
+            "Once bitten twice shy 2",
+            "Once bitten twice shy 3",
+            "Out of the frying pan and into the fire",
+            "Out of the frying pan and into the fire 2",
+            "Out of the frying pan and into the fire 3",
+            "Run like the wind",
+            "Run like the wind 2",
+            "Run like the wind 3",
+            "Shape up or ship out",
+            "Shape up or ship out 2",
+            "Shape up or ship out 3",
+            "Snowed under",
+            "Snowed under 2",
+            "Snowed under 3",
+            "That ship has sailed",
+            "That ship has sailed 2",
+            "That ship has sailed 3",
+            "The pot calling the kettle black",
+            "The pot calling the kettle black 2",
+            "The pot calling the kettle black 3",
+            "There are clouds on the horizon",
+            "There are clouds on the horizon 2",
+            "There are clouds on the horizon 3",
+            "Through thick and thin",
+            "Through thick and thin 2",
+            "Through thick and thin 3",
+            "Time is money",
+            "Time is money 2",
+            "Time is money 3",
+            "Waste not want not",
+            "Waste not want not 2",
+            "Waste not want not 3",
+            "We see eye to eye",
+            "We see eye to eye 2",
+            "Weather the storm",
+            "Weather the storm 2",
+            "Weather the storm 3",
+            "Well begun is half done",
+            "Well begun is half done 2",
+            "When it rains it pours",
+            "When it rains it pours 2",
+            "When it rains it pours 3",
+            "You can catch more flies with honey than you can with vinegar",
+            "You can catch more flies with honey than you can with vinegar 2",
+            "You can lead a horse to water but you can't make him drink",
+            "You can lead a horse to water but you can't make him drink 2",
+            "You can lead a horse to water but you can't make him drink 3",
+            "You can't make an omelet without breaking some eggs",//corregidos
+
+            //LR
+            "A penny for your thoughts",
+            "A penny for your thoughts 2",
+            "A penny saved is a penny earned",
+            "A penny saved is a penny earned 2",
+            "A perfect storm",
+            "A perfect storm 2",
+            "A picture is worth 1000 words",
+            "Actions speak louder than words",
+            "Actions speak louder than words 2",
+            "Add insult to injury",
+            "Add insult to injury 2",
+            "Barking up the wrong tree",
+            "Barking up the wrong tree 2",
+            "Birds of a feather flock together",
+            "Birds of a feather flock together 2",
+            "Bite off more than you can chew",
+            "Break the ice",
+            "Break the ice 2",
+            "By the skin of your teeth",
+            "By the skin of your teeth 2",
+            "Comparing apples to oranges",
+            "Comparing apples to oranges 2",
+            "Costs an arm and a leg",
+            "Do something at the drop of a hat",
+            "Do unto others as you would have them do unto you",
+            "Don't count your chickens before they hatch",
+            "Don't cry over spilt milk",
+            "Don't give up your day job",
+            "Don't put all your eggs in one basket",
+            "Every cloud has a silver lining",
+            "Every cloud has a silver lining 2",
+            "Give someone the cold shoulder",
+            "Give someone the cold shoulder 2",
+            "Go on a wild goose chase",
+            "Good things come to those who wait",
+            "Good things come to those who wait 2",
+            "Hit the nail on the head",
+            "Hit the nail on the head 2",
+            "Ignorance is bliss",
+            "Ignorance is bliss 2",
+            "It takes one to know one",
+            "It's a piece of cake",
+            "It's a piece of cake 2",
+            "It's raining cats and dogs",
+            "It's raining cats and dogs2 ",
+            "Kill two birds with one stone",
+            "Let the cat out of the bag",
+            "Live and learn",
+            "Live and learn 2",
+            "Look before you leap",
+            "Look before you leap 2",
+            "On thin ice",
+            "On thin ice 2",
+            "Once in a blue moon",
+            "Once in a blue moon 2",
+            "Play devil's advocate",
+            "Play devil's advocate2 ",
+            "Put something on ice",
+            "Saving for a rainy day",
+            "Saving for a rainy day 2",
+            "Slow and steady wins the race",
+            "Slow and steady wins the race 2",
+            "Spill the beans",
+            "Spill the beans 2",
+            "Take a rain check",
+            "Take it with a grain of salt",
+            "The ball is in your court",
+            "The best thing since sliced bread",
+            "The devil is in the details",
+            "The early bird gets the worm",
+            "The early bird gets the worm 2",
+            "The elephant in the room",
+            "The elephant in the room 2",
+            "The whole nine yards",
+            "The whole nine yards 2",
+            "There's no such thing as a free lunch",
+
+    };
+
+    public static final int REC_CODE_SPEECH_INPUT = 100;
+    //p-present,pa-past,mi=might,m-must, vj=verbos juntos
+
+    //1
+    boolean ps,pc,pp,ppc,pss,psc,psp,pspc,fs,fc,fp,fpc,ws,wc,wp,wpc;
+    boolean cos,coc,cop,copc,ms,mc,mp,mpc,cs,cc,mus,muc;
+    boolean ss,sc,sp,spc,wt,ft,stp,wpp,ut,but;
+    //1 crear string time
+
+    //PD
+    String pssec ,pcsec ,ppsec ,ppcsec ,psssec ,pscsec ,
+            pspsec ,pspcsec ,fssec ,fcsec ,fpsec ,fpcsec ,
+            wssec ,wcsec ,wpsec ,wpcsec , cossec ,cocsec ,copsec ,
+            copcsec
+                    ;
+
+    //LR
+    String mssec ,mcsec ,mpsec ,mpcsec ,cssec ,ccsec ,mussec ,mucsec,
+            sssec ,scsec ,spsec ,spcsec ,wtsec ,ftsec ,stpsec ,wppsec ,
+            utsec ,butsec
+            ;
+
+    // booleanos de los primeros 50 palabras
+    boolean the,tobe,and,of,a,in,to,tohave,it,I,
+            that1,that2,for1,for2,you,he,with,on,todo,tosay,
+            this1,they,at,but1,we,his,from1,from2,since,by,she,
+            or,as1,as2,what1,what2,togo,their,can,who,toget,if1,
+            would,her,all,my,tomake,about1,about2,toknow,will,up;
+
+    //50 a 100 booleanos
+    boolean one,time,there,year,so,think,when,which,
+            them,some,me,people,take,out,into,just,
+            see1,him,your,come,could,now,than,like,other,
+            how,then,its,our,two,more,these,want,way,look,
+            first,also,new1,because,day,more1,use,no,man,
+            find,here,thing,give,many,well;
+
+    //100 a 150 booleanos
+    boolean only ,those ,tell ,one2 ,very ,her1 ,even ,
+            back ,any ,good ,woman ,through ,us ,life ,child ,
+            there1 ,work ,down ,may ,after ,should ,call ,world ,
+            over ,school ,still ,try1 ,in1 ,as ,last ,ask ,need ,
+            too ,feel ,three ,when1 ,state ,never ,become ,between ,
+            high ,really ,something ,most ,another ,much ,
+            another1 ,much1 ,family ,own ,out1 ,leave ,put;
+
+    //150 a 200 booleanos
+    boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
+            let ,great ,same ,big ,group ,begin ,seem ,
+            country ,help ,talk ,where ,turn ,problem ,
+            every ,start ,hand ,might ,american ,show ,
+            part ,about ,against ,place ,over2 ,such ,
+            again ,few ,case1 ,most2 ,week ,company ,
+            where2 ,system ,each ,right ,program ,hear ,
+            so2 ,question ,during ,work2 ,play ;
+
+    //200 a 250 booleanos
+    boolean goverment ,run ,small ,number ,off ,always ,move ,
+            like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
+            happen ,next ,without ,before ,large ,all2 ,million ,must ,
+            home ,under ,water ,room ,write ,mother ,area ,national ,
+            money ,story ,young ,fact ,month ,different ,lot ,right2 ,
+            study ,book ,eye ,job ,word ,though ,business ,issue ,
+            side ,kind ;
+
+    //250 a 300 booleanos
+    boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
+            after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
+            important ,father ,sit ,away ,until ,power ,hour ,
+            game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
+            bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
+            almost ,include ,continue1 ,set ,later ,community,much2,
+            name;
+
+    //300 a 350 booleanos
+    boolean  five ,once ,white ,least ,president ,learn ,
+            real ,change2 ,team ,minute ,best ,several ,
+            idea ,kid ,body ,information ,nothing ,ago ,
+            right3 ,lead ,social ,understand ,whether ,
+            back2 ,watch ,together ,follow ,around2 ,parent ,
+            only2 ,stop ,face ,anything ,create ,public2 ,
+            already ,speak ,others ,read ,level ,allow ,
+            add ,office ,spend ,door ,health ,person ,
+            art ,sure ,such2 ;
+
+    //350 a 400 booleanos
+    boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
+            morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
+            food ,before2 ,moment ,himself ,toair , teacher ,toforce ,tooffer ,
+            enough ,both ,education ,across ,although ,toremember ,foot ,second ,
+            boy ,maybe ,toward , able ,age ,off2  ,policy ,everything ,love ,
+            toprocess ,music ,including ,toconsider ,toappear ,actually ,
+            tobuy , probably  ;
+
+    //400 a 450 booleanos
+    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
+            tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
+            death ,course ,someone ,experience ,behind ,reach ,local ,
+            tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
+            control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
+            else2 ,topass , former ,sell ,major ,sometimes ,require ,along ,
+            development ,themselves ;
+
+    //450 a 500 booleanos
+    boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
+            possible ,heart ,drug ,toshow ,leader ,light ,voice , wife ,whole ,police ,
+            mind ,finally2 ,topull ,toreturn ,free ,military ,price ,report2 ,
+            less ,accordingto,decision ,toexplain , son ,hope ,even2 ,todevelop ,
+            view ,relationship ,carry ,town , road ,todrive ,arm ,true2 ,federal ,
+            tobreak ,better2 ,difference , tothank  ,toreceive ,value ;
 
 
 }

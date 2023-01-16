@@ -103,7 +103,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             }
         });
     }
-
     private void PullsTrueStructuresFromDb() {
         //asks if the boolean stored at Db that was
         // put there by the test is true or false
@@ -112,6 +111,16 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         temporal[1]=studentObject.presenteContinuo;
         temporal[2]=studentObject.presentePerfecto;
         temporal[3]=studentObject.presentePerfectoContinuo;
+        // pasts
+        temporal[4]= studentObject.pastsimple;
+        temporal[5]=studentObject.pastContinuo;
+        temporal[6]=studentObject.pastPerfecto;
+        temporal[7]=studentObject.pastPerfectoContinuo;
+        //futures
+        temporal[8]= studentObject.futuresimple;
+        temporal[9]=studentObject.futureContinuo;
+        temporal[10]=studentObject.futurePerfecto;
+        temporal[11]=studentObject.futurePerfectoContinuo;
 
         if(temporal[0]){
             structureArray[0]="Present Simple";
@@ -122,25 +131,48 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         if(temporal[1]){
             structureArray[1]="Present Continuos";
         }else {
-            structureArray[0]="";
+            structureArray[1]="";
 
         }
         if(temporal[2]){
             structureArray[2]="Present Perfect";
         }else {
-            structureArray[0]="";
+            structureArray[2]="";
 
         }
         if(temporal[3]){
             structureArray[3]="Present Perfect Continuos";
         }else {
-            structureArray[0]="";
+            structureArray[3]="";
+
+        }
+        //pasados
+        if(temporal[4]){
+            structureArray[4]="Past Simple";
+        }else {
+            structureArray[4]="";
+
+        }
+        if(temporal[5]){
+            structureArray[5]="Past Continuos";
+        }else {
+            structureArray[5]="";
+
+        }
+        if(temporal[6]){
+            structureArray[6]="Past Perfect";
+        }else {
+            structureArray[6]="";
+
+        }
+        if(temporal[7]){
+            structureArray[7]="Past Perfect Continuos";
+        }else {
+            structureArray[7]="";
 
         }
 
-        for(int i=0; i<structureArray.length;i++){
-            DbResultStructure[i]=structureArray[i];
-       }
+        System.arraycopy(structureArray, 0, DbResultStructure, 0, structureArray.length);
         List<String> list = new ArrayList<String>();
 
         for(String s : DbResultStructure) {
@@ -151,7 +183,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         DbResultStructure = list.toArray(new String[list.size()]);
 
     }
-
     public void BasicRecomendedPlan(View vista ){
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
