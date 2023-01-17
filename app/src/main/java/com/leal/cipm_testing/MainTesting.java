@@ -377,6 +377,7 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
+
     public  void   startTest(){
 
         save.setVisibility(View.VISIBLE);
@@ -2376,6 +2377,7 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
+
     public void soundtest(){
 
         save.setVisibility(View.VISIBLE);
@@ -5299,11 +5301,11 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-
     private void GetStateOfStructureSendInfoToDb() {
         CollectionReference uid = db.collection(userid);
         Map<String, Object> user = new HashMap<>();
-        docrefStructure.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        docrefStructure.get().
+                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 studentObject = documentSnapshot.toObject(Student.class);
@@ -5337,7 +5339,6 @@ public class MainTesting extends AppCompatActivity {
                     pspc=true;
                 }
                 //futuros
-
                 if(studentObject.futuresimple){
                     fs=true;
                 }
@@ -5517,6 +5518,10 @@ public class MainTesting extends AppCompatActivity {
                 user.put("usedTotime", utsec);
                 user.put("beUsedTo", but);
                 user.put("beUsedTotime", butsec);
+
+
+
+
                 uid.document("structures").set(user);
 
 
@@ -5525,6 +5530,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
+
     public void SendVocabIntoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();

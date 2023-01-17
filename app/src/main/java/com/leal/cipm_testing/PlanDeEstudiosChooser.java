@@ -122,6 +122,39 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         temporal[10]=studentObject.futurePerfecto;
         temporal[11]=studentObject.futurePerfectoContinuo;
 
+        temporal[12]= studentObject.wouldsimple;
+        temporal[13]=studentObject.wouldContinuo;
+        temporal[14]=studentObject.wouldPerfecto;
+        temporal[15]=studentObject.wouldPerfectoContinuo;
+
+        temporal[16]= studentObject.couldsimple;
+        temporal[17]=studentObject.couldContinuo;
+        temporal[18]=studentObject.couldPerfecto;
+        temporal[19]=studentObject.couldPerfectoContinuo;
+
+        temporal[20]= studentObject.mightsimple;
+        temporal[21]=studentObject.mightContinuo;
+        temporal[22]=studentObject.mightPerfecto;
+        temporal[23]=studentObject.mightPerfectoContinuo;
+
+        temporal[24]= studentObject.cansimple;
+        temporal[25]=studentObject.canContinuo;
+        temporal[26]=studentObject.mustsimple;
+        temporal[27]=studentObject.mustContinuo;
+
+        temporal[28]= studentObject.shouldsimple;
+        temporal[29]=studentObject.shouldContinuo;
+        temporal[30]=studentObject.shouldPerfecto;
+        temporal[31]=studentObject.shouldPerfectoContinuo;
+
+        temporal[32]= studentObject.wantTo;
+        temporal[33]=studentObject.forTo;
+        temporal[34]=studentObject.supposedToPresent;
+        temporal[35]=studentObject.wishPastPerfect;
+
+        temporal[36]=studentObject.usedTo;
+        temporal[37]=studentObject.beUsedTo;
+
         if(temporal[0]){
             structureArray[0]="Present Simple";
         }else {
@@ -171,6 +204,194 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             structureArray[7]="";
 
         }
+        //futuros
+        if(temporal[8]){
+            structureArray[8]="Future Simple";
+        }else {
+            structureArray[8]="";
+
+        }
+        if(temporal[9]){
+            structureArray[9]="Future Continuos";
+        }else {
+            structureArray[9]="";
+
+        }
+        if(temporal[10]){
+            structureArray[10]="Future Perfect";
+        }else {
+            structureArray[10]="";
+
+        }
+        if(temporal[11]){
+            structureArray[11]="Future Perfect Continuos";
+        }else {
+            structureArray[11]="";
+
+        }
+        //modales
+        if(temporal[12]){
+            structureArray[12]="Would Simple";
+        }else {
+            structureArray[12]="";
+
+        }
+        if(temporal[13]){
+            structureArray[13]="Would Continuos";
+        }else {
+            structureArray[13]="";
+
+        }
+        if(temporal[14]){
+            structureArray[14]="Would Perfect";
+        }else {
+            structureArray[14]="";
+
+        }
+        if(temporal[15]){
+            structureArray[15]="Would Perfect Continuos";
+        }else {
+            structureArray[15]="";
+
+        }
+        //coulds
+        if(temporal[16]){
+            structureArray[16]="Could Simple";
+        }else {
+            structureArray[16]="";
+
+        }
+        if(temporal[17]){
+            structureArray[17]="Could Continuos";
+        }else {
+            structureArray[17]="";
+
+        }
+        if(temporal[18]){
+            structureArray[18]="Could Perfect";
+        }else {
+            structureArray[18]="";
+
+        }
+        if(temporal[19]){
+            structureArray[19]="Could Perfect Continuos";
+        }else {
+            structureArray[19]="";
+
+        }
+        //mights
+        if(temporal[20]){
+            structureArray[20]="Might Simple";
+        }else {
+            structureArray[20]="";
+
+        }
+        if(temporal[21]){
+            structureArray[21]="Might Continuos";
+        }else {
+            structureArray[21]="";
+
+        }
+        if(temporal[22]){
+            structureArray[22]="Might Perfect";
+        }else {
+            structureArray[22]="";
+
+        }
+        if(temporal[23]){
+            structureArray[23]="Might Perfect Continuos";
+        }else {
+            structureArray[23]="";
+
+        }
+        //can y must
+        if(temporal[24]){
+            structureArray[24]="Can Simple";
+        }else {
+            structureArray[24]="";
+
+        }
+        if(temporal[25]){
+            structureArray[25]="Can Continuos";
+        }else {
+            structureArray[25]="";
+
+        }
+        if(temporal[26]){
+            structureArray[26]="Must Simple";
+        }else {
+            structureArray[26]="";
+
+        }
+        if(temporal[27]){
+            structureArray[27]="Must Continuos";
+        }else {
+            structureArray[27]="";
+
+        }
+        //shoulds
+        if(temporal[28]){
+            structureArray[28]="Should Simple";
+        }else {
+            structureArray[28]="";
+
+        }
+        if(temporal[29]){
+            structureArray[29]="Should Continuos";
+        }else {
+            structureArray[29]="";
+
+        }
+        if(temporal[30]){
+            structureArray[30]="Should Perfect";
+        }else {
+            structureArray[30]="";
+
+        }
+        if(temporal[31]){
+            structureArray[31]="Should Perfect Continuos";
+        }else {
+            structureArray[31]="";
+
+        }
+        //non basics
+        if(temporal[32]){
+            structureArray[32]="Want To";
+        }else {
+            structureArray[32]="";
+
+        }
+        if(temporal[33]){
+            structureArray[33]="For To";
+        }else {
+            structureArray[33]="";
+
+        }
+        if(temporal[34]){
+            structureArray[34]="Supposed To Present";
+        }else {
+            structureArray[34]="";
+
+        }
+        if(temporal[35]){
+            structureArray[35]="Wish Past Perfect";
+        }else {
+            structureArray[35]="";
+        }
+        if(temporal[36]){
+            structureArray[30]="Should Perfect";
+        }else {
+            structureArray[30]="";
+
+        }
+        if(temporal[37]){
+            structureArray[31]="Should Perfect Continuos";
+        }else {
+            structureArray[31]="";
+
+        }
+
+
 
         System.arraycopy(structureArray, 0, DbResultStructure, 0, structureArray.length);
         List<String> list = new ArrayList<String>();

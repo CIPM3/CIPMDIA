@@ -46,10 +46,12 @@ public class Student {
     String futurocontinuotime;
     String futuroperfectotime;
     String futuroperfectocontinuotime;
+
     String wouldsimpletime;
     String wouldcontinuotime;
     String wouldperfectotime;
     String wouldperfectocontinuotime;
+
     String couldsimpletime;
     String couldcontinuotime;
     String couldperfectotime;
@@ -60,7 +62,8 @@ public class Student {
     String mightsimpletime ,mightContinuotime ,mightPerfectotime ,mightPerfectoContinuotime ;
     String cansimpletime ,canContinuotime ,mustsimpletime ,mustContinuotime ;
     String shouldsimpletime ,shouldContinuotime ,shouldPerfectotime ,shouldPerfectoContinuotime ;
-    String wantTotime ,forTotime ,supposedToPresenttime ,wishPastPerfecttime ,usedTotime ,beUsedTotime ;
+    String wantTotime ,forTotime ,supposedToPresenttime ,
+            wishPastPerfecttime ,usedTotime ,beUsedTotime ;
 
     public int getPresentesimpleint() {
         return presentesimpleint;
