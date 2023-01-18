@@ -550,7 +550,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -602,7 +602,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -654,7 +654,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -705,7 +705,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -756,7 +756,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -807,7 +807,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -858,7 +858,7 @@ public class Generator2 {
                         i.GenPresCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -894,7 +894,8 @@ public class Generator2 {
     }
     public void GenPresPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -904,6 +905,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -948,6 +950,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -992,6 +995,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -1035,6 +1039,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -1078,6 +1083,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -1121,6 +1127,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -1164,6 +1171,7 @@ public class Generator2 {
                         n.GenPresPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -1875,7 +1883,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -1926,7 +1934,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -1977,7 +1985,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -2027,7 +2035,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -2077,7 +2085,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -2127,7 +2135,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -2177,7 +2185,7 @@ public class Generator2 {
                         i.GenPastCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -2212,7 +2220,8 @@ public class Generator2 {
     }
     public void GenPastPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -2222,6 +2231,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -2266,6 +2276,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -2312,6 +2323,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -2356,6 +2368,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -2402,6 +2415,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -2447,6 +2461,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -2491,6 +2506,7 @@ public class Generator2 {
                         n.GenPastPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3202,7 +3218,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -3253,7 +3269,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -3304,7 +3320,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -3354,7 +3370,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -3404,7 +3420,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -3454,7 +3470,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -3504,7 +3520,7 @@ public class Generator2 {
                         i.GenFutCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -3539,7 +3555,8 @@ public class Generator2 {
     }
     public void GenFutPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -3549,6 +3566,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -3591,6 +3609,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3635,6 +3654,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3677,6 +3697,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3721,6 +3742,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3764,6 +3786,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -3806,6 +3829,7 @@ public class Generator2 {
                         n.GenFutPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -4492,7 +4516,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -4543,7 +4567,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -4594,7 +4618,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -4644,7 +4668,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -4694,7 +4718,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -4744,7 +4768,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -4794,7 +4818,7 @@ public class Generator2 {
                         i.GenWouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -4829,7 +4853,8 @@ public class Generator2 {
     }
     public void GenWouldPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -4839,6 +4864,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -4881,6 +4907,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -4925,6 +4952,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -4967,6 +4995,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -5011,6 +5040,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -5054,6 +5084,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -5096,6 +5127,7 @@ public class Generator2 {
                         n.GenWouldPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -5777,7 +5809,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -5828,7 +5860,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -5879,7 +5911,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -5929,7 +5961,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -5979,7 +6011,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -6029,7 +6061,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -6079,7 +6111,7 @@ public class Generator2 {
                         i.GenCouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -6114,7 +6146,8 @@ public class Generator2 {
     }
     public void GenCouldPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -6124,6 +6157,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -6166,6 +6200,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -6210,6 +6245,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -6252,6 +6288,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -6296,6 +6333,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -6339,6 +6377,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -6381,6 +6420,7 @@ public class Generator2 {
                         n.GenCouldPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7065,7 +7105,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -7116,7 +7156,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -7167,7 +7207,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -7217,7 +7257,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -7267,7 +7307,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -7317,7 +7357,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -7367,7 +7407,7 @@ public class Generator2 {
                         i.GenShouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -7402,7 +7442,8 @@ public class Generator2 {
     }
     public void GenShouldPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -7412,6 +7453,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -7454,6 +7496,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7498,6 +7541,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7540,6 +7584,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7584,6 +7629,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7627,6 +7673,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -7669,6 +7716,7 @@ public class Generator2 {
                         n.GenShouldPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8352,7 +8400,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -8403,7 +8451,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -8454,7 +8502,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -8504,7 +8552,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -8554,7 +8602,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -8604,7 +8652,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -8654,7 +8702,7 @@ public class Generator2 {
                         i.GenMightCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -8689,7 +8737,8 @@ public class Generator2 {
     }
     public void GenMightPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -8699,6 +8748,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -8741,6 +8791,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8785,6 +8836,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8827,6 +8879,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8871,6 +8924,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8914,6 +8968,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -8956,6 +9011,7 @@ public class Generator2 {
                         n.GenMightPerf2();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -9639,7 +9695,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -9690,7 +9746,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -9741,7 +9797,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -9791,7 +9847,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -9841,7 +9897,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -9891,7 +9947,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -9941,7 +9997,7 @@ public class Generator2 {
                         i.GenCanCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -10310,7 +10366,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -10361,7 +10417,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -10412,7 +10468,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -10462,7 +10518,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -10512,7 +10568,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -10562,7 +10618,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -10612,7 +10668,7 @@ public class Generator2 {
                         i.GenMustCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -13244,7 +13300,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -13296,7 +13352,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -13348,7 +13404,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -13399,7 +13455,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -13450,7 +13506,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -13501,7 +13557,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -13552,7 +13608,7 @@ public class Generator2 {
                         i.GenPresCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -13588,7 +13644,8 @@ public class Generator2 {
     }
     public void GenPresPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -13598,6 +13655,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
 
                     case 1:
@@ -13644,6 +13702,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
 
                     case 1:
@@ -13690,6 +13749,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
 
                     case 1:
@@ -13735,6 +13795,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -13778,6 +13839,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
 
                     case 1:
@@ -13823,6 +13885,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
 
                     case 1:
@@ -13867,6 +13930,7 @@ public class Generator2 {
                         n.GenPresPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -14481,7 +14545,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -14532,7 +14596,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -14583,7 +14647,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -14633,7 +14697,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -14683,7 +14747,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -14733,7 +14797,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -14783,7 +14847,7 @@ public class Generator2 {
                         i.GenPastCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -14818,7 +14882,8 @@ public class Generator2 {
     }
     public void GenPastPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -14828,6 +14893,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -14872,6 +14938,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -14918,6 +14985,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -14962,6 +15030,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -15008,6 +15077,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -15053,6 +15123,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -15097,6 +15168,7 @@ public class Generator2 {
                         n.GenPastPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -15808,7 +15880,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -15859,7 +15931,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -15910,7 +15982,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -15960,7 +16032,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -16010,7 +16082,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -16060,7 +16132,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -16110,7 +16182,7 @@ public class Generator2 {
                         i.GenFutCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -16145,7 +16217,8 @@ public class Generator2 {
     }
     public void GenFutPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -16155,6 +16228,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -16197,6 +16271,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -16241,6 +16316,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -16283,6 +16359,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -16327,6 +16404,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -16370,6 +16448,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -16412,6 +16491,7 @@ public class Generator2 {
                         n.GenFutPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17098,7 +17178,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -17149,7 +17229,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -17200,7 +17280,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -17250,7 +17330,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -17300,7 +17380,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -17350,7 +17430,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -17400,7 +17480,7 @@ public class Generator2 {
                         i.GenWouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -17435,7 +17515,8 @@ public class Generator2 {
     }
     public void GenWouldPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -17445,6 +17526,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -17487,6 +17569,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17531,6 +17614,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17573,6 +17657,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17617,6 +17702,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17660,6 +17746,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -17702,6 +17789,7 @@ public class Generator2 {
                         n.GenWouldPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18383,7 +18471,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -18434,7 +18522,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -18485,7 +18573,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -18535,7 +18623,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -18585,7 +18673,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -18635,7 +18723,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -18685,7 +18773,7 @@ public class Generator2 {
                         i.GenCouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -18720,7 +18808,8 @@ public class Generator2 {
     }
     public void GenCouldPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -18730,6 +18819,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -18772,6 +18862,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18816,6 +18907,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18858,6 +18950,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18902,6 +18995,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18945,6 +19039,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -18987,6 +19082,7 @@ public class Generator2 {
                         n.GenCouldPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -19671,7 +19767,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -19722,7 +19818,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -19773,7 +19869,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -19823,7 +19919,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -19873,7 +19969,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -19923,7 +20019,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -19973,7 +20069,7 @@ public class Generator2 {
                         i.GenShouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -20008,7 +20104,8 @@ public class Generator2 {
     }
     public void GenShouldPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -20018,6 +20115,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -20060,6 +20158,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20104,6 +20203,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20146,6 +20246,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20190,6 +20291,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20233,6 +20335,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20275,6 +20378,7 @@ public class Generator2 {
                         n.GenShouldPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -20958,7 +21062,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -21009,7 +21113,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -21060,7 +21164,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -21110,7 +21214,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -21160,7 +21264,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -21210,7 +21314,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -21260,7 +21364,7 @@ public class Generator2 {
                         i.GenMightCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -21295,7 +21399,8 @@ public class Generator2 {
     }
     public void GenMightPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -21305,6 +21410,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -21347,6 +21453,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -21391,6 +21498,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -21433,6 +21541,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -21477,6 +21586,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -21520,6 +21630,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -21562,6 +21673,7 @@ public class Generator2 {
                         n.GenMightPerf3();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -22245,7 +22357,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -22296,7 +22408,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -22347,7 +22459,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -22397,7 +22509,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -22447,7 +22559,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -22497,7 +22609,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -22547,7 +22659,7 @@ public class Generator2 {
                         i.GenCanCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -22916,7 +23028,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -22967,7 +23079,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -23018,7 +23130,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -23068,7 +23180,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -23118,7 +23230,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -23168,7 +23280,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -23218,7 +23330,7 @@ public class Generator2 {
                         i.GenMustCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -26104,7 +26216,8 @@ public class Generator2 {
     }
     public void GenPresPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -26114,6 +26227,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26153,6 +26267,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26192,6 +26307,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26230,6 +26346,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26268,6 +26385,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26306,6 +26424,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -26344,6 +26463,7 @@ public class Generator2 {
                         n.GenPresPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -27247,7 +27367,8 @@ public class Generator2 {
     }
     public void GenPastPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -27257,6 +27378,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -27295,6 +27417,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -27335,6 +27458,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -27374,6 +27498,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -27415,6 +27540,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -27455,6 +27581,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -27494,6 +27621,7 @@ public class Generator2 {
                         n.GenPastPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28403,7 +28531,8 @@ public class Generator2 {
     }
     public void GenFutPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -28413,6 +28542,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -28450,6 +28580,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28489,6 +28620,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28526,6 +28658,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28565,6 +28698,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28603,6 +28737,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -28640,6 +28775,7 @@ public class Generator2 {
                         n.GenFutPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29530,7 +29666,8 @@ public class Generator2 {
     }
     public void GenWouldPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -29540,6 +29677,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -29577,6 +29715,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29616,6 +29755,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29653,6 +29793,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29692,6 +29833,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29730,6 +29872,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -29767,6 +29910,7 @@ public class Generator2 {
                         n.GenWouldPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30653,7 +30797,8 @@ public class Generator2 {
     }
     public void GenCouldPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -30663,6 +30808,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -30700,6 +30846,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30739,6 +30886,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30776,6 +30924,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30815,6 +30964,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30853,6 +31003,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -30890,6 +31041,7 @@ public class Generator2 {
                         n.GenCouldPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -31779,7 +31931,8 @@ public class Generator2 {
     }
     public void GenShouldPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -31789,6 +31942,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -31826,6 +31980,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -31865,6 +32020,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -31902,6 +32058,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -31941,6 +32098,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -31979,6 +32137,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -32016,6 +32175,7 @@ public class Generator2 {
                         n.GenShouldPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -32904,7 +33064,8 @@ public class Generator2 {
     }
     public void GenMightPerf4() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 5);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -32914,6 +33075,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -32951,6 +33113,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -32990,6 +33153,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -33027,6 +33191,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -33066,6 +33231,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -33104,6 +33270,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -33141,6 +33308,7 @@ public class Generator2 {
                         n.GenMightPerf4();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -36851,8 +37019,6 @@ public class Generator2 {
         }
     } //hechos PD*/
 
-    //DIF 1
-    //PRESENTES
     public void GenPresSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 6);
@@ -37195,7 +37361,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -37247,7 +37413,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -37299,7 +37465,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -37350,7 +37516,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -37401,7 +37567,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -37452,7 +37618,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -37503,7 +37669,7 @@ public class Generator2 {
                         i.GenPresCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -37549,6 +37715,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37593,6 +37760,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37637,6 +37805,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37680,6 +37849,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37723,6 +37893,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37766,6 +37937,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -37809,6 +37981,7 @@ public class Generator2 {
                         n.GenPresPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Special2 s = new Special2();
@@ -38496,7 +38669,7 @@ public class Generator2 {
     public void GenPassCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -38521,7 +38694,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -38572,7 +38745,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -38623,7 +38796,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -38673,7 +38846,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -38723,7 +38896,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -38773,7 +38946,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -38823,7 +38996,7 @@ public class Generator2 {
                         i.GenPassCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -38858,7 +39031,8 @@ public class Generator2 {
     }
     public void GenPassPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -38868,6 +39042,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -38912,6 +39087,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -38958,6 +39134,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -39002,6 +39179,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -39048,6 +39226,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -39093,6 +39272,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -39137,6 +39317,7 @@ public class Generator2 {
                         n.GenPassPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -39848,7 +40029,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -39899,7 +40080,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -39950,7 +40131,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -40000,7 +40181,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -40050,7 +40231,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -40100,7 +40281,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -40150,7 +40331,7 @@ public class Generator2 {
                         i.GenFutCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -40185,7 +40366,8 @@ public class Generator2 {
     }
     public void GenFutPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -40195,6 +40377,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -40237,6 +40420,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -40281,6 +40465,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -40323,6 +40508,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -40367,6 +40553,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -40410,6 +40597,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -40452,6 +40640,7 @@ public class Generator2 {
                         n.GenFutPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41134,7 +41323,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -41185,7 +41374,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -41236,7 +41425,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -41286,7 +41475,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -41336,7 +41525,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -41386,7 +41575,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -41436,7 +41625,7 @@ public class Generator2 {
                         i.GenWouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -41471,7 +41660,8 @@ public class Generator2 {
     }
     public void GenWouldPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -41481,6 +41671,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -41523,6 +41714,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41567,6 +41759,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41609,6 +41802,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41653,6 +41847,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41696,6 +41891,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -41738,6 +41934,7 @@ public class Generator2 {
                         n.GenWouldPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -42419,7 +42616,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -42470,7 +42667,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -42521,7 +42718,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -42571,7 +42768,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -42621,7 +42818,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -42671,7 +42868,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -42721,7 +42918,7 @@ public class Generator2 {
                         i.GenCouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -42756,7 +42953,8 @@ public class Generator2 {
     }
     public void GenCouldPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -42766,6 +42964,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -42808,6 +43007,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -42852,6 +43052,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -42894,6 +43095,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -42938,6 +43140,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -42981,6 +43184,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -43023,6 +43227,7 @@ public class Generator2 {
                         n.GenCouldPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -43707,7 +43912,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -43758,7 +43963,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -43809,7 +44014,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -43859,7 +44064,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -43909,7 +44114,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -43959,7 +44164,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -44009,7 +44214,7 @@ public class Generator2 {
                         i.GenShouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -44044,7 +44249,8 @@ public class Generator2 {
     }
     public void GenShouldPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -44054,6 +44260,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -44096,6 +44303,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44140,6 +44348,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44182,6 +44391,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44226,6 +44436,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44269,6 +44480,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44311,6 +44523,7 @@ public class Generator2 {
                         n.GenShouldPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -44994,7 +45207,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -45045,7 +45258,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -45096,7 +45309,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -45146,7 +45359,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -45196,7 +45409,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -45246,7 +45459,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -45296,7 +45509,7 @@ public class Generator2 {
                         i.GenMightCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -45331,7 +45544,8 @@ public class Generator2 {
     }
     public void GenMightPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verb = (int) (Math.random() * 6);
+        //int verb = (int) (Math.random() * 6);
+        int verb = 0;
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -45341,6 +45555,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps1;
                         gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
                         break;
                     case 1:
                         Abstractos2 ab = new Abstractos2();
@@ -45383,6 +45598,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps2;
                         gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -45427,6 +45643,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps3;
                         gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -45469,6 +45686,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps3ella;
                         gene = n.ps3she;
+                        gene2 = n.ps3she2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -45513,6 +45731,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
+                        //gene2 = n.ps3it2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -45556,6 +45775,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps4;
                         gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -45598,6 +45818,7 @@ public class Generator2 {
                         n.GenMightPerf1();
                         gens = n.ps5;
                         gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                     case 1:
                         Oo2 o = new Oo2();
@@ -46281,7 +46502,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -46332,7 +46553,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -46383,7 +46604,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -46433,7 +46654,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -46483,7 +46704,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -46533,7 +46754,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -46583,7 +46804,7 @@ public class Generator2 {
                         i.GenCanCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -46952,7 +47173,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-                        //gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -47003,7 +47224,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-                        //gene2 = i.eng22;
+                        gene2 = i.eng22;
                         break;
 
                     case 3:
@@ -47054,7 +47275,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-                        //gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -47104,7 +47325,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-                        //gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -47154,7 +47375,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-                        //gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -47204,7 +47425,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        //gene2 = i.eng62;
+                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -47254,7 +47475,7 @@ public class Generator2 {
                         i.GenMustCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-                        //gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
