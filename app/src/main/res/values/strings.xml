@@ -140,6 +140,67 @@
         <item>Be Used To</item>
     </string-array>
 
+    <string-array name="structurestext">
+        <item>Tutorial</item>
+
+        <item>Present Simple</item>
+        <item>Present Continuous</item>
+        <item>Present Perfect</item>
+        <item>Present Perfect Continuous</item>
+
+        <item>Past Simple</item>
+        <item>Past Continuous</item>
+        <item>Past Perfect</item>
+        <item>Past Perfect Continuous</item>
+
+        <item>Future Simple</item>
+        <item>Future Continuous</item>
+        <item>Future Perfect</item>
+        <item>Future Perfect Continuous</item>
+
+        <item>Would Simple</item>
+        <item>Would Continuous</item>
+        <item>Would Perfect</item>
+        <item>Would Perfect Continuous</item>
+
+        <item>Could Simple</item>
+        <item>Could Continuous</item>
+        <item>Could Perfect</item>
+        <item>Could Perfect Continuous</item>
+
+        <item>Might Simple</item>
+        <item>Might Continuous</item>
+        <item>Might Perfect</item>
+        <item>Might Perfect Continuous</item>
+
+        <item>Should Simple</item>
+        <item>Should Continuous</item>
+        <item>Should Perfect</item>
+        <item>Should Perfect Continuous</item>
+
+        <item>Can Simple</item>
+        <item>Can Continuous</item>
+        <item>Must Simple</item>
+        <item>Must Continuous</item>
+
+        <item>Question Structure</item>
+        <item>Question Structure Modals</item>
+
+        <item>Feel Like Simple</item>
+        <item>Reported Speech</item>
+        <item>Incremento Paralelo</item>
+        <item>Verbal Adjectives</item>
+        <item>Relative Clause</item>
+
+        //quede aqui
+        <item>Want To</item>
+        <item>For To</item>
+        <item>Supposed To Present</item>
+        <item>Wish Past Perfect</item>
+        <item>Used To</item>
+        <item>Be Used To</item>
+    </string-array>
+
     <string-array name="vocab">
         <item>Tutorial</item>
         <item>0 to 50</item>

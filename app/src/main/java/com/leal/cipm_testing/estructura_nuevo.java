@@ -1488,7 +1488,6 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
         }
     }
-
     public void GenQuestionStructureModals1(){
         int tranRand = (int) (Math.random() * 24);
         switch (tranRand){

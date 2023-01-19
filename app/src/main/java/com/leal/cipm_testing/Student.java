@@ -18,11 +18,7 @@ public class Student {
 
     //LR
     boolean feelLikeSimple, reportedSpeech, incrementoParalelo, verbalAdjectives, relativeClause;
-    boolean whatSimple, whatContinuous, whatPerfect, whatModalsSimple, whatModalsContinuous, whatModalsPerfect;
-    boolean whenSimple, whenContinuous, whenPerfect, whenModalsSimple, whenModalsContinuous, whenModalsPerfect;
-    boolean whereSimple, whereContinuous, wherePerfect, whereModalsSimple, whereModalsContinuous, whereModalsPerfect;
-    boolean whySimple, whyContinuous, whyPerfect, whyModalsSimple, whyModalsContinuous, whyModalsPerfect;
-    boolean whoSimple, whoContinuous, whoPerfect, whoModalsSimple, whoModalsContinuous, whoModalsPerfect;
+    boolean questionStructure, questionStructureModals;
 
 
 
@@ -69,11 +65,7 @@ public class Student {
     String shouldsimpletime ,shouldContinuotime ,shouldPerfectotime ,shouldPerfectoContinuotime ;
     String wantTotime ,forTotime ,supposedToPresenttime ,wishPastPerfecttime ,usedTotime ,beUsedTotime ;
     String feelLikeSimpletime, reportedSpeechtime, incrementoParalelotime, verbalAdjectivestime, relativeClausetime;
-    String whatSimpletime, whatContinuoustime, whatPerfecttime, whatModalsSimpletime, whatModalsContinuoustime, whatModalsPerfecttime;
-    String whenSimpletime, whenContinuoustime, whenPerfecttime, whenModalsSimpletime, whenModalsContinuoustime, whenModalsPerfecttime;
-    String whereSimpletime, whereContinuoustime, wherePerfecttime, whereModalsSimpletime, whereModalsContinuoustime, whereModalsPerfecttime;
-    String whySimpletime, whyContinuoustime, whyPerfecttime, whyModalsSimpletime, whyModalsContinuoustime, whyModalsPerfecttime;
-    String whoSimpletime, whoContinuoustime, whoPerfecttime, whoModalsSimpletime, whoModalsContinuoustime, whoModalsPerfecttime;
+    String questionStructuretime, questionStructureModalstime;
 
     public int getPresentesimpleint() {
         return presentesimpleint;
@@ -739,379 +731,31 @@ public class Student {
         this.verbalAdjectivestime = verbalAdjectivestime;
     }
 
-    //Question with What
-    public boolean isWhatSimple() {
-        return whatSimple;
+    //Question structure
+    public boolean isQuestionStructure() {
+        return questionStructure;
     }
-    public void setWhatSimple(boolean whatSimple) {
-        this.whatSimple = whatSimple;
+    public void setQuestionStructure(boolean questionStructure) {
+        this.questionStructure = questionStructure;
     }
-    public boolean isWhatContinuous() {
-        return whatContinuous;
+    public boolean isQuestionStructureModals() {
+        return questionStructureModals;
     }
-    public void setWhatContinuous(boolean whatContinuous) {
-        this.whatContinuous = whatContinuous;
-    }
-    public boolean isWhatPerfect() {
-        return whatPerfect;
-    }
-    public void setWhatPerfect(boolean whatPerfect) {
-        this.whatPerfect = whatPerfect;
-    }
-    public boolean isWhatModalsSimple() {
-        return whatModalsSimple;
-    }
-    public void setWhatModalsSimple(boolean whatModalsSimple) {
-        this.whatModalsSimple = whatModalsSimple;
-    }
-    public boolean isWhatModalsContinuous() {
-        return whatModalsContinuous;
-    }
-    public void setWhatModalsContinuous(boolean whatModalsContinuous) {
-        this.whatModalsContinuous = whatModalsContinuous;
-    }
-    public boolean isWhatModalsPerfect() {
-        return whatModalsPerfect;
-    }
-    public void setWhatModalsPerfect(boolean whatModalsPerfect) {
-        this.whatModalsPerfect = whatModalsPerfect;
+    public void setQuestionStructureModals(boolean questionStructureModals) {
+        this.questionStructureModals = questionStructureModals;
     }
 
-    public String getWhatSimpletime() {
-        return whatSimpletime;
+    public String getQuestionStructuretime() {
+        return questionStructuretime;
     }
-    public void setWhatSimpletime(String whatSimpletime) {
-        this.whatSimpletime = whatSimpletime;
+    public void setQuestionStructuretime(String questionStructuretime) {
+        this.questionStructuretime = questionStructuretime;
     }
-    public String getWhatContinuoustime() {
-        return whatContinuoustime;
+    public String getQuestionStructureModalstime() {
+        return questionStructureModalstime;
     }
-    public void setWhatContinuoustime(String whatContinuoustime) {
-        this.whatContinuoustime = whatContinuoustime;
-    }
-    public String getWhatPerfecttime() {
-        return whatPerfecttime;
-    }
-    public void setWhatPerfecttime(String whatPerfecttime) {
-        this.whatPerfecttime = whatPerfecttime;
-    }
-    public String getWhatModalsSimpletime() {
-        return whatModalsSimpletime;
-    }
-    public void setWhatModalsSimpletime(String whatModalsSimpletime) {
-        this.whatModalsSimpletime = whatModalsSimpletime;
-    }
-    public String getWhatModalsContinuoustime() {
-        return whatModalsContinuoustime;
-    }
-    public void setWhatModalsContinuoustime(String whatModalsContinuoustime) {
-        this.whatModalsContinuoustime = whatModalsContinuoustime;
-    }
-    public String getWhatModalsPerfecttime() {
-        return whatModalsPerfecttime;
-    }
-    public void setWhatModalsPerfecttime(String whatModalsPerfecttime) {
-        this.whatModalsPerfecttime = whatModalsPerfecttime;
-    }
-
-    //Question with When
-    public boolean isWhenSimple() {
-        return whenSimple;
-    }
-    public void setWhenSimple(boolean whenSimple) {
-        this.whenSimple = whenSimple;
-    }
-    public boolean isWhenContinuous() {
-        return whenContinuous;
-    }
-    public void setWhenContinuous(boolean whenContinuous) {
-        this.whenContinuous = whenContinuous;
-    }
-    public boolean isWhenPerfect() {
-        return whenPerfect;
-    }
-    public void setWhenPerfect(boolean whenPerfect) {
-        this.whenPerfect = whenPerfect;
-    }
-    public boolean isWhenModalsSimple() {
-        return whenModalsSimple;
-    }
-    public void setWhenModalsSimple(boolean whenModalsSimple) {
-        this.whenModalsSimple = whenModalsSimple;
-    }
-    public boolean isWhenModalsContinuous() {
-        return whenModalsContinuous;
-    }
-    public void setWhenModalsContinuous(boolean whenModalsContinuous) {
-        this.whenModalsContinuous = whenModalsContinuous;
-    }
-    public boolean isWhenModalsPerfect() {
-        return whenModalsPerfect;
-    }
-    public void setWhenModalsPerfect(boolean whenModalsPerfect) {
-        this.whenModalsPerfect = whenModalsPerfect;
-    }
-
-    public String getWhenSimpletime() {
-        return whenSimpletime;
-    }
-    public void setWhenSimpletime(String whenSimpletime) {
-        this.whenSimpletime = whenSimpletime;
-    }
-    public String getWhenContinuoustime() {
-        return whenContinuoustime;
-    }
-    public void setWhenContinuoustime(String whenContinuoustime) {
-        this.whenContinuoustime = whenContinuoustime;
-    }
-    public String getWhenPerfecttime() {
-        return whenPerfecttime;
-    }
-    public void setWhenPerfecttime(String whenPerfecttime) {
-        this.whenPerfecttime = whenPerfecttime;
-    }
-    public String getWhenModalsSimpletime() {
-        return whenModalsSimpletime;
-    }
-    public void setWhenModalsSimpletime(String whenModalsSimpletime) {
-        this.whenModalsSimpletime = whenModalsSimpletime;
-    }
-    public String getWhenModalsContinuoustime() {
-        return whenModalsContinuoustime;
-    }
-    public void setWhenModalsContinuoustime(String whenModalsContinuoustime) {
-        this.whenModalsContinuoustime = whenModalsContinuoustime;
-    }
-    public String getWhenModalsPerfecttime() {
-        return whenModalsPerfecttime;
-    }
-    public void setWhenModalsPerfecttime(String whenModalsPerfecttime) {
-        this.whenModalsPerfecttime = whenModalsPerfecttime;
-    }
-
-    //Question with Where
-    public boolean isWhereSimple() {
-        return whereSimple;
-    }
-    public void setWhereSimple(boolean whereSimple) {
-        this.whereSimple = whereSimple;
-    }
-    public boolean isWhereContinuous() {
-        return whereContinuous;
-    }
-    public void setWhereContinuous(boolean whereContinuous) {
-        this.whereContinuous = whereContinuous;
-    }
-    public boolean isWherePerfect() {
-        return wherePerfect;
-    }
-    public void setWherePerfect(boolean wherePerfect) {
-        this.wherePerfect = wherePerfect;
-    }
-    public boolean isWhereModalsSimple() {
-        return whereModalsSimple;
-    }
-    public void setWhereModalsSimple(boolean whereModalsSimple) {
-        this.whereModalsSimple = whereModalsSimple;
-    }
-    public boolean isWhereModalsContinuous() {
-        return whereModalsContinuous;
-    }
-    public void setWhereModalsContinuous(boolean whereModalsContinuous) {
-        this.whereModalsContinuous = whereModalsContinuous;
-    }
-    public boolean isWhereModalsPerfect() {
-        return whereModalsPerfect;
-    }
-    public void setWhereModalsPerfect(boolean whereModalsPerfect) {
-        this.whereModalsPerfect = whereModalsPerfect;
-    }
-
-    public String getWhereSimpletime() {
-        return whereSimpletime;
-    }
-    public void setWhereSimpletime(String whereSimpletime) {
-        this.whereSimpletime = whereSimpletime;
-    }
-    public String getWhereContinuoustime() {
-        return whereContinuoustime;
-    }
-    public void setWhereContinuoustime(String whereContinuoustime) {
-        this.whereContinuoustime = whereContinuoustime;
-    }
-    public String getWherePerfecttime() {
-        return wherePerfecttime;
-    }
-    public void setWherePerfecttime(String wherePerfecttime) {
-        this.wherePerfecttime = wherePerfecttime;
-    }
-    public String getWhereModalsSimpletime() {
-        return whereModalsSimpletime;
-    }
-    public void setWhereModalsSimpletime(String whereModalsSimpletime) {
-        this.whereModalsSimpletime = whereModalsSimpletime;
-    }
-    public String getWhereModalsContinuoustime() {
-        return whereModalsContinuoustime;
-    }
-    public void setWhereModalsContinuoustime(String whereModalsContinuoustime) {
-        this.whereModalsContinuoustime = whereModalsContinuoustime;
-    }
-    public String getWhereModalsPerfecttime() {
-        return whereModalsPerfecttime;
-    }
-    public void setWhereModalsPerfecttime(String whereModalsPerfecttime) {
-        this.whereModalsPerfecttime = whereModalsPerfecttime;
-    }
-
-    //Question with Why
-    public boolean isWhySimple() {
-        return whySimple;
-    }
-    public void setWhySimple(boolean whySimple) {
-        this.whySimple = whySimple;
-    }
-    public boolean isWhyContinuous() {
-        return whyContinuous;
-    }
-    public void setWhyContinuous(boolean whyContinuous) {
-        this.whyContinuous = whyContinuous;
-    }
-    public boolean isWhyPerfect() {
-        return whyPerfect;
-    }
-    public void setWhyPerfect(boolean whyPerfect) {
-        this.whyPerfect = whyPerfect;
-    }
-    public boolean isWhyModalsSimple() {
-        return whyModalsSimple;
-    }
-    public void setWhyModalsSimple(boolean whyModalsSimple) {
-        this.whyModalsSimple = whyModalsSimple;
-    }
-    public boolean isWhyModalsContinuous() {
-        return whyModalsContinuous;
-    }
-    public void setWhyModalsContinuous(boolean whyModalsContinuous) {
-        this.whyModalsContinuous = whyModalsContinuous;
-    }
-    public boolean isWhyModalsPerfect() {
-        return whyModalsPerfect;
-    }
-    public void setWhyModalsPerfect(boolean whyModalsPerfect) {
-        this.whyModalsPerfect = whyModalsPerfect;
-    }
-
-    public String getWhySimpletime() {
-        return whySimpletime;
-    }
-    public void setWhySimpletime(String whySimpletime) {
-        this.whySimpletime = whySimpletime;
-    }
-    public String getWhyContinuoustime() {
-        return whyContinuoustime;
-    }
-    public void setWhyContinuoustime(String whyContinuoustime) {
-        this.whyContinuoustime = whyContinuoustime;
-    }
-    public String getWhyPerfecttime() {
-        return whyPerfecttime;
-    }
-    public void setWhyPerfecttime(String whyPerfecttime) {
-        this.whyPerfecttime = whyPerfecttime;
-    }
-    public String getWhyModalsSimpletime() {
-        return whyModalsSimpletime;
-    }
-    public void setWhyModalsSimpletime(String whyModalsSimpletime) {
-        this.whyModalsSimpletime = whyModalsSimpletime;
-    }
-    public String getWhyModalsContinuoustime() {
-        return whyModalsContinuoustime;
-    }
-    public void setWhyModalsContinuoustime(String whyModalsContinuoustime) {
-        this.whyModalsContinuoustime = whyModalsContinuoustime;
-    }
-    public String getWhyModalsPerfecttime() {
-        return whyModalsPerfecttime;
-    }
-    public void setWhyModalsPerfecttime(String whyModalsPerfecttime) {
-        this.whyModalsPerfecttime = whyModalsPerfecttime;
-    }
-
-    //Question with Who
-    public boolean isWhoSimple() {
-        return whoSimple;
-    }
-    public void setWhoSimple(boolean whoSimple) {
-        this.whoSimple = whoSimple;
-    }
-    public boolean isWhoContinuous() {
-        return whoContinuous;
-    }
-    public void setWhoContinuous(boolean whoContinuous) {
-        this.whoContinuous = whoContinuous;
-    }
-    public boolean isWhoPerfect() {
-        return whoPerfect;
-    }
-    public void setWhoPerfect(boolean whoPerfect) {
-        this.whoPerfect = whoPerfect;
-    }
-    public boolean isWhoModalsSimple() {
-        return whoModalsSimple;
-    }
-    public void setWhoModalsSimple(boolean whoModalsSimple) {
-        this.whoModalsSimple = whoModalsSimple;
-    }
-    public boolean isWhoModalsContinuous() {
-        return whoModalsContinuous;
-    }
-    public void setWhoModalsContinuous(boolean whoModalsContinuous) {
-        this.whoModalsContinuous = whoModalsContinuous;
-    }
-    public boolean isWhoModalsPerfect() {
-        return whoModalsPerfect;
-    }
-    public void setWhoModalsPerfect(boolean whoModalsPerfect) {
-        this.whoModalsPerfect = whoModalsPerfect;
-    }
-
-    public String getWhoSimpletime() {
-        return whoSimpletime;
-    }
-    public void setWhoSimpletime(String whoSimpletime) {
-        this.whoSimpletime = whoSimpletime;
-    }
-    public String getWhoContinuoustime() {
-        return whoContinuoustime;
-    }
-    public void setWhoContinuoustime(String whoContinuoustime) {
-        this.whoContinuoustime = whoContinuoustime;
-    }
-    public String getWhoPerfecttime() {
-        return whoPerfecttime;
-    }
-    public void setWhoPerfecttime(String whoPerfecttime) {
-        this.whoPerfecttime = whoPerfecttime;
-    }
-    public String getWhoModalsSimpletime() {
-        return whoModalsSimpletime;
-    }
-    public void setWhoModalsSimpletime(String whoModalsSimpletime) {
-        this.whoModalsSimpletime = whoModalsSimpletime;
-    }
-    public String getWhoModalsContinuoustime() {
-        return whoModalsContinuoustime;
-    }
-    public void setWhoModalsContinuoustime(String whoModalsContinuoustime) {
-        this.whoModalsContinuoustime = whoModalsContinuoustime;
-    }
-    public String getWhoModalsPerfecttime() {
-        return whoModalsPerfecttime;
-    }
-    public void setWhoModalsPerfecttime(String whoModalsPerfecttime) {
-        this.whoModalsPerfecttime = whoModalsPerfecttime;
+    public void setQuestionStructureModalstime(String questionStructureModalstime) {
+        this.questionStructureModalstime = questionStructureModalstime;
     }
 
     @NonNull
@@ -1159,40 +803,8 @@ public class Student {
                 + "\n"+ "Verbal Adjectives "+this.verbalAdjectives
                 + "\n"+ "Relative Clause "+this.relativeClause
 
-                + "\n"+ "What Simple "+this.whatSimple
-                + "\n"+ "What Continuous "+this.whatContinuous
-                + "\n"+ "What Perfect "+this.whatPerfect
-                + "\n"+ "What Modals Simple "+this.whatModalsSimple
-                + "\n"+ "What Modals Continuous "+this.whatModalsContinuous
-                + "\n"+ "What Modals Perfect "+this.whatModalsPerfect
-
-                + "\n"+ "When Simple "+this.whenSimple
-                + "\n"+ "When Continuous "+this.whenContinuous
-                + "\n"+ "When Perfect "+this.whenPerfect
-                + "\n"+ "When Modals Simple "+this.whenModalsSimple
-                + "\n"+ "When Modals Continuous "+this.whenModalsContinuous
-                + "\n"+ "When Modals Perfect "+this.whenModalsPerfect
-
-                + "\n"+ "Where  Simple "+this.whereSimple
-                + "\n"+ "Where Continuous "+this.whereContinuous
-                + "\n"+ "Where Perfect "+this.wherePerfect
-                + "\n"+ "Where Modals Simple "+this.whereModalsSimple
-                + "\n"+ "Where Modals Continuous "+this.whereModalsContinuous
-                + "\n"+ "Where Modals Perfect "+this.whereModalsPerfect
-
-                + "\n"+ "Why  Simple "+this.whySimple
-                + "\n"+ "Why Continuous "+this.whyContinuous
-                + "\n"+ "Why Perfect "+this.whyPerfect
-                + "\n"+ "Why Modals Simple "+this.whyModalsSimple
-                + "\n"+ "Why Modals Continuous "+this.whyModalsContinuous
-                + "\n"+ "Why Modals Perfect "+this.whyModalsPerfect
-
-                + "\n"+ "Who  Simple "+this.whoSimple
-                + "\n"+ "Who Continuous "+this.whoContinuous
-                + "\n"+ "Who Perfect "+this.whoPerfect
-                + "\n"+ "Who Modals Simple "+this.whoModalsSimple
-                + "\n"+ "Who Modals Continuous "+this.whoModalsContinuous
-                + "\n"+ "Who Modals Perfect "+this.whoModalsPerfect
+                + "\n"+ "Question Structure "+this.questionStructure
+                + "\n"+ "Question Structure Modals "+this.questionStructureModals
 
                 + "\n"+ "0 a 50 "+this.vocab0a50
                 + "\n"+ "50 a 100 "+this.vocab50a100
