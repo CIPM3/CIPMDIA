@@ -942,7 +942,7 @@ public class Intrans3 {
     }//PD 16/06/2022
 
     //Pass
-    public void GenPassSimp1() {
+    public void GenPastSimp1() {
         
         Pasts3 pas = new Pasts3();
         randstarter();
@@ -1018,7 +1018,7 @@ public class Intrans3 {
         }
 
     }//PD 16/06/2022
-    public void GenPassCont1() {
+    public void GenPastCont1() {
         
         randstarter();
         String temp = vib[rand];
@@ -1059,7 +1059,7 @@ public class Intrans3 {
         }
 
     }//PD 16/06/2022
-    public void GenPassPerf1() {
+    public void GenPastPerf1() {
         
         randstarter();
         String temp = vib[rand];
@@ -1099,7 +1099,7 @@ public class Intrans3 {
                 break;
         }
     }//PD 16/06/2022
-    public void GenPassPerfCont1() {
+    public void GenPastPerfCont1() {
         
         randstarter();
         String temp = vib[rand];
@@ -4284,7 +4284,7 @@ public class Intrans3 {
     }//PD 08/02/2022
 
     //Pass
-    public void GenPassSimp2() {
+    public void GenPastSimp2() {
         
         Pasts3 pas = new Pasts3();
         randstarter();
@@ -5701,7 +5701,7 @@ public class Intrans3 {
                 break;
         }
     }//PD 08/02/2022
-    public void GenPassPerf2() {
+    public void GenPastPerf2() {
         
         Pasts3 pas = new Pasts3();
         randstarter();
@@ -6199,7 +6199,7 @@ public class Intrans3 {
                 break;
         }
     }//PD 14/03/2022
-    public void GenPassPerfCont2() {
+    public void GenPastPerfCont2() {
         
         Pasts3 pas = new Pasts3();
         randstarter();
@@ -24297,7 +24297,7 @@ public class Intrans3 {
         }
 
     }//LR 14/04/2022
-    public void GenPassPerf3() {
+    public void GenPastPerf3() {
         
         randstarter();
         String temp = vib[rand];
@@ -24798,7 +24798,7 @@ public class Intrans3 {
                 break;
         }
     }//LR 14/04/2022
-    public void GenPassPerfCont3() {
+    public void GenPastPerfCont3() {
         
         randstarter();
         String temp = vib[rand];

@@ -1154,7 +1154,7 @@ public class Generator4 {
     }
 
     //PASADOS
-    public void GenPassSimp2() {
+    public void GenPastSimp2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -1438,7 +1438,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassCont2() {
+    public void GenPastCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -1720,7 +1720,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassPerf2() {
+    public void GenPastPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -2006,7 +2006,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassPerfCont2() {
+    public void GenPastPerfCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -11880,7 +11880,7 @@ public class Generator4 {
     }
 
     //PASADOS
-    public void GenPassSimp3() {
+    public void GenPastSimp3() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 3);
         String temp = pronombres[rand];
@@ -12124,7 +12124,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassCont3() {
+    public void GenPastCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -12406,7 +12406,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassPerf3() {
+    public void GenPastPerf3() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -12692,7 +12692,7 @@ public class Generator4 {
 
         }
     }
-    public void GenPassPerfCont3() {
+    public void GenPastPerfCont3() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
