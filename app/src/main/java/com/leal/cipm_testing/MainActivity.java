@@ -210,6 +210,8 @@ public class MainActivity extends AppCompatActivity {
 */
     }
     public void ConInt(View vista) {
+
+
         if(prefs.getPremium()==1){
             Intent intento = new Intent(this, rachel.class);
             startActivity(intento);
@@ -277,12 +279,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void chose_spa_int(View vista) {
-        if(prefs.getPremium()==1){
+        Intent intento = new Intent(this, spa_int_nuevo.class);
+        startActivity(intento);
+
+       /* if(prefs.getPremium()==1){
             Intent intento = new Intent(this, spa_int_nuevo.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
 
         //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();

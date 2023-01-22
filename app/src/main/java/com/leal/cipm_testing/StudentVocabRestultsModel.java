@@ -4,10 +4,11 @@ public class StudentVocabRestultsModel {
 
     // 0 a 50 booleanos
     boolean the,tobe,and,of,a,in,to,tohave,it,I,
-            that1,that2,for1,for2,you,he,with,on,todo,tosay,
-            this1,they,at,but,we,his,from1,from2,since,by,she,
-            or,as1,as2,what1,what2,togo,their,can,who,toget,if1,
-            would,her,all,my,tomake,about1,about2,toknow,will,up;
+            that1,that2,for1,for2,you,he,with,
+            on,todo,tosay, this1,they,at,but,we,his,
+            from1,from2,since,by,she, or,as1,as2,what1,what2,togo,
+            their,can,who, toget,if1, would,her,all,my,tomake,about1,
+            about2,toknow,will,up;
 
     //50 a 100 booleanos
     boolean one,time,there,year,so,think,when,which,
@@ -17,6 +18,7 @@ public class StudentVocabRestultsModel {
             first,also,new1,because,day,more1,use,no,man,
             find,here,thing,give,many,well;
 
+
     //100 a 150 booleanos
     boolean only ,those ,tell ,one1 ,very ,her1 ,even ,
             back ,any ,good ,woman ,through ,us ,life ,child ,
@@ -25,6 +27,9 @@ public class StudentVocabRestultsModel {
             too ,feel ,three ,when1 ,state ,never ,become ,between ,
             high ,really ,something ,most ,another ,much ,
             another1 ,much1 ,family ,own ,out1 ,leave ,put;
+
+
+
 
     //150 a 200 booleanos
     boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
@@ -36,6 +41,7 @@ public class StudentVocabRestultsModel {
             where2 ,system ,each ,right ,program ,hear ,
             so2 ,question ,during ,work2 ,play ;
 
+
     //200 a 250 booleanos
     boolean goverment ,run ,small ,number ,off ,always ,move ,
             like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
@@ -45,6 +51,18 @@ public class StudentVocabRestultsModel {
             study ,book ,eye ,job ,word ,though ,business ,issue ,
             side ,kind ;
 
+
+
+
+
+
+
+
+
+
+
+
+
     //250 a 300 booleanos
     boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
             after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
@@ -53,6 +71,10 @@ public class StudentVocabRestultsModel {
             bad ,lose ,however ,member ,pay ,law ,meet ,car ,city ,
             almost ,include ,continue1 ,set ,later ,community, much2,
             name;
+
+
+
+
 
     //300 a 350 booleanos
     boolean  five ,once ,white ,least ,president ,learn ,
@@ -65,6 +87,8 @@ public class StudentVocabRestultsModel {
             add ,office ,spend ,door ,health ,person ,
             art ,sure ,such2 ;
 
+
+
     //350 a 400 booleanos
     boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
             morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
@@ -74,6 +98,8 @@ public class StudentVocabRestultsModel {
             toprocess ,music ,including ,toconsider ,toappear ,actually ,
             tobuy , probably ;
 
+
+
     //400 a 450 booleanos
     boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
             tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
@@ -82,6 +108,11 @@ public class StudentVocabRestultsModel {
             control ,toraise ,care ,perhaps ,little2 ,late ,hard ,field ,
             else2 ,topass ,former ,sell ,major ,sometimes ,require ,along ,
             development ,themselves;
+
+
+
+
+
 
     //450 a 500 booleanos
     boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
