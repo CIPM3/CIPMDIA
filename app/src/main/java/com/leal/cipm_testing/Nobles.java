@@ -1075,7 +1075,7 @@ public class Nobles {
 
                 ps5 = "nosotros " + "estabamos " + vnbcs[v] + nnoblesesp[n];
                 ps5eng = "we " + "were " + vnbc[v] + nnobles[n];
-                ps5eng = "we " + "were " + vnbc[v] + nnobles[n];
+                ps5eng2 = "we " + "were " + vnbc[v] + nnobles[n];
                 break;
             case 1:
                 ps1 = "yo no " + "estaba " + vnbcs[v] + nnoblesesp[n];
@@ -1449,6 +1449,7 @@ public class Nobles {
 
 
     } // neg
+
     // aqui estan los del would
     public void GenWouldSimp2() {
         switch (neg) {
