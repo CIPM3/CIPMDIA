@@ -52,24 +52,33 @@ public class MainTesting extends AppCompatActivity {
     FirebaseAuth       mAuth;
     GoogleSignInClient gsc;
     String t0, t1, t2, t3, t4, t5, t6,engtx;
-    int prom;
-    String selection,selectionv;
-    int cp,cn;
     VideoView vv;
     ImageButton b;
     String see= "see Tutorial";
+    String [] temp= {"Conscious Interference"};
+    String url = "https://adrianlealcaldera.com/kermet.mp3";
+    String selection,selectionv;
     boolean intxsub,intxprep,intxob,intxref,intpasiva;
     Timer timer;
     TimerTask timerTask;
     Double timen = 0.0;
-    String [] temp= {"Conscious Interference"};
-    String url = "https://adrianlealcaldera.com/kermet.mp3";
+    int prom;
+    int cp,cn;
+    int seconds;
+    int minutes;
+    int hours;
+    int rounded;
     int countPos=0;
     int pos0, pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9;
     int rsa;
-    int score0, score1, score2,score3, score4, score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19;
+    int ContadorDeVocabulario=0;
+    int score0, score1, score2,score3, score4, score5,score6,
+            score7,score8,score9,score10,score11,score12,score13,
+            score14,score15,score16,score17,score18,score19;
     int ScoreFinal;
     DocumentReference docrefStructure,docrefVocab;
+    Student studentObject= new Student();
+    StudentVocabRestultsModel vocabDbChecker= new StudentVocabRestultsModel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,7 +130,6 @@ public class MainTesting extends AppCompatActivity {
         Prefs prefs = new Prefs(this);
         PremiumAndArrayControler(prefs);
     }
-    boolean personalizedPlan;
     private void PremiumAndArrayControler(Prefs prefs) {
             if (prefs.getPremium()==1){
                 //Give the user all the premium features
@@ -357,7 +365,7 @@ public class MainTesting extends AppCompatActivity {
         getsent.setVisibility(View.VISIBLE);
 
     }
-    public void chooser(View view)  {
+    public void StarterChooser(View view)  {
         switch (selectionv){
             case "Syntax":
                 startTest();
@@ -378,7 +386,6 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-
     public  void   startTest(){
 
         save.setVisibility(View.VISIBLE);
@@ -3686,7 +3693,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-
     public void soundtest(){
 
         save.setVisibility(View.VISIBLE);
@@ -6559,13 +6565,13 @@ public class MainTesting extends AppCompatActivity {
 
         }
     }
-    public void answerchecker(View view){
+    public void AnswerCheckerChooser(View view){
         switch (selectionv){
             case "Syntax":
                 SendStructureInfoToDb();
                 break;
             case "Vocabulary":
-                SendVocabIntoToDb();
+                CheckRightorWrongVocab();
                 break;
             case "Spanish Interference":
                 spintdbtesting();
@@ -6575,8 +6581,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
-    Student studentObject= new Student();
-    boolean[] temporal= new boolean[99] ;
     public void SendStructureInfoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -6601,7 +6605,7 @@ public class MainTesting extends AppCompatActivity {
                 timerTask.cancel();
             }
             timerTask = null;
-            GetStateOfStructureSendInfoToDb();
+            CheckStructureDbIfAlreadyApproved();
         } else if (cn == 4) {
             Toast.makeText(this, selection + "not passed Pasa a otra estructura" + String.valueOf(cn), Toast.LENGTH_SHORT).show();
             cn = 0;
@@ -6610,7 +6614,7 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    private void GetStateOfStructureSendInfoToDb() {
+    private void CheckStructureDbIfAlreadyApproved() {
         CollectionReference uid = db.collection(userid);
         Map<String, Object> user = new HashMap<>();
         docrefStructure.get().
@@ -6953,26 +6957,24 @@ public class MainTesting extends AppCompatActivity {
 
 
     }
-    int ContadorDeVocabulario=0;
-    StudentVocabRestultsModel vocabDbChecker= new StudentVocabRestultsModel(); 
-
-    public void SendVocabIntoToDb()  {
+    public void CheckRightorWrongVocab()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
         if(t.equalsIgnoreCase(t2)){
              Toast.makeText(this, String.valueOf(cp)+" is correct", Toast.LENGTH_SHORT).show();
              turnTrue(t.trim());
-             CountAndApproveRangeOfVocab();
+             ApproveRangeOfVocab();
+             CheckVocabDbIfAlreadyApproved();
 
         }else {
             Toast.makeText(this, String.valueOf(cn)+" is not correct "+txteng, Toast.LENGTH_SHORT).show();
+            CheckVocabDbIfAlreadyApproved();
         }
 
-        CheckVocabDbAndSendInfo();
+
 
     }
-
-    private void CheckVocabDbAndSendInfo() {
+    private void CheckVocabDbIfAlreadyApproved() {
         docrefVocab.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -7937,11 +7939,14 @@ public class MainTesting extends AppCompatActivity {
                 }
                 if(vocabDbChecker.best){
                     best=true;
-                }if(vocabDbChecker.several){
+                }
+                if(vocabDbChecker.several){
                     several=true;
-                }if(vocabDbChecker.idea){
+                }
+                if(vocabDbChecker.idea){
                     idea=true;
-                }if(vocabDbChecker.kid){
+                }
+                if(vocabDbChecker.kid){
                     kid=true;
                 }if(vocabDbChecker.body){
                     body=true;
@@ -8227,9 +8232,11 @@ public class MainTesting extends AppCompatActivity {
                 //450 a 500 empieza
                 if(vocabDbChecker.report){
                     report=true;
-                }if(vocabDbChecker.role){
+                }
+                if(vocabDbChecker.role){
                     role=true;
-                }if(vocabDbChecker.better){
+                }
+                if(vocabDbChecker.better){
                     better=true;
                 }if(vocabDbChecker.economic){
                     economic=true;
@@ -8326,24 +8333,14 @@ public class MainTesting extends AppCompatActivity {
                 }if(vocabDbChecker.value){
                     value=true;
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                SendResultOfTestToVocabDB();
 
 
             }
         });
+
+    }
+    private void SendResultOfTestToVocabDB() {
         CollectionReference uid= db.collection(userid);
         Map<String, Object> user = new HashMap<>();
 
@@ -8873,8 +8870,7 @@ public class MainTesting extends AppCompatActivity {
 
         uid.document("vocabulary").set(user);
     }
-
-    private void CountAndApproveRangeOfVocab() {
+    private void ApproveRangeOfVocab() {
         ContadorDeVocabulario++;
         if(ContadorDeVocabulario>29){
             switch (selection){
@@ -8910,7 +8906,6 @@ public class MainTesting extends AppCompatActivity {
                 break;
             }}
     }
-
     public void spintdbtesting()  {
         String ansin = Answerinput.getText().toString().trim();
         if (
@@ -9151,10 +9146,6 @@ public class MainTesting extends AppCompatActivity {
         };
         timer.scheduleAtFixedRate(timerTask, 0 ,1000);
     }
-    int seconds;
-    int minutes;
-    int hours;
-    int rounded;
     private String getTimerText() {
          rounded = (int) Math.round(timen);
 
