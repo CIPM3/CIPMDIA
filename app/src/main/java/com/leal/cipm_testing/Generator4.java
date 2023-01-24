@@ -33673,7 +33673,7 @@ public class Generator4 {
                 break;
         }
     }
-    public void GenPassPerf1() {
+    public void GenPastPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -33959,7 +33959,7 @@ public class Generator4 {
                 break;
         }
     }
-    public void GenPassPerfCont1() {
+    public void GenPastPerfCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];

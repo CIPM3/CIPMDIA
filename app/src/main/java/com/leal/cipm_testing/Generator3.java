@@ -33840,7 +33840,7 @@ gene2 = i.eng72;
                 break;
         }
     }
-    public void GenPassPerf1() {
+    public void GenPastPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
@@ -34126,7 +34126,7 @@ gene2 = i.eng72;
                 break;
         }
     }
-    public void GenPassPerfCont1() {
+    public void GenPastPerfCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];

@@ -898,7 +898,7 @@ public class Nobles {
         }
 
 
-    }  // ya en negativo
+    }
     public void GenPresPerfCont2() {
         switch (neg) {
             case 0:
