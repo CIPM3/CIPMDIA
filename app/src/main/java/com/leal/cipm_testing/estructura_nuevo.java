@@ -8754,10 +8754,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty1() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif1";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 0;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -20226,10 +20226,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty2() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif2";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 1;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -31698,10 +31698,10 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void dificulty3() {
         limpans();
-        algosele = "dif4";
+        algosele = "dif3";
         checarischeck();
         mostrar_layout();
-        r = 3;
+        r = 2;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();

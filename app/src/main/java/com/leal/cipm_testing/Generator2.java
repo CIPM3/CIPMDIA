@@ -13511,7 +13511,7 @@ gene2 = i.eng72;
                         i.GenPresCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
