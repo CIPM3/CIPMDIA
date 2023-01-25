@@ -429,8 +429,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 } else {
                     ai1.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_1.setVisibility(View.GONE);
-                    inc_1.setVisibility(View.VISIBLE);
-                    // mic_1.setVisibility(View.GONE);
+                    //inc_1.setVisibility(View.VISIBLE);
+                    mic_1.setVisibility(View.VISIBLE);
                     lay_resp_1.setVisibility(View.VISIBLE);
                 }
                 break;
@@ -440,10 +440,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 if (temp2.equalsIgnoreCase(r2)) {
                     ai2.setBackgroundColor(Color.parseColor("#E6FBEB"));
                     pass_2.setVisibility(View.VISIBLE);
-
                     inc_2.setVisibility(View.GONE);
                     mic_2.setVisibility(View.GONE);
-
                     lay_resp_2.setVisibility(View.GONE);
                     increaseCounter();
                     condicionParaPasarEs(5);
@@ -452,7 +450,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     ai2.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_2.setVisibility(View.GONE);
 
-                    inc_2.setVisibility(View.VISIBLE);
+                   // inc_2.setVisibility(View.VISIBLE);
                     mic_2.setVisibility(View.GONE);
 
                     lay_resp_2.setVisibility(View.VISIBLE);
@@ -476,7 +474,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     ai3.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_3.setVisibility(View.GONE);
 
-                    inc_3.setVisibility(View.VISIBLE);
+                 //   inc_3.setVisibility(View.VISIBLE);
                     mic_3.setVisibility(View.GONE);
 
                     lay_resp_3.setVisibility(View.VISIBLE);
@@ -500,7 +498,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                     ai4.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_4.setVisibility(View.GONE);
 
-                    inc_4.setVisibility(View.VISIBLE);
+                  //  inc_4.setVisibility(View.VISIBLE);
                     mic_4.setVisibility(View.GONE);
 
                     lay_resp_4.setVisibility(View.VISIBLE);
@@ -524,10 +522,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 } else {
                     ai5.setBackgroundColor(Color.parseColor("#FEE6E6"));
                     pass_5.setVisibility(View.GONE);
-
-                    inc_5.setVisibility(View.VISIBLE);
+                 // inc_5.setVisibility(View.VISIBLE);
                     mic_5.setVisibility(View.GONE);
-
                     lay_resp_5.setVisibility(View.VISIBLE);
                 }
 

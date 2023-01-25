@@ -8028,7 +8028,8 @@ public class MainTesting extends AppCompatActivity {
 
                 if(vocabDbChecker.war){
                     war=true;
-                }if(vocabDbChecker.history){
+                }
+                if(vocabDbChecker.history){
                     history=true;
                 }if(vocabDbChecker.party){
                     party=true;
@@ -8396,7 +8397,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("toknow",toknow);
         user.put("will",will);
         user.put("up",up);
-        user.put("0to50",passed0to50);
+        user.put("passed0to50",passed0to50);
         //aqui termina 0 a 50
 
         //50 a 100
@@ -8447,7 +8448,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("thing",thing);
         user.put("give",give);
         user.put("many",many);
-        user.put("50to100",passed50to100);
+        user.put("passed50to100",passed50to100);
 
         //aqui termina 50 a 100
 
@@ -8498,7 +8499,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("own",own);
         user.put("leave",leave);
         user.put("put",put);
-        user.put("100to150",passed100to150);
+        user.put("passed100to150",passed100to150);
         //aqui termina 100 a 150
 
         user.put("old",old);
@@ -8547,7 +8548,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("during",during);
         user.put("work2",work2);
         user.put("play",play);
-        user.put("150to200",passed150to200);
+        user.put("passed150to200",passed150to200);
         //aqui termina 150 a 200
 
         user.put("goverment",goverment);
@@ -8600,7 +8601,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("issue",issue);
         user.put("side",side);
         user.put("kind",kind);
-        user.put("200to250", passed200to250);
+        user.put("passed200to250", passed200to250);
         //aqui termina 200 a 250
 
         user.put("four",four);
@@ -8652,7 +8653,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("community",community);
         user.put("much2",much2);
         user.put("name",name);
-        user.put("250to300",passed250to300);
+        user.put("passed250to300",passed250to300);
         //aqui termina 250 a 300
 
         user.put("five",five);
@@ -8705,7 +8706,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("art",art);
         user.put("sure",sure);
         user.put("such2",such2);
-        user.put("300to350",passed300to350);
+        user.put("passed300to350",passed300to350);
         //aqui termina 300 a 350
 
         user.put("war",war);
@@ -8758,7 +8759,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("actually",actually);
         user.put("tobuy",tobuy);
         user.put("probably",probably);
-        user.put("350to400",passed350to400);
+        user.put("passed350to400",passed350to400);
         //aqui termina 350 a 400
 
         user.put("human",human);
@@ -8812,7 +8813,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("along",along);
         user.put("development",development);
         user.put("themselves",themselves);
-        user.put("400to450",passed400to450);
+        user.put("passed400to450",passed400to450);
         //aqui termina 400 a 450
 
         user.put("report",report);
@@ -8865,7 +8866,7 @@ public class MainTesting extends AppCompatActivity {
         user.put("tothank",tothank);
         user.put("toreceive",toreceive);
         user.put("value",value);
-        user.put("450to500",passed450to500);
+        user.put("passed450to500",passed450to500);
         //aqui termina 450 a 500
 
         uid.document("vocabulary").set(user);

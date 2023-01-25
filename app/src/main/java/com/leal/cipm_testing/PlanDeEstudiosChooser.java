@@ -12,13 +12,15 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class PlanDeEstudiosChooser extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     String userid;
-    DocumentReference docref,docrefStructure;
+    DocumentReference docref,docrefStructure,docrefVocab;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     StudentVocabRestultsModel svrm = new StudentVocabRestultsModel();
     Student studentObject = new Student();
@@ -53,7 +55,12 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         basicPlanRecommendedBtn= findViewById(R.id.basicplanbtn);
         docref=db.collection(userid).document("WhereisStudent");
         docrefStructure = db.collection(userid).document("structures");
-        getInfoFromDbStructure();
+        docrefVocab= db.collection(userid).document("vocabulary"    );
+        CallsDbToCreateCustomArraysAfterTesting();
+        CreatesCustomStructureArrayAfterTesting();
+        CreatesCustomVocabArrayAfterTesting();
+        SendCustomStructuresToDb();
+
 
     }
     public boolean isOnPersonalizedPlanMethod() {
@@ -88,314 +95,347 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         });
     }
     String[] DbResultStructure = new String[99];
-    String[] structureArray= new String[99];
-    int numbertoSubtract;
-    boolean[] temporal= new boolean[99];
-    List<String> stringList;
+    String[] DbResultVocab = new String[99];
 
-    public void getInfoFromDbStructure(){
+    String[] structureArray= new String[99];
+    String[] vocabArray= new String[99];
+
+    boolean[] TempBoolForStructure = new boolean[99];
+    boolean[] TempBoolForVocab = new boolean[99];
+
+
+    public void CallsDbToCreateCustomArraysAfterTesting(){
         docrefStructure.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 studentObject=  documentSnapshot.toObject(Student.class);
                 assert studentObject != null;
-                PullsTrueStructuresFromDb();
+                CreatesCustomStructureArrayAfterTesting();
             }
         });
+        docrefVocab.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                svrm=documentSnapshot.toObject(StudentVocabRestultsModel.class);
+                assert svrm!=null;
+                CreatesCustomVocabArrayAfterTesting();
+            }
+        });
+
+
     }
-    private void PullsTrueStructuresFromDb() {
+    private void CreatesCustomVocabArrayAfterTesting() {
+        TempBoolForVocab[0]=svrm.passed0to50;
+        TempBoolForVocab[1]=svrm.passed50to100;
+        TempBoolForVocab[2]=svrm.passed100to150;
+        TempBoolForVocab[3]=svrm.passed150to200;
+        TempBoolForVocab[5]=svrm.passed200to250;
+        TempBoolForVocab[6]=svrm.passed250to300;
+        TempBoolForVocab[7]=svrm.passed300to350;
+        TempBoolForVocab[8]=svrm.passed350to400;
+        TempBoolForVocab[9]=svrm.passed400to450;
+        TempBoolForVocab[10]=svrm.passed450to500;
+
+        System.arraycopy(vocabArray, 0, DbResultVocab, 0, vocabArray.length);
+        List<String> list = new ArrayList<String>();
+        for(String s : DbResultVocab) {
+            if(s != null && s.length() > 0) {
+                list.add(s);
+            }
+        }
+        DbResultVocab = list.toArray(new String[list.size()]);
+
+    }
+    private void CreatesCustomStructureArrayAfterTesting() {
         //asks if the boolean stored at Db that was
         // put there by the test is true or false
         // puts it into an array
-        temporal[0]=studentObject.presentesimple;
-        temporal[1]=studentObject.presenteContinuo;
-        temporal[2]=studentObject.presentePerfecto;
-        temporal[3]=studentObject.presentePerfectoContinuo;
+        TempBoolForStructure[0]=studentObject.presentesimple;
+        TempBoolForStructure[1]=studentObject.presenteContinuo;
+        TempBoolForStructure[2]=studentObject.presentePerfecto;
+        TempBoolForStructure[3]=studentObject.presentePerfectoContinuo;
         // pasts
-        temporal[4]= studentObject.pastsimple;
-        temporal[5]=studentObject.pastContinuo;
-        temporal[6]=studentObject.pastPerfecto;
-        temporal[7]=studentObject.pastPerfectoContinuo;
+        TempBoolForStructure[4]= studentObject.pastsimple;
+        TempBoolForStructure[5]=studentObject.pastContinuo;
+        TempBoolForStructure[6]=studentObject.pastPerfecto;
+        TempBoolForStructure[7]=studentObject.pastPerfectoContinuo;
         //futures
-        temporal[8]= studentObject.futuresimple;
-        temporal[9]=studentObject.futureContinuo;
-        temporal[10]=studentObject.futurePerfecto;
-        temporal[11]=studentObject.futurePerfectoContinuo;
+        TempBoolForStructure[8]= studentObject.futuresimple;
+        TempBoolForStructure[9]=studentObject.futureContinuo;
+        TempBoolForStructure[10]=studentObject.futurePerfecto;
+        TempBoolForStructure[11]=studentObject.futurePerfectoContinuo;
 
-        temporal[12]= studentObject.wouldsimple;
-        temporal[13]=studentObject.wouldContinuo;
-        temporal[14]=studentObject.wouldPerfecto;
-        temporal[15]=studentObject.wouldPerfectoContinuo;
+        TempBoolForStructure[12]= studentObject.wouldsimple;
+        TempBoolForStructure[13]=studentObject.wouldContinuo;
+        TempBoolForStructure[14]=studentObject.wouldPerfecto;
+        TempBoolForStructure[15]=studentObject.wouldPerfectoContinuo;
 
-        temporal[16]= studentObject.couldsimple;
-        temporal[17]=studentObject.couldContinuo;
-        temporal[18]=studentObject.couldPerfecto;
-        temporal[19]=studentObject.couldPerfectoContinuo;
+        TempBoolForStructure[16]= studentObject.couldsimple;
+        TempBoolForStructure[17]=studentObject.couldContinuo;
+        TempBoolForStructure[18]=studentObject.couldPerfecto;
+        TempBoolForStructure[19]=studentObject.couldPerfectoContinuo;
 
-        temporal[20]= studentObject.mightsimple;
-        temporal[21]=studentObject.mightContinuo;
-        temporal[22]=studentObject.mightPerfecto;
-        temporal[23]=studentObject.mightPerfectoContinuo;
+        TempBoolForStructure[20]= studentObject.mightsimple;
+        TempBoolForStructure[21]=studentObject.mightContinuo;
+        TempBoolForStructure[22]=studentObject.mightPerfecto;
+        TempBoolForStructure[23]=studentObject.mightPerfectoContinuo;
 
-        temporal[24]= studentObject.cansimple;
-        temporal[25]=studentObject.canContinuo;
-        temporal[26]=studentObject.mustsimple;
-        temporal[27]=studentObject.mustContinuo;
+        TempBoolForStructure[24]= studentObject.cansimple;
+        TempBoolForStructure[25]=studentObject.canContinuo;
+        TempBoolForStructure[26]=studentObject.mustsimple;
+        TempBoolForStructure[27]=studentObject.mustContinuo;
 
-        temporal[28]= studentObject.shouldsimple;
-        temporal[29]=studentObject.shouldContinuo;
-        temporal[30]=studentObject.shouldPerfecto;
-        temporal[31]=studentObject.shouldPerfectoContinuo;
+        TempBoolForStructure[28]= studentObject.shouldsimple;
+        TempBoolForStructure[29]=studentObject.shouldContinuo;
+        TempBoolForStructure[30]=studentObject.shouldPerfecto;
+        TempBoolForStructure[31]=studentObject.shouldPerfectoContinuo;
 
-        temporal[32]= studentObject.wantTo;
-        temporal[33]=studentObject.forTo;
-        temporal[34]=studentObject.supposedToPresent;
-        temporal[35]=studentObject.wishPastPerfect;
+        TempBoolForStructure[32]= studentObject.wantTo;
+        TempBoolForStructure[33]=studentObject.forTo;
+        TempBoolForStructure[34]=studentObject.supposedToPresent;
+        TempBoolForStructure[35]=studentObject.wishPastPerfect;
 
-        temporal[36]=studentObject.usedTo;
-        temporal[37]=studentObject.beUsedTo;
+        TempBoolForStructure[36]=studentObject.usedTo;
+        TempBoolForStructure[37]=studentObject.beUsedTo;
 
-        if(temporal[0]){
+        if(TempBoolForStructure[0]){
             structureArray[0]="Present Simple";
         }else {
             structureArray[0]="";
 
         }
-        if(temporal[1]){
+        if(TempBoolForStructure[1]){
             structureArray[1]="Present Continuos";
         }else {
             structureArray[1]="";
 
         }
-        if(temporal[2]){
+        if(TempBoolForStructure[2]){
             structureArray[2]="Present Perfect";
         }else {
             structureArray[2]="";
 
         }
-        if(temporal[3]){
+        if(TempBoolForStructure[3]){
             structureArray[3]="Present Perfect Continuos";
         }else {
             structureArray[3]="";
 
         }
         //pasados
-        if(temporal[4]){
+        if(TempBoolForStructure[4]){
             structureArray[4]="Past Simple";
         }else {
             structureArray[4]="";
 
         }
-        if(temporal[5]){
+        if(TempBoolForStructure[5]){
             structureArray[5]="Past Continuos";
         }else {
             structureArray[5]="";
 
         }
-        if(temporal[6]){
+        if(TempBoolForStructure[6]){
             structureArray[6]="Past Perfect";
         }else {
             structureArray[6]="";
 
         }
-        if(temporal[7]){
+        if(TempBoolForStructure[7]){
             structureArray[7]="Past Perfect Continuos";
         }else {
             structureArray[7]="";
 
         }
         //futuros
-        if(temporal[8]){
+        if(TempBoolForStructure[8]){
             structureArray[8]="Future Simple";
         }else {
             structureArray[8]="";
 
         }
-        if(temporal[9]){
+        if(TempBoolForStructure[9]){
             structureArray[9]="Future Continuos";
         }else {
             structureArray[9]="";
 
         }
-        if(temporal[10]){
+        if(TempBoolForStructure[10]){
             structureArray[10]="Future Perfect";
         }else {
             structureArray[10]="";
 
         }
-        if(temporal[11]){
+        if(TempBoolForStructure[11]){
             structureArray[11]="Future Perfect Continuos";
         }else {
             structureArray[11]="";
 
         }
         //modales
-        if(temporal[12]){
+        if(TempBoolForStructure[12]){
             structureArray[12]="Would Simple";
         }else {
             structureArray[12]="";
 
         }
-        if(temporal[13]){
+        if(TempBoolForStructure[13]){
             structureArray[13]="Would Continuos";
         }else {
             structureArray[13]="";
 
         }
-        if(temporal[14]){
+        if(TempBoolForStructure[14]){
             structureArray[14]="Would Perfect";
         }else {
             structureArray[14]="";
 
         }
-        if(temporal[15]){
+        if(TempBoolForStructure[15]){
             structureArray[15]="Would Perfect Continuos";
         }else {
             structureArray[15]="";
 
         }
         //coulds
-        if(temporal[16]){
+        if(TempBoolForStructure[16]){
             structureArray[16]="Could Simple";
         }else {
             structureArray[16]="";
 
         }
-        if(temporal[17]){
+        if(TempBoolForStructure[17]){
             structureArray[17]="Could Continuos";
         }else {
             structureArray[17]="";
 
         }
-        if(temporal[18]){
+        if(TempBoolForStructure[18]){
             structureArray[18]="Could Perfect";
         }else {
             structureArray[18]="";
 
         }
-        if(temporal[19]){
+        if(TempBoolForStructure[19]){
             structureArray[19]="Could Perfect Continuos";
         }else {
             structureArray[19]="";
 
         }
         //mights
-        if(temporal[20]){
+        if(TempBoolForStructure[20]){
             structureArray[20]="Might Simple";
         }else {
             structureArray[20]="";
 
         }
-        if(temporal[21]){
+        if(TempBoolForStructure[21]){
             structureArray[21]="Might Continuos";
         }else {
             structureArray[21]="";
 
         }
-        if(temporal[22]){
+        if(TempBoolForStructure[22]){
             structureArray[22]="Might Perfect";
         }else {
             structureArray[22]="";
 
         }
-        if(temporal[23]){
+        if(TempBoolForStructure[23]){
             structureArray[23]="Might Perfect Continuos";
         }else {
             structureArray[23]="";
 
         }
         //can y must
-        if(temporal[24]){
+        if(TempBoolForStructure[24]){
             structureArray[24]="Can Simple";
         }else {
             structureArray[24]="";
 
         }
-        if(temporal[25]){
+        if(TempBoolForStructure[25]){
             structureArray[25]="Can Continuos";
         }else {
             structureArray[25]="";
 
         }
-        if(temporal[26]){
+        if(TempBoolForStructure[26]){
             structureArray[26]="Must Simple";
         }else {
             structureArray[26]="";
 
         }
-        if(temporal[27]){
+        if(TempBoolForStructure[27]){
             structureArray[27]="Must Continuos";
         }else {
             structureArray[27]="";
 
         }
         //shoulds
-        if(temporal[28]){
+        if(TempBoolForStructure[28]){
             structureArray[28]="Should Simple";
         }else {
             structureArray[28]="";
 
         }
-        if(temporal[29]){
+        if(TempBoolForStructure[29]){
             structureArray[29]="Should Continuos";
         }else {
             structureArray[29]="";
 
         }
-        if(temporal[30]){
+        if(TempBoolForStructure[30]){
             structureArray[30]="Should Perfect";
         }else {
             structureArray[30]="";
 
         }
-        if(temporal[31]){
+        if(TempBoolForStructure[31]){
             structureArray[31]="Should Perfect Continuos";
         }else {
             structureArray[31]="";
 
         }
         //non basics
-        if(temporal[32]){
+        if(TempBoolForStructure[32]){
             structureArray[32]="Want To";
         }else {
             structureArray[32]="";
 
         }
-        if(temporal[33]){
+        if(TempBoolForStructure[33]){
             structureArray[33]="For To";
         }else {
             structureArray[33]="";
 
         }
-        if(temporal[34]){
+        if(TempBoolForStructure[34]){
             structureArray[34]="Supposed To Present";
         }else {
             structureArray[34]="";
 
         }
-        if(temporal[35]){
+        if(TempBoolForStructure[35]){
             structureArray[35]="Wish Past Perfect";
         }else {
             structureArray[35]="";
         }
-        if(temporal[36]){
+        if(TempBoolForStructure[36]){
             structureArray[30]="Should Perfect";
         }else {
             structureArray[30]="";
 
         }
-        if(temporal[37]){
+        if(TempBoolForStructure[37]){
             structureArray[31]="Should Perfect Continuos";
         }else {
             structureArray[31]="";
 
         }
 
-
-
         System.arraycopy(structureArray, 0, DbResultStructure, 0, structureArray.length);
         List<String> list = new ArrayList<String>();
-
         for(String s : DbResultStructure) {
             if(s != null && s.length() > 0) {
                 list.add(s);
@@ -403,7 +443,17 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         }
         DbResultStructure = list.toArray(new String[list.size()]);
 
+
+
     }
+    private void SendCustomStructuresToDb() {
+        CollectionReference uid= db.collection(userid);
+        Map<String, Object> user = new HashMap<>();
+        user.put("custom100Structure",DbResultStructure);
+        user.put("custom100Vocab",DbResultVocab);
+        uid.document("CustomArrayLists").set(user);
+    }
+
     public void BasicRecomendedPlan(View vista ){
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
@@ -478,10 +528,12 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                         //no hemos decidido a donde mandarlo todavia despues del examen
                         isCustomPlan100 =true;
 
+
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("Custom100Plan", isCustomPlan100);
                         intent.putExtra("CustomArrayStructuresFromDb",DbResultStructure);
+
                         startActivity(intent);
 
                     }

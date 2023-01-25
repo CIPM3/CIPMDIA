@@ -2,6 +2,90 @@ package com.leal.cipm_testing;
 
 public class StudentVocabRestultsModel {
 
+    boolean passed0to50,passed50to100,passed100to150,passed150to200,passed200to250,passed250to300
+            ,passed300to350,passed350to400,passed400to450,passed450to500
+            ;
+
+    public boolean isPassed0to50() {
+        return passed0to50;
+    }
+
+    public void setPassed0to50(boolean passed0to50) {
+        this.passed0to50 = passed0to50;
+    }
+
+    public boolean isPassed50to100() {
+        return passed50to100;
+    }
+
+    public void setPassed50to100(boolean passed50to100) {
+        this.passed50to100 = passed50to100;
+    }
+
+    public boolean isPassed100to150() {
+        return passed100to150;
+    }
+
+    public void setPassed100to150(boolean passed100to150) {
+        this.passed100to150 = passed100to150;
+    }
+
+    public boolean isPassed150to200() {
+        return passed150to200;
+    }
+
+    public void setPassed150to200(boolean passed150to200) {
+        this.passed150to200 = passed150to200;
+    }
+
+    public boolean isPassed200to250() {
+        return passed200to250;
+    }
+
+    public void setPassed200to250(boolean passed200to250) {
+        this.passed200to250 = passed200to250;
+    }
+
+    public boolean isPassed250to300() {
+        return passed250to300;
+    }
+
+    public void setPassed250to300(boolean passed250to300) {
+        this.passed250to300 = passed250to300;
+    }
+
+    public boolean isPassed300to350() {
+        return passed300to350;
+    }
+
+    public void setPassed300to350(boolean passed300to350) {
+        this.passed300to350 = passed300to350;
+    }
+
+    public boolean isPassed350to400() {
+        return passed350to400;
+    }
+
+    public void setPassed350to400(boolean passed350to400) {
+        this.passed350to400 = passed350to400;
+    }
+
+    public boolean isPassed400to450() {
+        return passed400to450;
+    }
+
+    public void setPassed400to450(boolean passed400to450) {
+        this.passed400to450 = passed400to450;
+    }
+
+    public boolean isPassed450to500() {
+        return passed450to500;
+    }
+
+    public void setPassed450to500(boolean passed450to500) {
+        this.passed450to500 = passed450to500;
+    }
+
     // 0 a 50 booleanos
     boolean the,tobe,and,of,a,in,to,tohave,it,I,
             that1,that2,for1,for2,you,he,with,
