@@ -234,6 +234,13 @@ public class People2 {
     String ps6eng;
     String ps7;
     String ps7eng;
+    String ps1eng2;
+    String ps2eng2;
+    String ps3eng2;
+    String ps3she2;
+    String ps3iteng2;
+    String ps4eng2;
+    String ps5eng2;
 
     int v = (int) (Math.random() * vnb.length);
     int n = (int) (Math.random() * nnobles.length);
@@ -2924,13 +2931,7 @@ public class People2 {
             "normally ", "occasionally ", "often ", "rarely ",
             "regularly ", "regularly ", "usually "
     };
-    String ps1eng2;
-    String ps2eng2;
-    String ps3eng2;
-    String ps3she2;
-    String ps3iteng2;
-    String ps4eng2;
-    String ps5eng2;
+
 
     // ya está en negativo
     int r = (int) (Math.random() * advfrequ.length);
