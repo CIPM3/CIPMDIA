@@ -190,6 +190,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void myPlan(View vist){
+        Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+        intent.putExtra("key", user.getUid());
+        startActivity(intent);
+
+
+/*
         if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
             Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
         }else{
@@ -205,9 +211,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        /*Intent intento = new Intent(this, main_2023.class);
-        startActivity(intento);
-*/
+      */
+
     }
     public void ConInt(View vista) {
 

@@ -446,6 +446,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
 
     }
+
     private void SendCustomStructuresToDb() {
         CollectionReference uid= db.collection(userid);
         Map<String, Object> user = new HashMap<>();
