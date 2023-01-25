@@ -408,9 +408,9 @@ gene2 = o.ps3she2;
                     case 1:
                         Special s = new Special();
                         s.GenPresSimp1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
-gene2 = s.eng3she2;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -433,7 +433,7 @@ gene2 = s.eng3she2;
                         o.GenPresSimp1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
-gene2 = o.ps3it2;
+                        gene2 = o.ps3it2;
                         break;
 
                     case 5:
@@ -563,7 +563,7 @@ gene2 = o.ps5eng2;
                         s.GenPresCont1();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -588,7 +588,7 @@ gene2 = s.eng12;
                         o.GenPresCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
-gene2 = o.ps1eng2;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -616,7 +616,7 @@ gene2 = o.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -772,9 +772,9 @@ gene2 = o.ps3she2;
                     case 1:
                         Special s = new Special();
                         s.GenPresCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
-gene2 = s.eng3she2;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -1143,9 +1143,9 @@ gene2 = o.ps3she2;
                     case 1:
                         Special s = new Special();
                         s.GenPresPerf1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
-gene2 = s.eng3she2;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -2086,9 +2086,9 @@ gene2 = o.ps3she2;
                     case 1:
                         Special s = new Special();
                         s.GenPassCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
-gene2 = s.eng3she2;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -14450,7 +14450,7 @@ gene2 = o.ps1eng2;
                         s.GenPresCont2();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -14458,7 +14458,6 @@ gene2 = s.eng22;
                         i.GenPresCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -14476,7 +14475,7 @@ gene2 = s.eng22;
                         o.GenPresCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
-gene2 = o.ps2eng2;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -14581,7 +14580,7 @@ gene2 = s.eng3she2;
                         o.GenPresCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
-gene2 = o.ps3she2;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -14633,7 +14632,7 @@ gene2 = s.eng3she2;
                         o.GenPresCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
-gene2 = o.ps3it2;
+                        gene2 = o.ps3it2;
                         break;
 
                     case 5:
@@ -14669,7 +14668,6 @@ gene2 = s.eng42;
                         gens = i.sp6;
                         gene = i.eng6;
                         gene2 = i.eng62;
-                        gene2 = i.eng62;
                         break;
 
                     case 3:
@@ -14686,7 +14684,7 @@ gene2 = s.eng42;
                         o.GenPresCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
-gene2 = o.ps4eng2;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -42320,7 +42318,7 @@ gene2 = o.ps3she2;
                         s.GenMustCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -44797,7 +44795,6 @@ gene2 = o.ps5eng2;
                         s.GenPresSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -44837,7 +44834,6 @@ gene2 = o.ps1eng2;
                         s.GenPresSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
                         break;
 
 
@@ -44853,7 +44849,7 @@ gene2 = s.eng22;
                         o.GenPresSimp4();
                         gens = o.ps2;
                         gene = o.ps2eng;
-gene2 = o.ps2eng2;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 4:
@@ -44878,7 +44874,7 @@ gene2 = o.ps2eng2;
                         s.GenPresSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -44918,7 +44914,7 @@ gene2 = o.ps3eng2;
                         s.GenPresSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -44958,7 +44954,7 @@ gene2 = o.ps3she2;
                         s.GenPresSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -44998,7 +44994,7 @@ gene2 = o.ps3it2;
                         s.GenPresSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -45038,7 +45034,7 @@ gene2 = o.ps4eng2;
                         s.GenPresSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -45086,7 +45082,7 @@ gene2 = o.ps5eng2;
                         s.GenPresCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -45130,7 +45126,7 @@ gene2 = o.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -45175,7 +45171,7 @@ gene2 = o.ps2eng2;
                         s.GenPresCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -45219,7 +45215,7 @@ gene2 = o.ps3eng2;
                         s.GenPresCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -45263,7 +45259,7 @@ gene2 = o.ps3she2;
                         s.GenPresCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -45307,7 +45303,7 @@ gene2 = o.ps3it2;
                         s.GenPresCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -45351,7 +45347,7 @@ gene2 = o.ps4eng2;
                         s.GenPresCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -45404,7 +45400,7 @@ gene2 = o.ps5eng2;
                         s.GenPresPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -45448,7 +45444,7 @@ gene2 = o.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -45492,7 +45488,7 @@ gene2 = o.ps2eng2;
                         s.GenPresPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -45535,7 +45531,7 @@ gene2 = o.ps3eng2;
                         s.GenPresPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -45578,7 +45574,7 @@ gene2 = o.ps3she2;
                         s.GenPresPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -45621,7 +45617,7 @@ gene2 = o.ps3it2;
                         s.GenPresPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -45664,7 +45660,7 @@ gene2 = o.ps4eng2;
                         s.GenPresPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -45738,7 +45734,7 @@ gene2 = o.ps1eng2;
                         s.GenPresPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
 
                         break;
 
@@ -45778,7 +45774,7 @@ gene2 = o.ps2eng2;
                         s.GenPresPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
 
 
                         break;
@@ -45820,7 +45816,7 @@ gene2 = o.ps3eng2;
                         s.GenPresPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
 
                         break;
                 }
@@ -45859,7 +45855,7 @@ gene2 = o.ps3she2;
                         s.GenPresPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
                 }
                 break;
@@ -45937,7 +45933,7 @@ gene2 = o.ps4eng2;
                         s.GenPresPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
 
                         break;
                 }
@@ -45977,7 +45973,7 @@ gene2 = o.ps5eng2;
                         s.GenPresPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
 
                         break;
                 }
@@ -46029,7 +46025,7 @@ gene2 = o.ps1eng2;
                         s.GenPastSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
 
                         break;
 
@@ -46071,7 +46067,7 @@ gene2 = o.ps2eng2;
                         s.GenPastSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -46111,7 +46107,7 @@ gene2 = o.ps3eng2;
                         s.GenPastSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -46153,7 +46149,7 @@ gene2 = o.ps3she2;
                         s.GenPastSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -46233,7 +46229,7 @@ gene2 = o.ps4eng2;
                         s.GenPastSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -46273,7 +46269,7 @@ gene2 = o.ps5eng2;
                         s.GenPastSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -46302,7 +46298,7 @@ gene2 = s.eng52;
                         s.GenPastCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -46347,7 +46343,7 @@ gene2 = o.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -46392,7 +46388,7 @@ gene2 = o.ps2eng2;
                         s.GenPastCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -46436,7 +46432,7 @@ gene2 = o.ps3eng2;
                         s.GenPastCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -46480,7 +46476,7 @@ gene2 = o.ps3she2;
                         s.GenPastCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -46524,7 +46520,7 @@ gene2 = o.ps3it2;
                         s.GenPastCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -46568,7 +46564,7 @@ gene2 = o.ps4eng2;
                         s.GenPastCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -46621,7 +46617,7 @@ gene2 = o.ps5eng2;
                         s.GenPastPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -46665,7 +46661,7 @@ gene2 = o.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -46709,7 +46705,7 @@ gene2 = o.ps2eng2;
                         s.GenPastPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -46752,7 +46748,7 @@ gene2 = o.ps3eng2;
                         s.GenPastPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -46795,7 +46791,7 @@ gene2 = o.ps3she2;
                         s.GenPastPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -46838,7 +46834,7 @@ gene2 = o.ps3it2;
                         s.GenPastPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -46881,7 +46877,7 @@ gene2 = o.ps4eng2;
                         s.GenPastPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -46952,7 +46948,7 @@ gene2 = o.ps1eng2;
                         s.GenPastPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
 
                         break;
 
@@ -46994,7 +46990,7 @@ gene2 = o.ps2eng2;
                         s.GenPastPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
 
                         break;
 
@@ -47035,7 +47031,7 @@ gene2 = o.ps3eng2;
                         s.GenPastPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
 
                         break;
 
@@ -47078,7 +47074,7 @@ gene2 = o.ps3she2;
                         s.GenPastPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
 
                         break;
 
@@ -47160,7 +47156,7 @@ gene2 = o.ps4eng2;
                         s.GenPastPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
 
                         break;
 
@@ -47201,7 +47197,7 @@ gene2 = o.ps5eng2;
                         s.GenPastPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
 
                         break;
 
@@ -47251,7 +47247,7 @@ gene2 = o.ps1eng2;
                         s.GenFutSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
 
                         break;
 
@@ -47293,7 +47289,7 @@ gene2 = o.ps2eng2;
                         s.GenFutSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -47333,7 +47329,7 @@ gene2 = o.ps3eng2;
                         s.GenFutSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -47375,7 +47371,7 @@ gene2 = o.ps3she2;
                         s.GenFutSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -47455,7 +47451,7 @@ gene2 = o.ps4eng2;
                         s.GenFutSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -47495,7 +47491,7 @@ gene2 = o.ps5eng2;
                         s.GenFutSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -47524,7 +47520,7 @@ gene2 = s.eng52;
                         s.GenFutCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -47569,7 +47565,7 @@ gene2 = o.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -47614,7 +47610,7 @@ gene2 = o.ps2eng2;
                         s.GenFutCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -47658,7 +47654,7 @@ gene2 = o.ps3eng2;
                         s.GenFutCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -47702,7 +47698,7 @@ gene2 = o.ps3she2;
                         s.GenFutCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -47746,7 +47742,7 @@ gene2 = o.ps3it2;
                         s.GenFutCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -47790,7 +47786,7 @@ gene2 = o.ps4eng2;
                         s.GenFutCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -47843,7 +47839,7 @@ gene2 = o.ps5eng2;
                         s.GenFutPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -47887,7 +47883,7 @@ gene2 = o.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -47931,7 +47927,7 @@ gene2 = o.ps2eng2;
                         s.GenFutPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -47974,7 +47970,7 @@ gene2 = o.ps3eng2;
                         s.GenFutPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -48017,7 +48013,7 @@ gene2 = o.ps3she2;
                         s.GenFutPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -48060,7 +48056,7 @@ gene2 = o.ps3it2;
                         s.GenFutPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -48103,7 +48099,7 @@ gene2 = o.ps4eng2;
                         s.GenFutPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -48174,7 +48170,7 @@ gene2 = o.ps1eng2;
                         s.GenFutPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -48215,7 +48211,7 @@ gene2 = o.ps2eng2;
                         s.GenFutPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -48255,7 +48251,7 @@ gene2 = o.ps3eng2;
                         s.GenFutPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -48296,7 +48292,7 @@ gene2 = o.ps3she2;
                         s.GenFutPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -48374,7 +48370,7 @@ gene2 = o.ps4eng2;
                         s.GenFutPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -48413,7 +48409,7 @@ gene2 = o.ps5eng2;
                         s.GenFutPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -48464,7 +48460,7 @@ gene2 = o.ps1eng2;
                         s.GenWouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -48505,7 +48501,7 @@ gene2 = o.ps2eng2;
                         s.GenWouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -48545,7 +48541,7 @@ gene2 = o.ps3eng2;
                         s.GenWouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -48586,7 +48582,7 @@ gene2 = o.ps3she2;
                         s.GenWouldSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -48663,7 +48659,7 @@ gene2 = o.ps4eng2;
                         s.GenWouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -48702,7 +48698,7 @@ gene2 = o.ps5eng2;
                         s.GenWouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -48730,7 +48726,7 @@ gene2 = s.eng52;
                         s.GenWouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -48775,7 +48771,7 @@ gene2 = o.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -48820,7 +48816,7 @@ gene2 = o.ps2eng2;
                         s.GenWouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -48864,7 +48860,7 @@ gene2 = o.ps3eng2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -48908,7 +48904,7 @@ gene2 = o.ps3she2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -48952,7 +48948,7 @@ gene2 = o.ps3it2;
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -48996,7 +48992,7 @@ gene2 = o.ps4eng2;
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -49049,7 +49045,7 @@ gene2 = o.ps5eng2;
                         s.GenWouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -49093,7 +49089,7 @@ gene2 = o.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -49137,7 +49133,7 @@ gene2 = o.ps2eng2;
                         s.GenWouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -49180,7 +49176,7 @@ gene2 = o.ps3eng2;
                         s.GenWouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -49223,7 +49219,7 @@ gene2 = o.ps3she2;
                         s.GenWouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -49266,7 +49262,7 @@ gene2 = o.ps3it2;
                         s.GenWouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -49309,7 +49305,7 @@ gene2 = o.ps4eng2;
                         s.GenWouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -49380,7 +49376,7 @@ gene2 = o.ps1eng2;
                         s.GenWouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -49421,7 +49417,7 @@ gene2 = o.ps2eng2;
                         s.GenWouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -49461,7 +49457,7 @@ gene2 = o.ps3eng2;
                         s.GenWouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -49502,7 +49498,7 @@ gene2 = o.ps3she2;
                         s.GenWouldPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -49580,7 +49576,7 @@ gene2 = o.ps4eng2;
                         s.GenWouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -49619,7 +49615,7 @@ gene2 = o.ps5eng2;
                         s.GenWouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -49666,7 +49662,7 @@ gene2 = o.ps1eng2;
                         s.GenCouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -49707,7 +49703,7 @@ gene2 = o.ps2eng2;
                         s.GenCouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -49747,7 +49743,7 @@ gene2 = o.ps3eng2;
                         s.GenCouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -49788,7 +49784,7 @@ gene2 = o.ps3she2;
                         s.GenCouldSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -49866,7 +49862,7 @@ gene2 = o.ps4eng2;
                         s.GenCouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -49905,7 +49901,7 @@ gene2 = o.ps5eng2;
                         s.GenCouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -49931,7 +49927,7 @@ gene2 = s.eng52;
                         s.GenWouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -49976,7 +49972,7 @@ gene2 = o.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -50021,7 +50017,7 @@ gene2 = o.ps2eng2;
                         s.GenWouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -50065,7 +50061,7 @@ gene2 = o.ps3eng2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -50109,7 +50105,7 @@ gene2 = o.ps3she2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -50153,7 +50149,7 @@ gene2 = o.ps3it2;
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -50197,7 +50193,7 @@ gene2 = o.ps4eng2;
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -50250,7 +50246,7 @@ gene2 = o.ps5eng2;
                         s.GenCouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -50294,7 +50290,7 @@ gene2 = o.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -50338,7 +50334,7 @@ gene2 = o.ps2eng2;
                         s.GenCouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -50381,7 +50377,7 @@ gene2 = o.ps3eng2;
                         s.GenCouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -50424,7 +50420,7 @@ gene2 = o.ps3she2;
                         s.GenCouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -50467,7 +50463,7 @@ gene2 = o.ps3it2;
                         s.GenCouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -50510,7 +50506,7 @@ gene2 = o.ps4eng2;
                         s.GenCouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -50581,7 +50577,7 @@ gene2 = o.ps1eng2;
                         s.GenCouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -50622,7 +50618,7 @@ gene2 = o.ps2eng2;
                         s.GenCouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -50662,7 +50658,7 @@ gene2 = o.ps3eng2;
                         s.GenCouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -50703,7 +50699,7 @@ gene2 = o.ps3she2;
                         s.GenCouldPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -50781,7 +50777,7 @@ gene2 = o.ps4eng2;
                         s.GenCouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -50820,7 +50816,7 @@ gene2 = o.ps5eng2;
                         s.GenCouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -50869,7 +50865,7 @@ gene2 = o.ps1eng2;
                         s.GenShouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -50910,7 +50906,7 @@ gene2 = o.ps2eng2;
                         s.GenShouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -50950,7 +50946,7 @@ gene2 = o.ps3eng2;
                         s.GenShouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -50991,7 +50987,7 @@ gene2 = o.ps3she2;
                         s.GenShouldSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -51069,7 +51065,7 @@ gene2 = o.ps4eng2;
                         s.GenShouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -51108,7 +51104,7 @@ gene2 = o.ps5eng2;
                         s.GenShouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -51136,7 +51132,7 @@ gene2 = s.eng52;
                         s.GenShouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -51181,7 +51177,7 @@ gene2 = o.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -51226,7 +51222,7 @@ gene2 = o.ps2eng2;
                         s.GenShouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -51270,7 +51266,7 @@ gene2 = o.ps3eng2;
                         s.GenShouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -51314,7 +51310,7 @@ gene2 = o.ps3she2;
                         s.GenShouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -51358,7 +51354,7 @@ gene2 = o.ps3it2;
                         s.GenShouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -51402,7 +51398,7 @@ gene2 = o.ps4eng2;
                         s.GenShouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -51455,7 +51451,7 @@ gene2 = o.ps5eng2;
                         s.GenShouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -51499,7 +51495,7 @@ gene2 = o.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -51543,7 +51539,7 @@ gene2 = o.ps2eng2;
                         s.GenShouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -51586,7 +51582,7 @@ gene2 = o.ps3eng2;
                         s.GenShouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -51629,7 +51625,7 @@ gene2 = o.ps3she2;
                         s.GenShouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -51672,7 +51668,7 @@ gene2 = o.ps3it2;
                         s.GenShouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -51715,7 +51711,7 @@ gene2 = o.ps4eng2;
                         s.GenShouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -51786,7 +51782,7 @@ gene2 = o.ps1eng2;
                         s.GenShouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -51827,7 +51823,7 @@ gene2 = o.ps2eng2;
                         s.GenShouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -51867,7 +51863,7 @@ gene2 = o.ps3eng2;
                         s.GenShouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -51908,7 +51904,7 @@ gene2 = o.ps3she2;
                         s.GenShouldPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -51986,7 +51982,7 @@ gene2 = o.ps4eng2;
                         s.GenShouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -52025,7 +52021,7 @@ gene2 = o.ps5eng2;
                         s.GenShouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -52074,7 +52070,7 @@ gene2 = o.ps1eng2;
                         s.GenMightSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -52115,7 +52111,7 @@ gene2 = o.ps2eng2;
                         s.GenMightSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -52155,7 +52151,7 @@ gene2 = o.ps3eng2;
                         s.GenMightSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -52196,7 +52192,7 @@ gene2 = o.ps3she2;
                         s.GenMightSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -52274,7 +52270,7 @@ gene2 = o.ps4eng2;
                         s.GenMightSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -52313,7 +52309,7 @@ gene2 = o.ps5eng2;
                         s.GenMightSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -52339,7 +52335,7 @@ gene2 = s.eng52;
                         s.GenMightCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -52384,7 +52380,7 @@ gene2 = o.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -52429,7 +52425,7 @@ gene2 = o.ps2eng2;
                         s.GenMightCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -52473,7 +52469,7 @@ gene2 = o.ps3eng2;
                         s.GenMightCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -52517,7 +52513,7 @@ gene2 = o.ps3she2;
                         s.GenMightCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -52561,7 +52557,7 @@ gene2 = o.ps3it2;
                         s.GenMightCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -52605,7 +52601,7 @@ gene2 = o.ps4eng2;
                         s.GenMightCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -52658,7 +52654,7 @@ gene2 = o.ps5eng2;
                         s.GenMightPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -52702,7 +52698,7 @@ gene2 = o.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -52746,7 +52742,7 @@ gene2 = o.ps2eng2;
                         s.GenMightPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -52789,7 +52785,7 @@ gene2 = o.ps3eng2;
                         s.GenMightPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -52832,7 +52828,7 @@ gene2 = o.ps3she2;
                         s.GenMightPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -52875,7 +52871,7 @@ gene2 = o.ps3it2;
                         s.GenMightPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -52918,7 +52914,7 @@ gene2 = o.ps4eng2;
                         s.GenMightPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -52991,7 +52987,7 @@ gene2 = o.ps1eng2;
                         s.GenMightPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -53032,7 +53028,7 @@ gene2 = o.ps2eng2;
                         s.GenMightPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -53072,7 +53068,7 @@ gene2 = o.ps3eng2;
                         s.GenMightPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -53113,7 +53109,7 @@ gene2 = o.ps3she2;
                         s.GenMightPerfCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -53191,7 +53187,7 @@ gene2 = o.ps4eng2;
                         s.GenMightPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -53230,7 +53226,7 @@ gene2 = o.ps5eng2;
                         s.GenMightPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -53277,7 +53273,7 @@ gene2 = o.ps1eng2;
                         s.GenCanSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -53318,7 +53314,7 @@ gene2 = o.ps2eng2;
                         s.GenCanSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -53358,7 +53354,7 @@ gene2 = o.ps3eng2;
                         s.GenCanSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -53399,7 +53395,7 @@ gene2 = o.ps3she2;
                         s.GenCanSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -53477,7 +53473,7 @@ gene2 = o.ps4eng2;
                         s.GenCanSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -53516,7 +53512,7 @@ gene2 = o.ps5eng2;
                         s.GenCanSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -53542,7 +53538,7 @@ gene2 = s.eng52;
                         s.GenCanCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -53587,7 +53583,7 @@ gene2 = o.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -53632,7 +53628,7 @@ gene2 = o.ps2eng2;
                         s.GenCanCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
 
@@ -53676,7 +53672,7 @@ gene2 = o.ps3eng2;
                         s.GenCanCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -53720,7 +53716,7 @@ gene2 = o.ps3she2;
                         s.GenCanCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
 
@@ -53764,7 +53760,7 @@ gene2 = o.ps3it2;
                         s.GenCanCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -53808,7 +53804,7 @@ gene2 = o.ps4eng2;
                         s.GenCanCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 
@@ -53882,7 +53878,7 @@ gene2 = o.ps1eng2;
                         s.GenMustSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -53923,7 +53919,7 @@ gene2 = o.ps2eng2;
                         s.GenMustSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -53963,7 +53959,7 @@ gene2 = o.ps3eng2;
                         s.GenMustSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
-gene2 = s.eng32;
+
                         break;
 
                 }
@@ -54004,7 +54000,7 @@ gene2 = o.ps3she2;
                         s.GenMustSimp4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
-gene2 = s.eng3she2;
+
                         break;
 
                 }
@@ -54082,7 +54078,7 @@ gene2 = o.ps4eng2;
                         s.GenMustSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
                 }
@@ -54121,7 +54117,7 @@ gene2 = o.ps5eng2;
                         s.GenMustSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
                 }
@@ -54147,7 +54143,7 @@ gene2 = s.eng52;
                         s.GenMustCont4();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+
                         break;
 
 
@@ -54192,7 +54188,7 @@ gene2 = o.ps1eng2;
                         s.GenMustCont4();
                         gens = s.sp2;
                         gene = s.eng2;
-gene2 = s.eng22;
+
                         break;
 
 
@@ -54237,7 +54233,7 @@ gene2 = o.ps2eng2;
                         s.GenMustCont4();
                         gens = s.sp3;
                         gene = s.eng3;
-                        gene2 = s.eng32;
+
                         break;
 
 
@@ -54281,7 +54277,6 @@ gene2 = o.ps3eng2;
                         s.GenMustCont4();
                         gens = s.sp3it;
                         gene = s.eng3she;
-                        gene2 = s.eng3she2;
                         break;
 
 
@@ -54325,7 +54320,6 @@ gene2 = o.ps3she2;
                         s.GenMustCont4();
                         gens = s.sp3it;
                         gene = s.sp3it;
-gene2 = s.sp3it2;
                         break;
 
 
@@ -54369,7 +54363,7 @@ gene2 = o.ps3it2;
                         s.GenMustCont4();
                         gens = s.sp4;
                         gene = s.eng4;
-gene2 = s.eng42;
+
                         break;
 
 
@@ -54413,7 +54407,7 @@ gene2 = o.ps4eng2;
                         s.GenMustCont4();
                         gens = s.sp5;
                         gene = s.eng5;
-gene2 = s.eng52;
+
                         break;
 
 

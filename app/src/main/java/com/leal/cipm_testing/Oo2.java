@@ -410,7 +410,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "aren't " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenPresPerf2() {
         switch (neg) {
             case 0:
@@ -475,7 +475,7 @@ public class Oo2 {
         }
 
 
-    }  // ya en negativo
+    } //LR 2023
     public void GenPresPerfCont2() {
         switch (neg) {
             case 0:
@@ -688,7 +688,7 @@ public class Oo2 {
         }
 
 
-    }
+    } //LR 2023
     public void GenPastPerf2() {
         switch (neg) {
             case 0:
@@ -750,7 +750,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "hadn't " + vpeng[v] + nnobles[n];
                 break;
         }
-    }
+    } //LR 2023
     public void GenPastPerfCont2() {
         switch (neg) {
             case 0:
@@ -910,7 +910,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "won't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenFutPerf2() {
         switch (neg) {
             case 0:
@@ -973,7 +973,7 @@ public class Oo2 {
 
                 break;
         }
-    }  // neg
+    } //LR 2023
     public void GenFutPerfCont2() {
         switch (neg) {
             case 0:
@@ -1134,7 +1134,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "wouldn't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    }  // neg
+    } //LR 2023
     public void GenWouldPerf2() {
         switch (neg) {
             case 0:
@@ -1196,7 +1196,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "wouldn't have " + vpeng[v] + nnobles[n];
                 break;
         }
-    }  // neg
+    } //LR 2023
     public void GenWouldPerfCont2() {
 
         switch (neg) {
@@ -1358,7 +1358,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "couldn't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenCouldPerf2() {
         switch (neg) {
 
@@ -1422,7 +1422,7 @@ public class Oo2 {
                 break;
         }
 
-    }  // neg
+    } //LR 2023
     public void GenCouldPerfCont2() {
         switch (neg) {
             case 0:
@@ -1584,7 +1584,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "shouldn't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenShouldPerf2() {
         switch (neg) {
             case 0:
@@ -1646,7 +1646,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "shouldn't have " + vpeng[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenShouldPerfCont2() {
 
         switch (neg) {
@@ -1811,7 +1811,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mightn't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenMightPerf2() {
         switch (neg) {
             case 0:
@@ -1873,7 +1873,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mightn't have " + vpeng[v] + nnobles[n];
                 break;
         }
-    } // neg
+    } //LR 2023
     public void GenMightPerfCont2() {
 
         switch (neg) {
@@ -2037,7 +2037,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "can't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    }      // neg
+    } //LR 2023
 
     // los del must
     public void GenMustSimp2() {
@@ -2152,7 +2152,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mustn't be " + vnbc[v] + nnobles[n];
                 break;
         }
-    } // nuev
+    } //LR 2023
 
 
 
@@ -2309,7 +2309,7 @@ public class Oo2 {
                 ps5eng2 = "we aren't " + vnbc[v] + nnobles[n] + frequadv[r];
                 break;
         }
-    }
+    } //LR 2023
     public void GenPresPerf3() {
         switch (negg) {
             case 0:
@@ -2377,7 +2377,7 @@ public class Oo2 {
                 break;
 
         }
-    }
+    } //LR 2023
     public void GenPresPerfCont3() {
         switch (negg) {
             case 0:
@@ -2644,7 +2644,7 @@ public class Oo2 {
                 break;
         }
 
-    }
+    } //LR 2023
     public void GenPastPerf3() {
         switch (negg) {
             case 0:
@@ -2713,7 +2713,7 @@ public class Oo2 {
                 ps5eng2 = "we hadn't " + vpeng[v] + nnobles[n] + frequadv[r];
                 break;
         }
-    }
+    } //LR 2023
     public void GenPastPerfCont3() {
         switch (negg) {
             case 0:
@@ -2931,7 +2931,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenFutPerf3() {
         switch (negg) {
             case 0:
@@ -3008,7 +3008,7 @@ public class Oo2 {
                 break;
         }
 
-    }
+    } //LR 2023
     public void GenFutPerfCont3() {
         switch (negg) {
             case 0:
@@ -3227,7 +3227,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenWouldPerf3() {
         switch (negg) {
             case 0:
@@ -3302,7 +3302,7 @@ public class Oo2 {
                 ps5eng2 = "we wouldn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 break;
         }
-    }
+    } //LR 2023
     public void GenWouldPerfCont3() {
         switch (negg) {
             case 0:
@@ -3532,7 +3532,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenCouldPerf3() {
         switch (negg) {
             case 0:
@@ -3607,7 +3607,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenCouldPerfCont3() {
         switch (negg) {
             case 0:
@@ -3824,7 +3824,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenShouldPerf3() {
         switch (negg) {
             case 0:
@@ -3900,7 +3900,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenShouldPerfCont3() {
         switch (negg) {
             case 0:
@@ -4128,7 +4128,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenMightPerf3() {
         switch (negg) {
             case 0:
@@ -4202,7 +4202,7 @@ public class Oo2 {
                 ps5eng2 = "we mightn't " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 break;
         }
-    }
+    } //LR 2023
     public void GenMightPerfCont3() {
         switch (negg) {
             case 0:
@@ -4433,7 +4433,7 @@ public class Oo2 {
 
                 break;
         }
-    }
+    } //LR 2023
     public void GenMustSimp3() {
         switch (negg) {
             case 0:
@@ -4584,7 +4584,7 @@ public class Oo2 {
 
                 break;
         }
-    }// nuevo
+    } //LR 2023
 
     //-non basics
     //want to dificultad 2
@@ -6148,7 +6148,7 @@ public class Oo2 {
 
         }
 
-    } //SV 230422
+    } //LR 2023
     public void GenPresPerf4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -6220,7 +6220,7 @@ public class Oo2 {
 
         }
 
-    } //SV 230422
+    } //LR 2023
     public void GenPresPerfCont4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -6496,7 +6496,7 @@ public class Oo2 {
                 break;
         }
 
-    } //SV 260422
+    } //LR 2023
     public void GenPastPerf4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -6572,7 +6572,7 @@ public class Oo2 {
 
         }
 
-    } //SV 260422
+    } //LR 2023
     public void GenPastPerfCont4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -6800,7 +6800,7 @@ public class Oo2 {
                 break;
         }
 
-    } //SV 260422
+    } //LR 2023
     public void GenFutPerf4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -6880,7 +6880,7 @@ public class Oo2 {
                 break;
         }
 
-    } //SV 260422
+    } //LR 2023
     public void GenFutPerfCont4() {
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.Oospecial.length );
@@ -7111,7 +7111,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 270422
+    } //LR 2023
     public void GenWouldPerf4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -7191,7 +7191,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 270422
+    } //LR 2023
     public void GenWouldPerfCont4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -7433,7 +7433,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenCouldPerf4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -7512,7 +7512,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenCouldPerfCont4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -7741,7 +7741,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenShouldPerf4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -7821,7 +7821,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenShouldPerfCont4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -8061,7 +8061,7 @@ public class Oo2 {
 
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenMightPerf4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -8139,7 +8139,7 @@ public class Oo2 {
                 ps5eng2 = "we mightn't " + "have " + vpeng[v] + nnobles[n] + prep.Oospecialeng[p][p2] + frequadv[radv];
                 break;
         }
-    } //SV 280422
+    } //LR 2023
     public void GenMightPerfCont4() {
         Intrans prep = new Intrans();
         int radv = (int) (Math.random() * frequadv.length);
@@ -8389,7 +8389,7 @@ public class Oo2 {
 
                 break;
         }
-    }//PD 27/04/2022
+    } //LR 2023
 
     public void GenMustSimp4(){
         Intrans prep = new Intrans();
@@ -8549,7 +8549,7 @@ public class Oo2 {
 
                 break;
         }
-    }// nuevo
+    } //LR 2023
 
     //want to 4
     public void WantYouTo4() {
@@ -9834,7 +9834,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "aren't " + vnbc[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenPresPerf1() {
         switch (neg) {
             case 0:
@@ -9897,7 +9897,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "haven't " + vpeng[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenPresPerfCont1() {
         switch (neg) {
             case 0:
@@ -10107,7 +10107,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "weren't " + vnbc[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenPassPerf1() {
         switch (neg) {
             case 0:
@@ -10169,7 +10169,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "hadn't " + vpeng[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenPassPerfCont1() {
         switch (neg) {
             case 0:
@@ -10329,7 +10329,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "won't be " + vnbc[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenFutPerf1() {
         switch (neg) {
             case 0:
@@ -10391,7 +10391,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "won't have " + vpeng[v];
                 break;
         }
-    }//PD 10/06/2022
+    } //LR 2023
     public void GenFutPerfCont1() {
         switch (neg) {
             case 0:
@@ -10551,7 +10551,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "wouldn't be " + vnbc[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenWouldPerf1() {
         switch (neg) {
             case 0:
@@ -10613,7 +10613,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "wouldn't have " + vpeng[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenWouldPerfCont1() {
         switch (neg) {
             case 0:
@@ -10773,7 +10773,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "couldn't be " + vnbc[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenCouldPerf1() {
         switch (neg) {
 
@@ -10836,7 +10836,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "couldn't have " + vpeng[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenCouldPerfCont1() {
         switch (neg) {
             case 0:
@@ -10996,7 +10996,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "shouldn't be " + vnbc[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenShouldPerf1() {
         switch (neg) {
             case 0:
@@ -11058,7 +11058,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "shouldn't have " + vpeng[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenShouldPerfCont1() {
         switch (neg) {
             case 0:
@@ -11218,7 +11218,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mightn't be " + vnbc[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenMightPerf1() {
         switch (neg) {
             case 0:
@@ -11280,7 +11280,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mightn't have " + vpeng[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
     public void GenMightPerfCont1() {
         switch (neg) {
             case 0:
@@ -11440,7 +11440,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "can't be " + vnbc[v];
                 break;
         }
-    }//PD 13/06/2022
+    } //LR 2023
 
     //MUST
     public void GenMustSimp1() {
@@ -11553,7 +11553,7 @@ public class Oo2 {
                 ps5eng2 = "we " + "mustn't be " + vnbc[v];
                 break;
         }
-    }//nuevo
+    } //LR 2023
 
 
     // non basics

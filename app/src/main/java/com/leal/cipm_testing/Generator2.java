@@ -412,8 +412,8 @@ public class Generator2 {
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresSimp2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
                         break;
 
                     case 2:
@@ -561,6 +561,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -613,6 +614,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -666,6 +668,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -717,6 +720,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -766,8 +770,9 @@ public class Generator2 {
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -819,6 +824,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -871,6 +877,7 @@ public class Generator2 {
                         s.GenPresCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -932,6 +939,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -955,6 +963,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -982,6 +991,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -1005,6 +1015,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -1032,6 +1043,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -1055,6 +1067,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -1080,6 +1093,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -1102,6 +1116,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -1126,8 +1141,9 @@ public class Generator2 {
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -1151,6 +1167,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -1177,6 +1194,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -1199,6 +1217,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -1224,6 +1243,7 @@ public class Generator2 {
                         s.GenPresPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -1246,6 +1266,7 @@ public class Generator2 {
                         o.GenPresPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -1816,8 +1837,7 @@ public class Generator2 {
     }
     public void GenPastCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -1835,6 +1855,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -1859,6 +1880,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -1886,6 +1908,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -1911,6 +1934,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -1938,6 +1962,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -1962,6 +1987,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -1988,6 +2014,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -2012,6 +2039,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -2038,6 +2066,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -2062,6 +2091,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -2088,6 +2118,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -2113,6 +2144,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -2139,6 +2171,7 @@ public class Generator2 {
                         s.GenPastCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -2164,6 +2197,7 @@ public class Generator2 {
                         o.GenPastCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -2213,12 +2247,14 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenPastPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
 
                         break;
 
@@ -2246,6 +2282,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -2269,6 +2306,7 @@ public class Generator2 {
                         s.GenPastPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
 
                         break;
 
@@ -2296,6 +2334,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -2318,6 +2357,7 @@ public class Generator2 {
                         s.GenPastPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
 
                         break;
 
@@ -2344,6 +2384,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -2368,6 +2409,7 @@ public class Generator2 {
                         s.GenPastPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
 
                         break;
 
@@ -2394,6 +2436,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -2443,6 +2486,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -2465,6 +2509,7 @@ public class Generator2 {
                         s.GenPastPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
 
                         break;
 
@@ -2491,6 +2536,7 @@ public class Generator2 {
                         o.GenPastPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -2513,6 +2559,7 @@ public class Generator2 {
                         s.GenPastPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
 
                         break;
 
@@ -3187,8 +3234,7 @@ public class Generator2 {
     }
     public void GenFutCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -3206,6 +3252,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -3230,6 +3277,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -3257,6 +3305,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -3282,6 +3331,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -3309,6 +3359,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -3333,6 +3384,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -3359,6 +3411,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -3383,6 +3436,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -3409,6 +3463,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -3433,6 +3488,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -3459,6 +3515,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -3484,6 +3541,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -3510,6 +3568,7 @@ public class Generator2 {
                         s.GenFutCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -3535,6 +3594,7 @@ public class Generator2 {
                         o.GenFutCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -3584,12 +3644,14 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenFutPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -3615,6 +3677,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -3638,6 +3701,7 @@ public class Generator2 {
                         s.GenFutPerf2();
                         gens = s.sp2;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -3663,6 +3727,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -3685,6 +3750,7 @@ public class Generator2 {
                         s.GenFutPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -3709,6 +3775,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -3733,6 +3800,7 @@ public class Generator2 {
                         s.GenFutPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -3757,6 +3825,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -3804,6 +3873,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -3826,6 +3896,7 @@ public class Generator2 {
                         s.GenFutPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -3850,6 +3921,7 @@ public class Generator2 {
                         o.GenFutPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -3871,6 +3943,7 @@ public class Generator2 {
                         s.GenFutPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -4521,8 +4594,7 @@ public class Generator2 {
     }
     public void GenWouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -4540,6 +4612,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -4564,6 +4637,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -4591,6 +4665,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -4616,6 +4691,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -4643,6 +4719,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -4667,6 +4744,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -4693,6 +4771,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -4717,6 +4796,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -4743,6 +4823,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -4767,6 +4848,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -4793,6 +4875,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -4818,6 +4901,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -4844,6 +4928,7 @@ public class Generator2 {
                         s.GenWouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -4869,6 +4954,7 @@ public class Generator2 {
                         o.GenWouldCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -4918,12 +5004,14 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenWouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -4949,6 +5037,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -4972,6 +5061,7 @@ public class Generator2 {
                         s.GenWouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -4997,6 +5087,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -5019,6 +5110,7 @@ public class Generator2 {
                         s.GenWouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -5043,6 +5135,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -5067,6 +5160,7 @@ public class Generator2 {
                         s.GenWouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -5091,6 +5185,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -5138,6 +5233,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -5160,6 +5256,7 @@ public class Generator2 {
                         s.GenWouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -5184,6 +5281,7 @@ public class Generator2 {
                         o.GenWouldPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -5206,6 +5304,7 @@ public class Generator2 {
                         s.GenWouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -5850,8 +5949,7 @@ public class Generator2 {
     }
     public void GenCouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -5869,6 +5967,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -5893,6 +5992,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -5920,6 +6020,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -5945,6 +6046,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -5972,6 +6074,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -5996,6 +6099,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -6022,6 +6126,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -6046,6 +6151,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -6072,6 +6178,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -6096,6 +6203,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -6122,6 +6230,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -6147,6 +6256,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -6173,6 +6283,7 @@ public class Generator2 {
                         s.GenCouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -6198,6 +6309,7 @@ public class Generator2 {
                         o.GenCouldCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -6247,12 +6359,14 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenCouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -6278,6 +6392,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -6301,6 +6416,7 @@ public class Generator2 {
                         s.GenCouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -6326,6 +6442,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -6348,6 +6465,7 @@ public class Generator2 {
                         s.GenCouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -6372,6 +6490,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -6396,6 +6515,7 @@ public class Generator2 {
                         s.GenCouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -6420,6 +6540,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -6467,6 +6588,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -6489,6 +6611,7 @@ public class Generator2 {
                         s.GenCouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -6513,6 +6636,7 @@ public class Generator2 {
                         o.GenCouldPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -6534,6 +6658,7 @@ public class Generator2 {
                         s.GenCouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7182,8 +7307,7 @@ public class Generator2 {
     }
     public void GenShouldCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -7201,6 +7325,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -7225,6 +7350,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -7252,6 +7378,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -7277,6 +7404,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -7304,6 +7432,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -7328,6 +7457,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -7354,6 +7484,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -7378,6 +7509,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -7404,6 +7536,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -7428,6 +7561,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -7454,6 +7588,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -7479,6 +7614,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -7505,6 +7641,7 @@ public class Generator2 {
                         s.GenShouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -7530,6 +7667,7 @@ public class Generator2 {
                         o.GenShouldCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -7579,12 +7717,14 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenShouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7610,6 +7750,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -7633,6 +7774,7 @@ public class Generator2 {
                         s.GenShouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7658,6 +7800,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -7680,6 +7823,7 @@ public class Generator2 {
                         s.GenShouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7704,6 +7848,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -7728,6 +7873,7 @@ public class Generator2 {
                         s.GenShouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7752,6 +7898,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -7799,6 +7946,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -7821,6 +7969,7 @@ public class Generator2 {
                         s.GenShouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -7845,6 +7994,7 @@ public class Generator2 {
                         o.GenShouldPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -7867,6 +8017,7 @@ public class Generator2 {
                         s.GenShouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -8513,8 +8664,7 @@ public class Generator2 {
     }
     public void GenMightCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -8532,6 +8682,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -8556,6 +8707,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -8583,6 +8735,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -8608,6 +8761,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -8635,6 +8789,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -8659,6 +8814,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -8685,6 +8841,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -8709,6 +8866,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -8735,6 +8893,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -8759,6 +8918,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -8785,6 +8945,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -8810,6 +8971,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -8836,6 +8998,7 @@ public class Generator2 {
                         s.GenMightCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -8861,6 +9024,7 @@ public class Generator2 {
                         o.GenMightCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -8910,12 +9074,14 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenMightPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -8941,6 +9107,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -8964,6 +9131,7 @@ public class Generator2 {
                         s.GenMightPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -8989,6 +9157,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -9011,6 +9180,7 @@ public class Generator2 {
                         s.GenMightPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -9035,6 +9205,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -9059,6 +9230,7 @@ public class Generator2 {
                         s.GenMightPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -9083,6 +9255,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -9130,6 +9303,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -9152,6 +9326,7 @@ public class Generator2 {
                         s.GenMightPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -9176,6 +9351,7 @@ public class Generator2 {
                         o.GenMightPerf2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -9198,6 +9374,7 @@ public class Generator2 {
                         s.GenMightPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -9844,8 +10021,7 @@ gene2 = i.eng72;
     }
     public void GenCanCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -9863,6 +10039,7 @@ gene2 = i.eng72;
                         s.GenCanCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -9870,7 +10047,7 @@ gene2 = i.eng72;
                         i.GenCanCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -9887,6 +10064,7 @@ gene2 = i.eng12;
                         o.GenCanCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -9914,6 +10092,7 @@ gene2 = i.eng12;
                         s.GenCanCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -9921,7 +10100,7 @@ gene2 = i.eng12;
                         i.GenCanCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -9939,6 +10118,7 @@ gene2 = i.eng22;
                         o.GenCanCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -9966,6 +10146,7 @@ gene2 = i.eng22;
                         s.GenCanCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -9973,7 +10154,7 @@ gene2 = i.eng22;
                         i.GenCanCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -9990,6 +10171,7 @@ gene2 = i.eng32;
                         o.GenCanCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -10016,6 +10198,7 @@ gene2 = i.eng32;
                         s.GenCanCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -10023,7 +10206,7 @@ gene2 = i.eng32;
                         i.GenCanCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -10040,6 +10223,7 @@ gene2 = i.eng42;
                         o.GenCanCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -10066,6 +10250,7 @@ gene2 = i.eng42;
                         s.GenCanCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -10073,7 +10258,7 @@ gene2 = i.eng42;
                         i.GenCanCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -10090,6 +10275,7 @@ gene2 = i.eng52;
                         o.GenCanCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -10116,6 +10302,7 @@ gene2 = i.eng52;
                         s.GenCanCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -10123,7 +10310,7 @@ gene2 = i.eng52;
                         i.GenCanCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -10141,6 +10328,7 @@ gene2 = i.eng62;
                         o.GenCanCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -10167,6 +10355,7 @@ gene2 = i.eng62;
                         s.GenCanCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -10174,7 +10363,7 @@ gene2 = i.eng62;
                         i.GenCanCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -10192,6 +10381,7 @@ gene2 = i.eng72;
                         o.GenCanCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -10524,8 +10714,7 @@ gene2 = i.eng72;
     }
     public void GenMustCont2() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -10543,6 +10732,7 @@ gene2 = i.eng72;
                         s.GenMustCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -10550,7 +10740,7 @@ gene2 = i.eng72;
                         i.GenMustCont2();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -10567,6 +10757,7 @@ gene2 = i.eng12;
                         o.GenMustCont2();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -10594,6 +10785,7 @@ gene2 = i.eng12;
                         s.GenMustCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -10601,7 +10793,7 @@ gene2 = i.eng12;
                         i.GenMustCont2();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -10619,6 +10811,7 @@ gene2 = i.eng22;
                         o.GenMustCont2();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -10646,6 +10839,7 @@ gene2 = i.eng22;
                         s.GenMustCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -10653,7 +10847,7 @@ gene2 = i.eng22;
                         i.GenMustCont2();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -10670,6 +10864,7 @@ gene2 = i.eng32;
                         o.GenMustCont2();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -10696,6 +10891,7 @@ gene2 = i.eng32;
                         s.GenMustCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -10703,7 +10899,7 @@ gene2 = i.eng32;
                         i.GenMustCont2();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -10720,6 +10916,7 @@ gene2 = i.eng42;
                         o.GenMustCont2();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -10746,6 +10943,7 @@ gene2 = i.eng42;
                         s.GenMustCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -10753,7 +10951,7 @@ gene2 = i.eng42;
                         i.GenMustCont2();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -10770,6 +10968,7 @@ gene2 = i.eng52;
                         o.GenMustCont2();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -10796,6 +10995,7 @@ gene2 = i.eng52;
                         s.GenMustCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -10803,7 +11003,7 @@ gene2 = i.eng52;
                         i.GenMustCont2();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -10821,6 +11021,7 @@ gene2 = i.eng62;
                         o.GenMustCont2();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -10847,6 +11048,7 @@ gene2 = i.eng62;
                         s.GenMustCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -10854,7 +11056,7 @@ gene2 = i.eng62;
                         i.GenMustCont2();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -10872,6 +11074,7 @@ gene2 = i.eng72;
                         o.GenMustCont2();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -13504,6 +13707,7 @@ gene2 = i.eng72;
                         s.GenPresCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -13556,6 +13760,7 @@ gene2 = i.eng72;
                         s.GenPresCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -13563,7 +13768,7 @@ gene2 = i.eng72;
                         i.GenPresCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -13609,6 +13814,7 @@ gene2 = i.eng22;
                         s.GenPresCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -13616,7 +13822,7 @@ gene2 = i.eng22;
                         i.GenPresCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -13660,6 +13866,7 @@ gene2 = i.eng32;
                         s.GenPresCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -13667,7 +13874,7 @@ gene2 = i.eng32;
                         i.GenPresCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -13711,6 +13918,7 @@ gene2 = i.eng42;
                         s.GenPresCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -13718,7 +13926,7 @@ gene2 = i.eng42;
                         i.GenPresCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -13762,6 +13970,7 @@ gene2 = i.eng52;
                         s.GenPresCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -13769,7 +13978,7 @@ gene2 = i.eng52;
                         i.GenPresCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -13814,6 +14023,7 @@ gene2 = i.eng62;
                         s.GenPresCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -13821,7 +14031,7 @@ gene2 = i.eng62;
                         i.GenPresCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -13875,6 +14085,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -13898,6 +14109,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -13925,6 +14137,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -13948,6 +14161,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -13975,6 +14189,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -13998,6 +14213,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -14023,6 +14239,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -14045,6 +14262,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -14071,6 +14289,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -14094,6 +14313,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -14120,6 +14340,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -14142,6 +14363,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -14167,6 +14389,7 @@ gene2 = i.eng72;
                         s.GenPresPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -14189,6 +14412,7 @@ gene2 = i.eng72;
                         o.GenPresPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -14759,8 +14983,7 @@ gene2 = i.eng72;
     }
     public void GenPastCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -14778,6 +15001,7 @@ gene2 = i.eng72;
                         s.GenPastCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -14785,7 +15009,7 @@ gene2 = i.eng72;
                         i.GenPastCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -14802,6 +15026,7 @@ gene2 = i.eng12;
                         o.GenPastCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -14829,6 +15054,7 @@ gene2 = i.eng12;
                         s.GenPastCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -14836,7 +15062,7 @@ gene2 = i.eng12;
                         i.GenPastCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -14854,6 +15080,7 @@ gene2 = i.eng22;
                         o.GenPastCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -14881,6 +15108,7 @@ gene2 = i.eng22;
                         s.GenPastCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -14888,7 +15116,7 @@ gene2 = i.eng22;
                         i.GenPastCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -14905,6 +15133,7 @@ gene2 = i.eng32;
                         o.GenPastCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -14931,6 +15160,7 @@ gene2 = i.eng32;
                         s.GenPastCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -14938,7 +15168,7 @@ gene2 = i.eng32;
                         i.GenPastCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -14955,6 +15185,7 @@ gene2 = i.eng42;
                         o.GenPastCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -14981,6 +15212,7 @@ gene2 = i.eng42;
                         s.GenPastCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -14988,7 +15220,7 @@ gene2 = i.eng42;
                         i.GenPastCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -15005,6 +15237,7 @@ gene2 = i.eng52;
                         o.GenPastCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -15031,6 +15264,7 @@ gene2 = i.eng52;
                         s.GenPastCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -15038,7 +15272,7 @@ gene2 = i.eng52;
                         i.GenPastCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -15056,6 +15290,7 @@ gene2 = i.eng62;
                         o.GenPastCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -15082,6 +15317,7 @@ gene2 = i.eng62;
                         s.GenPastCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -15089,7 +15325,7 @@ gene2 = i.eng62;
                         i.GenPastCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -15107,6 +15343,7 @@ gene2 = i.eng72;
                         o.GenPastCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -15156,12 +15393,14 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenPastPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
 
                         break;
 
@@ -15189,6 +15428,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -15212,6 +15452,7 @@ gene2 = i.eng72;
                         s.GenPastPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
 
                         break;
 
@@ -15239,6 +15480,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -15261,6 +15503,7 @@ gene2 = i.eng72;
                         s.GenPastPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
 
                         break;
 
@@ -15287,6 +15530,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -15311,6 +15555,7 @@ gene2 = i.eng72;
                         s.GenPastPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
 
                         break;
 
@@ -15337,6 +15582,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -15386,6 +15632,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -15408,6 +15655,7 @@ gene2 = i.eng72;
                         s.GenPastPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
 
                         break;
 
@@ -15434,6 +15682,7 @@ gene2 = i.eng72;
                         o.GenPastPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -15456,6 +15705,7 @@ gene2 = i.eng72;
                         s.GenPastPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
 
                         break;
 
@@ -16130,8 +16380,7 @@ gene2 = i.eng72;
     }
     public void GenFutCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -16149,6 +16398,7 @@ gene2 = i.eng72;
                         s.GenFutCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -16156,7 +16406,7 @@ gene2 = i.eng72;
                         i.GenFutCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -16173,6 +16423,7 @@ gene2 = i.eng12;
                         o.GenFutCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -16200,6 +16451,7 @@ gene2 = i.eng12;
                         s.GenFutCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -16207,7 +16459,7 @@ gene2 = i.eng12;
                         i.GenFutCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -16225,6 +16477,7 @@ gene2 = i.eng22;
                         o.GenFutCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -16252,6 +16505,7 @@ gene2 = i.eng22;
                         s.GenFutCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -16259,7 +16513,7 @@ gene2 = i.eng22;
                         i.GenFutCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -16276,6 +16530,7 @@ gene2 = i.eng32;
                         o.GenFutCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -16302,6 +16557,7 @@ gene2 = i.eng32;
                         s.GenFutCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -16309,7 +16565,7 @@ gene2 = i.eng32;
                         i.GenFutCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -16326,6 +16582,7 @@ gene2 = i.eng42;
                         o.GenFutCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -16352,6 +16609,7 @@ gene2 = i.eng42;
                         s.GenFutCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -16359,7 +16617,7 @@ gene2 = i.eng42;
                         i.GenFutCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -16376,6 +16634,7 @@ gene2 = i.eng52;
                         o.GenFutCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -16402,6 +16661,7 @@ gene2 = i.eng52;
                         s.GenFutCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -16409,7 +16669,7 @@ gene2 = i.eng52;
                         i.GenFutCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -16427,6 +16687,7 @@ gene2 = i.eng62;
                         o.GenFutCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -16453,6 +16714,7 @@ gene2 = i.eng62;
                         s.GenFutCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -16460,7 +16722,7 @@ gene2 = i.eng62;
                         i.GenFutCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -16478,6 +16740,7 @@ gene2 = i.eng72;
                         o.GenFutCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -16527,12 +16790,14 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenFutPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -16558,6 +16823,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -16581,6 +16847,7 @@ gene2 = i.eng72;
                         s.GenFutPerf3();
                         gens = s.sp2;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -16606,6 +16873,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -16628,6 +16896,7 @@ gene2 = i.eng72;
                         s.GenFutPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -16652,6 +16921,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -16676,6 +16946,7 @@ gene2 = i.eng72;
                         s.GenFutPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -16700,6 +16971,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -16747,6 +17019,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -16769,6 +17042,7 @@ gene2 = i.eng72;
                         s.GenFutPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -16793,6 +17067,7 @@ gene2 = i.eng72;
                         o.GenFutPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -16814,6 +17089,7 @@ gene2 = i.eng72;
                         s.GenFutPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -17464,8 +17740,7 @@ gene2 = i.eng72;
     }
     public void GenWouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -17483,6 +17758,7 @@ gene2 = i.eng72;
                         s.GenWouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -17490,7 +17766,7 @@ gene2 = i.eng72;
                         i.GenWouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -17507,6 +17783,7 @@ gene2 = i.eng12;
                         o.GenWouldCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -17534,6 +17811,7 @@ gene2 = i.eng12;
                         s.GenWouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -17541,7 +17819,7 @@ gene2 = i.eng12;
                         i.GenWouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -17559,6 +17837,7 @@ gene2 = i.eng22;
                         o.GenWouldCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -17586,6 +17865,7 @@ gene2 = i.eng22;
                         s.GenWouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -17593,7 +17873,7 @@ gene2 = i.eng22;
                         i.GenWouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -17610,6 +17890,7 @@ gene2 = i.eng32;
                         o.GenWouldCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -17636,6 +17917,7 @@ gene2 = i.eng32;
                         s.GenWouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -17643,7 +17925,7 @@ gene2 = i.eng32;
                         i.GenWouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -17660,6 +17942,7 @@ gene2 = i.eng42;
                         o.GenWouldCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -17686,6 +17969,7 @@ gene2 = i.eng42;
                         s.GenWouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -17693,7 +17977,7 @@ gene2 = i.eng42;
                         i.GenWouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -17710,6 +17994,7 @@ gene2 = i.eng52;
                         o.GenWouldCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -17736,6 +18021,7 @@ gene2 = i.eng52;
                         s.GenWouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -17743,7 +18029,7 @@ gene2 = i.eng52;
                         i.GenWouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -17761,6 +18047,7 @@ gene2 = i.eng62;
                         o.GenWouldCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -17787,6 +18074,7 @@ gene2 = i.eng62;
                         s.GenWouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -17794,7 +18082,7 @@ gene2 = i.eng62;
                         i.GenWouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -17812,6 +18100,7 @@ gene2 = i.eng72;
                         o.GenWouldCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -17861,12 +18150,14 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenWouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -17892,6 +18183,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -17915,6 +18207,7 @@ gene2 = i.eng72;
                         s.GenWouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -17940,6 +18233,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -17962,6 +18256,7 @@ gene2 = i.eng72;
                         s.GenWouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -17986,6 +18281,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -18010,6 +18306,7 @@ gene2 = i.eng72;
                         s.GenWouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -18034,6 +18331,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -18081,6 +18379,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -18103,6 +18402,7 @@ gene2 = i.eng72;
                         s.GenWouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -18127,6 +18427,7 @@ gene2 = i.eng72;
                         o.GenWouldPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -18149,6 +18450,7 @@ gene2 = i.eng72;
                         s.GenWouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -18793,8 +19095,7 @@ gene2 = i.eng72;
     }
     public void GenCouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -18812,6 +19113,7 @@ gene2 = i.eng72;
                         s.GenCouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -18819,7 +19121,7 @@ gene2 = i.eng72;
                         i.GenCouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -18836,6 +19138,7 @@ gene2 = i.eng12;
                         o.GenCouldCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -18863,6 +19166,7 @@ gene2 = i.eng12;
                         s.GenCouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -18870,7 +19174,7 @@ gene2 = i.eng12;
                         i.GenCouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -18888,6 +19192,7 @@ gene2 = i.eng22;
                         o.GenCouldCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -18915,6 +19220,7 @@ gene2 = i.eng22;
                         s.GenCouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -18922,7 +19228,7 @@ gene2 = i.eng22;
                         i.GenCouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -18939,6 +19245,7 @@ gene2 = i.eng32;
                         o.GenCouldCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -18965,6 +19272,7 @@ gene2 = i.eng32;
                         s.GenCouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -18972,7 +19280,7 @@ gene2 = i.eng32;
                         i.GenCouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -18989,6 +19297,7 @@ gene2 = i.eng42;
                         o.GenCouldCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -19015,6 +19324,7 @@ gene2 = i.eng42;
                         s.GenCouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -19022,7 +19332,7 @@ gene2 = i.eng42;
                         i.GenCouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -19039,6 +19349,7 @@ gene2 = i.eng52;
                         o.GenCouldCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -19065,6 +19376,7 @@ gene2 = i.eng52;
                         s.GenCouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -19072,7 +19384,7 @@ gene2 = i.eng52;
                         i.GenCouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -19090,6 +19402,7 @@ gene2 = i.eng62;
                         o.GenCouldCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -19116,6 +19429,7 @@ gene2 = i.eng62;
                         s.GenCouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -19123,7 +19437,7 @@ gene2 = i.eng62;
                         i.GenCouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -19141,6 +19455,7 @@ gene2 = i.eng72;
                         o.GenCouldCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -19190,12 +19505,14 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenCouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -19221,6 +19538,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -19244,6 +19562,7 @@ gene2 = i.eng72;
                         s.GenCouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -19269,6 +19588,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -19291,6 +19611,7 @@ gene2 = i.eng72;
                         s.GenCouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -19315,6 +19636,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -19339,6 +19661,7 @@ gene2 = i.eng72;
                         s.GenCouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -19363,6 +19686,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -19410,6 +19734,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -19432,6 +19757,7 @@ gene2 = i.eng72;
                         s.GenCouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -19456,6 +19782,7 @@ gene2 = i.eng72;
                         o.GenCouldPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -19477,6 +19804,7 @@ gene2 = i.eng72;
                         s.GenCouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20125,8 +20453,7 @@ gene2 = i.eng72;
     }
     public void GenShouldCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -20144,6 +20471,7 @@ gene2 = i.eng72;
                         s.GenShouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -20151,7 +20479,7 @@ gene2 = i.eng72;
                         i.GenShouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -20168,6 +20496,7 @@ gene2 = i.eng12;
                         o.GenShouldCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -20195,6 +20524,7 @@ gene2 = i.eng12;
                         s.GenShouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -20202,7 +20532,7 @@ gene2 = i.eng12;
                         i.GenShouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -20220,6 +20550,7 @@ gene2 = i.eng22;
                         o.GenShouldCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -20247,6 +20578,7 @@ gene2 = i.eng22;
                         s.GenShouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -20254,7 +20586,7 @@ gene2 = i.eng22;
                         i.GenShouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -20271,6 +20603,7 @@ gene2 = i.eng32;
                         o.GenShouldCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -20297,6 +20630,7 @@ gene2 = i.eng32;
                         s.GenShouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -20304,7 +20638,7 @@ gene2 = i.eng32;
                         i.GenShouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -20321,6 +20655,7 @@ gene2 = i.eng42;
                         o.GenShouldCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -20347,6 +20682,7 @@ gene2 = i.eng42;
                         s.GenShouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -20354,7 +20690,7 @@ gene2 = i.eng42;
                         i.GenShouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -20371,6 +20707,7 @@ gene2 = i.eng52;
                         o.GenShouldCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -20397,6 +20734,7 @@ gene2 = i.eng52;
                         s.GenShouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -20404,7 +20742,7 @@ gene2 = i.eng52;
                         i.GenShouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -20422,6 +20760,7 @@ gene2 = i.eng62;
                         o.GenShouldCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -20448,6 +20787,7 @@ gene2 = i.eng62;
                         s.GenShouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -20455,7 +20795,7 @@ gene2 = i.eng62;
                         i.GenShouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -20473,6 +20813,7 @@ gene2 = i.eng72;
                         o.GenShouldCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -20522,12 +20863,14 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenShouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20553,6 +20896,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -20576,6 +20920,7 @@ gene2 = i.eng72;
                         s.GenShouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20601,6 +20946,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -20623,6 +20969,7 @@ gene2 = i.eng72;
                         s.GenShouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20647,6 +20994,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -20671,6 +21019,7 @@ gene2 = i.eng72;
                         s.GenShouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20695,6 +21044,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -20742,6 +21092,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -20764,6 +21115,7 @@ gene2 = i.eng72;
                         s.GenShouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -20788,6 +21140,7 @@ gene2 = i.eng72;
                         o.GenShouldPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -20810,6 +21163,7 @@ gene2 = i.eng72;
                         s.GenShouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -21456,8 +21810,7 @@ gene2 = i.eng72;
     }
     public void GenMightCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -21475,6 +21828,7 @@ gene2 = i.eng72;
                         s.GenMightCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -21482,7 +21836,7 @@ gene2 = i.eng72;
                         i.GenMightCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -21499,6 +21853,7 @@ gene2 = i.eng12;
                         o.GenMightCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -21526,6 +21881,7 @@ gene2 = i.eng12;
                         s.GenMightCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -21533,7 +21889,7 @@ gene2 = i.eng12;
                         i.GenMightCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -21551,6 +21907,7 @@ gene2 = i.eng22;
                         o.GenMightCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -21578,6 +21935,7 @@ gene2 = i.eng22;
                         s.GenMightCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -21585,7 +21943,7 @@ gene2 = i.eng22;
                         i.GenMightCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -21602,6 +21960,7 @@ gene2 = i.eng32;
                         o.GenMightCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -21628,6 +21987,7 @@ gene2 = i.eng32;
                         s.GenMightCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -21635,7 +21995,7 @@ gene2 = i.eng32;
                         i.GenMightCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -21652,6 +22012,7 @@ gene2 = i.eng42;
                         o.GenMightCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -21678,6 +22039,7 @@ gene2 = i.eng42;
                         s.GenMightCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -21685,7 +22047,7 @@ gene2 = i.eng42;
                         i.GenMightCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -21702,6 +22064,7 @@ gene2 = i.eng52;
                         o.GenMightCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -21728,6 +22091,7 @@ gene2 = i.eng52;
                         s.GenMightCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -21735,7 +22099,7 @@ gene2 = i.eng52;
                         i.GenMightCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -21753,6 +22117,7 @@ gene2 = i.eng62;
                         o.GenMightCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -21779,6 +22144,7 @@ gene2 = i.eng62;
                         s.GenMightCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -21786,7 +22152,7 @@ gene2 = i.eng62;
                         i.GenMightCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -21804,6 +22170,7 @@ gene2 = i.eng72;
                         o.GenMightCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -21853,12 +22220,14 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenMightPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -21884,6 +22253,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -21907,6 +22277,7 @@ gene2 = i.eng72;
                         s.GenMightPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -21932,6 +22303,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -21954,6 +22326,7 @@ gene2 = i.eng72;
                         s.GenMightPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -21978,6 +22351,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -22002,6 +22376,7 @@ gene2 = i.eng72;
                         s.GenMightPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -22026,6 +22401,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -22073,6 +22449,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -22095,6 +22472,7 @@ gene2 = i.eng72;
                         s.GenMightPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -22119,6 +22497,7 @@ gene2 = i.eng72;
                         o.GenMightPerf3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -22141,6 +22520,7 @@ gene2 = i.eng72;
                         s.GenMightPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -22787,8 +23167,7 @@ gene2 = i.eng72;
     }
     public void GenCanCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -22806,6 +23185,7 @@ gene2 = i.eng72;
                         s.GenCanCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -22813,7 +23193,7 @@ gene2 = i.eng72;
                         i.GenCanCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -22830,6 +23210,7 @@ gene2 = i.eng12;
                         o.GenCanCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -22857,6 +23238,7 @@ gene2 = i.eng12;
                         s.GenCanCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -22864,7 +23246,7 @@ gene2 = i.eng12;
                         i.GenCanCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -22882,6 +23264,7 @@ gene2 = i.eng22;
                         o.GenCanCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -22909,6 +23292,7 @@ gene2 = i.eng22;
                         s.GenCanCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -22916,7 +23300,7 @@ gene2 = i.eng22;
                         i.GenCanCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -22933,6 +23317,7 @@ gene2 = i.eng32;
                         o.GenCanCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -22959,6 +23344,7 @@ gene2 = i.eng32;
                         s.GenCanCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -22966,7 +23352,7 @@ gene2 = i.eng32;
                         i.GenCanCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -22983,6 +23369,7 @@ gene2 = i.eng42;
                         o.GenCanCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -23009,6 +23396,7 @@ gene2 = i.eng42;
                         s.GenCanCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -23016,7 +23404,7 @@ gene2 = i.eng42;
                         i.GenCanCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -23033,6 +23421,7 @@ gene2 = i.eng52;
                         o.GenCanCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -23059,6 +23448,7 @@ gene2 = i.eng52;
                         s.GenCanCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -23066,7 +23456,7 @@ gene2 = i.eng52;
                         i.GenCanCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -23084,6 +23474,7 @@ gene2 = i.eng62;
                         o.GenCanCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -23110,6 +23501,7 @@ gene2 = i.eng62;
                         s.GenCanCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -23117,7 +23509,7 @@ gene2 = i.eng62;
                         i.GenCanCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -23135,6 +23527,7 @@ gene2 = i.eng72;
                         o.GenCanCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -23467,8 +23860,7 @@ gene2 = i.eng72;
     }
     public void GenMustCont3() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -23486,6 +23878,7 @@ gene2 = i.eng72;
                         s.GenMustCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -23493,7 +23886,7 @@ gene2 = i.eng72;
                         i.GenMustCont3();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -23510,6 +23903,7 @@ gene2 = i.eng12;
                         o.GenMustCont3();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -23537,6 +23931,7 @@ gene2 = i.eng12;
                         s.GenMustCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -23544,7 +23939,7 @@ gene2 = i.eng12;
                         i.GenMustCont3();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -23562,6 +23957,7 @@ gene2 = i.eng22;
                         o.GenMustCont3();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -23589,6 +23985,7 @@ gene2 = i.eng22;
                         s.GenMustCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -23596,7 +23993,7 @@ gene2 = i.eng22;
                         i.GenMustCont3();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -23613,6 +24010,7 @@ gene2 = i.eng32;
                         o.GenMustCont3();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -23639,6 +24037,7 @@ gene2 = i.eng32;
                         s.GenMustCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -23646,7 +24045,7 @@ gene2 = i.eng32;
                         i.GenMustCont3();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -23663,6 +24062,7 @@ gene2 = i.eng42;
                         o.GenMustCont3();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -23689,6 +24089,7 @@ gene2 = i.eng42;
                         s.GenMustCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -23696,7 +24097,7 @@ gene2 = i.eng42;
                         i.GenMustCont3();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -23713,6 +24114,7 @@ gene2 = i.eng52;
                         o.GenMustCont3();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -23739,6 +24141,7 @@ gene2 = i.eng52;
                         s.GenMustCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -23746,7 +24149,7 @@ gene2 = i.eng52;
                         i.GenMustCont3();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -23764,6 +24167,7 @@ gene2 = i.eng62;
                         o.GenMustCont3();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -23790,6 +24194,7 @@ gene2 = i.eng62;
                         s.GenMustCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -23797,7 +24202,7 @@ gene2 = i.eng62;
                         i.GenMustCont3();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -23815,6 +24220,7 @@ gene2 = i.eng72;
                         o.GenMustCont3();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -26404,6 +26810,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -26413,7 +26820,6 @@ gene2 = p.ps1eng2;
                         gens = p.ps1;
                         gene = p.ps1eng;
                         gene2 = p.ps1eng2;
-
                         break;
 
                     case 3:
@@ -26448,6 +26854,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -26492,6 +26899,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -26535,6 +26943,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -26576,8 +26985,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -26621,6 +27030,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -26664,6 +27074,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -26716,6 +27127,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -26759,6 +27171,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -26802,6 +27215,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -26844,6 +27258,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -26884,8 +27299,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -26928,6 +27343,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -26970,6 +27386,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -27564,8 +27981,7 @@ gene2 = p.ps1eng2;
     }
     public void GenPastCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -27582,6 +27998,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -27626,6 +28043,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -27670,6 +28088,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -27713,6 +28132,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -27754,8 +28174,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenPastCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -27799,6 +28219,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -27842,6 +28263,7 @@ gene2 = p.ps1eng2;
                         s.GenPastCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -27894,6 +28316,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -27937,6 +28360,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -27980,6 +28404,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -28022,6 +28447,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -28062,8 +28488,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenPastPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -28106,6 +28532,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -28148,6 +28575,7 @@ gene2 = p.ps1eng2;
                         s.GenPastPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -28747,8 +29175,7 @@ gene2 = p.ps1eng2;
     }
     public void GenFutCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -28765,6 +29192,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -28809,6 +29237,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -28853,6 +29282,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -28896,6 +29326,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -28937,8 +29368,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenFutCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -28982,6 +29413,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -29025,6 +29457,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -29077,6 +29510,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -29120,6 +29554,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -29163,6 +29598,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -29205,6 +29641,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -29245,8 +29682,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenFutPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -29289,6 +29726,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -29331,6 +29769,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -29914,8 +30353,7 @@ gene2 = p.ps1eng2;
     }
     public void GenWouldCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -29932,6 +30370,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -29976,6 +30415,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -30020,6 +30460,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -30063,6 +30504,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -30104,8 +30546,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenWouldCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -30149,6 +30591,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -30192,6 +30635,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -30244,6 +30688,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -30287,6 +30732,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -30330,6 +30776,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -30372,6 +30819,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -30412,8 +30860,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenWouldPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -30456,6 +30904,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -30498,6 +30947,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -31076,8 +31526,7 @@ gene2 = p.ps1eng2;
     }
     public void GenCouldCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -31094,6 +31543,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -31138,6 +31588,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -31182,6 +31633,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -31225,6 +31677,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -31266,8 +31719,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenWouldCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -31311,6 +31764,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -31354,6 +31808,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -31406,6 +31861,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -31449,6 +31905,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -31492,6 +31949,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -31534,6 +31992,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -31574,8 +32033,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenCouldPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -31618,6 +32077,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -31660,6 +32120,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -32242,8 +32703,7 @@ gene2 = p.ps1eng2;
     }
     public void GenShouldCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -32260,6 +32720,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -32304,6 +32765,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -32348,6 +32810,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -32391,6 +32854,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -32432,8 +32896,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenShouldCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -32477,6 +32941,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -32520,6 +32985,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -32572,6 +33038,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -32615,6 +33082,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -32658,6 +33126,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -32700,6 +33169,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -32740,8 +33210,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenShouldPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -32784,6 +33254,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -32826,6 +33297,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -33406,8 +33878,7 @@ gene2 = p.ps1eng2;
     }
     public void GenMightCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -33424,6 +33895,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -33468,6 +33940,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -33512,6 +33985,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -33555,6 +34029,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -33596,8 +34071,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenMightCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -33641,6 +34116,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -33684,6 +34160,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -33779,6 +34256,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -33822,6 +34300,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -33864,6 +34343,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -33904,8 +34384,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenMightPerf4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -33948,6 +34428,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -33990,6 +34471,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -34570,8 +35052,7 @@ gene2 = p.ps1eng2;
     }
     public void GenCanCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -34588,6 +35069,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -34605,6 +35087,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 4:
@@ -34631,6 +35114,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp2;
                         gene = s.eng2;
+
                         break;
 
 
@@ -34648,6 +35132,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 4:
@@ -34674,6 +35159,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -34691,6 +35177,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 4:
@@ -34716,6 +35203,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -34733,6 +35221,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 4:
@@ -34756,8 +35245,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenCanCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -34775,6 +35264,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 4:
@@ -34800,6 +35290,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -34817,6 +35308,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 4:
@@ -34842,6 +35334,7 @@ gene2 = p.ps1eng2;
                         s.GenCanCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -34859,6 +35352,7 @@ gene2 = p.ps1eng2;
                         o.GenCanCont4();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 4:
@@ -35149,8 +35643,7 @@ gene2 = p.ps1eng2;
     }
     public void GenMustCont4() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 5);
-        int verb = 4;
+        int verb = (int) (Math.random() * 5);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -35167,6 +35660,7 @@ gene2 = p.ps1eng2;
                         s.GenMustCont4();
                         gens = s.sp1;
                         gene = s.eng1;
+
                         break;
 
 
@@ -35184,6 +35678,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 4:
@@ -35227,6 +35722,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 4:
@@ -35253,6 +35749,7 @@ gene2 = p.ps1eng2;
                         s.GenMustCont4();
                         gens = s.sp3;
                         gene = s.eng3;
+
                         break;
 
 
@@ -35270,6 +35767,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 4:
@@ -35293,8 +35791,9 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenMustCont4();
-                        gens = s.sp3ella;
+                        gens = s.sp3it;
                         gene = s.eng3she;
+
                         break;
 
 
@@ -35312,6 +35811,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 4:
@@ -35335,8 +35835,8 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenMustCont4();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3it;
+                        gene = s.sp3it;
                         break;
 
 
@@ -35354,6 +35854,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 4:
@@ -35379,6 +35880,7 @@ gene2 = p.ps1eng2;
                         s.GenMustCont4();
                         gens = s.sp4;
                         gene = s.eng4;
+
                         break;
 
 
@@ -35396,6 +35898,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 4:
@@ -35421,6 +35924,7 @@ gene2 = p.ps1eng2;
                         s.GenMustCont4();
                         gens = s.sp5;
                         gene = s.eng5;
+
                         break;
 
 
@@ -35438,6 +35942,7 @@ gene2 = p.ps1eng2;
                         o.GenMustCont4();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 4:
@@ -38067,6 +38572,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -38119,6 +38625,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -38172,6 +38679,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -38223,6 +38731,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -38272,8 +38781,9 @@ gene2 = p.ps1eng2;
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresCont1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -38325,6 +38835,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -38377,6 +38888,7 @@ gene2 = p.ps1eng2;
                         s.GenPresCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -38438,6 +38950,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -38461,6 +38974,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -38488,6 +39002,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -38511,6 +39026,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -38538,6 +39054,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -38561,6 +39078,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -38586,6 +39104,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -38608,6 +39127,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -38626,14 +39146,15 @@ gene2 = p.ps1eng2;
                         n.GenPresPerf1();
                         gens = n.ps3eso;
                         gene = n.ps3it;
-                        gene2 = n.ps3eng2;
+                        gene2 = n.ps3iteng2;
                         break;
 
                     case 1:
                         Special2 s = new Special2();
                         s.GenPresPerf1();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -38657,6 +39178,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -38683,6 +39205,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -38705,6 +39228,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -38730,6 +39254,7 @@ gene2 = p.ps1eng2;
                         s.GenPresPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 2:
                         Intrans2 i = new Intrans2();
@@ -38752,6 +39277,7 @@ gene2 = p.ps1eng2;
                         o.GenPresPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -39322,8 +39848,7 @@ gene2 = p.ps1eng2;
     }
     public void GenPastCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -39341,6 +39866,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -39365,6 +39891,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -39392,6 +39919,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -39417,6 +39945,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -39444,6 +39973,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -39468,6 +39998,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -39494,6 +40025,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -39518,6 +40050,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -39544,6 +40077,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -39568,6 +40102,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -39594,6 +40129,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -39601,7 +40137,6 @@ gene2 = p.ps1eng2;
                         i.GenPassCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -39619,6 +40154,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -39645,6 +40181,7 @@ gene2 = p.ps1eng2;
                         s.GenPassCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -39670,6 +40207,7 @@ gene2 = p.ps1eng2;
                         o.GenPassCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -39719,12 +40257,14 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenPassPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
 
                         break;
 
@@ -39752,6 +40292,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -39775,6 +40316,7 @@ gene2 = p.ps1eng2;
                         s.GenPassPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
 
                         break;
 
@@ -39802,6 +40344,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -39824,6 +40367,7 @@ gene2 = p.ps1eng2;
                         s.GenPassPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
 
                         break;
 
@@ -39850,6 +40394,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -39874,6 +40419,7 @@ gene2 = p.ps1eng2;
                         s.GenPassPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
 
                         break;
 
@@ -39900,6 +40446,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -39949,6 +40496,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -39971,6 +40519,7 @@ gene2 = p.ps1eng2;
                         s.GenPassPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
 
                         break;
 
@@ -39997,6 +40546,7 @@ gene2 = p.ps1eng2;
                         o.GenPassPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -40019,6 +40569,7 @@ gene2 = p.ps1eng2;
                         s.GenPassPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
 
                         break;
 
@@ -40693,8 +41244,7 @@ gene2 = p.ps1eng2;
     }
     public void GenFutCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -40712,6 +41262,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -40736,6 +41287,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -40763,6 +41315,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -40788,6 +41341,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -40815,6 +41369,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -40839,6 +41394,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -40865,6 +41421,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -40889,6 +41446,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -40915,6 +41473,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -40939,6 +41498,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -40965,6 +41525,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -40990,6 +41551,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -41016,6 +41578,7 @@ gene2 = p.ps1eng2;
                         s.GenFutCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -41041,6 +41604,7 @@ gene2 = p.ps1eng2;
                         o.GenFutCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -41090,12 +41654,14 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenFutPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -41121,6 +41687,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -41144,6 +41711,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf1();
                         gens = s.sp2;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -41169,6 +41737,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -41191,6 +41760,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -41215,6 +41785,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -41239,6 +41810,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -41263,6 +41835,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -41310,6 +41883,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -41332,6 +41906,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -41356,6 +41931,7 @@ gene2 = p.ps1eng2;
                         o.GenFutPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -41377,6 +41953,7 @@ gene2 = p.ps1eng2;
                         s.GenFutPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42027,8 +42604,7 @@ gene2 = p.ps1eng2;
     }
     public void GenWouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -42046,6 +42622,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -42070,6 +42647,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -42097,6 +42675,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -42122,6 +42701,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -42149,6 +42729,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -42173,6 +42754,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -42199,6 +42781,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -42223,6 +42806,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -42249,6 +42833,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -42273,6 +42858,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -42299,6 +42885,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -42324,6 +42911,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -42350,6 +42938,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -42375,6 +42964,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -42424,12 +43014,14 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenWouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42455,6 +43047,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -42478,6 +43071,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42503,6 +43097,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -42525,6 +43120,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42549,6 +43145,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -42573,6 +43170,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42597,6 +43195,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -42644,6 +43243,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -42666,6 +43266,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -42690,6 +43291,7 @@ gene2 = p.ps1eng2;
                         o.GenWouldPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -42712,6 +43314,7 @@ gene2 = p.ps1eng2;
                         s.GenWouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -43356,8 +43959,7 @@ gene2 = p.ps1eng2;
     }
     public void GenCouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -43375,6 +43977,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -43399,6 +44002,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -43426,6 +44030,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -43451,6 +44056,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -43478,6 +44084,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -43502,6 +44109,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -43528,6 +44136,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -43552,6 +44161,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -43578,6 +44188,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -43602,6 +44213,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -43628,6 +44240,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -43653,6 +44266,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -43679,6 +44293,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -43704,6 +44319,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -43753,12 +44369,14 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenCouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -43784,6 +44402,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -43807,6 +44426,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -43832,6 +44452,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -43854,6 +44475,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -43878,6 +44500,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -43902,6 +44525,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -43926,6 +44550,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -43973,6 +44598,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -43995,6 +44621,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -44019,6 +44646,7 @@ gene2 = p.ps1eng2;
                         o.GenCouldPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -44040,6 +44668,7 @@ gene2 = p.ps1eng2;
                         s.GenCouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -44688,8 +45317,7 @@ gene2 = p.ps1eng2;
     }
     public void GenShouldCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -44707,6 +45335,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -44731,6 +45360,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -44758,6 +45388,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -44783,6 +45414,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -44810,6 +45442,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -44834,6 +45467,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -44860,6 +45494,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -44884,6 +45519,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -44910,6 +45546,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -44934,6 +45571,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -44960,6 +45598,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -44985,6 +45624,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -45011,6 +45651,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -45036,6 +45677,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -45085,12 +45727,14 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenShouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -45116,6 +45760,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -45139,6 +45784,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -45164,6 +45810,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -45186,6 +45833,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -45210,6 +45858,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -45234,6 +45883,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -45258,6 +45908,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -45305,6 +45956,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -45327,6 +45979,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -45351,6 +46004,7 @@ gene2 = p.ps1eng2;
                         o.GenShouldPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -45373,6 +46027,7 @@ gene2 = p.ps1eng2;
                         s.GenShouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46019,8 +46674,7 @@ gene2 = p.ps1eng2;
     }
     public void GenMightCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -46038,6 +46692,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -46062,6 +46717,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -46089,6 +46745,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -46114,6 +46771,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -46141,6 +46799,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -46165,6 +46824,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -46191,6 +46851,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -46215,6 +46876,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -46241,6 +46903,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -46265,6 +46928,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -46291,6 +46955,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -46316,6 +46981,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -46342,6 +47008,7 @@ gene2 = p.ps1eng2;
                         s.GenMightCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -46367,6 +47034,7 @@ gene2 = p.ps1eng2;
                         o.GenMightCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -46416,12 +47084,14 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
                     case 4:
                         Special2 s = new Special2();
                         s.GenMightPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46447,6 +47117,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
 
                         break;
                     case 2:
@@ -46470,6 +47141,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46495,6 +47167,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -46517,6 +47190,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46541,6 +47215,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
 
                         break;
                     case 2:
@@ -46565,6 +47240,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46589,6 +47265,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
 
                         break;
                     case 2:
@@ -46636,6 +47313,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -46658,6 +47336,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -46682,6 +47361,7 @@ gene2 = p.ps1eng2;
                         o.GenMightPerf1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
                     case 2:
                         Abstractos2 ab = new Abstractos2();
@@ -46704,6 +47384,7 @@ gene2 = p.ps1eng2;
                         s.GenMightPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
                     case 5:
                         Intrans2 i = new Intrans2();
@@ -47350,8 +48031,7 @@ gene2 = i.eng72;
     }
     public void GenCanCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -47369,6 +48049,7 @@ gene2 = i.eng72;
                         s.GenCanCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -47376,7 +48057,7 @@ gene2 = i.eng72;
                         i.GenCanCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -47393,6 +48074,7 @@ gene2 = i.eng12;
                         o.GenCanCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -47420,6 +48102,7 @@ gene2 = i.eng12;
                         s.GenCanCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -47427,7 +48110,7 @@ gene2 = i.eng12;
                         i.GenCanCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -47445,6 +48128,7 @@ gene2 = i.eng22;
                         o.GenCanCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -47472,6 +48156,7 @@ gene2 = i.eng22;
                         s.GenCanCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -47479,7 +48164,7 @@ gene2 = i.eng22;
                         i.GenCanCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -47496,6 +48181,7 @@ gene2 = i.eng32;
                         o.GenCanCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -47522,6 +48208,7 @@ gene2 = i.eng32;
                         s.GenCanCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -47529,7 +48216,7 @@ gene2 = i.eng32;
                         i.GenCanCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -47546,6 +48233,7 @@ gene2 = i.eng42;
                         o.GenCanCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -47572,6 +48260,7 @@ gene2 = i.eng42;
                         s.GenCanCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -47579,7 +48268,7 @@ gene2 = i.eng42;
                         i.GenCanCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -47596,6 +48285,7 @@ gene2 = i.eng52;
                         o.GenCanCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -47622,6 +48312,7 @@ gene2 = i.eng52;
                         s.GenCanCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -47629,7 +48320,7 @@ gene2 = i.eng52;
                         i.GenCanCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -47647,6 +48338,7 @@ gene2 = i.eng62;
                         o.GenCanCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -47673,6 +48365,7 @@ gene2 = i.eng62;
                         s.GenCanCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -47680,7 +48373,7 @@ gene2 = i.eng62;
                         i.GenCanCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -47698,6 +48391,7 @@ gene2 = i.eng72;
                         o.GenCanCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
@@ -48030,8 +48724,7 @@ gene2 = i.eng72;
     }
     public void GenMustCont1() {
         int rand = (int) (Math.random() * pronombres.length);
-        //int verb = (int) (Math.random() * 6);
-        int verb = 2;
+        int verb = (int) (Math.random() * 6);
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -48049,6 +48742,7 @@ gene2 = i.eng72;
                         s.GenMustCont1();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -48056,7 +48750,7 @@ gene2 = i.eng72;
                         i.GenMustCont1();
                         gens = i.sp1;
                         gene = i.eng1;
-gene2 = i.eng12;
+                        gene2 = i.eng12;
                         break;
 
                     case 3:
@@ -48073,6 +48767,7 @@ gene2 = i.eng12;
                         o.GenMustCont1();
                         gens = o.ps1;
                         gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
                         break;
 
                     case 5:
@@ -48100,6 +48795,7 @@ gene2 = i.eng12;
                         s.GenMustCont1();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
                     case 2:
@@ -48107,7 +48803,7 @@ gene2 = i.eng12;
                         i.GenMustCont1();
                         gens = i.sp2;
                         gene = i.eng2;
-gene2 = i.eng22;
+                        gene2 = i.eng22;
                         gene2 = i.eng22;
                         break;
 
@@ -48125,6 +48821,7 @@ gene2 = i.eng22;
                         o.GenMustCont1();
                         gens = o.ps2;
                         gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
                         break;
 
                     case 5:
@@ -48152,6 +48849,7 @@ gene2 = i.eng22;
                         s.GenMustCont1();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
                     case 2:
@@ -48159,7 +48857,7 @@ gene2 = i.eng22;
                         i.GenMustCont1();
                         gens = i.sp3;
                         gene = i.eng3;
-gene2 = i.eng32;
+                        gene2 = i.eng32;
                         break;
 
                     case 3:
@@ -48176,6 +48874,7 @@ gene2 = i.eng32;
                         o.GenMustCont1();
                         gens = o.ps3;
                         gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
                         break;
 
                     case 5:
@@ -48202,6 +48901,7 @@ gene2 = i.eng32;
                         s.GenMustCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -48209,7 +48909,7 @@ gene2 = i.eng32;
                         i.GenMustCont1();
                         gens = i.sp4;
                         gene = i.eng4;
-gene2 = i.eng42;
+                        gene2 = i.eng42;
                         break;
 
                     case 3:
@@ -48226,6 +48926,7 @@ gene2 = i.eng42;
                         o.GenMustCont1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
+                        gene2 = o.ps3she2;
                         break;
 
                     case 5:
@@ -48252,6 +48953,7 @@ gene2 = i.eng42;
                         s.GenMustCont1();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -48259,7 +48961,7 @@ gene2 = i.eng42;
                         i.GenMustCont1();
                         gens = i.sp5;
                         gene = i.eng5;
-gene2 = i.eng52;
+                        gene2 = i.eng52;
                         break;
 
                     case 3:
@@ -48276,6 +48978,7 @@ gene2 = i.eng52;
                         o.GenMustCont1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
+                        gene2 = o.ps3iteng2;
                         break;
 
                     case 5:
@@ -48302,6 +49005,7 @@ gene2 = i.eng52;
                         s.GenMustCont1();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
                     case 2:
@@ -48309,7 +49013,7 @@ gene2 = i.eng52;
                         i.GenMustCont1();
                         gens = i.sp6;
                         gene = i.eng6;
-gene2 = i.eng62;
+                        gene2 = i.eng62;
                         gene2 = i.eng62;
                         break;
 
@@ -48327,6 +49031,7 @@ gene2 = i.eng62;
                         o.GenMustCont1();
                         gens = o.ps4;
                         gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
                         break;
 
                     case 5:
@@ -48353,6 +49058,7 @@ gene2 = i.eng62;
                         s.GenMustCont1();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -48360,7 +49066,7 @@ gene2 = i.eng62;
                         i.GenMustCont1();
                         gens = i.sp7;
                         gene = i.eng7;
-gene2 = i.eng72;
+                        gene2 = i.eng72;
                         break;
 
                     case 3:
@@ -48378,6 +49084,7 @@ gene2 = i.eng72;
                         o.GenMustCont1();
                         gens = o.ps5;
                         gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
                         break;
 
                     case 5:
