@@ -14397,7 +14397,7 @@ gene2 = o.ps5eng2;
                         s.GenPresCont2();
                         gens = s.sp1;
                         gene = s.eng1;
-gene2 = s.eng12;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
