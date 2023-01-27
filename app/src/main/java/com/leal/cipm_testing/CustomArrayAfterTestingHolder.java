@@ -11,16 +11,31 @@ public class CustomArrayAfterTestingHolder {
     List<String> CultureArrayAfterTEsting; 
     List<String> AvailabilityArrayAfterTEsting;
 
-    public CustomArrayAfterTestingHolder() {
-    }
 
-    public CustomArrayAfterTestingHolder(List<String>structureArrayAfterTEsting, List<String> vocabArrayAfterTEsting, List<String> spanishInterferenceArrayAfterTEsting, List<String> consciousInterferenceArrayAfterTEsting, List<String> cultureArrayAfterTEsting, List<String> availabilityArrayAfterTEsting) {
+
+
+    public CustomArrayAfterTestingHolder() {
+
+    }
+    public CustomArrayAfterTestingHolder(List<String>structureArrayAfterTEsting,
+                                         List<String> vocabArrayAfterTEsting,
+                                         List<String> spanishInterferenceArrayAfterTEsting,
+                                         List<String> consciousInterferenceArrayAfterTEsting,
+                                         List<String> cultureArrayAfterTEsting,
+                                         List<String> availabilityArrayAfterTEsting) {
         StructureArrayAfterTEsting = structureArrayAfterTEsting;
         VocabArrayAfterTEsting = vocabArrayAfterTEsting;
         SpanishInterferenceArrayAfterTEsting = spanishInterferenceArrayAfterTEsting;
         ConsciousInterferenceArrayAfterTEsting = consciousInterferenceArrayAfterTEsting;
         CultureArrayAfterTEsting = cultureArrayAfterTEsting;
         AvailabilityArrayAfterTEsting = availabilityArrayAfterTEsting;
+    }
+
+    public  CustomArrayAfterTestingHolder(List<String> structureArrayAfterTEsting,
+                                          List<String> vocabArrayAfterTEsting) {
+        StructureArrayAfterTEsting = structureArrayAfterTEsting;
+        VocabArrayAfterTEsting = vocabArrayAfterTEsting;
+
     }
 
     public List<String> getStructureArrayAfterTEsting() {

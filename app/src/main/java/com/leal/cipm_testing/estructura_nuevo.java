@@ -80,13 +80,16 @@ public class estructura_nuevo extends AppCompatActivity {
     FirebaseAuth mAuth;
     String userid;
     String[] EmptyArray;
-    DocumentReference docref ;
+    DocumentReference docref;
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
+    CustomArrayAfterTestingHolder studentObject;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
+     DocumentReference docrefStructures;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,7 +144,6 @@ public class estructura_nuevo extends AppCompatActivity {
         isCustom = reciver.getBooleanExtra("isCustom",false);
         isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
         iscustom100= reciver.getBooleanExtra("Custom100Plan",false);
-        isFromCustom100Db=reciver.getStringArrayExtra("CustomArrayStructuresFromDb");
 
 
         if(isNonBasics){
@@ -155,6 +157,7 @@ public class estructura_nuevo extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
+        docrefStructures = db.collection(userid).document( "CustomArrayLists");
 
 
 
@@ -167,7 +170,6 @@ public class estructura_nuevo extends AppCompatActivity {
     boolean isNonBasicsArray;
 
     public void PremiumControler(){
-
 
         /* if(isNonBasicsCustom){
              isBasics=false;
@@ -491,26 +493,32 @@ public class estructura_nuevo extends AppCompatActivity {
                         }
                     });
                 } else if (prefs.getPremium()==0){
-                    //remove user all the premium features
-                    //show ads to the user
-                   temp=  isFromCustom100Db;
-
-                    //espacio.......................................
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin2.setAdapter(adapter2);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    docrefStructures.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection2 = spin2.getSelectedItem().toString();
-                            txt2.setText(selection2);
-                        }
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            studentObject=documentSnapshot.toObject(CustomArrayAfterTestingHolder.class) ;
+                            assert studentObject != null;
+                            temp= studentObject.StructureArrayAfterTEsting.toArray(new String[0]);
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
+                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(estructura_nuevo.this, R.array.rango, android.R.layout.simple_spinner_item);
+                            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin2.setAdapter(adapter2);
+                            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection2 = spin2.getSelectedItem().toString();
+                                    txt2.setText(selection2);
+                                }
 
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
                         }
                     });
+
+
 
                 }
 

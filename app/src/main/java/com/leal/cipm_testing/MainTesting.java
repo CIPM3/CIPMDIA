@@ -6581,6 +6581,8 @@ public class MainTesting extends AppCompatActivity {
                 break;
         }
     }
+
+    //currently working on---------------------------------------
     public void SendStructureInfoToDb()  {
         String t = txteng.trim();
         String t2 = Answerinput.getText().toString().trim();
@@ -8907,6 +8909,9 @@ public class MainTesting extends AppCompatActivity {
                 break;
             }}
     }
+    //------------------------------------------
+
+
     public void spintdbtesting()  {
         String ansin = Answerinput.getText().toString().trim();
         if (

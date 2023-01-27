@@ -81,7 +81,9 @@ public class vocabulary_nuevo extends AppCompatActivity {
     public static final int REC_CODE_SPEECH_INPUT = 100;
     boolean v;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon,isBasicStructures;
-    boolean personalizedPlan;
+    boolean personalizedPlan,isCustom,is100Custom;
+    Prefs prefs;
+    DocumentReference docrefVocab;
 
 
 
@@ -112,79 +114,223 @@ public class vocabulary_nuevo extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
+        docrefVocab = db.collection(userid).document("CustomArrayLists");
+        prefs = new Prefs(vocabulary_nuevo.this);
 
         PremiumControler();
     }
+    CustomArrayAfterTestingHolder caath ;
 
     private void PremiumControler() {
 
         // info que recive del plan de estudios chooser
         Intent reciver = getIntent();
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
-        boolean isCustom = reciver.getBooleanExtra("isCustom",false);
-        Prefs prefs = new Prefs(vocabulary_nuevo.this);
+        isCustom = reciver.getBooleanExtra("isCustom",false);
+        is100Custom=reciver.getBooleanExtra("Custom100Plan",false);
+        
 
         //si es personalizado jala el array para empezar y luego el de la
         // base de datos correspondiente
         // este tiene que jalar un array al principio de lo que sea que sea su plan
         if(personalizedPlan){
-            //al premium no se le ha movido
-            if (prefs.getPremium()==1){
-                //Give the user all the premium features
-                //hide ads if you are showing ads
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                        (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        textspin1.setText(selection);
+            if(is100Custom){
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                            (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
 
-                        txt_exp.setVisibility(View.VISIBLE);
-                        btn_emp_lay.setVisibility(View.VISIBLE);
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
 
-                        spanish_lay.setVisibility(View.GONE);
-                        input_lay.setVisibility(View.GONE);
+                            txt_exp.setVisibility(View.VISIBLE);
+                            btn_emp_lay.setVisibility(View.VISIBLE);
 
-                        btn_check_lay.setVisibility(View.GONE);
-                        btn_cont_lay.setVisibility(View.GONE);
+                            spanish_lay.setVisibility(View.GONE);
+                            input_lay.setVisibility(View.GONE);
 
-                        resppass.setVisibility(View.GONE);
-                        respescu.setVisibility(View.GONE);
-                        respinc.setVisibility(View.GONE);
+                            btn_check_lay.setVisibility(View.GONE);
+                            btn_cont_lay.setVisibility(View.GONE);
 
-                        answerinp.setBackgroundColor(Color.WHITE);
-                        opclay.setBackgroundColor(Color.WHITE);
+                            resppass.setVisibility(View.GONE);
+                            respescu.setVisibility(View.GONE);
+                            respinc.setVisibility(View.GONE);
+
+                            answerinp.setBackgroundColor(Color.WHITE);
+                            opclay.setBackgroundColor(Color.WHITE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+                else if (prefs.getPremium()==0){
+                    // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
+                    // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
+                    // en cada actividad habra un is custom, con el array que le corresponda
+                    // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
+                    if(isCustom)
+                    {
+                        Toast.makeText(this, "custom after he did some elements from his 100custom array", Toast.LENGTH_SHORT).show();
                     }
+                    // si no es custom agarra el temp que ha sido inicializado arriba
+                    // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
+                    // aqui empieza el plan personalizado
+                    else {
+                        docrefVocab.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            @Override
+                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                caath= documentSnapshot.toObject(CustomArrayAfterTestingHolder.class);
+                                assert caath != null;
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
+                                temp= caath.VocabArrayAfterTEsting.toArray(new String[0]);
+
+
+                                ArrayAdapter<String> adapter =
+                                        new ArrayAdapter<String>
+                                                        (vocabulary_nuevo.this,
+                                                        android.R.layout.simple_list_item_1, temp);
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        textspin1.setText(selection);
+                                        vf.setVisibility(View.VISIBLE);
+                                        vv.setVisibility(View.GONE);
+                                        txt_exp.setVisibility(View.VISIBLE);
+                                        btn_emp_lay.setVisibility(View.VISIBLE);
+                                        spanish_lay.setVisibility(View.GONE);
+                                        input_lay.setVisibility(View.GONE);
+
+                                        btn_check_lay.setVisibility(View.GONE);
+                                        btn_cont_lay.setVisibility(View.GONE);
+
+                                        resppass.setVisibility(View.GONE);
+                                        respescu.setVisibility(View.GONE);
+                                        respinc.setVisibility(View.GONE);
+
+                                        answerinp.setBackgroundColor(Color.WHITE);
+                                        opclay.setBackgroundColor(Color.WHITE);
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                            }
+                        });
+
+
 
                     }
-                });
+                }
+            }else {
+                if (prefs.getPremium()==1){
+                    //Give the user all the premium features
+                    //hide ads if you are showing ads
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
+                            (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-            }
-            // no es premium
-            else if (prefs.getPremium()==0){
-                // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
-                // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
-                // en cada actividad habra un is custom, con el array que le corresponda
-                // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
-                if(isCustom)
-                {
-                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
-                        assert vmp != null;
-                        temp= vmp.resultArray.toArray(new String[0]);
-                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                    spin.setAdapter(adapter);
+                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);
+
+                            vf.setVisibility(View.VISIBLE);
+                            vv.setVisibility(View.GONE);
+
+                            txt_exp.setVisibility(View.VISIBLE);
+                            btn_emp_lay.setVisibility(View.VISIBLE);
+
+                            spanish_lay.setVisibility(View.GONE);
+                            input_lay.setVisibility(View.GONE);
+
+                            btn_check_lay.setVisibility(View.GONE);
+                            btn_cont_lay.setVisibility(View.GONE);
+
+                            resppass.setVisibility(View.GONE);
+                            respescu.setVisibility(View.GONE);
+                            respinc.setVisibility(View.GONE);
+
+                            answerinp.setBackgroundColor(Color.WHITE);
+                            opclay.setBackgroundColor(Color.WHITE);
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                }
+                else if (prefs.getPremium()==0){
+                    // este if controla si esta volviendo de una sesión anterior, recive de la base de datos
+                    // una lista<> ya empezada que convierte en array y que luego pasa al adaptador que lo pone en el spiner
+                    // en cada actividad habra un is custom, con el array que le corresponda
+                    // la actividad sera controlada en plandeestudioschooser segun lo que la base de datos diga que es true
+                    if(isCustom)
+                    {
+                        docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            @Override
+                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                                assert vmp != null;
+                                temp= vmp.resultArray.toArray(new String[0]);
+                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                                spin.setAdapter(adapter);
+                                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        selection = spin.getSelectedItem().toString();
+                                        textspin1.setText(selection);
+                                        vf.setVisibility(View.VISIBLE);
+                                        vv.setVisibility(View.GONE);
+                                        txt_exp.setVisibility(View.VISIBLE);
+                                        btn_emp_lay.setVisibility(View.VISIBLE);
+                                        spanish_lay.setVisibility(View.GONE);
+                                        input_lay.setVisibility(View.GONE);
+
+                                        btn_check_lay.setVisibility(View.GONE);
+                                        btn_cont_lay.setVisibility(View.GONE);
+
+                                        resppass.setVisibility(View.GONE);
+                                        respescu.setVisibility(View.GONE);
+                                        respinc.setVisibility(View.GONE);
+
+                                        answerinp.setBackgroundColor(Color.WHITE);
+                                        opclay.setBackgroundColor(Color.WHITE);
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+                            }
+                        });}
+                    // si no es custom agarra el temp que ha sido inicializado arriba
+                    // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
+                    // aqui empieza el plan personalizado
+                    else {
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
                         spin.setAdapter(adapter);
                         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             @Override
@@ -215,46 +361,15 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             }
                         });
                     }
-                });}
-                // si no es custom agarra el temp que ha sido inicializado arriba
-                // tal vez tengamos que hacer esos arrays en otra clase y solo llamarlos
-                // aqui empieza el plan personalizado
-                else {
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            textspin1.setText(selection);
-                            vf.setVisibility(View.VISIBLE);
-                            vv.setVisibility(View.GONE);
-                            txt_exp.setVisibility(View.VISIBLE);
-                            btn_emp_lay.setVisibility(View.VISIBLE);
-                            spanish_lay.setVisibility(View.GONE);
-                            input_lay.setVisibility(View.GONE);
-
-                            btn_check_lay.setVisibility(View.GONE);
-                            btn_cont_lay.setVisibility(View.GONE);
-
-                            resppass.setVisibility(View.GONE);
-                            respescu.setVisibility(View.GONE);
-                            respinc.setVisibility(View.GONE);
-
-                            answerinp.setBackgroundColor(Color.WHITE);
-                            opclay.setBackgroundColor(Color.WHITE);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
                 }
             }
 
 
+
         }
+
+
+
         // si no es personalizado acesa a todas las funciones que le cooresponden
         // ya sea pagado o gratis
         else if (prefs.getPremium()==1){
