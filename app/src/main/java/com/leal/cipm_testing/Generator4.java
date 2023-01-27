@@ -342,6 +342,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -385,6 +386,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -428,6 +430,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -470,6 +473,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -509,8 +513,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPresCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -552,6 +557,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -594,6 +600,7 @@ public class Generator4 {
                         s.GenPresCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -642,6 +649,7 @@ public class Generator4 {
                         s.GenPresPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -685,6 +693,7 @@ public class Generator4 {
                         s.GenPresPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -728,6 +737,7 @@ public class Generator4 {
                         s.GenPresPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -770,6 +780,7 @@ public class Generator4 {
                         s.GenPresPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -809,8 +820,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPresPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -860,6 +872,7 @@ public class Generator4 {
                         p.GenPresPerf2();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
                         break;
 
                     case 3:
@@ -894,6 +907,7 @@ public class Generator4 {
                         s.GenPresPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -1516,6 +1530,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -1559,6 +1574,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -1602,6 +1618,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -1644,6 +1661,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -1683,8 +1701,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPastCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -1726,6 +1745,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -1768,6 +1788,7 @@ public class Generator4 {
                         s.GenPastCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -1816,6 +1837,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -1859,6 +1881,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -1902,6 +1925,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -1944,6 +1968,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -1983,8 +2008,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPastPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -2026,6 +2052,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -2068,6 +2095,7 @@ public class Generator4 {
                         s.GenPastPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -2689,6 +2717,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -2732,6 +2761,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -2775,6 +2805,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -2817,6 +2848,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -2856,8 +2888,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenFutCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -2899,6 +2932,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -2941,6 +2975,7 @@ public class Generator4 {
                         s.GenFutCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -2989,6 +3024,8 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -3032,6 +3069,7 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -3075,6 +3113,7 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -3117,6 +3156,7 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -3156,8 +3196,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenFutPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -3199,6 +3240,7 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -3241,6 +3283,7 @@ public class Generator4 {
                         s.GenFutPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -3862,6 +3905,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -3905,6 +3949,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -3948,6 +3993,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -3990,6 +4036,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -4029,8 +4076,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenWouldCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -4072,6 +4120,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -4114,6 +4163,7 @@ public class Generator4 {
                         s.GenWouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -4162,6 +4212,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -4205,6 +4256,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -4248,6 +4300,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -4290,6 +4343,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -4329,8 +4383,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenWouldPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -4372,6 +4427,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -4414,6 +4470,7 @@ public class Generator4 {
                         s.GenWouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -5036,6 +5093,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -5079,6 +5137,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -5122,6 +5181,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -5164,6 +5224,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -5203,8 +5264,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCouldCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -5246,6 +5308,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -5288,6 +5351,7 @@ public class Generator4 {
                         s.GenCouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -5336,6 +5400,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -5379,6 +5444,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -5422,6 +5488,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -5464,6 +5531,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -5503,8 +5571,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCouldPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -5546,6 +5615,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -5588,6 +5658,7 @@ public class Generator4 {
                         s.GenCouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -6210,6 +6281,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -6253,6 +6325,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -6296,6 +6369,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -6338,6 +6412,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -6377,8 +6452,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenShouldCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -6420,6 +6496,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -6462,6 +6539,7 @@ public class Generator4 {
                         s.GenShouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -6510,6 +6588,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -6553,6 +6632,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -6596,6 +6676,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -6638,6 +6719,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -6677,8 +6759,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenShouldPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -6720,6 +6803,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -6762,6 +6846,7 @@ public class Generator4 {
                         s.GenShouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -7384,6 +7469,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -7427,6 +7513,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -7470,6 +7557,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -7512,6 +7600,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -7551,8 +7640,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMightCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -7594,6 +7684,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -7636,6 +7727,7 @@ public class Generator4 {
                         s.GenMightCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -7684,6 +7776,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -7727,6 +7820,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -7770,6 +7864,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -7812,6 +7907,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -7851,8 +7947,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMightPerf2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -7894,6 +7991,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -7936,6 +8034,7 @@ public class Generator4 {
                         s.GenMightPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -8558,6 +8657,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -8601,6 +8701,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -8644,6 +8745,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -8686,6 +8788,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -8725,8 +8828,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCanCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -8768,6 +8872,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -8810,6 +8915,7 @@ public class Generator4 {
                         s.GenCanCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -9146,6 +9252,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -9189,6 +9296,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -9232,6 +9340,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -9274,6 +9383,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -9313,8 +9423,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMustCont2();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -9356,6 +9467,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -9398,6 +9510,7 @@ public class Generator4 {
                         s.GenMustCont2();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -11652,6 +11765,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -11695,6 +11809,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -11738,6 +11853,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -11780,6 +11896,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -11819,8 +11936,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPresCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -11862,6 +11980,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -11904,6 +12023,7 @@ public class Generator4 {
                         s.GenPresCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -11952,6 +12072,7 @@ public class Generator4 {
                         s.GenPresPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -11995,6 +12116,7 @@ public class Generator4 {
                         s.GenPresPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -12038,6 +12160,7 @@ public class Generator4 {
                         s.GenPresPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -12080,6 +12203,7 @@ public class Generator4 {
                         s.GenPresPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -12119,8 +12243,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPresPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -12170,6 +12295,7 @@ public class Generator4 {
                         p.GenPresPerf3();
                         gens = p.ps4;
                         gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
                         break;
 
                     case 3:
@@ -12204,6 +12330,7 @@ public class Generator4 {
                         s.GenPresPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -12826,6 +12953,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -12869,6 +12997,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -12912,6 +13041,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -12954,6 +13084,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -12993,8 +13124,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPastCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -13036,6 +13168,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -13078,6 +13211,7 @@ public class Generator4 {
                         s.GenPastCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -13126,6 +13260,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -13169,6 +13304,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -13212,6 +13348,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -13254,6 +13391,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -13293,8 +13431,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenPastPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -13336,6 +13475,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -13378,6 +13518,7 @@ public class Generator4 {
                         s.GenPastPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -13999,6 +14140,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -14042,6 +14184,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -14085,6 +14228,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -14127,6 +14271,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -14166,8 +14311,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenFutCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -14209,6 +14355,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -14251,6 +14398,7 @@ public class Generator4 {
                         s.GenFutCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -14299,6 +14447,8 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -14342,6 +14492,7 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -14385,6 +14536,7 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -14427,6 +14579,7 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -14466,8 +14619,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenFutPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -14509,6 +14663,7 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -14551,6 +14706,7 @@ public class Generator4 {
                         s.GenFutPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -15172,6 +15328,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -15215,6 +15372,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -15258,6 +15416,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -15300,6 +15459,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -15339,8 +15499,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenWouldCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -15382,6 +15543,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -15424,6 +15586,7 @@ public class Generator4 {
                         s.GenWouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -15472,6 +15635,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -15515,6 +15679,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -15558,6 +15723,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -15600,6 +15766,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -15639,8 +15806,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenWouldPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -15682,6 +15850,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -15724,6 +15893,7 @@ public class Generator4 {
                         s.GenWouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -16346,6 +16516,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -16389,6 +16560,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -16432,6 +16604,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -16474,6 +16647,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -16513,8 +16687,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCouldCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -16556,6 +16731,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -16598,6 +16774,7 @@ public class Generator4 {
                         s.GenCouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -16646,6 +16823,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -16689,6 +16867,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -16732,6 +16911,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -16774,6 +16954,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -16813,8 +16994,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCouldPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -16856,6 +17038,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -16898,6 +17081,7 @@ public class Generator4 {
                         s.GenCouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -17520,6 +17704,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -17563,6 +17748,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -17606,6 +17792,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -17648,6 +17835,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -17687,8 +17875,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenShouldCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -17730,6 +17919,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -17772,6 +17962,7 @@ public class Generator4 {
                         s.GenShouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -17820,6 +18011,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -17863,6 +18055,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -17906,6 +18099,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -17948,6 +18142,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -17987,8 +18182,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenShouldPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -18030,6 +18226,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -18072,6 +18269,7 @@ public class Generator4 {
                         s.GenShouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -18694,6 +18892,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -18737,6 +18936,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -18780,6 +18980,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -18822,6 +19023,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -18861,8 +19063,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMightCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -18904,6 +19107,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -18946,6 +19150,7 @@ public class Generator4 {
                         s.GenMightCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -18994,6 +19199,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -19037,6 +19243,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -19080,6 +19287,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -19122,6 +19330,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -19161,8 +19370,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMightPerf3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -19204,6 +19414,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -19246,6 +19457,7 @@ public class Generator4 {
                         s.GenMightPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -19868,6 +20080,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -19911,6 +20124,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -19954,6 +20168,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -19996,6 +20211,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -20035,8 +20251,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenCanCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -20078,6 +20295,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -20120,6 +20338,7 @@ public class Generator4 {
                         s.GenCanCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
@@ -20456,6 +20675,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp1;
                         gene = s.eng1;
+                        gene2 = s.eng12;
                         break;
 
                     case 2:
@@ -20499,6 +20719,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp2;
                         gene = s.eng2;
+                        gene2 = s.eng22;
                         break;
 
 
@@ -20542,6 +20763,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp3;
                         gene = s.eng3;
+                        gene2 = s.eng32;
                         break;
 
 
@@ -20584,6 +20806,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp3ella;
                         gene = s.eng3she;
+                        gene2 = s.eng3she2;
                         break;
 
                     case 2:
@@ -20623,8 +20846,9 @@ public class Generator4 {
                     case 1:
                         Special4 s = new Special4();
                         s.GenMustCont3();
-                        gens = s.sp3ella;
-                        gene = s.eng3she;
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        gene2 = s.sp3it2;
                         break;
 
                     case 2:
@@ -20666,6 +20890,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp4;
                         gene = s.eng4;
+                        gene2 = s.eng42;
                         break;
 
 
@@ -20708,6 +20933,7 @@ public class Generator4 {
                         s.GenMustCont3();
                         gens = s.sp5;
                         gene = s.eng5;
+                        gene2 = s.eng52;
                         break;
 
                     case 2:
