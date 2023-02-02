@@ -526,7 +526,7 @@ public class estructura_nuevo extends AppCompatActivity {
         }
         // si no es personalizado pasa a lo normal
         else {
-            if (prefs.getPremium()==0){
+            if (prefs.getPremium()==1){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);

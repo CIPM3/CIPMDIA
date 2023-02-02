@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -16,6 +19,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Spinner;
@@ -36,6 +41,9 @@ public class availability_nuevo extends AppCompatActivity {
     Spinner spin;
     VideoView vv;
     LinearLayout vf;
+    Button preg1,preg2,preg3,preg4;
+    TextView pregtxt;
+    LinearLayout test_view;
     String selection;
     String s;
     boolean personalizedPlan,isCustom;
@@ -60,12 +68,17 @@ public class availability_nuevo extends AppCompatActivity {
             isCustomPlan,isListeningPlan,isAdvancedPlan;
     boolean BasicListeningPlanFromDb;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_availability_nuevo);
 
         tv = findViewById(R.id.txt_view);
+        pregtxt = findViewById(R.id.pregtxt);
+        preg1 = findViewById(R.id.preg1);
+        preg2 = findViewById(R.id.preg2);
+        preg3 = findViewById(R.id.preg3);
+        preg4 = findViewById(R.id.preg4);
+        test_view = findViewById(R.id.test_view);
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
         vv = findViewById(R.id.vv);
@@ -370,6 +383,118 @@ public class availability_nuevo extends AppCompatActivity {
 
     }
 
+    Boolean btn1Correct;
+    Boolean btn2Correct;
+    Boolean btn3Correct;
+    Boolean btn4Correct;
+
+    String preguntas []={
+            "A que le gusta a luis?",
+            "A que hora entrena Pedro?",
+            "Que dia paga Adrian?",
+    };
+
+    String Respuestas [][]={
+            {
+                "Programar","Comer","Correr","Jugar Play"
+            },
+            {
+                "6am","7:30am","9am","10am"
+            },
+            {
+                "Lunes","Miercoles","Viernes","Domingo"
+            },
+    };
+
+    boolean RespuestasCorrectas [][] = {
+            {
+                true,false,false,false
+            },
+            {
+                false,true,false,false
+            },
+            {
+                false,false,true,false
+            }
+    };
+
+    public void availabilityTest(View v){
+        tv.setVisibility(View.GONE);
+        test_view.setVisibility(View.VISIBLE);
+        startTest();
+        limpBtns();
+    }
+
+    public void btnFinalizarTest(View v){
+        tv.setVisibility(View.VISIBLE);
+        test_view.setVisibility(View.GONE);
+    }
+
+    public void startTest(){
+        int pregRand = (int)(Math.random()*preguntas.length );
+        String preg = preguntas[pregRand];
+        pregtxt.setText(preg);
+
+        preg1.setText(Respuestas[pregRand][0]);
+        preg2.setText(Respuestas[pregRand][1]);
+        preg3.setText(Respuestas[pregRand][2]);
+        preg4.setText(Respuestas[pregRand][3]);
+
+        btn1Correct = RespuestasCorrectas[pregRand][0];
+        btn2Correct = RespuestasCorrectas[pregRand][1];
+        btn3Correct = RespuestasCorrectas[pregRand][2];
+        btn4Correct = RespuestasCorrectas[pregRand][3];
+    }
+
+    public void btn1(View v){
+        checkPreg();
+    }
+
+    public void btn2(View v){
+        checkPreg();
+    }
+
+    public void btn3(View v){
+        checkPreg();
+    }
+
+    public void btn4(View v){
+        checkPreg();
+    }
+
+    public void checkPreg() {
+        if(btn1Correct){
+            preg1.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+        }
+        if(btn2Correct){
+            preg2.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+        }
+        if(btn3Correct){
+            preg3.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+        }
+        if(btn4Correct){
+            preg4.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
+        }
+    }
+
+    public void limpBtns(){
+        preg1.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
+        preg2.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
+        preg3.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
+        preg4.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
+    }
 
     public void select(View v) {
         vv.setVisibility(View.VISIBLE);

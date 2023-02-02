@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void chose_aval(View vista) {
 
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, availability_nuevo.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
