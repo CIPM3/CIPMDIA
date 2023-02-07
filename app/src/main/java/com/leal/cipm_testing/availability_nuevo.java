@@ -388,35 +388,116 @@ public class availability_nuevo extends AppCompatActivity {
     Boolean btn3Correct;
     Boolean btn4Correct;
 
-    String preguntas []={
-            "A que le gusta a luis?",
-            "A que hora entrena Pedro?",
-            "Que dia paga Adrian?",
-    };
+    String preguntas []={};
 
-    String Respuestas [][]={
-            {
-                "Programar","Comer","Correr","Jugar Play"
-            },
-            {
-                "6am","7:30am","9am","10am"
-            },
-            {
-                "Lunes","Miercoles","Viernes","Domingo"
-            },
-    };
+    String Respuestas [][]={};
 
-    boolean RespuestasCorrectas [][] = {
-            {
-                true,false,false,false
-            },
-            {
-                false,true,false,false
-            },
-            {
-                false,false,true,false
-            }
-    };
+    boolean RespuestasCorrectas [][] = {};
+
+    public void preguntasSeleccionada(){
+        String pregSele[];
+        String RespSele [][];
+        boolean RespuestasCorrectasSele [][];
+        switch (selection) {
+            case "Tutorial":
+                Toast.makeText(this, "Por favor seleccione una actividad.", Toast.LENGTH_SHORT).show();
+                break;
+            case "Black Fathers":
+                pregSele = new String[]{
+                        "¿Qué perspectivas se plantean para abordar la situación?",
+                        "¿Qué problemas se han identificado como principales desafíos en la crianza de los hijos por parte de los padres de raza negros?",
+                        "¿Qué recursos fueron presentados para ayudar a los padres de raza negros a criar a sus hijos?"
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "Aumentar el acceso a la educación y los recursos",
+                                "Aumentar el acceso a la atención médica",
+                                "Mejorar la educación y los recursos de la comunidad",
+                                "Cambiar la ley para mejorar la situación de los padres negros"
+                        },
+                        {
+                                "La falta de acceso a la educación de calidad",
+                                "La falta de acceso a la atención médica",
+                                "El racismo y la discriminación",
+                                "La falta de recursos financieros"
+                        },
+                        {
+                                "La educación y los recursos para la comunidad",
+                                "La educación y los recursos para los padres",
+                                "La atención médica y los recursos para la comunidad",
+                                "Los programas de becas y subvenciones"
+                        },
+                };
+
+                RespuestasCorrectasSele = new boolean[][] {
+                        {
+                                true,false,false,false
+                        },
+                        {
+                                false,true,false,false
+                        },
+                        {
+                                false,false,true,false
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
+            case "Is America Racist?":
+                pregSele = new String[]{
+                        "¿Estados Unidos tiene una historia de racismo?",
+                        "¿Sigue prevaleciendo el racismo en Estados Unidos?",
+                        "¿Las personas de color son tratadas de manera diferente en Estados Unidos?"
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "Si.",
+                                "No.",
+                                "No estoy seguro.",
+                                "Esta fuera de contexto."
+                        },
+                        {
+                                "Si.",
+                                "No.",
+                                "No estoy seguro.",
+                                "Esta fuera de contexto."
+                        },
+                        {
+                                "Si.",
+                                "No.",
+                                "No estoy seguro.",
+                                "Esta fuera de contexto."
+                        },
+                };
+
+                RespuestasCorrectasSele = new boolean[][] {
+                        {
+                                true,false,false,false
+                        },
+                        {
+                                false,true,false,false
+                        },
+                        {
+                                false,false,true,false
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
+            case "Dont Compare Yourself to Others":
+
+                break;
+            case "Fix Yourself":
+
+                break;
+        }
+    }
 
     public void availabilityTest(View v){
         tv.setVisibility(View.GONE);
@@ -432,6 +513,7 @@ public class availability_nuevo extends AppCompatActivity {
 
     public void startTest(){
         int pregRand = (int)(Math.random()*preguntas.length );
+        preguntasSeleccionada();
         String preg = preguntas[pregRand];
         pregtxt.setText(preg);
 
