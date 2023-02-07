@@ -26,6 +26,7 @@
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
+        <!--<item>Prueba</item>-->
 
         <item>Present Simple</item>
         <item>Present Continuous</item>
