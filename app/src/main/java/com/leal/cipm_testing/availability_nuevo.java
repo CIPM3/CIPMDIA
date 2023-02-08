@@ -491,10 +491,94 @@ public class availability_nuevo extends AppCompatActivity {
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
             case "Dont Compare Yourself to Others":
+                pregSele = new String[]{
+                        "¿Qué tipo de personas se comparan con otras?",
+                        "¿Qué tipo de trabaja tiene el narrador?",
+                        "¿De que se trata el exito profesional?"
+                };
 
+                RespSele = new String[][]{
+                        {
+                                "Personas famosas. ",
+                                "Todo el mundo. ",
+                                "Personas mediocres. ",
+                                "Nadie. ",
+                        },
+                        {
+                                "Entretenimiento. ",
+                                "Economia. ",
+                                "Medicina. ",
+                                "Abogado. ",
+
+                        },
+                        {
+                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces ",
+                                "Hacer mucho dinero y la admiracion de las personas ",
+                                "Fama, una gran coleccion de autos y descontrol ",
+                                "No lograr nada"
+                        },
+                };
+
+                RespuestasCorrectasSele = new boolean[][] {
+                        {
+                                false,true,false,false
+                        },
+                        {
+                                true,false,false,false
+                        },
+                        {
+                                true,false,false,false
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
             case "Fix Yourself":
+                pregSele = new String[]{
+                        "¿Qué tema discute el psicólogo?",
+                        "El reprimir sus sentimientos para que su creencias puendan permanecer ¿Que provoca?",
+                        "¿Que pregntas se debe hacer a su propia conciencia?"
+                };
 
+                RespSele = new String[][]{
+                        {
+                                "Hacer cambiar a las personas para vivir mejor. ",
+                                "Culpar a las personas te hace ser el problema. ",
+                                "Divorciarce de una pareja toma coraje. ",
+                                "Ser miserable hace que culpemos personas. ",
+                        },
+                        {
+                                "Fomentar su ira y alteración de la razón o los sentidos. ",
+                                "Felicidad y calma. ",
+                                "Perdida de la persona. ",
+                                "Todas las anterioes. ",
+
+                        },
+                        {
+                                "¿Qué debes comer mañana? ¿Qué comi ayer? ",
+                                "¿A que hora tengo que trabajar? ¿Qué deberia llevar? ",
+                                "¿Que esta haciendo el perro? ",
+                                "¿Qué estás haciendo que está mal, desde tu propia perspectiva? ¿Qué podrías arreglar, ahora mismo?"
+                        },
+                };
+
+                RespuestasCorrectasSele = new boolean[][] {
+                        {
+                                false,true,false,false
+                        },
+                        {
+                                true,false,false,false
+                        },
+                        {
+                                false,false,false,true
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
         }
     }
