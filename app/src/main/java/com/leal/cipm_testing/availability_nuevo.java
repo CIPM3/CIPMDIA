@@ -418,13 +418,13 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                         {
                                 "La falta de acceso a la educación de calidad",
-                                "La falta de acceso a la atención médica",
+                                "La falta atención médica",
                                 "El racismo y la discriminación",
                                 "La falta de recursos financieros"
                         },
                         {
                                 "La educación y los recursos para la comunidad",
-                                "La educación y los recursos para los padres",
+                                "La recursos para los padres",
                                 "La atención médica y los recursos para la comunidad",
                                 "Los programas de becas y subvenciones"
                         },
@@ -432,10 +432,10 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new boolean[][] {
                         {
-                                true,false,false,false
+                                false,false,true,false
                         },
                         {
-                                false,true,false,false
+                                false,false,false,true
                         },
                         {
                                 false,false,true,false
