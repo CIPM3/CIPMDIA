@@ -217,85 +217,78 @@ public class Generator<vib> {
 
     public void GenPrueba1(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = 0;
+        int verbRand = 1;
         String verb = verbDif1[verbRand];
         String temp = pronombres[rand];
 
         switch (temp){
             case "yo ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp1;
-                        gene = i.eng1;
-                        gene2 = i.eng12;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp2;
-                        gene = i.eng2;
-                        gene2 = i.eng22;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
                 }
                 break;
             case "él ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp3;
-                        gene = i.eng3;
-                        gene2 = i.eng32;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp4;
-                        gene = i.eng4;
-                        gene2 = i.eng42;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp5;
-                        gene = i.eng5;
-                        gene2 = i.eng52;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
                         break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp6;
-                        gene = i.eng6;
-                        gene2 = i.eng62;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba1();
-                        gens = i.sp7;
-                        gene = i.eng7;
-                        gene2 = i.eng72;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba1();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
                 }
                 break;
@@ -304,85 +297,78 @@ public class Generator<vib> {
     }
     public void GenPrueba2(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = 0;
+        int verbRand = 1;
         String verb = verbDif1[verbRand];
         String temp = pronombres[rand];
 
         switch (temp){
             case "yo ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp1;
-                        gene = i.eng1;
-                        gene2 = i.eng12;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp2;
-                        gene = i.eng2;
-                        gene2 = i.eng22;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
                 }
                 break;
             case "él ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp3;
-                        gene = i.eng3;
-                        gene2 = i.eng32;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp4;
-                        gene = i.eng4;
-                        gene2 = i.eng42;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp5;
-                        gene = i.eng5;
-                        gene2 = i.eng52;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
                         break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp6;
-                        gene = i.eng6;
-                        gene2 = i.eng62;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba2();
-                        gens = i.sp7;
-                        gene = i.eng7;
-                        gene2 = i.eng72;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba2();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
                 }
                 break;
@@ -390,85 +376,157 @@ public class Generator<vib> {
     }
     public void GenPrueba3(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = 0;
+        int verbRand = 1;
         String verb = verbDif1[verbRand];
         String temp = pronombres[rand];
 
         switch (temp){
             case "yo ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp1;
-                        gene = i.eng1;
-                        gene2 = i.eng12;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp1;
+                        gene = s.eng1;
                         break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp2;
-                        gene = i.eng2;
-                        gene2 = i.eng22;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp2;
+                        gene = s.eng2;
                         break;
                 }
                 break;
             case "él ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp3;
-                        gene = i.eng3;
-                        gene2 = i.eng32;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp3;
+                        gene = s.eng3;
                         break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp4;
-                        gene = i.eng4;
-                        gene2 = i.eng42;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
                         break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp5;
-                        gene = i.eng5;
-                        gene2 = i.eng52;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
                         break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp6;
-                        gene = i.eng6;
-                        gene2 = i.eng62;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp4;
+                        gene = s.eng4;
                         break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
-                    case "Intrans ":
-                        Intrans i = new Intrans();
-                        i.Prueba3();
-                        gens = i.sp7;
-                        gene = i.eng7;
-                        gene2 = i.eng72;
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba3();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        break;
+                }
+                break;
+        }
+    }
+    public void GenPrueba4(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verbRand = 1;
+        String verb = verbDif1[verbRand];
+        String temp = pronombres[rand];
+
+        switch (temp){
+            case "yo ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp3ella;
+                        gene = s.eng3she;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp3eso;
+                        gene = s.sp3it;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Special ":
+                        Special s = new Special();
+                        s.Prueba4();
+                        gens = s.sp5;
+                        gene = s.eng5;
                         break;
                 }
                 break;
