@@ -42,7 +42,8 @@ public class availability_nuevo extends AppCompatActivity {
     VideoView vv;
     LinearLayout vf;
     Button preg1,preg2,preg3,preg4;
-    TextView pregtxt;
+    TextView pregtxt,btn_test;
+    LinearLayout pasarSigNivel;
     LinearLayout test_view;
     String selection;
     String s;
@@ -80,6 +81,8 @@ public class availability_nuevo extends AppCompatActivity {
         preg4 = findViewById(R.id.preg4);
         test_view = findViewById(R.id.test_view);
         textspin1 = findViewById(R.id.textspin1);
+        pasarSigNivel = findViewById(R.id.pasarSigNivel);
+        btn_test = findViewById(R.id.btn_test);
         spin = findViewById(R.id.spinuno);
         vv = findViewById(R.id.vv);
         vf = findViewById(R.id.vf);
@@ -102,7 +105,7 @@ public class availability_nuevo extends AppCompatActivity {
 
 
         if(personalizedPlan){
-
+            pasarSigNivel.setVisibility(View.VISIBLE);
             if(isCustom){
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features
@@ -207,6 +210,8 @@ public class availability_nuevo extends AppCompatActivity {
                 }
             }
         }else {
+            pasarSigNivel.setVisibility(View.GONE);
+            btn_test.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
             if (prefs.getPremium()==1){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
@@ -584,10 +589,17 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void availabilityTest(View v){
-        tv.setVisibility(View.GONE);
-        test_view.setVisibility(View.VISIBLE);
-        startTest();
-        limpBtns();
+        switch (selection){
+            case "Tutorial":
+                Toast.makeText(this, "Selecciona un pragger", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                tv.setVisibility(View.GONE);
+                test_view.setVisibility(View.VISIBLE);
+                startTest();
+                limpBtns();
+                break;
+        }
     }
 
     public void btnFinalizarTest(View v){
