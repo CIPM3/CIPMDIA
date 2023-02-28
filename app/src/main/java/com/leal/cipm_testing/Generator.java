@@ -27,6 +27,7 @@ public class Generator<vib> {
     String articles[] = {"the ", "the ", "the ", "the ", "a ", "a ", "some ", "some "};
     String articulos[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas "};
     String tercerpro[] = {"él ", "ella "};
+    String primerysegun[] = {"yo ", "tú "};
 
 
     // verbos intransitivos base top 100, verbos que pueden ser usados como intrans
@@ -11745,6 +11746,65 @@ gene2 = o.ps5eng2;
         }
     }
 
+    public void GenTherebe1() {
+        int rand = (int) (Math.random() * primerysegun.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = primerysegun[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+        }
+    }
+
+    public void GenTherebe2() {
+        int rand = (int) (Math.random() * primerysegun.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = primerysegun[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+        }
+    }
 
     //supposed to
     public void GenSupposedToPresente1() {
