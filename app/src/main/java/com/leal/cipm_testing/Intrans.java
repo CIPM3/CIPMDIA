@@ -2032,188 +2032,6 @@ public class Intrans {
     String eng7;
     String eng72;
 
-    //DIFICULTAD 1 RESPALDO FEB 2323
-    public void Prueba1(){
-        gen = new Generator();
-        randstarter();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg){
-                    case 0:
-                        sp1 = "yo " + gen.vib1[rand];
-                        eng1 = "I " + gen.vib[rand];
-                        eng12 = "I " + gen.vib[rand];
-                        sp2 = "tú " + gen.vib2[rand];
-                        eng2 = "you " + gen.vib[rand];
-                        eng22 = "you " + gen.vib[rand];
-                        sp3 = "él " + gen.vib3esp[rand];
-                        eng3 = "he " + gen.vib[rand];
-                        eng32 = "he " + gen.vib[rand];
-                        sp4 = "ella " + gen.vib3esp[rand];
-                        eng4 = "she " + gen.vib[rand];
-                        eng42 = "she " + gen.vib[rand];
-                        sp5 = "eso " + gen.vib3esp[rand];
-                        eng5 = "it " + gen.vib[rand];
-                        eng52 = "it " + gen.vib[rand];
-                        sp6 = "ellos " + gen.vib3p[rand];
-                        eng6 = "they " + gen.vib[rand];
-                        eng62 = "they " + gen.vib[rand];
-                        sp7 = "nosotros " + gen.vibnos[rand];
-                        eng7 = "we " + gen.vib[rand];
-                        eng72 = "we " + gen.vib[rand];
-                        break;
-                    case 1:
-                        sp1 = "yo " + "no " + gen.vib1[rand];
-                        eng1 = "I do not " + gen.vib[rand];
-                        eng12 = "I don't " + gen.vib[rand];
-                        sp2 = "tú " + "no " + gen.vib2[rand];
-                        eng2 = "you do not " + gen.vib[rand];
-                        eng22 = "you don't " + gen.vib[rand];
-                        sp3 = "él no " + gen.vib3esp[rand];
-                        eng3 = "he do not " + gen.vib[rand];
-                        eng32 = "he don't " + gen.vib[rand];
-                        sp4 = "ella no " + gen.vib3esp[rand];
-                        eng4 = "she do not " + gen.vib[rand];
-                        eng42 = "she don't " + gen.vib[rand];
-                        sp5 = "eso no " + gen.vib3esp[rand];
-                        eng5 = "it do not " + gen.vib[rand];
-                        eng52 = "it don't " + gen.vib[rand];
-                        sp6 = "ellos " + "no " + gen.vib3p[rand];
-                        eng6 = "they do not " + gen.vib[rand];
-                        eng62 = "they don't " + gen.vib[rand];
-                        sp7 = "nosotros " + "no " + gen.vibnos[rand];
-                        eng7 = "we do not " + gen.vib[rand];
-                        eng72 = "we don't " + gen.vib[rand];
-                        break;
-                }
-            }
-        }
-    }
-    public void Prueba2(){
-        gen = new Generator();
-        randstarter();
-        arraySpe();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg){
-                    case 0:
-                        sp1 = "yo " + gen.vib1[rand] + arrayEsp;
-                        eng1 = "I " + gen.vib[rand] + arrayEng;
-                        eng12 = "I " + gen.vib[rand] + arrayEng;
-                        sp2 = "tú " + gen.vib2[rand] + arrayEsp;
-                        eng2 = "you " + gen.vib[rand] + arrayEng;
-                        eng22 = "you " + gen.vib[rand] + arrayEng;
-                        sp3 = "él " + gen.vib3esp[rand] + arrayEsp;
-                        eng3 = "he " + gen.vib[rand] + arrayEng;
-                        eng32 = "he " + gen.vib[rand] + arrayEng;
-                        sp4 = "ella " + gen.vib3esp[rand] + arrayEsp;
-                        eng4 = "she " + gen.vib[rand] + arrayEng;
-                        eng42 = "she " + gen.vib[rand] + arrayEng;
-                        sp5 = "eso " + gen.vib3esp[rand] + arrayEsp;
-                        eng5 = "it " + gen.vib[rand] + arrayEng;
-                        eng52 = "it " + gen.vib[rand] + arrayEng;
-                        sp6 = "ellos " + gen.vib3p[rand] + arrayEsp;
-                        eng6 = "they " + gen.vib[rand] + arrayEng;
-                        eng62 = "they " + gen.vib[rand] + arrayEng;
-                        sp7 = "nosotros " + gen.vibnos[rand] + arrayEsp;
-                        eng7 = "we " + gen.vib[rand] + arrayEng;
-                        eng72 = "we " + gen.vib[rand] + arrayEng;
-                        break;
-                    case 1:
-                        sp1 = "yo " + "no " + gen.vib1[rand] + arrayEsp;
-                        eng1 = "I do not " + gen.vib[rand] + arrayEng;
-                        eng12 = "I don't " + gen.vib[rand] + arrayEng;
-                        sp2 = "tú " + "no " + gen.vib2[rand] + arrayEsp;
-                        eng2 = "you do not " + gen.vib[rand] + arrayEng;
-                        eng22 = "you don't " + gen.vib[rand] + arrayEng;
-                        sp3 = "él no " + gen.vib3esp[rand] + arrayEsp;
-                        eng3 = "he do not " + gen.vib[rand] + arrayEng;
-                        eng32 = "he don't " + gen.vib[rand] + arrayEng;
-                        sp4 = "ella no " + gen.vib3esp[rand] + arrayEsp;
-                        eng4 = "she do not " + gen.vib[rand] + arrayEng;
-                        eng42 = "she don't " + gen.vib[rand] + arrayEng;
-                        sp5 = "eso no " + gen.vib3esp[rand] + arrayEsp;
-                        eng5 = "it do not " + gen.vib[rand] + arrayEng;
-                        eng52 = "it don't " + gen.vib[rand] + arrayEng;
-                        sp6 = "ellos " + "no " + gen.vib3p[rand] + arrayEsp;
-                        eng6 = "they do not " + gen.vib[rand] + arrayEng;
-                        eng62 = "they don't " + gen.vib[rand] + arrayEng;
-                        sp7 = "nosotros " + "no " + gen.vibnos[rand] + arrayEsp;
-                        eng7 = "we do not " + gen.vib[rand] + arrayEng;
-                        eng72 = "we don't " + gen.vib[rand] + arrayEng;
-                        break;
-                }
-            }
-        }
-    }
-    public void Prueba3(){
-        gen = new Generator();
-        randstarter();
-        arraySpe();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
-        int radv = (int) (Math.random() * frequadv.length);
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg){
-                    case 0:
-                        sp1 = "yo " + gen.vib1[rand] + arrayEsp + advfrequ[radv];
-                        eng1 = "I " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng12 = "I " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú " + gen.vib2[rand] + arrayEsp + advfrequ[radv];
-                        eng2 = "you " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng22 = "you " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng3 = "he " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng4 = "she " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng5 = "it " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp6 = "ellos " + gen.vib3p[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp7 = "nosotros " + gen.vibnos[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        break;
-                    case 1:
-                        sp1 = "yo " + "no " + gen.vib1[rand] + arrayEsp + advfrequ[radv];
-                        eng1 = "I do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng12 = "I don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú " + "no " + gen.vib2[rand] + arrayEsp + advfrequ[radv];
-                        eng2 = "you do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng22 = "you don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng3 = "he do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng4 = "she do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng5 = "it do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp6 = "ellos " + "no " + gen.vib3p[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        sp7 = "nosotros " + "no " + gen.vibnos[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we do not " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we don't " + gen.vib[rand] + arrayEng + frequadv[radv];
-                        break;
-                }
-            }
-        }
-    }
-
     //DIFICULTAD 3
     //presentes
     public void GenPresSimp1() {
@@ -4017,6 +3835,80 @@ public class Intrans {
                         eng7 = "we must not be  " + gen.vib3cont[rand];
                         eng72 = "we mustn't be  " + gen.vib3cont[rand];
                         break;
+                }
+            }
+        }
+    }//PD FEB 2023
+
+    public void GenAbleTo1(){
+        gen = new Generator();
+        randstarter();
+        arraySpe();
+        String temp = gen.vib[rand];
+        int neg = (int) (Math.random() * 2);
+
+        for (String verbs : gen.vib) {
+            if (verbs.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + gen.vibesp[rand];
+                        eng1 = "I am " + "able to " + gen.vib[rand];
+                        eng12 = "I'm " + "able to " + gen.vib[rand];
+
+                        sp2 = "tú " + "eres capaz de " + gen.vibesp[rand];
+                        eng2 = "you are " + "able to " + gen.vib[rand];
+                        eng22 = "you're " + "able to " + gen.vib[rand];
+
+                        sp3 = "él " + "es capaz de " + gen.vibesp[rand];
+                        eng3 = "he is " + "able to " + gen.vib[rand];
+                        eng32 = "he's " + "able to " + gen.vib[rand];
+
+                        sp4 = "ella " + "es capaz de " + gen.vibesp[rand];
+                        eng4 = "she is " + "able to " + gen.vib[rand];
+                        eng42 = "she's " + "able to " + gen.vib[rand];
+
+                        sp5 = "eso " + "es capaz de " + gen.vibesp[rand];
+                        eng5 = "it is " + "able to " + gen.vib[rand];
+                        eng52 = "it's " + "able to " + gen.vib[rand];
+
+                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand];
+                        eng6 = "they are " + "able to " + gen.vib[rand];
+                        eng62 = "they're " + "able to " + gen.vib[rand];
+
+                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand];
+                        eng7 = "we are " + "able to " + gen.vib[rand];
+                        eng72 = "we're " + "able to " + gen.vib[rand];
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + gen.vibesp[rand];
+                        eng1 = "I am not " + "able to " + gen.vib[rand];
+                        eng12 = "I'm not " + "able to " + gen.vib[rand];
+
+                        sp2 = "tú no " + "eres capaz de " + gen.vibesp[rand];
+                        eng2 = "you are not " + "able to " + gen.vib[rand];
+                        eng22 = "you're not " + "able to " + gen.vib[rand];
+
+                        sp3 = "él no " + "es capaz de " + gen.vibesp[rand];
+                        eng3 = "he is not " + "able to " + gen.vib[rand];
+                        eng32 = "he's not " + "able to " + gen.vib[rand];
+
+                        sp4 = "ella no " + "es capaz de " + gen.vibesp[rand];
+                        eng4 = "she is not " + "able to " + gen.vib[rand];
+                        eng42 = "she's not " + "able to " + gen.vib[rand];
+
+                        sp5 = "eso no " + "es capaz de " + gen.vibesp[rand];
+                        eng5 = "it is not " + "able to " + gen.vib[rand];
+                        eng52 = "it's not " + "able to " + gen.vib[rand];
+
+                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand];
+                        eng6 = "they are not " + "able to " + gen.vib[rand];
+                        eng62 = "they're not " + "able to " + gen.vib[rand];
+
+                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand];
+                        eng7 = "we are not " + "able to " + gen.vib[rand];
+                        eng72 = "we're not " + "able to " + gen.vib[rand];
+                        break;
+
                 }
             }
         }
@@ -6001,6 +5893,80 @@ public class Intrans {
         }
     }//PD FEB 2023
 
+    public void GenAbleTo2(){
+        gen = new Generator();
+        randstarter();
+        arraySpe();
+        String temp = gen.vib[rand];
+        int neg = (int) (Math.random() * 2);
+
+        for (String verbs : gen.vib) {
+            if (verbs.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng1 = "I am " + "able to " + gen.vib[rand] + arrayEng;
+                        eng12 = "I'm " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp2 = "tú " + "eres capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng2 = "you are " + "able to " + gen.vib[rand] + arrayEng;
+                        eng22 = "you're " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp3 = "él " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng3 = "he is " + "able to " + gen.vib[rand] + arrayEng;
+                        eng32 = "he's " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp4 = "ella " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng4 = "she is " + "able to " + gen.vib[rand] + arrayEng;
+                        eng42 = "she's " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp5 = "eso " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng5 = "it is " + "able to " + gen.vib[rand] + arrayEng;
+                        eng52 = "it's " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng6 = "they are " + "able to " + gen.vib[rand] + arrayEng;
+                        eng62 = "they're " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng7 = "we are " + "able to " + gen.vib[rand] + arrayEng;
+                        eng72 = "we're " + "able to " + gen.vib[rand] + arrayEng;
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng1 = "I am not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng12 = "I'm not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp2 = "tú no " + "eres capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng2 = "you are not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng22 = "you're not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp3 = "él no " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng3 = "he is not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng32 = "he's not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp4 = "ella no " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng4 = "she is not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng42 = "she's not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp5 = "eso no " + "es capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng5 = "it is not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng52 = "it's not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng6 = "they are not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng62 = "they're not " + "able to " + gen.vib[rand] + arrayEng;
+
+                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand] + arrayEsp;
+                        eng7 = "we are not " + "able to " + gen.vib[rand] + arrayEng;
+                        eng72 = "we're not " + "able to " + gen.vib[rand] + arrayEng;
+                        break;
+
+                }
+            }
+        }
+    }//PD FEB 2023
+
     //for to dificultad 3 SOlO INTRANS
     public void forSubTo2() {
         gen = new Generator();
@@ -7978,6 +7944,81 @@ public class Intrans {
                         eng7 = "we must not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng72 = "we mustn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
+                }
+            }
+        }
+    }//PD FEB 2023
+
+    public void GenAbleTo3(){
+        gen = new Generator();
+        randstarter();
+        arraySpe();
+        String temp = gen.vib[rand];
+        int neg = (int) (Math.random() * 2);
+        int radv = (int) (Math.random() * frequadv.length);
+
+        for (String verbs : gen.vib) {
+            if (verbs.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng1 = "I am " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng12 = "I'm " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp2 = "tú " + "eres capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng2 = "you are " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng22 = "you're " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp3 = "él " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng3 = "he is " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he's " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp4 = "ella " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng4 = "she is " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she's " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp5 = "eso " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng5 = "it is " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it's " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng6 = "they are " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they're " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng7 = "we are " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we're " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng1 = "I am not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng12 = "I'm not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp2 = "tú no " + "eres capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng2 = "you are not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng22 = "you're not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp3 = "él no " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng3 = "he is not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he's not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp4 = "ella no " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng4 = "she is not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she's not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp5 = "eso no " + "es capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng5 = "it is not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it's not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng6 = "they are not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they're not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+
+                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        eng7 = "we are not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we're not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        break;
+
                 }
             }
         }
