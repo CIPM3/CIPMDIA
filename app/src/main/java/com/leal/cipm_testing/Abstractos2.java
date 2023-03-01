@@ -1932,6 +1932,70 @@ public class Abstractos2 {
         }
     }//PD 2023
 
+    public void GenAbleTo2(){
+        switch (neg) {
+            case 0:
+                ps1 = "yo " + "soy capaz de " + vnbs[v] + nnoblesesp[n];
+                ps1eng = "I am " + "able to " + vnb[v] + nnobles[n];
+                ps1eng2 = "I'm " + "able to " + vnb[v] + nnobles[n];
+
+                ps2 = "tú " + "eres capaz de " + vnbs[v] + nnoblesesp[n];
+                ps2eng = "you are " + "able to " + vnb[v] + nnobles[n];
+                ps2eng2 = "you're " + "able to " + vnb[v] + nnobles[n];
+
+                ps3 = "él " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3eng = "he is " + "able to " + vnb[v] + nnobles[n];
+                ps3eng2 = "he's " + "able to " + vnb[v] + nnobles[n];
+
+                ps3ella = "ella " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3she = "she is " + "able to " + vnb[v] + nnobles[n];
+                ps3she2 = "she's " + "able to " + vnb[v] + nnobles[n];
+
+                ps3eso = "eso " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3it = "it is " + "able to " + vnb[v] + nnobles[n];
+                ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n];
+
+                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n];
+                ps4eng = "they are " + "able to " + vnb[v] + nnobles[n];
+                ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n];
+
+                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n];
+                ps5eng = "we are " + "able to " + vnb[v] + nnobles[n];
+                ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n];
+                break;
+            case 1:
+                ps1 = "yo no " + "soy capaz de " + vnbs[v] + nnoblesesp[n];
+                ps1eng = "I am not " + "able to " + vnb[v] + nnobles[n];
+                ps1eng2 = "I'm not " + "able to " + vnb[v] + nnobles[n];
+
+                ps2 = "tú no " + "eres capaz de " + vnbs[v] + nnoblesesp[n];
+                ps2eng = "you are not " + "able to " + vnb[v] + nnobles[n];
+                ps2eng2 = "you're not " + "able to " + vnb[v] + nnobles[n];
+
+                ps3 = "él no " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3eng = "he is not " + "able to " + vnb[v] + nnobles[n];
+                ps3eng2 = "he's not " + "able to " + vnb[v] + nnobles[n];
+
+                ps3ella = "ella no " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3she = "she is not " + "able to " + vnb[v] + nnobles[n];
+                ps3she2 = "she's not " + "able to " + vnb[v] + nnobles[n];
+
+                ps3eso = "eso no " + "es capaz de " + vnbs[v] + nnoblesesp[n];
+                ps3it = "it is not " + "able to " + vnb[v] + nnobles[n];
+                ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n];
+
+                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n];
+                ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n];
+                ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n];
+
+                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n];
+                ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n];
+                ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n];
+                break;
+
+        }
+    }//PD 2023
+
     // los del must
     public void GenMustSimp2() {
 
@@ -4516,6 +4580,71 @@ public class Abstractos2 {
                 ps5eng2 = "we mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 break;
+        }
+    }//PD 2023
+
+    //Able to
+    public void GenAbleTo3(){
+        switch (neg) {
+            case 0:
+                ps1 = "yo " + "soy capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps1eng = "I am " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I'm " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps2 = "tú " + "eres capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps2eng = "you are " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you're " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3 = "él " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3eng = "he is " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he's " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3ella = "ella " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3she = "she is " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she's " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3eso = "eso " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3it = "it is " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps4eng = "they are " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps5eng = "we are " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                break;
+            case 1:
+                ps1 = "yo no " + "soy capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps1eng = "I am not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I'm not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps2 = "tú no " + "eres capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps2eng = "you are not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you're not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3 = "él no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3eng = "he is not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he's not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3ella = "ella no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3she = "she is not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she's not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps3eso = "eso no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps3it = "it is not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+
+                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
+                break;
+
         }
     }//PD 2023
 
@@ -8157,6 +8286,75 @@ public class Abstractos2 {
         }
     } //SV 280422
 
+    //Able to
+    public void GenAbleTo4(){
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.absspecial.length );
+        int p2=(int)(Math.random()*prep.absspecial[p].length);
+        String pp = String.valueOf(p);
+        String ppp= String.valueOf(p2);
+        switch (neg) {
+            case 0:
+                ps1 = "yo " + "soy capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps1eng = "I am " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps1eng2 = "I'm " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps2 = "tú " + "eres capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps2eng = "you are " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps2eng2 = "you're " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3 = "él " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3eng = "he is " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he's " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3ella = "ella " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3she = "she is " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she's " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3eso = "eso " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3it = "it is " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4eng = "they are " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps5eng = "we are " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                break;
+            case 1:
+                ps1 = "yo no " + "soy capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps1eng = "I am not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps1eng2 = "I'm not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps2 = "tú no " + "eres capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps2eng = "you are not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps2eng2 = "you're not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3 = "él no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3eng = "he is not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3eng2 = "he's not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3ella = "ella no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3she = "she is not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3she2 = "she's not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps3eso = "eso no " + "es capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps3it = "it is not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+
+                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
+                break;
+
+        }
+    }//PD 2023
 
     //DIF 4 PD
 
@@ -11581,6 +11779,69 @@ public class Abstractos2 {
         }
     }//PD 2023
 
+    public void GenAbleTo1(){
+        switch (neg) {
+            case 0:
+                ps1 = "yo " + "soy capaz de " + vnbs[v];
+                ps1eng = "I am " + "able to " + vnb[v];
+                ps1eng2 = "I'm " + "able to " + vnb[v];
+
+                ps2 = "tú " + "eres capaz de " + vnbs[v];
+                ps2eng = "you are " + "able to " + vnb[v];
+                ps2eng2 = "you're " + "able to " + vnb[v];
+
+                ps3 = "él " + "es capaz de " + vnbs[v];
+                ps3eng = "he is " + "able to " + vnb[v];
+                ps3eng2 = "he's " + "able to " + vnb[v];
+
+                ps3ella = "ella " + "es capaz de " + vnbs[v];
+                ps3she = "she is " + "able to " + vnb[v];
+                ps3she2 = "she's " + "able to " + vnb[v];
+
+                ps3eso = "eso " + "es capaz de " + vnbs[v];
+                ps3it = "it is " + "able to " + vnb[v];
+                ps3it2 = "it's " + "able to " + vnb[v];
+
+                ps4 = "ellos " + "son capaz de " + vnbs[v];
+                ps4eng = "they are " + "able to " + vnb[v];
+                ps4eng2 = "they're " + "able to " + vnb[v];
+
+                ps5 = "nosotros " + "somos capaz de " + vnbs[v];
+                ps5eng = "we are " + "able to " + vnb[v];
+                ps5eng2 = "we're " + "able to " + vnb[v];
+                break;
+            case 1:
+                ps1 = "yo no " + "soy capaz de " + vnbs[v];
+                ps1eng = "I am not " + "able to " + vnb[v];
+                ps1eng2 = "I'm not " + "able to " + vnb[v];
+
+                ps2 = "tú no " + "eres capaz de " + vnbs[v];
+                ps2eng = "you are not " + "able to " + vnb[v];
+                ps2eng2 = "you're not " + "able to " + vnb[v];
+
+                ps3 = "él no " + "es capaz de " + vnbs[v];
+                ps3eng = "he is not " + "able to " + vnb[v];
+                ps3eng2 = "he's not " + "able to " + vnb[v];
+
+                ps3ella = "ella no " + "es capaz de " + vnbs[v];
+                ps3she = "she is not " + "able to " + vnb[v];
+                ps3she2 = "she's not " + "able to " + vnb[v];
+
+                ps3eso = "eso no " + "es capaz de " + vnbs[v];
+                ps3it = "it is not " + "able to " + vnb[v];
+                ps3it2 = "it's not " + "able to " + vnb[v];
+
+                ps4 = "ellos no " + "son capaz de " + vnbs[v];
+                ps4eng = "they are not " + "able to " + vnb[v];
+                ps4eng2 = "they're not " + "able to " + vnb[v];
+
+                ps5 = "nosotros no " + "somos capaz de " + vnbs[v];
+                ps5eng = "we are not " + "able to " + vnb[v];
+                ps5eng2 = "we're not " + "able to " + vnb[v];
+                break;
+
+        }
+    }//PD 2023
 
     // non basics
     // want to dificultad 1

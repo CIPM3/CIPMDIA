@@ -10804,6 +10804,338 @@ public class Generator2 {
         }
     }
 
+    //Able To
+    public void GenAbleTo2(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verbRand = (int) (Math.random() * verbDif1.length);
+        String verb = verbDif2[verbRand];
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        gene2 = s.eng12;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        gene2 = s.eng22;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        gene2 = s.eng32;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        gene2 = o.ps3she2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps3eso;
+                        gene = p.ps3it;
+                        gene2 = p.ps3it2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
+                        gene2 = o.ps3it2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3it2;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo2();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo2();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo2();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo2();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo2();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
+                }
+                break;
+        }
+    }
+
     //wanTo 2
     public void GenWantYouTo2() {
         int rand = (int) (Math.random() * pronombres.length);
@@ -23634,6 +23966,338 @@ gene2 = p.ps1eng2;
                     case "Nobles ":
                         Nobles2 n = new Nobles2();
                         n.GenMustCont3();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
+                }
+                break;
+        }
+    }
+
+    //Able To
+    public void GenAbleTo3(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verbRand = (int) (Math.random() * verbDif1.length);
+        String verb = verbDif2[verbRand];
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        gene2 = s.eng12;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        gene2 = s.eng22;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        gene2 = s.eng32;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        gene2 = o.ps3she2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps3eso;
+                        gene = p.ps3it;
+                        gene2 = p.ps3it2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
+                        gene2 = o.ps3it2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3it2;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo3();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo3();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo3();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo3();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo3();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo3();
                         gens = n.ps5;
                         gene = n.ps5eng;
                         gene2 = n.ps5eng2;
@@ -36497,6 +37161,339 @@ gene2 = p.ps1eng2;
                 break;
         }
     }
+
+    //Able To
+    public void GenAbleTo4(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verbRand = (int) (Math.random() * verbDif1.length);
+        String verb = verbDif2[verbRand];
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        gene2 = s.eng12;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        gene2 = s.eng22;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        gene2 = s.eng32;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        gene2 = o.ps3she2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps3eso;
+                        gene = p.ps3it;
+                        gene2 = p.ps3it2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
+                        gene2 = o.ps3it2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3it2;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        //i.GenAbleTo4();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo4();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo4();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo4();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo4();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo4();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
+                }
+                break;
+        }
+    }
+    
     //wanTo 4
     public void GenWantYouTo4() {
         int rand = (int) (Math.random() * pronombres.length);
@@ -49332,6 +50329,339 @@ gene2 = p.ps1eng2;
                 break;
         }
     }
+
+    //Able To
+    public void GenAbleTo1(){
+        int rand = (int) (Math.random() * pronombres.length);
+        int verbRand = (int) (Math.random() * verbDif1.length);
+        String verb = verbDif2[verbRand];
+        String temp = pronombres[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        gene2 = s.eng12;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps1;
+                        gene = p.ps1eng;
+                        gene2 = p.ps1eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps1;
+                        gene = o.ps1eng;
+                        gene2 = o.ps1eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        gene2 = s.eng22;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps2;
+                        gene = p.ps2eng;
+                        gene2 = p.ps2eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps2;
+                        gene = o.ps2eng;
+                        gene2 = o.ps2eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        gene2 = s.eng32;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps3;
+                        gene = p.ps3eng;
+                        gene2 = p.ps3eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps3;
+                        gene = o.ps3eng;
+                        gene2 = o.ps3eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps3ella;
+                        gene = p.ps3she;
+                        gene2 = p.ps3she2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps3ella;
+                        gene = o.ps3she;
+                        gene2 = o.ps3she2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps3eso;
+                        gene = p.ps3it;
+                        gene2 = p.ps3it2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps3eso;
+                        gene = o.ps3it;
+                        gene2 = o.ps3it2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3it2;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps4;
+                        gene = p.ps4eng;
+                        gene2 = p.ps4eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps4;
+                        gene = o.ps4eng;
+                        gene2 = o.ps4eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans2 i = new Intrans2();
+                        i.GenAbleTo1();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                    case "Special ":
+                        Special2 s = new Special2();
+                        s.GenAbleTo1();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        ab.GenAbleTo1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
+                    case "People ":
+                        People2 p = new People2();
+                        p.GenAbleTo1();
+                        gens = p.ps5;
+                        gene = p.ps5eng;
+                        gene2 = p.ps5eng2;
+                        break;
+                    case "Oo ":
+                        Oo2 o = new Oo2();
+                        o.GenAbleTo1();
+                        gens = o.ps5;
+                        gene = o.ps5eng;
+                        gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles2 n = new Nobles2();
+                        n.GenAbleTo1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
+                }
+                break;
+        }
+    }
+
     //wanTo
     public void GenWantYouTo1() {
         int rand = (int) (Math.random() * pronombres.length);
