@@ -10807,7 +10807,7 @@ public class Generator2 {
     //Able To
     public void GenAbleTo2(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif1.length);
+        int verbRand = (int) (Math.random() * verbDif2.length);
         String verb = verbDif2[verbRand];
         String temp = pronombres[rand];
         switch (temp) {
@@ -23978,8 +23978,8 @@ gene2 = p.ps1eng2;
     //Able To
     public void GenAbleTo3(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif1.length);
-        String verb = verbDif2[verbRand];
+        int verbRand = (int) (Math.random() * verbDif3.length);
+        String verb = verbDif3[verbRand];
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -37165,8 +37165,8 @@ gene2 = p.ps1eng2;
     //Able To
     public void GenAbleTo4(){
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif1.length);
-        String verb = verbDif2[verbRand];
+        int verbRand = (int) (Math.random() * verbDif4.length);
+        String verb = verbDif4[verbRand];
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -50334,7 +50334,7 @@ gene2 = p.ps1eng2;
     public void GenAbleTo1(){
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
-        String verb = verbDif2[verbRand];
+        String verb = verbDif1[verbRand];
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
