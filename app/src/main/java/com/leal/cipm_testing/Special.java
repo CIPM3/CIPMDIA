@@ -5236,11 +5236,11 @@ public class Special {
                         sp3it = "it is " + "able to " + verbs[rand];
                         sp3it2 = "it's " + "able to " + verbs[rand];
 
-                        sp4 = "ellos " + "son capaz de " + vsbc[rand];
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand];
                         eng4 = "they are " + "able to " + verbs[rand];
                         eng42 = "they're " + "able to " + verbs[rand];
 
-                        sp5 = "nosotros " + "somos capaz de " + vsbc[rand];
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand];
                         eng5 = "we are " + "able to " + verbs[rand];
                         eng52 = "we're " + "able to " + verbs[rand];
                         break;
@@ -5265,11 +5265,11 @@ public class Special {
                         sp3it = "it is not " + "able to " + verbs[rand];
                         sp3it2 = "it's not " + "able to " + verbs[rand];
 
-                        sp4 = "ellos no " + "son capaz de " + vsbc[rand];
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand];
                         eng4 = "they are not " + "able to " + verbs[rand];
                         eng42 = "they're not " + "able to " + verbs[rand];
 
-                        sp5 = "nosotros no " + "somos capaz de " + vsbc[rand];
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand];
                         eng5 = "we are not " + "able to " + verbs[rand];
                         eng52 = "we're not " + "able to " + verbs[rand];
                         break;
@@ -8667,11 +8667,11 @@ public class Special {
                         sp3it = "it is " + "able to " + verbs[rand] + arraySodEng;
                         sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng;
 
-                        sp4 = "ellos " + "son capaz de " + vsbc[rand] + arraySodEsp;
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp;
                         eng4 = "they are " + "able to " + verbs[rand] + arraySodEng;
                         eng42 = "they're " + "able to " + verbs[rand] + arraySodEng;
 
-                        sp5 = "nosotros " + "somos capaz de " + vsbc[rand] + arraySodEsp;
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp;
                         eng5 = "we are " + "able to " + verbs[rand] + arraySodEng;
                         eng52 = "we're " + "able to " + verbs[rand] + arraySodEng;
                         break;
@@ -8696,11 +8696,11 @@ public class Special {
                         sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng;
                         sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng;
 
-                        sp4 = "ellos no " + "son capaz de " + vsbc[rand] + arraySodEsp;
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp;
                         eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng;
                         eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng;
 
-                        sp5 = "nosotros no " + "somos capaz de " + vsbc[rand] + arraySodEsp;
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp;
                         eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng;
                         eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng;
                         break;
@@ -13067,11 +13067,11 @@ public class Special {
                         sp3it = "it is " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
 
-                        sp4 = "ellos " + "son capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
                         eng4 = "they are " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         eng42 = "they're " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
 
-                        sp5 = "nosotros " + "somos capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
                         eng5 = "we are " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         eng52 = "we're " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         break;
@@ -13096,11 +13096,11 @@ public class Special {
                         sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
 
-                        sp4 = "ellos no " + "son capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
                         eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
 
-                        sp5 = "nosotros no " + "somos capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
                         eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
                         break;
@@ -17445,11 +17445,11 @@ public class Special {
                         sp3it = "it is " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
-                        sp4 = "ellos " + "son capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng4 = "they are " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng42 = "they're " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
-                        sp5 = "nosotros " + "somos capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng5 = "we are " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng52 = "we're " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         break;
@@ -17474,11 +17474,11 @@ public class Special {
                         sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
-                        sp4 = "ellos no " + "son capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
-                        sp5 = "nosotros no " + "somos capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         break;

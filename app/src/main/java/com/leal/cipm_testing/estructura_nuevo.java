@@ -526,7 +526,7 @@ public class estructura_nuevo extends AppCompatActivity {
         }
         // si no es personalizado pasa a lo normal
         else {
-            if (prefs.getPremium()==1){
+            if (prefs.getPremium()==0){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
@@ -11832,7 +11832,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -20704,7 +20736,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -29537,7 +29601,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -38361,7 +38457,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo2();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -44497,7 +44625,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -50569,7 +50729,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo3();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -56647,7 +56839,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:
@@ -62718,7 +62942,39 @@ public class estructura_nuevo extends AppCompatActivity {
                         break;
 
                     case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator4 gen1 = new Generator4();
+                                    gen1.GenAbleTo4();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
                         break;
 
                     default:

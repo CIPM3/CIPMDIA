@@ -2165,11 +2165,11 @@ public class Oo {
                 ps3it = "it is " + "able to " + vnb[v] + nnobles[n];
                 ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n];
 
-                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n];
+                ps4 = "ellos " + "son capaces de " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "they are " + "able to " + vnb[v] + nnobles[n];
                 ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n];
 
-                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n];
+                ps5 = "nosotros " + "somos capaces de " + vnbs[v] + nnoblesesp[n];
                 ps5eng = "we are " + "able to " + vnb[v] + nnobles[n];
                 ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n];
                 break;
@@ -2194,11 +2194,11 @@ public class Oo {
                 ps3it = "it is not " + "able to " + vnb[v] + nnobles[n];
                 ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n];
 
-                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n];
+                ps4 = "ellos no " + "son capaces de " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n];
                 ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n];
 
-                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n];
+                ps5 = "nosotros no " + "somos capaces de " + vnbs[v] + nnoblesesp[n];
                 ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n];
                 ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n];
                 break;
@@ -4660,11 +4660,11 @@ public class Oo {
                 ps3it = "it is " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos " + "son capaces de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they are " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps5 = "nosotros " + "somos capaces de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we are " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
@@ -4689,11 +4689,11 @@ public class Oo {
                 ps3it = "it is not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps4 = "ellos no " + "son capaces de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
 
-                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
+                ps5 = "nosotros no " + "somos capaces de " + vnbs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
@@ -8696,11 +8696,11 @@ public class Oo {
                 ps3it = "it is " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3it2 = "it's " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps4 = "ellos " + "son capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos " + "son capaces de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps4eng = "they are " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they're " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps5 = "nosotros " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps5 = "nosotros " + "somos capaces de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps5eng = "we are " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps5eng2 = "we're " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 break;
@@ -8725,11 +8725,11 @@ public class Oo {
                 ps3it = "it is not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps3it2 = "it's not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps4 = "ellos no " + "son capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps4 = "ellos no " + "son capaces de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps4eng = "they are not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps4eng2 = "they're not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
 
-                ps5 = "nosotros no " + "somos capaz de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
+                ps5 = "nosotros no " + "somos capaces de " + vnbs[v] + nnoblesesp[n] + prep.absspecial[p][p2] + advfrequ[r];
                 ps5eng = "we are not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 ps5eng2 = "we're not " + "able to " + vnb[v] + nnobles[n] + prep.absspecialeng[p][p2] + frequadv[r];
                 break;
@@ -11823,11 +11823,11 @@ public class Oo {
                 ps3it = "it is " + "able to " + vnb[v];
                 ps3it2 = "it's " + "able to " + vnb[v];
 
-                ps4 = "ellos " + "son capaz de " + vnbs[v];
+                ps4 = "ellos " + "son capaces de " + vnbs[v];
                 ps4eng = "they are " + "able to " + vnb[v];
                 ps4eng2 = "they're " + "able to " + vnb[v];
 
-                ps5 = "nosotros " + "somos capaz de " + vnbs[v];
+                ps5 = "nosotros " + "somos capaces de " + vnbs[v];
                 ps5eng = "we are " + "able to " + vnb[v];
                 ps5eng2 = "we're " + "able to " + vnb[v];
                 break;
@@ -11852,11 +11852,11 @@ public class Oo {
                 ps3it = "it is not " + "able to " + vnb[v];
                 ps3it2 = "it's not " + "able to " + vnb[v];
 
-                ps4 = "ellos no " + "son capaz de " + vnbs[v];
+                ps4 = "ellos no " + "son capaces de " + vnbs[v];
                 ps4eng = "they are not " + "able to " + vnb[v];
                 ps4eng2 = "they're not " + "able to " + vnb[v];
 
-                ps5 = "nosotros no " + "somos capaz de " + vnbs[v];
+                ps5 = "nosotros no " + "somos capaces de " + vnbs[v];
                 ps5eng = "we are not " + "able to " + vnb[v];
                 ps5eng2 = "we're not " + "able to " + vnb[v];
                 break;

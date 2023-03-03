@@ -3305,6 +3305,78 @@ public class Special4 {
         }
     }//LR FEB 2023
 
+    public void GenAbleTo1(){
+        int neg = (int) (Math.random() * 2);
+        randstarter();
+        String temp = verbs[rand];
+
+        for (String verb : verbs) {
+            if (verb.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + vsbc[rand];
+                        eng1 = "I am " + "able to " + verbs[rand];
+                        eng12 = "I'm " + "able to " + verbs[rand];
+
+                        sp2 = "tú " + "eres capaz de " + vsbc[rand];
+                        eng2 = "you are " + "able to " + verbs[rand];
+                        eng22 = "you're " + "able to " + verbs[rand];
+
+                        sp3 = "él " + "es capaz de " + vsbc[rand];
+                        eng3 = "he is " + "able to " + verbs[rand];
+                        eng32 = "he's " + "able to " + verbs[rand];
+
+                        sp3ella = "ella " + "es capaz de " + vsbc[rand];
+                        eng3she = "she is " + "able to " + verbs[rand];
+                        eng3she2 = "she's " + "able to " + verbs[rand];
+
+                        sp3eso = "eso " + "es capaz de " + vsbc[rand];
+                        sp3it = "it is " + "able to " + verbs[rand];
+                        sp3it2 = "it's " + "able to " + verbs[rand];
+
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand];
+                        eng4 = "they are " + "able to " + verbs[rand];
+                        eng42 = "they're " + "able to " + verbs[rand];
+
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand];
+                        eng5 = "we are " + "able to " + verbs[rand];
+                        eng52 = "we're " + "able to " + verbs[rand];
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + vsbc[rand];
+                        eng1 = "I am not " + "able to " + verbs[rand];
+                        eng12 = "I'm not " + "able to " + verbs[rand];
+
+                        sp2 = "tú no " + "eres capaz de " + vsbc[rand];
+                        eng2 = "you are not " + "able to " + verbs[rand];
+                        eng22 = "you're not " + "able to " + verbs[rand];
+
+                        sp3 = "él no " + "es capaz de " + vsbc[rand];
+                        eng3 = "he is not " + "able to " + verbs[rand];
+                        eng32 = "he's not " + "able to " + verbs[rand];
+
+                        sp3ella = "ella no " + "es capaz de " + vsbc[rand];
+                        eng3she = "she is not " + "able to " + verbs[rand];
+                        eng3she2 = "she's not " + "able to " + verbs[rand];
+
+                        sp3eso = "eso no " + "es capaz de " + vsbc[rand];
+                        sp3it = "it is not " + "able to " + verbs[rand];
+                        sp3it2 = "it's not " + "able to " + verbs[rand];
+
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand];
+                        eng4 = "they are not " + "able to " + verbs[rand];
+                        eng42 = "they're not " + "able to " + verbs[rand];
+
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand];
+                        eng5 = "we are not " + "able to " + verbs[rand];
+                        eng52 = "we're not " + "able to " + verbs[rand];
+                        break;
+
+                }
+            }
+        }
+    }//PD FEB 2023
+
     //for to dificultad 1
     public void forSubTo1() {
         int rand = (int) (Math.random() * verbs.length);
@@ -6605,6 +6677,79 @@ public class Special4 {
             }
         }
     }//LR FEB 2023
+
+    public void GenAbleTo2(){
+        int neg = (int) (Math.random() * 2);
+        randstarter();
+        arraySod();
+        String temp = verbs[rand];
+
+        for (String verb : verbs) {
+            if (verb.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + vsbc[rand] + arraySodEsp;
+                        eng1 = "I am " + "able to " + verbs[rand] + arraySodEng;
+                        eng12 = "I'm " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp2 = "tú " + "eres capaz de " + vsbc[rand] + arraySodEsp;
+                        eng2 = "you are " + "able to " + verbs[rand] + arraySodEng;
+                        eng22 = "you're " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3 = "él " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        eng3 = "he is " + "able to " + verbs[rand] + arraySodEng;
+                        eng32 = "he's " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3ella = "ella " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        eng3she = "she is " + "able to " + verbs[rand] + arraySodEng;
+                        eng3she2 = "she's " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3eso = "eso " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        sp3it = "it is " + "able to " + verbs[rand] + arraySodEng;
+                        sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp;
+                        eng4 = "they are " + "able to " + verbs[rand] + arraySodEng;
+                        eng42 = "they're " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp;
+                        eng5 = "we are " + "able to " + verbs[rand] + arraySodEng;
+                        eng52 = "we're " + "able to " + verbs[rand] + arraySodEng;
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + vsbc[rand] + arraySodEsp;
+                        eng1 = "I am not " + "able to " + verbs[rand] + arraySodEng;
+                        eng12 = "I'm not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp2 = "tú no " + "eres capaz de " + vsbc[rand] + arraySodEsp;
+                        eng2 = "you are not " + "able to " + verbs[rand] + arraySodEng;
+                        eng22 = "you're not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3 = "él no " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        eng3 = "he is not " + "able to " + verbs[rand] + arraySodEng;
+                        eng32 = "he's not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3ella = "ella no " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        eng3she = "she is not " + "able to " + verbs[rand] + arraySodEng;
+                        eng3she2 = "she's not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp3eso = "eso no " + "es capaz de " + vsbc[rand] + arraySodEsp;
+                        sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng;
+                        sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp;
+                        eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng;
+                        eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng;
+
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp;
+                        eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng;
+                        eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng;
+                        break;
+
+                }
+            }
+        }
+    }//PD FEB 2023
     
     //for to dificultad 2 SOlO SPECIAL
     public void forSubTo2() {
@@ -10918,6 +11063,80 @@ public class Special4 {
         }
     }//LR FEB 2023
 
+    public void GenAbleTo3(){
+        int radv = (int) (Math.random() * frequadv.length);
+        int neg = (int) (Math.random() * 2);
+        randstarter();
+        arraySod();
+        String temp = verbs[rand];
+
+        for (String verb : verbs) {
+            if (verb.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng1 = "I am " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng12 = "I'm " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp2 = "tú " + "eres capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng2 = "you are " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng22 = "you're " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3 = "él " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng3 = "he is " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng32 = "he's " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3ella = "ella " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng3she = "she is " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng3she2 = "she's " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3eso = "eso " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp3it = "it is " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng4 = "they are " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng42 = "they're " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng5 = "we are " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng52 = "we're " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng1 = "I am not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng12 = "I'm not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp2 = "tú no " + "eres capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng2 = "you are not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng22 = "you're not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3 = "él no " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng3 = "he is not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng32 = "he's not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3ella = "ella no " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng3she = "she is not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng3she2 = "she's not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp3eso = "eso no " + "es capaz de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp + advfrequ[radv];
+                        eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng + frequadv[radv];
+                        break;
+
+                }
+            }
+        }
+    }//PD FEB 2023
+
     //for to dificultad 3 SOlO SPECIAL
     public void forSubTo3() {
         int rand = (int) (Math.random() * verbs.length);
@@ -15222,6 +15441,81 @@ public class Special4 {
             }
         }
     }//LR FEB 2023
+
+    public void GenAbleTo4(){
+        int radv = (int) (Math.random() * frequadv.length);
+        int neg = (int) (Math.random() * 2);
+        randstarter();
+        arraySod();
+        arraySpe();
+        String temp = verbs[rand];
+
+        for (String verb : verbs) {
+            if (verb.equals(temp)) {
+                switch (neg) {
+                    case 0:
+                        sp1 = "yo " + "soy capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng1 = "I am " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng12 = "I'm " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp2 = "tú " + "eres capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng2 = "you are " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng22 = "you're " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3 = "él " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng3 = "he is " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng32 = "he's " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3ella = "ella " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng3she = "she is " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng3she2 = "she's " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3eso = "eso " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp3it = "it is " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        sp3it2 = "it's " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp4 = "ellos " + "son capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng4 = "they are " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng42 = "they're " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp5 = "nosotros " + "somos capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng5 = "we are " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng52 = "we're " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        break;
+                    case 1:
+                        sp1 = "yo no " + "soy capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng1 = "I am not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng12 = "I'm not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp2 = "tú no " + "eres capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng2 = "you are not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng22 = "you're not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3 = "él no " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng3 = "he is not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng32 = "he's not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3ella = "ella no " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng3she = "she is not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng3she2 = "she's not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp3eso = "eso no " + "es capaz de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp3it = "it is not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        sp3it2 = "it's not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp4 = "ellos no " + "son capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng4 = "they are not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng42 = "they're not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+
+                        sp5 = "nosotros no " + "somos capaces de " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        eng5 = "we are not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng52 = "we're not " + "able to " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        break;
+
+                }
+            }
+        }
+    }//PD FEB 2023
 
     //for to dificultad 3 SOlO SPECIAL
     public void forSubTo4() {

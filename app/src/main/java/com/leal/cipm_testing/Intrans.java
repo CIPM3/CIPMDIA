@@ -3871,11 +3871,11 @@ public class Intrans {
                         eng5 = "it is " + "able to " + gen.vib[rand];
                         eng52 = "it's " + "able to " + gen.vib[rand];
 
-                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand];
+                        sp6 = "ellos " + "son capaces de " + gen.vibesp[rand];
                         eng6 = "they are " + "able to " + gen.vib[rand];
                         eng62 = "they're " + "able to " + gen.vib[rand];
 
-                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand];
+                        sp7 = "nosotros " + "somos capaces de " + gen.vibesp[rand];
                         eng7 = "we are " + "able to " + gen.vib[rand];
                         eng72 = "we're " + "able to " + gen.vib[rand];
                         break;
@@ -3900,11 +3900,11 @@ public class Intrans {
                         eng5 = "it is not " + "able to " + gen.vib[rand];
                         eng52 = "it's not " + "able to " + gen.vib[rand];
 
-                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand];
+                        sp6 = "ellos no " + "son capaces de " + gen.vibesp[rand];
                         eng6 = "they are not " + "able to " + gen.vib[rand];
                         eng62 = "they're not " + "able to " + gen.vib[rand];
 
-                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand];
+                        sp7 = "nosotros no " + "somos capaces de " + gen.vibesp[rand];
                         eng7 = "we are not " + "able to " + gen.vib[rand];
                         eng72 = "we're not " + "able to " + gen.vib[rand];
                         break;
@@ -5924,11 +5924,11 @@ public class Intrans {
                         eng5 = "it is " + "able to " + gen.vib[rand] + arrayEng;
                         eng52 = "it's " + "able to " + gen.vib[rand] + arrayEng;
 
-                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand] + arrayEsp;
+                        sp6 = "ellos " + "son capaces de " + gen.vibesp[rand] + arrayEsp;
                         eng6 = "they are " + "able to " + gen.vib[rand] + arrayEng;
                         eng62 = "they're " + "able to " + gen.vib[rand] + arrayEng;
 
-                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand] + arrayEsp;
+                        sp7 = "nosotros " + "somos capaces de " + gen.vibesp[rand] + arrayEsp;
                         eng7 = "we are " + "able to " + gen.vib[rand] + arrayEng;
                         eng72 = "we're " + "able to " + gen.vib[rand] + arrayEng;
                         break;
@@ -5953,11 +5953,11 @@ public class Intrans {
                         eng5 = "it is not " + "able to " + gen.vib[rand] + arrayEng;
                         eng52 = "it's not " + "able to " + gen.vib[rand] + arrayEng;
 
-                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand] + arrayEsp;
+                        sp6 = "ellos no " + "son capaces de " + gen.vibesp[rand] + arrayEsp;
                         eng6 = "they are not " + "able to " + gen.vib[rand] + arrayEng;
                         eng62 = "they're not " + "able to " + gen.vib[rand] + arrayEng;
 
-                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand] + arrayEsp;
+                        sp7 = "nosotros no " + "somos capaces de " + gen.vibesp[rand] + arrayEsp;
                         eng7 = "we are not " + "able to " + gen.vib[rand] + arrayEng;
                         eng72 = "we're not " + "able to " + gen.vib[rand] + arrayEng;
                         break;
@@ -7981,11 +7981,11 @@ public class Intrans {
                         eng5 = "it is " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng52 = "it's " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
 
-                        sp6 = "ellos " + "son capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        sp6 = "ellos " + "son capaces de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they are " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng62 = "they're " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
 
-                        sp7 = "nosotros " + "somos capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        sp7 = "nosotros " + "somos capaces de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
                         eng7 = "we are " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng72 = "we're " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         break;
@@ -8010,11 +8010,11 @@ public class Intrans {
                         eng5 = "it is not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng52 = "it's not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
 
-                        sp6 = "ellos no " + "son capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        sp6 = "ellos no " + "son capaces de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they are not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng62 = "they're not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
 
-                        sp7 = "nosotros no " + "somos capaz de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
+                        sp7 = "nosotros no " + "somos capaces de " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
                         eng7 = "we are not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng72 = "we're not " + "able to " + gen.vib[rand] + arrayEng + frequadv[radv];
                         break;
