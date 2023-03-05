@@ -373,12 +373,19 @@ public class Nobles {
     String sperfmWedont[] = {"wouldn't we have ", "couldn't we have ", "shouldn't we have "};
     String sperfmWeespno[] =  {"no hubieramos ", "no pudimos haber ", "no debímos haber "};
 
-    String objettherebe[] ={"car ", "house ", "bicycle ", "motorcycle "};
-    String objetostherebe[] ={"carro ", "casa ", "bicicleta ", "moto "};
+    String objetsingular[] ={"a house ", "a bicycle ", "a motorcycle ", "a computer ", "a apple ",
+            "a car ", "a clock ", "a phone ", "a TV "};
+    String objetosingular[] ={"una casa ", "una bicicleta ", "una moto ", "una computadora ", "una manzana ",
+            "un carro ", "un reloj ", "un teléfono ", "un televisor "};
 
-    String numbertherebe[] ={"one ", "two ", "three ", "four ", "five ",
+    String objetploral[] ={"houses ", "bicycles ", "motorcycles ", "computers ", "apples ",
+            "cars ", "clocks ", "phones ", "TVs "};
+    String objetoploral[] ={"casas ", "bicicletas ", "motos ", "computadoras ", "manzanas ",
+            "carros ", "relojes ", "teléfonos ", "televisores "};
+
+    String numbertherebe[] ={"two ", "three ", "four ", "five ",
             "six ", "seven ", "eight ", "nine ", "ten "};
-    String numerostherebe[] ={"uno ", "dos ", "tres ", "cuatro ", "cinco ",
+    String numerostherebe[] ={"dos ", "tres ", "cuatro ", "cinco ",
             "seis ", "siete ", "ocho ", "nueve ", "diez "};
 
     String ps1; // esta la uso para primera persona esp
@@ -407,7 +414,7 @@ public class Nobles {
     int v = (int) (Math.random() * vnb.length);
     int n = (int) (Math.random() * nnobles.length);
     int neg = (int) (Math.random() * 2);
-    int oj = (int)(Math.random() * objettherebe.length);
+    int oj = (int)(Math.random() * objetsingular.length);
     int num = (int)(Math.random() * numbertherebe.length);
 
 
@@ -16529,22 +16536,22 @@ public class Nobles {
         int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "Hay un " + objetostherebe[oj] + prep.noblesspecial[p][p2];
-                ps1eng = "There is " + objettherebe[oj] + prep.noblesspecialeng[p][p2];
-                ps1eng2 = "There is " + objettherebe[oj] + prep.noblesspecialeng[p][p2];
+                ps1 = "Hay " + objetosingular[oj] + prep.noblesspecial[p][p2];
+                ps1eng = "There is " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
+                ps1eng2 = "There is " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "Hay " + numerostherebe[num] + objetostherebe[oj] + prep.noblesspecial[p][p2];
-                ps2eng = "There are " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2];
-                ps2eng2 = "There are " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2];
+                ps2 = "Hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2];
+                ps2eng = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
+                ps2eng2 = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "No hay un " + objetostherebe[oj] + prep.noblesspecial[p][p2];
-                ps1eng = "There is not " + objettherebe[oj] + prep.noblesspecialeng[p][p2];
-                ps1eng2 = "There isn't " + objettherebe[oj] + prep.noblesspecialeng[p][p2];
+                ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2];
+                ps1eng = "There is not " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
+                ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "No hay " + numerostherebe[num] + objetostherebe[oj] + prep.noblesspecial[p][p2];
-                ps2eng = "There are not " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2];
-                ps2eng2 = "There aren't " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2];
+                ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2];
+                ps2eng = "There are not " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
+                ps2eng2 = "There aren't " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
                 break;
 
         }
@@ -16556,22 +16563,22 @@ public class Nobles {
         int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "Hay un " + objetostherebe[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps1eng = "There is " + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps1eng2 = "There is " + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1 = "Hay " + objetosingular[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps1eng = "There is " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1eng2 = "There is " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps2 = "Hay " + numerostherebe[num] + objetostherebe[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps2eng = "There are " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps2eng2 = "There are " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps2 = "Hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps2eng = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps2eng2 = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 break;
             case 1:
-                ps1 = "No hay un " + objetostherebe[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps1eng = "There is not " + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps1eng2 = "There isn't " + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps1eng = "There is not " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
-                ps2 = "No hay " + numerostherebe[num] + objetostherebe[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps2eng = "There are not " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps2eng2 = "There aren't " + numbertherebe[num] + objettherebe[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps2eng = "There are not " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps2eng2 = "There aren't " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 break;
 
         }
