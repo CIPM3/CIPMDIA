@@ -8,6 +8,7 @@ import android.widget.Toast;
 public class Intrans {
     Generator gen;
     int randvcb;
+    int randPV;
     int rand;
     int rand2;
     int rand3;
@@ -48,6 +49,9 @@ public class Intrans {
     int r38;
     int r39;
     int r40;
+
+    int rPv1;
+    int rPv2;
 
     //verbos generador 1 completos base
     String vcb[] = {
@@ -1878,11 +1882,211 @@ public class Intrans {
             },
     };
 
+    String PhrasalVerb[]={
+            "break ","bring ","call ","come ","cut ","do ","fall ",
+            "get ","give ","go ","have ","keep ","let ","look ",
+            "make ","pull ","put ","run ","see ","stand ","take ",
+            "throw ","turn "
+    };
+
+    String PhrasalVerbEng[][]={
+            {
+                 "away ","down ","for ","in ","into ",
+                    "off ","out ","through ","up "
+            },
+            {
+                "about ","along ","around ","back ","down ",
+                    "forth ","forward ","in ","into ","off ",
+                    "on ","out ","over to ","round ","to ",
+                    "together ","up "
+            },
+            {
+                "around ","at ","away ","down ","for ",
+                    "forth ","in ","off ","on ","out ",
+                    "over ","up ","upon "
+            },
+            {
+                "about ","across ","along ","apart ","at ",
+                    "away ","back ","before ","between ",
+                    "by ","down ","forth ","forward ",
+                    "in for ","into ","loose ","of ",
+                    "off ","out ","over ","round ",
+                    "through ","to ","up ","upon "
+            },
+            {
+                "across ","back on ","down ","in ",
+                    "off ","out ","through ","up "
+            },
+            {
+                "away with ","down ","for ","in ",
+                    "out ","over ","up ","with ",
+                    "without "
+            },
+            {
+                "about ","apart ","away ","back ",
+                    "behind ","down ","for ","in ",
+                    "into ","off ","upon ","out ",
+                    "over ","through ","to ","under "
+            },
+            {
+                "about ","above ","across ","after ",
+                    "ahead ","along with ","around ",
+                    "at ","away ","back ","behind ",
+                    "by ","down ","in ","into ",
+                    "off ","off ","on ","out ","over ",
+                    "rid of ","round ","through ","to ",
+                    "together ","up "
+            },
+            {
+                "away ","back ","in ","off ","onto ",
+                    "out ","over to ","up "
+            },
+            {
+                "about ","across ","along ","at ","back ",
+                    "before ","by ","down ","for ","forward ",
+                    "in ","into ","off ","on ","out ","round ",
+                    "through ","to ","together ","towards ",
+                    "under ","up against ","with ","without "
+            },
+            {
+                "against ","around ","down as ","in ","off ",
+                    "on ","out with ","over ","up "
+            },
+            {
+                "ahead ","at ","away ","back ","down ","from ",
+                    "in ","off ","on ","out ","to ","up "
+            },
+            {
+                "down ","in ","into ","off ","on ","out ",
+                    "up "
+            },
+            {
+                "after ","away ","back on ","down on ",
+                    "for ","forward to ","in on ","into ",
+                    "on ","over ","round ","through ","to ",
+                    "up "
+            },
+            {
+                "after ","away with ","for ","of ","out ",
+                    "over ","up "
+            },
+            {
+                "ahead ","apart ","at ","away ","back ","down ",
+                    "for ","in ","off ","on ","out of ","over ",
+                    "through ","to ","together ","up "
+            },
+            {
+                "across ","aside ","at ","away ","back ","before ",
+                    "behind ","by ","down ","forth ","forward ",
+                    "in ","off ","on ","out ","through ","to ",
+                    "together ","towards ","under ","up "
+            },
+            {
+                "across ","after ","around ","away ","by ",
+                    "down ","for ","in ","into ","off ","on ",
+                    "out ","over ","through ","to ","up "
+            },
+            {
+                "about ","in ","into ","off ","out ","over ",
+                    "through ","to "
+            },
+            {
+                "about ","against ","apart ","aside ","back ",
+                    "down ","forth ","in ","off ","on ",
+                    "out ","to ","up "
+            },
+            {
+                "about ","down ","for ","in for ","off ","out ",
+                "over ","to ","up "
+            },
+            {
+                "aback ","after ","along ","apart ","around ",
+                    "aside ","away ","back ","care of ","down ",
+                    "for ","in ","off ","on ","out ","over ",
+                    "through ","to ","up ","upon "
+            },
+            {
+                "away ","down ","in ","off ","on ","over ","together ",
+                    "up "
+            },
+            {
+                "against ","around ","away ","back ","down ","in ",
+                "inside out ","into ","off ","on ","out ","over ","to ",
+                    "up ","upside down "
+            }
+    };
+
+    String PhrasalVerbEsp1[][]={
+            {
+                "me separo ","me rompo ","corro hacia ","fuerzo ","irrumpo ",
+                    "termino ","me escapo ","me abro paso ","me deshice "
+            },
+            {
+                "provoco ","traigo ","persuado ","devuelvo ","derribo ",
+                    "doy a luz ","presento ","traigo ","hablo sobre ",
+                    "logro ","causo ","publicar ","persuado a ",
+                    "convenzo ","reanimo ","reconcilio ","menciono "
+            }
+    };
+
+    String PhrasalVerbEsp2[][]={
+            {
+                    "te separas ","te rompes ","corres hacia ","fuerzas ","irrumpes ",
+                    "terminas ","te escapas ","te abres paso ","te deshaces "
+            },
+            {
+                    "provocas ","traigas ","persuades ","devuelves ","derribas ",
+                    "das a luz ","presentas ","traes ","hablas sobre ",
+                    "logras ","causas ","publicas ","persuades a ",
+                    "convences ","reanimas ","reconcilias ","mencionas "
+            }
+    };
+
+    String PhrasalVerbEsp3[][]={
+            {
+                    "se separa ","se rompe ","corre hacia ","fuerza ","irrumpe ",
+                    "termina ","se escapa ","se abre paso ","se deshace "
+            },
+            {
+                    "provoca ","trae ","persuade ","devuelve ","derriba ",
+                    "da a luz ","presenta ","trae ","habla sobre ",
+                    "logra ","causa ","publica ","persuade a ",
+                    "convence ","reanima ","reconcilia ","menciona "
+            }
+    };
+
+    String PhrasalVerbEsp4[][]={
+            {
+                    "se separan ","se rompen ","corren hacia ","fuerzan ","irrumpen ",
+                    "terminan ","se escapan ","se abren paso ","se deshacen "
+            },
+            {
+                    "provocan ","traen ","persuaden ","devuelven ","derriban ",
+                    "dan a luz ","presentan ","traen ","hablan sobre ",
+                    "logran ","causan ","publican ","persuaden a ",
+                    "convencen ","reaniman ","reconcilian ","mencionan "
+            }
+    };
+
+    String PhrasalVerbEsp5[][]={
+            {
+                    "nos separaremos ","nos romperemos ","correremos hacia ","forzaremos ","irrumpiremos ",
+                    "terminaremos ","nos escaparemos ","nos abriremos paso ","nos deshacemos "
+            },
+            {
+                    "provocamos ","traemos ","persuadimos ","devuelvemos ","derribamos ",
+                    "damos a luz ","presentamos ","traemos ","hablamos sobre ",
+                    "logramos ","causamos ","publicamos ","persuadimos a ",
+                    "convencemos ","reanimamos ","reconciliamos ","mencionamos "
+            }
+    };
+
     String arrayEsp;
     String arrayEng;
 
     public void randstarter() {
         randvcb = (int) (Math.random() * vcb.length);
+        randPV = (int) (Math.random() * PhrasalVerb.length);
         rand = (int) (Math.random() * gen.vib.length);
         rand2 = (int) (Math.random() * gen.pronombres.length);
         rand3 = (int) (Math.random() * gospecial.length);
@@ -1924,7 +2128,7 @@ public class Intrans {
         r39 = (int) (Math.random() * fallspecial.length);
         r40 = (int) (Math.random() * fallspecial[r39].length);
 
-
+        rPv1 = (int) (Math.random() * PhrasalVerbEng[0].length);
     }
 
     public void arraySpe(){
@@ -3913,6 +4117,68 @@ public class Intrans {
             }
         }
     }//PD FEB 2023
+
+    public void GenPhrasalVerb1(){
+        gen = new Generator();
+        randstarter();
+        //String temp = PhrasalVerb[randPV];
+        String temp = "bring ";
+        int neg = (int) (Math.random() * 2);
+
+
+        for (String verbs : PhrasalVerb) {
+            if (verbs.equals(temp)) {
+                switch (neg){
+                    case 0:
+                        sp1 = "yo " + PhrasalVerbEsp1[0][rPv1];
+                        eng1 = "I " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng12 = "I " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp2 = "tú " + PhrasalVerbEsp2[0][rPv1];
+                        eng2 = "you " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng22 = "you " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp3 = "él " + PhrasalVerbEsp3[0][rPv1];
+                        eng3 = "he " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng32 = "he " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp4 = "ella " + PhrasalVerbEsp3[0][rPv1];
+                        eng4 = "she " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng42 = "she " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp5 = "eso " + PhrasalVerbEsp3[0][rPv1];
+                        eng5 = "it " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng52 = "it " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp6 = "ellos " + PhrasalVerbEsp4[0][rPv1];
+                        eng6 = "they " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng62 = "they " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp7 = "nosotros " + PhrasalVerbEsp5[0][rPv1];
+                        eng7 = "we " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng72 = "we " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        break;
+                    case 1:
+                        sp1 = "yo " + "no " + PhrasalVerbEsp1[0][rPv1];
+                        eng1 = "I do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng12 = "I don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp2 = "tú " + "no " + PhrasalVerbEsp2[0][rPv1];
+                        eng2 = "you do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng22 = "you don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp3 = "él no " + PhrasalVerbEsp3[0][rPv1];
+                        eng3 = "he do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng32 = "he don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp4 = "ella no " + PhrasalVerbEsp3[0][rPv1];
+                        eng4 = "she do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng42 = "she don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp5 = "eso no " + PhrasalVerbEsp3[0][rPv1];
+                        eng5 = "it do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng52 = "it don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp6 = "ellos " + "no " + PhrasalVerbEsp4[0][rPv1];
+                        eng6 = "they do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng62 = "they don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        sp7 = "nosotros " + "no " + PhrasalVerbEsp5[0][rPv1];
+                        eng7 = "we do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng72 = "we don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        break;
+                }
+            }
+        }
+    }//PD MAR 2023
 
     //for to dificultad 3 SOlO INTRANS
     public void forSubTo1() {

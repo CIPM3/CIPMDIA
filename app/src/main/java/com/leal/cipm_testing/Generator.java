@@ -11746,6 +11746,92 @@ gene2 = o.ps5eng2;
         }
     }
 
+    public void GenPhrasalVerb1(){
+        int rand = (int) (Math.random() * pronombres.length);
+        String verb = "Intrans ";
+        String temp = pronombres[rand];
+
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                }
+                break;
+            case "eso ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case "Intrans ":
+                        Intrans i = new Intrans();
+                        i.GenPhrasalVerb1();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                }
+                break;
+        }
+    }
+
     public void GenTherebe1() {
         int rand = (int) (Math.random() * primerysegun.length);
         int verb = (int) (Math.random() * 1);
