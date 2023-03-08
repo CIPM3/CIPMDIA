@@ -409,29 +409,36 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Black Fathers":
                 pregSele = new String[]{
-                        "¿Qué perspectivas se plantean para abordar la situación?",
-                        "¿Qué problemas se han identificado como principales desafíos en la crianza de los hijos por parte de los padres de raza negros?",
-                        "¿Qué recursos fueron presentados para ayudar a los padres de raza negros a criar a sus hijos?"
+                        "Which poses the bigger threat to the black community?",
+                        "What problems have been identified in homes where parents are absent?",
+                        "According to census data between 1890 and 1940, it was more likely that:",
+                        "Tupac Shakur, the late rapper, once said:"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Aumentar el acceso a la educación y los recursos",
-                                "Aumentar el acceso a la atención médica",
-                                "Mejorar la educación y los recursos de la comunidad",
-                                "Cambiar la ley para mejorar la situación de los padres negros"
+                                "Falta de educacion.",
+                                "El racismo.",
+                                "La ausencia de padres negros.",
+                                "Falta de atencion."
                         },
                         {
-                                "La falta de acceso a la educación de calidad",
-                                "La falta atención médica",
-                                "El racismo y la discriminación",
-                                "La falta de recursos financieros"
+                                "Terminan sus estudios.",
+                                "Tienen más probabilidades de terminar en la cárcel",
+                                "Mueren.",
+                                "Consigen trabajo."
                         },
                         {
-                                "La educación y los recursos para la comunidad",
-                                "La recursos para los padres",
-                                "La atención médica y los recursos para la comunidad",
-                                "Los programas de becas y subvenciones"
+                                "Que un niño negro creciera solo.",
+                                "Que un niño negro creciera con padres casados que un niño blanco.",
+                                "Que un niño negro creciera en la calle.",
+                                "Que un niño negro creciera con sus abuelos."
+                        },
+                        {
+                                "Necesitas un hombre que te enseñe a ser un hombre.",
+                                "Todo el mundo está en guerra con algo. Por lo general, estoy en guerra con mi propio corazón.",
+                                "Tu madre no puede calmarte como lo hace un hombre.",
+                                "Ellos tienen dinero para las guerras pero no tienen dinero para alimentar a los pobres"
                         },
                 };
 
@@ -440,10 +447,13 @@ public class availability_nuevo extends AppCompatActivity {
                                 false,false,true,false
                         },
                         {
-                                false,false,false,true
+                                false,true,false,false
                         },
                         {
-                                false,false,true,false
+                                false,true,false,false
+                        },
+                        {
+                                true,false,true,false
                         }
                 };
 
@@ -453,30 +463,37 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Is America Racist?":
                 pregSele = new String[]{
-                        "¿Estados Unidos tiene una historia de racismo?",
-                        "¿Sigue prevaleciendo el racismo en Estados Unidos?",
-                        "¿Las personas de color son tratadas de manera diferente en Estados Unidos?"
+                        "Barack Obama said that",
+                        "In 1958 Gallup conducted a poll where it found that",
+                        "In the summer of 2014, Ferguson, Missouri, a white police officer shot",
+                        "Is there still racism in America?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Si.",
-                                "No.",
-                                "No estoy seguro.",
-                                "Esta fuera de contexto."
+                                "El racismo está en el ADN de Estados Unidos.",
+                                "Las personas blancas son violentos.",
+                                "No habia racismo.",
+                                "No hay respetos entre personas."
                         },
                         {
-                                "Si.",
-                                "No.",
-                                "No estoy seguro.",
-                                "Esta fuera de contexto."
+                                "El matrimonio interracial era totalmente aceptado.",
+                                "Solo el 4% de los estadounidense aprobaba los matrimonios emtre negros y blancos.",
+                                "No exixtia matrimonios interracial.",
+                                "Era ilegal matrimonios interracial."
                         },
                         {
-                                "Si.",
-                                "No.",
-                                "No estoy seguro.",
-                                "Esta fuera de contexto."
+                                "a un adolecente blanco armado.",
+                                "a un policia negro.",
+                                "a un padre negro con sus hijos.",
+                                "a un adolescente negro desarmado."
                         },
+                        {
+                                "Por supuesto que lo hay. Pero el racismo no está en el ADN de Estados Unidos.",
+                                "El racismo quedo en la historia.",
+                                "El racismo esta peor que antes.",
+                                "No existe el racismo."
+                        }
                 };
 
                 RespuestasCorrectasSele = new boolean[][] {
@@ -484,10 +501,13 @@ public class availability_nuevo extends AppCompatActivity {
                                 true,false,false,false
                         },
                         {
-                                false,true,false,false
+                                false,true,false,true
                         },
                         {
-                                false,false,true,false
+                                false,false,false,true
+                        },
+                        {
+                                true,false,false,false
                         }
                 };
 
@@ -497,30 +517,30 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Dont Compare Yourself to Others":
                 pregSele = new String[]{
-                        "¿Qué tipo de personas se comparan con otras?",
-                        "¿Qué tipo de trabaja tiene el narrador?",
-                        "¿De que se trata el exito profesional?"
+                        "What kind of people are compared to others?",
+                        "What kind of job does the narrator have?",
+                        "What is professional success about?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Personas famosas. ",
-                                "Todo el mundo. ",
-                                "Personas mediocres. ",
-                                "Nadie. ",
+                                "Personas famosas.",
+                                "Todo el mundo.",
+                                "Personas mediocres.",
+                                "Nadie.",
                         },
                         {
-                                "Entretenimiento. ",
-                                "Economia. ",
-                                "Medicina. ",
-                                "Abogado. ",
+                                "Entretenimiento.",
+                                "Economia.",
+                                "Medicina.",
+                                "Abogado.",
 
                         },
                         {
-                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces ",
-                                "Hacer mucho dinero y la admiracion de las personas ",
-                                "Fama, una gran coleccion de autos y descontrol ",
-                                "No lograr nada"
+                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces.",
+                                "Hacer mucho dinero y la admiracion de las personas.",
+                                "Fama, una gran coleccion de autos y descontrol.",
+                                "No lograr nada."
                         },
                 };
 
@@ -542,29 +562,29 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Fix Yourself":
                 pregSele = new String[]{
-                        "¿Qué tema discute el psicólogo?",
-                        "El reprimir sus sentimientos para que su creencias puendan permanecer ¿Que provoca?",
-                        "¿Que pregntas se debe hacer a su propia conciencia?"
+                        "What topic does the psychologist discuss?",
+                        "Repressing your feelings so that your beliefs can remain. What causes?",
+                        "What questions should be asked of your own conscience?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Hacer cambiar a las personas para vivir mejor. ",
-                                "Culpar a las personas te hace ser el problema. ",
-                                "Divorciarce de una pareja toma coraje. ",
-                                "Ser miserable hace que culpemos personas. ",
+                                "Hacer cambiar a las personas para vivir mejor.",
+                                "Culpar a las personas te hace ser el problema.",
+                                "Divorciarce de una pareja toma coraje.",
+                                "Ser miserable hace que culpemos personas.",
                         },
                         {
-                                "Fomentar su ira y alteración de la razón o los sentidos. ",
-                                "Felicidad y calma. ",
-                                "Perdida de la persona. ",
-                                "Todas las anterioes. ",
+                                "Fomentar su ira y alteración de la razón o los sentidos.",
+                                "Felicidad y calma.",
+                                "Perdida de la persona.",
+                                "Todas las anterioes.",
 
                         },
                         {
-                                "¿Qué debes comer mañana? ¿Qué comi ayer? ",
-                                "¿A que hora tengo que trabajar? ¿Qué deberia llevar? ",
-                                "¿Que esta haciendo el perro? ",
+                                "¿Qué debes comer mañana? ¿Qué comi ayer?",
+                                "¿A que hora tengo que trabajar? ¿Qué deberia llevar?",
+                                "¿Que esta haciendo el perro?",
                                 "¿Qué estás haciendo que está mal, desde tu propia perspectiva? ¿Qué podrías arreglar, ahora mismo?"
                         },
                 };
