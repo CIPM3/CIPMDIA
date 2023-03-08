@@ -2295,6 +2295,1627 @@ public class estructura_nuevo extends AppCompatActivity {
         }
     }
 
+    //RANDOM GEN 2
+    public void GenQuestionStructure2(){
+        int tranRand = (int) (Math.random() * 24);
+        switch (tranRand){
+            case 0:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 1:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 2:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 3:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 4:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 5:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 6:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhereSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 7:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhereCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 8:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWherePerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 9:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhySimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 10:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhyCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 11:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhyPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 12:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 13:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 14:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 15:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 16:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 17:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 18:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 19:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 20:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 21:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManySimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 22:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManyCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+            case 23:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManyPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+        }
+    }
+    public void GenQuestionStructureModals2(){
+        int tranRand = (int) (Math.random() * 24);
+        switch (tranRand){
+            case 0:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 1:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 2:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhatModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 3:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 4:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 5:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhenModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 6:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhereModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 7:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhereModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 8:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhereModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 9:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhyModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 10:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhyModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 11:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhyModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 12:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 13:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 14:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenWhoModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 15:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 16:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 17:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 18:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 19:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 20:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowMuchModalsPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 21:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManyModalsSimp2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 22:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManyModalsCont2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+                    }
+                });
+                break;
+            case 23:
+                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tt1.setLanguage(spanish);
+                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                    // iniciarentradavoz();
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            Generator gen1 = new Generator();
+                            gen1.GenHowManyPerf2();
+                            sptx.setText(gen1.gens);
+                            txteng.setText(gen1.gene);
+
+                            answerinp.setText("");
+                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        }
+
+                    }
+                });
+                break;
+        }
+    }
+
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
@@ -29362,6 +30983,53 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
+
+            case "Question Structure":
+                switch (selection2) {
+                    case "0 a 100":
+                        GenQuestionStructure2();
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
+            case "Question Structure Modals":
+                switch (selection2) {
+                    case "0 a 100":
+                        GenQuestionStructureModals2();
                         break;
 
                     case "100 a 200":
