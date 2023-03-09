@@ -328,7 +328,7 @@
                                 android:layout_height="40dp"
                                 android:background="@drawable/ic_rect_ngulo_btncheck"
                                 android:text="Finalizar Test"
-                                android:onClick="btnFinalizarTest"
+                                android:onClick="verResultado"
                                 android:textColor="@color/azul"
                                 android:textSize="14dp"
                                 android:layout_marginRight="5dp"
@@ -349,6 +349,95 @@
                         </LinearLayout>
                     </LinearLayout>
                 </ScrollView>
+            </LinearLayout>
+
+            <!--RESULT LAYOUT-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/result_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Felicidades"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Obtuviste un Resultado de:"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+                        <TextView
+                            android:id="@+id/scoreText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:gravity="end"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:gravity="start"
+                            android:text="%"
+                            android:textColor="@color/black"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text="Continuar"
+                                android:background="@drawable/ic_rect_ngulo_btncheck"
+                                android:onClick="btnFinalizarTest"
+                                android:textColor="@color/azul"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

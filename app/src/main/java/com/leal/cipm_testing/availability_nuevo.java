@@ -1,5 +1,7 @@
 package com.leal.cipm_testing;
 
+import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,20 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Spinner;
@@ -42,9 +40,10 @@ public class availability_nuevo extends AppCompatActivity {
     VideoView vv;
     LinearLayout vf;
     Button preg1,preg2,preg3,preg4;
-    TextView pregtxt,btn_test;
+    TextView pregtxt,btn_test,scoreText;
     LinearLayout pasarSigNivel;
     LinearLayout test_view;
+    LinearLayout result_view;
     String selection;
     String s;
     boolean personalizedPlan,isCustom;
@@ -80,7 +79,9 @@ public class availability_nuevo extends AppCompatActivity {
         preg3 = findViewById(R.id.preg3);
         preg4 = findViewById(R.id.preg4);
         test_view = findViewById(R.id.test_view);
+        result_view = findViewById(R.id.result_view);
         textspin1 = findViewById(R.id.textspin1);
+        scoreText = findViewById(R.id.scoreText);
         pasarSigNivel = findViewById(R.id.pasarSigNivel);
         btn_test = findViewById(R.id.btn_test);
         spin = findViewById(R.id.spinuno);
@@ -388,21 +389,22 @@ public class availability_nuevo extends AppCompatActivity {
 
     }
 
-    Boolean btn1Correct;
-    Boolean btn2Correct;
-    Boolean btn3Correct;
-    Boolean btn4Correct;
+    int pregIndex = 0;
+    int pregCorrect = 0;
 
     String preguntas []={};
-
     String Respuestas [][]={};
+    String RespuestasCorrectas [][] = {};
+    String RespCorrecta;
 
-    boolean RespuestasCorrectas [][] = {};
+    public static double calcularPorcentaje(double total, int porcentaje) {
+        return (porcentaje * total) / 4;
+    }
 
     public void preguntasSeleccionada(){
         String pregSele[];
         String RespSele [][];
-        boolean RespuestasCorrectasSele [][];
+        String RespuestasCorrectasSele [][];
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "Por favor seleccione una actividad.", Toast.LENGTH_SHORT).show();
@@ -442,18 +444,18 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                 };
 
-                RespuestasCorrectasSele = new boolean[][] {
+                RespuestasCorrectasSele = new String[][] {
                         {
-                                false,false,true,false
+                                "La ausencia de padres negros."
                         },
                         {
-                                false,true,false,false
+                                "Tienen más probabilidades de terminar en la cárcel"
                         },
                         {
-                                false,true,false,false
+                                "Que un niño negro creciera con padres casados que un niño blanco."
                         },
                         {
-                                true,false,true,false
+                                "Necesitas un hombre que te enseñe a ser un hombre."
                         }
                 };
 
@@ -478,7 +480,7 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                         {
                                 "El matrimonio interracial era totalmente aceptado.",
-                                "Solo el 4% de los estadounidense aprobaba los matrimonios emtre negros y blancos.",
+                                "Solo el 4% de los estadounidense aprobaba los matrimonios entre negros y blancos.",
                                 "No exixtia matrimonios interracial.",
                                 "Era ilegal matrimonios interracial."
                         },
@@ -496,18 +498,18 @@ public class availability_nuevo extends AppCompatActivity {
                         }
                 };
 
-                RespuestasCorrectasSele = new boolean[][] {
+                RespuestasCorrectasSele = new String[][] {
                         {
-                                true,false,false,false
+                                "El racismo está en el ADN de Estados Unidos."
                         },
                         {
-                                false,true,false,true
+                                "Solo el 4% de los estadounidense aprobaba los matrimonios entre negros y blancos."
                         },
                         {
-                                false,false,false,true
+                                "a un adolescente negro desarmado."
                         },
                         {
-                                true,false,false,false
+                                "Por supuesto que lo hay. Pero el racismo no está en el ADN de Estados Unidos."
                         }
                 };
 
@@ -544,15 +546,15 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                 };
 
-                RespuestasCorrectasSele = new boolean[][] {
+                RespuestasCorrectasSele = new String[][] {
                         {
-                                false,true,false,false
+                                "Todo el mundo."
                         },
                         {
-                                true,false,false,false
+                                "Entretenimiento."
                         },
                         {
-                                true,false,false,false
+                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces."
                         }
                 };
 
@@ -589,15 +591,15 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                 };
 
-                RespuestasCorrectasSele = new boolean[][] {
+                RespuestasCorrectasSele = new String[][] {
                         {
-                                false,true,false,false
+                                "Culpar a las personas te hace ser el problema."
                         },
                         {
-                                true,false,false,false
+                                "Fomentar su ira y alteración de la razón o los sentidos."
                         },
                         {
-                                false,false,false,true
+                                "¿Qué estás haciendo que está mal, desde tu propia perspectiva? ¿Qué podrías arreglar, ahora mismo?"
                         }
                 };
 
@@ -609,89 +611,166 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void availabilityTest(View v){
-        switch (selection){
-            case "Tutorial":
-                Toast.makeText(this, "Selecciona un pragger", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                tv.setVisibility(View.GONE);
-                test_view.setVisibility(View.VISIBLE);
-                startTest();
-                limpBtns();
-                break;
+        activarBtns();
+        if (pregIndex >= 4 || pregIndex <= -1) {
+            verResultado();
+            pregIndex = 0;
+        } else {
+            switch (selection){
+                case "Tutorial":
+                    Toast.makeText(this, "Selecciona un pragger", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    tv.setVisibility(View.GONE);
+                    test_view.setVisibility(View.VISIBLE);
+                    startTest();
+                    limpBtns();
+                    break;
+            }
         }
     }
 
     public void btnFinalizarTest(View v){
         tv.setVisibility(View.VISIBLE);
         test_view.setVisibility(View.GONE);
+        result_view.setVisibility(View.GONE);
+    }
+
+    public void verResultado(View v){
+        tv.setVisibility(View.GONE);
+        test_view.setVisibility(View.GONE);
+        result_view.setVisibility(View.VISIBLE);
+        double result = calcularPorcentaje(100,pregCorrect);
+        String numeroEnString = Double.toString(result);
+        scoreText.setText(numeroEnString);
+        pregIndex = 0;
+    }
+
+    public void verResultado(){
+        tv.setVisibility(View.GONE);
+        test_view.setVisibility(View.GONE);
+        result_view.setVisibility(View.VISIBLE);
+        double result = calcularPorcentaje(100,pregCorrect);
+        String numeroEnString = Double.toString(result);
+        scoreText.setText(numeroEnString);
     }
 
     public void startTest(){
-        int pregRand = (int)(Math.random()*preguntas.length );
         preguntasSeleccionada();
-        String preg = preguntas[pregRand];
+        String preg = preguntas[pregIndex];
         pregtxt.setText(preg);
 
-        preg1.setText(Respuestas[pregRand][0]);
-        preg2.setText(Respuestas[pregRand][1]);
-        preg3.setText(Respuestas[pregRand][2]);
-        preg4.setText(Respuestas[pregRand][3]);
+        RespCorrecta = RespuestasCorrectas[pregIndex][0];
 
-        btn1Correct = RespuestasCorrectas[pregRand][0];
-        btn2Correct = RespuestasCorrectas[pregRand][1];
-        btn3Correct = RespuestasCorrectas[pregRand][2];
-        btn4Correct = RespuestasCorrectas[pregRand][3];
+        preg1.setText(Respuestas[pregIndex][0]);
+        preg2.setText(Respuestas[pregIndex][1]);
+        preg3.setText(Respuestas[pregIndex][2]);
+        preg4.setText(Respuestas[pregIndex][3]);
+
+    }
+
+    public void bloquearBtns(){
+        preg1.setEnabled(false);
+        preg2.setEnabled(false);
+        preg3.setEnabled(false);
+        preg4.setEnabled(false);
+    }
+
+    public void activarBtns(){
+        preg1.setEnabled(true);
+        preg2.setEnabled(true);
+        preg3.setEnabled(true);
+        preg4.setEnabled(true);
     }
 
     public void btn1(View v){
-        checkPreg();
-    }
+        
+        String Resp1 = preg1.getText().toString();
+
+        if(Resp1.equals(RespCorrecta)){
+            preg1.setBackgroundColor(getResources().getColor(R.color.success));
+            pregCorrect ++;
+            pregIndex ++;
+        }else{
+            preg1.setBackgroundColor(getResources().getColor(R.color.rojo));
+            pregIndex ++;
+        }
+
+        preg2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        bloquearBtns();
+    };
 
     public void btn2(View v){
-        checkPreg();
+        
+        String Resp2 = preg2.getText().toString();
+
+        if(Resp2.equals(RespCorrecta)){
+            preg2.setBackgroundColor(getResources().getColor(R.color.success));
+            pregCorrect ++;
+            pregIndex ++;
+
+        }else{
+            preg2.setBackgroundColor(getResources().getColor(R.color.rojo));
+            pregIndex ++;
+
+        }
+
+        preg1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+
+        bloquearBtns();
     }
 
     public void btn3(View v){
-        checkPreg();
+        
+        String Resp3 = preg3.getText().toString();
+
+        if(Resp3.equals(RespCorrecta)){
+            preg3.setBackgroundColor(getResources().getColor(R.color.success));
+            pregCorrect ++;
+            pregIndex ++;
+
+        }else{
+            preg3.setBackgroundColor(getResources().getColor(R.color.rojo));
+            pregIndex ++;
+
+        }
+        preg1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+
+        bloquearBtns();
     }
 
     public void btn4(View v){
-        checkPreg();
-    }
+        
+        String Resp4 = preg4.getText().toString();
 
-    public void checkPreg() {
-        if(btn1Correct){
-            preg1.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
+        if(Resp4.equals(RespCorrecta)){
+            preg4.setBackgroundColor(getResources().getColor(R.color.success));
+            pregCorrect ++;
+            pregIndex ++;
+
+        }else{
+            preg4.setBackgroundColor(getResources().getColor(R.color.rojo));
+            pregIndex ++;
+
         }
-        if(btn2Correct){
-            preg2.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
-        }
-        if(btn3Correct){
-            preg3.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg4.setBackgroundColor(Color.parseColor("#FEE6E6"));
-        }
-        if(btn4Correct){
-            preg4.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            preg3.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg2.setBackgroundColor(Color.parseColor("#FEE6E6"));
-            preg1.setBackgroundColor(Color.parseColor("#FEE6E6"));
-        }
+        preg1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+        preg3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
+
+        bloquearBtns();
     }
 
     public void limpBtns(){
-        preg1.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
-        preg2.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
-        preg3.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
-        preg4.setBackgroundResource(R.drawable.ic_rect_ngulo_btncheck);
+        preg1.setBackgroundResource(ic_rect_ngulo_btncheck);
+        preg2.setBackgroundResource(ic_rect_ngulo_btncheck);
+        preg3.setBackgroundResource(ic_rect_ngulo_btncheck);
+        preg4.setBackgroundResource(ic_rect_ngulo_btncheck);
     }
 
     public void select(View v) {
