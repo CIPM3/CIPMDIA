@@ -419,43 +419,43 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Falta de educacion.",
-                                "El racismo.",
-                                "La ausencia de padres negros.",
-                                "Falta de atencion."
+                                "Absence of education.",
+                                "The racism.",
+                                "The absence of black parents.",
+                                "Lack of attention."
                         },
                         {
-                                "Terminan sus estudios.",
-                                "Tienen más probabilidades de terminar en la cárcel",
-                                "Mueren.",
-                                "Consigen trabajo."
+                                "Finish their studies.",
+                                "They are more likely to end up in jail.",
+                                "Die.",
+                                "They get work."
                         },
                         {
-                                "Que un niño negro creciera solo.",
-                                "Que un niño negro creciera con padres casados que un niño blanco.",
-                                "Que un niño negro creciera en la calle.",
-                                "Que un niño negro creciera con sus abuelos."
+                                "That a black child grew up alone.",
+                                "That a black child grew up with married parents than a white child.",
+                                "That a black child grew up on the street.",
+                                "That a black boy grew up with his grandparents."
                         },
                         {
-                                "Necesitas un hombre que te enseñe a ser un hombre.",
-                                "Todo el mundo está en guerra con algo. Por lo general, estoy en guerra con mi propio corazón.",
-                                "Tu madre no puede calmarte como lo hace un hombre.",
-                                "Ellos tienen dinero para las guerras pero no tienen dinero para alimentar a los pobres"
+                                "You need a man to teach you how to be a man.",
+                                "Everyone is at war with something. Usually I am at war with my own heart.",
+                                "Your mother can't calm you down like a man can.",
+                                "They have money for wars but they don't have money to feed the poor."
                         },
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "La ausencia de padres negros."
+                                "The absence of black parents."
                         },
                         {
-                                "Tienen más probabilidades de terminar en la cárcel"
+                                "They are more likely to end up in jail."
                         },
                         {
-                                "Que un niño negro creciera con padres casados que un niño blanco."
+                                "That a black child grew up with married parents than a white child."
                         },
                         {
-                                "Necesitas un hombre que te enseñe a ser un hombre."
+                                "You need a man to teach you how to be a man."
                         }
                 };
 
@@ -473,43 +473,43 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "El racismo está en el ADN de Estados Unidos.",
-                                "Las personas blancas son violentos.",
-                                "No habia racismo.",
-                                "No hay respetos entre personas."
+                                "Racism is in America's DNA.",
+                                "White people are violent.",
+                                "There was no racism.",
+                                "There is no respect between people."
                         },
                         {
-                                "El matrimonio interracial era totalmente aceptado.",
-                                "Solo el 4% de los estadounidense aprobaba los matrimonios entre negros y blancos.",
-                                "No exixtia matrimonios interracial.",
-                                "Era ilegal matrimonios interracial."
+                                "Interracial marriage was totally accepted.",
+                                "Only 4% of Americans approved of marriages between blacks and whites.",
+                                "There was no interracial marriage.",
+                                "It was illegal interracial marriages."
                         },
                         {
-                                "a un adolecente blanco armado.",
-                                "a un policia negro.",
-                                "a un padre negro con sus hijos.",
-                                "a un adolescente negro desarmado."
+                                "to an armed white teenager.",
+                                "to a black cop.",
+                                "a black father with his children.",
+                                "to an unarmed black teenager."
                         },
                         {
-                                "Por supuesto que lo hay. Pero el racismo no está en el ADN de Estados Unidos.",
-                                "El racismo quedo en la historia.",
-                                "El racismo esta peor que antes.",
-                                "No existe el racismo."
+                                "Of course there is. But racism is not in America's DNA.",
+                                "Racism is history.",
+                                "Racism is worse than before.",
+                                "There is no racism."
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "El racismo está en el ADN de Estados Unidos."
+                                "Racism is in America's DNA.."
                         },
                         {
-                                "Solo el 4% de los estadounidense aprobaba los matrimonios entre negros y blancos."
+                                "Only 4% of Americans approved of marriages between blacks and whites."
                         },
                         {
-                                "a un adolescente negro desarmado."
+                                "to an unarmed black teenager."
                         },
                         {
-                                "Por supuesto que lo hay. Pero el racismo no está en el ADN de Estados Unidos."
+                                "Of course there is. But racism is not in America's DNA."
                         }
                 };
 
@@ -526,35 +526,34 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Personas famosas.",
-                                "Todo el mundo.",
-                                "Personas mediocres.",
-                                "Nadie.",
+                                "Famous people.",
+                                "Everyone.",
+                                "Mediocre people.",
+                                "Nobody.",
                         },
                         {
-                                "Entretenimiento.",
-                                "Economia.",
-                                "Medicina.",
-                                "Abogado.",
-
+                                "Entertainment.",
+                                "Economy.",
+                                "Medicine.",
+                                "Lawyer.",
                         },
                         {
-                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces.",
-                                "Hacer mucho dinero y la admiracion de las personas.",
-                                "Fama, una gran coleccion de autos y descontrol.",
-                                "No lograr nada."
+                                "Make a living, pursue excellence, find meaning in what you do.",
+                                "Make a lot of money and the admiration of people.",
+                                "Fame, a great collection of cars and lack of control.",
+                                "Achieve nothing."
                         },
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Todo el mundo."
+                                "Everyone."
                         },
                         {
-                                "Entretenimiento."
+                                "Entertainment."
                         },
                         {
-                                "Hacer una vida, perseguir la excelencia, encontrar significado en lo que haces."
+                                "Make a living, pursue excellence, find meaning in what you do."
                         }
                 };
 
@@ -571,35 +570,35 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Hacer cambiar a las personas para vivir mejor.",
-                                "Culpar a las personas te hace ser el problema.",
-                                "Divorciarce de una pareja toma coraje.",
-                                "Ser miserable hace que culpemos personas.",
+                                "Make people change to live better.",
+                                "Blaming people makes you the problem.",
+                                "Divorcing a partner takes courage.",
+                                "Being miserable makes us blame people.",
                         },
                         {
-                                "Fomentar su ira y alteración de la razón o los sentidos.",
-                                "Felicidad y calma.",
-                                "Perdida de la persona.",
-                                "Todas las anterioes.",
+                                "Encourage their anger and alteration of reason or senses.",
+                                "Happiness and calm.",
+                                "Loss of person.",
+                                "All of the above.",
 
                         },
                         {
-                                "¿Qué debes comer mañana? ¿Qué comi ayer?",
-                                "¿A que hora tengo que trabajar? ¿Qué deberia llevar?",
-                                "¿Que esta haciendo el perro?",
-                                "¿Qué estás haciendo que está mal, desde tu propia perspectiva? ¿Qué podrías arreglar, ahora mismo?"
+                                "What should you eat tomorrow? What did you eat yesterday?",
+                                "What time do I have to work? What should I bring?",
+                                "What is the dog doing?",
+                                "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
                         },
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Culpar a las personas te hace ser el problema."
+                                "Blaming people makes you the problem."
                         },
                         {
-                                "Fomentar su ira y alteración de la razón o los sentidos."
+                                "Encourage their anger and alteration of reason or the senses."
                         },
                         {
-                                "¿Qué estás haciendo que está mal, desde tu propia perspectiva? ¿Qué podrías arreglar, ahora mismo?"
+                                "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
                         }
                 };
 
@@ -684,7 +683,7 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void btn1(View v){
-        
+
         String Resp1 = preg1.getText().toString();
 
         if(Resp1.equals(RespCorrecta)){
@@ -703,7 +702,7 @@ public class availability_nuevo extends AppCompatActivity {
     };
 
     public void btn2(View v){
-        
+
         String Resp2 = preg2.getText().toString();
 
         if(Resp2.equals(RespCorrecta)){
@@ -725,7 +724,7 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void btn3(View v){
-        
+
         String Resp3 = preg3.getText().toString();
 
         if(Resp3.equals(RespCorrecta)){
@@ -746,7 +745,7 @@ public class availability_nuevo extends AppCompatActivity {
     }
 
     public void btn4(View v){
-        
+
         String Resp4 = preg4.getText().toString();
 
         if(Resp4.equals(RespCorrecta)){

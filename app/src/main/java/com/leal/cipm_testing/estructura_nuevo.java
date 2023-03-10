@@ -676,7 +676,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
     //RANDOM GEN
     public void GenQuestionStructure1(){
-        int tranRand = (int) (Math.random() * 24);
+        int tranRand = (int) (Math.random() * 21);
         switch (tranRand){
             case 0:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -1109,7 +1109,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoSimp1();
+                            gen1.GenHowSimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1143,7 +1143,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoCont1();
+                            gen1.GenHowCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1177,7 +1177,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoPerf1();
+                            gen1.GenHowPerf1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1211,7 +1211,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowSimp1();
+                            gen1.GenHowMuchSimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1245,7 +1245,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowCont1();
+                            gen1.GenHowMuchCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1279,7 +1279,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowPerf1();
+                            gen1.GenHowMuchPerf1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1313,7 +1313,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchSimp1();
+                            gen1.GenHowManySimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1347,108 +1347,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 20:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowMuchPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 21:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowManySimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 22:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
                             gen1.GenHowManyCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
@@ -1460,7 +1358,7 @@ public class estructura_nuevo extends AppCompatActivity {
                     }
                 });
                 break;
-            case 23:
+            case 20:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                     @Override
                     public void onInit(int i) {
@@ -1497,7 +1395,7 @@ public class estructura_nuevo extends AppCompatActivity {
         }
     }
     public void GenQuestionStructureModals1(){
-        int tranRand = (int) (Math.random() * 24);
+        int tranRand = (int) (Math.random() * 21);
         switch (tranRand){
             case 0:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -1918,7 +1816,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsSimp1();
+                            gen1.GenHowModalsSimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1951,7 +1849,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsCont1();
+                            gen1.GenHowModalsCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -1984,7 +1882,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsPerf1();
+                            gen1.GenHowModalsPerf1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2017,7 +1915,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsSimp1();
+                            gen1.GenHowMuchModalsSimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2050,7 +1948,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsCont1();
+                            gen1.GenHowMuchModalsCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2083,7 +1981,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsPerf1();
+                            gen1.GenHowMuchModalsPerf1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2116,7 +2014,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsSimp1();
+                            gen1.GenHowManyModalsSimp1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2149,105 +2047,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 20:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 21:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowManyModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 22:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
                             gen1.GenHowManyModalsCont1();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
@@ -2258,7 +2057,7 @@ public class estructura_nuevo extends AppCompatActivity {
                     }
                 });
                 break;
-            case 23:
+            case 20:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                     @Override
                     public void onInit(int i) {
@@ -2297,7 +2096,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
     //RANDOM GEN 2
     public void GenQuestionStructure2(){
-        int tranRand = (int) (Math.random() * 24);
+        int tranRand = (int) (Math.random() * 21);
         switch (tranRand){
             case 0:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -2730,7 +2529,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoSimp2();
+                            gen1.GenHowSimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2764,7 +2563,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoCont2();
+                            gen1.GenHowCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2798,7 +2597,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoPerf2();
+                            gen1.GenHowPerf2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2832,7 +2631,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowSimp2();
+                            gen1.GenHowMuchSimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2866,7 +2665,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowCont2();
+                            gen1.GenHowMuchCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2900,7 +2699,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowPerf2();
+                            gen1.GenHowMuchPerf2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2934,7 +2733,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchSimp2();
+                            gen1.GenHowManySimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -2968,108 +2767,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 20:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowMuchPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 21:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowManySimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 22:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
                             gen1.GenHowManyCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
@@ -3081,7 +2778,7 @@ public class estructura_nuevo extends AppCompatActivity {
                     }
                 });
                 break;
-            case 23:
+            case 20:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                     @Override
                     public void onInit(int i) {
@@ -3118,7 +2815,7 @@ public class estructura_nuevo extends AppCompatActivity {
         }
     }
     public void GenQuestionStructureModals2(){
-        int tranRand = (int) (Math.random() * 24);
+        int tranRand = (int) (Math.random() * 21);
         switch (tranRand){
             case 0:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -3539,7 +3236,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsSimp2();
+                            gen1.GenHowModalsSimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3572,7 +3269,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsCont2();
+                            gen1.GenHowModalsCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3605,7 +3302,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenWhoModalsPerf2();
+                            gen1.GenHowModalsPerf2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3638,7 +3335,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsSimp2();
+                            gen1.GenHowMuchModalsSimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3671,7 +3368,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsCont2();
+                            gen1.GenHowMuchModalsCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3704,7 +3401,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowModalsPerf2();
+                            gen1.GenHowMuchModalsPerf2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3737,7 +3434,7 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsSimp2();
+                            gen1.GenHowManyModalsSimp2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
 
@@ -3770,105 +3467,6 @@ public class estructura_nuevo extends AppCompatActivity {
                                 }
                             });
                             Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 20:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowMuchModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 21:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowManyModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 22:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
                             gen1.GenHowManyModalsCont2();
                             sptx.setText(gen1.gens);
                             txteng.setText(gen1.gene);
@@ -3879,7 +3477,7 @@ public class estructura_nuevo extends AppCompatActivity {
                     }
                 });
                 break;
-            case 23:
+            case 20:
                 tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                     @Override
                     public void onInit(int i) {
@@ -39886,6 +39484,53 @@ public class estructura_nuevo extends AppCompatActivity {
                             }
 
                         });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
+
+            case "Question Structure":
+                switch (selection2) {
+                    case "0 a 100":
+                        GenQuestionStructure2();
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
+            case "Question Structure Modals":
+                switch (selection2) {
+                    case "0 a 100":
+                        GenQuestionStructureModals2();
                         break;
 
                     case "100 a 200":

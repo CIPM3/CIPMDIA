@@ -28,6 +28,7 @@ public class Generator<vib> {
     String articulos[] = {"el ", "la ", "los ", "las ", "un ", "una ", "unos ", "unas "};
     String tercerpro[] = {"él ", "ella "};
     String primerysegun[] = {"yo ", "tú "};
+    String pronombresineso[] = {"yo ", "tú ", "él ", "ella ", "ellos ", "nosotros "};
 
 
     // verbos intransitivos base top 100, verbos que pueden ser usados como intrans
@@ -27238,7 +27239,7 @@ gene2 = o.ps5eng2;
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -27352,34 +27353,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -27438,12 +27411,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhatCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -27558,34 +27531,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -27644,12 +27589,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhatPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -27764,34 +27709,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -27850,14 +27767,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //What Modales 2
     public void GenWhatModalsSimp2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -27971,34 +27888,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -28057,12 +27946,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhatModalsCont2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -28176,34 +28065,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -28262,12 +28123,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhatModalsPerf2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -28381,34 +28242,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -28467,14 +28300,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //When 2
     public void GenWhenSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -28588,34 +28421,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -28674,12 +28479,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhenCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -28794,34 +28599,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -28880,12 +28657,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhenPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -29000,34 +28777,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -29086,14 +28835,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //When Modales 2
     public void GenWhenModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -29207,34 +28956,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -29293,12 +29014,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhenModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -29412,34 +29133,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -29498,12 +29191,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhenModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -29617,34 +29310,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -29703,14 +29368,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //Where 2
     public void GenWhereSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -29824,34 +29489,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -29910,12 +29547,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhereCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -30030,34 +29667,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -30116,12 +29725,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWherePerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -30236,34 +29845,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWherePerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWherePerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWherePerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWherePerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -30322,14 +29903,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //Where Modales 2
     public void GenWhereModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -30443,34 +30024,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -30529,12 +30082,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhereModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -30648,34 +30201,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -30734,12 +30259,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhereModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -30853,34 +30378,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -30939,14 +30436,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //Why 2
     public void GenWhySimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -31060,34 +30557,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhySimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhySimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhySimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhySimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -31146,12 +30615,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhyCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -31266,34 +30735,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -31352,12 +30793,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhyPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -31472,34 +30913,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -31558,14 +30971,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //Why Modales 2
     public void GenWhyModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -31679,34 +31092,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -31765,12 +31150,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhyModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -31884,34 +31269,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -31970,12 +31327,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhyModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -32089,34 +31446,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -32175,1250 +31504,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
-
-    //Who 2
-    public void GenWhoSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-    public void GenWhoCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Intrans ":
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-    public void GenWhoPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Intrans ":
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-
-    //Who Modales 2
-    public void GenWhoModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
-    public void GenWhoModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
-    public void GenWhoModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf2();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf2();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf2();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf2();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How 2
     public void GenHowSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -33532,34 +31625,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -33618,12 +31683,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -33738,34 +31803,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -33824,12 +31861,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -33944,34 +31981,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -34030,14 +32039,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Modales 2
     public void GenHowModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -34151,34 +32160,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -34237,12 +32218,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -34356,34 +32337,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -34442,12 +32395,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -34561,34 +32514,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -34647,14 +32572,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How Much 2
     public void GenHowMuchSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -34768,34 +32693,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -34854,12 +32751,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowMuchCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -34974,34 +32871,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -35060,12 +32929,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowMuchPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -35180,34 +33049,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -35266,14 +33107,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Much Modales 2
     public void GenHowMuchModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -35387,34 +33228,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -35473,12 +33286,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowMuchModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -35592,34 +33405,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -35678,12 +33463,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowMuchModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -35797,34 +33582,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -35883,14 +33640,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How Many 2
     public void GenHowManySimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -36004,34 +33761,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManySimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManySimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManySimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManySimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -36090,12 +33819,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowManyCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -36210,34 +33939,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -36296,12 +33997,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowManyPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -36416,34 +34117,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -36502,14 +34175,14 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Many Modales 2
     public void GenHowManyModalsSimp2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -36623,34 +34296,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsSimp2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsSimp2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsSimp2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsSimp2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -36709,12 +34354,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowManyModalsCont2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -36828,34 +34473,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsCont2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsCont2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsCont2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsCont2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -36914,12 +34531,12 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowManyModalsPerf2() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -37033,34 +34650,6 @@ gene2 = o.ps5eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsPerf2();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsPerf2();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsPerf2();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsPerf2();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -37119,7 +34708,7 @@ gene2 = o.ps5eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
 
     // presentes
@@ -71185,7 +68774,7 @@ gene2 = o.ps4eng2;
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -71299,34 +68888,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -71385,12 +68946,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhatCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -71505,34 +69066,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -71591,12 +69124,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhatPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -71711,34 +69244,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -71797,14 +69302,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //What Modales
     public void GenWhatModalsSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -71918,34 +69423,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -72004,12 +69481,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhatModalsCont1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -72123,34 +69600,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -72209,12 +69658,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhatModalsPerf1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -72328,34 +69777,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhatModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhatModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhatModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhatModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -72414,14 +69835,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //When
     public void GenWhenSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -72535,34 +69956,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -72621,12 +70014,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhenCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -72741,34 +70134,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -72827,12 +70192,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhenPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -72947,34 +70312,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -73033,14 +70370,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //When Modales
     public void GenWhenModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -73154,34 +70491,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -73240,12 +70549,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhenModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -73359,34 +70668,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -73445,12 +70726,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhenModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -73564,34 +70845,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhenModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhenModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhenModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhenModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -73650,14 +70903,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //Where
     public void GenWhereSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -73771,34 +71024,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -73857,12 +71082,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhereCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -73977,34 +71202,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -74063,12 +71260,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWherePerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -74183,34 +71380,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWherePerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWherePerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWherePerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWherePerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -74269,14 +71438,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //Where Modales
     public void GenWhereModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -74390,34 +71559,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -74476,12 +71617,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhereModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -74595,34 +71736,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -74681,12 +71794,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhereModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -74800,34 +71913,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhereModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhereModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhereModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhereModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -74886,14 +71971,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //Why
     public void GenWhySimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -75007,34 +72092,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhySimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhySimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhySimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhySimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -75093,12 +72150,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhyCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -75213,34 +72270,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -75299,12 +72328,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenWhyPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -75419,34 +72448,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -75505,14 +72506,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //Why Modales
     public void GenWhyModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -75626,34 +72627,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -75712,12 +72685,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhyModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -75831,34 +72804,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -75917,12 +72862,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenWhyModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -76036,34 +72981,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhyModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhyModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhyModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhyModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -76122,1250 +73039,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
-
-    //Who
-    public void GenWhoSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoSimp1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoSimp1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoSimp1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoSimp1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-    public void GenWhoCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Intrans ":
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoCont1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoCont1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-    public void GenWhoPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Intrans ":
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoPerf1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoPerf1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoPerf1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoPerf1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 02/12/2022
-
-    //Who Modales
-    public void GenWhoModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsSimp1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsSimp1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsSimp1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsSimp1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
-    public void GenWhoModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsCont1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsCont1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsCont1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsCont1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
-    public void GenWhoModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbDif5.length);
-        String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
-        switch (temp) {
-            case "yo ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps1;
-                        gene = ab.ps1eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps1;
-                        gene = p.ps1eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps1;
-                        gene = o.ps1eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps1;
-                        gene = n.ps1eng;
-                        break;
-                }
-                break;
-            case "tú ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps2;
-                        gene = ab.ps2eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps2;
-                        gene = p.ps2eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps2;
-                        gene = o.ps2eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps2;
-                        gene = n.ps2eng;
-                        break;
-                }
-                break;
-            case "él ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps3;
-                        gene = ab.ps3eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps3;
-                        gene = p.ps3eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps3;
-                        gene = o.ps3eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps3;
-                        gene = n.ps3eng;
-                        break;
-                }
-                break;
-            case "ella ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps3ella;
-                        gene = ab.ps3she;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps3ella;
-                        gene = p.ps3she;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps3ella;
-                        gene = o.ps3she;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps3ella;
-                        gene = n.ps3she;
-                        break;
-                }
-                break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
-            case "ellos ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps4;
-                        gene = ab.ps4eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps4;
-                        gene = p.ps4eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps4;
-                        gene = o.ps4eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps4;
-                        gene = n.ps4eng;
-                        break;
-                }
-                break;
-            case "nosotros ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenWhoModalsPerf1();
-                        gens = ab.ps5;
-                        gene = ab.ps5eng;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenWhoModalsPerf1();
-                        gens = p.ps5;
-                        gene = p.ps5eng;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenWhoModalsPerf1();
-                        gens = o.ps5;
-                        gene = o.ps5eng;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenWhoModalsPerf1();
-                        gens = n.ps5;
-                        gene = n.ps5eng;
-                        gene2 = n.ps5eng2;
-                        break;
-                }
-                break;
-        }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How
     public void GenHowSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -77479,34 +73160,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -77565,12 +73218,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -77685,34 +73338,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -77771,12 +73396,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -77891,34 +73516,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -77977,14 +73574,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Modales
     public void GenHowModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -78098,34 +73695,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -78184,12 +73753,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -78303,34 +73872,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -78389,12 +73930,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -78508,34 +74049,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -78594,14 +74107,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How Much
     public void GenHowMuchSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -78715,34 +74228,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -78801,12 +74286,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowMuchCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -78921,34 +74406,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -79007,12 +74464,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowMuchPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -79127,34 +74584,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -79213,14 +74642,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Much Modales
     public void GenHowMuchModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -79334,34 +74763,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -79420,12 +74821,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowMuchModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -79539,34 +74940,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -79625,12 +74998,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowMuchModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -79744,34 +75117,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowMuchModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowMuchModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowMuchModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowMuchModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -79830,14 +75175,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
 
     //How Many
     public void GenHowManySimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -79951,34 +75296,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManySimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManySimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManySimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManySimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -80037,12 +75354,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowManyCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -80157,34 +75474,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -80243,12 +75532,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
     public void GenHowManyPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -80363,34 +75652,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -80449,14 +75710,14 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 02/12/2022
+    }//LR 2023
 
     //How Many Modales
     public void GenHowManyModalsSimp1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -80570,34 +75831,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsSimp1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsSimp1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsSimp1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsSimp1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -80656,12 +75889,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowManyModalsCont1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -80775,34 +76008,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsCont1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsCont1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsCont1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsCont1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -80861,12 +76066,12 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
     public void GenHowManyModalsPerf1() {
-        int rand = (int) (Math.random() * pronombres.length);
+        int rand = (int) (Math.random() * pronombresineso.length);
         int verbRand = (int) (Math.random() * verbDif5.length);
         String verb = verbDif5[verbRand];
-        String temp = pronombres[rand];
+        String temp = pronombresineso[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
@@ -80980,34 +76185,6 @@ gene2 = o.ps4eng2;
                         break;
                 }
                 break;
-            case "eso ":
-                switch (verb) {
-                    case "Abstractos ":
-                        Abstractos ab = new Abstractos();
-                        ab.GenHowManyModalsPerf1();
-                        gens = ab.ps3eso;
-                        gene = ab.ps3it;
-                        break;
-                    case "People ":
-                        People p = new People();
-                        p.GenHowManyModalsPerf1();
-                        gens = p.ps3eso;
-                        gene = p.ps3it;
-                        break;
-                    case "Oo ":
-                        Oo o = new Oo();
-                        o.GenHowManyModalsPerf1();
-                        gens = o.ps3eso;
-                        gene = o.ps3it;
-                        break;
-                    case "Nobles ":
-                        Nobles n = new Nobles();
-                        n.GenHowManyModalsPerf1();
-                        gens = n.ps3eso;
-                        gene = n.ps3it;
-                        break;
-                }
-                break;
             case "ellos ":
                 switch (verb) {
                     case "Abstractos ":
@@ -81066,7 +76243,852 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    }//LR 06/12/2022
+    }//LR 2023
+
+    //prueba
+    public void GenWhoSimp1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoCont1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoPerf1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+
+    public void GenWhoModalsSimp1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoModalsCont1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoModalsPerf1() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+
+    public void GenWhoSimp2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoSimp2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoCont2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoCont2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoPerf2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoPerf2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+
+    public void GenWhoModalsSimp2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsSimp2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoModalsCont2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsCont2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
+    public void GenWhoModalsPerf2() {
+        int rand = (int) (Math.random() * pronombresineso.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = pronombresineso[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        break;
+
+                }
+                break;
+            case "él ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        break;
+
+                }
+                break;
+            case "ella ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        break;
+
+                }
+                break;
+            case "ellos ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        break;
+                }
+                break;
+            case "nosotros ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenWhoModalsPerf2();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        break;
+                }
+                break;
+        }
+    }//LR 2023
 
     //Feel Like
     public void GenFeelLikeSimp1() {

@@ -261,18 +261,16 @@ public class Oo {
             "university ", "writing ", "article ", "department "
     };
 
-    //What Continuo
+    //Continuo
     String scontI[] = {"am I ", "was i ", "will i be "};
     String scontIesp[] = {"estoy ", "estaba ", "estaré "};
 
     String scontYou[] = {"are you ", "were you ", "will you be "};
-    String scontYouesp[]={"estás ", "estabas ", "estabas "};
+    String scontYouesp[]={"estás ", "estabas ", "estarás "};
 
+    String scont3esp[]={"está ", "estaba ", "estará "};
     String scontHe[]={"is he ", "was he ", "will he be "};
-    String scontHeesp[]={"está ", "estaba ", "estará "};
-
     String scontShe[]={"is she ", "was she ", "will she be "};
-    String scontSheesp[]={"está ", "estaba ", "estará "};
 
     String scontIt[]={"is it ", "was it ", "will it be "};
     String scontItesp[]={"está ", "estaba ", "estará "};
@@ -283,18 +281,16 @@ public class Oo {
     String scontWe[]={"are we ", "were we ", "will we be "};
     String scontWeesp[]={"estamos ", "estabamos ", "estarémos "};
 
-    //What Continuous
+    //Continuous Negacion
     String scontIdont[] = {"am not i ", "wasn't i ", "won't i be "};
     String scontIespno[] = {"no estoy ", "no estaba ", "no estaré "};
 
     String scontYoudont[] = {"aren't you ", "weren't you ", "won't you be "};
-    String scontYouespno[]={"no estás ", "no estabas ", "no estabas"};
+    String scontYouespno[]={"no estás ", "no estabas ", "no estarás "};
 
+    String scont3espno[]={"no está ", "no estaba ", "no estará "};
     String scontHedont[]={"isn't he ", "wasn't he ", "won't he be "};
-    String scontHeespno[]={"no está ", "no estaba ", "no estará "};
-
     String scontShedont[]={"isn't she ", "wasn't she ", "won't she be "};
-    String scontSheespno[]={"no está ", "no estaba ", "no estará "};
 
     String scontItdont[]={"isn't it ", "wasn't it ", "won't it be "};
     String scontItespno[]={"no está ", "no estaba ", "no estará "};
@@ -306,18 +302,16 @@ public class Oo {
     String scontWeespno[]={"no estamos ", "no estabamos ", "no estarémos "};
 
 
-    //What Perfect
+    //Perfect
     String sperfI[] = {"have I ", "had i ", "will i have "};
     String sperfIesp[] = {"he ", "había ", "habré "};
 
     String sperfYou[] = {"have you ", "had you ", "will you have "};
     String sperfYouesp[]={"has ", "habías ", "habrás "};
 
+    String sperf3esp[]={"ha ", "había ", "habrá "};
     String sperfHe[]={"has he ", "had he ", "will he have "};
-    String sperfHeesp[]={"ha ", "había ", "habrá "};
-
     String sperfShe[]={"has she ", "had she ", "will she have "};
-    String sperfSheesp[]={"ha ", "había ", "habrá "};
 
     String sperfIt[]={"has it ", "had it ", "will it have "};
     String sperfItesp[]={"ha ", "había ", "habrá "};
@@ -328,18 +322,17 @@ public class Oo {
     String sperfWe[]={"have we ", "had we ", "will we have "};
     String sperfWeesp[]={"hemos ", "habíamos ", "habrémos "};
 
-    //What Perfect negacion
+    //Perfect Negacion
     String sperfIdont[] = {"haven't I ", "hadn't i ", "won't i have "};
     String sperfIespno[] = {"no he ", "no había ", "no habré "};
 
     String sperfYoudont[] = {"haven't you ", "hadn't you ", "won't you have "};
     String sperfYouespno[]={"no has ", "no habías ", "no habrás "};
 
+    String sperf3espno[]={"no ha ", "no había ", "no habrá "};
     String sperfHedont[]={"hasn't he ", "hadn't he ", "won't he have "};
-    String sperfHeespno[]={"no ha ", "no había ", "no habrá "};
-
     String sperfShedont[]={"hasn't she ", "hadn't she ", "won't she have "};
-    String sperfSheespno[]={"no ha ", "no había ", "no habrá "};
+
 
     String sperfItdont[]={"hasn't it ", "hadn't it ", "won't it have "};
     String sperfItespno[]={"no ha ", "no había ", "no habrá "};
@@ -350,18 +343,17 @@ public class Oo {
     String sperfWedont[]={"haven't we ", "hadn't we ", "won't we have "};
     String sperfWeespno[]={"no hemos ", "no habíamos ", "no habrémos "};
 
-    //What Continuo Modals
+    //Continuo Modals
     String scontmI[] = {"would i be ", "could i be ", "should i be "};
     String scontmIesp[] = {"estaría ", "podría estar ", "debería estar "};
 
     String scontmYou[] = {"would you be ", "could you be ", "should you be "};
     String scontmYouesp[]={"estarías ", "podrías estar ", "deberías estar "};
 
+    String scontm3esp[]={"estaría ", "podría estar ", "debería estar "};
     String scontmHe[]={"would he be ", "could he be ", "should he be "};
-    String scontmHeesp[]={"estaría ", "podría estar ", "debería estar "};
-
     String scontmShe[]={"would she be ", "could she be ", "should she be "};
-    String scontmSheesp[]={"estaría ", "podría estar ", "debería estar "};
+
 
     String scontmIt[]={"would it be ", "could it be ", "should it be "};
     String scontmItesp[]={"estaría ", "podría estar ", "debería estar "};
@@ -372,18 +364,16 @@ public class Oo {
     String scontmWe[]={"would we be ", "could we be ", "should we be "};
     String scontmWeesp[]={"estaríamos ", "podríamos estar ", "deberíamos estar "};
 
-    //What Continuous Modals
+    //Continuous Modals Negacion
     String scontmIdont[] = {"wouldn't i be ", "couldn't i be ", "shouldn't i be "};
     String scontmIespno[] = {"no estaría ", "no podría estar ", "no debería estar "};
 
     String scontmYoudont[] = {"wouldn't you be ", "couldn't you be ", "shouldn't you be "};
     String scontmYouespno[]={"no estarías ", "no podrías estar ", "no deberías estar"};
 
+    String scontm3espno[]={"no estaría ", "no podría estar ", "no debería estar "};
     String scontmHedont[]={"wouldn't he be ", "couldn't he be ", "shouldn't he be "};
-    String scontmHeespno[]={"no estaría ", "no podría estar ", "no debería estar "};
-
     String scontmShedont[]={"wouldn't she be ", "couldn't she be ", "shouldn't she be "};
-    String scontmSheespno[]={"no estaría ", "no podría estar ", "no debería estar "};
 
     String scontmItdont[]={"wouldn't it be ", "couldn't it be ", "shouldn't it be "};
     String scontmItespno[]={"no estaría ", "no podría estar ", "no debería estar "};
@@ -394,18 +384,16 @@ public class Oo {
     String scontmWedont[]={"wouldn't we be ", "couldn't we be ", "shouldn't we be "};
     String scontmWeespno[]={"no estaríamos ", "no podríamos estar ", "no deberíamos estar "};
 
-    //What Perfect Modals
+    //Perfect Modals
     String sperfmI[] = {"would i have ", "could i have ", "should i have "};
     String sperfmIesp[] = {"hubiera ", "pude haber ", "debí haber "};
 
     String sperfmYou[] = {"would you have ", "could you have ", "should you have "};
     String sperfmYouesp[]= {"hubieras ", "pudiste haber ", "debíste haber "};
 
+    String sperfm3esp[] = {"hubiera ", "pudo haber ", "debío haber "};
     String sperfmHe[] = {"would he have ", "could he have ", "should he have "};
-    String sperfmHeesp[] = {"hubiera ", "pudo haber ", "debío haber "};
-
     String sperfmShe[] = {"would she have ", "could she have ", "should she have "};
-    String sperfmSheesp[] = {"hubiera ", "pudo haber ", "debío haber "};
 
     String sperfmIt[]= {"would it have ", "could it have ", "should it have "};
     String sperfmItesp[] = {"hubiera ", "pudo haber ", "debío haber "};
@@ -416,18 +404,16 @@ public class Oo {
     String sperfmWe[] = {"would we have ", "could we have ", "should we have "};
     String sperfmWeesp[] = {"hubieramos ", "pudimos haber ", "debímos haber "};
 
-    //What Perfect Modals
+    //Perfect Modals Negacion
     String sperfmIdont[] = {"wouldn't i have ", "couldn't i have ", "shouldn't i have "};
     String sperfmIespno[] = {"no hubiera ", "no pude haber ", "no debí haber "};
 
     String sperfmYoudont[] = {"wouldn't you have ", "couldn't you have ", "shouldn't you have "};
     String sperfmYouespno[] = {"no hubieras ", "no pudiste haber ", "no debíste haber "};
 
+    String sperfm3espno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
     String sperfmHedont[] = {"wouldn't he have ", "couldn't he have ", "shouldn't he have "};
-    String sperfmHeespno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
-
     String sperfmShedont[] = {"wouldn't she have ", "couldn't she have ", "shouldn't she have "};
-    String sperfmSheespno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
 
     String sperfmItdont[] = {"wouldn't it have ", "couldn't it have ", "shouldn't it have "};
     String sperfmItespno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
@@ -2385,288 +2371,261 @@ public class Oo {
 
     //What 2
     public void GenWhatSimp2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
         switch (neg) {
             //Presente
             case 0:
-                ps1 = "¿Que " + vn1[v] + nnoblesesp[n] + "?";
-                ps1eng = "What do i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que " + vn1[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What do i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + vn2[v] + nnoblesesp[n] + "?";
-                ps2eng = "What do you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que " + vn2[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What do you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + vn3[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What does he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que " + vnb3[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What does he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + vn3[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What does she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que " + vnb3[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What does she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What does it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que " + vn4[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What do they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + vn4[v] + nnoblesesp[n] + "?";
-                ps4eng = "What do they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que " + vn5[v] + nnoblesesp[n] + "?";
-                ps5eng = "What do we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que " + vn5[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What do we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "¿Que no " + vn1[v] + nnoblesesp[n] + "?";
-                ps1eng = "What don't i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que no " + vn1[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What don't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que no " + vn2[v] + nnoblesesp[n] + "?";
-                ps2eng = "What don't you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que no " + vn2[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What don't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que no " + vn3[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What doesn't he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que no " + vnb3[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What doesn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que no " + vn3[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What doesn't she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que no " + vnb3[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What doesn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What doesn't it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que no " + vn4[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What don't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que no " + vn4[v] + nnoblesesp[n] + "?";
-                ps4eng = "What don't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que no " + vn5[v] + nnoblesesp[n] + "?";
-                ps5eng = "What don't we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que no " + vn5[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What don't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
 
             //Pasado
             case 2:
                 if (sr == 0) {
-                    ps1 = "¿Que " + ps1pre[v] + nnoblesesp[n] + "?";
-                    ps1eng = "What did i" + vnb[v] + nnobles[n];
+                    ps1 = "¿Que " + ps1pre[v] + prep.noblesspecial[p][p2] + "?";
+                    ps1eng = "What did i" + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps2 = "¿Que " + ps2pre[v] + nnoblesesp[n] + "?";
-                    ps2eng = "What did you " + vnb[v] + nnobles[n];
+                    ps2 = "¿Que " + ps2pre[v] + prep.noblesspecial[p][p2] + "?";
+                    ps2eng = "What did you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3 = "¿Que " + ps3p[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "What did he " + vnb[v] + nnobles[n];
+                    ps3 = "¿Que " + ps3p[v] + prep.noblesspecial[p][p2] + "él?";
+                    ps3eng = "What did he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3ella = "¿Que " + ps3p[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "What did she " + vnb[v] + nnobles[n];
+                    ps3ella = "¿Que " + ps3p[v] + prep.noblesspecial[p][p2] + "ella?";
+                    ps3she = "What did she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3eso = "¿Que " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "What did it " + vnb[v] + nnobles[n];
+                    ps4 = "¿Que " + vn4p[v] + prep.noblesspecial[p][p2] + "?";
+                    ps4eng = "What did they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps4 = "¿Que " + vn4p[v] + nnoblesesp[n] + "?";
-                    ps4eng = "What did they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Que " + vn5p[v] + nnoblesesp[n] + "?";
-                    ps5eng = "What did we " + vnb[v] + nnobles[n];
+                    ps5 = "¿Que " + vn5p[v] + prep.noblesspecial[p][p2] + "?";
+                    ps5eng = "What did we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 } else {
-                    ps1 = "¿Que " + ps1imp[v] + nnoblesesp[n] + "?";
-                    ps1eng = "What did i " + vnb[v] + nnobles[n];
+                    ps1 = "¿Que " + ps1imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps1eng = "What did i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps2 = "¿Que " + ps2imp[v] + nnoblesesp[n] + "?";
-                    ps2eng = "What did you " + vnb[v] + nnobles[n];
+                    ps2 = "¿Que " + ps2imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps2eng = "What did you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3 = "¿Que " + ps3imp[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "What did he " + vnb[v] + nnobles[n];
+                    ps3 = "¿Que " + ps3imp[v] + prep.noblesspecial[p][p2] + "él?";
+                    ps3eng = "What did he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3ella = "¿Que " + ps3imp[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "What did she " + vnb[v] + nnobles[n];
+                    ps3ella = "¿Que " + ps3imp[v] + prep.noblesspecial[p][p2] + "ella?";
+                    ps3she = "What did she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3eso = "¿Que " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "What did it " + vnb[v] + nnobles[n];
+                    ps4 = "¿Que " + vn4imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps4eng = "What did they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps4 = "¿Que " + vn4imp[v] + nnoblesesp[n] + "?";
-                    ps4eng = "What did they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Que " + vn5imp[v] + nnoblesesp[n] + "?";
-                    ps5eng = "What did we " + vnb[v] + nnobles[n];
+                    ps5 = "¿Que " + vn5imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps5eng = "What did we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 }
                 break;
             case 3:
                 if (sr == 0) {
-                    ps1 = "¿Que no " + ps1pre[v] + nnoblesesp[n] + "?";
-                    ps1eng = "What didn't i " + vnb[v] + nnobles[n];
+                    ps1 = "¿Que no " + ps1pre[v] + prep.noblesspecial[p][p2] + "?";
+                    ps1eng = "What didn't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps2 = "¿Que no " + ps2pre[v] + nnoblesesp[n] + "?";
-                    ps2eng = "What didn't you " + vnb[v] + nnobles[n];
+                    ps2 = "¿Que no " + ps2pre[v] + prep.noblesspecial[p][p2] + "?";
+                    ps2eng = "What didn't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3 = "¿Que no " + ps3p[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "What didn't he " + vnb[v] + nnobles[n];
+                    ps3 = "¿Que no " + ps3p[v] + prep.noblesspecial[p][p2] + "él?";
+                    ps3eng = "What didn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3ella = "¿Que no " + ps3p[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "What didn't she " + vnb[v] + nnobles[n];
+                    ps3ella = "¿Que no " + ps3p[v] + prep.noblesspecial[p][p2] + "ella?";
+                    ps3she = "What didn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3eso = "¿Que no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "What didn't it " + vnb[v] + nnobles[n];
+                    ps4 = "¿Que no " + vn4p[v] + prep.noblesspecial[p][p2] + "?";
+                    ps4eng = "What didn't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps4 = "¿Que no " + vn4p[v] + nnoblesesp[n] + "?";
-                    ps4eng = "What didn't they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Que no " + vn5p[v] + nnoblesesp[n] + "?";
-                    ps5eng = "What didn't we " + vnb[v] + nnobles[n];
+                    ps5 = "¿Que no " + vn5p[v] + prep.noblesspecial[p][p2] + "?";
+                    ps5eng = "What didn't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 } else {
-                    ps1 = "¿Que no " + ps1imp[v] + nnoblesesp[n] + "?";
-                    ps1eng = "What didn't i " + vnb[v] + nnobles[n];
+                    ps1 = "¿Que no " + ps1imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps1eng = "What didn't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps2 = "¿Que no " + ps2imp[v] + nnoblesesp[n] + "?";
-                    ps2eng = "What didn't you " + vnb[v] + nnobles[n];
+                    ps2 = "¿Que no " + ps2imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps2eng = "What didn't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3 = "¿Que no " + ps3imp[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "What didn't he " + vnb[v] + nnobles[n];
+                    ps3 = "¿Que no " + ps3imp[v] + prep.noblesspecial[p][p2] + "él?";
+                    ps3eng = "What didn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3ella = "¿Que no " + ps3imp[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "What didn't she " + vnb[v] + nnobles[n];
+                    ps3ella = "¿Que no " + ps3imp[v] + prep.noblesspecial[p][p2] + "ella?";
+                    ps3she = "What didn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps3eso = "¿Que no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "What didn't it " + vnb[v] + nnobles[n];
+                    ps4 = "¿Que no " + vn4imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps4eng = "What didn't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                    ps4 = "¿Que no " + vn4imp[v] + nnoblesesp[n] + "?";
-                    ps4eng = "What didn't they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Que no " + vn5imp[v] + nnoblesesp[n] + "?";
-                    ps5eng = "What didn't we " + vnb[v] + nnobles[n];
+                    ps5 = "¿Que no " + vn5imp[v] + prep.noblesspecial[p][p2] + "?";
+                    ps5eng = "What didn't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 }
                 break;
 
             //Futuro
             case 4:
-                ps1 = "¿Que " + vn1f[v] + nnoblesesp[n] + "?";
-                ps1eng = "What will i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que " + vn1f[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What will i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + vn2f[v] + nnoblesesp[n] + "?";
-                ps2eng = "What will you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que " + vn2f[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What will you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + vn3f[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What will he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que " + vn3f[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What will he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + vn3f[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What will she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que " + vn3f[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What will she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What will it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que " + vn4f[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What will they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + vn4f[v] + nnoblesesp[n] + "?";
-                ps4eng = "What will they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que " + vn5f[v] + nnoblesesp[n] + "?";
-                ps5eng = "What will we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que " + vn5f[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What will we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 5:
-                ps1 = "¿Que no " + vn1f[v] + nnoblesesp[n] + "?";
-                ps1eng = "What won't i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que no " + vn1f[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What won't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que no " + vn2f[v] + nnoblesesp[n] + "?";
-                ps2eng = "What won't you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que no " + vn2f[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What won't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que no " + vn3f[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What won't he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que no " + vn3f[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What won't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que no " + vn3f[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What won't she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que no " + vn3f[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What won't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What won't it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que no " + vn4f[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What won't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que no " + vn4f[v] + nnoblesesp[n] + "?";
-                ps4eng = "What won't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que no " + vn5f[v] + nnoblesesp[n] + "?";
-                ps5eng = "What won't we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que no " + vn5f[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What won't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
         }
     }//LR 2023
     public void GenWhatCont2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "¿Que " + scontIesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + scontI[s] + vnbc[v] + nnobles[n];
+                ps1 = "¿Que " + scontIesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + scontI[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + scontYou[s] + vnbc[v] + nnobles[n];
+                ps2 = "¿Que " + scontYouesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + scontYou[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + scontHe[s] + vnbc[v] + nnobles[n];
+                ps3 = "¿Que " + scont3esp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + scontHe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + scontShe[s] + vnbc[v] + nnobles[n];
+                ps3ella = "¿Que " + scont3esp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + scontShe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + scontIt[s] + vnbc[v] + nnobles[n];
+                ps4 = "¿Que " + scontTheyesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + scontThey[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + scontThey[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Que " + scontWeesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + scontWe[s] + vnbc[v] + nnobles[n];
+                ps5 = "¿Que " + scontWeesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + scontWe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
                 break;
 
             case 1:
-                ps1 = "¿Que " + scontIespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + scontIdont[s] + vnbc[v] + nnobles[n];
+                ps1 = "¿Que " + scontIespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + scontIdont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + scontYoudont[s] + vnbc[v] + nnobles[n];
+                ps2 = "¿Que " + scontYouespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + scontYoudont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + scontHedont[s] + vnbc[v] + nnobles[n];
+                ps3 = "¿Que " + scont3espno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + scontHedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + scontShedont[s] + vnbc[v] + nnobles[n];
+                ps3ella = "¿Que " + scont3espno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + scontShedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + scontItdont[s] + vnbc[v] + nnobles[n];
+                ps4 = "¿Que " + scontTheyespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + scontTheydont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + scontTheydont[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Que " + scontWeespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + scontWedont[s] + vnbc[v] + nnobles[n];
+                ps5 = "¿Que " + scontWeespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + scontWedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
                 break;
         }
     }//LR 2023
     public void GenWhatPerf2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "¿Que " + sperfIesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + sperfI[s] + vpeng[v] + nnobles[n];
+                ps1 = "¿Que " + sperfIesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + sperfI[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + sperfYou[s] + vpeng[v] + nnobles[n];
+                ps2 = "¿Que " + sperfYouesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + sperfYou[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + sperfHe[s] + vpeng[v] + nnobles[n];
+                ps3 = "¿Que " + sperf3esp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + sperfHe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + sperfShe[s] + vpeng[v] + nnobles[n];
+                ps3ella = "¿Que " + sperf3esp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + sperfShe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + sperfIt[s] + vpeng[v] + nnobles[n];
+                ps4 = "¿Que " + sperfTheyesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + sperfThey[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + sperfThey[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Que " + sperfWeesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + sperfWe[s] + vpeng[v] + nnobles[n];
+                ps5 = "¿Que " + sperfWeesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + sperfWe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "¿Que " + sperfIespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + sperfIdont[s] + vpeng[v] + nnobles[n];
+                ps1 = "¿Que " + sperfIespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + sperfIdont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + sperfYoudont[s] + vpeng[v] + nnobles[n];
+                ps2 = "¿Que " + sperfYouespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + sperfYoudont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + sperfHedont[s] + vpeng[v] + nnobles[n];
+                ps3 = "¿Que " + sperf3espno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + sperfHedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + sperfShedont[s] + vpeng[v] + nnobles[n];
+                ps3ella = "¿Que " + sperf3espno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + sperfShedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + sperfItdont[s] + vpeng[v] + nnobles[n];
+                ps4 = "¿Que " + sperfTheyespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + sperfTheydont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + sperfTheydont[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Que " + sperfWeespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + sperfWedont[s] + vpeng[v] + nnobles[n];
+                ps5 = "¿Que " + sperfWeespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + sperfWedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
                 break;
         }
@@ -2674,242 +2633,220 @@ public class Oo {
 
     //What Modales 2
     public void GenWhatModalsSimp2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         int neg = (int) (Math.random() * 6);
         switch (neg){
             //Would
             case 0:
-                ps1 = "¿Que " + vn1w[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "would i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que " + vn1w[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "would i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + vn2w[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "would you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que " + vn2w[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "would you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + vn3w[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "would he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que " + vn3w[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "would he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + vn3w[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "would she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que " + vn3w[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "would she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "would it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que " + vn4w[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "would they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + vn4w[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "would they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que " + vn5w[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "would we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que " + vn5w[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "would we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "¿Que no " + vn1w[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "wouldn't i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que no " + vn1w[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "wouldn't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que no " + vn2w[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "wouldn't you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que no " + vn2w[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "wouldn't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que no " + vn3w[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "wouldn't he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que no " + vn3w[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "wouldn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que no " + vn3w[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "wouldn't she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que no " + vn3w[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "wouldn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "wouldn't it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que no " + vn4w[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "wouldn't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que no " + vn4w[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "wouldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que no " + vn5w[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "wouldn't we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que no " + vn5w[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "wouldn't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
 
             //Could
             case 2:
-                ps1 = "¿Que " + "podría " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "could i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "could i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + "podrías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "could you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que " + "podrías " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "could you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + "podría " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "could he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "could he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "could she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "could she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "could it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que " + "podrían " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "could they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "could they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que " + "podríamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "could we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que " + "podríamos " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "could we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 3:
-                ps1 = "¿Que no " + "podría " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "couldn't i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que no " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "couldn't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que no " + "podrías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "couldn't you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que no " + "podrías " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "couldn't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que no " + "podría " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "couldn't he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que no " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "couldn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "couldn't she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que no " + "podría " + vnbs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "couldn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "couldn't it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que no " + "podrían " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "couldn't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "couldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que no " + "podríamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "couldn't we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que no " + "podríamos " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "couldn't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
 
             //Should
             case 4:
-                ps1 = "¿Que " + "debería " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "should i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "should i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + "deberías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "should you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que " + "deberías " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "should you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + "debería " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "should he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "should he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "should she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "should she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "should it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que " + "deberían " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "should they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "should they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que " + "deberíamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "should we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que " + "deberíamos " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "should we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 5:
-                ps1 = "¿Que no " + "debería " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + "shouldn't i " + vnb[v] + nnobles[n];
+                ps1 = "¿Que no " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + "shouldn't i " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que no " + "deberías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + "shouldn't you " + vnb[v] + nnobles[n];
+                ps2 = "¿Que no " + "deberías " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + "shouldn't you " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que no " + "debería " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + "shouldn't he " + vnb[v] + nnobles[n];
+                ps3 = "¿Que no " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + "shouldn't he " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + "shouldn't she " + vnb[v] + nnobles[n];
+                ps3ella = "¿Que no " + "debería " + vnbs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + "shouldn't she " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + "shouldn't it " + vnb[v] + nnobles[n];
+                ps4 = "¿Que no " + "deberían " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + "shouldn't they " + vnb[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + "shouldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Que no " + "deberíamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + "shouldn't we " + vnb[v] + nnobles[n];
+                ps5 = "¿Que no " + "deberíamos " + vnbs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + "shouldn't we " + vnb[v] + prep.noblesspecialeng[p][p2];
                 break;
 
         }
     }//LR 2023
     public void GenWhatModalsCont2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "¿Que " + scontmIesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + scontmI[s] + vnbc[v] + nnobles[n];
+                ps1 = "¿Que " + scontmIesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + scontmI[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + scontmYou[s] + vnbc[v] + nnobles[n];
+                ps2 = "¿Que " + scontmYouesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + scontmYou[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + scontmHe[s] + vnbc[v] + nnobles[n];
+                ps3 = "¿Que " + scontm3esp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + scontmHe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + scontmShe[s] + vnbc[v] + nnobles[n];
+                ps3ella = "¿Que " + scontm3esp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + scontmShe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + scontmIt[s] + vnbc[v] + nnobles[n];
+                ps4 = "¿Que " + scontmTheyesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + scontmThey[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + scontmThey[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Que " + scontmWeesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + scontmWe[s] + vnbc[v] + nnobles[n];
+                ps5 = "¿Que " + scontmWeesp[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + scontmWe[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
                 break;
 
             case 1:
-                ps1 = "¿Que " + scontmIespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + scontmIdont[s] + vnbc[v] + nnobles[n];
+                ps1 = "¿Que " + scontmIespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + scontmIdont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + scontmYoudont[s] + vnbc[v] + nnobles[n];
+                ps2 = "¿Que " + scontmYouespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + scontmYoudont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + scontmHedont[s] + vnbc[v] + nnobles[n];
+                ps3 = "¿Que " + scontm3espno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + scontmHedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + scontmShedont[s] + vnbc[v] + nnobles[n];
+                ps3ella = "¿Que " + scontm3espno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + scontmShedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
+                ps4 = "¿Que " + scontmTheyespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + scontmTheydont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + scontmItdont[s] + vnbc[v] + nnobles[n];
-
-                ps4 = "¿Que " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + scontmTheydont[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Que " + scontmWeespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + scontmWedont[s] + vnbc[v] + nnobles[n];
+                ps5 = "¿Que " + scontmWeespno[s] + vnbcs[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + scontmWedont[s] + vnbc[v] + prep.noblesspecialeng[p][p2];
                 break;
         }
     }//LR 2023
     public void GenWhatModalsPerf2() {
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (neg) {
             case 0:
-                ps1 = "¿Que " + sperfmIesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + sperfmI[s] + vpeng[v] + nnobles[n];
+                ps1 = "¿Que " + sperfmIesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + sperfmI[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + sperfmYou[s] + vpeng[v] + nnobles[n];
+                ps2 = "¿Que " + sperfmYouesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + sperfmYou[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + sperfmHe[s] + vpeng[v] + nnobles[n];
+                ps3 = "¿Que " + sperfm3esp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + sperfmHe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + sperfmShe[s] + vpeng[v] + nnobles[n];
+                ps3ella = "¿Que " + sperfm3esp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + sperfmShe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + sperfmIt[s] + vpeng[v] + nnobles[n];
+                ps4 = "¿Que " + sperfmTheyesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + sperfmThey[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + sperfmThey[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Que " + sperfmWeesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + sperfmWe[s] + vpeng[v] + nnobles[n];
+                ps5 = "¿Que " + sperfmWeesp[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + sperfmWe[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "¿Que " + sperfmIespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "What " + sperfmIdont[s] + vpeng[v] + nnobles[n];
+                ps1 = "¿Que " + sperfmIespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps1eng = "What " + sperfmIdont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps2 = "¿Que " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "What " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
+                ps2 = "¿Que " + sperfmYouespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps2eng = "What " + sperfmYoudont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3 = "¿Que " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "What " + sperfmHedont[s] + vpeng[v] + nnobles[n];
+                ps3 = "¿Que " + sperfm3espno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "él?";
+                ps3eng = "What " + sperfmHedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3ella = "¿Que " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "What " + sperfmShedont[s] + vpeng[v] + nnobles[n];
+                ps3ella = "¿Que " + sperfm3espno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "ella?";
+                ps3she = "What " + sperfmShedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps3eso = "¿Que " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "What " + sperfmItdont[s] + vpeng[v] + nnobles[n];
+                ps4 = "¿Que " + sperfmTheyespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps4eng = "What " + sperfmTheydont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
-                ps4 = "¿Que " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "What " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Que " + sperfmWeespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "What " + sperfmWedont[s] + vpeng[v] + nnobles[n];
+                ps5 = "¿Que " + sperfmWeespno[s] + vpsp[v] + prep.noblesspecial[p][p2] + "?";
+                ps5eng = "What " + sperfmWedont[s] + vpeng[v] + prep.noblesspecialeng[p][p2];
 
                 break;
         }
@@ -2928,14 +2865,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "When do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "When do they " + vnb[v] + nnobles[n];
@@ -2950,14 +2884,11 @@ public class Oo {
                 ps2 = "¿Cuándo no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "When don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuándo no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuándo no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "When don't they " + vnb[v] + nnobles[n];
@@ -2981,9 +2912,6 @@ public class Oo {
                     ps3ella = "¿Cuándo " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "When did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuándo " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "When did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuándo " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "When did they " + vnb[v] + nnobles[n];
 
@@ -3001,9 +2929,6 @@ public class Oo {
 
                     ps3ella = "¿Cuándo " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "When did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuándo " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "When did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuándo " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "When did they " + vnb[v] + nnobles[n];
@@ -3026,9 +2951,6 @@ public class Oo {
                     ps3ella = "¿Cuándo no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "When didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuándo no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "When didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuándo no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "When didn't they " + vnb[v] + nnobles[n];
 
@@ -3046,9 +2968,6 @@ public class Oo {
 
                     ps3ella = "¿Cuándo no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "When didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuándo no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "When didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuándo no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "When didn't they " + vnb[v] + nnobles[n];
@@ -3072,9 +2991,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "When will they " + vnb[v] + nnobles[n];
 
@@ -3094,9 +3010,6 @@ public class Oo {
                 ps3ella = "¿Cuándo no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "When won't they " + vnb[v] + nnobles[n];
 
@@ -3114,14 +3027,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -3137,14 +3047,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -3163,14 +3070,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -3185,14 +3089,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -3222,9 +3123,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "would she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "would it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "would they " + vnb[v] + nnobles[n];
 
@@ -3243,9 +3141,6 @@ public class Oo {
 
                 ps3ella = "¿Cuándo no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuándo no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -3268,9 +3163,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "could they " + vnb[v] + nnobles[n];
 
@@ -3289,9 +3181,6 @@ public class Oo {
 
                 ps3ella = "¿Cuándo no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuándo no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "couldn't they " + vnb[v] + nnobles[n];
@@ -3314,9 +3203,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "should they " + vnb[v] + nnobles[n];
 
@@ -3336,9 +3222,6 @@ public class Oo {
                 ps3ella = "¿Cuándo no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuándo no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuándo no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -3357,14 +3240,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -3380,14 +3260,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -3406,14 +3283,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -3428,14 +3302,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "When " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuándo " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuándo " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "When " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuándo " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuándo " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "When " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuándo " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "When " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuándo " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "When " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -3460,14 +3331,11 @@ public class Oo {
                 ps2 = "¿Dónde " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where do they " + vnb[v] + nnobles[n];
@@ -3482,14 +3350,11 @@ public class Oo {
                 ps2 = "¿Dónde no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Dónde no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Dónde no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Dónde no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Dónde no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where don't they " + vnb[v] + nnobles[n];
@@ -3513,9 +3378,6 @@ public class Oo {
                     ps3ella = "¿Dónde " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Where did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Dónde " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Where did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Dónde " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "Where did they " + vnb[v] + nnobles[n];
 
@@ -3533,9 +3395,6 @@ public class Oo {
 
                     ps3ella = "¿Dónde " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Where did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Dónde " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Where did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Dónde " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "Where did they " + vnb[v] + nnobles[n];
@@ -3558,9 +3417,6 @@ public class Oo {
                     ps3ella = "¿Dónde no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Where didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Dónde no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Where didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Dónde no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "Where didn't they " + vnb[v] + nnobles[n];
 
@@ -3578,9 +3434,6 @@ public class Oo {
 
                     ps3ella = "¿Dónde no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Where didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Dónde no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Where didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Dónde no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "Where didn't they " + vnb[v] + nnobles[n];
@@ -3604,9 +3457,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where will they " + vnb[v] + nnobles[n];
 
@@ -3626,9 +3476,6 @@ public class Oo {
                 ps3ella = "¿Dónde no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where won't they " + vnb[v] + nnobles[n];
 
@@ -3646,14 +3493,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -3669,14 +3513,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -3695,14 +3536,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -3717,14 +3555,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -3754,9 +3589,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "would she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "would it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "would they " + vnb[v] + nnobles[n];
 
@@ -3775,9 +3607,6 @@ public class Oo {
 
                 ps3ella = "¿Dónde no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Dónde no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Dónde no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -3800,9 +3629,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "could they " + vnb[v] + nnobles[n];
 
@@ -3821,9 +3647,6 @@ public class Oo {
 
                 ps3ella = "¿Dónde no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Dónde no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Dónde no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "couldn't they " + vnb[v] + nnobles[n];
@@ -3846,9 +3669,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "should they " + vnb[v] + nnobles[n];
 
@@ -3868,9 +3688,6 @@ public class Oo {
                 ps3ella = "¿Dónde no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Dónde no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Dónde no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -3889,14 +3706,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -3912,14 +3726,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -3938,14 +3749,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -3960,14 +3768,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Where " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Dónde " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Dónde " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Where " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Dónde " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Dónde " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Where " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Dónde " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Where " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Dónde " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Where " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -3992,14 +3797,11 @@ public class Oo {
                 ps2 = "¿Por qué " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why do they " + vnb[v] + nnobles[n];
@@ -4014,14 +3816,11 @@ public class Oo {
                 ps2 = "¿Por qué no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Por qué no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Por qué no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Por qué no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Por qué no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why don't they " + vnb[v] + nnobles[n];
@@ -4045,9 +3844,6 @@ public class Oo {
                     ps3ella = "¿Por qué " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Why did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Por qué " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Why did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Por qué " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "Why did they " + vnb[v] + nnobles[n];
 
@@ -4065,9 +3861,6 @@ public class Oo {
 
                     ps3ella = "¿Por qué " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Why did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Por qué " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Why did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Por qué " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "Why did they " + vnb[v] + nnobles[n];
@@ -4090,9 +3883,6 @@ public class Oo {
                     ps3ella = "¿Por qué no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Why didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Por qué no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Why didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Por qué no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "Why didn't they " + vnb[v] + nnobles[n];
 
@@ -4110,9 +3900,6 @@ public class Oo {
 
                     ps3ella = "¿Por qué no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "Why didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Por qué no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Why didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Por qué no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "Why didn't they " + vnb[v] + nnobles[n];
@@ -4136,9 +3923,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why will they " + vnb[v] + nnobles[n];
 
@@ -4158,9 +3942,6 @@ public class Oo {
                 ps3ella = "¿Por qué no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why won't they " + vnb[v] + nnobles[n];
 
@@ -4178,14 +3959,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -4201,14 +3979,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -4227,14 +4002,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -4249,14 +4021,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -4286,9 +4055,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "would she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "would it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "would they " + vnb[v] + nnobles[n];
 
@@ -4307,9 +4073,6 @@ public class Oo {
 
                 ps3ella = "¿Por qué no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Por qué no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Por qué no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -4332,9 +4095,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "could they " + vnb[v] + nnobles[n];
 
@@ -4353,9 +4113,6 @@ public class Oo {
 
                 ps3ella = "¿Por qué no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Por qué no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Por qué no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "couldn't they " + vnb[v] + nnobles[n];
@@ -4378,9 +4135,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "should they " + vnb[v] + nnobles[n];
 
@@ -4400,9 +4154,6 @@ public class Oo {
                 ps3ella = "¿Por qué no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Por qué no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Por qué no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -4421,14 +4172,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -4444,14 +4192,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -4470,14 +4215,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -4492,14 +4234,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "Why " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Por qué " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Por qué " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "Why " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Por qué " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Por qué " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "Why " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Por qué " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Why " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Por qué " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "Why " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -4511,539 +4250,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //Who
-    public void GenWhoSimp2() {
-        int neg = (int) (Math.random() * 6);
-        int sr = (int) (Math.random() * 2);
-        switch (neg) {
-            //Presente
-            case 0:
-                ps1 = "¿Quién " + vn1[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who do i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién " + vn2[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who do you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién " + vn3[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who does he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + vn3[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who does it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién " + vn4[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who do they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién " + vn5[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who do we " + vnb[v] + nnobles[n];
-                break;
-            case 1:
-                ps1 = "¿Quién no " + vn1[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who don't i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién no " + vn2[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who don't you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién no " + vn3[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who doesn't he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién no " + vn3[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who doesn't it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién no " + vn4[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who don't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién no " + vn5[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who don't we " + vnb[v] + nnobles[n];
-                break;
-
-            //Pasado
-            case 2:
-                if (sr == 0) {
-                    ps1 = "¿Quién " + ps1pre[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who did i" + vnb[v] + nnobles[n];
-
-                    ps2 = "¿Quién " + ps2pre[v] + nnoblesesp[n] + "?";
-                    ps2eng = "Who did you " + vnb[v] + nnobles[n];
-
-                    ps3 = "¿Quién " + ps3p[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "Who did he " + vnb[v] + nnobles[n];
-
-                    ps3ella = "¿Quién " + ps3p[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "Who did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Quién " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Who did it " + vnb[v] + nnobles[n];
-
-                    ps4 = "¿Quién " + vn4p[v] + nnoblesesp[n] + "?";
-                    ps4eng = "Who did they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Quién " + vn5p[v] + nnoblesesp[n] + "?";
-                    ps5eng = "Who did we " + vnb[v] + nnobles[n];
-                } else {
-                    ps1 = "¿Quién " + ps1imp[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who did i " + vnb[v] + nnobles[n];
-
-                    ps2 = "¿Quién " + ps2imp[v] + nnoblesesp[n] + "?";
-                    ps2eng = "Who did you " + vnb[v] + nnobles[n];
-
-                    ps3 = "¿Quién " + ps3imp[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "Who did he " + vnb[v] + nnobles[n];
-
-                    ps3ella = "¿Quién " + ps3imp[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "Who did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Quién " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Who did it " + vnb[v] + nnobles[n];
-
-                    ps4 = "¿Quién " + vn4imp[v] + nnoblesesp[n] + "?";
-                    ps4eng = "Who did they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Quién " + vn5imp[v] + nnoblesesp[n] + "?";
-                    ps5eng = "Who did we " + vnb[v] + nnobles[n];
-                }
-                break;
-            case 3:
-                if (sr == 0) {
-                    ps1 = "¿Quién no " + ps1pre[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who didn't i " + vnb[v] + nnobles[n];
-
-                    ps2 = "¿Quién no " + ps2pre[v] + nnoblesesp[n] + "?";
-                    ps2eng = "Who didn't you " + vnb[v] + nnobles[n];
-
-                    ps3 = "¿Quién no " + ps3p[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v] + nnobles[n];
-
-                    ps3ella = "¿Quién no " + ps3p[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Quién no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Who didn't it " + vnb[v] + nnobles[n];
-
-                    ps4 = "¿Quién no " + vn4p[v] + nnoblesesp[n] + "?";
-                    ps4eng = "Who didn't they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Quién no " + vn5p[v] + nnoblesesp[n] + "?";
-                    ps5eng = "Who didn't we " + vnb[v] + nnobles[n];
-                } else {
-                    ps1 = "¿Quién no " + ps1imp[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who didn't i " + vnb[v] + nnobles[n];
-
-                    ps2 = "¿Quién no " + ps2imp[v] + nnoblesesp[n] + "?";
-                    ps2eng = "Who didn't you " + vnb[v] + nnobles[n];
-
-                    ps3 = "¿Quién no " + ps3imp[v] + nnoblesesp[n] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v] + nnobles[n];
-
-                    ps3ella = "¿Quién no " + ps3imp[v] + nnoblesesp[n] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Quién no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "Who didn't it " + vnb[v] + nnobles[n];
-
-                    ps4 = "¿Quién no " + vn4imp[v] + nnoblesesp[n] + "?";
-                    ps4eng = "Who didn't they " + vnb[v] + nnobles[n];
-
-                    ps5 = "¿Quién no " + vn5imp[v] + nnoblesesp[n] + "?";
-                    ps5eng = "Who didn't we " + vnb[v] + nnobles[n];
-                }
-                break;
-
-            //Futuro
-            case 4:
-                ps1 = "¿Quién " + vn1f[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who will i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién " + vn2f[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who will you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién " + vn3f[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who will he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + vn3f[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who will she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who will it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién " + vn4f[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who will they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién " + vn5f[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who will we " + vnb[v] + nnobles[n];
-                break;
-            case 5:
-                ps1 = "¿Quién no " + vn1f[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who won't i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién no " + vn2f[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who won't you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién no " + vn3f[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who won't he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién no " + vn3f[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who won't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who won't it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién no " + vn4f[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who won't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién no " + vn5f[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who won't we " + vnb[v] + nnobles[n];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoCont2() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + scontIesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + scontI[s] + vnbc[v] + nnobles[n];
-
-                ps2 = "¿Quién " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + scontYou[s] + vnbc[v] + nnobles[n];
-
-                ps3 = "¿Quién " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + scontHe[s] + vnbc[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + scontIt[s] + vnbc[v] + nnobles[n];
-
-                ps4 = "¿Quién " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + scontThey[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Quién " + scontWeesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + scontWe[s] + vnbc[v] + nnobles[n];
-                break;
-
-            case 1:
-                ps1 = "¿Quién " + scontIespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + scontIdont[s] + vnbc[v] + nnobles[n];
-
-                ps2 = "¿Quién " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + scontYoudont[s] + vnbc[v] + nnobles[n];
-
-                ps3 = "¿Quién " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + scontHedont[s] + vnbc[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + scontItdont[s] + vnbc[v] + nnobles[n];
-
-                ps4 = "¿Quién " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + scontTheydont[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Quién " + scontWeespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + scontWedont[s] + vnbc[v] + nnobles[n];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoPerf2() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + sperfIesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + sperfI[s] + vpeng[v] + nnobles[n];
-
-                ps2 = "¿Quién " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + sperfYou[s] + vpeng[v] + nnobles[n];
-
-                ps3 = "¿Quién " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + sperfHe[s] + vpeng[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + sperfIt[s] + vpeng[v] + nnobles[n];
-
-                ps4 = "¿Quién " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + sperfThey[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Quién " + sperfWeesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + sperfWe[s] + vpeng[v] + nnobles[n];
-                break;
-            case 1:
-                ps1 = "¿Quién " + sperfIespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + sperfIdont[s] + vpeng[v] + nnobles[n];
-
-                ps2 = "¿Quién " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + sperfYoudont[s] + vpeng[v] + nnobles[n];
-
-                ps3 = "¿Quién " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + sperfHedont[s] + vpeng[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + sperfItdont[s] + vpeng[v] + nnobles[n];
-
-                ps4 = "¿Quién " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + sperfTheydont[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Quién " + sperfWeespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + sperfWedont[s] + vpeng[v] + nnobles[n];
-
-                break;
-        }
-    }//LR 2023
-
-    //Who Modales
-    public void GenWhoModalsSimp2() {
-        int neg = (int) (Math.random() * 6);
-        switch (neg){
-            //Would
-            case 0:
-                ps1 = "¿Quién " + vn1w[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "would i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién " + vn2w[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "would you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién " + vn3w[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "would he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + vn3w[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "would she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "would it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién " + vn4w[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "would they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién " + vn5w[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "would we " + vnb[v] + nnobles[n];
-                break;
-            case 1:
-                ps1 = "¿Quién no " + vn1w[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "wouldn't i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién no " + vn2w[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "wouldn't you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién no " + vn3w[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "wouldn't he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién no " + vn3w[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "wouldn't it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién no " + vn4w[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "wouldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién no " + vn5w[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "wouldn't we " + vnb[v] + nnobles[n];
-                break;
-
-            //Could
-            case 2:
-                ps1 = "¿Quién " + "podría " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "could i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién " + "podrías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "could you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién " + "podría " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "could he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "could she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "could it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "could they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién " + "podríamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "could we " + vnb[v] + nnobles[n];
-                break;
-            case 3:
-                ps1 = "¿Quién no " + "podría " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "couldn't i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién no " + "podrías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "couldn't you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién no " + "podría " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "couldn't he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "couldn't it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "couldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién no " + "podríamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "couldn't we " + vnb[v] + nnobles[n];
-                break;
-
-            //Should
-            case 4:
-                ps1 = "¿Quién " + "debería " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "should i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién " + "deberías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "should you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién " + "debería " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "should he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "should she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "should it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "should they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién " + "deberíamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "should we " + vnb[v] + nnobles[n];
-                break;
-            case 5:
-                ps1 = "¿Quién no " + "debería " + vnbs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + "shouldn't i " + vnb[v] + nnobles[n];
-
-                ps2 = "¿Quién no " + "deberías " + vnbs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + "shouldn't you " + vnb[v] + nnobles[n];
-
-                ps3 = "¿Quién no " + "debería " + vnbs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + "shouldn't he " + vnb[v] + nnobles[n];
-
-                ps3ella = "¿Quién no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + "shouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Quién no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + "shouldn't it " + vnb[v] + nnobles[n];
-
-                ps4 = "¿Quién no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + "shouldn't they " + vnb[v] + nnobles[n];
-
-                ps5 = "¿Quién no " + "deberíamos " + vnbs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + "shouldn't we " + vnb[v] + nnobles[n];
-                break;
-
-        }
-    }//LR 2023
-    public void GenWhoModalsCont2() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + scontmIesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + scontmI[s] + vnbc[v] + nnobles[n];
-
-                ps2 = "¿Quién " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + scontmYou[s] + vnbc[v] + nnobles[n];
-
-                ps3 = "¿Quién " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + scontmHe[s] + vnbc[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + scontmIt[s] + vnbc[v] + nnobles[n];
-
-                ps4 = "¿Quién " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + scontmThey[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Quién " + scontmWeesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + scontmWe[s] + vnbc[v] + nnobles[n];
-                break;
-
-            case 1:
-                ps1 = "¿Quién " + scontmIespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + scontmIdont[s] + vnbc[v] + nnobles[n];
-
-                ps2 = "¿Quién " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + scontmYoudont[s] + vnbc[v] + nnobles[n];
-
-                ps3 = "¿Quién " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + scontmHedont[s] + vnbc[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + scontmItdont[s] + vnbc[v] + nnobles[n];
-
-                ps4 = "¿Quién " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + scontmTheydont[s] + vnbc[v] + nnobles[n];
-
-                ps5 = "¿Quién " + scontmWeespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + scontmWedont[s] + vnbc[v] + nnobles[n];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoModalsPerf2() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + sperfmIesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + sperfmI[s] + vpeng[v] + nnobles[n];
-
-                ps2 = "¿Quién " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + sperfmYou[s] + vpeng[v] + nnobles[n];
-
-                ps3 = "¿Quién " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + sperfmHe[s] + vpeng[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + sperfmIt[s] + vpeng[v] + nnobles[n];
-
-                ps4 = "¿Quién " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + sperfmThey[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Quién " + sperfmWeesp[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + sperfmWe[s] + vpeng[v] + nnobles[n];
-                break;
-            case 1:
-                ps1 = "¿Quién " + sperfmIespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps1eng = "Who " + sperfmIdont[s] + vpeng[v] + nnobles[n];
-
-                ps2 = "¿Quién " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps2eng = "Who " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
-
-                ps3 = "¿Quién " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
-                ps3eng = "Who " + sperfmHedont[s] + vpeng[v] + nnobles[n];
-
-                ps3ella = "¿Quién " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
-                ps3she = "Who " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Quién " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "Who " + sperfmItdont[s] + vpeng[v] + nnobles[n];
-
-                ps4 = "¿Quién " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps4eng = "Who " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
-
-                ps5 = "¿Quién " + sperfmWeespno[s] + vpsp[v] + nnoblesesp[n] + "?";
-                ps5eng = "Who " + sperfmWedont[s] + vpeng[v] + nnobles[n];
-
-                break;
-        }
-    }//LR 2023
-
-    //How
+    //How 2
     public void GenHowSimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -5056,14 +4263,11 @@ public class Oo {
                 ps2 = "¿Cómo " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How do they " + vnb[v] + nnobles[n];
@@ -5078,14 +4282,11 @@ public class Oo {
                 ps2 = "¿Cómo no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cómo no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cómo no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cómo no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cómo no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How don't they " + vnb[v] + nnobles[n];
@@ -5109,9 +4310,6 @@ public class Oo {
                     ps3ella = "¿Cómo " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cómo " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cómo " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How did they " + vnb[v] + nnobles[n];
 
@@ -5129,9 +4327,6 @@ public class Oo {
 
                     ps3ella = "¿Cómo " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cómo " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cómo " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How did they " + vnb[v] + nnobles[n];
@@ -5154,9 +4349,6 @@ public class Oo {
                     ps3ella = "¿Cómo no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cómo no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cómo no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How didn't they " + vnb[v] + nnobles[n];
 
@@ -5174,9 +4366,6 @@ public class Oo {
 
                     ps3ella = "¿Cómo no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cómo no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cómo no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How didn't they " + vnb[v] + nnobles[n];
@@ -5200,9 +4389,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cómo " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cómo " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How will they " + vnb[v] + nnobles[n];
 
@@ -5222,9 +4408,6 @@ public class Oo {
                 ps3ella = "¿Cómo no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cómo no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cómo no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How won't they " + vnb[v] + nnobles[n];
 
@@ -5242,14 +4425,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -5265,14 +4445,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -5291,14 +4468,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -5313,14 +4487,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -5332,7 +4503,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //How Modales
+    //How Modales 2
     public void GenHowModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -5349,9 +4520,6 @@ public class Oo {
 
                 ps3ella = "¿Cómo " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "would she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "would it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "would they " + vnb[v] + nnobles[n];
@@ -5371,9 +4539,6 @@ public class Oo {
 
                 ps3ella = "¿Cómo no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cómo no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cómo no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -5396,9 +4561,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cómo " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cómo " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "could they " + vnb[v] + nnobles[n];
 
@@ -5417,9 +4579,6 @@ public class Oo {
 
                 ps3ella = "¿Cómo no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cómo no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cómo no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "couldn't they " + vnb[v] + nnobles[n];
@@ -5442,9 +4601,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cómo " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cómo " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "should they " + vnb[v] + nnobles[n];
 
@@ -5464,9 +4620,6 @@ public class Oo {
                 ps3ella = "¿Cómo no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cómo no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cómo no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -5485,14 +4638,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -5508,14 +4658,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -5534,14 +4681,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -5556,14 +4700,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cómo " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cómo " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cómo " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cómo " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cómo " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cómo " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -5575,7 +4716,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //How Much
+    //How Much 2
     public void GenHowMuchSimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -5588,14 +4729,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much do they " + vnb[v] + nnobles[n];
@@ -5610,14 +4748,11 @@ public class Oo {
                 ps2 = "¿Cuanto no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuanto no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuanto no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much don't they " + vnb[v] + nnobles[n];
@@ -5641,9 +4776,6 @@ public class Oo {
                     ps3ella = "¿Cuanto " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How much did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuanto " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How much did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuanto " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How much did they " + vnb[v] + nnobles[n];
 
@@ -5661,9 +4793,6 @@ public class Oo {
 
                     ps3ella = "¿Cuanto " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How much did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuanto " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How much did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuanto " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How much did they " + vnb[v] + nnobles[n];
@@ -5686,9 +4815,6 @@ public class Oo {
                     ps3ella = "¿Cuanto no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How much didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuanto no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How much didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuanto no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How much didn't they " + vnb[v] + nnobles[n];
 
@@ -5706,9 +4832,6 @@ public class Oo {
 
                     ps3ella = "¿Cuanto no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How much didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuanto no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How much didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuanto no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How much didn't they " + vnb[v] + nnobles[n];
@@ -5732,9 +4855,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuanto " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuanto " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much will they " + vnb[v] + nnobles[n];
 
@@ -5754,9 +4874,6 @@ public class Oo {
                 ps3ella = "¿Cuanto no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuanto no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuanto no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much won't they " + vnb[v] + nnobles[n];
 
@@ -5774,14 +4891,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -5797,14 +4911,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -5823,14 +4934,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -5845,14 +4953,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -5864,7 +4969,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //How Much Modales
+    //How Much Modales 2
     public void GenHowMuchModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -5881,9 +4986,6 @@ public class Oo {
 
                 ps3ella = "¿Cuanto " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "would she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "would it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "would they " + vnb[v] + nnobles[n];
@@ -5903,9 +5005,6 @@ public class Oo {
 
                 ps3ella = "¿Cuanto no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuanto no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -5928,9 +5027,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuanto " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuanto " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "could they " + vnb[v] + nnobles[n];
 
@@ -5949,9 +5045,6 @@ public class Oo {
 
                 ps3ella = "¿Cuanto no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuanto no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "couldn't they " + vnb[v] + nnobles[n];
@@ -5974,9 +5067,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuanto " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuanto " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "should they " + vnb[v] + nnobles[n];
 
@@ -5996,9 +5086,6 @@ public class Oo {
                 ps3ella = "¿Cuanto no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuanto no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuanto no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -6017,14 +5104,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -6040,14 +5124,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -6066,14 +5147,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -6088,14 +5166,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How much " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuanto " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuanto " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How much " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuanto " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuanto " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How much " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuanto " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How much " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuanto " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How much " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -6107,7 +5182,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //How Many
+    //How Many 2
     public void GenHowManySimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -6120,14 +5195,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many do you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many does he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many does she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many does it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many do they " + vnb[v] + nnobles[n];
@@ -6142,14 +5214,11 @@ public class Oo {
                 ps2 = "¿Cuantos no " + vn2[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many don't you " + vnb[v] + nnobles[n];
 
-                ps3 = "¿Cuantos no " + vn3[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos no " + vnb3[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many doesn't he " + vnb[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos no " + vn3[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos no " + vnb3[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many doesn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos no " + vn3[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many doesn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuantos no " + vn4[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many don't they " + vnb[v] + nnobles[n];
@@ -6173,9 +5242,6 @@ public class Oo {
                     ps3ella = "¿Cuantos " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How many did she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuantos " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How many did it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuantos " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How many did they " + vnb[v] + nnobles[n];
 
@@ -6193,9 +5259,6 @@ public class Oo {
 
                     ps3ella = "¿Cuantos " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How many did she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuantos " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How many did it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuantos " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How many did they " + vnb[v] + nnobles[n];
@@ -6218,9 +5281,6 @@ public class Oo {
                     ps3ella = "¿Cuantos no " + ps3p[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How many didn't she " + vnb[v] + nnobles[n];
 
-                    ps3eso = "¿Cuantos no " + ps3p[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How many didn't it " + vnb[v] + nnobles[n];
-
                     ps4 = "¿Cuantos no " + vn4p[v] + nnoblesesp[n] + "?";
                     ps4eng = "How many didn't they " + vnb[v] + nnobles[n];
 
@@ -6238,9 +5298,6 @@ public class Oo {
 
                     ps3ella = "¿Cuantos no " + ps3imp[v] + nnoblesesp[n] + "ella?";
                     ps3she = "How many didn't she " + vnb[v] + nnobles[n];
-
-                    ps3eso = "¿Cuantos no " + ps3imp[v] + nnoblesesp[n] + "eso?";
-                    ps3it = "How many didn't it " + vnb[v] + nnobles[n];
 
                     ps4 = "¿Cuantos no " + vn4imp[v] + nnoblesesp[n] + "?";
                     ps4eng = "How many didn't they " + vnb[v] + nnobles[n];
@@ -6264,9 +5321,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many will she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuantos " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many will it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuantos " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many will they " + vnb[v] + nnobles[n];
 
@@ -6286,9 +5340,6 @@ public class Oo {
                 ps3ella = "¿Cuantos no " + vn3f[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many won't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuantos no " + vn3f[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many won't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuantos no " + vn4f[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many won't they " + vnb[v] + nnobles[n];
 
@@ -6306,14 +5357,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + scontYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + scontHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + scontHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + scontSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + scont3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + scontShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + scontItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + scontIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + scontTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + scontThey[s] + vnbc[v] + nnobles[n];
@@ -6329,14 +5377,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + scontYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + scontHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + scontHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + scontSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + scont3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + scontShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + scontItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + scontItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + scontTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + scontTheydont[s] + vnbc[v] + nnobles[n];
@@ -6355,14 +5400,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + sperfYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + sperfHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + sperfHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + sperfSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + sperf3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + sperfShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + sperfItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + sperfIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + sperfTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + sperfThey[s] + vpeng[v] + nnobles[n];
@@ -6377,14 +5419,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + sperfYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + sperfHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + sperfHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + sperfSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + sperf3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + sperfShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + sperfItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + sperfItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + sperfTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + sperfTheydont[s] + vpeng[v] + nnobles[n];
@@ -6396,7 +5435,7 @@ public class Oo {
         }
     }//LR 2023
 
-    //How Many Modales
+    //How Many Modales 2
     public void GenHowManyModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -6413,9 +5452,6 @@ public class Oo {
 
                 ps3ella = "¿Cuantos " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "would she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "would it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "would they " + vnb[v] + nnobles[n];
@@ -6435,9 +5471,6 @@ public class Oo {
 
                 ps3ella = "¿Cuantos no " + vn3w[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "wouldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos no " + vn3w[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "wouldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuantos no " + vn4w[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "wouldn't they " + vnb[v] + nnobles[n];
@@ -6460,9 +5493,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "could she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuantos " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "could it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuantos " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "could they " + vnb[v] + nnobles[n];
 
@@ -6481,9 +5511,6 @@ public class Oo {
 
                 ps3ella = "¿Cuantos no " + "podría " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "couldn't she " + vnb[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos no " + "podría " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "couldn't it " + vnb[v] + nnobles[n];
 
                 ps4 = "¿Cuantos no " + "podrían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "couldn't they " + vnb[v] + nnobles[n];
@@ -6506,9 +5533,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "should she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuantos " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "should it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuantos " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "should they " + vnb[v] + nnobles[n];
 
@@ -6528,9 +5552,6 @@ public class Oo {
                 ps3ella = "¿Cuantos no " + "debería " + vnbs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + "shouldn't she " + vnb[v] + nnobles[n];
 
-                ps3eso = "¿Cuantos no " + "debería " + vnbs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + "shouldn't it " + vnb[v] + nnobles[n];
-
                 ps4 = "¿Cuantos no " + "deberían " + vnbs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + "shouldn't they " + vnb[v] + nnobles[n];
 
@@ -6549,14 +5570,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontmYouesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + scontmYou[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + scontmHeesp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + scontmHe[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + scontmSheesp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + scontm3esp[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + scontmShe[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + scontmItesp[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + scontmIt[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + scontmTheyesp[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + scontmThey[s] + vnbc[v] + nnobles[n];
@@ -6572,14 +5590,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontmYouespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + scontmYoudont[s] + vnbc[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + scontmHeespno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + scontmHedont[s] + vnbc[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + scontmSheespno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + scontm3espno[s] + vnbcs[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + scontmShedont[s] + vnbc[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + scontmItespno[s] + vnbcs[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + scontmItdont[s] + vnbc[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + scontmTheyespno[s] + vnbcs[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + scontmTheydont[s] + vnbc[v] + nnobles[n];
@@ -6598,14 +5613,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfmYouesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + sperfmYou[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + sperfmHeesp[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + sperfmHe[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + sperfmSheesp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + sperfm3esp[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + sperfmShe[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + sperfmItesp[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + sperfmIt[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + sperfmTheyesp[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + sperfmThey[s] + vpeng[v] + nnobles[n];
@@ -6620,14 +5632,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfmYouespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps2eng = "How many " + sperfmYoudont[s] + vpeng[v] + nnobles[n];
 
-                ps3 = "¿Cuantos " + sperfmHeespno[s] + vpsp[v] + nnoblesesp[n] + "él?";
+                ps3 = "¿Cuantos " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "él?";
                 ps3eng = "How many " + sperfmHedont[s] + vpeng[v] + nnobles[n];
 
-                ps3ella = "¿Cuantos " + sperfmSheespno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
+                ps3ella = "¿Cuantos " + sperfm3espno[s] + vpsp[v] + nnoblesesp[n] + "ella?";
                 ps3she = "How many " + sperfmShedont[s] + vpeng[v] + nnobles[n];
-
-                ps3eso = "¿Cuantos " + sperfmItespno[s] + vpsp[v] + nnoblesesp[n] + "eso?";
-                ps3it = "How many " + sperfmItdont[s] + vpeng[v] + nnobles[n];
 
                 ps4 = "¿Cuantos " + sperfmTheyespno[s] + vpsp[v] + nnoblesesp[n] + "?";
                 ps4eng = "How many " + sperfmTheydont[s] + vpeng[v] + nnobles[n];
@@ -14401,7 +13410,6 @@ public class Oo {
     //dif 1
     //PRESENTES
     public void GenPresSimp1() {
-
         switch (neg) {
             case 0:
                 ps1 = "yo " + vn1[v];
@@ -17171,14 +16179,11 @@ public class Oo {
                 ps2 = "¿Que " + vn2[v] + "?";
                 ps2eng = "What do you " + vnb[v];
 
-                ps3 = "¿Que " + vn3[v] + "él?";
+                ps3 = "¿Que " + vnb3[v] + "él?";
                 ps3eng = "What does he " + vnb[v];
 
-                ps3ella = "¿Que " + vn3[v] + "ella?";
+                ps3ella = "¿Que " + vnb3[v] + "ella?";
                 ps3she = "What does she " + vnb[v];
-
-                ps3eso = "¿Que " + vn3[v] + "eso?";
-                ps3it = "What does it " + vnb[v];
 
                 ps4 = "¿Que " + vn4[v] + "?";
                 ps4eng = "What do they " + vnb[v];
@@ -17193,14 +16198,11 @@ public class Oo {
                 ps2 = "¿Que no " + vn2[v] + "?";
                 ps2eng = "What don't you " + vnb[v];
 
-                ps3 = "¿Que no " + vn3[v] + "él?";
+                ps3 = "¿Que no " + vnb3[v] + "él?";
                 ps3eng = "What doesn't he " + vnb[v];
 
-                ps3ella = "¿Que no " + vn3[v] + "ella?";
+                ps3ella = "¿Que no " + vnb3[v] + "ella?";
                 ps3she = "What doesn't she " + vnb[v];
-
-                ps3eso = "¿Que no " + vn3[v] + "eso?";
-                ps3it = "What doesn't it " + vnb[v];
 
                 ps4 = "¿Que no " + vn4[v] + "?";
                 ps4eng = "What don't they " + vnb[v];
@@ -17224,9 +16226,6 @@ public class Oo {
                     ps3ella = "¿Que " + ps3p[v] + "ella?";
                     ps3she = "What did she " + vnb[v];
 
-                    ps3eso = "¿Que " + ps3p[v] + "eso?";
-                    ps3it = "What did it " + vnb[v];
-
                     ps4 = "¿Que " + vn4p[v] + "?";
                     ps4eng = "What did they " + vnb[v];
 
@@ -17244,9 +16243,6 @@ public class Oo {
 
                     ps3ella = "¿Que " + ps3imp[v] + "ella?";
                     ps3she = "What did she " + vnb[v];
-
-                    ps3eso = "¿Que " + ps3imp[v] + "eso?";
-                    ps3it = "What did it " + vnb[v];
 
                     ps4 = "¿Que " + vn4imp[v] + "?";
                     ps4eng = "What did they " + vnb[v];
@@ -17269,9 +16265,6 @@ public class Oo {
                     ps3ella = "¿Que no " + ps3p[v] + "ella?";
                     ps3she = "What didn't she " + vnb[v];
 
-                    ps3eso = "¿Que no " + ps3p[v] + "eso?";
-                    ps3it = "What didn't it " + vnb[v];
-
                     ps4 = "¿Que no " + vn4p[v] + "?";
                     ps4eng = "What didn't they " + vnb[v];
 
@@ -17289,9 +16282,6 @@ public class Oo {
 
                     ps3ella = "¿Que no " + ps3imp[v] + "ella?";
                     ps3she = "What didn't she " + vnb[v];
-
-                    ps3eso = "¿Que no " + ps3imp[v] + "eso?";
-                    ps3it = "What didn't it " + vnb[v];
 
                     ps4 = "¿Que no " + vn4imp[v] + "?";
                     ps4eng = "What didn't they " + vnb[v];
@@ -17315,9 +16305,6 @@ public class Oo {
                 ps3ella = "¿Que " + vn3f[v] + "ella?";
                 ps3she = "What will she " + vnb[v];
 
-                ps3eso = "¿Que " + vn3f[v] + "eso?";
-                ps3it = "What will it " + vnb[v];
-
                 ps4 = "¿Que " + vn4f[v] + "?";
                 ps4eng = "What will they " + vnb[v];
 
@@ -17337,9 +16324,6 @@ public class Oo {
                 ps3ella = "¿Que no " + vn3f[v] + "ella?";
                 ps3she = "What won't she " + vnb[v];
 
-                ps3eso = "¿Que no " + vn3f[v] + "eso?";
-                ps3it = "What won't it " + vnb[v];
-
                 ps4 = "¿Que no " + vn4f[v] + "?";
                 ps4eng = "What won't they " + vnb[v];
 
@@ -17357,14 +16341,11 @@ public class Oo {
                 ps2 = "¿Que " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "What " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Que " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Que " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "What " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Que " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Que " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "What " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Que " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "What " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Que " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "What " + scontThey[s] + vnbc[v];
@@ -17380,14 +16361,11 @@ public class Oo {
                 ps2 = "¿Que " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "What " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Que " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Que " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "What " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Que " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Que " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "What " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Que " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "What " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Que " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "What " + scontTheydont[s] + vnbc[v];
@@ -17406,14 +16384,11 @@ public class Oo {
                 ps2 = "¿Que " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "What " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Que " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Que " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "What " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Que " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Que " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "What " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Que " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "What " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Que " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "What " + sperfThey[s] + vpeng[v];
@@ -17428,14 +16403,11 @@ public class Oo {
                 ps2 = "¿Que " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "What " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Que " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Que " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "What " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Que " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Que " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "What " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Que " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "What " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Que " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "What " + sperfTheydont[s] + vpeng[v];
@@ -17465,9 +16437,6 @@ public class Oo {
                 ps3ella = "¿Que " + vn3w[v] + "ella?";
                 ps3she = "What " + "would she " + vnb[v];
 
-                ps3eso = "¿Que " + vn3w[v] + "eso?";
-                ps3it = "What " + "would it " + vnb[v];
-
                 ps4 = "¿Que " + vn4w[v] + "?";
                 ps4eng = "What " + "would they " + vnb[v];
 
@@ -17486,9 +16455,6 @@ public class Oo {
 
                 ps3ella = "¿Que no " + vn3w[v] + "ella?";
                 ps3she = "What " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Que no " + vn3w[v] + "eso?";
-                ps3it = "What " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Que no " + vn4w[v] + "?";
                 ps4eng = "What " + "wouldn't they " + vnb[v];
@@ -17511,9 +16477,6 @@ public class Oo {
                 ps3ella = "¿Que " + "podría " + vnbs[v] + "ella?";
                 ps3she = "What " + "could she " + vnb[v];
 
-                ps3eso = "¿Que " + "podría " + vnbs[v] + "eso?";
-                ps3it = "What " + "could it " + vnb[v];
-
                 ps4 = "¿Que " + "podrían " + vnbs[v] + "?";
                 ps4eng = "What " + "could they " + vnb[v];
 
@@ -17532,9 +16495,6 @@ public class Oo {
 
                 ps3ella = "¿Que no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "What " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Que no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "What " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Que no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "What " + "couldn't they " + vnb[v];
@@ -17557,9 +16517,6 @@ public class Oo {
                 ps3ella = "¿Que " + "debería " + vnbs[v] + "ella?";
                 ps3she = "What " + "should she " + vnb[v];
 
-                ps3eso = "¿Que " + "debería " + vnbs[v] + "eso?";
-                ps3it = "What " + "should it " + vnb[v];
-
                 ps4 = "¿Que " + "deberían " + vnbs[v] + "?";
                 ps4eng = "What " + "should they " + vnb[v];
 
@@ -17579,9 +16536,6 @@ public class Oo {
                 ps3ella = "¿Que no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "What " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Que no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "What " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Que no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "What " + "shouldn't they " + vnb[v];
 
@@ -17600,14 +16554,11 @@ public class Oo {
                 ps2 = "¿Que " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "What " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Que " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Que " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "What " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Que " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Que " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "What " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Que " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "What " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Que " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "What " + scontmThey[s] + vnbc[v];
@@ -17623,14 +16574,11 @@ public class Oo {
                 ps2 = "¿Que " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "What " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Que " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Que " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "What " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Que " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Que " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "What " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Que " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "What " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Que " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "What " + scontmTheydont[s] + vnbc[v];
@@ -17649,14 +16597,11 @@ public class Oo {
                 ps2 = "¿Que " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "What " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Que " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Que " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "What " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Que " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Que " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "What " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Que " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "What " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Que " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "What " + sperfmThey[s] + vpeng[v];
@@ -17671,14 +16616,11 @@ public class Oo {
                 ps2 = "¿Que " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "What " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Que " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Que " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "What " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Que " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Que " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "What " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Que " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "What " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Que " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "What " + sperfmTheydont[s] + vpeng[v];
@@ -17703,14 +16645,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + vn2[v] + "?";
                 ps2eng = "When do you " + vnb[v];
 
-                ps3 = "¿Cuándo " + vn3[v] + "él?";
+                ps3 = "¿Cuándo " + vnb3[v] + "él?";
                 ps3eng = "When does he " + vnb[v];
 
-                ps3ella = "¿Cuándo " + vn3[v] + "ella?";
+                ps3ella = "¿Cuándo " + vnb3[v] + "ella?";
                 ps3she = "When does she " + vnb[v];
-
-                ps3eso = "¿Cuándo " + vn3[v] + "eso?";
-                ps3it = "When does it " + vnb[v];
 
                 ps4 = "¿Cuándo " + vn4[v] + "?";
                 ps4eng = "When do they " + vnb[v];
@@ -17725,14 +16664,11 @@ public class Oo {
                 ps2 = "¿Cuándo no " + vn2[v] + "?";
                 ps2eng = "When don't you " + vnb[v];
 
-                ps3 = "¿Cuándo no " + vn3[v] + "él?";
+                ps3 = "¿Cuándo no " + vnb3[v] + "él?";
                 ps3eng = "When doesn't he " + vnb[v];
 
-                ps3ella = "¿Cuándo no " + vn3[v] + "ella?";
+                ps3ella = "¿Cuándo no " + vnb3[v] + "ella?";
                 ps3she = "When doesn't she " + vnb[v];
-
-                ps3eso = "¿Cuándo no " + vn3[v] + "eso?";
-                ps3it = "When doesn't it " + vnb[v];
 
                 ps4 = "¿Cuándo no " + vn4[v] + "?";
                 ps4eng = "When don't they " + vnb[v];
@@ -17756,9 +16692,6 @@ public class Oo {
                     ps3ella = "¿Cuándo " + ps3p[v] + "ella?";
                     ps3she = "When did she " + vnb[v];
 
-                    ps3eso = "¿Cuándo " + ps3p[v] + "eso?";
-                    ps3it = "When did it " + vnb[v];
-
                     ps4 = "¿Cuándo " + vn4p[v] + "?";
                     ps4eng = "When did they " + vnb[v];
 
@@ -17776,9 +16709,6 @@ public class Oo {
 
                     ps3ella = "¿Cuándo " + ps3imp[v] + "ella?";
                     ps3she = "When did she " + vnb[v];
-
-                    ps3eso = "¿Cuándo " + ps3imp[v] + "eso?";
-                    ps3it = "When did it " + vnb[v];
 
                     ps4 = "¿Cuándo " + vn4imp[v] + "?";
                     ps4eng = "When did they " + vnb[v];
@@ -17801,9 +16731,6 @@ public class Oo {
                     ps3ella = "¿Cuándo no " + ps3p[v] + "ella?";
                     ps3she = "When didn't she " + vnb[v];
 
-                    ps3eso = "¿Cuándo no " + ps3p[v] + "eso?";
-                    ps3it = "When didn't it " + vnb[v];
-
                     ps4 = "¿Cuándo no " + vn4p[v] + "?";
                     ps4eng = "When didn't they " + vnb[v];
 
@@ -17821,9 +16748,6 @@ public class Oo {
 
                     ps3ella = "¿Cuándo no " + ps3imp[v] + "ella?";
                     ps3she = "When didn't she " + vnb[v];
-
-                    ps3eso = "¿Cuándo no " + ps3imp[v] + "eso?";
-                    ps3it = "When didn't it " + vnb[v];
 
                     ps4 = "¿Cuándo no " + vn4imp[v] + "?";
                     ps4eng = "When didn't they " + vnb[v];
@@ -17847,9 +16771,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + vn3f[v] + "ella?";
                 ps3she = "When will she " + vnb[v];
 
-                ps3eso = "¿Cuándo " + vn3f[v] + "eso?";
-                ps3it = "When will it " + vnb[v];
-
                 ps4 = "¿Cuándo " + vn4f[v] + "?";
                 ps4eng = "When will they " + vnb[v];
 
@@ -17869,9 +16790,6 @@ public class Oo {
                 ps3ella = "¿Cuándo no " + vn3f[v] + "ella?";
                 ps3she = "When won't she " + vnb[v];
 
-                ps3eso = "¿Cuándo no " + vn3f[v] + "eso?";
-                ps3it = "When won't it " + vnb[v];
-
                 ps4 = "¿Cuándo no " + vn4f[v] + "?";
                 ps4eng = "When won't they " + vnb[v];
 
@@ -17889,14 +16807,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "When " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Cuándo " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuándo " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "When " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuándo " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuándo " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "When " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuándo " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "When " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Cuándo " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "When " + scontThey[s] + vnbc[v];
@@ -17912,14 +16827,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "When " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuándo " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuándo " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "When " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuándo " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuándo " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "When " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuándo " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "When " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuándo " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "When " + scontTheydont[s] + vnbc[v];
@@ -17938,14 +16850,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "When " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Cuándo " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuándo " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "When " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuándo " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuándo " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "When " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuándo " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "When " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Cuándo " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "When " + sperfThey[s] + vpeng[v];
@@ -17960,14 +16869,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "When " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuándo " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuándo " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "When " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuándo " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuándo " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "When " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuándo " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "When " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuándo " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "When " + sperfTheydont[s] + vpeng[v];
@@ -17997,9 +16903,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + vn3w[v] + "ella?";
                 ps3she = "When " + "would she " + vnb[v];
 
-                ps3eso = "¿Cuándo " + vn3w[v] + "eso?";
-                ps3it = "When " + "would it " + vnb[v];
-
                 ps4 = "¿Cuándo " + vn4w[v] + "?";
                 ps4eng = "When " + "would they " + vnb[v];
 
@@ -18018,9 +16921,6 @@ public class Oo {
 
                 ps3ella = "¿Cuándo no " + vn3w[v] + "ella?";
                 ps3she = "When " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Cuándo no " + vn3w[v] + "eso?";
-                ps3it = "When " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Cuándo no " + vn4w[v] + "?";
                 ps4eng = "When " + "wouldn't they " + vnb[v];
@@ -18043,9 +16943,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + "podría " + vnbs[v] + "ella?";
                 ps3she = "When " + "could she " + vnb[v];
 
-                ps3eso = "¿Cuándo " + "podría " + vnbs[v] + "eso?";
-                ps3it = "When " + "could it " + vnb[v];
-
                 ps4 = "¿Cuándo " + "podrían " + vnbs[v] + "?";
                 ps4eng = "When " + "could they " + vnb[v];
 
@@ -18064,9 +16961,6 @@ public class Oo {
 
                 ps3ella = "¿Cuándo no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "When " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Cuándo no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "When " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Cuándo no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "When " + "couldn't they " + vnb[v];
@@ -18089,9 +16983,6 @@ public class Oo {
                 ps3ella = "¿Cuándo " + "debería " + vnbs[v] + "ella?";
                 ps3she = "When " + "should she " + vnb[v];
 
-                ps3eso = "¿Cuándo " + "debería " + vnbs[v] + "eso?";
-                ps3it = "When " + "should it " + vnb[v];
-
                 ps4 = "¿Cuándo " + "deberían " + vnbs[v] + "?";
                 ps4eng = "When " + "should they " + vnb[v];
 
@@ -18111,9 +17002,6 @@ public class Oo {
                 ps3ella = "¿Cuándo no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "When " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Cuándo no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "When " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Cuándo no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "When " + "shouldn't they " + vnb[v];
 
@@ -18132,14 +17020,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "When " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Cuándo " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuándo " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "When " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuándo " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuándo " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "When " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuándo " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "When " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Cuándo " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "When " + scontmThey[s] + vnbc[v];
@@ -18155,14 +17040,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "When " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuándo " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuándo " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "When " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuándo " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuándo " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "When " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuándo " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "When " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuándo " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "When " + scontmTheydont[s] + vnbc[v];
@@ -18181,14 +17063,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "When " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Cuándo " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuándo " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "When " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuándo " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuándo " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "When " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuándo " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "When " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Cuándo " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "When " + sperfmThey[s] + vpeng[v];
@@ -18203,14 +17082,11 @@ public class Oo {
                 ps2 = "¿Cuándo " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "When " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuándo " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuándo " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "When " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuándo " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuándo " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "When " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuándo " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "When " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuándo " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "When " + sperfmTheydont[s] + vpeng[v];
@@ -18235,14 +17111,11 @@ public class Oo {
                 ps2 = "¿Dónde " + vn2[v] + "?";
                 ps2eng = "Where do you " + vnb[v];
 
-                ps3 = "¿Dónde " + vn3[v] + "él?";
+                ps3 = "¿Dónde " + vnb3[v] + "él?";
                 ps3eng = "Where does he " + vnb[v];
 
-                ps3ella = "¿Dónde " + vn3[v] + "ella?";
+                ps3ella = "¿Dónde " + vnb3[v] + "ella?";
                 ps3she = "Where does she " + vnb[v];
-
-                ps3eso = "¿Dónde " + vn3[v] + "eso?";
-                ps3it = "Where does it " + vnb[v];
 
                 ps4 = "¿Dónde " + vn4[v] + "?";
                 ps4eng = "Where do they " + vnb[v];
@@ -18257,14 +17130,11 @@ public class Oo {
                 ps2 = "¿Dónde no " + vn2[v] + "?";
                 ps2eng = "Where don't you " + vnb[v];
 
-                ps3 = "¿Dónde no " + vn3[v] + "él?";
+                ps3 = "¿Dónde no " + vnb3[v] + "él?";
                 ps3eng = "Where doesn't he " + vnb[v];
 
-                ps3ella = "¿Dónde no " + vn3[v] + "ella?";
+                ps3ella = "¿Dónde no " + vnb3[v] + "ella?";
                 ps3she = "Where doesn't she " + vnb[v];
-
-                ps3eso = "¿Dónde no " + vn3[v] + "eso?";
-                ps3it = "Where doesn't it " + vnb[v];
 
                 ps4 = "¿Dónde no " + vn4[v] + "?";
                 ps4eng = "Where don't they " + vnb[v];
@@ -18288,9 +17158,6 @@ public class Oo {
                     ps3ella = "¿Dónde " + ps3p[v] + "ella?";
                     ps3she = "Where did she " + vnb[v];
 
-                    ps3eso = "¿Dónde " + ps3p[v] + "eso?";
-                    ps3it = "Where did it " + vnb[v];
-
                     ps4 = "¿Dónde " + vn4p[v] + "?";
                     ps4eng = "Where did they " + vnb[v];
 
@@ -18308,9 +17175,6 @@ public class Oo {
 
                     ps3ella = "¿Dónde " + ps3imp[v] + "ella?";
                     ps3she = "Where did she " + vnb[v];
-
-                    ps3eso = "¿Dónde " + ps3imp[v] + "eso?";
-                    ps3it = "Where did it " + vnb[v];
 
                     ps4 = "¿Dónde " + vn4imp[v] + "?";
                     ps4eng = "Where did they " + vnb[v];
@@ -18333,9 +17197,6 @@ public class Oo {
                     ps3ella = "¿Dónde no " + ps3p[v] + "ella?";
                     ps3she = "Where didn't she " + vnb[v];
 
-                    ps3eso = "¿Dónde no " + ps3p[v] + "eso?";
-                    ps3it = "Where didn't it " + vnb[v];
-
                     ps4 = "¿Dónde no " + vn4p[v] + "?";
                     ps4eng = "Where didn't they " + vnb[v];
 
@@ -18353,9 +17214,6 @@ public class Oo {
 
                     ps3ella = "¿Dónde no " + ps3imp[v] + "ella?";
                     ps3she = "Where didn't she " + vnb[v];
-
-                    ps3eso = "¿Dónde no " + ps3imp[v] + "eso?";
-                    ps3it = "Where didn't it " + vnb[v];
 
                     ps4 = "¿Dónde no " + vn4imp[v] + "?";
                     ps4eng = "Where didn't they " + vnb[v];
@@ -18379,9 +17237,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + vn3f[v] + "ella?";
                 ps3she = "Where will she " + vnb[v];
 
-                ps3eso = "¿Dónde " + vn3f[v] + "eso?";
-                ps3it = "Where will it " + vnb[v];
-
                 ps4 = "¿Dónde " + vn4f[v] + "?";
                 ps4eng = "Where will they " + vnb[v];
 
@@ -18401,9 +17256,6 @@ public class Oo {
                 ps3ella = "¿Dónde no " + vn3f[v] + "ella?";
                 ps3she = "Where won't she " + vnb[v];
 
-                ps3eso = "¿Dónde no " + vn3f[v] + "eso?";
-                ps3it = "Where won't it " + vnb[v];
-
                 ps4 = "¿Dónde no " + vn4f[v] + "?";
                 ps4eng = "Where won't they " + vnb[v];
 
@@ -18421,14 +17273,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "Where " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Dónde " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Dónde " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "Where " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Dónde " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Dónde " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "Where " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Dónde " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Where " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Dónde " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "Where " + scontThey[s] + vnbc[v];
@@ -18444,14 +17293,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "Where " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Dónde " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Dónde " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "Where " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Dónde " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Dónde " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "Where " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Dónde " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Where " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Dónde " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "Where " + scontTheydont[s] + vnbc[v];
@@ -18470,14 +17316,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "Where " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Dónde " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Dónde " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "Where " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Dónde " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Dónde " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "Where " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Dónde " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Where " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Dónde " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "Where " + sperfThey[s] + vpeng[v];
@@ -18492,21 +17335,17 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "Where " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Dónde " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Dónde " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "Where " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Dónde " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Dónde " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "Where " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Dónde " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Where " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Dónde " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "Where " + sperfTheydont[s] + vpeng[v];
 
                 ps5 = "¿Dónde " + sperfWeespno[s] + vpsp[v] + "?";
                 ps5eng = "Where " + sperfWedont[s] + vpeng[v];
-
                 break;
         }
     }//LR 2023
@@ -18529,9 +17368,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + vn3w[v] + "ella?";
                 ps3she = "Where " + "would she " + vnb[v];
 
-                ps3eso = "¿Dónde " + vn3w[v] + "eso?";
-                ps3it = "Where " + "would it " + vnb[v];
-
                 ps4 = "¿Dónde " + vn4w[v] + "?";
                 ps4eng = "Where " + "would they " + vnb[v];
 
@@ -18550,9 +17386,6 @@ public class Oo {
 
                 ps3ella = "¿Dónde no " + vn3w[v] + "ella?";
                 ps3she = "Where " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Dónde no " + vn3w[v] + "eso?";
-                ps3it = "Where " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Dónde no " + vn4w[v] + "?";
                 ps4eng = "Where " + "wouldn't they " + vnb[v];
@@ -18575,9 +17408,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + "podría " + vnbs[v] + "ella?";
                 ps3she = "Where " + "could she " + vnb[v];
 
-                ps3eso = "¿Dónde " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Where " + "could it " + vnb[v];
-
                 ps4 = "¿Dónde " + "podrían " + vnbs[v] + "?";
                 ps4eng = "Where " + "could they " + vnb[v];
 
@@ -18596,9 +17426,6 @@ public class Oo {
 
                 ps3ella = "¿Dónde no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "Where " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Dónde no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Where " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Dónde no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "Where " + "couldn't they " + vnb[v];
@@ -18621,9 +17448,6 @@ public class Oo {
                 ps3ella = "¿Dónde " + "debería " + vnbs[v] + "ella?";
                 ps3she = "Where " + "should she " + vnb[v];
 
-                ps3eso = "¿Dónde " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Where " + "should it " + vnb[v];
-
                 ps4 = "¿Dónde " + "deberían " + vnbs[v] + "?";
                 ps4eng = "Where " + "should they " + vnb[v];
 
@@ -18643,9 +17467,6 @@ public class Oo {
                 ps3ella = "¿Dónde no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "Where " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Dónde no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Where " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Dónde no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "Where " + "shouldn't they " + vnb[v];
 
@@ -18664,14 +17485,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "Where " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Dónde " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Dónde " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "Where " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Dónde " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Dónde " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "Where " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Dónde " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Where " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Dónde " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "Where " + scontmThey[s] + vnbc[v];
@@ -18687,14 +17505,11 @@ public class Oo {
                 ps2 = "¿Dónde " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "Where " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Dónde " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Dónde " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "Where " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Dónde " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Dónde " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "Where " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Dónde " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Where " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Dónde " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "Where " + scontmTheydont[s] + vnbc[v];
@@ -18713,14 +17528,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "Where " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Dónde " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Dónde " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "Where " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Dónde " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Dónde " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "Where " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Dónde " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Where " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Dónde " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "Where " + sperfmThey[s] + vpeng[v];
@@ -18735,14 +17547,11 @@ public class Oo {
                 ps2 = "¿Dónde " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "Where " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Dónde " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Dónde " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "Where " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Dónde " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Dónde " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "Where " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Dónde " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Where " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Dónde " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "Where " + sperfmTheydont[s] + vpeng[v];
@@ -18767,14 +17576,11 @@ public class Oo {
                 ps2 = "¿Por qué " + vn2[v] + "?";
                 ps2eng = "Why do you " + vnb[v];
 
-                ps3 = "¿Por qué " + vn3[v] + "él?";
+                ps3 = "¿Por qué " + vnb3[v] + "él?";
                 ps3eng = "Why does he " + vnb[v];
 
-                ps3ella = "¿Por qué " + vn3[v] + "ella?";
+                ps3ella = "¿Por qué " + vnb3[v] + "ella?";
                 ps3she = "Why does she " + vnb[v];
-
-                ps3eso = "¿Por qué " + vn3[v] + "eso?";
-                ps3it = "Why does it " + vnb[v];
 
                 ps4 = "¿Por qué " + vn4[v] + "?";
                 ps4eng = "Why do they " + vnb[v];
@@ -18789,14 +17595,11 @@ public class Oo {
                 ps2 = "¿Por qué no " + vn2[v] + "?";
                 ps2eng = "Why don't you " + vnb[v];
 
-                ps3 = "¿Por qué no " + vn3[v] + "él?";
+                ps3 = "¿Por qué no " + vnb3[v] + "él?";
                 ps3eng = "Why doesn't he " + vnb[v];
 
-                ps3ella = "¿Por qué no " + vn3[v] + "ella?";
+                ps3ella = "¿Por qué no " + vnb3[v] + "ella?";
                 ps3she = "Why doesn't she " + vnb[v];
-
-                ps3eso = "¿Por qué no " + vn3[v] + "eso?";
-                ps3it = "Why doesn't it " + vnb[v];
 
                 ps4 = "¿Por qué no " + vn4[v] + "?";
                 ps4eng = "Why don't they " + vnb[v];
@@ -18820,9 +17623,6 @@ public class Oo {
                     ps3ella = "¿Por qué " + ps3p[v] + "ella?";
                     ps3she = "Why did she " + vnb[v];
 
-                    ps3eso = "¿Por qué " + ps3p[v] + "eso?";
-                    ps3it = "Why did it " + vnb[v];
-
                     ps4 = "¿Por qué " + vn4p[v] + "?";
                     ps4eng = "Why did they " + vnb[v];
 
@@ -18840,9 +17640,6 @@ public class Oo {
 
                     ps3ella = "¿Por qué " + ps3imp[v] + "ella?";
                     ps3she = "Why did she " + vnb[v];
-
-                    ps3eso = "¿Por qué " + ps3imp[v] + "eso?";
-                    ps3it = "Why did it " + vnb[v];
 
                     ps4 = "¿Por qué " + vn4imp[v] + "?";
                     ps4eng = "Why did they " + vnb[v];
@@ -18865,9 +17662,6 @@ public class Oo {
                     ps3ella = "¿Por qué no " + ps3p[v] + "ella?";
                     ps3she = "Why didn't she " + vnb[v];
 
-                    ps3eso = "¿Por qué no " + ps3p[v] + "eso?";
-                    ps3it = "Why didn't it " + vnb[v];
-
                     ps4 = "¿Por qué no " + vn4p[v] + "?";
                     ps4eng = "Why didn't they " + vnb[v];
 
@@ -18885,9 +17679,6 @@ public class Oo {
 
                     ps3ella = "¿Por qué no " + ps3imp[v] + "ella?";
                     ps3she = "Why didn't she " + vnb[v];
-
-                    ps3eso = "¿Por qué no " + ps3imp[v] + "eso?";
-                    ps3it = "Why didn't it " + vnb[v];
 
                     ps4 = "¿Por qué no " + vn4imp[v] + "?";
                     ps4eng = "Why didn't they " + vnb[v];
@@ -18911,9 +17702,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + vn3f[v] + "ella?";
                 ps3she = "Why will she " + vnb[v];
 
-                ps3eso = "¿Por qué " + vn3f[v] + "eso?";
-                ps3it = "Why will it " + vnb[v];
-
                 ps4 = "¿Por qué " + vn4f[v] + "?";
                 ps4eng = "Why will they " + vnb[v];
 
@@ -18933,9 +17721,6 @@ public class Oo {
                 ps3ella = "¿Por qué no " + vn3f[v] + "ella?";
                 ps3she = "Why won't she " + vnb[v];
 
-                ps3eso = "¿Por qué no " + vn3f[v] + "eso?";
-                ps3it = "Why won't it " + vnb[v];
-
                 ps4 = "¿Por qué no " + vn4f[v] + "?";
                 ps4eng = "Why won't they " + vnb[v];
 
@@ -18953,14 +17738,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "Why " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Por qué " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Por qué " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "Why " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Por qué " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Por qué " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "Why " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Por qué " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Why " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Por qué " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "Why " + scontThey[s] + vnbc[v];
@@ -18976,14 +17758,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "Why " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Por qué " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Por qué " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "Why " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Por qué " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Por qué " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "Why " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Por qué " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Why " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Por qué " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "Why " + scontTheydont[s] + vnbc[v];
@@ -19002,14 +17781,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "Why " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Por qué " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Por qué " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "Why " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Por qué " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Por qué " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "Why " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Por qué " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Why " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Por qué " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "Why " + sperfThey[s] + vpeng[v];
@@ -19024,14 +17800,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "Why " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Por qué " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Por qué " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "Why " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Por qué " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Por qué " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "Why " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Por qué " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Why " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Por qué " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "Why " + sperfTheydont[s] + vpeng[v];
@@ -19061,9 +17834,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + vn3w[v] + "ella?";
                 ps3she = "Why " + "would she " + vnb[v];
 
-                ps3eso = "¿Por qué " + vn3w[v] + "eso?";
-                ps3it = "Why " + "would it " + vnb[v];
-
                 ps4 = "¿Por qué " + vn4w[v] + "?";
                 ps4eng = "Why " + "would they " + vnb[v];
 
@@ -19082,9 +17852,6 @@ public class Oo {
 
                 ps3ella = "¿Por qué no " + vn3w[v] + "ella?";
                 ps3she = "Why " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Por qué no " + vn3w[v] + "eso?";
-                ps3it = "Why " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Por qué no " + vn4w[v] + "?";
                 ps4eng = "Why " + "wouldn't they " + vnb[v];
@@ -19107,9 +17874,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + "podría " + vnbs[v] + "ella?";
                 ps3she = "Why " + "could she " + vnb[v];
 
-                ps3eso = "¿Por qué " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Why " + "could it " + vnb[v];
-
                 ps4 = "¿Por qué " + "podrían " + vnbs[v] + "?";
                 ps4eng = "Why " + "could they " + vnb[v];
 
@@ -19128,9 +17892,6 @@ public class Oo {
 
                 ps3ella = "¿Por qué no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "Why " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Por qué no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Why " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Por qué no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "Why " + "couldn't they " + vnb[v];
@@ -19153,9 +17914,6 @@ public class Oo {
                 ps3ella = "¿Por qué " + "debería " + vnbs[v] + "ella?";
                 ps3she = "Why " + "should she " + vnb[v];
 
-                ps3eso = "¿Por qué " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Why " + "should it " + vnb[v];
-
                 ps4 = "¿Por qué " + "deberían " + vnbs[v] + "?";
                 ps4eng = "Why " + "should they " + vnb[v];
 
@@ -19175,9 +17933,6 @@ public class Oo {
                 ps3ella = "¿Por qué no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "Why " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Por qué no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Why " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Por qué no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "Why " + "shouldn't they " + vnb[v];
 
@@ -19196,14 +17951,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "Why " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Por qué " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Por qué " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "Why " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Por qué " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Por qué " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "Why " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Por qué " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Why " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Por qué " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "Why " + scontmThey[s] + vnbc[v];
@@ -19219,14 +17971,11 @@ public class Oo {
                 ps2 = "¿Por qué " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "Why " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Por qué " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Por qué " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "Why " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Por qué " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Por qué " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "Why " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Por qué " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Why " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Por qué " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "Why " + scontmTheydont[s] + vnbc[v];
@@ -19245,14 +17994,11 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "Why " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Por qué " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Por qué " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "Why " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Por qué " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Por qué " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "Why " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Por qué " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Why " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Por qué " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "Why " + sperfmThey[s] + vpeng[v];
@@ -19267,552 +18013,17 @@ public class Oo {
                 ps2 = "¿Por qué " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "Why " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Por qué " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Por qué " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "Why " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Por qué " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Por qué " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "Why " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Por qué " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Why " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Por qué " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "Why " + sperfmTheydont[s] + vpeng[v];
 
                 ps5 = "¿Por qué " + sperfmWeespno[s] + vpsp[v] + "?";
                 ps5eng = "Why " + sperfmWedont[s] + vpeng[v];
-
-                break;
-        }
-    }//LR 2023
-
-    //Who
-    public void GenWhoSimp1() {
-        int neg = (int) (Math.random() * 6);
-        int sr = (int) (Math.random() * 2);
-        switch (neg) {
-            //Presente
-            case 0:
-                ps1 = "¿Quién " + vn1[v] + "?";
-                ps1eng = "Who do i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2[v] + "?";
-                ps2eng = "Who do you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3[v] + "él?";
-                ps3eng = "Who does he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3[v] + "ella?";
-                ps3she = "Who does she " + vnb[v];
-
-                ps3eso = "¿Quién " + vn3[v] + "eso?";
-                ps3it = "Who does it " + vnb[v];
-
-                ps4 = "¿Quién " + vn4[v] + "?";
-                ps4eng = "Who do they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5[v] + "?";
-                ps5eng = "Who do we " + vnb[v];
-                break;
-            case 1:
-                ps1 = "¿Quién no " + vn1[v] + "?";
-                ps1eng = "Who don't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2[v] + "?";
-                ps2eng = "Who don't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3[v] + "él?";
-                ps3eng = "Who doesn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3[v] + "ella?";
-                ps3she = "Who doesn't she " + vnb[v];
-
-                ps3eso = "¿Quién no " + vn3[v] + "eso?";
-                ps3it = "Who doesn't it " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4[v] + "?";
-                ps4eng = "Who don't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5[v] + "?";
-                ps5eng = "Who don't we " + vnb[v];
-                break;
-
-            //Pasado
-            case 2:
-                if (sr == 0) {
-                    ps1 = "¿Quién " + ps1pre[v] + "?";
-                    ps1eng = "Who did i" + vnb[v];
-
-                    ps2 = "¿Quién " + ps2pre[v] + "?";
-                    ps2eng = "Who did you " + vnb[v];
-
-                    ps3 = "¿Quién " + ps3p[v] + "él?";
-                    ps3eng = "Who did he " + vnb[v];
-
-                    ps3ella = "¿Quién " + ps3p[v] + "ella?";
-                    ps3she = "Who did she " + vnb[v];
-
-                    ps3eso = "¿Quién " + ps3p[v] + "eso?";
-                    ps3it = "Who did it " + vnb[v];
-
-                    ps4 = "¿Quién " + vn4p[v] + "?";
-                    ps4eng = "Who did they " + vnb[v];
-
-                    ps5 = "¿Quién " + vn5p[v] + "?";
-                    ps5eng = "Who did we " + vnb[v];
-                } else {
-                    ps1 = "¿Quién " + ps1imp[v] + "?";
-                    ps1eng = "Who did i " + vnb[v];
-
-                    ps2 = "¿Quién " + ps2imp[v] + "?";
-                    ps2eng = "Who did you " + vnb[v];
-
-                    ps3 = "¿Quién " + ps3imp[v] + "él?";
-                    ps3eng = "Who did he " + vnb[v];
-
-                    ps3ella = "¿Quién " + ps3imp[v] + "ella?";
-                    ps3she = "Who did she " + vnb[v];
-
-                    ps3eso = "¿Quién " + ps3imp[v] + "eso?";
-                    ps3it = "Who did it " + vnb[v];
-
-                    ps4 = "¿Quién " + vn4imp[v] + "?";
-                    ps4eng = "Who did they " + vnb[v];
-
-                    ps5 = "¿Quién " + vn5imp[v] + "?";
-                    ps5eng = "Who did we " + vnb[v];
-                }
-                break;
-            case 3:
-                if (sr == 0) {
-                    ps1 = "¿Quién no " + ps1pre[v] + "?";
-                    ps1eng = "Who didn't i " + vnb[v];
-
-                    ps2 = "¿Quién no " + ps2pre[v] + "?";
-                    ps2eng = "Who didn't you " + vnb[v];
-
-                    ps3 = "¿Quién no " + ps3p[v] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v];
-
-                    ps3ella = "¿Quién no " + ps3p[v] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v];
-
-                    ps3eso = "¿Quién no " + ps3p[v] + "eso?";
-                    ps3it = "Who didn't it " + vnb[v];
-
-                    ps4 = "¿Quién no " + vn4p[v] + "?";
-                    ps4eng = "Who didn't they " + vnb[v];
-
-                    ps5 = "¿Quién no " + vn5p[v] + "?";
-                    ps5eng = "Who didn't we " + vnb[v];
-                } else {
-                    ps1 = "¿Quién no " + ps1imp[v] + "?";
-                    ps1eng = "Who didn't i " + vnb[v];
-
-                    ps2 = "¿Quién no " + ps2imp[v] + "?";
-                    ps2eng = "Who didn't you " + vnb[v];
-
-                    ps3 = "¿Quién no " + ps3imp[v] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v];
-
-                    ps3ella = "¿Quién no " + ps3imp[v] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v];
-
-                    ps3eso = "¿Quién no " + ps3imp[v] + "eso?";
-                    ps3it = "Who didn't it " + vnb[v];
-
-                    ps4 = "¿Quién no " + vn4imp[v] + "?";
-                    ps4eng = "Who didn't they " + vnb[v];
-
-                    ps5 = "¿Quién no " + vn5imp[v] + "?";
-                    ps5eng = "Who didn't we " + vnb[v];
-                }
-                break;
-
-            //Futuro
-            case 4:
-                ps1 = "¿Quién " + vn1f[v] + "?";
-                ps1eng = "Who will i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2f[v] + "?";
-                ps2eng = "Who will you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3f[v] + "él?";
-                ps3eng = "Who will he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3f[v] + "ella?";
-                ps3she = "Who will she " + vnb[v];
-
-                ps3eso = "¿Quién " + vn3f[v] + "eso?";
-                ps3it = "Who will it " + vnb[v];
-
-                ps4 = "¿Quién " + vn4f[v] + "?";
-                ps4eng = "Who will they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5f[v] + "?";
-                ps5eng = "Who will we " + vnb[v];
-                break;
-            case 5:
-                ps1 = "¿Quién no " + vn1f[v] + "?";
-                ps1eng = "Who won't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2f[v] + "?";
-                ps2eng = "Who won't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3f[v] + "él?";
-                ps3eng = "Who won't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3f[v] + "ella?";
-                ps3she = "Who won't she " + vnb[v];
-
-                ps3eso = "¿Quién no " + vn3f[v] + "eso?";
-                ps3it = "Who won't it " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4f[v] + "?";
-                ps4eng = "Who won't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5f[v] + "?";
-                ps5eng = "Who won't we " + vnb[v];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoCont1() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + scontIesp[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontI[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontYouesp[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontYou[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontHeesp[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontHe[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontSheesp[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Quién " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Who " + scontIt[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontTheyesp[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontThey[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontWeesp[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontWe[s] + vnbc[v];
-                break;
-
-            case 1:
-                ps1 = "¿Quién " + scontIespno[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontIdont[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontYouespno[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontYoudont[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontHeespno[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontHedont[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontSheespno[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Quién " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Who " + scontItdont[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontTheyespno[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontTheydont[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontWeespno[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontWedont[s] + vnbc[v];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoPerf1() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + sperfIesp[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfI[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfYouesp[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfYou[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfHeesp[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfHe[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfSheesp[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Quién " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Who " + sperfIt[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfTheyesp[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfThey[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfWeesp[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfWe[s] + vpeng[v];
-                break;
-            case 1:
-                ps1 = "¿Quién " + sperfIespno[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfIdont[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfYouespno[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfYoudont[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfHeespno[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfHedont[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfSheespno[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Quién " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Who " + sperfItdont[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfTheyespno[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfTheydont[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfWeespno[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfWedont[s] + vpeng[v];
-
-                break;
-        }
-    }//LR 2023
-
-    //Who Modales
-    public void GenWhoModalsSimp1() {
-        int neg = (int) (Math.random() * 6);
-        switch (neg){
-            //Would
-            case 0:
-                ps1 = "¿Quién " + vn1w[v] + "?";
-                ps1eng = "Who " + "would i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2w[v] + "?";
-                ps2eng = "Who " + "would you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3w[v] + "él?";
-                ps3eng = "Who " + "would he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3w[v] + "ella?";
-                ps3she = "Who " + "would she " + vnb[v];
-
-                ps3eso = "¿Quién " + vn3w[v] + "eso?";
-                ps3it = "Who " + "would it " + vnb[v];
-
-                ps4 = "¿Quién " + vn4w[v] + "?";
-                ps4eng = "Who " + "would they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5w[v] + "?";
-                ps5eng = "Who " + "would we " + vnb[v];
-                break;
-            case 1:
-                ps1 = "¿Quién no " + vn1w[v] + "?";
-                ps1eng = "Who " + "wouldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2w[v] + "?";
-                ps2eng = "Who " + "wouldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3w[v] + "él?";
-                ps3eng = "Who " + "wouldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3w[v] + "ella?";
-                ps3she = "Who " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Quién no " + vn3w[v] + "eso?";
-                ps3it = "Who " + "wouldn't it " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4w[v] + "?";
-                ps4eng = "Who " + "wouldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5w[v] + "?";
-                ps5eng = "Who " + "wouldn't we " + vnb[v];
-                break;
-
-            //Could
-            case 2:
-                ps1 = "¿Quién " + "podría " + vnbs[v] + "?";
-                ps1eng = "Who " + "could i " + vnb[v];
-
-                ps2 = "¿Quién " + "podrías " + vnbs[v] + "?";
-                ps2eng = "Who " + "could you " + vnb[v];
-
-                ps3 = "¿Quién " + "podría " + vnbs[v] + "él?";
-                ps3eng = "Who " + "could he " + vnb[v];
-
-                ps3ella = "¿Quién " + "podría " + vnbs[v] + "ella?";
-                ps3she = "Who " + "could she " + vnb[v];
-
-                ps3eso = "¿Quién " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Who " + "could it " + vnb[v];
-
-                ps4 = "¿Quién " + "podrían " + vnbs[v] + "?";
-                ps4eng = "Who " + "could they " + vnb[v];
-
-                ps5 = "¿Quién " + "podríamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "could we " + vnb[v];
-                break;
-            case 3:
-                ps1 = "¿Quién no " + "podría " + vnbs[v] + "?";
-                ps1eng = "Who " + "couldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + "podrías " + vnbs[v] + "?";
-                ps2eng = "Who " + "couldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + "podría " + vnbs[v] + "él?";
-                ps3eng = "Who " + "couldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + "podría " + vnbs[v] + "ella?";
-                ps3she = "Who " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Quién no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "Who " + "couldn't it " + vnb[v];
-
-                ps4 = "¿Quién no " + "podrían " + vnbs[v] + "?";
-                ps4eng = "Who " + "couldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + "podríamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "couldn't we " + vnb[v];
-                break;
-
-            //Should
-            case 4:
-                ps1 = "¿Quién " + "debería " + vnbs[v] + "?";
-                ps1eng = "Who " + "should i " + vnb[v];
-
-                ps2 = "¿Quién " + "deberías " + vnbs[v] + "?";
-                ps2eng = "Who " + "should you " + vnb[v];
-
-                ps3 = "¿Quién " + "debería " + vnbs[v] + "él?";
-                ps3eng = "Who " + "should he " + vnb[v];
-
-                ps3ella = "¿Quién " + "debería " + vnbs[v] + "ella?";
-                ps3she = "Who " + "should she " + vnb[v];
-
-                ps3eso = "¿Quién " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Who " + "should it " + vnb[v];
-
-                ps4 = "¿Quién " + "deberían " + vnbs[v] + "?";
-                ps4eng = "Who " + "should they " + vnb[v];
-
-                ps5 = "¿Quién " + "deberíamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "should we " + vnb[v];
-                break;
-            case 5:
-                ps1 = "¿Quién no " + "debería " + vnbs[v] + "?";
-                ps1eng = "Who " + "shouldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + "deberías " + vnbs[v] + "?";
-                ps2eng = "Who " + "shouldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + "debería " + vnbs[v] + "él?";
-                ps3eng = "Who " + "shouldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + "debería " + vnbs[v] + "ella?";
-                ps3she = "Who " + "shouldn't she " + vnb[v];
-
-                ps3eso = "¿Quién no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "Who " + "shouldn't it " + vnb[v];
-
-                ps4 = "¿Quién no " + "deberían " + vnbs[v] + "?";
-                ps4eng = "Who " + "shouldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + "deberíamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "shouldn't we " + vnb[v];
-                break;
-
-        }
-    }//LR 2023
-    public void GenWhoModalsCont1() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + scontmIesp[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontmI[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontmYouesp[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontmYou[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontmHeesp[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontmHe[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontmSheesp[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Quién " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "Who " + scontmIt[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontmTheyesp[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontmThey[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontmWeesp[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontmWe[s] + vnbc[v];
-                break;
-
-            case 1:
-                ps1 = "¿Quién " + scontmIespno[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontmIdont[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontmYouespno[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontmYoudont[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontmHeespno[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontmHedont[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontmSheespno[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Quién " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "Who " + scontmItdont[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontmTheyespno[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontmTheydont[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontmWeespno[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontmWedont[s] + vnbc[v];
-                break;
-        }
-    }//LR 2023
-    public void GenWhoModalsPerf1() {
-        switch (neg) {
-            case 0:
-                ps1 = "¿Quién " + sperfmIesp[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfmI[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfmYouesp[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfmYou[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfmHeesp[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfmHe[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfmSheesp[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Quién " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "Who " + sperfmIt[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfmTheyesp[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfmThey[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfmWeesp[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfmWe[s] + vpeng[v];
-                break;
-            case 1:
-                ps1 = "¿Quién " + sperfmIespno[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfmIdont[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfmYouespno[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfmYoudont[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfmHeespno[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfmHedont[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfmSheespno[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Quién " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "Who " + sperfmItdont[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfmTheyespno[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfmTheydont[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfmWeespno[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfmWedont[s] + vpeng[v];
 
                 break;
         }
@@ -19831,14 +18042,11 @@ public class Oo {
                 ps2 = "¿Cómo " + vn2[v] + "?";
                 ps2eng = "How do you " + vnb[v];
 
-                ps3 = "¿Cómo " + vn3[v] + "él?";
+                ps3 = "¿Cómo " + vnb3[v] + "él?";
                 ps3eng = "How does he " + vnb[v];
 
-                ps3ella = "¿Cómo " + vn3[v] + "ella?";
+                ps3ella = "¿Cómo " + vnb3[v] + "ella?";
                 ps3she = "How does she " + vnb[v];
-
-                ps3eso = "¿Cómo " + vn3[v] + "eso?";
-                ps3it = "How does it " + vnb[v];
 
                 ps4 = "¿Cómo " + vn4[v] + "?";
                 ps4eng = "How do they " + vnb[v];
@@ -19853,14 +18061,11 @@ public class Oo {
                 ps2 = "¿Cómo no " + vn2[v] + "?";
                 ps2eng = "How don't you " + vnb[v];
 
-                ps3 = "¿Cómo no " + vn3[v] + "él?";
+                ps3 = "¿Cómo no " + vnb3[v] + "él?";
                 ps3eng = "How doesn't he " + vnb[v];
 
-                ps3ella = "¿Cómo no " + vn3[v] + "ella?";
+                ps3ella = "¿Cómo no " + vnb3[v] + "ella?";
                 ps3she = "How doesn't she " + vnb[v];
-
-                ps3eso = "¿Cómo no " + vn3[v] + "eso?";
-                ps3it = "How doesn't it " + vnb[v];
 
                 ps4 = "¿Cómo no " + vn4[v] + "?";
                 ps4eng = "How don't they " + vnb[v];
@@ -19884,9 +18089,6 @@ public class Oo {
                     ps3ella = "¿Cómo " + ps3p[v] + "ella?";
                     ps3she = "How did she " + vnb[v];
 
-                    ps3eso = "¿Cómo " + ps3p[v] + "eso?";
-                    ps3it = "How did it " + vnb[v];
-
                     ps4 = "¿Cómo " + vn4p[v] + "?";
                     ps4eng = "How did they " + vnb[v];
 
@@ -19904,9 +18106,6 @@ public class Oo {
 
                     ps3ella = "¿Cómo " + ps3imp[v] + "ella?";
                     ps3she = "How did she " + vnb[v];
-
-                    ps3eso = "¿Cómo " + ps3imp[v] + "eso?";
-                    ps3it = "How did it " + vnb[v];
 
                     ps4 = "¿Cómo " + vn4imp[v] + "?";
                     ps4eng = "How did they " + vnb[v];
@@ -19929,9 +18128,6 @@ public class Oo {
                     ps3ella = "¿Cómo no " + ps3p[v] + "ella?";
                     ps3she = "How didn't she " + vnb[v];
 
-                    ps3eso = "¿Cómo no " + ps3p[v] + "eso?";
-                    ps3it = "How didn't it " + vnb[v];
-
                     ps4 = "¿Cómo no " + vn4p[v] + "?";
                     ps4eng = "How didn't they " + vnb[v];
 
@@ -19949,9 +18145,6 @@ public class Oo {
 
                     ps3ella = "¿Cómo no " + ps3imp[v] + "ella?";
                     ps3she = "How didn't she " + vnb[v];
-
-                    ps3eso = "¿Cómo no " + ps3imp[v] + "eso?";
-                    ps3it = "How didn't it " + vnb[v];
 
                     ps4 = "¿Cómo no " + vn4imp[v] + "?";
                     ps4eng = "How didn't they " + vnb[v];
@@ -19975,9 +18168,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + vn3f[v] + "ella?";
                 ps3she = "How will she " + vnb[v];
 
-                ps3eso = "¿Cómo " + vn3f[v] + "eso?";
-                ps3it = "How will it " + vnb[v];
-
                 ps4 = "¿Cómo " + vn4f[v] + "?";
                 ps4eng = "How will they " + vnb[v];
 
@@ -19997,9 +18187,6 @@ public class Oo {
                 ps3ella = "¿Cómo no " + vn3f[v] + "ella?";
                 ps3she = "How won't she " + vnb[v];
 
-                ps3eso = "¿Cómo no " + vn3f[v] + "eso?";
-                ps3it = "How won't it " + vnb[v];
-
                 ps4 = "¿Cómo no " + vn4f[v] + "?";
                 ps4eng = "How won't they " + vnb[v];
 
@@ -20017,14 +18204,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Cómo " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cómo " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Cómo " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cómo " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Cómo " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Cómo " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How " + scontThey[s] + vnbc[v];
@@ -20040,14 +18224,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cómo " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cómo " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cómo " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cómo " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cómo " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Cómo " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How " + scontTheydont[s] + vnbc[v];
@@ -20066,14 +18247,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Cómo " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cómo " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Cómo " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cómo " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Cómo " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Cómo " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How " + sperfThey[s] + vpeng[v];
@@ -20088,14 +18266,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cómo " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cómo " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cómo " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cómo " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cómo " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Cómo " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How " + sperfTheydont[s] + vpeng[v];
@@ -20125,9 +18300,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + vn3w[v] + "ella?";
                 ps3she = "How " + "would she " + vnb[v];
 
-                ps3eso = "¿Cómo " + vn3w[v] + "eso?";
-                ps3it = "How " + "would it " + vnb[v];
-
                 ps4 = "¿Cómo " + vn4w[v] + "?";
                 ps4eng = "How " + "would they " + vnb[v];
 
@@ -20146,9 +18318,6 @@ public class Oo {
 
                 ps3ella = "¿Cómo no " + vn3w[v] + "ella?";
                 ps3she = "How " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Cómo no " + vn3w[v] + "eso?";
-                ps3it = "How " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Cómo no " + vn4w[v] + "?";
                 ps4eng = "How " + "wouldn't they " + vnb[v];
@@ -20171,9 +18340,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How " + "could she " + vnb[v];
 
-                ps3eso = "¿Cómo " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How " + "could it " + vnb[v];
-
                 ps4 = "¿Cómo " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How " + "could they " + vnb[v];
 
@@ -20192,9 +18358,6 @@ public class Oo {
 
                 ps3ella = "¿Cómo no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Cómo no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Cómo no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How " + "couldn't they " + vnb[v];
@@ -20217,9 +18380,6 @@ public class Oo {
                 ps3ella = "¿Cómo " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How " + "should she " + vnb[v];
 
-                ps3eso = "¿Cómo " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How " + "should it " + vnb[v];
-
                 ps4 = "¿Cómo " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How " + "should they " + vnb[v];
 
@@ -20239,9 +18399,6 @@ public class Oo {
                 ps3ella = "¿Cómo no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Cómo no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Cómo no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How " + "shouldn't they " + vnb[v];
 
@@ -20260,14 +18417,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Cómo " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cómo " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Cómo " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cómo " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Cómo " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Cómo " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How " + scontmThey[s] + vnbc[v];
@@ -20283,14 +18437,11 @@ public class Oo {
                 ps2 = "¿Cómo " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cómo " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cómo " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cómo " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cómo " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cómo " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Cómo " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How " + scontmTheydont[s] + vnbc[v];
@@ -20309,14 +18460,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Cómo " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cómo " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Cómo " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cómo " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Cómo " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Cómo " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How " + sperfmThey[s] + vpeng[v];
@@ -20331,14 +18479,11 @@ public class Oo {
                 ps2 = "¿Cómo " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cómo " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cómo " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cómo " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cómo " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cómo " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Cómo " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How " + sperfmTheydont[s] + vpeng[v];
@@ -20363,14 +18508,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + vn2[v] + "?";
                 ps2eng = "How much do you " + vnb[v];
 
-                ps3 = "¿Cuanto " + vn3[v] + "él?";
+                ps3 = "¿Cuanto " + vnb3[v] + "él?";
                 ps3eng = "How much does he " + vnb[v];
 
-                ps3ella = "¿Cuanto " + vn3[v] + "ella?";
+                ps3ella = "¿Cuanto " + vnb3[v] + "ella?";
                 ps3she = "How much does she " + vnb[v];
-
-                ps3eso = "¿Cuanto " + vn3[v] + "eso?";
-                ps3it = "How much does it " + vnb[v];
 
                 ps4 = "¿Cuanto " + vn4[v] + "?";
                 ps4eng = "How much do they " + vnb[v];
@@ -20385,14 +18527,11 @@ public class Oo {
                 ps2 = "¿Cuanto no " + vn2[v] + "?";
                 ps2eng = "How much don't you " + vnb[v];
 
-                ps3 = "¿Cuanto no " + vn3[v] + "él?";
+                ps3 = "¿Cuanto no " + vnb3[v] + "él?";
                 ps3eng = "How much doesn't he " + vnb[v];
 
-                ps3ella = "¿Cuanto no " + vn3[v] + "ella?";
+                ps3ella = "¿Cuanto no " + vnb3[v] + "ella?";
                 ps3she = "How much doesn't she " + vnb[v];
-
-                ps3eso = "¿Cuanto no " + vn3[v] + "eso?";
-                ps3it = "How much doesn't it " + vnb[v];
 
                 ps4 = "¿Cuanto no " + vn4[v] + "?";
                 ps4eng = "How much don't they " + vnb[v];
@@ -20416,9 +18555,6 @@ public class Oo {
                     ps3ella = "¿Cuanto " + ps3p[v] + "ella?";
                     ps3she = "How much did she " + vnb[v];
 
-                    ps3eso = "¿Cuanto " + ps3p[v] + "eso?";
-                    ps3it = "How much did it " + vnb[v];
-
                     ps4 = "¿Cuanto " + vn4p[v] + "?";
                     ps4eng = "How much did they " + vnb[v];
 
@@ -20436,9 +18572,6 @@ public class Oo {
 
                     ps3ella = "¿Cuanto " + ps3imp[v] + "ella?";
                     ps3she = "How much did she " + vnb[v];
-
-                    ps3eso = "¿Cuanto " + ps3imp[v] + "eso?";
-                    ps3it = "How much did it " + vnb[v];
 
                     ps4 = "¿Cuanto " + vn4imp[v] + "?";
                     ps4eng = "How much did they " + vnb[v];
@@ -20461,9 +18594,6 @@ public class Oo {
                     ps3ella = "¿Cuanto no " + ps3p[v] + "ella?";
                     ps3she = "How much didn't she " + vnb[v];
 
-                    ps3eso = "¿Cuanto no " + ps3p[v] + "eso?";
-                    ps3it = "How much didn't it " + vnb[v];
-
                     ps4 = "¿Cuanto no " + vn4p[v] + "?";
                     ps4eng = "How much didn't they " + vnb[v];
 
@@ -20481,9 +18611,6 @@ public class Oo {
 
                     ps3ella = "¿Cuanto no " + ps3imp[v] + "ella?";
                     ps3she = "How much didn't she " + vnb[v];
-
-                    ps3eso = "¿Cuanto no " + ps3imp[v] + "eso?";
-                    ps3it = "How much didn't it " + vnb[v];
 
                     ps4 = "¿Cuanto no " + vn4imp[v] + "?";
                     ps4eng = "How much didn't they " + vnb[v];
@@ -20507,9 +18634,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + vn3f[v] + "ella?";
                 ps3she = "How much will she " + vnb[v];
 
-                ps3eso = "¿Cuanto " + vn3f[v] + "eso?";
-                ps3it = "How much will it " + vnb[v];
-
                 ps4 = "¿Cuanto " + vn4f[v] + "?";
                 ps4eng = "How much will they " + vnb[v];
 
@@ -20529,9 +18653,6 @@ public class Oo {
                 ps3ella = "¿Cuanto no " + vn3f[v] + "ella?";
                 ps3she = "How much won't she " + vnb[v];
 
-                ps3eso = "¿Cuanto no " + vn3f[v] + "eso?";
-                ps3it = "How much won't it " + vnb[v];
-
                 ps4 = "¿Cuanto no " + vn4f[v] + "?";
                 ps4eng = "How much won't they " + vnb[v];
 
@@ -20549,14 +18670,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How much " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Cuanto " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuanto " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How much " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuanto " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuanto " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How much " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuanto " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How much " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Cuanto " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How much " + scontThey[s] + vnbc[v];
@@ -20572,14 +18690,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How much " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuanto " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuanto " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How much " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuanto " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuanto " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How much " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuanto " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How much " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuanto " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How much " + scontTheydont[s] + vnbc[v];
@@ -20598,14 +18713,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How much " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Cuanto " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuanto " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How much " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuanto " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuanto " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How much " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuanto " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How much " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Cuanto " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How much " + sperfThey[s] + vpeng[v];
@@ -20620,14 +18732,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How much " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuanto " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuanto " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How much " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuanto " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuanto " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How much " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuanto " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How much " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuanto " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How much " + sperfTheydont[s] + vpeng[v];
@@ -20657,9 +18766,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + vn3w[v] + "ella?";
                 ps3she = "How much " + "would she " + vnb[v];
 
-                ps3eso = "¿Cuanto " + vn3w[v] + "eso?";
-                ps3it = "How much " + "would it " + vnb[v];
-
                 ps4 = "¿Cuanto " + vn4w[v] + "?";
                 ps4eng = "How much " + "would they " + vnb[v];
 
@@ -20678,9 +18784,6 @@ public class Oo {
 
                 ps3ella = "¿Cuanto no " + vn3w[v] + "ella?";
                 ps3she = "How much " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Cuanto no " + vn3w[v] + "eso?";
-                ps3it = "How much " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Cuanto no " + vn4w[v] + "?";
                 ps4eng = "How much " + "wouldn't they " + vnb[v];
@@ -20703,9 +18806,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How much " + "could she " + vnb[v];
 
-                ps3eso = "¿Cuanto " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How much " + "could it " + vnb[v];
-
                 ps4 = "¿Cuanto " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How much " + "could they " + vnb[v];
 
@@ -20724,9 +18824,6 @@ public class Oo {
 
                 ps3ella = "¿Cuanto no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How much " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Cuanto no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How much " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Cuanto no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How much " + "couldn't they " + vnb[v];
@@ -20749,9 +18846,6 @@ public class Oo {
                 ps3ella = "¿Cuanto " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How much " + "should she " + vnb[v];
 
-                ps3eso = "¿Cuanto " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How much " + "should it " + vnb[v];
-
                 ps4 = "¿Cuanto " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How much " + "should they " + vnb[v];
 
@@ -20771,9 +18865,6 @@ public class Oo {
                 ps3ella = "¿Cuanto no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How much " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Cuanto no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How much " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Cuanto no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How much " + "shouldn't they " + vnb[v];
 
@@ -20792,14 +18883,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How much " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Cuanto " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuanto " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How much " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuanto " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuanto " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How much " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuanto " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How much " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Cuanto " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How much " + scontmThey[s] + vnbc[v];
@@ -20815,14 +18903,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How much " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuanto " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuanto " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How much " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuanto " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuanto " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How much " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuanto " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How much " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuanto " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How much " + scontmTheydont[s] + vnbc[v];
@@ -20841,14 +18926,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How much " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Cuanto " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuanto " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How much " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuanto " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuanto " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How much " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuanto " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How much " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Cuanto " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How much " + sperfmThey[s] + vpeng[v];
@@ -20863,14 +18945,11 @@ public class Oo {
                 ps2 = "¿Cuanto " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How much " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuanto " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuanto " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How much " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuanto " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuanto " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How much " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuanto " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How much " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuanto " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How much " + sperfmTheydont[s] + vpeng[v];
@@ -20895,14 +18974,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + vn2[v] + "?";
                 ps2eng = "How many do you " + vnb[v];
 
-                ps3 = "¿Cuantos " + vn3[v] + "él?";
+                ps3 = "¿Cuantos " + vnb3[v] + "él?";
                 ps3eng = "How many does he " + vnb[v];
 
-                ps3ella = "¿Cuantos " + vn3[v] + "ella?";
+                ps3ella = "¿Cuantos " + vnb3[v] + "ella?";
                 ps3she = "How many does she " + vnb[v];
-
-                ps3eso = "¿Cuantos " + vn3[v] + "eso?";
-                ps3it = "How many does it " + vnb[v];
 
                 ps4 = "¿Cuantos " + vn4[v] + "?";
                 ps4eng = "How many do they " + vnb[v];
@@ -20917,14 +18993,11 @@ public class Oo {
                 ps2 = "¿Cuantos no " + vn2[v] + "?";
                 ps2eng = "How many don't you " + vnb[v];
 
-                ps3 = "¿Cuantos no " + vn3[v] + "él?";
+                ps3 = "¿Cuantos no " + vnb3[v] + "él?";
                 ps3eng = "How many doesn't he " + vnb[v];
 
-                ps3ella = "¿Cuantos no " + vn3[v] + "ella?";
+                ps3ella = "¿Cuantos no " + vnb3[v] + "ella?";
                 ps3she = "How many doesn't she " + vnb[v];
-
-                ps3eso = "¿Cuantos no " + vn3[v] + "eso?";
-                ps3it = "How many doesn't it " + vnb[v];
 
                 ps4 = "¿Cuantos no " + vn4[v] + "?";
                 ps4eng = "How many don't they " + vnb[v];
@@ -20948,9 +19021,6 @@ public class Oo {
                     ps3ella = "¿Cuantos " + ps3p[v] + "ella?";
                     ps3she = "How many did she " + vnb[v];
 
-                    ps3eso = "¿Cuantos " + ps3p[v] + "eso?";
-                    ps3it = "How many did it " + vnb[v];
-
                     ps4 = "¿Cuantos " + vn4p[v] + "?";
                     ps4eng = "How many did they " + vnb[v];
 
@@ -20968,9 +19038,6 @@ public class Oo {
 
                     ps3ella = "¿Cuantos " + ps3imp[v] + "ella?";
                     ps3she = "How many did she " + vnb[v];
-
-                    ps3eso = "¿Cuantos " + ps3imp[v] + "eso?";
-                    ps3it = "How many did it " + vnb[v];
 
                     ps4 = "¿Cuantos " + vn4imp[v] + "?";
                     ps4eng = "How many did they " + vnb[v];
@@ -20993,9 +19060,6 @@ public class Oo {
                     ps3ella = "¿Cuantos no " + ps3p[v] + "ella?";
                     ps3she = "How many didn't she " + vnb[v];
 
-                    ps3eso = "¿Cuantos no " + ps3p[v] + "eso?";
-                    ps3it = "How many didn't it " + vnb[v];
-
                     ps4 = "¿Cuantos no " + vn4p[v] + "?";
                     ps4eng = "How many didn't they " + vnb[v];
 
@@ -21013,9 +19077,6 @@ public class Oo {
 
                     ps3ella = "¿Cuantos no " + ps3imp[v] + "ella?";
                     ps3she = "How many didn't she " + vnb[v];
-
-                    ps3eso = "¿Cuantos no " + ps3imp[v] + "eso?";
-                    ps3it = "How many didn't it " + vnb[v];
 
                     ps4 = "¿Cuantos no " + vn4imp[v] + "?";
                     ps4eng = "How many didn't they " + vnb[v];
@@ -21039,9 +19100,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + vn3f[v] + "ella?";
                 ps3she = "How many will she " + vnb[v];
 
-                ps3eso = "¿Cuantos " + vn3f[v] + "eso?";
-                ps3it = "How many will it " + vnb[v];
-
                 ps4 = "¿Cuantos " + vn4f[v] + "?";
                 ps4eng = "How many will they " + vnb[v];
 
@@ -21061,9 +19119,6 @@ public class Oo {
                 ps3ella = "¿Cuantos no " + vn3f[v] + "ella?";
                 ps3she = "How many won't she " + vnb[v];
 
-                ps3eso = "¿Cuantos no " + vn3f[v] + "eso?";
-                ps3it = "How many won't it " + vnb[v];
-
                 ps4 = "¿Cuantos no " + vn4f[v] + "?";
                 ps4eng = "How many won't they " + vnb[v];
 
@@ -21081,14 +19136,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How many " + scontYou[s] + vnbc[v];
 
-                ps3 = "¿Cuantos " + scontHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuantos " + scont3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How many " + scontHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuantos " + scontSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuantos " + scont3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How many " + scontShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuantos " + scontItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How many " + scontIt[s] + vnbc[v];
 
                 ps4 = "¿Cuantos " + scontTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How many " + scontThey[s] + vnbc[v];
@@ -21104,14 +19156,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How many " + scontYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuantos " + scontHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuantos " + scont3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How many " + scontHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuantos " + scontSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuantos " + scont3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How many " + scontShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuantos " + scontItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How many " + scontItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuantos " + scontTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How many " + scontTheydont[s] + vnbc[v];
@@ -21130,14 +19179,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How many " + sperfYou[s] + vpeng[v];
 
-                ps3 = "¿Cuantos " + sperfHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuantos " + sperf3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How many " + sperfHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuantos " + sperfSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuantos " + sperf3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How many " + sperfShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuantos " + sperfItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How many " + sperfIt[s] + vpeng[v];
 
                 ps4 = "¿Cuantos " + sperfTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How many " + sperfThey[s] + vpeng[v];
@@ -21152,14 +19198,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How many " + sperfYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuantos " + sperfHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuantos " + sperf3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How many " + sperfHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuantos " + sperfSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuantos " + sperf3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How many " + sperfShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuantos " + sperfItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How many " + sperfItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuantos " + sperfTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How many " + sperfTheydont[s] + vpeng[v];
@@ -21189,9 +19232,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + vn3w[v] + "ella?";
                 ps3she = "How many " + "would she " + vnb[v];
 
-                ps3eso = "¿Cuantos " + vn3w[v] + "eso?";
-                ps3it = "How many " + "would it " + vnb[v];
-
                 ps4 = "¿Cuantos " + vn4w[v] + "?";
                 ps4eng = "How many " + "would they " + vnb[v];
 
@@ -21210,9 +19250,6 @@ public class Oo {
 
                 ps3ella = "¿Cuantos no " + vn3w[v] + "ella?";
                 ps3she = "How many " + "wouldn't she " + vnb[v];
-
-                ps3eso = "¿Cuantos no " + vn3w[v] + "eso?";
-                ps3it = "How many " + "wouldn't it " + vnb[v];
 
                 ps4 = "¿Cuantos no " + vn4w[v] + "?";
                 ps4eng = "How many " + "wouldn't they " + vnb[v];
@@ -21235,9 +19272,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How many " + "could she " + vnb[v];
 
-                ps3eso = "¿Cuantos " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How many " + "could it " + vnb[v];
-
                 ps4 = "¿Cuantos " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How many " + "could they " + vnb[v];
 
@@ -21256,9 +19290,6 @@ public class Oo {
 
                 ps3ella = "¿Cuantos no " + "podría " + vnbs[v] + "ella?";
                 ps3she = "How many " + "couldn't she " + vnb[v];
-
-                ps3eso = "¿Cuantos no " + "podría " + vnbs[v] + "eso?";
-                ps3it = "How many " + "couldn't it " + vnb[v];
 
                 ps4 = "¿Cuantos no " + "podrían " + vnbs[v] + "?";
                 ps4eng = "How many " + "couldn't they " + vnb[v];
@@ -21281,9 +19312,6 @@ public class Oo {
                 ps3ella = "¿Cuantos " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How many " + "should she " + vnb[v];
 
-                ps3eso = "¿Cuantos " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How many " + "should it " + vnb[v];
-
                 ps4 = "¿Cuantos " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How many " + "should they " + vnb[v];
 
@@ -21303,9 +19331,6 @@ public class Oo {
                 ps3ella = "¿Cuantos no " + "debería " + vnbs[v] + "ella?";
                 ps3she = "How many " + "shouldn't she " + vnb[v];
 
-                ps3eso = "¿Cuantos no " + "debería " + vnbs[v] + "eso?";
-                ps3it = "How many " + "shouldn't it " + vnb[v];
-
                 ps4 = "¿Cuantos no " + "deberían " + vnbs[v] + "?";
                 ps4eng = "How many " + "shouldn't they " + vnb[v];
 
@@ -21324,14 +19349,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontmYouesp[s] + vnbcs[v] + "?";
                 ps2eng = "How many " + scontmYou[s] + vnbc[v];
 
-                ps3 = "¿Cuantos " + scontmHeesp[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuantos " + scontm3esp[s] + vnbcs[v] + "él?";
                 ps3eng = "How many " + scontmHe[s] + vnbc[v];
 
-                ps3ella = "¿Cuantos " + scontmSheesp[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuantos " + scontm3esp[s] + vnbcs[v] + "ella?";
                 ps3she = "How many " + scontmShe[s] + vnbc[v];
-
-                ps3eso = "¿Cuantos " + scontmItesp[s] + vnbcs[v] + "eso?";
-                ps3it = "How many " + scontmIt[s] + vnbc[v];
 
                 ps4 = "¿Cuantos " + scontmTheyesp[s] + vnbcs[v] + "?";
                 ps4eng = "How many " + scontmThey[s] + vnbc[v];
@@ -21347,14 +19369,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + scontmYouespno[s] + vnbcs[v] + "?";
                 ps2eng = "How many " + scontmYoudont[s] + vnbc[v];
 
-                ps3 = "¿Cuantos " + scontmHeespno[s] + vnbcs[v] + "él?";
+                ps3 = "¿Cuantos " + scontm3espno[s] + vnbcs[v] + "él?";
                 ps3eng = "How many " + scontmHedont[s] + vnbc[v];
 
-                ps3ella = "¿Cuantos " + scontmSheespno[s] + vnbcs[v] + "ella?";
+                ps3ella = "¿Cuantos " + scontm3espno[s] + vnbcs[v] + "ella?";
                 ps3she = "How many " + scontmShedont[s] + vnbc[v];
-
-                ps3eso = "¿Cuantos " + scontmItespno[s] + vnbcs[v] + "eso?";
-                ps3it = "How many " + scontmItdont[s] + vnbc[v];
 
                 ps4 = "¿Cuantos " + scontmTheyespno[s] + vnbcs[v] + "?";
                 ps4eng = "How many " + scontmTheydont[s] + vnbc[v];
@@ -21373,14 +19392,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfmYouesp[s] + vpsp[v] + "?";
                 ps2eng = "How many " + sperfmYou[s] + vpeng[v];
 
-                ps3 = "¿Cuantos " + sperfmHeesp[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuantos " + sperfm3esp[s] + vpsp[v] + "él?";
                 ps3eng = "How many " + sperfmHe[s] + vpeng[v];
 
-                ps3ella = "¿Cuantos " + sperfmSheesp[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuantos " + sperfm3esp[s] + vpsp[v] + "ella?";
                 ps3she = "How many " + sperfmShe[s] + vpeng[v];
-
-                ps3eso = "¿Cuantos " + sperfmItesp[s] + vpsp[v] + "eso?";
-                ps3it = "How many " + sperfmIt[s] + vpeng[v];
 
                 ps4 = "¿Cuantos " + sperfmTheyesp[s] + vpsp[v] + "?";
                 ps4eng = "How many " + sperfmThey[s] + vpeng[v];
@@ -21395,14 +19411,11 @@ public class Oo {
                 ps2 = "¿Cuantos " + sperfmYouespno[s] + vpsp[v] + "?";
                 ps2eng = "How many " + sperfmYoudont[s] + vpeng[v];
 
-                ps3 = "¿Cuantos " + sperfmHeespno[s] + vpsp[v] + "él?";
+                ps3 = "¿Cuantos " + sperfm3espno[s] + vpsp[v] + "él?";
                 ps3eng = "How many " + sperfmHedont[s] + vpeng[v];
 
-                ps3ella = "¿Cuantos " + sperfmSheespno[s] + vpsp[v] + "ella?";
+                ps3ella = "¿Cuantos " + sperfm3espno[s] + vpsp[v] + "ella?";
                 ps3she = "How many " + sperfmShedont[s] + vpeng[v];
-
-                ps3eso = "¿Cuantos " + sperfmItespno[s] + vpsp[v] + "eso?";
-                ps3it = "How many " + sperfmItdont[s] + vpeng[v];
 
                 ps4 = "¿Cuantos " + sperfmTheyespno[s] + vpsp[v] + "?";
                 ps4eng = "How many " + sperfmTheydont[s] + vpeng[v];
