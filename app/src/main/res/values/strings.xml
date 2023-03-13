@@ -23,6 +23,13 @@
         <item>Question Structure Modals</item>
         <item>There Be</item>
 
+        <item>Who Simple</item>
+        <item>Who Continuous</item>
+        <item>Who Perfect</item>
+        <item>Who Modals Simple</item>
+        <item>Who Modals Continuous</item>
+        <item>Who Modals Perfect</item>
+
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>

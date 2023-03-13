@@ -272,9 +272,6 @@ public class Oo {
     String scontHe[]={"is he ", "was he ", "will he be "};
     String scontShe[]={"is she ", "was she ", "will she be "};
 
-    String scontIt[]={"is it ", "was it ", "will it be "};
-    String scontItesp[]={"está ", "estaba ", "estará "};
-
     String scontThey[]={"are they ", "were they ", "will they be "};
     String scontTheyesp[]={"están ", "estaban ", "estarán "};
 
@@ -291,9 +288,6 @@ public class Oo {
     String scont3espno[]={"no está ", "no estaba ", "no estará "};
     String scontHedont[]={"isn't he ", "wasn't he ", "won't he be "};
     String scontShedont[]={"isn't she ", "wasn't she ", "won't she be "};
-
-    String scontItdont[]={"isn't it ", "wasn't it ", "won't it be "};
-    String scontItespno[]={"no está ", "no estaba ", "no estará "};
 
     String scontTheydont[]={"aren't they ", "weren't they ", "won't they be "};
     String scontTheyespno[]={"no están ", "no estaban ", "no estarán "};
@@ -313,9 +307,6 @@ public class Oo {
     String sperfHe[]={"has he ", "had he ", "will he have "};
     String sperfShe[]={"has she ", "had she ", "will she have "};
 
-    String sperfIt[]={"has it ", "had it ", "will it have "};
-    String sperfItesp[]={"ha ", "había ", "habrá "};
-
     String sperfThey[]={"have they ", "had they ", "will they have "};
     String sperfTheyesp[]={"han ", "habían ", "habrán "};
 
@@ -332,10 +323,6 @@ public class Oo {
     String sperf3espno[]={"no ha ", "no había ", "no habrá "};
     String sperfHedont[]={"hasn't he ", "hadn't he ", "won't he have "};
     String sperfShedont[]={"hasn't she ", "hadn't she ", "won't she have "};
-
-
-    String sperfItdont[]={"hasn't it ", "hadn't it ", "won't it have "};
-    String sperfItespno[]={"no ha ", "no había ", "no habrá "};
 
     String sperfTheydont[]={"haven't they ", "hadn't they ", "won't they have "};
     String sperfTheyespno[]={"no han ", "no habían ", "no habrán "};
@@ -354,10 +341,6 @@ public class Oo {
     String scontmHe[]={"would he be ", "could he be ", "should he be "};
     String scontmShe[]={"would she be ", "could she be ", "should she be "};
 
-
-    String scontmIt[]={"would it be ", "could it be ", "should it be "};
-    String scontmItesp[]={"estaría ", "podría estar ", "debería estar "};
-
     String scontmThey[]={"would they be ", "could they be ", "should they be "};
     String scontmTheyesp[]={"estarían ", "podrían estar ", "deberían estar "};
 
@@ -374,9 +357,6 @@ public class Oo {
     String scontm3espno[]={"no estaría ", "no podría estar ", "no debería estar "};
     String scontmHedont[]={"wouldn't he be ", "couldn't he be ", "shouldn't he be "};
     String scontmShedont[]={"wouldn't she be ", "couldn't she be ", "shouldn't she be "};
-
-    String scontmItdont[]={"wouldn't it be ", "couldn't it be ", "shouldn't it be "};
-    String scontmItespno[]={"no estaría ", "no podría estar ", "no debería estar "};
 
     String scontmTheydont[]={"wouldn't they be ", "couldn't they be ", "shouldn't they be "};
     String scontmTheyespno[]={"no estarían ", "no podrían estar ", "no deberían estar "};
@@ -395,9 +375,6 @@ public class Oo {
     String sperfmHe[] = {"would he have ", "could he have ", "should he have "};
     String sperfmShe[] = {"would she have ", "could she have ", "should she have "};
 
-    String sperfmIt[]= {"would it have ", "could it have ", "should it have "};
-    String sperfmItesp[] = {"hubiera ", "pudo haber ", "debío haber "};
-
     String sperfmThey[] = {"would they have ", "could they have ", "should they have "};
     String sperfmTheyesp[] = {"hubieran ", "pudieron haber ", "debíeron haber "};
 
@@ -414,9 +391,6 @@ public class Oo {
     String sperfm3espno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
     String sperfmHedont[] = {"wouldn't he have ", "couldn't he have ", "shouldn't he have "};
     String sperfmShedont[] = {"wouldn't she have ", "couldn't she have ", "shouldn't she have "};
-
-    String sperfmItdont[] = {"wouldn't it have ", "couldn't it have ", "shouldn't it have "};
-    String sperfmItespno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
 
     String sperfmTheydont[] = {"wouldn't they have ", "couldn't they have ", "shouldn't they have "};
     String sperfmTheyespno[] = {"no hubieran ", "no pudieron haber ", "no debíeron haber "};

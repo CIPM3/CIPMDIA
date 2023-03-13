@@ -206,9 +206,7 @@ public class Nobles {
     String scont3esp[]={"está ", "estaba ", "estará "};
     String scontHe[]={"is he ", "was he ", "will he be "};
     String scontShe[]={"is she ", "was she ", "will she be "};
-
-    String scontIt[]={"is it ", "was it ", "will it be "};
-    String scontItesp[]={"está ", "estaba ", "estará "};
+    String scontwho[]={"is ", "was ", "will be "};
 
     String scontThey[]={"are they ", "were they ", "will they be "};
     String scontTheyesp[]={"están ", "estaban ", "estarán "};
@@ -226,9 +224,7 @@ public class Nobles {
     String scont3espno[]={"no está ", "no estaba ", "no estará "};
     String scontHedont[]={"isn't he ", "wasn't he ", "won't he be "};
     String scontShedont[]={"isn't she ", "wasn't she ", "won't she be "};
-
-    String scontItdont[]={"isn't it ", "wasn't it ", "won't it be "};
-    String scontItespno[]={"no está ", "no estaba ", "no estará "};
+    String scontwhodont[]={"isn't ", "wasn't ", "won't be "};
 
     String scontTheydont[]={"aren't they ", "weren't they ", "won't they be "};
     String scontTheyespno[]={"no están ", "no estaban ", "no estarán "};
@@ -247,9 +243,7 @@ public class Nobles {
     String sperf3esp[]={"ha ", "había ", "habrá "};
     String sperfHe[]={"has he ", "had he ", "will he have "};
     String sperfShe[]={"has she ", "had she ", "will she have "};
-
-    String sperfIt[]={"has it ", "had it ", "will it have "};
-    String sperfItesp[]={"ha ", "había ", "habrá "};
+    String sperfwho[]={"has ", "had ", "will have "};
 
     String sperfThey[]={"have they ", "had they ", "will they have "};
     String sperfTheyesp[]={"han ", "habían ", "habrán "};
@@ -267,10 +261,7 @@ public class Nobles {
     String sperf3espno[]={"no ha ", "no había ", "no habrá "};
     String sperfHedont[]={"hasn't he ", "hadn't he ", "won't he have "};
     String sperfShedont[]={"hasn't she ", "hadn't she ", "won't she have "};
-
-
-    String sperfItdont[]={"hasn't it ", "hadn't it ", "won't it have "};
-    String sperfItespno[]={"no ha ", "no había ", "no habrá "};
+    String sperfwhodont[]={"hasn't ", "hadn't ", "won't have "};
 
     String sperfTheydont[]={"haven't they ", "hadn't they ", "won't they have "};
     String sperfTheyespno[]={"no han ", "no habían ", "no habrán "};
@@ -288,10 +279,7 @@ public class Nobles {
     String scontm3esp[]={"estaría ", "podría estar ", "debería estar "};
     String scontmHe[]={"would he be ", "could he be ", "should he be "};
     String scontmShe[]={"would she be ", "could she be ", "should she be "};
-
-
-    String scontmIt[]={"would it be ", "could it be ", "should it be "};
-    String scontmItesp[]={"estaría ", "podría estar ", "debería estar "};
+    String scontmwho[]={"would be ", "could be ", "should be "};
 
     String scontmThey[]={"would they be ", "could they be ", "should they be "};
     String scontmTheyesp[]={"estarían ", "podrían estar ", "deberían estar "};
@@ -309,9 +297,7 @@ public class Nobles {
     String scontm3espno[]={"no estaría ", "no podría estar ", "no debería estar "};
     String scontmHedont[]={"wouldn't he be ", "couldn't he be ", "shouldn't he be "};
     String scontmShedont[]={"wouldn't she be ", "couldn't she be ", "shouldn't she be "};
-
-    String scontmItdont[]={"wouldn't it be ", "couldn't it be ", "shouldn't it be "};
-    String scontmItespno[]={"no estaría ", "no podría estar ", "no debería estar "};
+    String scontmwhodont[]={"wouldn't be ", "couldn't be ", "shouldn't be "};
 
     String scontmTheydont[]={"wouldn't they be ", "couldn't they be ", "shouldn't they be "};
     String scontmTheyespno[]={"no estarían ", "no podrían estar ", "no deberían estar "};
@@ -329,9 +315,7 @@ public class Nobles {
     String sperfm3esp[] = {"hubiera ", "pudo haber ", "debío haber "};
     String sperfmHe[] = {"would he have ", "could he have ", "should he have "};
     String sperfmShe[] = {"would she have ", "could she have ", "should she have "};
-
-    String sperfmIt[]= {"would it have ", "could it have ", "should it have "};
-    String sperfmItesp[] = {"hubiera ", "pudo haber ", "debío haber "};
+    String sperfmwho[] = {"would have ", "could have ", "should have "};
 
     String sperfmThey[] = {"would they have ", "could they have ", "should they have "};
     String sperfmTheyesp[] = {"hubieran ", "pudieron haber ", "debíeron haber "};
@@ -349,9 +333,7 @@ public class Nobles {
     String sperfm3espno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
     String sperfmHedont[] = {"wouldn't he have ", "couldn't he have ", "shouldn't he have "};
     String sperfmShedont[] = {"wouldn't she have ", "couldn't she have ", "shouldn't she have "};
-
-    String sperfmItdont[] = {"wouldn't it have ", "couldn't it have ", "shouldn't it have "};
-    String sperfmItespno[] = {"no hubiera ", "no pudo haber ", "no debío haber "};
+    String sperfmwhodont[] = {"wouldn't have ", "couldn't have ", "shouldn't have "};
 
     String sperfmTheydont[] = {"wouldn't they have ", "couldn't they have ", "shouldn't they have "};
     String sperfmTheyespno[] = {"no hubieran ", "no pudieron haber ", "no debíeron haber "};
@@ -18778,248 +18760,66 @@ public class Nobles {
         switch (neg) {
             //Presente
             case 0:
-                ps1 = "¿Quién " + vn1[v] + "?";
-                ps1eng = "Who do i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2[v] + "?";
-                ps2eng = "Who do you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3[v] + "él?";
-                ps3eng = "Who does he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3[v] + "ella?";
-                ps3she = "Who does she " + vnb[v];
-
-                ps4 = "¿Quién " + vn4[v] + "?";
-                ps4eng = "Who do they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5[v] + "?";
-                ps5eng = "Who do we " + vnb[v];
+                ps1 = "¿Quién " + vn3[v] + "?";
+                ps1eng = "Who " + vnb3[v];
                 break;
             case 1:
-                ps1 = "¿Quién no " + vn1[v] + "?";
-                ps1eng = "Who don't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2[v] + "?";
-                ps2eng = "Who don't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3[v] + "él?";
-                ps3eng = "Who doesn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3[v] + "ella?";
-                ps3she = "Who doesn't she " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4[v] + "?";
-                ps4eng = "Who don't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5[v] + "?";
-                ps5eng = "Who don't we " + vnb[v];
+                ps1 = "¿Quién no " + vn3[v] + "?";
+                ps1eng = "Who doesn't " + vnb[v];
                 break;
 
             //Pasado
             case 2:
                 if (sr == 0) {
-                    ps1 = "¿Quién " + ps1pre[v] + "?";
-                    ps1eng = "Who did i" + vnb[v];
-
-                    ps2 = "¿Quién " + ps2pre[v] + "?";
-                    ps2eng = "Who did you " + vnb[v];
-
-                    ps3 = "¿Quién " + ps3p[v] + "él?";
-                    ps3eng = "Who did he " + vnb[v];
-
-                    ps3ella = "¿Quién " + ps3p[v] + "ella?";
-                    ps3she = "Who did she " + vnb[v];
-
-                    ps4 = "¿Quién " + vn4p[v] + "?";
-                    ps4eng = "Who did they " + vnb[v];
-
-                    ps5 = "¿Quién " + vn5p[v] + "?";
-                    ps5eng = "Who did we " + vnb[v];
+                    ps1 = "¿Quién " + ps3p[v] + "?";
+                    ps1eng = "Who did " + vnb[v];
                 } else {
-                    ps1 = "¿Quién " + ps1imp[v] + "?";
-                    ps1eng = "Who did i " + vnb[v];
-
-                    ps2 = "¿Quién " + ps2imp[v] + "?";
-                    ps2eng = "Who did you " + vnb[v];
-
-                    ps3 = "¿Quién " + ps3imp[v] + "él?";
-                    ps3eng = "Who did he " + vnb[v];
-
-                    ps3ella = "¿Quién " + ps3imp[v] + "ella?";
-                    ps3she = "Who did she " + vnb[v];
-
-                    ps4 = "¿Quién " + vn4imp[v] + "?";
-                    ps4eng = "Who did they " + vnb[v];
-
-                    ps5 = "¿Quién " + vn5imp[v] + "?";
-                    ps5eng = "Who did we " + vnb[v];
+                    ps1 = "¿Quién " + ps3imp[v] + "?";
+                    ps1eng = "Who did " + vnb[v];
                 }
                 break;
             case 3:
                 if (sr == 0) {
-                    ps1 = "¿Quién no " + ps1pre[v] + "?";
-                    ps1eng = "Who didn't i " + vnb[v];
-
-                    ps2 = "¿Quién no " + ps2pre[v] + "?";
-                    ps2eng = "Who didn't you " + vnb[v];
-
-                    ps3 = "¿Quién no " + ps3p[v] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v];
-
-                    ps3ella = "¿Quién no " + ps3p[v] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v];
-
-                    ps4 = "¿Quién no " + vn4p[v] + "?";
-                    ps4eng = "Who didn't they " + vnb[v];
-
-                    ps5 = "¿Quién no " + vn5p[v] + "?";
-                    ps5eng = "Who didn't we " + vnb[v];
+                    ps1 = "¿Quién no " + ps3p[v] + "?";
+                    ps1eng = "Who didn't " + vnb[v];
                 } else {
-                    ps1 = "¿Quién no " + ps1imp[v] + "?";
-                    ps1eng = "Who didn't i " + vnb[v];
-
-                    ps2 = "¿Quién no " + ps2imp[v] + "?";
-                    ps2eng = "Who didn't you " + vnb[v];
-
-                    ps3 = "¿Quién no " + ps3imp[v] + "él?";
-                    ps3eng = "Who didn't he " + vnb[v];
-
-                    ps3ella = "¿Quién no " + ps3imp[v] + "ella?";
-                    ps3she = "Who didn't she " + vnb[v];
-
-                    ps4 = "¿Quién no " + vn4imp[v] + "?";
-                    ps4eng = "Who didn't they " + vnb[v];
-
-                    ps5 = "¿Quién no " + vn5imp[v] + "?";
-                    ps5eng = "Who didn't we " + vnb[v];
+                    ps1 = "¿Quién no " + ps3imp[v] + "?";
+                    ps1eng = "Who didn't " + vnb[v];
                 }
                 break;
 
             //Futuro
             case 4:
-                ps1 = "¿Quién " + vn1f[v] + "?";
-                ps1eng = "Who will i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2f[v] + "?";
-                ps2eng = "Who will you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3f[v] + "él?";
-                ps3eng = "Who will he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3f[v] + "ella?";
-                ps3she = "Who will she " + vnb[v];
-
-                ps4 = "¿Quién " + vn4f[v] + "?";
-                ps4eng = "Who will they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5f[v] + "?";
-                ps5eng = "Who will we " + vnb[v];
+                ps1 = "¿Quién " + vn3f[v] + "?";
+                ps1eng = "Who will " + vnb[v];
                 break;
             case 5:
-                ps1 = "¿Quién no " + vn1f[v] + "?";
-                ps1eng = "Who won't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2f[v] + "?";
-                ps2eng = "Who won't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3f[v] + "él?";
-                ps3eng = "Who won't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3f[v] + "ella?";
-                ps3she = "Who won't she " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4f[v] + "?";
-                ps4eng = "Who won't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5f[v] + "?";
-                ps5eng = "Who won't we " + vnb[v];
+                ps1 = "¿Quién no " + vn3f[v] + "?";
+                ps1eng = "Who won't " + vnb[v];
                 break;
         }
     }//LR 2023
     public void GenWhoCont1() {
         switch (neg) {
             case 0:
-                ps1 = "¿Quién " + scontIesp[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontI[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontYouesp[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontYou[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scont3esp[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontHe[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scont3esp[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontShe[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontTheyesp[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontThey[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontWeesp[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontWe[s] + vnbc[v];
+                ps1 = "¿Quién " + scont3esp[s] + vnbcs[v] + "?";
+                ps1eng = "Who " + scontwho[s] + vnbc[v];
                 break;
-
             case 1:
-                ps1 = "¿Quién " + scontIespno[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontIdont[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontYouespno[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontYoudont[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scont3espno[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontHedont[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scont3espno[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontShedont[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontTheyespno[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontTheydont[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontWeespno[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontWedont[s] + vnbc[v];
+                ps1 = "¿Quién " + scont3espno[s] + vnbcs[v] + "?";
+                ps1eng = "Who " + scontwhodont[s] + vnbc[v];
                 break;
         }
     }//LR 2023
     public void GenWhoPerf1() {
         switch (neg) {
             case 0:
-                ps1 = "¿Quién " + sperfIesp[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfI[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfYouesp[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfYou[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperf3esp[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfHe[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperf3esp[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfShe[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfTheyesp[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfThey[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfWeesp[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfWe[s] + vpeng[v];
+                ps1 = "¿Quién " + sperf3esp[s] + vpsp[v] + "?";
+                ps1eng = "Who " + sperfwho[s] + vpeng[v];
                 break;
             case 1:
-                ps1 = "¿Quién " + sperfIespno[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfIdont[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfYouespno[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfYoudont[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperf3espno[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfHedont[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperf3espno[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfShedont[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfTheyespno[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfTheydont[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfWeespno[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfWedont[s] + vpeng[v];
-
+                ps1 = "¿Quién " + sperf3espno[s] + vpsp[v] + "?";
+                ps1eng = "Who " + sperfwhodont[s] + vpeng[v];
                 break;
         }
     }//LR 2023
@@ -19030,122 +18830,32 @@ public class Nobles {
         switch (neg){
             //Would
             case 0:
-                ps1 = "¿Quién " + vn1w[v] + "?";
-                ps1eng = "Who " + "would i " + vnb[v];
-
-                ps2 = "¿Quién " + vn2w[v] + "?";
-                ps2eng = "Who " + "would you " + vnb[v];
-
-                ps3 = "¿Quién " + vn3w[v] + "él?";
-                ps3eng = "Who " + "would he " + vnb[v];
-
-                ps3ella = "¿Quién " + vn3w[v] + "ella?";
-                ps3she = "Who " + "would she " + vnb[v];
-
-                ps4 = "¿Quién " + vn4w[v] + "?";
-                ps4eng = "Who " + "would they " + vnb[v];
-
-                ps5 = "¿Quién " + vn5w[v] + "?";
-                ps5eng = "Who " + "would we " + vnb[v];
+                ps1 = "¿Quién " + vn3w[v] + "?";
+                ps1eng = "Who " + "would " + vnb[v];
                 break;
             case 1:
-                ps1 = "¿Quién no " + vn1w[v] + "?";
-                ps1eng = "Who " + "wouldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + vn2w[v] + "?";
-                ps2eng = "Who " + "wouldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + vn3w[v] + "él?";
-                ps3eng = "Who " + "wouldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + vn3w[v] + "ella?";
-                ps3she = "Who " + "wouldn't she " + vnb[v];
-
-                ps4 = "¿Quién no " + vn4w[v] + "?";
-                ps4eng = "Who " + "wouldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + vn5w[v] + "?";
-                ps5eng = "Who " + "wouldn't we " + vnb[v];
+                ps1 = "¿Quién no " + vn3w[v] + "?";
+                ps1eng = "Who " + "wouldn't " + vnb[v];
                 break;
 
             //Could
             case 2:
                 ps1 = "¿Quién " + "podría " + vnbs[v] + "?";
-                ps1eng = "Who " + "could i " + vnb[v];
-
-                ps2 = "¿Quién " + "podrías " + vnbs[v] + "?";
-                ps2eng = "Who " + "could you " + vnb[v];
-
-                ps3 = "¿Quién " + "podría " + vnbs[v] + "él?";
-                ps3eng = "Who " + "could he " + vnb[v];
-
-                ps3ella = "¿Quién " + "podría " + vnbs[v] + "ella?";
-                ps3she = "Who " + "could she " + vnb[v];
-
-                ps4 = "¿Quién " + "podrían " + vnbs[v] + "?";
-                ps4eng = "Who " + "could they " + vnb[v];
-
-                ps5 = "¿Quién " + "podríamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "could we " + vnb[v];
+                ps1eng = "Who " + "could " + vnb[v];
                 break;
             case 3:
                 ps1 = "¿Quién no " + "podría " + vnbs[v] + "?";
-                ps1eng = "Who " + "couldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + "podrías " + vnbs[v] + "?";
-                ps2eng = "Who " + "couldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + "podría " + vnbs[v] + "él?";
-                ps3eng = "Who " + "couldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + "podría " + vnbs[v] + "ella?";
-                ps3she = "Who " + "couldn't she " + vnb[v];
-
-                ps4 = "¿Quién no " + "podrían " + vnbs[v] + "?";
-                ps4eng = "Who " + "couldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + "podríamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "couldn't we " + vnb[v];
+                ps1eng = "Who " + "couldn't " + vnb[v];
                 break;
 
             //Should
             case 4:
                 ps1 = "¿Quién " + "debería " + vnbs[v] + "?";
-                ps1eng = "Who " + "should i " + vnb[v];
-
-                ps2 = "¿Quién " + "deberías " + vnbs[v] + "?";
-                ps2eng = "Who " + "should you " + vnb[v];
-
-                ps3 = "¿Quién " + "debería " + vnbs[v] + "él?";
-                ps3eng = "Who " + "should he " + vnb[v];
-
-                ps3ella = "¿Quién " + "debería " + vnbs[v] + "ella?";
-                ps3she = "Who " + "should she " + vnb[v];
-
-                ps4 = "¿Quién " + "deberían " + vnbs[v] + "?";
-                ps4eng = "Who " + "should they " + vnb[v];
-
-                ps5 = "¿Quién " + "deberíamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "should we " + vnb[v];
+                ps1eng = "Who " + "should " + vnb[v];
                 break;
             case 5:
                 ps1 = "¿Quién no " + "debería " + vnbs[v] + "?";
-                ps1eng = "Who " + "shouldn't i " + vnb[v];
-
-                ps2 = "¿Quién no " + "deberías " + vnbs[v] + "?";
-                ps2eng = "Who " + "shouldn't you " + vnb[v];
-
-                ps3 = "¿Quién no " + "debería " + vnbs[v] + "él?";
-                ps3eng = "Who " + "shouldn't he " + vnb[v];
-
-                ps3ella = "¿Quién no " + "debería " + vnbs[v] + "ella?";
-                ps3she = "Who " + "shouldn't she " + vnb[v];
-
-                ps4 = "¿Quién no " + "deberían " + vnbs[v] + "?";
-                ps4eng = "Who " + "shouldn't they " + vnb[v];
-
-                ps5 = "¿Quién no " + "deberíamos " + vnbs[v] + "?";
-                ps5eng = "Who " + "shouldn't we " + vnb[v];
+                ps1eng = "Who " + "shouldn't " + vnb[v];
                 break;
 
         }
@@ -19153,86 +18863,24 @@ public class Nobles {
     public void GenWhoModalsCont1() {
         switch (neg) {
             case 0:
-                ps1 = "¿Quién " + scontmIesp[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontmI[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontmYouesp[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontmYou[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontm3esp[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontmHe[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontm3esp[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontmShe[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontmTheyesp[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontmThey[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontmWeesp[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontmWe[s] + vnbc[v];
+                ps1 = "¿Quién " + scontm3esp[s] + vnbcs[v] + "?";
+                ps1eng = "Who " + scontmwho[s] + vnbc[v];
                 break;
-
             case 1:
-                ps1 = "¿Quién " + scontmIespno[s] + vnbcs[v] + "?";
-                ps1eng = "Who " + scontmIdont[s] + vnbc[v];
-
-                ps2 = "¿Quién " + scontmYouespno[s] + vnbcs[v] + "?";
-                ps2eng = "Who " + scontmYoudont[s] + vnbc[v];
-
-                ps3 = "¿Quién " + scontm3espno[s] + vnbcs[v] + "él?";
-                ps3eng = "Who " + scontmHedont[s] + vnbc[v];
-
-                ps3ella = "¿Quién " + scontm3espno[s] + vnbcs[v] + "ella?";
-                ps3she = "Who " + scontmShedont[s] + vnbc[v];
-
-                ps4 = "¿Quién " + scontmTheyespno[s] + vnbcs[v] + "?";
-                ps4eng = "Who " + scontmTheydont[s] + vnbc[v];
-
-                ps5 = "¿Quién " + scontmWeespno[s] + vnbcs[v] + "?";
-                ps5eng = "Who " + scontmWedont[s] + vnbc[v];
+                ps1 = "¿Quién " + scontm3espno[s] + vnbcs[v] + "?";
+                ps1eng = "Who " + scontmwhodont[s] + vnbc[v];
                 break;
         }
     }//LR 2023
     public void GenWhoModalsPerf1() {
         switch (neg) {
             case 0:
-                ps1 = "¿Quién " + sperfmIesp[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfmI[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfmYouesp[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfmYou[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfm3esp[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfmHe[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfm3esp[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfmShe[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfmTheyesp[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfmThey[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfmWeesp[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfmWe[s] + vpeng[v];
+                ps1 = "¿Quién " + sperfm3esp[s] + vpsp[v] + "?";
+                ps1eng = "Who " + sperfmwho[s] + vpeng[v];
                 break;
             case 1:
-                ps1 = "¿Quién " + sperfmIespno[s] + vpsp[v] + "?";
-                ps1eng = "Who " + sperfmIdont[s] + vpeng[v];
-
-                ps2 = "¿Quién " + sperfmYouespno[s] + vpsp[v] + "?";
-                ps2eng = "Who " + sperfmYoudont[s] + vpeng[v];
-
-                ps3 = "¿Quién " + sperfm3espno[s] + vpsp[v] + "él?";
-                ps3eng = "Who " + sperfmHedont[s] + vpeng[v];
-
-                ps3ella = "¿Quién " + sperfm3espno[s] + vpsp[v] + "ella?";
-                ps3she = "Who " + sperfmShedont[s] + vpeng[v];
-
-                ps4 = "¿Quién " + sperfmTheyespno[s] + vpsp[v] + "?";
-                ps4eng = "Who " + sperfmTheydont[s] + vpeng[v];
-
-                ps5 = "¿Quién " + sperfmWeespno[s] + vpsp[v] + "?";
-                ps5eng = "Who " + sperfmWedont[s] + vpeng[v];
-
+                ps1 = "¿Quién " + sperfm3espno[s] + vpsp[v] + "?";
+                ps1eng = "Who " + sperfmwhodont[s] + vpeng[v];
                 break;
         }
     }//LR 2023
