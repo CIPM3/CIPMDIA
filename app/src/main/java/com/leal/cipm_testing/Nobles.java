@@ -5682,7 +5682,7 @@ public class Nobles {
         }
     }//LR 2023
 
-    //How 2
+    //How
     public void GenHowSimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -5847,7 +5847,7 @@ public class Nobles {
                 ps5eng = "How won't we " + vnb[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowCont2() {
         switch (neg) {
             case 0:
@@ -5890,7 +5890,7 @@ public class Nobles {
                 ps5eng = "How " + scontWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowPerf2() {
         switch (neg) {
             case 0:
@@ -5933,9 +5933,9 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
-    //How Modales 2
+    //How Modales
     public void GenHowModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -6060,7 +6060,7 @@ public class Nobles {
                 break;
 
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowModalsCont2() {
         switch (neg) {
             case 0:
@@ -6103,7 +6103,7 @@ public class Nobles {
                 ps5eng = "How " + scontmWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowModalsPerf2() {
         switch (neg) {
             case 0:
@@ -6146,9 +6146,9 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
-    //How Much 2
+    //How Much
     public void GenHowMuchSimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -6313,7 +6313,7 @@ public class Nobles {
                 ps5eng = "How much won't we " + vnb[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowMuchCont2() {
         switch (neg) {
             case 0:
@@ -6356,7 +6356,7 @@ public class Nobles {
                 ps5eng = "How much " + scontWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowMuchPerf2() {
         switch (neg) {
             case 0:
@@ -6399,9 +6399,9 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
-    //How Much Modales 2
+    //How Much Modales
     public void GenHowMuchModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -6526,7 +6526,7 @@ public class Nobles {
                 break;
 
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowMuchModalsCont2() {
         switch (neg) {
             case 0:
@@ -6569,7 +6569,7 @@ public class Nobles {
                 ps5eng = "How much " + scontmWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowMuchModalsPerf2() {
         switch (neg) {
             case 0:
@@ -6612,9 +6612,9 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
-    //How Many 2
+    //How Many
     public void GenHowManySimp2() {
         int neg = (int) (Math.random() * 6);
         int sr = (int) (Math.random() * 2);
@@ -6779,7 +6779,7 @@ public class Nobles {
                 ps5eng = "How many won't we " + vnb[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowManyCont2() {
         switch (neg) {
             case 0:
@@ -6822,7 +6822,7 @@ public class Nobles {
                 ps5eng = "How many " + scontWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowManyPerf2() {
         switch (neg) {
             case 0:
@@ -6865,9 +6865,9 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
-    //How Many Modales 2
+    //How Many Modales
     public void GenHowManyModalsSimp2() {
         int neg = (int) (Math.random() * 6);
         switch (neg){
@@ -6992,7 +6992,7 @@ public class Nobles {
                 break;
 
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowManyModalsCont2() {
         switch (neg) {
             case 0:
@@ -7035,7 +7035,7 @@ public class Nobles {
                 ps5eng = "How many " + scontmWedont[s] + vnbc[v] + nnobles[n];
                 break;
         }
-    }//LR 2023
+    }//PD 2023
     public void GenHowManyModalsPerf2() {
         switch (neg) {
             case 0:
@@ -7078,7 +7078,7 @@ public class Nobles {
 
                 break;
         }
-    }//LR 2023
+    }//PD 2023
 
     // presentes dificultad 3 nobles, abstractos, oo,people
     public void GenPresSimp3() {
