@@ -2,6 +2,7 @@
     <string name="app_name">CIPM3</string>
     <string-array name="structuresGratis">
         <item>Tutorial</item>
+
         <item>Present Simple</item>
         <item>Present Perfect</item>
         <item>Past Simple</item>
@@ -33,8 +34,6 @@
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
-<!--        <item>Prueba</item>-->
-
         <item>Present Simple</item>
         <item>Present Continuous</item>
         <item>Present Perfect</item>
@@ -127,7 +126,8 @@
         <item>Question Structure</item>
         <item>Question Structure Modals</item>
 
-<!--        <item>Feel Like Simple</item>-->
+        <item>Preguntas PrePosicionales</item>
+
         <item>Able To</item>
         <item>Phrasal Verbs</item>
         <item>Reported Speech</item>
@@ -146,7 +146,6 @@
 
     <string-array name="structurestext">
         <item>Tutorial</item>
-
         <item>Present Simple</item>
         <item>Present Continuous</item>
         <item>Present Perfect</item>

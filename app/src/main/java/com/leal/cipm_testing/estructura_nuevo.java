@@ -13204,7 +13204,61 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
 
+            case "Preguntas PrePosicionales":
+                switch (selection2) {
+                    case "0 a 100":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
 
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPreguntasPreposicionales1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
         }
     }
     public void dificulty1() {
@@ -22164,7 +22218,61 @@ public class estructura_nuevo extends AppCompatActivity {
                 }
                 break;
 
+            case "Preguntas PrePosicionales":
+                switch (selection2) {
+                    case "0 a 100":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
 
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenPreguntasPreposicionales1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    txteng2.setText(gen1.gene2);
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
         }
     }
     public void dificulty1Activation(View vista){

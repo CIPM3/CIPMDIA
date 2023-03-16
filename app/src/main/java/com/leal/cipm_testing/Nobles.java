@@ -19948,7 +19948,6 @@ public class Nobles {
                 break;
         }
     }//LR 2023
-
    //Feel Like Simple
    public void GenFeelLikeSimp1() {
         int neg = (int) (Math.random() * 2);
@@ -20001,7 +20000,6 @@ public class Nobles {
                 break;
         }
     }//LR 13/12/2022
-
     public void VerbalAdjectives(){
         int neg = 0;
         switch (neg) {

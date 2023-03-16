@@ -215,6 +215,33 @@ public class Generator<vib> {
             "Abstractos ","People ", "Oo ", "Nobles "
     };
 
+
+    String PreposicionalEng[][] ={
+            {
+                    "a house ", "a bicycle ", "a motorcycle ", "a computer ", "a apple ",
+                    "a car ", "a clock ", "a phone ", "a TV ", "a woman ", "a baby "
+            },
+            {
+                    "the family ", "the wife ",
+                    "the child ", "the doctor ", "the baby ", "the librarian ",
+                    "the woman ", "the dentist ", "the mailman ", "the fireman ",
+                    "the nurse ", "the manager ", "the boss ", "the teacher ",
+                    "the father ", "the mother "}
+    };
+
+    String PreposcionalEsp[][]={
+            {
+                    "una casa ", "una bicicleta ", "una moto ", "una computadora ", "una manzana ",
+                    "un carro ", "un reloj ", "un teléfono ", "un televisor ","una mujer ","un bebé "
+            },
+            {
+                    "la familia", "la esposa",
+                    "el niño ", "el doctor", "el bebé", "el bibliotecario",
+                    "la mujer", "el dentista", "el cartero", "el bombero",
+                    "la enfermera", "el gerente", "el jefe", "el maestro",
+                    "el padre", "la madre"}
+    };
+
     String gens;
     String gene;
     String gene2;
@@ -77569,6 +77596,28 @@ gene2 = o.ps4eng2;
                 break;
         }
     }//LR 2023
+
+    //Preguntas Preposcionales
+    public void GenPreguntasPreposicionales1(){
+        int prepChose = (int) (Math.random() * 2);
+        int prepR = (int) (Math.random() * PreposicionalEng[prepChose].length);
+        //int prepswitch = (int) (Math.random() * 1);
+        int prepswitch = 0;
+
+        String whatConectorEsp[]={
+                "sirve ","es "
+        };
+
+        switch (prepswitch) {
+            //what for
+            case 0:
+                gens = "para que " + whatConectorEsp[prepChose] + PreposcionalEsp[prepChose][prepR];
+                gene = "what is " + PreposicionalEng[prepChose][prepR] + "for ";
+                gene2 = "what's " + PreposicionalEng[prepChose][prepR] + "for ";
+                break;
+
+        }
+    }
 
     //Feel Like
     public void GenFeelLikeSimp1() {
