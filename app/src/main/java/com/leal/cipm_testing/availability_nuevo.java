@@ -379,7 +379,7 @@ public class availability_nuevo extends AppCompatActivity {
     String RespCorrecta;
 
     public static double calcularPorcentaje(double total, int porcentaje) {
-        return (porcentaje * total) / 4;
+        return (porcentaje * total) / 8;
     }
 
     public void preguntasSeleccionada(){
@@ -395,7 +395,11 @@ public class availability_nuevo extends AppCompatActivity {
                         "Which poses the bigger threat to the black community?",
                         "What problems have been identified in homes where parents are absent?",
                         "According to census data between 1890 and 1940, it was more likely that:",
-                        "Tupac Shakur, the late rapper, once said:"
+                        "Tupac Shakur, the late rapper, once said:",
+                        "Until what age did the father manage the restaurant?",
+                        "Do poor women often have children for additional benefits?",
+                        "How much money has the government spent to combat poverty?",
+                        "Tupac Shakur admitted that he started working with gangs because"
                 };
 
                 RespSele = new String[][]{
@@ -423,9 +427,33 @@ public class availability_nuevo extends AppCompatActivity {
                                 "Your mother can't calm you down like a man can.",
                                 "They have money for wars but they don't have money to feed the poor."
                         },
+                        {
+                                "60 years.",
+                                "45 years.",
+                                "80 years.",
+                                "20 years."
+                        },
+                        {
+                                "Most of the respondents said no.",
+                                "Respondents who are not poor said no. However, 64 percent of poor respondents said yes.",
+                                "Most of the respondents said yes.",
+                                "Respondents who are not poor said yes. However, 80 percent of poor respondents said no."
+                        },
+                        {
+                                "20 billion dollars.",
+                                "40 thousand dollars.",
+                                "100 million dollars.",
+                                "4 dollars."
+                        },
+                        {
+                                "Wanted money.",
+                                "Wanted a father.",
+                                "He wanted the things a father gives a son: structure and protection.",
+                                "wanted respect."
+                        },
                 };
 
-                RespuestasCorrectasSele = new String[][] {
+                RespuestasCorrectasSele = new String[][]{
                         {
                                 "The absence of black parents."
                         },
@@ -437,7 +465,19 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                         {
                                 "You need a man to teach you how to be a man."
-                        }
+                        },
+                        {
+                                "80 years."
+                        },
+                        {
+                                "Respondents who are not poor said no. However, 64 percent of poor respondents said yes."
+                        },
+                        {
+                                "20 billion dollars."
+                        },
+                        {
+                                "He wanted the things a father gives a son: structure and protection."
+                        },
                 };
 
                 preguntas = pregSele;
@@ -448,8 +488,12 @@ public class availability_nuevo extends AppCompatActivity {
                 pregSele = new String[]{
                         "Barack Obama said that",
                         "In 1958 Gallup conducted a poll where it found that",
+                        "What percentage comprise blacks in new york?",
+                        "Homicides caused by blacks in the nation are almost always",
                         "In the summer of 2014, Ferguson, Missouri, a white police officer shot",
-                        "Is there still racism in America?"
+                        "Is there still racism in America?",
+                        "In 2012, according to the Center for Disease Control, they were killed by the police.",
+                        "The National Highway Traffic Safety Administration found that"
                 };
 
                 RespSele = new String[][]{
@@ -466,6 +510,18 @@ public class availability_nuevo extends AppCompatActivity {
                                 "It was illegal interracial marriages."
                         },
                         {
+                                "25 percent.",
+                                "30 percent.",
+                                "10 percent.",
+                                "60 percent."
+                        },
+                        {
+                                "the victims are almost always teenagers.",
+                                "almost always the victim is another white person.",
+                                "almost always the victim is police.",
+                                "almost always the victim is another black person."
+                        },
+                        {
                                 "to an armed white teenager.",
                                 "to a black cop.",
                                 "a black father with his children.",
@@ -476,21 +532,45 @@ public class availability_nuevo extends AppCompatActivity {
                                 "Racism is history.",
                                 "Racism is worse than before.",
                                 "There is no racism."
+                        },
+                        {
+                                "police killed 60 gang members.",
+                                "the police killed 123 blacks.",
+                                "the police killed 50 white people and 30 black people.",
+                                "the police killed 80 white people.",
+                        },
+                        {
+                                "blacks violate traffic laws at a higher rate than whites.",
+                                "black people do not break traffic rules.",
+                                "white people violate traffic laws.",
+                                "young people break the traffic rules.",
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Racism is in America's DNA.."
+                                "Racism is in America's DNA."
                         },
                         {
                                 "Only 4% of Americans approved of marriages between blacks and whites."
+                        },
+                        {
+                                "25 percent."
+                        },
+                        {
+                                "almost always the victim is another black person."
                         },
                         {
                                 "to an unarmed black teenager."
                         },
                         {
                                 "Of course there is. But racism is not in America's DNA."
+                        },
+                        {
+                                "the police killed 123 blacks."
+                        },
+                        {
+                                "blacks violate traffic laws at a higher rate than whites."
                         }
                 };
 
@@ -501,8 +581,13 @@ public class availability_nuevo extends AppCompatActivity {
             case "Dont Compare Yourself to Others":
                 pregSele = new String[]{
                         "What kind of people are compared to others?",
+                        "When his tv show started he wanted to be like:",
+                        "If your happiness was based on being the biggest comedian in the business",
                         "What kind of job does the narrator have?",
-                        "What is professional success about?"
+                        "Comparing yourself with others creates",
+                        "What is professional success about?",
+                        "How long did it take you to work doing standup to be able to invoice?",
+                        "Do you want someone else's life?"
                 };
 
                 RespSele = new String[][]{
@@ -513,16 +598,46 @@ public class availability_nuevo extends AppCompatActivity {
                                 "Nobody.",
                         },
                         {
+                                "Jimmy Fallon.",
+                                "The Rock.",
+                                "Jerry Seinfeld.",
+                                "David Letterman.",
+                        },
+                        {
+                                "It would be nobody.",
+                                "Would be the best in the industry.",
+                                "I'd be mad at whoever got more Netflix specials than me.",
+                                "I had a documentary.",
+                        },
+                        {
                                 "Entertainment.",
                                 "Economy.",
                                 "Medicine.",
                                 "Lawyer.",
                         },
                         {
+                                "It gets you nowhere in your life.",
+                                "A totally unrealistic measure of what constitutes success.",
+                                "Makes you the best in the world.",
+                                "Forge discipline to improve.",
+                        },
+                        {
                                 "Make a living, pursue excellence, find meaning in what you do.",
                                 "Make a lot of money and the admiration of people.",
                                 "Fame, a great collection of cars and lack of control.",
                                 "Achieve nothing."
+                        },
+                        {
+                                "It took 11 months.",
+                                "It took 5 years.",
+                                "It took more than 15 years.",
+                                "It took more than a decade."
+                        },
+                        {
+                                "You really don't want someone else's life. You want your own life, only better.",
+                                "It's hard to live someone else's life.",
+                                "Really if you want it.",
+                                "Other people's lives are worse than your own."
                         },
                 };
 
@@ -531,10 +646,25 @@ public class availability_nuevo extends AppCompatActivity {
                                 "Everyone."
                         },
                         {
+                                "Jerry Seinfeld."
+                        },
+                        {
+                                "I'd be mad at whoever got more Netflix specials than me."
+                        },
+                        {
                                 "Entertainment."
                         },
                         {
+                                "A totally unrealistic measure of what constitutes success."
+                        },
+                        {
                                 "Make a living, pursue excellence, find meaning in what you do."
+                        },
+                        {
+                                "It took more than a decade."
+                        },
+                        {
+                                "You really don't want someone else's life. You want your own life, only better."
                         }
                 };
 
@@ -592,7 +722,7 @@ public class availability_nuevo extends AppCompatActivity {
 
     public void availabilityTest(View v){
         activarBtns();
-        if (pregIndex >= 4 || pregIndex <= -1) {
+        if (pregIndex >= 8 || pregIndex <= -1) {
             verResultado();
             pregIndex = 0;
         } else {
