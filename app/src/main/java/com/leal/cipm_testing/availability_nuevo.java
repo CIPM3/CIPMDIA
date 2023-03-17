@@ -125,6 +125,8 @@ public class availability_nuevo extends AppCompatActivity {
                             vf.setVisibility(View.VISIBLE);
 
                             tv.setText("");
+                            btnFinalizarTest();
+
                         }
 
                         @Override
@@ -150,6 +152,8 @@ public class availability_nuevo extends AppCompatActivity {
                             vf.setVisibility(View.VISIBLE);
 
                             tv.setText("");
+                            btnFinalizarTest();
+
                         }
 
                         @Override
@@ -176,6 +180,8 @@ public class availability_nuevo extends AppCompatActivity {
                             vf.setVisibility(View.VISIBLE);
 
                             tv.setText("");
+                            btnFinalizarTest();
+
                         }
 
                         @Override
@@ -201,6 +207,8 @@ public class availability_nuevo extends AppCompatActivity {
                             vf.setVisibility(View.VISIBLE);
 
                             tv.setText("");
+                            btnFinalizarTest();
+
                         }
 
                         @Override
@@ -230,6 +238,8 @@ public class availability_nuevo extends AppCompatActivity {
                         vf.setVisibility(View.VISIBLE);
 
                         tv.setText("");
+                        btnFinalizarTest();
+
                     }
 
                     @Override
@@ -255,6 +265,7 @@ public class availability_nuevo extends AppCompatActivity {
                         vf.setVisibility(View.VISIBLE);
 
                         tv.setText("");
+                        btnFinalizarTest();
                     }
 
                     @Override
@@ -342,36 +353,6 @@ public class availability_nuevo extends AppCompatActivity {
                         }
 
 
-
-
-                    }
-                })
-//set negative button
-                .setNegativeButton("No ir", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
-                    }
-                })
-                .show();
-
-
-    }
-    public void holaMundo(View v){
-        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
-//set icon
-                .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-                .setTitle("Definición: ")
-//set message
-                .setMessage("Te llevara a hacer una actividad de comprensión lectora con un maestro en el app")
-//set positive button
-                .setPositiveButton("ir a chat con maestro", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent crispIntent = new Intent(availability_nuevo.this, chat_maestro.class);
-                        startActivity(crispIntent);
 
 
                     }
@@ -633,6 +614,14 @@ public class availability_nuevo extends AppCompatActivity {
         tv.setVisibility(View.VISIBLE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.GONE);
+        LimpiarResultado();
+    }
+
+    public void btnFinalizarTest(){
+        tv.setVisibility(View.VISIBLE);
+        test_view.setVisibility(View.GONE);
+        result_view.setVisibility(View.GONE);
+        LimpiarResultado();
     }
 
     public void verResultado(View v){
@@ -642,8 +631,11 @@ public class availability_nuevo extends AppCompatActivity {
         double result = calcularPorcentaje(100,pregCorrect);
         String numeroEnString = Double.toString(result);
         scoreText.setText(numeroEnString);
-        pregIndex = 0;
     }
+
+    public void LimpiarResultado(){
+        pregCorrect = 0;
+    };
 
     public void verResultado(){
         tv.setVisibility(View.GONE);
