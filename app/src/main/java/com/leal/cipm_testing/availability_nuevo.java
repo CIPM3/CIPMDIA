@@ -378,8 +378,8 @@ public class availability_nuevo extends AppCompatActivity {
     String RespuestasCorrectas [][] = {};
     String RespCorrecta;
 
-    public static double calcularPorcentaje(double total, int porcentaje) {
-        return (porcentaje * total) / 8;
+    public static double calcularPorcentaje(double total, int porcentaje, int cantidadPreg) {
+        return (porcentaje * total) / cantidadPreg;
     }
 
     public void preguntasSeleccionada(){
@@ -392,92 +392,162 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Black Fathers":
                 pregSele = new String[]{
-                        "Which poses the bigger threat to the black community?",
-                        "What problems have been identified in homes where parents are absent?",
-                        "According to census data between 1890 and 1940, it was more likely that:",
-                        "Tupac Shakur, the late rapper, once said:",
-                        "Until what age did the father manage the restaurant?",
-                        "Do poor women often have children for additional benefits?",
-                        "How much money has the government spent to combat poverty?",
-                        "Tupac Shakur admitted that he started working with gangs because"
+                        "Who did the author interview years ago?",
+                        "According to President Barack Obama, what are the statistics for children who grow up without a father?",
+                        "What does the Journal of Research on Adolescence confirm about kids in father-absent homes?",
+                        "What is the current percentage of America's children who enter the world without a mother and father married to each other?",
+                        "Were black children more likely to grow up with married parents during slavery than today?",
+                        "What is the percentage of out-of-wedlock births for blacks in 2015?",
+                        "What does the author attribute the decline in the presence of fathers to?",
+                        "What do psychologists call the dependency that arises from the welfare system?",
+                        "What did a 1985 Los Angeles Times survey find about poor women having children to get additional benefits?",
+                        "What did Tupac Shakur say he missed out on by not having a father?",
+                        "What did Shakur say a man can provide that a mother cannot?",
+                        "What was the author's father's occupation during the Great Depression?",
+                        "What did the author's father tell him and his brothers about life?",
+                        "According to the author, what is necessary for change in the absence of fathers?",
+                        "Who is the author of the essay?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Absence of education.",
-                                "The racism.",
-                                "The absence of black parents.",
-                                "Lack of attention."
+                                "Martin Luther King Jr.",
+                                "Al Sharpton",
+                                "Kweisi Mfume, the president of the NAACP.",
+                                "Jesse Jackson"
                         },
                         {
-                                "Finish their studies.",
-                                "They are more likely to end up in jail.",
-                                "Die.",
-                                "They get work."
+                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison.",
+                                "They are three times more likely to live in poverty and commit crime; six times more likely to drop out of school and 15 times more likely to end up in prison.",
+                                "They are four times more likely to live in poverty and commit crime; eight times more likely to drop out of school and 18 times more likely to end up in prison.",
+                                "They are six times more likely to live in poverty and commit crime; 10 times more likely to drop out of school and 25 times more likely to end up in prison.",
                         },
                         {
-                                "That a black child grew up alone.",
-                                "That a black child grew up with married parents than a white child.",
-                                "That a black child grew up on the street.",
-                                "That a black boy grew up with his grandparents."
+                                "They are less likely to engage in risky behavior.",
+                                "They are more likely to graduate from college.",
+                                "They are more likely to have stable relationships.",
+                                "They are more likely to end up in jail."
                         },
                         {
-                                "You need a man to teach you how to be a man.",
-                                "Everyone is at war with something. Usually I am at war with my own heart.",
-                                "Your mother can't calm you down like a man can.",
-                                "They have money for wars but they don't have money to feed the poor."
+                                "50 percent.",
+                                "60 percent.",
+                                "41 percent.",
+                                "70 percent."
                         },
                         {
-                                "60 years.",
-                                "45 years.",
-                                "80 years.",
-                                "20 years."
+                                "No, they were less likely.",
+                                "Yes, but only slightly.",
+                                "Yes, significantly more likely.",
+                                "Yes, according to economist Walter Williams."
                         },
                         {
-                                "Most of the respondents said no.",
-                                "Respondents who are not poor said no. However, 64 percent of poor respondents said yes.",
-                                "Most of the respondents said yes.",
-                                "Respondents who are not poor said yes. However, 80 percent of poor respondents said no."
+                                "53 percent.",
+                                "73 percent.",
+                                "63 percent.",
+                                "83 percent."
                         },
                         {
-                                "20 billion dollars.",
-                                "40 thousand dollars.",
-                                "100 million dollars.",
-                                "4 dollars."
+                                "The rise of feminism.",
+                                "The decrease in religious values.",
+                                "The welfare system that allows women to marry the government.",
+                                "The welfare system that allows women to marry the government.",
                         },
                         {
-                                "Wanted money.",
-                                "Wanted a father.",
-                                "He wanted the things a father gives a son: structure and protection.",
-                                "wanted respect."
+                                "Learned helplessness.",
+                                "Enabling behavior.",
+                                "Codependency.",
+                                "Social welfare syndrome."
                         },
+                        {
+                                "Most of the non-poor respondents said yes.",
+                                "50 percent of poor respondents said yes.",
+                                "64 percent of poor respondents said yes.",
+                                "75 percent of poor respondents said yes."
+                        },
+                        {
+                                "Material possessions.",
+                                "A mother's love.",
+                                "A Grandma's love.",
+                                "Discipline and confidence."
+                        },
+                        {
+                                "The ability to calm a child down and teach them how to be a man.",
+                                "The ability to teach a child how to fight.",
+                                "The ability to teach a child how to be a gentleman.",
+                                "The ability to teach a child how to be a man."
+                        },
+                        {
+                                "Lawyer.",
+                                "Teacher.",
+                                "Fireman",
+                                "Janitor.",
+                        },
+                        {
+                                "That hard work doesn't pay off.",
+                                "all of the above",
+                                "That success is all about who you know.",
+                                "That hard work wins, and you get out of life what you put into it."
+                        },
+                        {
+                                "A government policy that prioritizes the importance of fathers.",
+                                "Increased government welfare benefits.",
+                                "More government-funded job training programs.",
+                                "leave everything as is",
+                        },
+                        {
+                                "Cornel West.",
+                                "Michael Eric Dyson.",
+                                "Larry Elder.",
+                                "Barack Obama"
+                        }
                 };
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                                "The absence of black parents."
+                            "Kweisi Mfume, the president of the NAACP."
                         },
                         {
-                                "They are more likely to end up in jail."
+                            "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison."
                         },
                         {
-                                "That a black child grew up with married parents than a white child."
+                            "They are more likely to end up in jail."
                         },
                         {
-                                "You need a man to teach you how to be a man."
+                            "41 percent."
                         },
                         {
-                                "80 years."
+                            "Yes, according to economist Walter Williams."
                         },
                         {
-                                "Respondents who are not poor said no. However, 64 percent of poor respondents said yes."
+                            "73 percent."
                         },
                         {
-                                "20 billion dollars."
+                            "The welfare system that allows women to marry the government."
                         },
                         {
-                                "He wanted the things a father gives a son: structure and protection."
+                            "Learned helplessness."
                         },
+                        {
+                            "64 percent of poor respondents said yes."
+                        },
+                        {
+                            "Discipline and confidence."
+                        },
+                        {
+                            "The ability to calm a child down and teach them how to be a man."
+                        },
+                        {
+                            "Janitor."
+                        },
+                        {
+                            "Hard work wins, and you get out of life what you put into it."
+                        },
+                        {
+                            "A government policy that prioritizes the importance of fathers."
+                        },
+                        {
+                            "Larry Elder."
+                        }
                 };
 
                 preguntas = pregSele;
@@ -722,7 +792,8 @@ public class availability_nuevo extends AppCompatActivity {
 
     public void availabilityTest(View v){
         activarBtns();
-        if (pregIndex >= 8 || pregIndex <= -1) {
+        int pregL = preguntas.length + 1;
+        if (pregIndex >= pregL || pregIndex <= -1) {
             verResultado();
             pregIndex = 0;
         } else {
@@ -758,7 +829,8 @@ public class availability_nuevo extends AppCompatActivity {
         tv.setVisibility(View.GONE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.VISIBLE);
-        double result = calcularPorcentaje(100,pregCorrect);
+        int pregL = preguntas.length + 1;
+        double result = calcularPorcentaje(100,pregCorrect,pregL);
         String numeroEnString = Double.toString(result);
         scoreText.setText(numeroEnString);
     }
@@ -771,7 +843,8 @@ public class availability_nuevo extends AppCompatActivity {
         tv.setVisibility(View.GONE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.VISIBLE);
-        double result = calcularPorcentaje(100,pregCorrect);
+        int pregL = preguntas.length + 1;
+        double result = calcularPorcentaje(100,pregCorrect,pregL);
         String numeroEnString = Double.toString(result);
         scoreText.setText(numeroEnString);
     }
@@ -787,7 +860,6 @@ public class availability_nuevo extends AppCompatActivity {
         preg2.setText(Respuestas[pregIndex][1]);
         preg3.setText(Respuestas[pregIndex][2]);
         preg4.setText(Respuestas[pregIndex][3]);
-
     }
 
     public void bloquearBtns(){
