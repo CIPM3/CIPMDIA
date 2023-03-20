@@ -399,6 +399,7 @@ public class availability_nuevo extends AppCompatActivity {
                         "Were black children more likely to grow up with married parents during slavery than today?",
                         "What is the percentage of out-of-wedlock births for blacks in 2015?",
                         "What does the author attribute the decline in the presence of fathers to?",
+                        "What is the name of the late named rapper?",
                         "What do psychologists call the dependency that arises from the welfare system?",
                         "What did a 1985 Los Angeles Times survey find about poor women having children to get additional benefits?",
                         "What did Tupac Shakur say he missed out on by not having a father?",
@@ -451,6 +452,12 @@ public class availability_nuevo extends AppCompatActivity {
                                 "The decrease in religious values.",
                                 "The welfare system that allows women to marry the government.",
                                 "The welfare system that allows women to marry the government.",
+                        },
+                        {
+                                "Lil Wayne.",
+                                "Tupac Shakur.",
+                                "Drake.",
+                                "Asap Rocky.",
                         },
                         {
                                 "Learned helplessness.",
@@ -523,6 +530,9 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                         {
                             "The welfare system that allows women to marry the government."
+                        },
+                        {
+                             "Tupac Shaku."
                         },
                         {
                             "Learned helplessness."
@@ -746,7 +756,20 @@ public class availability_nuevo extends AppCompatActivity {
                 pregSele = new String[]{
                         "What topic does the psychologist discuss?",
                         "Repressing your feelings so that your beliefs can remain. What causes?",
-                        "What questions should be asked of your own conscience?"
+                        "What questions should be asked of your own conscience?",
+                        "What are the two attitudes towards life and its sorrows?",
+                        "What goes through the mind of the unhappy and embittered husband?",
+                        "What does the harassed and disappointed wife think?",
+                        "Why is his prospect of reconciliation so bleak?",
+                        "It is much easier and more rewarding for your lower desires:",
+                        "What work is mentioned by the poet T.S Eliot?",
+                        "What does the character say to the psychiatrist?",
+                        "There are people who seem to be doomed to a terrible fate, but:",
+                        "The right way to fix the world is:",
+                        "Do you waste time asking what you are doing right or wrong?",
+                        "What would happen if I start to improve and fix what I'm doing wrong?",
+                        "What happens after careful effort is made for a few days, weeks, or months?",
+                        "Where is the psychology teacher from?"
                 };
 
                 RespSele = new String[][]{
@@ -769,6 +792,85 @@ public class availability_nuevo extends AppCompatActivity {
                                 "What is the dog doing?",
                                 "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
                         },
+                        {
+                                "Blaming people and not accepting their mistakes.",
+                                "The search for answers and why everything goes wrong.",
+                                "The first attitude blame the world. The second ask what they could do differently.",
+                                "Crying and not accepting mistakes."
+                        },
+                        {
+                                "All the bad things he's done.",
+                                "Try to forgive the things your wife did.",
+                                "Not accepting help and feeling like you did nothing wrong.",
+                                "The memory of the terrible things his wife has done and why he can't live with her anymore."
+                        },
+                        {
+                                "Think of all the ways her husband let her down.",
+                                "In all the mistakes you've had.",
+                                "In the problems that her husband has.",
+                                "How will your life be."
+                        },
+                        {
+                                "Because no one seeks to improve personally.",
+
+                                "Due to the fact that they want to change the other person instead of changing themselves.",
+                                "By the opinions of outsiders.",
+                                "For the problems caused by the two."
+                        },
+                        {
+                                "Blame someone else for your misery.",
+                                "Accept the situation.",
+                                "Blame yourself.",
+                                "Ignore the situation."
+                        },
+                        {
+                                "The odyssey.",
+                                "The Cocktail Party.",
+                                "Romeo and Juliet.",
+                                "Romance of the Three Kingdoms."
+                        },
+                        {
+                                "Who feels that everything is family fault.",
+                                "Who needs help to improve.",
+                                "She hopes that her suffering is her fault. because you can do something about it.",
+                                "She hates everyone around her."
+                        },
+                        {
+                                "Never looking for ways to improve.",
+                                "They always look for a way to excuse themselves to others.",
+                                "But there are ways to improve.",
+                                "Most of us have the opportunity to improve our lives."
+                        },
+                        {
+                                "Change people.",
+                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing.",
+                                "Improving the political party.",
+                                "Taking care of the environment."
+                        },
+                        {
+                                "You have to know what you are doing.",
+                                "You don't always know what you're doing.",
+                                "You can know that something is right or wrong without knowing why.",
+                                "It's always good to ask."
+                        },
+                        {
+                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable.",
+                                "It would be better than before.",
+                                "I wouldn't change a thing, I'm fine like that.",
+                                "He would love me more."
+                        },
+                        {
+                                "Nothing is achieved if you don't feel.",
+                                "The mind will become clearer, life will become less tragic and more confident.",
+                                "Problems accumulate and you explode.",
+                                "Sores to a peace of mind."
+                        },
+                        {
+                                "Toronto.",
+                                "California.",
+                                "Texas.",
+                                "Los Angeles."
+                        },
                 };
 
                 RespuestasCorrectasSele = new String[][] {
@@ -780,7 +882,46 @@ public class availability_nuevo extends AppCompatActivity {
                         },
                         {
                                 "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
-                        }
+                        },
+                        {
+                                "The first attitude blame the world. The second ask what they could do differently."
+                        },
+                        {
+                                "The memory of the terrible things his wife has done and why he can't live with her anymore."
+                        },
+                        {
+                                "Think of all the ways her husband let her down."
+                        },
+                        {
+                                "Due to the fact that they want to change the other person instead of changing themselves."
+                        },
+                        {
+                                "Blame someone else for your misery."
+                        },
+                        {
+                                "The Cocktail Party."
+                        },
+                        {
+                                "She hopes that her suffering is her fault. because you can do something about it."
+                        },
+                        {
+                                "Most of us have the opportunity to improve our lives."
+                        },
+                        {
+                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing."
+                        },
+                        {
+                                "You can know that something is right or wrong without knowing why."
+                        },
+                        {
+                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable."
+                        },
+                        {
+                                "The mind will become clearer, life will become less tragic and more confident."
+                        },
+                        {
+                                "Toronto."
+                        },
                 };
 
                 preguntas = pregSele;

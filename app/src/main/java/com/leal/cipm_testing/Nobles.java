@@ -347,6 +347,11 @@ public class Nobles {
     String objetosingular[] ={"una casa ", "una bicicleta ", "una moto ", "una computadora ", "una manzana ",
             "un carro ", "un reloj ", "un teléfono ", "un televisor "};
 
+    String objetsingulardon[] ={"house ", "bicycle ", "motorcycle ", "computer ", "apple ",
+            "car ", "clock ", "phone ", "TV "};
+    String objetosingularno[] ={"casa ", "bicicleta ", "moto ", "computadora ", "manzana ",
+            "carro ", "reloj ", "teléfono ", "televisor "};
+
     String objetploral[] ={"houses ", "bicycles ", "motorcycles ", "computers ", "apples ",
             "cars ", "clocks ", "phones ", "TVs "};
     String objetoploral[] ={"casas ", "bicicletas ", "motos ", "computadoras ", "manzanas ",
@@ -5235,10 +5240,10 @@ public class Nobles {
             case 2:
                 if (sr == 0) {
                     ps1 = "¿Quién " + ps3p[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who did " + vnb[v] + nnobles[n];
+                    ps1eng = "Who " + vnbp[v] + nnobles[n];
                 } else {
                     ps1 = "¿Quién " + ps3imp[v] + nnoblesesp[n] + "?";
-                    ps1eng = "Who did " + vnb[v] + nnobles[n];
+                    ps1eng = "Who " + vnbp[v] + nnobles[n];
                 }
                 break;
             case 3:
@@ -15670,11 +15675,11 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2];
-                ps1eng = "There is not " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
+                ps1eng = "There is no " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
                 ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
 
                 ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2];
-                ps2eng = "There are not " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
+                ps2eng = "There are no " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
                 ps2eng2 = "There aren't " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
                 break;
 
@@ -15697,11 +15702,11 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps1eng = "There is not " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1eng = "There is no " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps2eng = "There are not " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps2eng = "There are no " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 ps2eng2 = "There aren't " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 break;
 
@@ -18438,10 +18443,10 @@ public class Nobles {
             case 2:
                 if (sr == 0) {
                     ps1 = "¿Quién " + ps3p[v] + "?";
-                    ps1eng = "Who did " + vnb[v];
+                    ps1eng = "Who " + vnbp[v];
                 } else {
                     ps1 = "¿Quién " + ps3imp[v] + "?";
-                    ps1eng = "Who did " + vnb[v];
+                    ps1eng = "Who " + vnbp[v];
                 }
                 break;
             case 3:
