@@ -31,6 +31,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class availability_nuevo extends AppCompatActivity {
@@ -378,7 +379,7 @@ public class availability_nuevo extends AppCompatActivity {
     String RespuestasCorrectas [][] = {};
     String RespCorrecta;
 
-    public static double calcularPorcentaje(double total, int porcentaje, int cantidadPreg) {
+    public static double calcularPorcentaje(double total, int porcentaje, double cantidadPreg) {
         return (porcentaje * total) / cantidadPreg;
     }
 
@@ -566,91 +567,171 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Is America Racist?":
                 pregSele = new String[]{
-                        "Barack Obama said that",
-                        "In 1958 Gallup conducted a poll where it found that",
-                        "What percentage comprise blacks in new york?",
-                        "Homicides caused by blacks in the nation are almost always",
-                        "In the summer of 2014, Ferguson, Missouri, a white police officer shot",
-                        "Is there still racism in America?",
-                        "In 2012, according to the Center for Disease Control, they were killed by the police.",
-                        "The National Highway Traffic Safety Administration found that"
+                        "According to the text, what percentage of Americans in 1960 said they would never vote for a black president?",
+                        "In 1958, what percentage of Americans approved of black-white marriages?",
+                        "Today, what percentage of Americans approve of black-white marriages?",
+                        "What percentage of all marriages by blacks were black-white in 1960?",
+                        "What is the current percentage of black-white marriages among all marriages by blacks?",
+                        "In 2012, according to the CDC, how many blacks were killed by the police?",
+                        "In the same year, how many whites were killed by the police according to the CDC?",
+                        "What is the research agency of the Department of Justice called?",
+                        "What is the title of the 2013 study published by the National Institute of Justice?",
+                        "What percentage of black drivers admitted that they were stopped by the police for a legitimate reason?",
+                        "According to the National Highway Traffic Safety Administration, do blacks or whites violate traffic laws at higher rates?",
+                        "What is the gap between the percentage of blacks living in Ferguson and the percentage of those stopped by police for traffic violations who are black?",
+                        "What percentage of blacks admitted they were stopped by the police for a legitimate reason according to the 2013 National Institute of Justice study?",
+                        "Which institution found that blacks violate traffic laws at higher rates than whites in every offense?",
+                        "According to Orlando Patterson, what does America offer more of to black persons compared to any other society?",
+                        "What is the ethnicity of Orlando Patterson?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Racism is in America's DNA.",
-                                "White people are violent.",
-                                "There was no racism.",
-                                "There is no respect between people."
+                                "30%",
+                                "40%",
+                                "50%",
+                                "60%",
                         },
                         {
-                                "Interracial marriage was totally accepted.",
-                                "Only 4% of Americans approved of marriages between blacks and whites.",
-                                "There was no interracial marriage.",
-                                "It was illegal interracial marriages."
+                                "4%",
+                                "14%",
+                                "24%",
+                                "34%"
                         },
                         {
-                                "25 percent.",
-                                "30 percent.",
-                                "10 percent.",
-                                "60 percent."
+                                "47%",
+                                "67%",
+                                "87%",
+                                "97%"
                         },
                         {
-                                "the victims are almost always teenagers.",
-                                "almost always the victim is another white person.",
-                                "almost always the victim is police.",
-                                "almost always the victim is another black person."
+                                "0.7%",
+                                "1.7%",
+                                "2.7%",
+                                "3.7%"
                         },
                         {
-                                "to an armed white teenager.",
-                                "to a black cop.",
-                                "a black father with his children.",
-                                "to an unarmed black teenager."
+                                "8%",
+                                "10%",
+                                "12%",
+                                "14%"
                         },
                         {
-                                "Of course there is. But racism is not in America's DNA.",
-                                "Racism is history.",
-                                "Racism is worse than before.",
-                                "There is no racism."
+                                "63",
+                                "123",
+                                "183",
+                                "243"
                         },
                         {
-                                "police killed 60 gang members.",
-                                "the police killed 123 blacks.",
-                                "the police killed 50 white people and 30 black people.",
-                                "the police killed 80 white people.",
+                                "123",
+                                "246",
+                                "369",
+                                "492"
                         },
                         {
-                                "blacks violate traffic laws at a higher rate than whites.",
-                                "black people do not break traffic rules.",
-                                "white people violate traffic laws.",
-                                "young people break the traffic rules.",
+                                "National Institute of Justice",
+                                "National Highway Traffic Safety Administration",
+                                "Federal Bureau of Investigation",
+                                "Central Intelligence Agency"
+                        },
+                        {
+                                "Race, Crime, and Policing",
+                                "Race, Trust, and Police Legitimacy",
+                                "Racial Disparities in Traffic Stops",
+                                "The Impact of Race on Police Behavior"
+                        },
+                        {
+                                "25%",
+                                "50%",
+                                "75%",
+                                "100%"
+                        },
+                        {
+                                "Blacks",
+                                "Whites",
+                                "Both have the same rate",
+                                "The study does not specify"
+                        },
+                        {
+                                "8 points",
+                                "12 points",
+                                "18 points",
+                                "24 points"
+                        },
+                        {
+                                "50%",
+                                "75%",
+                                "90%",
+                                "25%"
+                        },
+                        {
+                                "National Institute of Justice",
+                                "National Highway Traffic Safety Administration",
+                                "Department of Justice",
+                                "Federal Bureau of Investigation"
+                        },
+                        {
+                                "Educational opportunities",
+                                "Legal protections",
+                                "Job opportunities",
+                                "Social integration"
+                        },
+                        {
+                                "White",
+                                "Black",
+                                "Hispanic",
+                                "Asian"
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Racism is in America's DNA."
+                            "60%"
                         },
                         {
-                                "Only 4% of Americans approved of marriages between blacks and whites."
+                            "4%"
                         },
                         {
-                                "25 percent."
+                            "87%"
                         },
                         {
-                                "almost always the victim is another black person."
+                            "1.7%"
                         },
                         {
-                                "to an unarmed black teenager."
+                            "12%"
                         },
                         {
-                                "Of course there is. But racism is not in America's DNA."
+                            "123"
                         },
                         {
-                                "the police killed 123 blacks."
+                            "246"
                         },
                         {
-                                "blacks violate traffic laws at a higher rate than whites."
+                            "National Institute of Justice"
+                        },
+                        {
+                            "Race, Trust, and Police Legitimacy"
+                        },
+                        {
+                            "75%"
+                        },
+                        {
+                            "Blacks"
+                        },
+                        {
+                           "18 points"
+                        },
+                        {
+                            "75%"
+                        },
+                        {
+                           "National Highway Traffic Safety Administration"
+                        },
+                        {
+                            "Legal protections"
+                        },
+                        {
+                            "Black"
                         }
                 };
 
@@ -933,8 +1014,7 @@ public class availability_nuevo extends AppCompatActivity {
 
     public void availabilityTest(View v){
         activarBtns();
-        int pregL = preguntas.length + 1;
-        if (pregIndex >= pregL || pregIndex <= -1) {
+        if (pregIndex == 16) {
             verResultado();
             pregIndex = 0;
         } else {
@@ -963,6 +1043,7 @@ public class availability_nuevo extends AppCompatActivity {
         tv.setVisibility(View.VISIBLE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.GONE);
+        pregIndex = 0;
         LimpiarResultado();
     }
 
@@ -971,8 +1052,12 @@ public class availability_nuevo extends AppCompatActivity {
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.VISIBLE);
         int pregL = preguntas.length + 1;
-        double result = calcularPorcentaje(100,pregCorrect,pregL);
-        String numeroEnString = Double.toString(result);
+        double result = calcularPorcentaje(100,pregCorrect,16);
+
+        DecimalFormat df = new DecimalFormat("#.##");
+        double pregResult = Double.parseDouble(df.format(result));
+
+        String numeroEnString = Double.toString(pregResult);
         scoreText.setText(numeroEnString);
     }
 
@@ -985,8 +1070,12 @@ public class availability_nuevo extends AppCompatActivity {
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.VISIBLE);
         int pregL = preguntas.length + 1;
-        double result = calcularPorcentaje(100,pregCorrect,pregL);
-        String numeroEnString = Double.toString(result);
+        double result = calcularPorcentaje(100,pregCorrect,16);
+
+        DecimalFormat df = new DecimalFormat("#.##");
+        double pregResult = Double.parseDouble(df.format(result));
+
+        String numeroEnString = Double.toString(pregResult);
         scoreText.setText(numeroEnString);
     }
 
