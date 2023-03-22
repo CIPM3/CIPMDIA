@@ -15674,9 +15674,9 @@ public class Nobles {
                 ps2eng2 = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
                 break;
             case 1:
-                ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2];
-                ps1eng = "There is no " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
-                ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2];
+                ps1 = "No hay " + objetosingularno[oj] + prep.noblesspecial[p][p2];
+                ps1eng = "There is no " + objetsingulardon[oj] + prep.noblesspecialeng[p][p2];
+                ps1eng2 = "There isn't " + objetsingulardon[oj] + prep.noblesspecialeng[p][p2];
 
                 ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2];
                 ps2eng = "There are no " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2];
@@ -15701,9 +15701,9 @@ public class Nobles {
                 ps2eng2 = "There are " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
                 break;
             case 1:
-                ps1 = "No hay " + objetosingular[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
-                ps1eng = "There is no " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
-                ps1eng2 = "There isn't " + objetsingular[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1 = "No hay " + objetosingularno[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
+                ps1eng = "There is no " + objetsingulardon[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
+                ps1eng2 = "There isn't " + objetsingulardon[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
 
                 ps2 = "No hay " + numerostherebe[num] + objetoploral[oj] + prep.noblesspecial[p][p2] + advfrequ[r];
                 ps2eng = "There are no " + numbertherebe[num] + objetploral[oj] + prep.noblesspecialeng[p][p2] + frequadv[r];
