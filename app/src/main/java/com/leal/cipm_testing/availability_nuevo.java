@@ -222,7 +222,7 @@ public class availability_nuevo extends AppCompatActivity {
         }else {
             pasarSigNivel.setVisibility(View.GONE);
             btn_test.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-            if (prefs.getPremium()==1){
+            if (prefs.getPremium()==0){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
@@ -741,91 +741,171 @@ public class availability_nuevo extends AppCompatActivity {
                 break;
             case "Dont Compare Yourself to Others":
                 pregSele = new String[]{
-                        "What kind of people are compared to others?",
-                        "When his tv show started he wanted to be like:",
-                        "If your happiness was based on being the biggest comedian in the business",
-                        "What kind of job does the narrator have?",
-                        "Comparing yourself with others creates",
-                        "What is professional success about?",
-                        "How long did it take you to work doing standup to be able to invoice?",
-                        "Do you want someone else's life?"
+                        "What is the main message of this speech?",
+                        "Who did the speaker want to be as big as when starting their career?",
+                        "Which comedian has a late-night TV show?",
+                        "How long did it take the speaker to make a living from standup comedy?",
+                        "What is the speaker's definition of professional success?",
+                        "What did the speaker envy about comedians like George Carlin, Robin Williams, and Louis C.K.?",
+                        "What is the main reason comparing yourself to others is problematic?",
+                        "According to the speaker, what should you consider when comparing yourself to someone else?",
+                        "What does the speaker say about everyone's life?",
+                        "What did the speaker initially want in terms of venue size and TV show timings?",
+                        "What does the speaker appreciate now in their career?",
+                        "What is one of life's little truths according to the speaker?",
+                        "According to the speaker, what is professional success about?",
+                        "How long did it take for the speaker's stand-up comedy to start paying the bills?",
+                        "What is the common mistake people make when comparing themselves to others?",
+                        "What is the message the speaker wants to convey at the end of the speech?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "Famous people.",
-                                "Everyone.",
-                                "Mediocre people.",
-                                "Nobody.",
+                                "Always compare yourself to others",
+                                "Pursue fame and fortune",
+                                "Stop comparing yourself to others",
+                                "Only compare yourself to the best"
                         },
                         {
-                                "Jimmy Fallon.",
-                                "The Rock.",
-                                "Jerry Seinfeld.",
-                                "David Letterman.",
+                                "Tom Shillue",
+                                "Jimmy Fallon",
+                                "George Carlin",
+                                "Jerry Seinfeld"
                         },
                         {
-                                "It would be nobody.",
-                                "Would be the best in the industry.",
-                                "I'd be mad at whoever got more Netflix specials than me.",
-                                "I had a documentary.",
+                                "Jerry Seinfeld",
+                                "Tom Shillue",
+                                "Jimmy Fallon",
+                                "Louis C.K."
                         },
                         {
-                                "Entertainment.",
-                                "Economy.",
-                                "Medicine.",
-                                "Lawyer.",
+                                "5 years",
+                                "10 years",
+                                "15 years",
+                                "20 years"
                         },
                         {
-                                "It gets you nowhere in your life.",
-                                "A totally unrealistic measure of what constitutes success.",
-                                "Makes you the best in the world.",
-                                "Forge discipline to improve.",
+                                "Being famous",
+                                "Making a living, pursuing excellence, and finding meaning in what you do",
+                                "Being rich",
+                                "Having a prime-time TV show"
                         },
                         {
-                                "Make a living, pursue excellence, find meaning in what you do.",
-                                "Make a lot of money and the admiration of people.",
-                                "Fame, a great collection of cars and lack of control.",
-                                "Achieve nothing."
+                                "Their fame and fortune",
+                                "Their ability to turn dark personal struggles into brilliant comedy",
+                                "Their lifestyles",
+                                "Their TV shows"
                         },
                         {
-                                "It took 11 months.",
-                                "It took 5 years.",
-                                "It took more than 15 years.",
-                                "It took more than a decade."
+                                "It leads to jealousy",
+                                "It creates unrealistic expectations",
+                                "It's a waste of time",
+                                "It's discouraging"
                         },
                         {
-                                "You really don't want someone else's life. You want your own life, only better.",
-                                "It's hard to live someone else's life.",
-                                "Really if you want it.",
-                                "Other people's lives are worse than your own."
+                                "Their income",
+                                "Their success",
+                                "The complete package of their life",
+                                "Their talents"
                         },
+                        {
+                                "It's easy",
+                                "It's hard",
+                                "It's filled with success",
+                                "It's filled with happiness"
+                        },
+                        {
+                                "Small venues and late-night shows",
+                                "Small venues and prime-time shows",
+                                "Big venues and late-night shows",
+                                "Big venues and prime-time shows"
+                        },
+                        {
+                                "Selling out small venues and having a late-night show with half a million viewers",
+                                "Being on a prime-time TV show",
+                                "Being the most famous comedian",
+                                "Having a Netflix special"
+                        },
+                        {
+                                "Everyone has an easy life",
+                                "Everyone is a package deal",
+                                "Success comes easily",
+                                "Comparing yourself to others is necessary"
+                        },
+                        {
+                                "Being the best in your field",
+                                "Making a living, pursuing excellence, and finding meaning in what you do",
+                                "Having fame and fortune",
+                                "Surpassing your competition"
+                        },
+                        {
+                                "5 years",
+                                "10 years",
+                                "15 years",
+                                "20 years"
+                        },
+                        {
+                                "Not considering the whole package of someone else's life",
+                                "Not being ambitious enough",
+                                "Only comparing themselves to less successful people",
+                                "Ignoring their own talents and abilities"
+                        },
+                        {
+                                "To keep striving for more success",
+                                "To compare yourself only to the past version of yourself",
+                                "To be envious of others' success",
+                                "To focus on fame and fortune"
+                        }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Everyone."
+                            "Stop comparing yourself to others"
                         },
                         {
-                                "Jerry Seinfeld."
+                            "Jerry Seinfeld"
                         },
                         {
-                                "I'd be mad at whoever got more Netflix specials than me."
+                            "Jimmy Fallon"
                         },
                         {
-                                "Entertainment."
+                            "10 years"
                         },
                         {
-                                "A totally unrealistic measure of what constitutes success."
+                            "Making a living, pursuing excellence, and finding meaning in what you do"
                         },
                         {
-                                "Make a living, pursue excellence, find meaning in what you do."
+                            "Their ability to turn dark personal struggles into brilliant comedy"
                         },
                         {
-                                "It took more than a decade."
+                            "It creates unrealistic expectations"
                         },
                         {
-                                "You really don't want someone else's life. You want your own life, only better."
+                            "The complete package of their life"
+                        },
+                        {
+                            "It's hard"
+                        },
+                        {
+                            "Big venues and prime-time shows"
+                        },
+                        {
+                            "Selling out small venues and having a late-night show with half a million viewers"
+                        },
+                        {
+                            "Everyone is a package deal"
+                        },
+                        {
+                            "Making a living, pursuing excellence, and finding meaning in what you do"
+                        },
+                        {
+                            "10 years"
+                        },
+                        {
+                            "Not considering the whole package of someone else's life"
+                        },
+                        {
+                            "To compare yourself only to the past version of yourself"
                         }
                 };
 
