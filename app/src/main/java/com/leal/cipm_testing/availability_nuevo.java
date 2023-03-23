@@ -1089,6 +1089,61 @@ public class availability_nuevo extends AppCompatActivity {
                 Respuestas = RespSele;
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
+
+            case "Are Men and Women Different?":
+                pregSele = new String[]{
+                        "",
+                        "",
+                        "",
+                        ""
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "",
+                                "",
+                                "",
+                                ""
+                        },
+                        {
+                                "",
+                                "",
+                                "",
+                                ""
+                        },
+                        {
+                                "",
+                                "",
+                                "",
+                                ""
+                        },
+                        {
+                                "",
+                                "",
+                                "",
+                                ""
+                        }
+                };
+
+                RespuestasCorrectasSele = new String[][]{
+                        {
+                          ""
+                        },
+                        {
+                            ""
+                        },
+                        {
+                            ""
+                        },
+                        {
+                            ""
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
         }
     }
 
@@ -5557,6 +5612,440 @@ public class availability_nuevo extends AppCompatActivity {
                 // vid
                 Uri uri3 = Uri.parse("https://adrianlealcaldera.com/FixYourself.mp4");
                 vv.setVideoURI(uri3);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+                //Are Men and Women Different?
+            case "Are Men and Women Different?":
+                //blob:https://www.prageru.com/28c8257e-190d-4fa4-82a4-b0c7b0d0b365
+                texts t4 = new texts();
+                String text4 = t4.AreMenAndWomenDifferent;
+                SpannableString ss4 = new SpannableString(text4);
+
+                ClickableSpan Delusion = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Delusion);
+                    }
+                };
+                ClickableSpan Discerning = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Discerning);
+                    }
+                };
+                ClickableSpan Intimate = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Intimate);
+                    }
+                };
+                ClickableSpan Violated = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Violated);
+                    }
+                };
+                ClickableSpan Vulnerable = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Vulnerable);
+                    }
+                };
+                ClickableSpan Confined = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Confined);
+                    }
+                };
+                ClickableSpan Satisfying = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Intimate);
+                    }
+                };
+                ClickableSpan Emotionally = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Emotionally);
+                    }
+                };
+                ClickableSpan Psychologically = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Psychologically);
+                    }
+                };
+                ClickableSpan Physically = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Physically);
+                    }
+                };
+                ClickableSpan Spiritually = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Spiritually);
+                    }
+                };
+                ClickableSpan Commonsense = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commonsense);
+                    }
+                };
+                ClickableSpan Agenda = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Agenda);
+                    }
+                };
+                ClickableSpan Sociology = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sociology);
+                    }
+                };
+                ClickableSpan Anthropology = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Anthropology);
+                    }
+                };
+                ClickableSpan Genderstudies = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Genderstudies);
+                    }
+                };
+                ClickableSpan Spectrum = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Spectrum);
+                    }
+                };
+                ClickableSpan Internalfeelings = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sociology);
+                    }
+                };
+                ClickableSpan Toytrucks = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Toytrucks);
+                    }
+                };
+                ClickableSpan Pinkandbluestereotype = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Pinkandbluestereotype);
+                    }
+                };
+                ClickableSpan Reality = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Reality);
+                    }
+                };
+                ClickableSpan Collegeentertainment = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Collegeentertainment);
+                    }
+                };
+                ClickableSpan Makingstuffup = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Makingstuffup);
+                    }
+                };
+                ClickableSpan Pushinganagenda = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Pushinganagenda);
+                    }
+                };
+                ClickableSpan Traditionally = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Traditionally);
+                    }
+                };
+                ClickableSpan Marriage = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Marriage);
+                    }
+                };
+                ClickableSpan Experience = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Experience);
+                    }
+                };
+                ClickableSpan Research = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Research);
+                    }
+                };
+                ClickableSpan Associateprofessor = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Associateprofessor);
+                    }
+                };
+                ClickableSpan Theology = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Theology);
+                    }
+                };
+                ClickableSpan Philosophy = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Philosophy);
+                    }
+                };
+                ClickableSpan Beachball = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Beachball);
+                    }
+                };
+                ClickableSpan Distinctnature = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Distinctnature);
+                    }
+                };
+                ClickableSpan Bodyparts = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Bodyparts);
+                    }
+                };
+                ClickableSpan Biology = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Biology);
+                    }
+                };
+                ClickableSpan Hormones = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hormones);
+                    }
+                };
+                ClickableSpan Expressemotions = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Expressemotions);
+                    }
+                };
+                ClickableSpan Needs = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Needs);
+                    }
+                };
+                ClickableSpan Desires2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Needs);
+                    }
+                };
+                ClickableSpan Uninvitedtouch = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Uninvitedtouch);
+                    }
+                };
+                ClickableSpan Leg = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Leg);
+                    }
+                };
+                ClickableSpan HollywoodReporter = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.HollywoodReporter);
+                    }
+                };
+                ClickableSpan CoStar = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.CoStar);
+                    }
+                };
+                ClickableSpan Actingout = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Actingout);
+                    }
+                };
+                ClickableSpan Commonsense2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commonsense2);
+                    }
+                };
+                ClickableSpan Rememberthebeachball = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Rememberthebeachball);
+                    }
+                };
+
+                int prpd1 = text4.indexOf("delusion");
+                int prpd2 = text4.indexOf("discerning");
+                int prpd4 = text4.indexOf("intimate");
+                int prpd5 = text4.indexOf("violated");
+                int prpd6 = text4.indexOf("vulnerable");
+                int prpd7 = text4.indexOf("confined");
+                int prpd8 = text4.indexOf("satisfying");
+                int prpd9 = text4.indexOf("emotionally");
+                int prpd10 = text4.indexOf("psychologically");
+                int prpd11 = text4.indexOf("physically");
+                int prpd12 = text4.indexOf("common sense");
+                int prpd13 = text4.indexOf("agenda");
+                int prpd14 = text4.indexOf("sociology");
+                int prpd15 = text4.indexOf("anthropology");
+                int prpd16 = text4.indexOf("gender studies");
+                int prpd17 = text4.indexOf("spectrum");
+                int prpd18 = text4.indexOf("internal feelings");
+                int prpd19 = text4.indexOf("toy trucks");
+                int prpd20 = text4.indexOf("pink and blue stereotype");
+                int prpd21 = text4.indexOf("reality");
+                int prpd22 = text4.indexOf("college entertainment");
+                int prpd23 = text4.indexOf("making stuff up");
+                int prpd24 = text4.indexOf("pushing an agenda");
+                int prpd25 = text4.indexOf("traditionally");
+                int prpd26 = text4.indexOf("marriage");
+                int prpd27 = text4.indexOf("experience");
+                int prpd28 = text4.indexOf("research");
+                int prpd29 = text4.indexOf("Associate Professor");
+                int prpd30 = text4.indexOf("Theology");
+                int prpd31 = text4.indexOf("Philosophy");
+                int prpd32 = text4.indexOf("beach ball");
+                int prpd33 = text4.indexOf("distinct nature");
+                int prpd34 = text4.indexOf("body parts");
+                int prpd35 = text4.indexOf("biology");
+                int prpd36 = text4.indexOf("hormones");
+                int prpd37 = text4.indexOf("express emotions");
+                int prpd38 = text4.indexOf("needs");
+                int prpd39 = text4.indexOf("desires");
+                int prpd40 = text4.indexOf("uninvited touch");
+                int prpd41 = text4.indexOf("Leg");
+                int prpd42 = text4.indexOf("Hollywood Reporter");
+                int prpd43 = text4.indexOf("co-star");
+                int prpd44 = text4.indexOf("acting out");
+                int prpd45 = text4.indexOf("common sense");
+                int prpd46 = text4.indexOf("remember the beach ball");
+
+                ss4.setSpan(Delusion, prpd1, prpd1 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Discerning, prpd2, prpd2 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                //ss4.setSpan(Supervisedcurfews, prpd3, prpd3 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Intimate, prpd4, prpd4 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Violated, prpd5, prpd5 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Vulnerable, prpd6, prpd6 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Confined, prpd7, prpd7 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Satisfying, prpd8, prpd8 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Emotionally, prpd9, prpd9 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Psychologically, prpd10, prpd10 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Physically, prpd11, prpd11 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Commonsense, prpd12, prpd12 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Agenda, prpd13, prpd13 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Sociology, prpd14, prpd14 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Anthropology, prpd15, prpd15 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Genderstudies, prpd16, prpd16 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Spectrum, prpd17, prpd17 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Internalfeelings, prpd18, prpd18 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Toytrucks, prpd19, prpd19 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Pinkandbluestereotype, prpd20, prpd20 + 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Reality, prpd21, prpd21 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Collegeentertainment, prpd22, prpd22 + 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Makingstuffup, prpd23, prpd23 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Pushinganagenda, prpd24, prpd24 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Traditionally, prpd25, prpd25 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Marriage, prpd26, prpd26 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Experience, prpd27, prpd27 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Research, prpd28, prpd28 + 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Associateprofessor, prpd29, prpd29 + 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Theology, prpd30, prpd30 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Philosophy, prpd31, prpd31 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Beachball, prpd32, prpd32 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Distinctnature, prpd33, prpd33 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Bodyparts, prpd34, prpd34 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Biology, prpd35, prpd35 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Hormones, prpd36, prpd36 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Expressemotions, prpd37, prpd37 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Needs, prpd38, prpd38 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Desires2, prpd39, prpd39 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Uninvitedtouch, prpd40, prpd40 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Leg, prpd41, prpd41 + 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(HollywoodReporter, prpd42, prpd42 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(CoStar, prpd43, prpd43 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Actingout, prpd44, prpd44 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Commonsense2, prpd45, prpd45 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss4.setSpan(Rememberthebeachball, prpd46, prpd46 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                tv.setText(ss4);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+                //VIDEO
+                Uri uri4 = Uri.parse("https://adrianlealcaldera.com/FixYourself.mp4");
+                vv.setVideoURI(uri4);
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();

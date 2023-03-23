@@ -162,4 +162,45 @@ public class texts {
             "And in that manner, at least, you will make the world a better place.\n" +
             "\n" +
             "I’m Jordan Peterson, Professor of Psychology at the University of Toronto, for Prager University.\n";
+
+    String AreMenAndWomenDifferent = "Have you ever pushed a beach ball underwater? What happens? It pops right back up!\n" +
+            "Because of its nature, a beach ball will not stay submerged.\n" +
+            "\n" +
+            "The same is true for men and women. Each has a distinct nature that will always rise to the surface.\n" +
+            "\n" +
+            "Simply put, men and women are different. They look different. They have different body parts. Different biology. Different hormones. They express emotions differently. They have different needs and desires.\n" +
+            "\n" +
+            "Now, if you told that to your great-grandmother who never went to college, never used an iPhone, never used social media, she would have asked, \"Why are you telling me something so obvious?\" But if you said the same thing to a graduate student in sociology or anthropology, let alone gender studies, they'd say you were wrong.\n" +
+            "\n" +
+            "\"Men and women are basically the same,\" the grad student would say. \"Sexuality exists on a spectrum. It's determined by people's internal feelings.\"\n" +
+            "\n" +
+            "Between great-granny and the gender studies PhD, I'm going with granny and her common sense.\n" +
+            "\n" +
+            "To believe that men and women are basically the same is to believe a delusion. A delusion is a belief that contradicts reality. You can say you're Napoleon, but that doesn't make you Napoleon. You can try to socialize girls into behaving like boys or boys into behaving like girls, but it won't work. You can push the beach ball underwater, but not for long.\n" +
+            "\n" +
+            "New York pediatrician George Lazarus tells the story of a couple who didn't want their young daughter to conform to the usual pink and blue stereotype. So they bought her a set of toy trucks. The father went to her room to check on her, and she told him to be quiet--the trucks were sleeping.\n" +
+            "\n" +
+            "A similar story about his twin daughters pretending their \"daddy truck\" was \"carrying the baby truck\" was told by the former president of Harvard University, Lawrence Summers. Give a little boy a truck--or just about any other object--and sooner or later he will turn it into a weapon. That's reality.\n" +
+            "\n" +
+            "Believing delusions makes people say and do foolish, self-destructive things.\n" +
+            "\n" +
+            "Here's an example: If men and women are basically the same, they want the same things from sex--right? But this isn't true. Women tend to be far more selective about partners with whom they choose to be intimate. That's female nature. Men tend to be, shall we say, far less discerning. That's male nature.\n" +
+            "\n" +
+            "Once, this was considered common sense. Nobody had to go to graduate school or do an academic study to figure it out. But now everything is upside down. We're trying to push the beach ball under water. Today, male and female college students who, 50 years ago, lived in separate buildings and had delusion now share the same dorm rooms and even the same bathrooms.\n" +
+            "\n" +
+            "And sex--well, it's just another form of college entertainment. It means nothing and has no consequences--emotionally, psychologically, or physically.\n" +
+            "\n" +
+            "But, certainly as far as most women are concerned, this just isn't true. If sex doesn't mean anything, why would any woman feel violated by an uninvited touch? Do you think a man whose Leg is touched by a woman he doesn't know feels as violated as a woman does when her leg is touched by a man she doesn't know?\n" +
+            "\n" +
+            "If sex doesn't mean anything, why did Jennifer Lawrence say to the Hollywood Reporter after filming an intimate scene with her co-star, Chris Pratt, in the movie Passengers:\n" +
+            "\n" +
+            "\"I knew it was my job, but I couldn't tell my stomach that... That was the most vulnerable I've ever been.\"\n" +
+            "\n" +
+            "She felt vulnerable in that scene, but not in others, because she knows even acting out in a movie scene, sex is a big deal. That's one of many reasons it has traditionally been confined to marriage. And why experience and research show that sex within marriage is more satisfying emotionally, psychologically, and physically--not to mention spiritually--than sex outside of marriage.\n" +
+            "\n" +
+            "Anyone who tells you that men and women are basically the same and that sex means as little to women as it can to many men is not telling you the truth. They're making stuff up. They're pushing an agenda--theirs, not yours.\n" +
+            "\n" +
+            "So, trust granny. Trust common sense. And remember the beach ball.\n" +
+            "\n" +
+            "I'm Sean McDowell, Associate Professor of Theology and Philosophy at Biola University, for Prager University.";
 }

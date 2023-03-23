@@ -9,7 +9,7 @@ public class Defs {
             "a niños y niñas";
     String ago = "se usa con una expresión de tiempo " +
             "para indicar que algo fue en pasado," +
-            "por ejemplo: years ago- años atras, ten " +
+            "por ejemplo = years ago- años atras, ten " +
             "years ago- hace diez años ";
     String then = "entonces";
     String iasked = "yo pregunté";
@@ -66,11 +66,6 @@ public class Defs {
     String behavior = "comportamiento";
     String youwillget = "´will´ + get, juntos significan, tu obtendras. ´Will´ no tiene significado solo";
 
-
-    // hasta aquí hice yo
-
-    //corregidos
-
     String soCalled = "así llamado, se usa para mostrar que algo o alguien se designa comúnmente " +
             "por el nombre o término especificado";
     String war = "Guerra";
@@ -125,7 +120,7 @@ public class Defs {
     String bitter = "amargado";
     String insisted = "insistió";
     String racialsegregation = "segregacion racial";
-    String yougetoutoflifewhatyouputintoit = "se refiere a: recibes lo que das";
+    String yougetoutoflifewhatyouputintoit = "se refiere a = recibes lo que das";
     String blamingotherpeople = "culpar a otras personas";
     String whatcouldihavedonetochangetheoutcome = "que pude haber hecho yo para cambiar mi resultado";
     String Thisadviceshaped = "este consejo formo";
@@ -220,7 +215,7 @@ public class Defs {
     String Mostly = "mayoritarimente";
     String Unlike = "no parecido a";
     String Dispatch = "parecido a “despachar” dispatch calls son cuando mandan a los policías aun lugar en especifico por una llamada de 911";
-    String Whenitcomesto = "frase colloquial parecida a : “cuando tiene que ver con”";
+    String Whenitcomesto = "frase colloquial parecida a = “cuando tiene que ver con”";
     String Therefore = "por lo tanto";
     String Haveafieldday = "“tienen un dia de campo” frase coloquial o “se dan gusto”";
     String Actually = "realmente";
@@ -259,7 +254,7 @@ public class Defs {
     String Bet = "Apostar";
     String Compared = "Comparado (del verbo comparar)";
     String Yourself = "A ti mismo (Reflexivo)";
-    String Do = "Palabra usada para poner énfasis al afirmar algo. Ejemplo: No necesito esto, pero SI necesito aquello.";
+    String Do = "Palabra usada para poner énfasis al afirmar algo. Ejemplo = No necesito esto, pero SI necesito aquello.";
     String Own = "Propio";
     String Middle = "Mitad";
     String Asbigas = "Tan grande como";//10
@@ -300,7 +295,7 @@ public class Defs {
     String Justlike = "igual como, igual que";
     String Lawyer = "Abogado (a)";
     String Crazy = "Loco";
-    String Makingaliving = "Expression: Literal indica hacer una vida, en otras palabras ganarse la vida";
+    String Makingaliving = "Expression = Literal indica hacer una vida, en otras palabras ganarse la vida";
     String Pursuing = "Del verbo Persue; Persiguiendo";//50
     String Findingmeaning = "encontrando significado";
     String What = "Usado como conector, lo que.";
@@ -316,7 +311,7 @@ public class Defs {
     String Iwasntplaying = "Yo no estaba presentando. Play es usado como presentar. ";
     String Bigpayday = "Grandes dias de pago.";
     String Able = "Capaz";
-    String Their = "Posesion: Su (de ellos/ellas)";
+    String Their = "Posesion = Su (de ellos/ellas)";
     String Dark = "Oscuro";
     String Struggle = "Luchas";
     String Envy = "Envidio";
@@ -347,11 +342,11 @@ public class Defs {
     String Viewers = "Espectadores";
     String Half = "Mitad";
     String Myself = "Mi mismo (a)";
-    String Imdoingokay = "Expression: Estoy bien, me esta yendo bien";
+    String Imdoingokay = "Expression = Estoy bien, me esta yendo bien";
     String Try = "Intentar";
 
     //Fix Yourself
-    String Blamingothers = "Culpando otros ( Blame: Culpar)";
+    String Blamingothers = "Culpando otros ( Blame = Culpar)";
     String Wasteoftime = "Perdida de tiempo";
     String That3 = "Eso";
     String Learn = "Aprender";
@@ -361,7 +356,7 @@ public class Defs {
     String Thus = "Por lo tanto";
     String Life = "Vida";
     String Better1 = "Mejor";//10
-    String As = "Como (Usado para comparar : como profesor)";
+    String As = "Como (Usado para comparar = como profesor)";
     String Thereare = "Hay";
     String Attitudes = "Actitudes";
     String Toward = "Hacia";
@@ -373,7 +368,7 @@ public class Defs {
     String Differently = "Diferentemente";//20
     String Couple = "Pareja";
     String Onthebrink = "A punto / al borde";
-    String Theyre1 = "Contraccion: They are, Ellos son/estan";
+    String Theyre1 = "Contraccion = They are, Ellos son/estan";
     String Hurt = "Heridos (as)";
     String Angry = "Molestos (as) / Enojados (as)";
     String Unhappy = "Infeliz";
@@ -393,9 +388,9 @@ public class Defs {
     String Changes = "Cambios";//40
     String Prospects = "Prospectos";
     String Grim = "Oscuro";
-    String Arent = "Contraccion: Are not, no son/estan";
-    String Youre = "Contraccion: You are, tu estas/eres";
-    String Cant = "Contraccion: Can not, no puedes (no poder)";
+    String Arent = "Contraccion = Are not, no son/estan";
+    String Youre = "Contraccion = You are, tu estas/eres";
+    String Cant = "Contraccion = Can not, no puedes (no poder)";
     String Yourself1 = "Tu mismo";
     String Courage = "Coraje, Valor";
     String Easier = "Mas facil";
@@ -432,10 +427,10 @@ public class Defs {
     String Suffering = "Sufrimiento";
     String Own1 = "Propia (o)";//80
     String Fault = "Culpa";
-    String Takenaback = "Expression: Tomado(a)  por sorpresa";
-    String If1 = "Si (Condicional: Usados para expresar que algo depende de algo mas)";
-    String Herfault = "Su culpa (Her: indicando posesión de ella, su de ella)";
-    String Shes = "Contraccion: She is, Ella es/esta";
+    String Takenaback = "Expression = Tomado(a)  por sorpresa";
+    String If1 = "Si (Condicional = Usados para expresar que algo depende de algo mas)";
+    String Herfault = "Su culpa (Her = indicando posesión de ella, su de ella)";
+    String Shes = "Contraccion = She is, Ella es/esta";
     String Doomed = "Condenada (o)";
     String Herself = "Ella misma";
     String Seem = "Parecen";
@@ -490,7 +485,7 @@ public class Defs {
     String Maybe = "Alomejor";
     String Enough = "Suficiente";
     String Burden = "Carga";
-    String Inthatfashion = "Es un expression indicando: de esa manera";//140
+    String Inthatfashion = "Es un expression indicando = de esa manera";//140
     String Nobly = "Noble";
     String Purpose = "Proposito";
     String Properway = "Forma/manera apropiada";
@@ -499,4 +494,51 @@ public class Defs {
     String Atleast = "Al menos";
     String Place = "Lugar";
 
+    String Delusion = "creencia que contradice la realidad";
+    String Discerning = "Perspicaz, exigente, selectivo";
+    String Supervisedcurfews = "toque de queda supervisado.";
+    String Intimate = "intimo/a.";
+    String Violated = "violado/a (en el sentido de haber sido objeto de una acción no deseada o no consentida).";
+    String Vulnerable = "vulnerable, frágil.";
+    String Confined = "limitado/a, restringido/a.";
+    String Satisfying = "satisfactorio/a, gratificante.";
+    String Emotionally = "emocionalmente.";
+    String Psychologically = "psicológicamente.";
+    String Physically = "físicamente.";
+    String Spiritually = "espiritualmente.";
+    String Commonsense = "sentido común.";
+    String Agenda = "programa, plan, intención.";
+    String Sociology = "sociología.";
+    String Anthropology = "antropología.";
+    String Genderstudies = "estudios de género.";
+    String Spectrum = "espectro.";
+    String Internalfeelings = "sentimientos internos.";
+    String Toytrucks = "camiones de juguete.";
+    String Pinkandbluestereotype = "estereotipo de rosa y azul.";
+    String Reality = "realidad.";
+    String Collegeentertainment = "entretenimiento universitario.";
+    String Makingstuffup = "inventando cosas.";
+    String Pushinganagenda = "promoviendo una agenda.";
+    String Traditionally = "tradicionalmente.";
+    String Marriage = "matrimonio.";
+    String Experience = "experiencia.";
+    String Research = "investigación.";
+    String Associateprofessor = "profesor asociado.";
+    String Theology = "teología.";
+    String Philosophy = "filosofía.";
+    String Beachball = "pelota de playa.";
+    String Distinctnature = "naturaleza distinta.";
+    String Bodyparts = "partes del cuerpo.";
+    String Biology = "biología.";
+    String Hormones = "hormonas.";
+    String Expressemotions = "expresar emociones.";
+    String Needs = "necesidades.";
+    String Desires2 = "deseos.";
+    String Uninvitedtouch = "toque no deseado.";
+    String Leg = "pierna.";
+    String HollywoodReporter = "Reportero de Hollywood.";
+    String CoStar = "coprotagonista.";
+    String Actingout = "representando.";
+    String Commonsense2 = "sentido común.";
+    String Rememberthebeachball = "recuerda la pelota de playa.";
 }
