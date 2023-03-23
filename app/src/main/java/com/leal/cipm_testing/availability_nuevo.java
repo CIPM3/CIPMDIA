@@ -222,7 +222,7 @@ public class availability_nuevo extends AppCompatActivity {
         }else {
             pasarSigNivel.setVisibility(View.GONE);
             btn_test.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-            if (prefs.getPremium()==0){
+            if (prefs.getPremium()==1){
                 //Give the user all the premium features
                 //hide ads if you are showing ads
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
