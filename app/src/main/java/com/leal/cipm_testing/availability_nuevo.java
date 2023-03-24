@@ -1092,51 +1092,171 @@ public class availability_nuevo extends AppCompatActivity {
 
             case "Are Men and Women Different?":
                 pregSele = new String[]{
-                        "",
-                        "",
-                        "",
-                        ""
+                        "What is the analogy of the beach ball used for in the speech?",
+                        "What does the speaker believe about men and women's natures?",
+                        "Who would the speaker agree with more, great-grandmother or a gender studies PhD?",
+                        "What does the speaker claim is a delusion?",
+                        "What story does the New York pediatrician George Lazarus share?",
+                        "According to the speaker, do men and women want the same things from sex?",
+                        "How does the speaker describe the way college students view sex today?",
+                        "What does Jennifer Lawrence's quote in the speech indicate about her feelings towards intimate scenes?",
+                        "What does the speaker believe about sex within marriage compared to sex outside of marriage?",
+                        "According to the speaker, who is pushing the agenda that men and women are basically the same?",
+                        "Who is Sean McDowell?",
+                        "What is the main message of the speech?",
+                        "According to the speaker, why would a woman feel violated by an uninvited touch?",
+                        "In the speech, why did the couple buy their daughter a set of toy trucks?",
+                        "What example does the speaker use to illustrate that boys will turn any object into a weapon?",
+                        "What does the speaker believe is the reason that sex has traditionally been confined to marriage?"
                 };
 
                 RespSele = new String[][]{
                         {
-                                "",
-                                "",
-                                "",
-                                ""
+                                "A. To describe the differences between men and women.",
+                                "B. To illustrate the difficulty of learning a new skill.",
+                                "C. To show the importance of having fun at the beach.",
+                                "D. To explain the physics of buoyancy."
                         },
                         {
-                                "",
-                                "",
-                                "",
-                                ""
+                                "A. They are basically the same.",
+                                "B. They are completely different.",
+                                "C. They are determined by socialization.",
+                                "D. They are interchangeable."
                         },
                         {
-                                "",
-                                "",
-                                "",
-                                ""
+                                "A. Great-grandmother",
+                                "B. Gender studies PhD",
+                                "C. Both equally",
+                                "D. Neither"
                         },
                         {
-                                "",
-                                "",
-                                "",
-                                ""
+                                "A. Believing men and women are different.",
+                                "B. Believing men and women are the same.",
+                                "C. Believing gender roles are natural.",
+                                "D. Believing gender roles are socially constructed."
+                        },
+                        {
+                                "A. A story about a girl who turned her toy trucks into weapons.",
+                                "B. A story about a girl who pretended her toy trucks were sleeping.",
+                                "C. A story about a boy who turned his toy trucks into weapons.",
+                                "D. A story about a boy who pretended his toy trucks were sleeping."
+                        },
+                        {
+                                "A. Yes, always.",
+                                "B. No, never.",
+                                "C. Sometimes, depending on the individual.",
+                                "D. It is impossible to know."
+                        },
+                        {
+                                "A. As a sacred act between committed partners.",
+                                "B. As a casual form of entertainment.",
+                                "C. As a strictly regulated activity.",
+                                "D. As a dangerous and risky behavior."
+                        },
+                        {
+                                "A. She feels empowered.",
+                                "B. She feels indifferent.",
+                                "C. She feels vulnerable.",
+                                "D. She feels excited."
+                        },
+                        {
+                                "A. It is less satisfying in all aspects.",
+                                "B. It is equally satisfying.",
+                                "C. It is more satisfying emotionally, psychologically, physically, and spiritually.",
+                                "D. It depends on the individual's personal beliefs."
+                        },
+                        {
+                                "A. The media and entertainment industry.",
+                                "B. The religious institutions.",
+                                "C. The government and politicians.",
+                                "D. The academic and intellectual community."
+                        },
+                        {
+                                "A. A Hollywood actor.",
+                                "B. A gender studies PhD.",
+                                "C. An Associate Professor of Theology and Philosophy at Biola University.",
+                                "D. A New York pediatrician."
+                        },
+                        {
+                                "A. To embrace modern ideas about gender and sexuality.",
+                                "B. To trust common sense and recognize the differences between men and women.",
+                                "C. To argue that gender roles should be abolished.",
+                                "D. To promote a more casual attitude towards sex."
+                        },
+                        {
+                                "A. Because it's physically painful.",
+                                "B. Because it has no meaning.",
+                                "C. Because sex and intimacy have deeper meaning for women.",
+                                "D. Because men and women are basically the same."
+                        },
+                        {
+                                "A. Because she asked for them.",
+                                "B. To avoid conforming to gender stereotypes.",
+                                "C. Because they were on sale.",
+                                "D. To encourage her interest in mechanics."
+                        },
+                        {
+                                "A. A story about a boy turning a toy truck into a weapon.",
+                                "B. A story about a boy using a stick as a weapon.",
+                                "C. A story about a boy turning a stuffed animal into a weapon.",
+                                "D. A story about a boy using a pillow as a weapon."
+                        },
+                        {
+                                "A. Because it is a big deal with deep emotional, psychological, and physical implications.",
+                                "B. Because society wanted to control women's sexuality.",
+                                "C. Because it was more convenient for inheritance purposes.",
+                                "D. Because of religious dogma."
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                          ""
+                            "A. To describe the differences between men and women."
                         },
                         {
-                            ""
+                            "B. They are completely different."
                         },
                         {
-                            ""
+                            "A. Great-grandmother"
                         },
                         {
-                            ""
+                            "B. Believing men and women are the same."
+                        },
+                        {
+                            "B. A story about a girl who pretended her toy trucks were sleeping."
+                        },
+                        {
+                            "B. No, never."
+                        },
+                        {
+                            "B. As a casual form of entertainment."
+                        },
+                        {
+                            "C. She feels vulnerable."
+                        },
+                        {
+                            "C. It is more satisfying emotionally, psychologically, physically, and spiritually."
+                        },
+                        {
+                            "D. The academic and intellectual community."
+                        },
+                        {
+                            "C. An Associate Professor of Theology and Philosophy at Biola University."
+                        },
+                        {
+                            "B. To trust common sense and recognize the differences between men and women."
+                        },
+                        {
+                            "C. Because sex and intimacy have deeper meaning for women."
+                        },
+                        {
+                            "B. To avoid conforming to gender stereotypes."
+                        },
+                        {
+                            "A. A story about a boy turning a toy truck into a weapon."
+                        },
+                        {
+                            "A. Because it is a big deal with deep emotional, psychological, and physical implications."
                         }
                 };
 
@@ -6044,7 +6164,7 @@ public class availability_nuevo extends AppCompatActivity {
                 tv.setMovementMethod(LinkMovementMethod.getInstance());
 
                 //VIDEO
-                Uri uri4 = Uri.parse("https://adrianlealcaldera.com/FixYourself.mp4");
+                Uri uri4 = Uri.parse("https://adrianlealcaldera.com/Are%20Men%20and%20Women%20Different.mp4");
                 vv.setVideoURI(uri4);
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
