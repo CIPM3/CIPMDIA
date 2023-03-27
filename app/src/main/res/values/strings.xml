@@ -228,6 +228,7 @@
         <item>Tutorial</item>
         <item>Black Fathers</item>
         <item>Is America Racist?</item>
+        <item>Dont Waste Your Time</item>
     </string-array>
     <string-array name="Transition">
         <item>Tutorial para Transiciones</item>
@@ -275,6 +276,7 @@
         <item>Dont Compare Yourself to Others</item>
         <item>Fix Yourself</item>
         <item>Are Men and Women Different?</item>
+        <item>Dont Waste Your Time</item>
     </string-array>
 
     <string-array name="cultura">

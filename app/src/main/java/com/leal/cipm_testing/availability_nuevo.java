@@ -6171,6 +6171,665 @@ public class availability_nuevo extends AppCompatActivity {
                 vv.start();
                 break;
 
+            case "Dont Waste Your Time":
+                texts t5 = new texts();
+                String text5 = t5.dontWasteYourTime;
+                SpannableString ss5 = new SpannableString(text5);
+
+                ClickableSpan Date = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Date);
+                    }
+                };
+                ClickableSpan Purpose2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Purpose2);
+                    }
+                };
+                ClickableSpan Getmarried = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Getmarried);
+                    }
+                };
+                ClickableSpan Toofast = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Toofast);
+                    }
+                };
+                ClickableSpan Uncomfortable = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Uncomfortable);
+                    }
+                };
+                ClickableSpan Hookup = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hookup);
+                    }
+                };
+                ClickableSpan Casualflings = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Casualflings);
+                    }
+                };
+                ClickableSpan Havefun = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Havefun);
+                    }
+                };
+                ClickableSpan Dontgetmewrong = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Dontgetmewrong);
+                    }
+                };
+                ClickableSpan Deeper = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Deeper);
+                    }
+                };//10
+                ClickableSpan Happiness2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Happiness2);
+                    }
+                };
+                ClickableSpan Certainly2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Certainly2);
+                    }
+                };
+                ClickableSpan Marriage2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Marriage2);
+                    }
+                };
+                ClickableSpan Topic = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Topic);
+                    }
+                };
+                ClickableSpan Atleast2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Atleast2);
+                    }
+                };
+                ClickableSpan Else = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Else);
+                    }
+                };
+                ClickableSpan Letsfaceit = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Letsfaceit);
+                    }
+                };
+                ClickableSpan Asfasasitgoes = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Asfasasitgoes);
+                    }
+                };
+                ClickableSpan Frankly = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Frankly);
+                    }
+                };
+                ClickableSpan Smart = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Smart);
+                    }
+                };//20
+                ClickableSpan Playout = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Playout);
+                    }
+                };
+                ClickableSpan Often = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Often);
+                    }
+                };
+                ClickableSpan Relationship = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Relationship);
+                    }
+                };
+                ClickableSpan Commitment = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commitment);
+                    }
+                };
+                ClickableSpan Infact = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Infact);
+                    }
+                };
+                ClickableSpan Arise = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Arise);
+                    }
+                };
+                ClickableSpan Whim = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Whim);
+                    }
+                };
+                ClickableSpan Develop = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Develop);
+                    }
+                };
+                ClickableSpan Tryout = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Tryout);
+                    }
+                };
+                ClickableSpan Less2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Less2);
+                    }
+                };//30
+                ClickableSpan Lack = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Lack);
+                    }
+                };
+                ClickableSpan Afford = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Afford);
+                    }
+                };
+                ClickableSpan Enterprise = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Enterprise);
+                    }
+                };
+                ClickableSpan Entirely = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Entirely);
+                    }
+                };
+                ClickableSpan Build = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Build);
+                    }
+                };
+                ClickableSpan Shared = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Shared);
+                    }
+                };
+                ClickableSpan Beliefs2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Beliefs2);
+                    }
+                };
+                ClickableSpan Partner = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Partner);
+                    }
+                };
+                ClickableSpan Profound2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Profound2);
+                    }
+                };
+                ClickableSpan Understandings = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Understandings);
+                    }
+                };//40
+                ClickableSpan Cutcome = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Cutcome);
+                    }
+                };
+                ClickableSpan Fool = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Fool);
+                    }
+                };
+                ClickableSpan Thrilled = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Thrilled);
+                    }
+                };
+                ClickableSpan Kombucha = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Kombucha);
+                    }
+                };
+                ClickableSpan Getdownto = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Getdownto);
+                    }
+                };
+                ClickableSpan Overthelongrun = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Overthelongrun);
+                    }
+                };
+                ClickableSpan Stuff = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Stuff);
+                    }
+                };
+                ClickableSpan Faith = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Faith);
+                    }
+                };
+                ClickableSpan Sooner = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sooner);
+                    }
+                };
+                ClickableSpan Doubt2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Doubt2);
+                    }
+                };//50
+                ClickableSpan Stuck = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Stuck);
+                    }
+                };
+                ClickableSpan Deadendrelationships = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Deadendrelationships);
+                    }
+                };
+                ClickableSpan Articulate = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Articulate);
+                    }
+                };
+                ClickableSpan Crave = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Crave);
+                    }
+                };
+                ClickableSpan Healthier = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Healthier);
+                    }
+                };
+                ClickableSpan Wealthier = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Wealthier);
+                    }
+                };
+                ClickableSpan Towards = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Towards);
+                    }
+                };
+                ClickableSpan Wasteoftime2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Wasteoftime2);
+                    }
+                };
+                ClickableSpan Between = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Between);
+                    }
+                };
+                ClickableSpan Taketheplunge = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Taketheplunge);
+                    }
+                };//60
+                ClickableSpan Country = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Country);
+                    }
+                };
+                ClickableSpan Citizen = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Citizen);
+                    }
+                };
+                ClickableSpan Thelatter = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Thelatter);
+                    }
+                };
+                ClickableSpan Expectations = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Expectations);
+                    }
+                };
+                ClickableSpan Mean = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Mean);
+                    }
+                };
+                ClickableSpan Reluctant = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Reluctant);
+                    }
+                };
+                ClickableSpan Sign = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sign);
+                    }
+                };
+                ClickableSpan Ruleofthumb = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Ruleofthumb);
+                    }
+                };
+                ClickableSpan Thekindof = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Thekindof);
+                    }
+                };
+                ClickableSpan Career2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Career2);
+                    }
+                };//70
+                ClickableSpan Getitright = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Getitright);
+                    }
+                };
+
+                int ila1 = text5.indexOf("Date");
+                int ila2 = text5.indexOf("purpose");
+                int ila3 = text5.indexOf("Getting married");
+                int ila4 = text5.indexOf("too fast");
+                int ila5 = text5.indexOf("uncomfortable");
+                int ila6 = text5.indexOf("hook ups");
+                int ila7 = text5.indexOf("casual flings");
+                int ila8 = text5.indexOf("having fun");
+                int ila9 = text5.indexOf("Don’t get me wrong");
+                int ila10 = text5.indexOf("deeper");//10
+                int ila11 = text5.indexOf("happiness");
+                int ila12 = text5.indexOf("certainly");
+                int ila13 = text5.indexOf("marriage");
+                int ila14 = text5.indexOf("topic");
+                int ila15 = text5.indexOf("At least");
+                int ila16 = text5.indexOf("else");
+                int ila17 = text5.indexOf("Let’s face it");
+                int ila18 = text5.indexOf("as far as it goes");
+                int ila19 = text5.indexOf("frankly");
+                int ila20 = text5.indexOf("smart");//20
+                int ila21 = text5.indexOf("play out");
+                int ila22 = text5.indexOf("often");
+                int ila23 = text5.indexOf("relationships");
+                int ila24 = text5.indexOf("commitment");
+                int ila25 = text5.indexOf("in fact");
+                int ila26 = text5.indexOf("arise");
+                int ila27 = text5.indexOf("whim");
+                int ila28 = text5.indexOf("develop");
+                int ila29 = text5.indexOf("tryout");
+                int ila30 = text5.indexOf("less");//30
+                int ila31 = text5.indexOf("lack");
+                int ila32 = text5.indexOf("afford");
+                int ila33 = text5.indexOf("enterprise");
+                int ila34 = text5.indexOf("entirely");
+                int ila35 = text5.indexOf("build");
+                int ila36 = text5.indexOf("shared");
+                int ila37 = text5.indexOf("beliefs");
+                int ila38 = text5.indexOf("partner");
+                int ila39 = text5.indexOf("profound");
+                int ila40 = text5.indexOf("understandings");//40
+                int ila41 = text5.indexOf("outcome");
+                int ila42 = text5.indexOf("fooled");
+                int ila43 = text5.indexOf("thrilled");
+                int ila44 = text5.indexOf("kombucha");
+                int ila45 = text5.indexOf("get down to");
+                int ila46 = text5.indexOf("over the long run");
+                int ila47 = text5.indexOf("Stuff");
+                int ila48 = text5.indexOf("faith");
+                int ila49 = text5.indexOf("sooner");
+                int ila50 = text5.indexOf("doubt");//50
+                int ila51 = text5.indexOf("stuck");
+                int ila52 = text5.indexOf("dead-end relationships");
+                int ila53 = text5.indexOf("articulate");
+                int ila54 = text5.indexOf("crave");
+                int ila55 = text5.indexOf("healthier");
+                int ila56 = text5.indexOf("wealthier");
+                int ila57 = text5.indexOf("toward");
+                int ila58 = text5.indexOf("waste of time");
+                int ila59 = text5.indexOf("between");
+                int ila60 = text5.indexOf("taken the plunge");//60
+                int ila61 = text5.indexOf("country");
+                int ila62 = text5.indexOf("citizen");
+                int ila63 = text5.indexOf("The latter");
+                int ila64 = text5.indexOf("expectations");
+                int ila65 = text5.indexOf("means");
+                int ila66 = text5.indexOf("reluctant");
+                int ila67 = text5.indexOf("sign");
+                int ila68 = text5.indexOf("rule of thumb");
+                int ila69 = text5.indexOf("the kind of");
+                int ila70 = text5.indexOf("career");//70
+                int ila71 = text5.indexOf("get it right");
+
+
+
+                ss5.setSpan(Date, ila1, ila1 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Purpose2, ila2, ila2 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Getmarried, ila3, ila3 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Toofast, ila4, ila4 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Uncomfortable, ila5, ila5 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Hookup, ila6, ila6 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Casualflings, ila7, ila7 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Havefun, ila8, ila8 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Dontgetmewrong, ila9, ila9 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Deeper, ila10, ila10 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//10
+                ss5.setSpan(Happiness2, ila11, ila11 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Certainly2, ila12, ila12 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Marriage2, ila13, ila13 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Topic, ila14, ila14 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Atleast2, ila15, ila15 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Else, ila16, ila16 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Letsfaceit, ila17, ila17 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Asfasasitgoes, ila18, ila18 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Frankly, ila19, ila19 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Smart, ila20, ila20 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//20
+                ss5.setSpan(Playout, ila21, ila21 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Often, ila22, ila22 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Relationship, ila23, ila23 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Commitment, ila24, ila24 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Infact, ila25, ila25 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Arise, ila26, ila26 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Whim, ila27, ila27 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Develop, ila28, ila28 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Tryout, ila29, ila29 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Less2, ila30, ila30 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//30
+                ss5.setSpan(Lack, ila31, ila31 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Afford, ila32, ila32 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Enterprise, ila33, ila33 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Entirely, ila34, ila34 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Build, ila35, ila35 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Shared, ila36, ila36 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Beliefs2, ila37, ila37 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Partner, ila38, ila38 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Profound2, ila39, ila39 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Understandings, ila40, ila40 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//40
+                ss5.setSpan(Cutcome, ila41, ila41 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Fool, ila42, ila42 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Thrilled, ila43, ila43 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Kombucha, ila44, ila44 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Getdownto, ila45, ila45 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Overthelongrun, ila46, ila46 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Stuff, ila47, ila47 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Faith, ila48, ila48 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Sooner, ila49, ila49 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Doubt2, ila50, ila50 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//50
+                ss5.setSpan(Stuck, ila51, ila51 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Deadendrelationships, ila52, ila52 + 22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Articulate, ila53, ila53 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Crave, ila54, ila54 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Healthier, ila55, ila55 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Wealthier, ila56, ila56 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Towards, ila57, ila57 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Wasteoftime2, ila58, ila58 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Between, ila59, ila59 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Taketheplunge, ila60, ila60 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//60
+                ss5.setSpan(Country, ila61, ila61 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Citizen, ila62, ila62 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Thelatter, ila63, ila63 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Expectations, ila64, ila64 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Mean, ila65, ila65 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Reluctant, ila66, ila66 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Sign, ila67, ila67 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Ruleofthumb, ila68, ila68 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Thekindof, ila69, ila69 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss5.setSpan(Career2, ila70, ila70 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//70
+                ss5.setSpan(Getitright, ila71, ila71 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                tv.setText(ss5);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+                // vid
+                Uri uri5 = Uri.parse("https://adrianlealcaldera.com/Dating%20Dont%20Waste%20Your%20Time.mp4");
+                vv.setVideoURI(uri5);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
         }
     }
     private void openDialog(String s) {

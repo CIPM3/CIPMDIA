@@ -83,14 +83,14 @@ public class texts {
             "\n" +
             "All through my career I’d meet with satisfied customers after my shows and they’d say,“Hey, you’re good! Maybe someday you’ll be successful like Jerry Seinfeld.” He’s the measure of success? The top guy?\n" +
             "\n" +
-            "When someone tells you they’re a doctor, you don’t say, “Well, maybe someday you’ll cure a disease and save millions of lives, just like Jonas Salk did for polio.”\n"+
+            "When someone tells you they’re a doctor, you don’t say, “Well, maybe someday you’ll cure a disease and save millions of lives, just like Jonas Salk did for polio.”\n" +
             "\n" +
             "Or a lawyer: “Oh, wow, so what’s your ultimate goal? The Supreme Court?”\n" +
-            "Do you see how crazy that sounds?\n"+
+            "Do you see how crazy that sounds?\n" +
             "\n" +
             "Professional success is about making a living, pursuing excellence, and finding meaning in what you do.\n" +
             "\n" +
-            "When I first started doing standup, I was a nobody. It took more than a decade of playing in front of tuned-out crowds before it started paying the bills. Ten years is a lot of time to tell jokes for no money to people who aren’t laughing.\n"+
+            "When I first started doing standup, I was a nobody. It took more than a decade of playing in front of tuned-out crowds before it started paying the bills. Ten years is a lot of time to tell jokes for no money to people who aren’t laughing.\n" +
             "\n" +
             "In those days, I spent a lot of time thinking about the comedians I admired. The guys at the top. I wanted those big, sold out houses I wasn’t playing. The big paydays I wasn’t making. TheTV specials I wasn’t doing.\n" +
             "\n" +
@@ -126,14 +126,14 @@ public class texts {
             "\n" +
             "Their prospects for reconciliation are grim. Why? Because other people aren’t the problem. You’re the problem. You can’t change other people, but you can change yourself. But it’s difficult. It takes courage to change, and it takes discipline. It’s much easier — and much more gratifying to your basest desires — to blame someone else for your misery.\n" +
             "\n" +
-            "Consider the youthful activist, making a statement against the “corrupt” capitalist system by smashing in the storefront of a local business. What has he done, other than to bring harm to people who have nothing to do with his real problems?\n"+
+            "Consider the youthful activist, making a statement against the “corrupt” capitalist system by smashing in the storefront of a local business. What has he done, other than to bring harm to people who have nothing to do with his real problems?\n" +
             "\n" +
             "The guilt, doubt and shame he will inevitably feel in consequence will have to be suppressed so his beliefs can remain unchanged. And that suppression will do nothing but foster his anger and alienation.\n" +
-            "Do you see how crazy that sounds?\n"+
+            "Do you see how crazy that sounds?\n" +
             "\n" +
             "In the play “The Cocktail Party” by American-English poet T.S. Eliot, one of the characters is having a very hard time of it. She speaks of her profound unhappiness to her psychiatrist. She tells him that she hopes her suffering is all her own fault.\n" +
             "\n" +
-            "Taken aback, the psychiatrist asks why. Because, she tells him, if it’s her fault, she can do something about it. If it’s in the nature of the world, however, she’s doomed. She can’t change everything else. But she could change herself.\n"+
+            "Taken aback, the psychiatrist asks why. Because, she tells him, if it’s her fault, she can do something about it. If it’s in the nature of the world, however, she’s doomed. She can’t change everything else. But she could change herself.\n" +
             "\n" +
             "Now, there are people who seem to be consigned to a terrible fate. But most of us aren’t. Most of us have a chance to make our lives better.\n" +
             "\n" +
@@ -203,4 +203,52 @@ public class texts {
             "So, trust granny. Trust common sense. And remember the beach ball.\n" +
             "\n" +
             "I'm Sean McDowell, Associate Professor of Theology and Philosophy at Biola University, for Prager University.";
+
+    String dontWasteYourTime = "Women, here’s a revolutionary idea: Date with a purpose. What purpose? Getting married.\n" +
+            "\n" +
+            "Whoa! Am I moving too fast for you? Making you uncomfortable? Dating, you say, is just—well, dating. You know—hook ups, casual flings, having fun.\n" +
+            "\n" +
+            "Yeah? Who said so?\n" +
+            "\n" +
+            "Don’t get me wrong. I’m all for fun, but I’m interested in something deeper here—like happiness. I’m certainly not saying that marriage should be the first topic of conversation. At least wait until the pizza is served (just kidding). But I am saying that you need to ask yourself this question: Why do you want to go on a date with someone? Physical attraction? That’s important. Common interest in something? Also important. But what else?\n" +
+            "\n" +
+            "Let’s face it, most of the time, we—and by “we” here, I’m referring to women—have no idea. We have no plan. That’s okay as far it goes. But “as far as it goes” is not very far. And, frankly, not very smart.\n" +
+            "\n" +
+            "But let’s play out the scenario. We too often assume that relationships have levels of commitment, progressing—if they progress at all—like video games. A hookup is level one, dating is level two; level three—living together. And then, after we’ve had those, maybe we’re ready for marriage.\n" +
+            "\n" +
+            "But in fact, relationships usually don’t progress that way. Hookups arise out of whim, impulse, or simple attraction. Dating is often based on compatibility or convenience, and sometimes on the hope that something serious might develop. Living together may be based on real love and a tryout for marriage. But it can also be based on less serious considerations, like lack of other opportunities, desire for a roommate, or the inability to afford a single apartment.\n" +
+            "\n" +
+            "But marriage is a different enterprise entirely. Those looking for a good marriage are looking for someone who wants to build a shared life. They’re looking for someone who shares their values and beliefs―moral, political, and, where applicable, religious. They view each other not only as a “partner,” but as something even more profound: husband and wife.\n" +
+            "\n" +
+            "The problem with so many dating relationships is that people enter them with completely different understandings of what the ideal outcome should be. He wants X, and she wants Y.\n" +
+            "\n" +
+            "And it’s easy to get distracted and fooled by superficial compatibility. They’re thrilled they both like kombucha, kayaking and karaoke on the weekends. That’s all great, but when do you get down to the stuff that really matters over the long run? Stuff like marriage, family, faith, and values.\n" +
+            "\n" +
+            "I say: the sooner, the better. If a relationship looks like it has a future, talk about it early on. And if doesn’t look like it has a future, what are you doing in it?\n" +
+            "\n" +
+            "I have no doubt the reason so many women get stuck in dead-end relationships is that it has become taboo―or, to be precise, not politically correct―for a woman to articulate what she really wants.\n" +
+            "\n" +
+            "Which takes me back to marriage, and why women crave it. Here are three reasons:\n" +
+            "\n" +
+            "Protection.\n" +
+            "\n" +
+            "Commitment.\n" +
+            "\n" +
+            "Love.\n" +
+            "\n" +
+            "Nothing wrong with wanting those things. It is something women have wanted—and great societies have valued—for thousands of years. It is something men still want, too. Little wonder: Study after study shows that those in good marriages are happier, healthier, even wealthier, than those who are not. Like anything you want, you have to work toward it. And anything that isn’t moving you toward your goal is a waste of time.\n" +
+            "\n" +
+            "What’s the difference between living with someone and marriage? It’s the difference between referring to the man in your life as “my boyfriend,” “significant other,” or “partner” and referring to him as “my husband.” And him referring to you as “my wife,” as compared with “my girlfriend.”\n" +
+            "\n" +
+            "Ask anyone who has taken the plunge and they’ll tell you living together and marriage have little in common. It’s sort of like the difference between living in a country and being a citizen of that country.  The latter, with its commitment, obligations, and expectations, means a lot more.\n" +
+            "\n" +
+            "To someone who tells you that a marriage license is trivial, “just a piece of paper,” here’s a good response: If it’s just a piece of paper, why are you so reluctant to sign it? The answer, of course, is that no one believes that it’s trivial. Everyone knows it’s the most important decision you’ll ever make. So treat it that way.\n" +
+            "\n" +
+            "Here’s a good rule of thumb: Think about the kind of relationship you want as much as you think about what kind of career you want.\n" +
+            "\n" +
+            "I’m not anti-career. I’m just pro-relationship. Specifically, pro-marriage. Because when you get it right, that’s the best relationship there is.\n" +
+            "\n" +
+            "And it starts with the first date. \n" +
+            "\n" +
+            "I’m Lauren Chen, host of Pseudo-Intellectual on BlazeTV, for Prager University.\n";
 }
