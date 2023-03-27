@@ -1264,6 +1264,181 @@ public class availability_nuevo extends AppCompatActivity {
                 Respuestas = RespSele;
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
+
+            case "Dont Waste Your Time":
+                pregSele = new String[]{
+                        "According to the text, what is the purpose of dating for women?",
+                        "What is the problem with assuming that relationships progress like levels in a video game?",
+                        "What are some of the factors that may lead people to live together?",
+                        "According to the text, what are people looking for in a good marriage?",
+                        "What is the problem with getting distracted by superficial compatibility?",
+                        "According to the text, what should you do if a relationship does not look like it has a future?",
+                        "Why do many women get stuck in dead-end relationships, according to the text?",
+                        "What are three reasons why women crave marriage, according to the text?",
+                        "According to the text, what is the difference between living with someone and marriage?",
+                        "How should you respond to someone who says that a marriage license is just a piece of paper?",
+                        "According to the text, how should you think about the kind of relationship you want?",
+                        "According to the text, how should you think about the kind of relationship you want?",
+                        "What does Lauren Chen suggest women should do on a first date?",
+                        "What does Lauren Chen suggest as a good rule of thumb for thinking about relationships?",
+                        "What does a woman look for in a marriage?",
+                        "What is the narrator's name?",
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "a) To have fun and enjoy casual flings.",
+                                "b) To find someone to marry.",
+                                "c) To meet new people.",
+                                "d) To explore common interests",
+                        },
+                        {
+                                "a) It leads to unrealistic expectations.",
+                                "b) It is too predictable.",
+                                "c) It does not take into account the importance of shared values.",
+                                "d) It can lead to miscommunication about the ideal outcome of the relationship.",
+                        },
+                        {
+                                "a) Real love and a tryout for marriage.",
+                                "b) Desire for a roommate or lack of other opportunities.",
+                                "c) Inability to afford a single apartment.",
+                                "d) All of the above.",
+                        },
+                        {
+                                "a) Someone who wants to build a shared life.",
+                                "b) Someone who shares their values and beliefs.",
+                                "c) Someone who views them as a partner.",
+                                "d) All of the above.",
+                        },
+                        {
+                                "a) It can lead to misunderstandings about the long-term future of the relationship.",
+                                "b) It is not a valid basis for a serious relationship.",
+                                "c) It can lead to boredom and a lack of excitement in the relationship.",
+                                "d) All of the above.",
+                        },
+                        {
+                                "a) Wait and see if things improve.",
+                                "b) End it.",
+                                "c) Try harder to make it work.",
+                                "d) Take a break from each other.",
+                        },
+                        {
+                                "a) They do not articulate what they really want.",
+                                "b) They are too picky.",
+                                "c) They are afraid of commitment.",
+                                "d) They do not know what they want.",
+                        },
+                        {
+                                "a) Protection, commitment, and love.",
+                                "b) Financial security, companionship, and emotional stability.",
+                                "c) Adventure, excitement, and passion.",
+                                "d) None of the above.",
+                        },
+                        {
+                                "a) There is no difference.",
+                                "b) Marriage involves more commitment, obligations, and expectations.",
+                                "c) Living together is more romantic.",
+                                "d) Marriage is more about having fun.",
+                        },
+                        {
+                                "a) Agree with them.",
+                                "b) Ask them why they are so reluctant to sign it.",
+                                "c) Tell them they are wrong.",
+                                "d) None of the above.",
+                        },
+                        {
+                                "a) As much as you think about what kind of career you want.",
+                                "b) More than what kind of career you want.",
+                                "b) More than what kind of career you want.",
+                                "d) Not at all.",
+                        },
+                        {
+                                "a) Living together is more fun.",
+                                "b) Living together is a tryout for marriage.",
+                                "c) Dating is a tryout for marriage.",
+                                "d) There is no difference.",
+                        },
+                        {
+                                "a) Discuss their values and beliefs.",
+                                "b) Talk about marriage.",
+                                "c) Wait until the pizza is served to discuss marriage.",
+                                "d) Have fun.",
+                        },
+                        {
+                                "a) To think about them as much as you think about your career.",
+                                "b) To prioritize relationships over your career.",
+                                "c) To only focus on your career.",
+                                "d) To think about relationships less than your career.",
+                        },
+                        {
+                                "a) Hate.",
+                                "b) Money.",
+                                "c) Love.",
+                                "d) Nothing.",
+                        },
+                        {
+                                "a) Adolfo Peñaloza.",
+                                "b) Alejandro Berry.",
+                                "c) Lauren Chen.",
+                                "d) Adriana Monsalve.",
+                        }
+                };
+
+                RespuestasCorrectasSele = new String[][] {
+                        {
+                                "b) To find someone to marry."
+                        },
+                        {
+                                "d) It can lead to miscommunication about the ideal outcome of the relationship."
+                        },
+                        {
+                                "d) All of the above."
+                        },
+                        {
+                                "d) All of the above."
+                        },
+                        {
+                                "a) It can lead to misunderstandings about the long-term future of the relationship."
+                        },
+                        {
+                                "b) End it."
+                        },
+                        {
+                                "a) They do not articulate what they really want."
+                        },
+                        {
+                                "a) Protection, commitment, and love."
+                        },
+                        {
+                                "b) Marriage involves more commitment, obligations, and expectations."
+                        },
+                        {
+                                "b) Ask them why they are so reluctant to sign it."
+                        },
+                        {
+                                "a) As much as you."
+                        },
+                        {
+                                "b) Living together is a tryout for marriage."
+                        },
+                        {
+                                "d) Have fun."
+                        },
+                        {
+                                "a) To think about them as much as you think about your career."
+                        },
+                        {
+                                "c) Love."
+                        },
+                        {
+                                "c) Lauren Chen."
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
         }
     }
 
