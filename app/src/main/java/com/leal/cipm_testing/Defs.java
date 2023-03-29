@@ -614,4 +614,36 @@ public class Defs {
     String Thekindof = "El tipo de.";
     String Career2 = "Carrera.";//70
     String Getitright = "Hacerlo bien.";
+
+    //How to Make Our Cities Safer
+    String Homicides =  "asesinatos";
+    String Constitutional =  "constitucional";
+    String Cohort =  "cohorte";
+    String Highfrequencyoffenders =  "delincuentes de alta frecuencia";
+    String Felons =  "delincuentes";
+    String Verticalprosecution =  "prosecución vertical";
+    String Legalerrors =  "errores legales";
+    String Hostile =  "hostil";
+    String Progressivepoliticians =  "políticos progresistas";
+    String Incarceration =  "encarcelamiento";
+    String Agecrimecurve =  "curva de edad-crimen";
+    String Circulation =  "circulación";
+    String Rocketscience =  "ciencia espacial";
+    String Streettested =  "probado en la calle";
+    String Crimehotspots =  "zonas calientes del crimen";
+    String Potentialkillers =  "asesinos potenciales";
+    String Potentialvictims =  "víctimas potenciales";
+    String Interrogates =  "interroga";
+    String Nonfatal =  "no mortal";
+    String Organizedretailtheftrings =  "anillos de robo organizado en el comercio minorista";
+    String Lawenforcementofficials =  "funcionarios encargados de hacer cumplir la ley";
+    String UnitedStatesSentencingCommission =  "Comisión de Sentencias de los Estados Unidos";
+    String Shatteringrecords =  "rompiendo récords";
+    String Resourceandtimeintensive =  "intensivo en recursos y tiempo";
+    String Trialstage =  "etapa del juicio";
+    String Blamingeachother =  "culparse mutuamente";
+    String Hostiletowardsoneanother =  "hostiles entre sí";
+    String Sentencingguidelines =  "directrices de sentencia";
+    String Violentcrimerates =  "tasas de delitos violentos";
+
 }

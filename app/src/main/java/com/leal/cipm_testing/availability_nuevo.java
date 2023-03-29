@@ -1287,151 +1287,326 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "a) To have fun and enjoy casual flings.",
-                                "b) To find someone to marry.",
-                                "c) To meet new people.",
-                                "d) To explore common interests",
+                                "To have fun and enjoy casual flings.",
+                                "To find someone to marry.",
+                                "To meet new people.",
+                                "To explore common interests",
                         },
                         {
-                                "a) It leads to unrealistic expectations.",
-                                "b) It is too predictable.",
-                                "c) It does not take into account the importance of shared values.",
-                                "d) It can lead to miscommunication about the ideal outcome of the relationship.",
+                                "It leads to unrealistic expectations.",
+                                "It is too predictable.",
+                                "It does not take into account the importance of shared values.",
+                                "It can lead to miscommunication about the ideal outcome of the relationship.",
                         },
                         {
-                                "a) Real love and a tryout for marriage.",
-                                "b) Desire for a roommate or lack of other opportunities.",
-                                "c) Inability to afford a single apartment.",
-                                "d) All of the above.",
+                                "Real love and a tryout for marriage.",
+                                "Desire for a roommate or lack of other opportunities.",
+                                "Inability to afford a single apartment.",
+                                "All of the above.",
                         },
                         {
-                                "a) Someone who wants to build a shared life.",
-                                "b) Someone who shares their values and beliefs.",
-                                "c) Someone who views them as a partner.",
-                                "d) All of the above.",
+                                "Someone who wants to build a shared life.",
+                                "Someone who shares their values and beliefs.",
+                                "Someone who views them as a partner.",
+                                "All of the above.",
                         },
                         {
-                                "a) It can lead to misunderstandings about the long-term future of the relationship.",
-                                "b) It is not a valid basis for a serious relationship.",
-                                "c) It can lead to boredom and a lack of excitement in the relationship.",
-                                "d) All of the above.",
+                                "It can lead to misunderstandings about the long-term future of the relationship.",
+                                "It is not a valid basis for a serious relationship.",
+                                "It can lead to boredom and a lack of excitement in the relationship.",
+                                "All of the above.",
                         },
                         {
-                                "a) Wait and see if things improve.",
-                                "b) End it.",
-                                "c) Try harder to make it work.",
-                                "d) Take a break from each other.",
+                                "Wait and see if things improve.",
+                                "End it.",
+                                "Try harder to make it work.",
+                                "Take a break from each other.",
                         },
                         {
-                                "a) They do not articulate what they really want.",
-                                "b) They are too picky.",
-                                "c) They are afraid of commitment.",
-                                "d) They do not know what they want.",
+                                "They do not articulate what they really want.",
+                                "They are too picky.",
+                                "They are afraid of commitment.",
+                                "They do not know what they want.",
                         },
                         {
-                                "a) Protection, commitment, and love.",
-                                "b) Financial security, companionship, and emotional stability.",
-                                "c) Adventure, excitement, and passion.",
-                                "d) None of the above.",
+                                "Protection, commitment, and love.",
+                                "Financial security, companionship, and emotional stability.",
+                                "Adventure, excitement, and passion.",
+                                "None of the above.",
                         },
                         {
-                                "a) There is no difference.",
-                                "b) Marriage involves more commitment, obligations, and expectations.",
-                                "c) Living together is more romantic.",
-                                "d) Marriage is more about having fun.",
+                                "There is no difference.",
+                                "Marriage involves more commitment, obligations, and expectations.",
+                                "Living together is more romantic.",
+                                "Marriage is more about having fun.",
                         },
                         {
-                                "a) Agree with them.",
-                                "b) Ask them why they are so reluctant to sign it.",
-                                "c) Tell them they are wrong.",
-                                "d) None of the above.",
+                                "Agree with them.",
+                                "Ask them why they are so reluctant to sign it.",
+                                "Tell them they are wrong.",
+                                "None of the above.",
                         },
                         {
-                                "a) As much as you think about what kind of career you want.",
-                                "b) More than what kind of career you want.",
-                                "b) More than what kind of career you want.",
-                                "d) Not at all.",
+                                "As much as you think about what kind of career you want.",
+                                "More than what kind of career you want.",
+                                "More than what kind of career you want.",
+                                "Not at all.",
                         },
                         {
-                                "a) Living together is more fun.",
-                                "b) Living together is a tryout for marriage.",
-                                "c) Dating is a tryout for marriage.",
-                                "d) There is no difference.",
+                                "Living together is more fun.",
+                                "Living together is a tryout for marriage.",
+                                "Dating is a tryout for marriage.",
+                                "There is no difference.",
                         },
                         {
-                                "a) Discuss their values and beliefs.",
-                                "b) Talk about marriage.",
-                                "c) Wait until the pizza is served to discuss marriage.",
-                                "d) Have fun.",
+                                "Discuss their values and beliefs.",
+                                "Talk about marriage.",
+                                "Wait until the pizza is served to discuss marriage.",
+                                "Have fun.",
                         },
                         {
-                                "a) To think about them as much as you think about your career.",
-                                "b) To prioritize relationships over your career.",
-                                "c) To only focus on your career.",
-                                "d) To think about relationships less than your career.",
+                                "To think about them as much as you think about your career.",
+                                "To prioritize relationships over your career.",
+                                "To only focus on your career.",
+                                "To think about relationships less than your career.",
                         },
                         {
-                                "a) Hate.",
-                                "b) Money.",
-                                "c) Love.",
-                                "d) Nothing.",
+                                "Hate.",
+                                "Money.",
+                                "Love.",
+                                "Nothing.",
                         },
                         {
-                                "a) Adolfo Peñaloza.",
-                                "b) Alejandro Berry.",
-                                "c) Lauren Chen.",
-                                "d) Adriana Monsalve.",
+                                "Adolfo Peñaloza.",
+                                "Alejandro Berry.",
+                                "Lauren Chen.",
+                                "Adriana Monsalve.",
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "b) To find someone to marry."
+                                "To find someone to marry."
                         },
                         {
-                                "d) It can lead to miscommunication about the ideal outcome of the relationship."
+                                "It can lead to miscommunication about the ideal outcome of the relationship."
                         },
                         {
-                                "d) All of the above."
+                                "All of the above."
                         },
                         {
-                                "d) All of the above."
+                                "All of the above."
                         },
                         {
-                                "a) It can lead to misunderstandings about the long-term future of the relationship."
+                                "It can lead to misunderstandings about the long-term future of the relationship."
                         },
                         {
-                                "b) End it."
+                                "End it."
                         },
                         {
-                                "a) They do not articulate what they really want."
+                                "They do not articulate what they really want."
                         },
                         {
-                                "a) Protection, commitment, and love."
+                                "Protection, commitment, and love."
                         },
                         {
-                                "b) Marriage involves more commitment, obligations, and expectations."
+                                "Marriage involves more commitment, obligations, and expectations."
                         },
                         {
-                                "b) Ask them why they are so reluctant to sign it."
+                                "Ask them why they are so reluctant to sign it."
                         },
                         {
-                                "a) As much as you."
+                                "As much as you."
                         },
                         {
-                                "b) Living together is a tryout for marriage."
+                                "Living together is a tryout for marriage."
                         },
                         {
-                                "d) Have fun."
+                                "Have fun."
                         },
                         {
-                                "a) To think about them as much as you think about your career."
+                                "To think about them as much as you think about your career."
                         },
                         {
-                                "c) Love."
+                                "Love."
                         },
                         {
-                                "c) Lauren Chen."
+                                "Lauren Chen."
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
+
+            case "How to Make Our Cities Safer":
+                pregSele = new String[]{
+                        "What is the main cause of the recent rise in violent crime in the United States?",
+                        "According to the speech, what was the increase in homicides in the United States in 2020?",
+                        "Which group of criminals is responsible for the majority of violent crimes in any given city?",
+                        "What is the benefit of targeting drug dealers according to the speech?",
+                        "What is vertical prosecution?",
+                        "What is the conclusion of the United States Sentencing Commission's analysis of prison sentences?",
+                        "What is the age-crime curve?",
+                        "According to the speech, what is the best way to reduce crime rates in a city?",
+                        "Why is collaboration between police and prosecutors important in investigations?",
+                        "What is the main goal of the solutions proposed in the speech?",
+                        "What is the term used in the speech to refer to criminals who are likely to commit and be victims of violent crimes?",
+                        "According to the speech, what is the benefit of targeting the Power Few?",
+                        "What is the main message of the speech?",
+                        "What is the United States Sentencing Commission?",
+                        "Why do most law enforcement officials believe that longer prison sentences reduce crime rates?",
+                        "What is the benefit of keeping bad actors in jail according to the speech?"
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "A lack of gun control laws",
+                                "The increase in drug use",
+                                "Economic inequality",
+                                "The speech does not mention a specific cause"
+                        },
+                        {
+                                "20 percent",
+                                "25 percent",
+                                "30 percent",
+                                "35 percent"
+                        },
+                        {
+                                "The Power Few",
+                                "The Criminal Elite",
+                                "The Dangerous Many",
+                                "The speech does not mention a specific group"
+                        },
+                        {
+                                "It reduces drug addiction rates",
+                                "It helps law enforcement gather information about other crimes",
+                                "It reduces gang violence",
+                                "It prevents burglaries"
+                        },
+                        {
+                                "A type of drug rehabilitation program",
+                                "A form of criminal defense strategy",
+                                "A concept where police and prosecutors collaborate from the beginning of an investigation",
+                                "The speech does not define the term"
+                        },
+                        {
+                                "Prison sentences have no significant impact on reducing crime rates",
+                                "Longer prison sentences lead to an increase in crime rates",
+                                "The longer the prison sentence, the less likely the criminal will commit another crime",
+                                "The speech does not mention the conclusion of the analysis"
+                        },
+                        {
+                                "A graph that shows the relationship between age and crime rates",
+                                "A theory that argues that older people commit more crimes",
+                                "A criminal defense strategy based on the defendant's age",
+                                "The speech does not define the term"
+                        },
+                        {
+                                "Implement more gun control laws",
+                                "Increase social welfare programs",
+                                "Target high-frequency offenders and keep them in jail",
+                                "The speech does not mention a specific solution"
+                        },
+                        {
+                                "It saves time and resources",
+                                "It helps to determine the order of witnesses in trial",
+                                "It minimizes legal errors and ensures justice is done",
+                                "The speech does not mention a specific benefit"
+                        },
+                        {
+                                "To punish criminals",
+                                "To reduce crime rates in cities",
+                                "To increase police presence in communities",
+                                "The speech does not mention a specific goal"
+                        },
+                        {
+                                "The High-Risk Group",
+                                "The Violent Offenders",
+                                "The Power Few",
+                                "The speech does not mention a specific term"
+                        },
+                        {
+                                "It reduces crime rates in a specific area only",
+                                "It helps to identify drug dealers and gun-toting felons",
+                                "It substantially reduces violent crime rates throughout an entire city",
+                                "The speech does not mention a specific benefit"
+                        },
+                        {
+                                "The United States needs to implement more social welfare programs",
+                                "Law enforcement should focus on punishing all criminals equally",
+                                "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities",
+                                "The speech does not have a clear main message"
+                        },
+                        {
+                                "An organization that promotes gun control laws",
+                                "A federal agency that analyzes the impact of prison sentences on reducing crime rates",
+                                "A group of criminal defense lawyers",
+                                "The speech does not define the term"
+                        },
+                        {
+                                "Because they believe that punishment is an effective deterrent to crime",
+                                "Because they believe that rehabilitation programs are ineffective",
+                                "Because they believe that prison sentences have no impact on crime rates",
+                                "The speech does not mention a specific reason"
+                        },
+                        {
+                                "It increases the prison population",
+                                "It reduces the number of potential victims on the street",
+                                "It is a cost-effective solution",
+                                "The speech does not mention a specific benefit",
+                        }
+                };
+
+                RespuestasCorrectasSele = new String[][] {
+                        {
+                            "The speech does not mention a specific cause."
+                        },
+                        {
+                            "30 percent."
+                        },
+                        {
+                            "The Power Few."
+                        },
+                        {
+                            "It helps law enforcement gather information about other crimes."
+                        },
+                        {
+                            "A concept where police and prosecutors collaborate from the beginning of an investigation."
+                        },
+                        {
+                            "The longer the prison sentence, the less likely the criminal will commit another crime."
+                        },
+                        {
+                            "A graph that shows the relationship between age and crime rates."
+                        },
+                        {
+                            "Target high-frequency offenders and keep them in jail."
+                        },
+                        {
+                            "It minimizes legal errors and ensures justice is done."
+                        },
+                        {
+                            "To reduce crime rates in cities."
+                        },
+                        {
+                            "The Power Few."
+                        },
+                        {
+                            "It substantially reduces violent crime rates throughout an entire city."
+                        },
+                        {
+                            "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities."
+                        },
+                        {
+                            "A federal agency that analyzes the impact of prison sentences on reducing crime rates."
+                        },
+                        {
+                            "Because they believe that punishment is an effective deterrent to crime."
+                        },
+                        {
+                            "It reduces the number of potential victims on the street."
                         }
                 };
 
@@ -7000,6 +7175,320 @@ public class availability_nuevo extends AppCompatActivity {
                 // vid
                 Uri uri5 = Uri.parse("https://adrianlealcaldera.com/Dating%20Dont%20Waste%20Your%20Time.mp4");
                 vv.setVideoURI(uri5);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "How to Make Our Cities Safer":
+                texts t6 = new texts();
+                String text6 = t6.HowtoMakeOurCitiesSafer;
+                SpannableString ss6 = new SpannableString(text6);
+
+                //COlOCAR PALABRAS CLAVE
+                ClickableSpan Homicides = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Homicides);
+                    }
+                };
+
+                ClickableSpan Constitutional = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Constitutional);
+                    }
+                };
+
+                ClickableSpan Cohort = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Cohort);
+                    }
+                };
+
+                ClickableSpan Highfrequencyoffenders = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Highfrequencyoffenders);
+                    }
+                };
+
+                ClickableSpan Felons = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Felons);
+                    }
+                };
+
+                ClickableSpan Verticalprosecution = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Verticalprosecution);
+                    }
+                };
+
+                ClickableSpan Legalerrors = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Legalerrors);
+                    }
+                };
+
+                ClickableSpan Hostile = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hostile);
+                    }
+                };
+
+                ClickableSpan Progressivepoliticians = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Progressivepoliticians);
+                    }
+                };
+
+                ClickableSpan Incarceration = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Incarceration);
+                    }
+                };
+
+                ClickableSpan Agecrimecurve = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Agecrimecurve);
+                    }
+                };
+
+                ClickableSpan Circulation = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Circulation);
+                    }
+                };
+
+                ClickableSpan Rocketscience = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Rocketscience);
+                    }
+                };
+
+                ClickableSpan Streettested = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Streettested);
+                    }
+                };
+
+                ClickableSpan Crimehotspots = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Crimehotspots);
+                    }
+                };
+
+                ClickableSpan Potentialkillers = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Potentialkillers);
+                    }
+                };
+
+                ClickableSpan Potentialvictims = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Potentialvictims);
+                    }
+                };
+
+                ClickableSpan Interrogates = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Interrogates);
+                    }
+                };
+
+                ClickableSpan Nonfatal = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Nonfatal);
+                    }
+                };
+
+                ClickableSpan Organizedretailtheftrings = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Organizedretailtheftrings);
+                    }
+                };
+
+                ClickableSpan Lawenforcementofficials = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Lawenforcementofficials);
+                    }
+                };
+
+                ClickableSpan UnitedStatesSentencingCommission = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.UnitedStatesSentencingCommission);
+                    }
+                };
+
+                ClickableSpan Shatteringrecords = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Shatteringrecords);
+                    }
+                };
+
+                ClickableSpan Resourceandtimeintensive = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Resourceandtimeintensive);
+                    }
+                };
+
+                ClickableSpan Trialstage = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Trialstage);
+                    }
+                };
+
+                ClickableSpan Blamingeachother = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Blamingeachother);
+                    }
+                };
+
+                ClickableSpan Hostiletowardsoneanother = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hostiletowardsoneanother);
+                    }
+                };
+
+                ClickableSpan Sentencingguidelines = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sentencingguidelines);
+                    }
+                };
+
+                ClickableSpan Violentcrimerates = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Violentcrimerates);
+                    }
+                };
+
+                int ics1 = text6.indexOf("homicides");
+                int ics2 = text6.indexOf("Constitutional");
+                int ics3 = text6.indexOf("high-frequency offenders");
+                int ics4 = text6.indexOf("Felons");
+                int ics5 = text6.indexOf("vertical prosecution");
+                int ics6 = text6.indexOf("legal errors");
+                int ics7 = text6.indexOf("hostile");
+                int ics8 = text6.indexOf("Progressive politicians");
+                int ics9 = text6.indexOf("incarceration");
+                int ics10 = text6.indexOf("age-crime curve");
+                int ics11 = text6.indexOf("circulation");
+                int ics12 = text6.indexOf("rocket science");
+                int ics13 = text6.indexOf("street-tested");
+                int ics14 = text6.indexOf("Crime “hot spots.”");
+                int ics15 = text6.indexOf("potential killers");
+                int ics16 = text6.indexOf("potential victims");
+                int ics17 = text6.indexOf("interrogates");
+                int ics18 = text6.indexOf("non-fatal");
+                int ics19 = text6.indexOf("organized retail theft rings");
+                int ics20 = text6.indexOf("vertical prosecution");
+                int ics21 = text6.indexOf("law enforcement officials");
+                int ics22 = text6.indexOf("United States Sentencing Commission");
+                int ics23 = text6.indexOf("shattering records");
+                int ics24 = text6.indexOf("resource and time intensive");
+                int ics25 = text6.indexOf("trial stage");
+                int ics26 = text6.indexOf("blaming each other");
+                int ics27 = text6.indexOf("hostile towards one another");
+                int ics28 = text6.indexOf("Progressive politicians");
+                int ics29 = text6.indexOf("age-crime curve");
+                int ics30 = text6.indexOf("rocket science");
+                int ics31 = text6.indexOf("violent crime rates");
+
+                ss6.setSpan(Homicides, ics1, ics1 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Constitutional, ics2, ics2 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Highfrequencyoffenders, ics3, ics3 + 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Felons, ics4, ics4 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Verticalprosecution, ics5, ics5 + 20, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Legalerrors, ics6, ics6 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Hostile, ics7, ics7 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Progressivepoliticians, ics8, ics8 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Incarceration, ics9, ics9 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Agecrimecurve, ics10, ics10 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Circulation, ics11, ics11 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Rocketscience, ics12, ics12 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Streettested, ics13, ics13 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Crimehotspots, ics14, ics14 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Potentialkillers, ics15, ics15 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Potentialvictims, ics16, ics16 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Interrogates, ics17, ics17 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Nonfatal, ics18, ics18 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Organizedretailtheftrings, ics19, ics19 + 28, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Verticalprosecution, ics20, ics20 + 20, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Lawenforcementofficials, ics21, ics21 + 25, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(UnitedStatesSentencingCommission, ics22, ics22 + 35, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Shatteringrecords, ics23, ics23 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Resourceandtimeintensive, ics24, ics24 + 27, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Trialstage, ics25, ics25 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Blamingeachother, ics26, ics26 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Hostiletowardsoneanother, ics27, ics27 + 27, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Progressivepoliticians, ics28, ics28 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Agecrimecurve, ics29, ics29 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Rocketscience, ics30, ics30 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss6.setSpan(Violentcrimerates, ics31, ics31 + 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+                tv.setText(ss6);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+                // vid
+                Uri uri6 = Uri.parse("https://adrianlealcaldera.com/How%20to%20Make%20Our%20Cities%20Safer.mp4");
+                vv.setVideoURI(uri6);
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();

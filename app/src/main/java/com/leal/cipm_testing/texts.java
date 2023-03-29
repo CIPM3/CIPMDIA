@@ -251,4 +251,92 @@ public class texts {
             "And it starts with the first date. \n" +
             "\n" +
             "I’m Lauren Chen, host of Pseudo-Intellectual on BlazeTV, for Prager University.\n";
+
+    String HowtoMakeOurCitiesSafer = "After two decades of relative peace, violent crime has again become a major issue in the United States.\n" +
+            "\n" +
+            "In 2020, homicides rose by 30 percent, a record for a one-year increase.\n" +
+            "\n" +
+            "In 2021 and 2022, homicides continued to climb, shattering records in several cities.\n" +
+            "\n" +
+            "We don’t have to live this way. Here are four practical solutions that will make our cities safer.\n" +
+            "\n" +
+            "None of these solutions are theoretical.\n" +
+            "\n" +
+            "They’re street-tested and backed by rigorous studies.\n" +
+            "\n" +
+            "They’re Constitutional and cost-effective.\n" +
+            "\n" +
+            "While each one will reduce crime on its own, taken together, they can transform a city—not in decades, but within a year or two.\n" +
+            "\n" +
+            "Here’s what we need to do.\n" +
+            "\n" +
+            "First: Target the Power Few\n" +
+            "\n" +
+            "Violent crime is highly concentrated.\n" +
+            "\n" +
+            "We know where violent crimes are likely to be committed: drug houses, gang hangouts, a problem bar. Crime “hot spots.”\n" +
+            "\n" +
+            "We know when violent crimes are likely to be committed: at night, on weekends, and during the hot summer months.\n" +
+            "\n" +
+            "But more importantly, we know who commits violent crimes: they’re called the Power Few.\n" +
+            "\n" +
+            "In any given city, just five percent of criminals are responsible for 50 percent of all violent crimes. I want to make this abundantly clear: it’s not five percent of the total population of a city that is driving the majority of violent crime; it’s five percent of the criminals—a subset of a subset. Targeting this small cohort of high-frequency offenders can substantially reduce violent crime rates throughout an entire city.\n" +
+            "\n" +
+            "Second: Go After the Drug Dealers and Gun-Toting Felons\n" +
+            "\n" +
+            "You don’t have to dig very deeply into crime statistics to discover that drug dealers and felons in possession of firearms are linked to many violent crimes, especially homicides.\n" +
+            "\n" +
+            "These are the people who are not only likely to kill but to be killed.\n" +
+            "\n" +
+            "So if law enforcement focuses on drug dealers and gun-toting felons, they’ll reduce the number of both potential killers and potential victims on the street.\n" +
+            "\n" +
+            "But targeting drug dealers has an added benefit, one that’s lost on the public, but well-known to law enforcement. \n" +
+            "\n" +
+            "Drug dealers, often part of drug gangs, have the best information about homicides and all sorts of other crimes. \n" +
+            "\n" +
+            "Any investigator who interrogates a drug-dealing gang member will likely soon discover that the defendant has witnessed or participated in multiple shootings, both fatal and non-fatal. In addition, that same defendant will know about a score of other crimes—everything from robberies to carjackings to organized retail theft rings. And if he is facing a long sentence, there’s a good chance he’ll give up that information.\n" +
+            "\n" +
+            "Third. Unite Cops and Prosecutors\n" +
+            "\n" +
+            "When police and prosecutors collaborate from the inception of an investigation, good things happen. This is a concept known as vertical prosecution.\n" +
+            "\n" +
+            "Working as a team, police and prosecutors discuss targets, timing of arrests, and legal issues like whether a search warrant is required. Once the investigation is completed, the police remain involved at the trial stage helping to determine the order of witnesses, trial themes, and even jury selection.\n" +
+            "\n" +
+            "This style of collaboration is resource and time intensive, but it pays big dividends. There’s no blaming each other for a poor investigation or bad trial strategy because everybody participated in all aspects of the case.\n" +
+            "\n" +
+            "When the prosecutors and police work together, particularly in major cases like homicides, the cases are better investigated, legal errors are minimized, the system works as intended. In short, justice is done.\n" +
+            "\n" +
+            "On the other hand, and this seems to be happening more and more in America today, when the prosecutors and police are actively hostile towards one another, the only people who win are the criminals.\n" +
+            "\n" +
+            "Fourth: Keep the Bad Actors in Jail\n" +
+            "\n" +
+            "Progressive politicians insist that the length of prison sentences plays no significant role in stopping crime. Most law enforcement officials strongly disagree. \n" +
+            "\n" +
+            "So, who’s right?\n" +
+            "\n" +
+            "In two separate studies, in 2020 and 2022, the United States Sentencing Commission, an independent federal agency, took up this question. Their analysis involved thousands of federal inmates over multiple decades.\n" +
+            "\n" +
+            "Their conclusion was clear: once prison sentences get to five years in length, the longer the prison sentence, the less likely the criminal will commit another crime.\n" +
+            "\n" +
+            "Your average citizen could tell you why incarceration matters.\n" +
+            "\n" +
+            "One, people don’t want to go back to prison. So criminals try not to commit more crimes.\n" +
+            "\n" +
+            "Two, the age-crime curve tells us that most violent criminals commit the majority of their crimes from their late teens into their 20s. Prison sentences of over five years simply take these violent criminals out of circulation when they are at their most dangerous.\n" +
+            "\n" +
+            "So, let’s review:\n" +
+            "\n" +
+            "Target the Power Few\n" +
+            "\n" +
+            "Go after the drug dealers and gun-toting felons\n" +
+            "\n" +
+            "Unite cops and prosecutors\n" +
+            "\n" +
+            "And keep the bad actors in jail\n" +
+            "\n" +
+            "That’s what separates safe cities from dangerous ones. \n" +
+            "\n" +
+            "It’s not rocket science just good law enforcement.\n" +
+            "\n" +
+            "I’m Tom Hogan, former federal and local prosecutor and criminal defense lawyer, for Prager University.";
 }
