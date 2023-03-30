@@ -339,4 +339,103 @@ public class texts {
             "It’s not rocket science just good law enforcement.\n" +
             "\n" +
             "I’m Tom Hogan, former federal and local prosecutor and criminal defense lawyer, for Prager University.";
+
+    String howtoEndSystemicRacism = "There is systemic racism in this country. \n" +
+            "\n" +
+            "And people of color are paying a terrible price because of it.\n" +
+            "\n" +
+            "The elites who have instigated this moral crime deserve to be exposed for what they’ve done.\n" +
+            "\n" +
+            "The sooner we call attention to them…\n" +
+            "\n" +
+            "The sooner we expose their regressive ideas…\n" +
+            "\n" +
+            "The sooner we live in a more just society.\n" +
+            "\n" +
+            "No truth. No peace.\n" +
+            "\n" +
+            "Here’s how bad it is.\n" +
+            "\n" +
+            "At Columbia University black students have a separate graduation from white students. In many other colleges, black students are encouraged to live in their own separate dorms.\n" +
+            "\n" +
+            "Students in many New York City government schools are separated by color during the school year.\n" +
+            "\n" +
+            "State governments put regulations in place that make it harder for minorities to start businesses.\n" +
+            "A national museum declares hard work and ambition to be white values.\n" +
+            "\n" +
+            "One of America’s two major political parties assumes that many black people are incapable of obtaining a driver’s license or an ID card.\n" +
+            "\n" +
+            "In Oregon, black students are told that math is a white construct—all but guaranteeing failure in this essential skill.\n" +
+            "\n" +
+            "In Baltimore less than 10% of minority students can read at grade level—all but guaranteeing failure in this essential skill.\n" +
+            "\n" +
+            "In Oakland, no student is allowed to get a D or an F. Instead, everyone is simply promoted to the next grade whether they know the material or not.\n" +
+            "\n" +
+            "City councils demonize their own police departments, then vote to cut police budgets. Crime and murder skyrocket. The victims are almost all minorities.\n" +
+            "\n" +
+            "Prosecutors refuse to prosecute hardened criminals. Instead, they let the criminals back on the streets to prey on law-abiding, hard-working citizens, again, mostly black people.\n" +
+            "\n" +
+            "That’s only a few of many examples.\n" +
+            "\n" +
+            "It's shocking but commonplace. \n" +
+            "\n" +
+            "Every day in every major city, people of color are living in this oppressive, patronizing environment. These prejudices—literally prejudgments—make it more and more difficult for black people and other minorities to improve their lives—the very opposite of what the goal should be.\n" +
+            "\n" +
+            "In other words, the very people claiming to have black people’s and minorities’ best interests at heart are instituting the very policies and attitudes that are holding them back.\n" +
+            "\n" +
+            "Sounds like systemic racism to me.\n" +
+            "\n" +
+            "And it makes you think that we’re not moving forward as a pluralistic, equal-opportunity nation, but backward into Jim Crow.\n" +
+            "\n" +
+            "Now, here’s the kicker.\n" +
+            "\n" +
+            "It’s not those horrible, nasty, bigoted, misogynistic, authoritarian nationalists on the right who are imposing these crushing rules and policy prescriptions; it’s the woke left.\n" +
+            "\n" +
+            "The side that I revered as a beacon of tolerance, the side that I thought was on the right side of history, up until a few years ago.\n" +
+            "\n" +
+            "In fact, I was so committed, I got a “Black Lives Matter” tattoo.\n" +
+            "\n" +
+            "I still have it.\n" +
+            "\n" +
+            "But then I had to face reality.\n" +
+            "\n" +
+            "It’s the ideology of the left that has set back young students of color with lower education standards. That calls for pulling cops out of high crime areas and replacing them with social workers… That states that skin color is more important than character—more important than anything.\n" +
+            "\n" +
+            "Yes, it is the woke left that is systemically racist.\n" +
+            "\n" +
+            "Not America.\n" +
+            "\n" +
+            "The race hoax epidemic is proof. There have been dozens of these hoaxes over the last few years.\n" +
+            "\n" +
+            "Nooses on garages, the N-word on dorm rooms, “this is MAGA country” taunts on cold city streets—virtually every one of them has been faked.\n" +
+            "\n" +
+            "The demand for racism exceeds the supply.\n" +
+            "\n" +
+            "If racism against black people or any other minority group was rampant, you wouldn’t have to fake it to convince people how “bad” things are.\n" +
+            "\n" +
+            "Did anyone fake racism in the South in the 1950s?\n" +
+            "\n" +
+            "But there’s so little now that the race-obsessed woke left has manufactured “unconscious racism” and “microaggressions” to fool people into believing America is “systemically racist.”\n" +
+            "\n" +
+            "That’s not to say racism doesn’t exist. Of course it does. There will always be small-minded people. But their numbers are as small as their minds.\n" +
+            "\n" +
+            "And in case you’re thinking of George Floyd, please know that even Minnesota’s leftist Attorney General admitted the incident had nothing to do with Floyd being black.\n" +
+            "\n" +
+            "My father and millions of Africans didn’t immigrate to America so that they could live in a racist society. They immigrated so that they could have opportunities that were only available to them here.\n" +
+            "\n" +
+            "So, to all the leftists out there, I understand why you believe what you believe—I was once one of you—but it’s time to ask yourself some questions.\n" +
+            "\n" +
+            "Is it really helping black people to tell them they’re not as responsible for their actions as anyone else?\n" +
+            "\n" +
+            "Isn’t it condescending, if not outright bigoted, to expect less from somebody purely based on their race?\n" +
+            "\n" +
+            "Isn’t it clear that we should judge each person on their merits, not their skin color?\n" +
+            "\n" +
+            "Wouldn’t that do more to create an equitable society than a hundred government programs?\n" +
+            "\n" +
+            "Yes, there really is systemic racism. And it’s hurting the country. But it’s not coming from the direction you think.\n" +
+            "\n" +
+            "Once you realize that, everything changes.\n" +
+            "\n" +
+            "I’m Amala Ekpunobi for Prager University.\n";
 }

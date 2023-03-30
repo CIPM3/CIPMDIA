@@ -7494,6 +7494,861 @@ public class availability_nuevo extends AppCompatActivity {
                 vv.start();
                 break;
 
+            case "How to End Systemic Racism":
+                texts t7 = new texts();
+                String text7 = t7.howtoEndSystemicRacism;
+                SpannableString ss7 = new SpannableString(text7);
+
+                ClickableSpan Racism = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Racism);
+                    }
+                };
+                ClickableSpan Deserve = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Deserve);
+                    }
+                };
+                ClickableSpan Exposed = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Exposed);
+                    }
+                };
+                ClickableSpan Sooner2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Sooner2);
+                    }
+                };
+                ClickableSpan Just = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Just);
+                    }
+                };
+                ClickableSpan Truth = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Truth);
+                    }
+                };
+                ClickableSpan College = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.College);
+                    }
+                };
+                ClickableSpan Encouraged = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Encouraged);
+                    }
+                };
+                ClickableSpan Many = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Many);
+                    }
+                };
+                ClickableSpan Government = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Government);
+                    }
+                };//10
+                ClickableSpan Harder = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Harder);
+                    }
+                };
+                ClickableSpan Businesses = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Businesses);
+                    }
+                };
+                ClickableSpan Museum = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Museum);
+                    }
+                };
+                ClickableSpan Hardwork = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hardwork);
+                    }
+                };
+                ClickableSpan Major = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Major);
+                    }
+                };
+                ClickableSpan Parties = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Parties);
+                    }
+                };
+                ClickableSpan Obtaining = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Obtaining);
+                    }
+                };
+                ClickableSpan Driverslicense = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Driverslicense);
+                    }
+                };
+                ClickableSpan Construct = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Construct);
+                    }
+                };
+                ClickableSpan Guaranteeing = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Guaranteeing);
+                    }
+                };//20
+                ClickableSpan Essentialskill = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Essentialskill);
+                    }
+                };
+                ClickableSpan Failure = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Failure);
+                    }
+                };
+                ClickableSpan Allowed = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Allowed);
+                    }
+                };
+                ClickableSpan Promoted = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Promoted);
+                    }
+                };
+                ClickableSpan Thenextgrade = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Thenextgrade);
+                    }
+                };
+                ClickableSpan Council = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Council);
+                    }
+                };
+                ClickableSpan Demonize = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Demonize);
+                    }
+                };
+                ClickableSpan Budget = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Budget);
+                    }
+                };
+                ClickableSpan Murder = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Murder);
+                    }
+                };
+                ClickableSpan Skyrocket = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Skyrocket);
+                    }
+                };//30
+                ClickableSpan Prosecutorsrefuse = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Prosecutorsrefuse);
+                    }
+                };
+                ClickableSpan Prosecute = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Prosecute);
+                    }
+                };
+                ClickableSpan Hardenedcriminals = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hardenedcriminals);
+                    }
+                };
+                ClickableSpan Instead2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Instead2);
+                    }
+                };
+                ClickableSpan Prey = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Prey);
+                    }
+                };
+                ClickableSpan Lawabiding = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Lawabiding);
+                    }
+                };
+                ClickableSpan Hardworkingcitizens = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hardworkingcitizens);
+                    }
+                };
+                ClickableSpan Again = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Again);
+                    }
+                };
+                ClickableSpan Few = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Few);
+                    }
+                };
+                ClickableSpan Commonplace = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commonplace);
+                    }
+                };//40
+                ClickableSpan Oppressive = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Oppressive);
+                    }
+                };
+                ClickableSpan Patronizing = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Patronizing);
+                    }
+                };
+                ClickableSpan Environment = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Environment);
+                    }
+                };
+                ClickableSpan Prejudices = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Prejudices);
+                    }
+                };
+                ClickableSpan Prejudgments = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Prejudgments);
+                    }
+                };
+                ClickableSpan Goal = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Goal);
+                    }
+                };
+                ClickableSpan Claiming = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Claiming);
+                    }
+                };
+                ClickableSpan Instituting = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Instituting);
+                    }
+                };
+                ClickableSpan Policies = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Policies);
+                    }
+                };
+                ClickableSpan Holdingback = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Holdingback);
+                    }
+                };//50
+                ClickableSpan Systemicracism = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Systemicracism);
+                    }
+                };
+                ClickableSpan Movingforward = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Movingforward);
+                    }
+                };
+                ClickableSpan Pluralistic = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Pluralistic);
+                    }
+                };
+                ClickableSpan Equalopportunitynation = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Equalopportunitynation);
+                    }
+                };
+                ClickableSpan Backward = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Backward);
+                    }
+                };
+                ClickableSpan Heresthekicker = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Heresthekicker);
+                    }
+                };
+                ClickableSpan Nasty = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Nasty);
+                    }
+                };
+                ClickableSpan Bigoted = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Bigoted);
+                    }
+                };
+                ClickableSpan Misogynistic = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Misogynistic);
+                    }
+                };
+                ClickableSpan Authoritariannationalists = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Authoritariannationalists);
+                    }
+                };//60
+                ClickableSpan Imposingthesecrushingrules = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Imposingthesecrushingrules);
+                    }
+                };
+                ClickableSpan Thewokeleft = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Thewokeleft);
+                    }
+                };
+                ClickableSpan Side = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Side);
+                    }
+                };
+                ClickableSpan Revered = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Revered);
+                    }
+                };
+                ClickableSpan Upuntil = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Upuntil);
+                    }
+                };
+                ClickableSpan Commited = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commited);
+                    }
+                };
+                ClickableSpan Proof = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Proof);
+                    }
+                };
+                ClickableSpan Dozens = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Dozens);
+                    }
+                };
+                ClickableSpan Overthelastfewyears = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Overthelastfewyears);
+                    }
+                };
+                ClickableSpan Nooses = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Nooses);
+                    }
+                };//70
+                ClickableSpan Nword = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Nword);
+                    }
+                };
+                ClickableSpan Taunts = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Taunts);
+                    }
+                };
+                ClickableSpan Faked = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Faked);
+                    }
+                };
+                ClickableSpan Supply = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Supply);
+                    }
+                };
+                ClickableSpan Against2 = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Against2);
+                    }
+                };
+                ClickableSpan Rampant = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Rampant);
+                    }
+                };
+                ClickableSpan Raceobsessed = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Raceobsessed);
+                    }
+                };
+                ClickableSpan Unconscious = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Unconscious);
+                    }
+                };
+                ClickableSpan Smallminded = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Smallminded);
+                    }
+                };
+                ClickableSpan Attorney = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Attorney);
+                    }
+                };//80
+                ClickableSpan Hadnothingtodo = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hadnothingtodo);
+                    }
+                };
+                ClickableSpan Available = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Available);
+                    }
+                };
+                ClickableSpan Understand = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Understand);
+                    }
+                };
+                ClickableSpan Once = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Once);
+                    }
+                };
+                ClickableSpan Condescending = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Condescending);
+                    }
+                };
+                ClickableSpan Outright = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Outright);
+                    }
+                };
+                ClickableSpan Expect = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Expect);
+                    }
+                };
+                ClickableSpan Purely = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Purely);
+                    }
+                };
+                ClickableSpan Basedon = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Basedon);
+                    }
+                };
+                ClickableSpan Merits = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Merits);
+                    }
+                };//90
+                ClickableSpan Equitable = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Equitable);
+                    }
+                };
+                ClickableSpan Hundred = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hundred);
+                    }
+                };
+                ClickableSpan Realize = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Realize);
+                    }
+                };
+
+                int ina1 = text7.indexOf("racism");
+                int ina2 = text7.indexOf("deserve");
+                int ina3 = text7.indexOf("exposed");
+                int ina4 = text7.indexOf("sooner");
+                int ina5 = text7.indexOf("just");
+                int ina6 = text7.indexOf("truth");
+                int ina7 = text7.indexOf("colleges");
+                int ina8 = text7.indexOf("encouraged");
+                int ina9 = text7.indexOf("many");
+                int ina10 = text7.indexOf("government");//10
+                int ina11 = text7.indexOf("harder");
+                int ina12 = text7.indexOf("businesses");
+                int ina13 = text7.indexOf("museum");
+                int ina14 = text7.indexOf("hard work");
+                int ina15 = text7.indexOf("major");
+                int ina16 = text7.indexOf("parties");
+                int ina17 = text7.indexOf("obtaining");
+                int ina18 = text7.indexOf("driver’s license");
+                int ina19 = text7.indexOf("construct");
+                int ina20 = text7.indexOf("guaranteeing");//20
+                int ina21 = text7.indexOf("essential skill");
+                int ina22 = text7.indexOf("failure");
+                int ina23 = text7.indexOf("allowed");
+                int ina24 = text7.indexOf("promoted");
+                int ina25 = text7.indexOf("the next grade");
+                int ina26 = text7.indexOf("councils");
+                int ina27 = text7.indexOf("demonize");
+                int ina28 = text7.indexOf("budgets");
+                int ina29 = text7.indexOf("murder");
+                int ina30 = text7.indexOf("skyrocket");//30
+                int ina31 = text7.indexOf("Prosecutors refuse");
+                int ina32 = text7.indexOf("prosecute");
+                int ina33 = text7.indexOf("hardened criminals");
+                int ina34 = text7.indexOf("Instead");
+                int ina35 = text7.indexOf("prey");
+                int ina36 = text7.indexOf("law-abiding");
+                int ina37 = text7.indexOf("hard-working citizens");
+                int ina38 = text7.indexOf("again");
+                int ina39 = text7.indexOf("few");
+                int ina40 = text7.indexOf("commonplace");//40
+                int ina41 = text7.indexOf("oppressive");
+                int ina42 = text7.indexOf("patronizing");
+                int ina43 = text7.indexOf("environment");
+                int ina44 = text7.indexOf("prejudices");
+                int ina45 = text7.indexOf("prejudgments");
+                int ina46 = text7.indexOf("goal");
+                int ina47 = text7.indexOf("claiming");
+                int ina48 = text7.indexOf("instituting");
+                int ina49 = text7.indexOf("policies");
+                int ina50 = text7.indexOf("holding them back");//50
+                int ina51 = text7.indexOf("systemic racism");
+                int ina52 = text7.indexOf("moving forward");
+                int ina53 = text7.indexOf("pluralistic");
+                int ina54 = text7.indexOf("equal-opportunity nation");
+                int ina55 = text7.indexOf("backward");
+                int ina56 = text7.indexOf("here’s the kicker");
+                int ina57 = text7.indexOf("nasty");
+                int ina58 = text7.indexOf("bigoted");
+                int ina59 = text7.indexOf("misogynistic");
+                int ina60 = text7.indexOf("authoritarian nationalists");//60
+                int ina61 = text7.indexOf("imposing these crushing");
+                int ina62 = text7.indexOf("the woke left");
+                int ina63 = text7.indexOf("side");
+                int ina64 = text7.indexOf("revered");
+                int ina65 = text7.indexOf("up until");
+                int ina66 = text7.indexOf("committed");
+                int ina67 = text7.indexOf("proof");
+                int ina68 = text7.indexOf("dozens");
+                int ina69 = text7.indexOf("over the last few years");
+                int ina70 = text7.indexOf("Nooses");//70
+                int ina71 = text7.indexOf("N-word");
+                int ina72 = text7.indexOf("taunts");
+                int ina73 = text7.indexOf("faked");
+                int ina74 = text7.indexOf("supply");
+                int ina75 = text7.indexOf("against");
+                int ina76 = text7.indexOf("rampant");
+                int ina77 = text7.indexOf("race-obsessed");
+                int ina78 = text7.indexOf("unconscious");
+                int ina79 = text7.indexOf("small-minded");
+                int ina80 = text7.indexOf("Attorney");//80
+                int ina81 = text7.indexOf("had nothing to do");
+                int ina82 = text7.indexOf("available");
+                int ina83 = text7.indexOf("understand");
+                int ina84 = text7.indexOf("once");
+                int ina85 = text7.indexOf("condescending");
+                int ina86 = text7.indexOf("outright");
+                int ina87 = text7.indexOf("expect");
+                int ina88 = text7.indexOf("purely");
+                int ina89 = text7.indexOf("based on");
+                int ina90 = text7.indexOf("merits");//90
+                int ina91 = text7.indexOf("equitable");
+                int ina92 = text7.indexOf("hundred");
+                int ina93 = text7.indexOf("realize");
+
+                ss7.setSpan(Racism, ina1, ina1 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Deserve, ina2, ina2 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Exposed, ina3, ina3 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Sooner2, ina4, ina4 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Just, ina5, ina5 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Truth, ina6, ina6 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(College, ina7, ina7 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Encouraged, ina8, ina8 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Many, ina9, ina9 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Government, ina10, ina10 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//10
+                ss7.setSpan(Harder, ina11, ina11 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Businesses, ina12, ina12 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Museum, ina13, ina13 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Hardwork, ina14, ina14 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Major, ina15, ina15 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Parties, ina16, ina16 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Obtaining, ina17, ina17 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Driverslicense, ina18, ina18 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Construct, ina19, ina19 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Guaranteeing, ina20, ina20 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//20
+                ss7.setSpan(Essentialskill, ina21, ina21 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Failure, ina22, ina22 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Allowed, ina23, ina23 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Promoted, ina24, ina24 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Thenextgrade, ina25, ina25 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Council, ina26, ina26 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Demonize, ina27, ina27 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Budget, ina28, ina28 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Murder, ina29, ina29 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Skyrocket, ina30, ina30 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//30
+                ss7.setSpan(Prosecutorsrefuse, ina31, ina31 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Prosecute, ina32, ina32 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Hardenedcriminals, ina33, ina33 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Instead2, ina34, ina34 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Prey, ina35, ina35 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Lawabiding, ina36, ina36 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Hardworkingcitizens, ina37, ina37 + 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Again, ina38, ina38 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Few, ina39, ina39 + 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Commonplace, ina40, ina40 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//40
+                ss7.setSpan(Oppressive, ina41, ina41 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Patronizing, ina42, ina42 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Environment, ina43, ina43 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Prejudices, ina44, ina44 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Prejudgments, ina45, ina45 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Goal, ina46, ina46 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Claiming, ina47, ina47 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Instituting, ina48, ina48 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Policies, ina49, ina49 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Holdingback, ina50, ina50 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//50
+                ss7.setSpan(Systemicracism, ina51, ina51 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Movingforward, ina52, ina52 + 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Pluralistic, ina53, ina53 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Equalopportunitynation, ina54, ina54 + 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Backward, ina55, ina55 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Heresthekicker, ina56, ina56 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Nasty, ina57, ina57 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Bigoted, ina58, ina58 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Misogynistic, ina59, ina59 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Authoritariannationalists, ina60, ina60 + 25, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//60
+                ss7.setSpan(Imposingthesecrushingrules, ina61, ina61 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Thewokeleft, ina62, ina62 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Side, ina63, ina63 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Revered, ina64, ina64 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Upuntil, ina65, ina65 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Commited, ina66, ina66 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Proof, ina67, ina67 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Dozens, ina68, ina68 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Overthelastfewyears, ina69, ina69 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Nooses, ina70, ina70 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//70
+                ss7.setSpan(Nword, ina71, ina71 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Taunts, ina72, ina72 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Faked, ina73, ina73 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Supply, ina74, ina74 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Against2, ina75, ina75 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Rampant, ina76, ina76 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Raceobsessed, ina77, ina77 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Unconscious, ina78, ina78 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Smallminded, ina79, ina79 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Attorney, ina80, ina80 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//80
+                ss7.setSpan(Hadnothingtodo, ina81, ina81 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Available, ina82, ina82 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Understand, ina83, ina83 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Once, ina84, ina84 + 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Condescending, ina85, ina85 + 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Outright, ina86, ina86 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Expect, ina87, ina87 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Purely, ina88, ina88 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Basedon, ina89, ina89 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Merits, ina90, ina90 + 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//90
+                ss7.setSpan(Equitable, ina91, ina91 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Hundred, ina92, ina92 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss7.setSpan(Realize, ina93, ina93 + 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                tv.setText(ss7);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+                // vid
+                Uri uri7 = Uri.parse("https://adrianlealcaldera.com/How%20to%20End%20Systemic%20Racism.mp4");
+                vv.setVideoURI(uri7);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
         }
     }
     private void openDialog(String s) {
