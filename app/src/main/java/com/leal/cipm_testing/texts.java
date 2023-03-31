@@ -438,4 +438,32 @@ public class texts {
             "Once you realize that, everything changes.\n" +
             "\n" +
             "I’m Amala Ekpunobi for Prager University.\n";
+
+    String ShouldGovernmentBailOutBigBanks = "In 2008, America experienced the biggest meltdown of its financial sector since the Great Depression. The conventional wisdom is that this failure and subsequent government rescue, commonly known as \"the bailout\" was brought about by three decades of bank de-regulation. There were a lot of causes for the meltdown, but deregulation wasn't one of them. Ironically, it wasn't because the banks had become unmoored from government control that led them into the financial storm, it was because they had become too closely tied to government. For three decades Uncle Sam, like an enabling parent, had always \"been there\" when the big banks got into trouble. The shock in 2008 was that for one brief moment, Uncle Sam wasn't there. \n" +
+            "\n" +
+            "In the wee hours of September 15, 2008, Lehman Brothers filed for bankruptcy. The financial industry waited for the Feds to step in and save Lehman bondholders like it saved those of Bear Stearns some months earlier. That didn't happen. Global financial markets seized up. As the Dow Jones Industrial average fell 498 points, or nearly 4.4 percent, financial institutions effectively went on strike. Banks wouldn't lend money to other banks and thus, indirectly, to the public because they had no idea which financial institution might go belly up next. The economy can withstand a stock-market crash, but a credit-market freeze -- essentially a cash freeze -- can cause a Depression, as credit underpins almost all business and personal activities. Indeed, some large companies, including General Electric, were so dependent on these short-term credit markets that they were in danger of not being able to pay their workers. \n" +
+            "\n" +
+            "The financial industry pleaded with the government to act. Later in the same day, September 15, it did. The Feds wouldn't save Lehman's but it would save AIG, the primary insurer of mortgage loans. A month later, the Troubled Asset Relief Program (TARP), a $700 billion plan to pump taxpayer cash into America's banks and financial institutions was approved by Congress. \n" +
+            "\n" +
+            "Public officials generally agreed that the free market had failed. In November 2008, President George W. Bush came to New York to explain why he, a Republican president, had signed TARP into law. \"I'm a market-oriented guy, but not when I'm faced with the prospect of a global meltdown,\" he said.\n" +
+            "\n" +
+            "But free-market capitalism had not melted down. Again, the problem was not that banks had been too free, but that they had grown too dependent on government over the last few decades. Here's a brief history. \n" +
+            "\n" +
+            "America's first post-Depression bailout of a big bank came in 1984 when the Republican administration of Ronald Reagan, with help from the Federal Reserve bailed out Continental Illinois, the eighth largest commercial bank in the nation. The bailout introduced the phrase \"too big to fail\" to the financial media's vocabulary.\n" +
+            "\n" +
+            "The premise for rescuing Continental was simple: the bank had many global bondholders, big investors, and the government feared that the bondholders might pull their money out of all American banks if they saw that a bank like Continental could fail. That might have stemmed a short-term panic, but it created a long-term monster. The government had effectively said to financial markets: if you lend money to a big bank, it's just like lending money to the U.S. Treasury -- only it's better because the banks will pay you more interest than you can get from your Treasury bonds. \n" +
+            "\n" +
+            "And so money poured in from investors. The banks got bigger... and more reckless.  And when the next crisis rippled through the financial industry, there was Uncle Sam, ready with his checkbook. \n" +
+            "\n" +
+            "In 1998 the government, this time under Democrat Bill Clinton bailed out Long-Term Capital Management, a hedge fund that teetered at the edge of bankruptcy and threatened to drag some big banks down with it. The message to the banks was clearer than ever: take bigger risks. Uncle Sam would be there, if any thing went wrong. \n" +
+            "\n" +
+            "Indeed, as I noted, early in the crisis, in March 2008, the government brokered the purchase of the Bear, Stearns investment bank (to JP Morgan) to save its bondholders and other creditors from suffering huge losses. And that summer, Washington rescued Fannie Mae and Freddie Mac, the giant government sponsored mortgage companies.\n" +
+            "\n" +
+            "It's the fact that the government didn't rescue Lehman Brothers that set off the 2008 panic because the financial world simply assumed that Uncle Sam would. Would we have been better off had the government saved Lehman's? Maybe in the short run. But it's likely that crisis would have occurred anyway. Because banks assumed that the government would always bail them out, their risk models by 2008 were all out of whack; conservative practices, like lending only to credit-worthy borrowers, a relic of the past.\n" +
+            "\n" +
+            "What's the solution? How do we bring sanity back to the financial industry? Not by passing thousands of new regulations. The banks' army of accountants, lawyers and lobbyists can always work their way around those. The solution is that the government must stop guaranteeing the big banks' losses. Only then will bondholders, the big investors like pension funds and insurance companies, who lend the financial sector the money they need to operate, have an incentive to police the industry. \n" +
+            "\n" +
+            "It's that simple.\n" +
+            "\n" +
+            "I'm Nicole Gelinas, a senior fellow at the Manhattan Institute, for Prager University.";
 }

@@ -1614,6 +1614,181 @@ public class availability_nuevo extends AppCompatActivity {
                 Respuestas = RespSele;
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
+
+            case "Should Government Bail Out Big Banks?":
+                pregSele = new String[] {
+                        "What is the conventional wisdom about the cause of the 2008 financial meltdown?",
+                        "What was the main reason for the credit-market freeze that occurred during the 2008 financial crisis?",
+                        "What was the purpose of the Troubled Asset Relief Program (TARP)?",
+                        "What was the phrase \"too big to fail\" referring to in the context of the 1984 bailout of Continental Illinois?",
+                        "How did the government's bailout of Continental Illinois in 1984 contribute to the 2008 financial crisis?",
+                        "What was the government's response to the 1998 near-bankruptcy of Long-Term Capital Management?",
+                        "How did the government's response to the 1998 Long-Term Capital Management crisis contribute to the 2008 financial crisis?",
+                        "Why did the government not rescue Lehman Brothers during the 2008 financial crisis?",
+                        "What was the impact of the government's decision not to rescue Lehman Brothers during the 2008 financial crisis?",
+                        "What was the main solution proposed by the author to bring sanity back to the financial industry?",
+                        "How did the government's bailout of Continental Illinois in 1984 introduce the phrase \"too big to fail\" to the financial media's vocabulary?",
+                        "What was the impact of the government's decision to bail out Long-Term Capital Management in 1998?",
+                        "What was the message that the government's rescue of Bear Stearns in 2008 sent to the financial industry?",
+                        "What was the impact of the government's decision to rescue Fannie Mae and Freddie Mac in 2008?",
+                        "Why did President George W. Bush sign the Troubled Asset Relief Program (TARP) into law in 2008?",
+                        "What is the author's view on how to prevent future financial crises?"
+                };
+
+                RespSele = new String[][] {
+                        {
+                                "It was caused by three decades of bank de-regulation.",
+                                "It was caused by too much government involvement in the financial industry.",
+                                "It was caused by the banks becoming too large and powerful.",
+                                "It was caused by a lack of oversight and regulation of the financial industry."
+                        },
+                        {
+                                "Banks stopped lending money to other banks.",
+                                "The stock market crashed, causing a chain reaction throughout the financial industry.",
+                                "General Electric was unable to pay its workers.",
+                                "The government refused to bail out Lehman Brothers."
+                        },
+                        {
+                                "To bail out Lehman Brothers.",
+                                "To pump taxpayer cash into America's banks and financial institutions.",
+                                "To provide short-term credit to struggling companies.",
+                                "To regulate the financial industry more closely."
+                        },
+                        {
+                                "The bank had too much debt to be saved.",
+                                "The bank was too large and powerful to be allowed to fail.",
+                                "The bank was too risky to be bailed out.",
+                                "The bank was too small to have a significant impact on the financial industry."
+                        },
+                        {
+                                "It led to a short-term panic in the financial markets.",
+                                "It created a long-term expectation that the government would always bail out big banks.",
+                                "It resulted in a decline in the number of investors willing to lend money to American banks.",
+                                "It had no direct impact on the 2008 financial crisis."
+                        },
+                        {
+                                "It allowed the hedge fund to fail, sending shockwaves through the financial industry.",
+                                "It bailed out the hedge fund and several big banks that were at risk of failing.",
+                                "It implemented new regulations to prevent future hedge fund failures.",
+                                "It did not take any action."
+                        },
+                        {
+                                "It led to an increase in regulation and oversight of the financial industry.",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
+                                "It resulted in a decrease in investor confidence in the financial industry.",
+                                "It had no direct impact on the 2008 financial crisis."
+                        },
+                        {
+                                "The government did not have the funds to do so.",
+                                "The government believed that Lehman Brothers was too risky to be saved.",
+                                "The government wanted to send a message to the financial industry that it could not always rely ongovernment bailouts.",
+                                "The government believed that saving Lehman Brothers would have set a dangerous precedent."
+                        },
+                        {
+                                "It caused a short-term panic in the financial markets.",
+                                "It led to a credit-market freeze.",
+                                "It resulted in the failure of several other large financial institutions.",
+                                "It had no direct impact on the financial industry."
+                        },
+                        {
+                                "Passing thousands of new regulations.",
+                                "Allowing the big banks to fail.",
+                                "Increasing government control over the financial industry.",
+                                "The government must stop guaranteeing the big banks' losses."
+                        },
+                        {
+                                "The government believed that Continental Illinois was too risky to be saved.",
+                                "The government wanted to send a message to the financial industry that it would always bail out big banks.",
+                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets.",
+                                "The media coined the phrase to describe the government's response to the crisis."
+                        },
+                        {
+                                "It led to an increase in regulation and oversight of the financial industry.",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
+                                "It resulted in a decrease in investor confidence in the financial industry.",
+                                "It had no direct impact on the financial industry."
+                        },
+                        {
+                                "Banks should be more cautious and avoid taking big risks.",
+                                "Banks should expect government bailouts in times of crisis.",
+                                "The government is unable to save all financial institutions that are in trouble.",
+                                "The financial industry should be more self-reliant and less dependent on government support."
+                        },
+                        {
+                                "It led to an increase in regulation and oversight of the financial industry.",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
+                                "It resulted in a decrease in investor confidence in the financial industry.",
+                                "It had no direct impact on the financial industry."
+                        },
+                        {
+                                "Because he believed in government intervention in the financial industry.",
+                                "Because he wanted to send a message to the financial industry that the government would always bail out big banks.",
+                                "Because he believed that the global financial system was in danger of collapsing.",
+                                "Because he wanted to gain political support from the financial industry"
+                        },
+                        {
+                                "Increase government regulation of the financial industry.",
+                                "Allow the big banks to fail.",
+                                "Decrease government involvement in the financial industry.",
+                                "Increase government support for the financial industry."
+                        }
+                };
+
+                RespuestasCorrectasSele = new String[][] {
+                        {
+                            "It was caused by three decades of bank de-regulation."
+                        },
+                        {
+                            "Banks stopped lending money to other banks."
+                        },
+                        {
+                            "To pump taxpayer cash into America's banks and financial institutions."
+                        },
+                        {
+                            "The bank was too large and powerful to be allowed to fail."
+                        },
+                        {
+                            "It created a long-term expectation that the government would always bail out big banks."
+                        },
+                        {
+                            "It bailed out the hedge fund and several big banks that were at risk of failing."
+                        },
+                        {
+                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                        },
+                        {
+                            "The government wanted to send a message to the financial industry that it could not always rely on government bailouts."
+                        },
+                        {
+                            "It led to a credit-market freeze."
+                        },
+                        {
+                            "The government must stop guaranteeing the big banks' losses."
+                        },
+                        {
+                            "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets."
+                        },
+                        {
+                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                        },
+                        {
+                            "Banks should expect government bailouts in times of crisis."
+                        },
+                        {
+                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                        },
+                        {
+                            "Because he believed that the global financial system was in danger of collapsing."
+                        },
+                        {
+                            "Decrease government involvement in the financial industry."
+                        }
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
         }
     }
 
@@ -8345,6 +8520,346 @@ public class availability_nuevo extends AppCompatActivity {
                 // vid
                 Uri uri7 = Uri.parse("https://adrianlealcaldera.com/How%20to%20End%20Systemic%20Racism.mp4");
                 vv.setVideoURI(uri7);
+                vv.setMediaController(new MediaController(this));
+                vv.requestFocus();
+                vv.start();
+                break;
+
+            case "Should Government Bail Out Big Banks?":
+                texts t8 = new texts();
+                String text8 = t8.ShouldGovernmentBailOutBigBanks;
+                SpannableString ss8 = new SpannableString(text8);
+
+                //32
+                ClickableSpan Financialsector = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Financialsector);
+                    }
+                };
+
+                ClickableSpan Governmentrescue = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Governmentrescue);
+                    }
+                };
+
+                ClickableSpan Conventionalwisdom = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Conventionalwisdom);
+                    }
+                };
+
+                ClickableSpan Shorttermpanic = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Shorttermpanic);
+                    }
+                };
+
+                ClickableSpan Creditmarketfreeze = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Creditmarketfreeze);
+                    }
+                };
+
+                ClickableSpan TroubledAssetReliefProgram = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.TroubledAssetReliefProgram);
+                    }
+                };
+
+                ClickableSpan PostDepressionbailout = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.PostDepressionbailout);
+                    }
+                };
+
+                ClickableSpan Commercialbank = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Commercialbank);
+                    }
+                };
+
+                ClickableSpan Globalbondholders = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Globalbondholders);
+                    }
+                };
+
+                ClickableSpan Shorttermcreditmarkets = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Shorttermcreditmarkets);
+                    }
+                };
+
+                ClickableSpan Bondholders = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Bondholders);
+                    }
+                };
+
+                ClickableSpan Hedgefund = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Hedgefund);
+                    }
+                };
+
+                ClickableSpan Governmentsponsoredmortgagecompanies = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Governmentsponsoredmortgagecompanies);
+                    }
+                };
+
+                ClickableSpan Financialstorm = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Financialstorm);
+                    }
+                };
+
+                ClickableSpan Globalmeltdown = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Globalmeltdown);
+                    }
+                };
+
+                ClickableSpan Governmentcontrol = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Governmentcontrol);
+                    }
+                };
+
+                ClickableSpan Financialinstitutions = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Financialinstitutions);
+                    }
+                };
+
+                ClickableSpan Creditunderpins = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Creditunderpins);
+                    }
+                };
+
+                ClickableSpan Stockmarketcrash = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Stockmarketcrash);
+                    }
+                };
+
+                ClickableSpan FederalReserve = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.FederalReserve);
+                    }
+                };
+
+                ClickableSpan Riskmodels = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Riskmodels);
+                    }
+                };
+
+                ClickableSpan Meltdown = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Meltdown);
+                    }
+                };
+
+                ClickableSpan Deregulation = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Deregulation);
+                    }
+                };
+
+                ClickableSpan Unmoored = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Unmoored);
+                    }
+                };
+
+                ClickableSpan Dependent = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Dependent);
+                    }
+                };
+
+                ClickableSpan Enablingparent = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Enablingparent);
+                    }
+                };
+
+                ClickableSpan Bellyup = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Bellyup);
+                    }
+                };
+
+                ClickableSpan Reckless = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Reckless);
+                    }
+                };
+
+                ClickableSpan Teetered = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Teetered);
+                    }
+                };
+
+                ClickableSpan Whack = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Whack);
+                    }
+                };
+
+                ClickableSpan Lobbyists = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Lobbyists);
+                    }
+                };
+
+                ClickableSpan Depressions = new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        Defs d = new Defs();
+                        openDialog(d.Depressions);
+                    }
+                };
+
+                int isg1 = text8.indexOf("financial sector");
+                int isg2 = text8.indexOf("government rescue");
+                int isg3 = text8.indexOf("conventional wisdom");
+                int isg4 = text8.indexOf("short-term panic");
+                int isg5 = text8.indexOf("credit-market freeze");
+                int isg6 = text8.indexOf("Troubled Asset Relief Program");
+                int isg7 = text8.indexOf("post-Depression bailout");
+                int isg8 = text8.indexOf("commercial bank");
+                int isg9 = text8.indexOf("global bondholders");
+                int isg10 = text8.indexOf("short-term credit markets");
+                int isg11 = text8.indexOf("bondholders");
+                int isg12 = text8.indexOf("hedge fund");
+                int isg13 = text8.indexOf("government sponsored mortgage companies");
+                int isg14 = text8.indexOf("financial storm");
+                int isg15 = text8.indexOf("global meltdown");
+                int isg16 = text8.indexOf("government control");
+                int isg17 = text8.indexOf("financial institutions");
+                int isg18 = text8.indexOf("credit underpins");
+                int isg19 = text8.indexOf("stock-market crash");
+                int isg20 = text8.indexOf("Federal Reserve");
+                int isg21 = text8.indexOf("risk models");
+                int isg22 = text8.indexOf("meltdown");
+                int isg23 = text8.indexOf("deregulation");
+                int isg24 = text8.indexOf("unmoored");
+                int isg25 = text8.indexOf("dependent");
+                int isg26 = text8.indexOf("enabling parent");
+                int isg27 = text8.indexOf("belly up");
+                int isg28 = text8.indexOf("reckless");
+                int isg29 = text8.indexOf("teetered");
+                int isg30 = text8.indexOf("whack");
+                int isg31 = text8.indexOf("lobbyists");
+                int isg33 = text8.indexOf("Depression");
+
+                ss8.setSpan(Financialsector, isg1, isg1 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Governmentrescue, isg2, isg2 + 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Conventionalwisdom, isg3, isg3 + 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Shorttermpanic, isg4, isg4 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Creditmarketfreeze, isg5, isg5 + 20, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(TroubledAssetReliefProgram, isg6, isg6 + 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(PostDepressionbailout, isg7, isg7 + 23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Commercialbank, isg8, isg8 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Globalbondholders, isg9, isg9 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Shorttermcreditmarkets, isg10, isg10 + 25, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Bondholders, isg11, isg11 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Hedgefund, isg12, isg12 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Governmentsponsoredmortgagecompanies, isg13, isg13 + 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Financialstorm, isg14, isg14 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Globalmeltdown, isg15, isg15 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Governmentcontrol, isg16, isg16 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Financialinstitutions, isg17, isg17 + 22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Creditunderpins, isg18, isg18 + 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Stockmarketcrash, isg19, isg19 + 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(FederalReserve, isg20, isg20 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Riskmodels, isg21, isg21 + 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Meltdown, isg22, isg22 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Deregulation, isg23, isg23 + 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Unmoored, isg24, isg24 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Dependent, isg25, isg25 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Enablingparent, isg26, isg26 + 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Bellyup, isg27, isg27 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Reckless, isg28, isg28 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Teetered, isg29, isg29 + 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Whack, isg30, isg30 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Lobbyists, isg31, isg31 + 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ss8.setSpan(Depressions, isg33, isg33 + 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+                tv.setText(ss8);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+                // vid Cambiar URL DEL VIDEO
+                Uri uri8 = Uri.parse("https://adrianlealcaldera.com/Should%20Government%20Bail%20Out%20Big%20Banks.mp4");
+                vv.setVideoURI(uri8);
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();

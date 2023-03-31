@@ -741,4 +741,40 @@ public class Defs {
     String Equitable = "Equtativo.";
     String Hundred = "Cientos.";
     String Realize = "Darse cuenta.";
+
+    //Should Government Bail Out Big Banks?
+
+    String Financialsector =  "sector financiero";
+    String Governmentrescue =  "rescate gubernamental";
+    String Conventionalwisdom =  "sabiduría convencional";
+    String Shorttermpanic =  "pánico a corto plazo";
+    String Creditmarketfreeze =  "congelación del mercado de crédito";
+    String TroubledAssetReliefProgram =  "Programa de Alivio de Activos Problemáticos";
+    String PostDepressionbailout =  "rescate post-Depresión";
+    String Commercialbank =  "banco comercial";
+    String Globalbondholders =  "titulares globales de bonos";
+    String Shorttermcreditmarkets =  "mercados de crédito a corto plazo";
+    String Bondholders =  "titulares de bonos";
+    String Hedgefund =  "fondo de cobertura";
+    String Governmentsponsoredmortgagecompanies =  "empresas hipotecarias patrocinadas por el gobierno";
+    String Financialstorm =  "tormenta financiera";
+    String Globalmeltdown =  "colapso global";
+    String Governmentcontrol =  "control gubernamental";
+    String Financialinstitutions =  "instituciones financieras";
+    String Creditunderpins =  "el crédito respalda";
+    String Stockmarketcrash =  "colapso del mercado de valores";
+    String FederalReserve =  "Reserva Federal";
+    String Riskmodels =  "modelos de riesgo";
+    String Meltdown =  "colapso total";
+    String Deregulation =  "desregulación";
+    String Unmoored =  "sin anclaje";
+    String Dependent =  "dependiente";
+    String Enablingparent =  "padre permisivo";
+    String Bellyup =  "en bancarrota";
+    String Reckless =  "imprudente";
+    String Teetered =  "tambaleado";
+    String Whack =  "desorden";
+    String Lobbyists =  "grupos de presión";
+    String Policing =  "supervisión, regulación.";
+    String Depressions =  "Depresiones económicas, periodos prolongados de declive económico.";
 }
