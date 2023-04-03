@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingTop="40dp">
 
@@ -51,24 +52,27 @@
                     android:text="Hazte Premium :)"
                     android:textSize="10dp" />
 
+                <!--BTNS RECOMENDS-->
                 <TextView
                     android:id="@+id/UserNameTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="elige categoria"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Elige categoria"
                     android:textColor="@color/black"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/myPlanBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_grupo_btnblue"
+                    android:onClick="myPlan"
+                    android:text="My Plan" />
 
             </LinearLayout>
-
-            <!--BTNS RECOMENDS-->
-            <Button
-                android:id="@+id/myPlanBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="myPlan"
-                android:text="My Plan" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -272,24 +276,24 @@
                 android:onClick="tutorialGeneral"
 
                 >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:orientation="vertical"
                     android:background="@drawable/ic_grupo_hut"
                     android:gravity="center_vertical"
-                    android:paddingHorizontal="20dp"
-                    >
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:text="Transiciones"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:paddingLeft="10dp"
+                        android:text="Transiciones"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="22dp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                     <!--<Button
                         android:id="@+id/Testnew"
@@ -372,6 +376,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Haz click aqui para mas información"
+                            android:paddingLeft="10dp"
                             android:textSize="12dp"
                             android:textColor="@color/black"
                             android:textStyle="bold"

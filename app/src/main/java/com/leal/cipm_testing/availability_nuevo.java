@@ -1112,151 +1112,151 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "A. To describe the differences between men and women.",
-                                "B. To illustrate the difficulty of learning a new skill.",
-                                "C. To show the importance of having fun at the beach.",
-                                "D. To explain the physics of buoyancy."
+                                "To describe the differences between men and women.",
+                                "To illustrate the difficulty of learning a new skill.",
+                                "To show the importance of having fun at the beach.",
+                                "To explain the physics of buoyancy."
                         },
                         {
-                                "A. They are basically the same.",
-                                "B. They are completely different.",
-                                "C. They are determined by socialization.",
-                                "D. They are interchangeable."
+                                "They are basically the same.",
+                                "They are completely different.",
+                                "They are determined by socialization.",
+                                "They are interchangeable."
                         },
                         {
-                                "A. Great-grandmother",
-                                "B. Gender studies PhD",
-                                "C. Both equally",
-                                "D. Neither"
+                                "Great-grandmother",
+                                "Gender studies PhD",
+                                "Both equally",
+                                "Neither"
                         },
                         {
-                                "A. Believing men and women are different.",
-                                "B. Believing men and women are the same.",
-                                "C. Believing gender roles are natural.",
-                                "D. Believing gender roles are socially constructed."
+                                "Believing men and women are different.",
+                                "Believing men and women are the same.",
+                                "Believing gender roles are natural.",
+                                "Believing gender roles are socially constructed."
                         },
                         {
-                                "A. A story about a girl who turned her toy trucks into weapons.",
-                                "B. A story about a girl who pretended her toy trucks were sleeping.",
-                                "C. A story about a boy who turned his toy trucks into weapons.",
-                                "D. A story about a boy who pretended his toy trucks were sleeping."
+                                "A story about a girl who turned her toy trucks into weapons.",
+                                "A story about a girl who pretended her toy trucks were sleeping.",
+                                "A story about a boy who turned his toy trucks into weapons.",
+                                "A story about a boy who pretended his toy trucks were sleeping."
                         },
                         {
-                                "A. Yes, always.",
-                                "B. No, never.",
-                                "C. Sometimes, depending on the individual.",
-                                "D. It is impossible to know."
+                                "Yes, always.",
+                                "No, never.",
+                                "Sometimes, depending on the individual.",
+                                "It is impossible to know."
                         },
                         {
-                                "A. As a sacred act between committed partners.",
-                                "B. As a casual form of entertainment.",
-                                "C. As a strictly regulated activity.",
-                                "D. As a dangerous and risky behavior."
+                                "As a sacred act between committed partners.",
+                                "As a casual form of entertainment.",
+                                "As a strictly regulated activity.",
+                                "As a dangerous and risky behavior."
                         },
                         {
-                                "A. She feels empowered.",
-                                "B. She feels indifferent.",
-                                "C. She feels vulnerable.",
-                                "D. She feels excited."
+                                "She feels empowered.",
+                                "She feels indifferent.",
+                                "She feels vulnerable.",
+                                "She feels excited."
                         },
                         {
-                                "A. It is less satisfying in all aspects.",
-                                "B. It is equally satisfying.",
-                                "C. It is more satisfying emotionally, psychologically, physically, and spiritually.",
-                                "D. It depends on the individual's personal beliefs."
+                                "It is less satisfying in all aspects.",
+                                "It is equally satisfying.",
+                                "It is more satisfying emotionally, psychologically, physically, and spiritually.",
+                                "It depends on the individual's personal beliefs."
                         },
                         {
-                                "A. The media and entertainment industry.",
-                                "B. The religious institutions.",
-                                "C. The government and politicians.",
-                                "D. The academic and intellectual community."
+                                "The media and entertainment industry.",
+                                "The religious institutions.",
+                                "The government and politicians.",
+                                "The academic and intellectual community."
                         },
                         {
-                                "A. A Hollywood actor.",
-                                "B. A gender studies PhD.",
-                                "C. An Associate Professor of Theology and Philosophy at Biola University.",
-                                "D. A New York pediatrician."
+                                "A Hollywood actor.",
+                                "A gender studies PhD.",
+                                "An Associate Professor of Theology and Philosophy at Biola University.",
+                                "A New York pediatrician."
                         },
                         {
-                                "A. To embrace modern ideas about gender and sexuality.",
-                                "B. To trust common sense and recognize the differences between men and women.",
-                                "C. To argue that gender roles should be abolished.",
-                                "D. To promote a more casual attitude towards sex."
+                                "To embrace modern ideas about gender and sexuality.",
+                                "To trust common sense and recognize the differences between men and women.",
+                                "To argue that gender roles should be abolished.",
+                                "To promote a more casual attitude towards sex."
                         },
                         {
-                                "A. Because it's physically painful.",
-                                "B. Because it has no meaning.",
-                                "C. Because sex and intimacy have deeper meaning for women.",
-                                "D. Because men and women are basically the same."
+                                "Because it's physically painful.",
+                                "Because it has no meaning.",
+                                "Because sex and intimacy have deeper meaning for women.",
+                                "Because men and women are basically the same."
                         },
                         {
-                                "A. Because she asked for them.",
-                                "B. To avoid conforming to gender stereotypes.",
-                                "C. Because they were on sale.",
-                                "D. To encourage her interest in mechanics."
+                                "Because she asked for them.",
+                                "To avoid conforming to gender stereotypes.",
+                                "Because they were on sale.",
+                                "To encourage her interest in mechanics."
                         },
                         {
-                                "A. A story about a boy turning a toy truck into a weapon.",
-                                "B. A story about a boy using a stick as a weapon.",
-                                "C. A story about a boy turning a stuffed animal into a weapon.",
-                                "D. A story about a boy using a pillow as a weapon."
+                                "A story about a boy turning a toy truck into a weapon.",
+                                "A story about a boy using a stick as a weapon.",
+                                "A story about a boy turning a stuffed animal into a weapon.",
+                                "A story about a boy using a pillow as a weapon."
                         },
                         {
-                                "A. Because it is a big deal with deep emotional, psychological, and physical implications.",
-                                "B. Because society wanted to control women's sexuality.",
-                                "C. Because it was more convenient for inheritance purposes.",
-                                "D. Because of religious dogma."
+                                "Because it is a big deal with deep emotional, psychological, and physical implications.",
+                                "Because society wanted to control women's sexuality.",
+                                "Because it was more convenient for inheritance purposes.",
+                                "Because of religious dogma."
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                            "A. To describe the differences between men and women."
+                            "To describe the differences between men and women."
                         },
                         {
-                            "B. They are completely different."
+                            "They are completely different."
                         },
                         {
-                            "A. Great-grandmother"
+                            "Great-grandmother"
                         },
                         {
-                            "B. Believing men and women are the same."
+                            "Believing men and women are the same."
                         },
                         {
-                            "B. A story about a girl who pretended her toy trucks were sleeping."
+                            "A story about a girl who pretended her toy trucks were sleeping."
                         },
                         {
-                            "B. No, never."
+                            "No, never."
                         },
                         {
-                            "B. As a casual form of entertainment."
+                            "As a casual form of entertainment."
                         },
                         {
-                            "C. She feels vulnerable."
+                            "She feels vulnerable."
                         },
                         {
-                            "C. It is more satisfying emotionally, psychologically, physically, and spiritually."
+                            "It is more satisfying emotionally, psychologically, physically, and spiritually."
                         },
                         {
-                            "D. The academic and intellectual community."
+                            "The academic and intellectual community."
                         },
                         {
-                            "C. An Associate Professor of Theology and Philosophy at Biola University."
+                            "An Associate Professor of Theology and Philosophy at Biola University."
                         },
                         {
-                            "B. To trust common sense and recognize the differences between men and women."
+                            "To trust common sense and recognize the differences between men and women."
                         },
                         {
-                            "C. Because sex and intimacy have deeper meaning for women."
+                            "Because sex and intimacy have deeper meaning for women."
                         },
                         {
-                            "B. To avoid conforming to gender stereotypes."
+                            "To avoid conforming to gender stereotypes."
                         },
                         {
-                            "A. A story about a boy turning a toy truck into a weapon."
+                            "A story about a boy turning a toy truck into a weapon."
                         },
                         {
-                            "A. Because it is a big deal with deep emotional, psychological, and physical implications."
+                            "Because it is a big deal with deep emotional, psychological, and physical implications."
                         }
                 };
 
@@ -1440,6 +1440,184 @@ public class availability_nuevo extends AppCompatActivity {
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
 
+            case "How to End Systemic Racism":
+                pregSele = new String[]{
+                        "What is the main point of the speech?",
+                        "What does the speaker mean when they say ¨No truth. No peace¨?",
+                        "According to the speech, what are some examples of systemic racism in America?",
+                        "What does the speaker suggest is the real cause of the racism problem in America?",
+                        "According to the speech, what is the ¨race hoax epidemic¨?",
+                        "What does the speaker say about George Floyd?",
+                        "What does the speaker say about education standards for young students of color?",
+                        "What does the speaker suggest is a better way to create an equitable society?",
+                        "According to the speech, what is the goal of the elites who have instigated systemic racism?",
+                        "What is the speaker's opinion on the ideology of the left?",
+                        "How does the speaker feel about the ideology of the left?",
+                        "What does the speaker believe is the cause of the demand for racism exceeding the supply?",
+                        "According to the speaker, what is the attitude of the left towards unconscious racism and microaggressions?",
+                        "What does the speaker believe is the best way to create an equitable society?",
+                        "According to the speech, where does the speaker believe systemic racism is coming from?",
+                        "How does the speaker suggest that leftists re-examine their beliefs?"
+                };
+
+                RespSele = new String[][]{
+                        {
+                                "Systemic racism is a thing of the past in America.",
+                                "There is no racism against people of color in America.",
+                                "The woke left is responsible for systemic racism in America.",
+                                "Racism in America is solely perpetuated by the right."
+                        },
+                        {
+                                "Without truth, there can be no justice or equality.",
+                                "Without truth, there can be no progress or improvement.",
+                                "Without truth, there can be no understanding or unity.",
+                                "Without truth, there can be no peace or harmony."
+                        },
+                        {
+                                "State governments put regulations in place that make it harder for minorities to start businesses.",
+                                "Black students are told that math is a white construct in Oregon.",
+                                "City councils demonize their own police departments, then vote to cut police budgets",
+                                "All of the above."
+
+                        },
+                        {
+                                "The policies and attitudes of the right.",
+                                "Small-minded individuals.",
+                                "The ideology of the left.",
+                                "The demand for racism exceeds the supply."
+
+                        },
+                        {
+                                "An epidemic of racism against people of color in America.",
+                                "An epidemic of fake claims of racism against people of color.",
+                                "An epidemic of racism hoaxes perpetuated by the right.",
+                                "An epidemic of microaggressions against people of color."
+
+                        },
+                        {
+                                "The incident had nothing to do with Floyd being black.",
+                                "The incident was entirely racially motivated.",
+                                "The incident was a hoax.",
+                                "The incident was the result of systemic racism."
+                        },
+                        {
+                                "They are the same as for other students.",
+                                "They are higher than for other students.",
+                                "They are lower than for other students.",
+                                "They are irrelevant to the issue of systemic racism."
+                        },
+                        {
+                                "Government programs.",
+                                "Judging each person on their merits, not their skin color.",
+                                "Affirmative action.",
+                                "Separating people by race."
+                        },
+                        {
+                                "To create a more just society.",
+                                "To hold people of color back.",
+                                "To promote equality and unity.",
+                                "To eliminate racism altogether."
+                        },
+                        {
+                                "It is a beacon of tolerance and progress.",
+                                "It is responsible for systemic racism in America.",
+                                "It is irrelevant to the issue of racism.",
+                                "It is the only solution to racism."
+                        },
+                        {
+                                "The speaker agrees with the ideology of the left.",
+                                "The speaker thinks the ideology of the left is well-intentioned but misguided.",
+                                "The speaker believes the ideology of the left is responsible for systemic racism.",
+                                "The speaker has never heard of the ideology of the left.",
+                        },
+                        {
+                                "The prevalence of small-minded people.",
+                                "b) The creation of false race hoaxes by the left.",
+                                "c) The success of anti-racism movements.",
+                                "d) The lack of systemic racism in America."
+                        },
+                        {
+                                "They are real and should be addressed.",
+                                "They are a figment of people's imaginations.",
+                                "They are intentional acts of racism.",
+                                "They are exaggerated by the right to discredit the left."
+                        },
+                        {
+                                "Judging each person on their merits, not their skin color.",
+                                "Implementing a hundred government programs.",
+                                "Encouraging people to embrace unconscious racism and microaggressions.",
+                                "Expecting less from people based on their race.",
+                        },
+                        {
+                                "The right.",
+                                "The left.",
+                                "Both the right and the left.",
+                                "The speaker does not believe in systemic racism."
+                        },
+                        {
+                                "By avoiding any questioning of their beliefs.",
+                                "By dismissing the possibility of systemic racism.",
+                                "By questioning whether certain beliefs are helping or hurting Black people.",
+                                "By doubling down on their beliefs and pushing for more extreme policies",
+                        }
+                };
+
+                RespuestasCorrectasSele = new String[][] {
+                        {
+                            "The woke left is responsible for systemic racism in America."
+                        },
+                        {
+                            "Without truth, there can be no peace or harmony."
+                        },
+                        {
+                            "All of the above."
+                        },
+                        {
+                            "The ideology of the left."
+                        },
+                        {
+                            "An epidemic of fake claims of racism against people of color."
+                        },
+                        {
+                            "The incident had nothing to do with Floyd being black."
+                        },
+                        {
+                            "They are lower than for other students."
+                        },
+                        {
+                            "Judging each person on their merits, not their skin color."
+                        },
+                        {
+                            "To hold people of color back."
+                        },
+                        {
+                            "It is responsible for systemic racism in America."
+                        },
+                        {
+                            "The speaker believes the ideology of the left is responsible for systemic racism."
+                        },
+                        {
+                            "The creation of false race hoaxes by the left."
+                        },
+                        {
+                            "They are real and should be addressed."
+                        },
+                        {
+                            "Judging each person on their merits, not their skin color."
+                        },
+                        {
+                            "The left."
+                        },
+                        {
+                            "By questioning whether certain beliefs are helping or hurting Black people."
+                        },
+                };
+
+                preguntas = pregSele;
+                Respuestas = RespSele;
+                RespuestasCorrectas = RespuestasCorrectasSele;
+                break;
+
             case "How to Make Our Cities Safer":
                 pregSele = new String[]{
                         "What is the main cause of the recent rise in violent crime in the United States?",
@@ -1561,52 +1739,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                            "The speech does not mention a specific cause."
+                                "The speech does not mention a specific cause."
                         },
                         {
-                            "30 percent."
+                                "30 percent."
                         },
                         {
-                            "The Power Few."
+                                "The Power Few."
                         },
                         {
-                            "It helps law enforcement gather information about other crimes."
+                                "It helps law enforcement gather information about other crimes."
                         },
                         {
-                            "A concept where police and prosecutors collaborate from the beginning of an investigation."
+                                "A concept where police and prosecutors collaborate from the beginning of an investigation."
                         },
                         {
-                            "The longer the prison sentence, the less likely the criminal will commit another crime."
+                                "The longer the prison sentence, the less likely the criminal will commit another crime."
                         },
                         {
-                            "A graph that shows the relationship between age and crime rates."
+                                "A graph that shows the relationship between age and crime rates."
                         },
                         {
-                            "Target high-frequency offenders and keep them in jail."
+                                "Target high-frequency offenders and keep them in jail."
                         },
                         {
-                            "It minimizes legal errors and ensures justice is done."
+                                "It minimizes legal errors and ensures justice is done."
                         },
                         {
-                            "To reduce crime rates in cities."
+                                "To reduce crime rates in cities."
                         },
                         {
-                            "The Power Few."
+                                "The Power Few."
                         },
                         {
-                            "It substantially reduces violent crime rates throughout an entire city."
+                                "It substantially reduces violent crime rates throughout an entire city."
                         },
                         {
-                            "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities."
+                                "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities."
                         },
                         {
-                            "A federal agency that analyzes the impact of prison sentences on reducing crime rates."
+                                "A federal agency that analyzes the impact of prison sentences on reducing crime rates."
                         },
                         {
-                            "Because they believe that punishment is an effective deterrent to crime."
+                                "Because they believe that punishment is an effective deterrent to crime."
                         },
                         {
-                            "It reduces the number of potential victims on the street."
+                                "It reduces the number of potential victims on the street."
                         }
                 };
 
