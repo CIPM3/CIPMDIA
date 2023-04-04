@@ -487,6 +487,9 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
     }
 
-
+    public void main(View vista) {
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
+    }
 
 }

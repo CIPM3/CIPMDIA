@@ -24,13 +24,6 @@
         <item>Question Structure Modals</item>
         <item>There Be</item>
 
-        <item>Who Simple</item>
-        <item>Who Continuous</item>
-        <item>Who Perfect</item>
-        <item>Who Modals Simple</item>
-        <item>Who Modals Continuous</item>
-        <item>Who Modals Perfect</item>
-
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
@@ -108,20 +101,6 @@
         <item>How Modals Simple</item>
         <item>How Modals Continuous</item>
         <item>How Modals Perfect</item>
-
-        <item>How Much Simple</item>
-        <item>How Much Continuous</item>
-        <item>How Much Perfect</item>
-        <item>How Much Modals Simple</item>
-        <item>How Much Modals Continuous</item>
-        <item>How Much Modals Perfect</item>
-
-        <item>How Many Simple</item>
-        <item>How Many Continuous</item>
-        <item>How Many Perfect</item>
-        <item>How Many Modals Simple</item>
-        <item>How Many Modals Continuous</item>
-        <item>How Many Modals Perfect</item>
 
         <item>Question Structure</item>
         <item>Question Structure Modals</item>
@@ -228,7 +207,6 @@
         <item>Tutorial</item>
         <item>Black Fathers</item>
         <item>Is America Racist?</item>
-        <item>How to End Systemic Racism</item>
     </string-array>
     <string-array name="Transition">
         <item>Tutorial para Transiciones</item>
