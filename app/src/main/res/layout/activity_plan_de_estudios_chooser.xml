@@ -46,6 +46,7 @@
 
         </LinearLayout>
 
+        <!--Text-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +62,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <!--BTNS-->
         <LinearLayout
             android:id="@+id/linearLayout41"

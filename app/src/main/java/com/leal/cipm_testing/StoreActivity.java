@@ -13,7 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -38,15 +38,15 @@ public class StoreActivity extends AppCompatActivity {
     Prefs prefs;
     Button btn_sub_monthly_price;
     VideoView vv;
-    ImageButton b;
+    LinearLayout b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
-        b= findViewById(R.id.playbuybtn);
-        vv= findViewById(R.id.buyvid);
+        b= (LinearLayout) findViewById(R.id.playbuybtn);
+        vv= (VideoView) findViewById(R.id.buyvid);
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
 
         billingClient = BillingClient.newBuilder(this)
@@ -157,7 +157,11 @@ public class StoreActivity extends AppCompatActivity {
     }
 
     public void showvid(View view){
-        b.setVisibility(View.INVISIBLE);
+        Toast.makeText(this, "Video tarda unos segundos", Toast.LENGTH_SHORT).show();
+
+        vv.setVisibility(View.VISIBLE);
+        b.setVisibility(View.GONE);
+
         Uri uri = Uri.parse("https://adrianlealcaldera.com/premium.mp4");
         vv.setVideoURI(uri);
         vv.setMediaController(new MediaController(this));

@@ -4,53 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".StoreActivity">
 
-    <Button
-        android:id="@+id/itemSubPrice"
-        android:layout_width="284dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="64dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-    <VideoView
-        android:id="@+id/buyvid"
-        android:layout_width="356dp"
-        android:layout_height="225dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemSubPrice"
-        app:layout_constraintVertical_bias="0.384" />
+        <!--Boton-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp">
 
-    <TextView
-        android:id="@+id/buytxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Antes de comprar mira el video"
-        android:textSize="20sp"
-        android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/buyvid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Button
+                android:id="@+id/itemSubPrice"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_grupo_btnblue"
+                android:text="Button" />
 
-    <ImageButton
-        android:id="@+id/playbuybtn"
-        android:layout_width="118dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="84dp"
-        android:onClick="showvid"
-        app:layout_constraintBottom_toBottomOf="@+id/buyvid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        </LinearLayout>
+
+        <!--Text-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Antes de comprar mira el video"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <!--Video View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/playbuybtn"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/ic_grupo_videobox"
+                android:onClick="showvid"
+                app:layout_constraintBottom_toBottomOf="@+id/buyvid"
+                android:orientation="horizontal"
+                >
+
+            </LinearLayout>
+
+            <VideoView
+                android:id="@+id/buyvid"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/itemSubPrice"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
