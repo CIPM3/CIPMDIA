@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -273,4 +274,16 @@ public class Culturalphrases extends AppCompatActivity {
 
     }
 
+    public void main(View vista) {
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
+    }
+    public void chat_maestro(View vista) {
+        Intent intento = new Intent(this, chat_maestro.class);
+        startActivity(intento);
+    }
+    public void profile(View vista) {
+        Intent intento = new Intent(this, profile.class);
+        startActivity(intento);
+    }
 }
