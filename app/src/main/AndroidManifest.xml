@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".test_student"
+            android:exported="false" />
+        <activity
             android:name=".main_2023"
             android:exported="false"
             android:screenOrientation="portrait" />

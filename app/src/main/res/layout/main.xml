@@ -24,6 +24,43 @@
             android:orientation="vertical"
             >
 
+            <!--Hazte Premium-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/azul"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="20dp"
+                android:onClick="tutorialGeneral"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/amarillo"
+                        android:textColor="@color/black"
+                        android:onClick="premium"
+                        android:textStyle="bold"
+                        android:text="Hazte Premium Aqui"
+                        />
+
+                    <!--<Button
+                        android:id="@+id/Testnew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Button" />-->
+                </LinearLayout>
+            </LinearLayout>
             <!--TOPBAR-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,26 +68,7 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
-                android:paddingTop="40dp">
-
-                <Button
-                    android:id="@+id/testest"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#3949AB"
-                    android:onClick="starttest"
-                    android:text="Quieres determinar tu nivel de inglés? click aqui y habla con un maestro en el app"
-                    android:textColor="#FDD835" />
-
-                <Button
-                    android:id="@+id/itemPrice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#E53935"
-                    android:onClick="premium"
-                    android:text="Hazte Premium :)"
-                    android:textSize="10dp" />
+                android:paddingTop="15dp">
 
                 <!--BTNS RECOMENDS-->
                 <TextView
@@ -66,12 +84,47 @@
 
                 <Button
                     android:id="@+id/myPlanBtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_grupo_btnblue"
                     android:onClick="myPlan"
                     android:text="My Plan" />
 
+
+            </LinearLayout>
+
+            <!--HACER EL TEST-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/azul"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="20dp"
+                android:onClick="TestNuevo"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/ic_grupo_hut"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="determinar tu nivel de inglés Aqui"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -264,7 +317,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!--Hacer un test-->
+            <!--Transiciones-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -293,7 +346,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22dp"
-                        android:textStyle="bold" />
+                        android:textStyle="normal" />
 
                     <!--<Button
                         android:id="@+id/Testnew"

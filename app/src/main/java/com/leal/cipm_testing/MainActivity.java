@@ -52,12 +52,11 @@ public class MainActivity extends AppCompatActivity {
         tvnameuser = findViewById(R.id.UserNameTv);
         //createRequest();
         hamtest= findViewById(R.id.hamtestbtn);
-        testest= findViewById(R.id.testest);
+//        testest= findViewById(R.id.testest);
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
         txt = findViewById(R.id.itemName);
-        btn = findViewById(R.id.itemPrice);
         menu = findViewById(R.id.menu);
         btn_menu_open = findViewById(R.id.btn_menu_open);
         btn_menu_closed = findViewById(R.id.btn_menu_closed);
@@ -77,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
             txt.setText("No active Subscription");
             Log.d("tag","inside no active suscription");
         }
-        btn.setOnClickListener(view -> {
-            startActivity(new Intent(this,StoreActivity.class));
-        });
+
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
@@ -228,6 +225,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void premium(View vist) {
         Intent intent = new Intent(this, StoreActivity.class);
+        startActivity(intent);
+    }
+
+    public void TestNuevo(View vist){
+        Intent intent = new Intent(this, test_student.class);
         startActivity(intent);
     }
     public void profile(View vist) {
