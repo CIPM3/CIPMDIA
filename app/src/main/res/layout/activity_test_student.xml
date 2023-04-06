@@ -381,12 +381,13 @@
                     android:layout_height="45dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
                     android:gravity="center"
+                    android:onClick="gotofragments"
                     >
                     <TextView
                         android:id="@+id/btnTestResult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Resutados del Test"
+                        android:text="Resultados del Test"
                         android:textColor="@color/azul"
                         android:textSize="16dp"
                         />

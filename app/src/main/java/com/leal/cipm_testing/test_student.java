@@ -107,6 +107,7 @@ public class test_student extends AppCompatActivity {
         txtlevel = findViewById(R.id.txtlevel);
         txtstructure = findViewById(R.id.txtstructure);
 
+
         mAuth= FirebaseAuth.getInstance();
         // este es el id que identifica al usuario-aparentemente jala con los 3 diferentes tipos de auth
         userid = mAuth.getCurrentUser().getUid();
@@ -8639,6 +8640,11 @@ public class test_student extends AppCompatActivity {
         user.put("score",ScoreFinal);
         uid.document("Interferencia_Consciente").set(user);
         answerinput.setText("");
+    }
+
+    public void gotofragments(View view){
+        Intent intento = new Intent(this, TestResults.class);
+        startActivity(intento);
     }
 
     /*public void spintdbtesting()  {

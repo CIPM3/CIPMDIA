@@ -41,16 +41,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|start"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:background="@color/amarillo"
+                        android:background="@drawable/ic_grupo_btnblue"
                         android:textColor="@color/black"
                         android:onClick="premium"
                         android:textStyle="bold"
                         android:text="Hazte Premium Aqui"
+                        android:backgroundTint="@color/amarillo"
                         />
 
                     <!--<Button
@@ -61,6 +62,7 @@
                         android:text="Button" />-->
                 </LinearLayout>
             </LinearLayout>
+
             <!--TOPBAR-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,7 +87,7 @@
                 <Button
                     android:id="@+id/myPlanBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:background="@drawable/ic_grupo_btnblue"
                     android:onClick="myPlan"
                     android:text="My Plan" />
@@ -97,7 +99,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:background="@color/azul"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
@@ -118,10 +120,10 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
-                        android:text="determinar tu nivel de inglés Aqui"
+                        android:text="Determinar tu nivel de inglés aquí"
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
-                        android:textSize="18dp"
+                        android:textSize="20dp"
                         android:textStyle="normal" />
 
                 </LinearLayout>
@@ -333,7 +335,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@drawable/ic_grupo_hut"
+                    android:background="@drawable/ic_grupo_tes"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     android:paddingHorizontal="20dp">
