@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -418,6 +419,14 @@ public class cultura_nuevo extends AppCompatActivity {
                 vv.setMediaController(new MediaController(this));
                 vv.requestFocus();
                 vv.start();
+
+                /*FUNCION FINALIZO VIDEO*/
+                /*vv.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        Toast.makeText(cultura_nuevo.this, "Finalizo Video", Toast.LENGTH_SHORT).show();
+                    }
+                });*/
 
                 break;
 
