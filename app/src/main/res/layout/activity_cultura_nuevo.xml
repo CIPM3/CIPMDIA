@@ -124,6 +124,7 @@
                         android:background="@drawable/ic_grupo_select"
                         android:gravity="end"
                         android:spinnerMode="dialog"
+                        android:theme="@style/MySpinnerStyle"
                         />
                 </LinearLayout>
 

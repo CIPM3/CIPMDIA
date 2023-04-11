@@ -101,6 +101,7 @@
                         android:background="@drawable/ic_grupo_select"
                         android:gravity="end"
                         android:spinnerMode="dialog"
+                        android:theme="@style/MySpinnerStyle"
                         />
                 </LinearLayout>
 
@@ -201,7 +202,9 @@
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:background="@drawable/ic_grupo_select"
-                            android:spinnerMode="dialog" />
+                            android:spinnerMode="dialog"
+                            android:theme="@style/MySpinnerStyle"
+                            />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

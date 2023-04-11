@@ -360,6 +360,14 @@ public class test_student extends AppCompatActivity {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
+    public void profile(View vist) {
+        Intent crispIntent = new Intent(this, profile.class);
+        startActivity(crispIntent);
+    }
+    public void chat_maestro(View vist) {
+        Intent crispIntent = new Intent(this, chat_maestro.class);
+        startActivity(crispIntent);
+    }
 
     public void startTest (View vista){
 
