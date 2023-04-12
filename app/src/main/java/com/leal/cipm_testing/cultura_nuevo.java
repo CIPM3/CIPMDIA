@@ -4683,6 +4683,8 @@ public class cultura_nuevo extends AppCompatActivity {
 
         }
     }
+
+    //BTNS
     public void main(View vista) {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);

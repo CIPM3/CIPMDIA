@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.main);
         tvnameuser = findViewById(R.id.UserNameTv);
         //createRequest();
@@ -214,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
     public void ConInt(View vista) {
 
 
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, rachel.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -256,8 +257,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
     public void chose_cultura(View vista) {
-        if(prefs.getPremium()==1){
-            Intent intento = new Intent(MainActivity.this, chose_cultura.class);
+        if(prefs.getPremium()==0){
+            Intent intento = new Intent(MainActivity.this, Cultura2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
@@ -287,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void chose_spa_int(View vista) {
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, spa_int_nuevo.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){

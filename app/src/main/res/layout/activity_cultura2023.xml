@@ -5,6 +5,258 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Cultura2023">
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_rect_ngulo_header"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="start|center"
+                    android:background="@drawable/ic_grupo_back"
+                    android:onClick="main">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Culture"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Video View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+
+                <LinearLayout
+                    android:id="@+id/videoView1box"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/ic_grupo_videobox"
+                    android:onClick="showv"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <VideoView
+                    android:id="@+id/videoView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <!--Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+                <!--text-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textspin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del video"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <!--Spinner-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:gravity="end|center">
+
+                    <Spinner
+                        android:id="@+id/spinuno"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_grupo_select"
+                        android:gravity="end"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--TEXTO EXPLICACION-->
+            <LinearLayout
+                android:id="@+id/txt_exp_est"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp">
+
+                <TextView
+                    android:id="@+id/text_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Seleccione una estructura para continuar con la practica"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <!-- KEY WORD LAYOUT-->
+            <LinearLayout
+                android:id="@+id/lay_key_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="La palabra a encontrar es: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/text_key_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Palabra Clave"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!--BTN EMPEZAR-->
+            <LinearLayout
+                android:id="@+id/lay_btn_empezar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/lay_btn_emp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:gravity="center"
+                    android:onClick="showv">
+
+                    <TextView
+                        android:id="@+id/text_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Empezar Explicacion"
+                        android:textColor="@color/azul"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_btn_salt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:gravity="center"
+                    android:onClick="saltarExp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/btn_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saltar Explicacion"
+                        android:textColor="@color/azul"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--BTN GET-->
+            <LinearLayout
+                android:id="@+id/lay_btn_get"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/btnget"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:gravity="center"
+                    android:onClick="getpos">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get"
+                        android:textColor="@color/azul"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--BTN OPC FRAGMENT-->
+    <LinearLayout
+        android:id="@+id/BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
