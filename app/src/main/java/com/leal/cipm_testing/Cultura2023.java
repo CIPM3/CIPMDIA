@@ -81,7 +81,8 @@ public class Cultura2023 extends AppCompatActivity {
     BottomNav myFragment = new BottomNav();
 
     Object KeyWordsObject [][][] ={
-            //Moonlight
+
+            //Moonlight Clip1
             {
                     //"Ain't no refund"
                     {
@@ -91,9 +92,738 @@ public class Cultura2023 extends AppCompatActivity {
                             24000,
                             //timeStop
                             26000,
+                    },
+                    //"Thought you was on vacation"
+                    {
+                            //keyword
+                            "Thought you was on vacation",
+                            //timeStart
+                            36000,
+                            //timeStop
+                            38000,
+                    },
+                    //"How peanut working out"
+                    {
+                            //keyword
+                            "How peanut working out",
+                            //timeStart
+                            48000,
+                            //timeStop
+                            50000,
+                    },
+                    //"I ain´t go let that go down"
+                    {
+                            //keyword
+                            "I ain´t go let that go down",
+                            //timeStart
+                            62800,
+                            //timeStop
+                            65000,
+                            /*//time2
+                            //timeStart
+                            70000,
+                            //timeStop
+                            73000,*/
+                    },
+                    //"What´s up"
+                    {
+                            //keyword
+                            "What´s up",
+                            //timeStart
+                            93000,
+                            //timeStop
+                            95600,
+                    },
+                    //"It´s all good"
+                    {
+                            //keyword
+                            "It´s all good",
+                            //timeStart
+                            96000,
+                            //timeStop
+                            96700,
+                            /*//time2
+                            //timeStart
+                            103000,
+                            //timeStop
+                            105000,*/
+                    },
+                    //"What are you doing"
+                    {
+                            //keyword
+                            "What are you doing",
+                            //timeStart
+                            97000,
+                            //timeStop
+                            99000,
+                    },
+                    //"What is wrong with you"
+                    {
+                            //keyword
+                            "What is wrong with you",
+                            //timeStart
+                            107000,
+                            //timeStop
+                            108000,
+                    },
+                    //"Get the fuck out of here"
+                    {
+                            //keyword
+                            "Get the fuck out of here",
+                            //timeStart
+                            115000,
+                            //timeStop
+                            116000,
+                    },
+                    //"Have you ever"
+                    {
+                            //keyword
+                            "Have you ever",
+                            //timeStart
+                            179000,
+                            //timeStop
+                            180200,
                     }
+            },
 
-            }
+            //Rick and Morty Clip 2
+            {
+                    //"What's up"
+                    {
+                            //keyword
+                            "What's up",
+                            //timeStart
+                            0,
+                            //timeStop
+                            2000,
+                    },
+                    //"No can do"
+                    {
+                            //keyword
+                            "No can do",
+                            //timeStart
+                            5000,
+                            //timeStop
+                            7000,
+                    },
+                    //"When i feel like it"
+                    {
+                            //keyword
+                            "When i feel like it",
+                            //timeStart
+                            16000,
+                            //timeStop
+                            17500,
+                    },
+                    //"You need to chill out"
+                    {
+                            //keyword
+                            "You need to chill out",
+                            //timeStart
+                            18000,
+                            //timeStop
+                            20000,
+                    },
+                    //"Tryna - (trying to)"
+                    {
+                            //keyword
+                            "Tryna - (trying to)",
+                            //timeStart
+                            24000,
+                            //timeStop
+                            25000,
+                    },
+                    //"Hanging out"
+                    {
+                            //keyword
+                            "Hanging out",
+                            //timeStart
+                            26000,
+                            //timeStop
+                            28000,
+                    },
+                    //"You're overthinking it"
+                    {
+                            //keyword
+                            "You're overthinking it",
+                            //timeStart
+                            54000,
+                            //timeStop
+                            58000,
+                    },
+                    //"Get your shit together"
+                    {
+                            //keyword
+                            "Get your shit together",
+                            //timeStart
+                            104000,
+                            //timeStop
+                            106000,
+                    },
+                    //"To be into"
+                    {
+                            //keyword
+                            "To be into",
+                            //timeStart
+                            4000,
+                            //timeStop
+                            5000,
+                    }
+            },
+
+            //Do You Want Pepsi Clip 3
+            {
+                    //"Is there anything else a can get for you"
+                    {
+                            //keyword
+                            "Is there anything else a can get for you",
+                            //timeStart
+                            0,
+                            //timeStop
+                            2000,
+                    },
+                    //"Ain't got no"
+                    {
+                            //keyword
+                            "Ain't got no",
+                            //timeStart
+                            6000,
+                            //timeStop
+                            7000,
+                    },
+                    //"Do you want"
+                    {
+                            //keyword
+                            "Do you want",
+                            //timeStart
+                            7000,
+                            //timeStop
+                            8000,
+                    },
+                    //"I was just wondering"
+                    {
+                            //keyword
+                            "I was just wondering",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            16000,
+                    },
+                    //"Might as well"
+                    {
+                            //keyword
+                            "Might as well",
+                            //timeStart
+                            16000,
+                            //timeStop
+                            17000,
+                    },
+                    //"You feel me"
+                    {
+                            //keyword
+                            "You feel me",
+                            //timeStart
+                            17000,
+                            //timeStop
+                            18000,
+                    },
+                    //"Is there a problem"
+                    {
+                            //keyword
+                            "Is there a problem",
+                            //timeStart
+                            28000,
+                            //timeStop
+                            30000,
+                    },
+                    //"I didn't want"
+                    {
+                            //keyword
+                            "Get your shit together",
+                            //timeStart
+                            31000,
+                            //timeStop
+                            32000,
+                    },
+                    //"Why would you"
+                    {
+                            //keyword
+                            "Why would you",
+                            //timeStart
+                            33000,
+                            //timeStop
+                            35000,
+                            /*//time2
+                            //timeStart
+                            36000,
+                            //timeStop
+                            37000,*/
+                    }
+            },
+
+            //Sangre Por Sangre Foodline Clip 4
+            {
+                    //"You ain't going to no prom soon"
+                    {
+                            //keyword
+                            "You ain't going to no prom soon",
+                            //timeStart
+                            8000,
+                            //timeStop
+                            10000,
+                    },
+                    //"Ain't nothing but"
+                    {
+                            //keyword
+                            "Ain't nothing but",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            16000,
+                    },
+                    //"I ain't no muslim"
+                    {
+                            //keyword
+                            "I ain't no muslim",
+                            //timeStart
+                            25000,
+                            //timeStop
+                            27000,
+                    },
+                    //"I ain't no moving"
+                    {
+                            //keyword
+                            "I ain't no moving",
+                            //timeStart
+                            31000,
+                            //timeStop
+                            33000,
+                    },
+                    //"There is a ray of sunshine"
+                    {
+                            //keyword
+                            "There is a ray of sunshine",
+                            //timeStart
+                            61000,
+                            //timeStop
+                            63000,
+                    },
+                    //"I ain't buying whats mine"
+                    {
+                            //keyword
+                            "I ain't buying whats mine",
+                            //timeStart
+                            132000,
+                            //timeStop
+                            134000,
+                    },
+                    //"You've getting by with that shit"
+                    {
+                            //keyword
+                            "You've getting by with that shit",
+                            //timeStart
+                            155000,
+                            //timeStop
+                            158000,
+                    }
+            },
+
+            //Sangre Por Sangre Watch El Paisaje Clip 5
+            {
+                    //"I'm here to jack you up"
+                    {
+                            //keyword
+                            "I'm here to jack you up",
+                            //timeStart
+                            23000,
+                            //timeStop
+                            25000,
+                    },
+                    //"What do you want to do"
+                    {
+                            //keyword
+                            "What do you want to do",
+                            //timeStart
+                            42000,
+                            //timeStop
+                            44000,
+                    },
+                    //"You gotta pay your dues"
+                    {
+                            //keyword
+                            "You gotta pay your dues",
+                            //timeStart
+                            45000,
+                            //timeStop
+                            47000,
+                    },
+                    //"You wanna throw down"
+                    {
+                            //keyword
+                            "You wanna throw down",
+                            //timeStart
+                            48000,
+                            //timeStop
+                            50000,
+                    },
+                    //"Catch you on the rebound"
+                    {
+                            //keyword
+                            "Catch you on the rebound",
+                            //timeStart
+                            82000,
+                            //timeStop
+                            85000,
+                    },
+                    //"Should't done thate"
+                    {
+                            //keyword
+                            "Should't done thate",
+                            //timeStart
+                            135000,
+                            //timeStop
+                            137000,
+                    }
+            },
+
+            //Training Day Rabbit Has The Gun Clip 6
+            {
+                    //"Is no fun"
+                    {
+                            //keyword
+                            "Is no fun",
+                            //timeStart
+                            12000,
+                            //timeStop
+                            14000,
+                    },
+                    //"Who want to get paid"
+                    {
+                            //keyword
+                            "Who want to get paid",
+                            //timeStart
+                            32000,
+                            //timeStop
+                            34000,
+                            /*//time2
+                            //timeStart
+                            35000,
+                            //timeStop
+                            37000,*/
+                    },
+                    //"I'm glad to hear that"
+                    {
+                            //keyword
+                            "I'm glad to hear that",
+                            //timeStart
+                            49000,
+                            //timeStop
+                            51000,
+                    },
+                    //"What are you gonna do"
+                    {
+                            //keyword
+                            "What are you gonna do",
+                            //timeStart
+                            57000,
+                            //timeStop
+                            59000,
+                    },
+                    //"There it is"
+                    {
+                            //keyword
+                            "There it is",
+                            //timeStart
+                            67000,
+                            //timeStop
+                            69000,
+                    },
+                    //"Havent ever - ain't never"
+                    {
+                            //keyword
+                            "Havent ever - ain't never",
+                            //timeStart
+                            73000,
+                            //timeStop
+                            75000,
+                    },
+                    //"You get me twisted"
+                    {
+                            //keyword
+                            "You get me twisted",
+                            //timeStart
+                            118000,
+                            //timeStop
+                            120000,
+                    },
+                    //"Ain't got it in you"
+                    {
+                            //keyword
+                            "Ain't got it in you",
+                            //timeStart
+                            139000,
+                            //timeStop
+                            141000,
+                            /*//time2
+                            //timeStart
+                            176000,
+                            //timeStop
+                            178000,*/
+                    },
+                    //"Ima get - i'm going to get"
+                    {
+                            //keyword
+                            "Ima get - i'm going to get",
+                            //timeStart
+                            152000,
+                            //timeStop
+                            154000,
+                            /*//time2
+                            //timeStart
+                             155000,
+                             //timeStop
+                             157000,*/
+                            /*//time3
+                            //timeStart
+                            173000,
+                            //timeStop
+                            174000,*/
+                            /*//time4
+                            //timeStart
+                            175000,
+                            //timeStop
+                            177000,*/
+                    },
+                    //"You ain't go"
+                    {
+                            //keyword
+                            "You ain't go",
+                            //timeStart
+                            156000,
+                            //timeStop
+                            158000,
+                            /*//time2
+                            //timeStart
+                             158000,
+                             //timeStop
+                             160000,*/
+                    }
+            },
+
+            //Hancock Train Clip 7
+            {
+                    //"I'm on my way"
+                    {
+                            //keyword
+                            "I'm on my way",
+                            //timeStart
+                            1000,
+                            //timeStop
+                            3000,
+                    },
+                    //"I'll see you in about"
+                    {
+                            //keyword
+                            "I'll see you in about",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            18000,
+                    },
+                    //"Are you alright"
+                    {
+                            //keyword
+                            "Are you alright",
+                            //timeStart
+                            76000,
+                            //timeStop
+                            78000,
+                    },
+                    //"You're the one who/that"
+                    {
+                            //keyword
+                            "You're the one who/that",
+                            //timeStart
+                            126000,
+                            //timeStop
+                            129000,
+                    },
+                    //"Why didn't you just"
+                    {
+                            //keyword
+                            "Why didn't you just",
+                            //timeStart
+                            126000,
+                            //timeStop
+                            129000,
+                    },
+                    //"Coulda shoulda - could/should have"
+                    {
+                            //keyword
+                            "Should't done thate",
+                            //timeStart
+                            175000,
+                            //timeStop
+                            178000,
+                    }
+            },
+
+            //Malcom in the Middle Teacher Clip 8
+            {
+                    //"You're nothing but a"
+                    {
+                            //keyword
+                            "You're nothing but a",
+                            //timeStart
+                            0,
+                            //timeStop
+                            2000,
+                    },
+                    //"Took you long enough"
+                    {
+                            //keyword
+                            "Took you long enough",
+                            //timeStart
+                            9000,
+                            //timeStop
+                            10000,
+                    },
+                    //"I've been trynna / trying to"
+                    {
+                            //keyword
+                            "I've been trynna / trying to",
+                            //timeStart
+                            11000,
+                            //timeStop
+                            13000,
+                    },
+                    //"What do you want"
+                    {
+                            //keyword
+                            "What do you want",
+                            //timeStart
+                            18000,
+                            //timeStop
+                            20000,
+                    },
+                    //"It's just a bunch of"
+                    {
+                            //keyword
+                            "It's just a bunch of",
+                            //timeStart
+                            32000,
+                            //timeStop
+                            34000,
+                    },
+                    //"Rub somebody the wrong way"
+                    {
+                            //keyword
+                            "Rub somebody the wrong way",
+                            //timeStart
+                            88000,
+                            //timeStop
+                            90000,
+                    }
+            },
+
+            //Malcom in the Middle Teacher Clip 8
+            {
+                    //"You wanna buy"
+                    {
+                            //keyword
+                            "You wanna buy",
+                            //timeStart
+                            17000,
+                            //timeStop
+                            19000,
+                    },
+                    //"Get your hands off"
+                    {
+                            //keyword
+                            "Get your hands off",
+                            //timeStart
+                            26000,
+                            //timeStop
+                            28000,
+                    },
+                    //Give it to one of my
+                    {
+                            //keyword
+                            "Give it to one of my",
+                            //timeStart
+                            120000,
+                            //timeStop
+                            123000,
+                    },
+                    //I'm gonna have to
+                    {
+                            //keyword
+                            "I'm gonna have to",
+                            //timeStart
+                            200000,
+                            //timeStop
+                            203000,
+                    },
+                    //What's the matter
+                    {
+                            //keyword
+                            "What's the matter",
+                            //timeStart
+                            205000,
+                            //timeStop
+                            206000,
+                    },
+                    //Ain't you ever
+                    {
+                            //keyword
+                            "Ain't you ever",
+                            //timeStart
+                            207000,
+                            //timeStop
+                            209000,
+                    },
+                    //"What are you looking for"
+                    {
+                            //keyword
+                            "What are you looking for",
+                            //timeStart
+                            260000,
+                            //timeStop
+                            262000,
+                    }
+            },
+
+            //Malcom in the Middle Teacher Clip 8
+            {
+                    //"I'm one of those people"
+                    {
+                            //keyword
+                            "I'm one of those people",
+                            //timeStart
+                            1000,
+                            //timeStop
+                            3000,
+                            /*//time2
+                            //timeStart
+                            13000,
+                            //timeStop
+                            15000,*/
+                    },
+                    //"And i'm scared to live"
+                    {
+                            //keyword
+                            "And i'm scared to live",
+                            //timeStart
+                            6000,
+                            //timeStop
+                            8000,
+                            /*//time2
+                            //timeStart
+                            20000,
+                            //timeStop
+                            22000,*/
+                    }
+            },
     };
 
     @SuppressLint("MissingInflatedId")
