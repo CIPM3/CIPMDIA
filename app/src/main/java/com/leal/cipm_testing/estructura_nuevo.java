@@ -3,6 +3,8 @@ package com.leal.cipm_testing;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -31,6 +33,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -162,6 +166,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
 
         PremiumControler();
+        AgregarFragments();
     }
     boolean isCustom;
     boolean isNonBasics;
@@ -2705,19 +2710,6 @@ public class estructura_nuevo extends AppCompatActivity {
                 });
                 break;
         }
-    }
-
-    public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
-        startActivity(intento);
-    }
-    public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, chat_maestro.class);
-        startActivity(intento);
-    }
-    public void profile(View vista) {
-        Intent intento = new Intent(this, profile.class);
-        startActivity(intento);
     }
     public void showV(View vista) {
         Toast.makeText(this, "Video tarda unos segundos", Toast.LENGTH_SHORT).show();
@@ -63954,6 +63946,24 @@ public class estructura_nuevo extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
     }
 
 }

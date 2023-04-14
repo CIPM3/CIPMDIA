@@ -5,6 +5,8 @@ import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -30,6 +32,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -94,7 +98,7 @@ public class availability_nuevo extends AppCompatActivity {
 
         PremiumAndArrayControler();
         sendInfotoDb();
-
+        AgregarFragments();
     }
 
     private void PremiumAndArrayControler() {
@@ -9049,16 +9053,21 @@ public class availability_nuevo extends AppCompatActivity {
         d.show(getSupportFragmentManager(), "");
 
     }
-    public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
-        startActivity(intento);
-    }
-    public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, chat_maestro.class);
-        startActivity(intento);
-    }
-    public void profile(View vista) {
-        Intent intento = new Intent(this, profile.class);
-        startActivity(intento);
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
     }
 }

@@ -2,6 +2,8 @@ package com.leal.cipm_testing;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -28,6 +30,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -107,6 +111,7 @@ public class Transicion_nuevo extends AppCompatActivity {
         docref = db.collection(userid).document("WhereisStudent");
 
         PremiumAndArrayControler();
+        AgregarFragments();
     }
     //DB
     private void PremiumAndArrayControler() {
@@ -2162,16 +2167,21 @@ public class Transicion_nuevo extends AppCompatActivity {
 
     }
 
-    //rutas
-    public void main(View v){
-        startActivity(new Intent(Transicion_nuevo.this,MainActivity.class));
-    }
-    public void profile(View vist) {
-        Intent crispIntent = new Intent(this, profile.class);
-        startActivity(crispIntent);
-    }
-    public void chat_maestro(View vist) {
-        Intent crispIntent = new Intent(this, chat_maestro.class);
-        startActivity(crispIntent);
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
     }
 }

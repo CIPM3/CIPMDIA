@@ -6,17 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Cultura2023">
 
     <ScrollView
         android:id="@+id/scrollView5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="80dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,38 +21,14 @@
             android:orientation="vertical">
             <!--Header-->
             <LinearLayout
+                android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@drawable/ic_rect_ngulo_header"
                 android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
-
+                android:gravity="center"
+                android:elevation="5dp"
+                android:background="@color/graybg"
                 >
-
-                <LinearLayout
-                    android:layout_width="10dp"
-                    android:layout_height="17dp"
-                    android:layout_gravity="start|center"
-                    android:background="@drawable/ic_grupo_back"
-                    android:onClick="main">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Culture"
-                        android:textColor="@color/black"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
             </LinearLayout>
 
             <!--Video View-->
@@ -143,7 +116,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Seleccione una estructura para continuar con la practica"
                     android:textColor="@color/black"
-                    android:textSize="13dp" />
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -249,14 +222,17 @@
         </LinearLayout>
     </ScrollView>
 
-    <!--BTN OPC FRAGMENT-->
+    <!--BTNS OPC-->
     <LinearLayout
-        android:id="@+id/BottomNav"
+        android:id="@+id/btn_opc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:background="@color/graybg"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

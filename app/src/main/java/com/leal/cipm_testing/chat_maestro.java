@@ -1,10 +1,15 @@
 package com.leal.cipm_testing;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import im.crisp.client.ChatActivity;
 
@@ -14,25 +19,21 @@ public class chat_maestro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_maestro);
+
+        AgregarFragments();
     }
 
-    public void av(View vist) {
-        Intent crispIntent = new Intent(this, ChatActivity.class);
-        startActivity(crispIntent);
-    }
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
 
-    public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
-        startActivity(intento);
-    }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-    public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, chat_maestro.class);
-        startActivity(intento);
-    }
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
 
-    public void profile(View vista) {
-        Intent intento = new Intent(this, profile.class);
-        startActivity(intento);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
     }
 }

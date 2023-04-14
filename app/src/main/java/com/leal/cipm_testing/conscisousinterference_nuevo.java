@@ -3,6 +3,8 @@ package com.leal.cipm_testing;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -30,6 +32,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -133,7 +137,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         prefs= new Prefs(this);
         PremiumAndArrayControler();
 
-
+        AgregarFragments();
     }
 
     public void PremiumAndArrayControler(){
@@ -1310,20 +1314,27 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         }
 
     }
-    public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
-        startActivity(intento);
-    }
-    public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, chat_maestro.class);
-        startActivity(intento);
-    }
-    public void profile(View vista) {
-        Intent intento = new Intent(this, profile.class);
-        startActivity(intento);
-    }
 
     public void mideTuNivel(View view) {
         Toast.makeText(this, "mide tu nivel cons", Toast.LENGTH_SHORT).show();
     }
+
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
+    }
+
 }

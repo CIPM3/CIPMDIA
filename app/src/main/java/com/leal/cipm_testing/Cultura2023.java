@@ -33,6 +33,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.util.Arrays;
 
@@ -76,13 +77,9 @@ public class Cultura2023 extends AppCompatActivity {
     int posKeyword = 0,posSele = 0;
     boolean explanation;
     // Add the fragment to the activity
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    BottomNav myFragment = new BottomNav();
 
     Object KeyWordsObject [][][] ={
-
-            //Moonlight Clip1
+            //Moonlight
             {
                     //"Ain't no refund"
                     {
@@ -1100,9 +1097,9 @@ public class Cultura2023 extends AppCompatActivity {
                             //timeStop
                             26000,
                     }
-            },
-    };
 
+            }
+    };
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1126,6 +1123,8 @@ public class Cultura2023 extends AppCompatActivity {
         lay_btn_get = findViewById(R.id.lay_btn_get);
         lay_key_word = findViewById(R.id.lay_key_word);
 
+
+
         explanation = true;
 
         prefs = new Prefs(this);
@@ -1133,11 +1132,8 @@ public class Cultura2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
 
+        AgregarFragments();
         PremiumAndArrayControler();
-
-
-        fragmentTransaction.replace(R.id.BottomNav, myFragment);
-        fragmentTransaction.commit();
     }
 
     //DB FUNCTIONS
@@ -5704,17 +5700,22 @@ public class Cultura2023 extends AppCompatActivity {
 //        }
 //    }
 
-    //BTNS
-    public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
-        startActivity(intento);
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
     }
-    public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, chat_maestro.class);
-        startActivity(intento);
-    }
-    public void profile(View vista) {
-        Intent intento = new Intent(this, profile.class);
-        startActivity(intento);
-    }
+
 }

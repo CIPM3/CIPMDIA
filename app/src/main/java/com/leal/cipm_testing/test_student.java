@@ -2,6 +2,8 @@ package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -23,6 +25,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.header;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -115,7 +119,7 @@ public class test_student extends AppCompatActivity {
         docrefStructure=db.collection(userid).document("structures");
         docrefVocab=db.collection(userid).document("vocabulary");
 
-
+        AgregarFragments();
         Prefs prefs = new Prefs(this);
         PremiumAndArrayControler(prefs);
     }
@@ -9694,6 +9698,22 @@ public class test_student extends AppCompatActivity {
             "There's no such thing as a free lunch",
 
     };
-    
-    
+
+    //FRAGMENT
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //DECLARACION DE COMPONENTES
+        BottomNav BottomNav = new BottomNav();
+        header Header = new header();
+
+
+        fragmentTransaction.replace(R.id.header,Header);
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
+    }
 }

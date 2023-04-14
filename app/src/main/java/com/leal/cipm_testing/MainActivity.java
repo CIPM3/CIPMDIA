@@ -4,6 +4,8 @@ package com.leal.cipm_testing;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -30,6 +32,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.components.BottomNav;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
+        AgregarFragments();
     }
     public void starttest(View view){
 
@@ -313,6 +318,19 @@ public class MainActivity extends AppCompatActivity {
         btn_menu_closed.setVisibility(View.GONE);
     }
 
-    //cambios
+    //MOSTRAR FRAGMENTOS
+    public void AgregarFragments(){
+        findViewById(R.id.btn_opc);
+        findViewById(R.id.header);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //SE DECLARA EL COMPONENTE
+        BottomNav BottomNav = new BottomNav();
+
+        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
+        fragmentTransaction.commit();
+    }
 
 }
