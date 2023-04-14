@@ -3001,7 +3001,7 @@ public class cultura_nuevo extends AppCompatActivity {
                 break;
             case "Kings of the Hills Drugs Clip 14":
                 condicionParaPasarEs(2);
-                //what do you want✓
+                //What do you want✓
                 if(clip){
                     int g=  vv.getCurrentPosition();
                     if(g>10900 && g<11200){

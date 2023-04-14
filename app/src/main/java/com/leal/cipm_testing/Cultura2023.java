@@ -726,7 +726,7 @@ public class Cultura2023 extends AppCompatActivity {
                     }
             },
 
-            //Malcom in the Middle Teacher Clip 8
+            //Sangre Por Sangre Comedor Clip 9
             {
                     //"You wanna buy"
                     {
@@ -793,7 +793,7 @@ public class Cultura2023 extends AppCompatActivity {
                     }
             },
 
-            //Malcom in the Middle Teacher Clip 8
+            //Dave Chapelle Man Rape Clip 10
             {
                     //"I'm one of those people"
                     {
@@ -822,6 +822,283 @@ public class Cultura2023 extends AppCompatActivity {
                             20000,
                             //timeStop
                             22000,*/
+                    }
+            },
+
+            //Análisis de cultura Gringa y Frases Coloquiales 2 Clip 11
+            {
+                    //"If ther is some firing Going on"
+                    {
+                            //keyword
+                            "If ther is some firing Going on",
+                            //timeStart
+                            1000,
+                            //timeStop
+                            3000,
+                    },
+                    //"We first So we pretty much expect it"
+                    {
+                            //keyword
+                            "We first So we pretty much expect it",
+                            //timeStart
+                            3000,
+                            //timeStop
+                            7000,
+                    },
+                    //"I know what im Talking about"
+                    {
+                            //keyword
+                            "I know what im Talking about",
+                            //timeStart
+                            7600,
+                            //timeStop
+                            9000,
+                    },
+                    //"I done had a lot of jobs"
+                    {
+                            //keyword
+                            "I done had a lot of jobs",
+                            //timeStart
+                            8900,
+                            //timeStop
+                            10000,
+                    },
+                    //"Got into"
+                    {
+                            //keyword
+                            "Got into",
+                            //timeStart
+                            10000,
+                            //timeStop
+                            12000,
+                    },
+                    //"Out of them"
+                    {
+                            //keyword
+                            "Out of them",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            16500,
+                    }
+            },
+
+            //Boys in the Hood Clip 12
+            {
+                    //"What’s wrong with you"
+                    {
+                            //keyword
+                            "What’s wrong with you",
+                            //timeStart
+                            12000,
+                            //timeStop
+                            14000,
+                    },
+                    //"What the fuck are you looking at"
+                    {
+                            //keyword
+                            "What the fuck are you looking at",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            17000,
+                    },
+                    //"I’m Still trying to find out “Tryna”"
+                    {
+                            //keyword
+                            "I’m Still trying to find out “Tryna”",
+                            //timeStart
+                            16800,
+                            //timeStop
+                            19000,
+                    },
+                    //"We got a problem here?"
+                    {
+                            //keyword
+                            "We got a problem here?",
+                            //timeStart
+                            21000,
+                            //timeStop
+                            23000,
+                    },
+                    //"Start some shit"
+                    {
+                            //keyword
+                            "Start some shit",
+                            //timeStart
+                            55000,
+                            //timeStop
+                            57000,
+                    },
+                    //"That’s why fool be getting shot all the time"
+                    {
+                            //keyword
+                            "That’s why fool be getting shot all the time",
+                            //timeStart
+                            61000,
+                            //timeStop
+                            63000,
+                    },
+                    //"Tryna show how hard they is"
+                    {
+                            //keyword
+                            "Tryna show how hard they is",
+                            //timeStart
+                            64000,
+                            //timeStop
+                            66000,
+                    },
+                    //"You be doing that shit, too"
+                    {
+                            //keyword
+                            "You be doing that shit, too",
+                            //timeStart
+                            69000,
+                            //timeStop
+                            72000,
+                    },
+                    //"I’m getting the fuck out of LA"
+                    {
+                            //keyword
+                            "I’m getting the fuck out of LA",
+                            //timeStart
+                            102000,
+                            //timeStop
+                            106000,
+                    }
+            },
+
+            //Cultura y Fonética Clip 13
+            {
+                    //"Look man I don’t mean no disrespect or nothing G"
+                    {
+                            //keyword
+                            "Look man I don’t mean no disrespect or nothing G",
+                            //timeStart
+                            150,
+                            //timeStop
+                            2080,
+                    },
+                    //"I’m just trying to see"
+                    {
+                            //keyword
+                            "I’m just trying to see",
+                            //timeStart
+                            2250,
+                            //timeStop
+                            3000,
+                    },
+                    //"If can get a little bro"
+                    {
+                            //keyword
+                            "If can get a little bro",
+                            //timeStart
+                            3050,
+                            //timeStop
+                            3450,
+                    },
+                    //"You can’t get nothing man"
+                    {
+                            //keyword
+                            "You can’t get nothing man",
+                            //timeStart
+                            4000,
+                            //timeStop
+                            5000,
+                    },
+                    //"You know what time it is"
+                    {
+                            //keyword
+                            "You know what time it is",
+                            //timeStart
+                            5000,
+                            //timeStop
+                            6000,
+                    },
+                    //"I keep looking out for you"
+                    {
+                            //keyword
+                            "I keep looking out for you",
+                            //timeStart
+                            6900,
+                            //timeStop
+                            7500,
+                    },
+                    //"Just a little something man"
+                    {
+                            //keyword
+                            "Just a little something man",
+                            //timeStart
+                            8000,
+                            //timeStop
+                            8800,
+                    },
+                    //"All my soothing cost a little something"
+                    {
+                            //keyword
+                            "All my soothing cost a little something",
+                            //timeStart
+                            9000,
+                            //timeStop
+                            10800,
+                    },
+                    //"If you ain’t got it get to stepping"
+                    {
+                            //keyword
+                            "If you ain’t got it get to stepping",
+                            //timeStart
+                            11000,
+                            //timeStop
+                            12070,
+                    },
+                    //"I am not fixing to repeat myself"
+                    {
+                            //keyword
+                            "I am not fixing to repeat myself",
+                            //timeStart
+                            13050,
+                            //timeStop
+                            14000,
+                    },
+            },
+
+            //Kings of the Hills Drugs Clip 14
+            {
+                    //"What do you want"
+                    {
+                            //keyword
+                            "What do you want",
+                            //timeStart
+                            10900,
+                            //timeStop
+                            11200,
+                    },
+                    //"Are you looking to"
+                    {
+                            //keyword
+                            "Are you looking to",
+                            //timeStart
+                            15000,
+                            //timeStop
+                            17000,
+                    },
+                    //"I have been thinking about"
+                    {
+                            //keyword
+                            "I have been thinking about",
+                            //timeStart
+                            22000,
+                            //timeStop
+                            24000,
+                    },
+                    //"What do you need"
+                    {
+                            //keyword
+                            "What do you need",
+                            //timeStart
+                            24000,
+                            //timeStop
+                            26000,
                     }
             },
     };
