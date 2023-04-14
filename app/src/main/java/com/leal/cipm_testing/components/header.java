@@ -55,7 +55,6 @@ public class header extends Fragment {
 
     public void ActualizarDondeEstoy(){
         String currenttxt = SaberDondeEstoy();
-        Toast.makeText(getContext(), ""+currenttxt, Toast.LENGTH_SHORT).show();
         if (currenttxt.contains("Cultura")) {
             // Cambiar el texto del EditText
             editText.setText("Culture");

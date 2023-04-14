@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setVisibility(View.GONE);
         btn_menu_open.setVisibility(View.VISIBLE);
         btn_menu_closed.setVisibility(View.GONE);
-         prefs = new Prefs(this);
+        prefs = new Prefs(this);
         if (prefs.getPremium()==1){
             //Give the user all the premium features
             //hide ads if you are showing ads
@@ -96,16 +96,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Favor de registrarse con email y password para hacer examen", Toast.LENGTH_SHORT).show();
         }else{
             startActivity(new Intent(MainActivity.this,MainTesting.class));
-
         }                */
     }
-   /* public void createRequest(){
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-        gsc = GoogleSignIn.getClient(this,gso);
-    }*/
+    /* public void createRequest(){
+         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                 .requestIdToken(getString(R.string.default_web_client_id))
+                 .requestEmail()
+                 .build();
+         gsc = GoogleSignIn.getClient(this,gso);
+     }*/
     public void logout(View v){
         FirebaseAuth.getInstance().signOut();
         mAuth.signOut();
@@ -135,16 +134,16 @@ public class MainActivity extends AppCompatActivity {
         if(user==null   ){
             mAuth.signInAnonymously()
                     .addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        FirebaseUser user = mAuth.getCurrentUser();
-                        updateUi(user);
-                    }else {
-                        updateUi(null );
-                    }
-                }
-            });
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                updateUi(user);
+                            }else {
+                                updateUi(null );
+                            }
+                        }
+                    });
 
         }
     }
@@ -202,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
         if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
             Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
         }else{
-
             if(prefs.getPremium()==1){
                 Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
                 intent.putExtra("key", user.getUid());
@@ -210,9 +208,6 @@ public class MainActivity extends AppCompatActivity {
             }else if(prefs.getPremium()==0){
                 Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
             }
-
-
-
         }
       */
 

@@ -87,7 +87,6 @@ public class BottomNav extends Fragment {
 
     public void ActualizarDondeEstoy(){
         String currenttxt = SaberDondeEstoy();
-        Toast.makeText(getContext(), ""+currenttxt, Toast.LENGTH_SHORT).show();
 
         Drawable mainSele = getResources().getDrawable(R.drawable.ic_grupo_mainsele);
         Drawable testSele = getResources().getDrawable(R.drawable.ic_grupo_checksele);
