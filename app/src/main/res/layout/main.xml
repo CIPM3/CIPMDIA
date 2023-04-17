@@ -28,7 +28,7 @@
             <!--Hazte Premium-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:background="@color/azul"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
@@ -46,8 +46,8 @@
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/ic_grupo_btnblue"
+                        android:layout_height="60dp"
+                        android:background="@drawable/boton_redondeado"
                         android:textColor="@color/black"
                         android:onClick="premium"
                         android:textStyle="bold"
@@ -89,9 +89,11 @@
                     android:id="@+id/myPlanBtn"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@drawable/ic_grupo_btnblue"
+                    android:background="@drawable/boton_redondeado"
+                    android:backgroundTint="@color/azul"
                     android:onClick="myPlan"
-                    android:text="My Plan" />
+                    android:text="My Plan"
+                    />
 
 
             </LinearLayout>
@@ -424,7 +426,8 @@
                         android:layout_width="160dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/ic_grupo_btn"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/amarillo"
                         android:gravity="center"
                         android:onClick="masinfo"
                         >
