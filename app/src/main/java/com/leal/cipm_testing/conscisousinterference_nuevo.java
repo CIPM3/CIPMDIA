@@ -137,7 +137,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         prefs= new Prefs(this);
         PremiumAndArrayControler();
 
-        AgregarFragments();
     }
 
     public void PremiumAndArrayControler(){
@@ -1319,22 +1318,5 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         Toast.makeText(this, "mide tu nivel cons", Toast.LENGTH_SHORT).show();
     }
 
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
-    }
 
 }

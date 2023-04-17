@@ -15,35 +15,22 @@
 
         <!--Header-->
         <LinearLayout
-            android:id="@+id/eligetuplantxt"
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/ic_rect_ngulo_header"
             android:orientation="horizontal"
-            android:paddingHorizontal="30dp">
-
-            <LinearLayout
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_gravity="start|center"
-                android:background="@drawable/ic_grupo_back"
-                android:onClick="main"></LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="My Plan "
-                    android:textColor="@color/black"
-                    android:textSize="21dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@color/graybg"
+            >
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.leal.cipm_testing.components.header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:layout="@layout/fragment_header"
+                />
         </LinearLayout>
 
         <!--Text-->

@@ -55,6 +55,7 @@ public class header extends Fragment {
 
     public void ActualizarDondeEstoy(){
         String currenttxt = SaberDondeEstoy();
+
         if (currenttxt.contains("Cultura")) {
             // Cambiar el texto del EditText
             editText.setText("Culture");
@@ -93,6 +94,11 @@ public class header extends Fragment {
         if (currenttxt.contains("Transicion_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Transiciones");
+        }
+
+        if (currenttxt.contains("PlanDeEstudios")) {
+            // Cambiar el texto del EditText
+            editText.setText("Mi Plan");
         }
     };
 }

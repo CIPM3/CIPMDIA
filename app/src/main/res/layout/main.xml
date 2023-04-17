@@ -443,6 +443,8 @@
 
             </LinearLayout>
 
+
+
         </LinearLayout>
 
     </ScrollView>
@@ -556,6 +558,14 @@
         android:elevation="30dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView3"
+            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+
+            />
 
     </LinearLayout>
 

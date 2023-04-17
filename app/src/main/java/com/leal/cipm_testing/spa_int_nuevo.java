@@ -159,7 +159,6 @@ public class spa_int_nuevo extends AppCompatActivity {
         vf = (LinearLayout) findViewById(R.id.vf);
          prefs = new Prefs(this);
         PremiumAndArrayControler();
-        AgregarFragments();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
@@ -1401,24 +1400,6 @@ public class spa_int_nuevo extends AppCompatActivity {
                 break;
         }
 
-    }
-
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
     }
 
 }

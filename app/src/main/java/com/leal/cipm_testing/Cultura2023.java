@@ -33,6 +33,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
 
 import java.util.Arrays;
@@ -50,7 +51,7 @@ public class Cultura2023 extends AppCompatActivity {
 
     TextView text_exp,text_key_word;
     LinearLayout txt_exp_est,lay_btn_empezar,lay_btn_emp,lay_btn_salt,lay_btn_get,lay_key_word;
-    String selection;
+    public String selection;
     boolean clip;
 
 
@@ -1132,7 +1133,6 @@ public class Cultura2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
 
-        AgregarFragments();
         PremiumAndArrayControler();
     }
 
@@ -1377,6 +1377,7 @@ public class Cultura2023 extends AppCompatActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     spinnerSelected();
+
                 }
 
                 @Override
@@ -1392,8 +1393,17 @@ public class Cultura2023 extends AppCompatActivity {
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
 
-        vf.setVisibility(View.VISIBLE);
-        vv.setVisibility(View.GONE);
+        VideoPlayer video_player = new VideoPlayer();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        args.putBoolean("explicacion", explanation);
+        video_player.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+
 
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura para continuar con la practica");
@@ -1401,209 +1411,13 @@ public class Cultura2023 extends AppCompatActivity {
             txt_exp_est.setVisibility(View.VISIBLE);
         }else {
             lay_btn_empezar.setVisibility(View.VISIBLE);
-            text_exp.setText("Cuando escuches la frase explicada, haz click en el boton 'Get'");
+            videoPlayer();
 
         }
-    }
-
-    public void showv(View vista){
-        Toast.makeText(this, "video tarda 10 segundos en comenzar", Toast.LENGTH_SHORT).show();
-        switch (selection){
-            case "Tutorial":
-                videoPlayer("http://adrianlealcaldera.com/culttut.mp4");
-                break;
-            case "Moonlight":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/moonlightexp.mp4");
-                    posSele = 0;
-                }
-                break;
-
-            case "Rick and Morty":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/rickandmortyexp.mp4");
-                    posSele = 1;
-
-                }
-                break;
-
-            case "Do You Want Pepsi":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/doyouwantpepsiExp1.mp4");
-                }
-                break;
-            case "Sangre Por Sangre Foodline":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangrefoodlineExp.mp4");
-                }
-
-                break;
-            case "Sangre Por Sangre Watch El Paisaje":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeExp.mp4");
-                }
-                break;
-            case "Training Day Rabbit Has The Gun":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/trainingdayrabbithasthegunExp.mp4");
-                }
-                break;
-
-            case "Hancock Train":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/hancocktrainExp.mp4");
-                }
-                break;
-
-            case "Malcom in the Middle Teacher":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/malconinthemiddleteacherExp.mp4");
-                }
-                break;
-
-            case "Sangre Por Sangre Comedor":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangre(comedor)Exp.mp4");
-                }
-                break;
-            case "Dave Chapelle Man Rape":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/davechapelle(man%20rape)Exp.mp4");
-                }
-                break;
-
-            //luis R
-            case "Análisis de cultura Gringa y Frases Coloquiales 2":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Exp.mp4");
-                }
-                break;
-
-            case "Boys in the Hood":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/BoyzntheHoodExp.mp4");
-                }
-                break;
-
-            case "Cultura y Fonética":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/CulturayFone%CC%81ticaExp.mp4");
-                }
-                break;
-
-            case "Kings of the Hills Drugs":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/kingofthehilldrugsExp.mp4");
-                }
-                break;
-        }
-
-    }
-
-    public void showv(){
-        Toast.makeText(this, "video tarda 10 segundos en comenzar", Toast.LENGTH_SHORT).show();
-        switch (selection){
-            case "Tutorial":
-                videoPlayer("http://adrianlealcaldera.com/culttut.mp4");
-                break;
-            case "Moonlight":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/moonlightexp.mp4");
-                }else{
-                    videoPlayer("http://adrianlealcaldera.com/moonlightclip.mp4");
-                }
-                break;
-
-            case "Rick and Morty":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/rickandmortyexp.mp4");
-                }
-                break;
-
-            case "Do You Want Pepsi":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/doyouwantpepsiExp1.mp4");
-                }
-                break;
-            case "Sangre Por Sangre Foodline":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangrefoodlineExp.mp4");
-                }
-
-                break;
-            case "Sangre Por Sangre Watch El Paisaje":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeExp.mp4");
-                }
-                break;
-            case "Training Day Rabbit Has The Gun":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/trainingdayrabbithasthegunExp.mp4");
-                }
-                break;
-
-            case "Hancock Train":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/hancocktrainExp.mp4");
-                }
-                break;
-
-            case "Malcom in the Middle Teacher":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/malconinthemiddleteacherExp.mp4");
-                }
-                break;
-
-            case "Sangre Por Sangre Comedor":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/sangrexsangre(comedor)Exp.mp4");
-                }
-                break;
-            case "Dave Chapelle Man Rape":
-                if(explanation){
-                    videoPlayer("http://adrianlealcaldera.com/davechapelle(man%20rape)Exp.mp4");
-                }
-                break;
-
-            //luis R
-            case "Análisis de cultura Gringa y Frases Coloquiales 2":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Exp.mp4");
-                }
-                break;
-
-            case "Boys in the Hood":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/BoyzntheHoodExp.mp4");
-                }
-                break;
-
-            case "Cultura y Fonética":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/CulturayFone%CC%81ticaExp.mp4");
-                }
-                break;
-
-            case "Kings of the Hills Drugs":
-                if(explanation){
-                    videoPlayer("https://adrianlealcaldera.com/kingofthehilldrugsExp.mp4");
-                }
-                break;
-        }
-
     }
 
     //ACTIVA EL VIDEO
-    public void videoPlayer(String url){
-        vf.setVisibility(View.GONE);
-        vv.setVisibility(View.VISIBLE);
-
-        Uri urit = Uri.parse(url);
-        vv.setVideoURI(urit);
-        vv.setMediaController(new MediaController(this));
-        vv.requestFocus();
-        vv.start();
-
+    public void videoPlayer(){
         if(explanation){
             text_exp.setText("Mira la explicacion y cuando te sientas listo presiona");
             lay_btn_emp.setVisibility(View.GONE);
@@ -1616,31 +1430,22 @@ public class Cultura2023 extends AppCompatActivity {
             lay_btn_get.setVisibility(View.VISIBLE);
 
         }
-        vv.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        Toast.makeText(Cultura2023.this, "Finalizo Video"+selection, Toast.LENGTH_SHORT).show();
-                        explanation = false;
-                        if(selection != "Tutorial"){
-                            if(explanation){
-                                showv();
-                            }else{
-                                vf.setVisibility(View.VISIBLE);
-                                vv.setVisibility(View.GONE);
-                            }
-                        }
-
-
-                    }
-                });
     }
 
     public void saltarExp(View v){
-        vf.setVisibility(View.VISIBLE);
-        vv.setVisibility(View.GONE);
-
         explanation = false;
-        showv();
+        VideoPlayer video_player = new VideoPlayer();
+        Bundle args = new Bundle();
+        args.putBoolean("explicacion", explanation);
+        video_player.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+
+
+        spinnerSelected();
     }
 
     public void getpos(View vista)  {
@@ -5699,23 +5504,5 @@ public class Cultura2023 extends AppCompatActivity {
 //
 //        }
 //    }
-
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
-    }
 
 }

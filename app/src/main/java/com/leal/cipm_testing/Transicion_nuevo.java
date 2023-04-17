@@ -111,7 +111,6 @@ public class Transicion_nuevo extends AppCompatActivity {
         docref = db.collection(userid).document("WhereisStudent");
 
         PremiumAndArrayControler();
-        AgregarFragments();
     }
     //DB
     private void PremiumAndArrayControler() {
@@ -2167,21 +2166,4 @@ public class Transicion_nuevo extends AppCompatActivity {
 
     }
 
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
-    }
 }

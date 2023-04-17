@@ -122,7 +122,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
         prefs = new Prefs(vocabulary_nuevo.this);
 
         PremiumControler();
-        AgregarFragments();
     }
     CustomArrayAfterTestingHolder caath ;
 
@@ -1062,23 +1061,5 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 break;
         }
 
-    }
-
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
     }
 }

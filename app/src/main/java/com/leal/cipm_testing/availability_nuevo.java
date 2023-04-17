@@ -98,7 +98,6 @@ public class availability_nuevo extends AppCompatActivity {
 
         PremiumAndArrayControler();
         sendInfotoDb();
-        AgregarFragments();
     }
 
     private void PremiumAndArrayControler() {
@@ -9052,22 +9051,5 @@ public class availability_nuevo extends AppCompatActivity {
         Dialog d = new Dialog(s);
         d.show(getSupportFragmentManager(), "");
 
-    }
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-        header Header = new header();
-
-
-        fragmentTransaction.replace(R.id.header,Header);
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
     }
 }

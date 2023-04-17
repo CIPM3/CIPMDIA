@@ -33,6 +33,14 @@
                 android:elevation="5dp"
                 android:background="@color/graybg"
                 >
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView"
+                    android:name="com.leal.cipm_testing.components.BottomNav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_header"
+                    />
             </LinearLayout>
 
             <!--Spinner-->
@@ -670,6 +678,13 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.leal.cipm_testing.components.header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,14 @@
                 android:elevation="5dp"
                 android:background="@color/graybg"
                 >
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView"
+                    android:name="com.leal.cipm_testing.components.header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_header"
+                    />
             </LinearLayout>
 
             <!--Video View-->
@@ -39,13 +47,17 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
 
-                <LinearLayout
+
+
+                <!--<LinearLayout
                     android:id="@+id/videoView1box"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/ic_grupo_videobox"
                     android:onClick="showv"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
 
 
                 </LinearLayout>
@@ -54,7 +66,16 @@
                     android:id="@+id/videoView1"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:visibility="invisible" />
+                    android:visibility="gone" />-->
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView5"
+                    android:name="com.leal.cipm_testing.components.VideoPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_video_player"
+                    />
             </LinearLayout>
 
             <!--Spinner-->
@@ -161,8 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:gravity="center"
-                    android:onClick="showv">
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/text_btn"
@@ -233,6 +253,13 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

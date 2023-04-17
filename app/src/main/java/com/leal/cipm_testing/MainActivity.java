@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
-        AgregarFragments();
     }
     public void starttest(View view){
 
@@ -152,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
     public void tutorialGeneral(View vista) {
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, Transicion_nuevo.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -311,21 +310,6 @@ public class MainActivity extends AppCompatActivity {
         menu.setVisibility(View.GONE);
         btn_menu_open.setVisibility(View.VISIBLE);
         btn_menu_closed.setVisibility(View.GONE);
-    }
-
-    //MOSTRAR FRAGMENTOS
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-        findViewById(R.id.header);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //SE DECLARA EL COMPONENTE
-        BottomNav BottomNav = new BottomNav();
-
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
     }
 
 }
