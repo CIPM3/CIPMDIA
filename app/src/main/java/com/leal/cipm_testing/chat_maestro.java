@@ -20,20 +20,11 @@ public class chat_maestro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_maestro);
 
-        AgregarFragments();
     }
 
-    //FRAGMENT
-    public void AgregarFragments(){
-        findViewById(R.id.btn_opc);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        //DECLARACION DE COMPONENTES
-        BottomNav BottomNav = new BottomNav();
-
-        fragmentTransaction.replace(R.id.btn_opc, BottomNav);
-        fragmentTransaction.commit();
+    public void av(View v) {
+        Intent crispIntent = new Intent(this, ChatActivity.class);
+        startActivity(crispIntent);
     }
+
 }

@@ -48,7 +48,9 @@
             android:layout_height="45dp"
             android:layout_marginTop="60dp"
             android:background="@drawable/ic_grupo_btn"
-            android:gravity="center">
+            android:gravity="center"
+            android:onClick="av"
+            >
 
 
             <TextView
@@ -75,7 +77,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.header"
+            android:name="com.leal.cipm_testing.components.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

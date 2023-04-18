@@ -3,14 +3,11 @@ package com.leal.cipm_testing;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -20,7 +17,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,13 +28,13 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.interfaces.OnVideoPositionPass;
 
 import java.util.Arrays;
 
-public class Cultura2023 extends AppCompatActivity {
+
+public class Cultura2023 extends AppCompatActivity{
 
     VideoView vv;
     LinearLayout vf;
@@ -77,7 +73,6 @@ public class Cultura2023 extends AppCompatActivity {
 
     int posKeyword = 0,posSele = 0;
     boolean explanation;
-    // Add the fragment to the activity
 
     Object KeyWordsObject [][][] ={
             //Moonlight
@@ -1429,6 +1424,7 @@ public class Cultura2023 extends AppCompatActivity {
             lay_btn_salt.setVisibility(View.GONE);
             lay_btn_get.setVisibility(View.VISIBLE);
 
+            setKeywordAndPosition();
         }
     }
 
@@ -1463,9 +1459,12 @@ public class Cultura2023 extends AppCompatActivity {
         }
     }
 
+    int intentos = 0;
+
     public void setKeywordAndPosition(){
         lay_key_word.setVisibility(View.VISIBLE);
-        int g = vv.getCurrentPosition();
+        VideoView vp = findViewById(R.id.video_player);
+        int g = vp.getCurrentPosition();
         switch (selection){
             case "Moonlight":
                 String keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
@@ -1478,16 +1477,28 @@ public class Cultura2023 extends AppCompatActivity {
     }
 
     public void setKeyWordToCulture(int g,String keyWord,int StartTime, int StopTime){
-        if(g> StartTime && g<StopTime){
-            Toast.makeText(this, "Felicidades", Toast.LENGTH_SHORT).show();
-            text_key_word.setText(keyWord);
+        VideoView vp = findViewById(R.id.video_player);
+        text_key_word.setText(keyWord);
+        if(g> StartTime && g<StopTime) {
+            Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
+            text_key_word.setTextColor(Color.BLACK);
+            posKeyword++;
+            intentos = 0;
+            setKeywordAndPosition();
+
         }else{
-            Toast.makeText(this, "Respuesata Incorrecta", Toast.LENGTH_SHORT).show();
+            intentos++;
+            if(intentos != 1){
+                Toast.makeText(this, ""+intentos, Toast.LENGTH_SHORT).show();
+                text_key_word.setTextColor(Color.RED);
+            }
+        }
+        if(intentos >= 4){
             SpannableString ss= new SpannableString(keyWord);
             ClickableSpan txtone= new ClickableSpan() {
                 @Override
                 public void onClick(@NonNull View view) {
-                    vv.seekTo(StartTime);
+                    vp.seekTo(StartTime);
 
                 }
             };

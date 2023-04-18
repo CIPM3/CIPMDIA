@@ -127,7 +127,7 @@
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
                         android:textSize="17dp"
-                        android:textStyle="normal" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -157,7 +157,9 @@
                         android:text="Structures"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="15dp" />
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        />
 
                     <ProgressBar
                         android:id="@+id/progressBar"
@@ -190,7 +192,9 @@
                         android:text="Vocabulary"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="15dp" />
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        />
 
                     <ProgressBar
                         style="?android:attr/progressBarStyleHorizontal"
@@ -237,7 +241,10 @@
                         android:text="Culture"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+
+                        />
                 </LinearLayout>
 
                 <!--Spa Int-->
@@ -262,7 +269,10 @@
                         android:text="Spanish Interferences"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
                 </LinearLayout>
 
                 <!--Cons Int-->
@@ -290,7 +300,10 @@
                         android:text="Conscious Interferences"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
                 </LinearLayout>
 
                 <!--Availability-->
@@ -318,7 +331,10 @@
                         android:text="Availability"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -351,14 +367,10 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22dp"
-                        android:textStyle="normal" />
+                        android:textStyle="bold"
 
-                    <!--<Button
-                        android:id="@+id/Testnew"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        />
 
-                        android:text="Button" />-->
                 </LinearLayout>
             </LinearLayout>
 
