@@ -100,5 +100,10 @@ public class header extends Fragment {
             // Cambiar el texto del EditText
             editText.setText("Mi Plan");
         }
+
+        if (currenttxt.contains("Culturalphrases")) {
+            // Cambiar el texto del EditText
+            editText.setText("Frases Culturales");
+        }
     };
 }

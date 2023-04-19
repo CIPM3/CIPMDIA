@@ -29,7 +29,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.interfaces.OnVideoPositionPass;
 
 import java.util.Arrays;
 
@@ -1342,6 +1341,7 @@ public class Cultura2023 extends AppCompatActivity{
 
 
     //FUNCTIONS
+
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
@@ -1352,6 +1352,7 @@ public class Cultura2023 extends AppCompatActivity{
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    explanation = true;
                     spinnerSelected();
                 }
 
@@ -1371,6 +1372,7 @@ public class Cultura2023 extends AppCompatActivity{
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    explanation = true;
                     spinnerSelected();
 
                 }
@@ -1411,7 +1413,7 @@ public class Cultura2023 extends AppCompatActivity{
         }
     }
 
-    //ACTIVA EL VIDEO
+    //ACTIVA LA INTERFAZ PARA EL VIDEO
     public void videoPlayer(){
         if(explanation){
             text_exp.setText("Mira la explicacion y cuando te sientas listo presiona");
@@ -1428,6 +1430,7 @@ public class Cultura2023 extends AppCompatActivity{
         }
     }
 
+    //SALTA LA EXPLICACION
     public void saltarExp(View v){
         explanation = false;
         VideoPlayer video_player = new VideoPlayer();
@@ -1444,6 +1447,7 @@ public class Cultura2023 extends AppCompatActivity{
         spinnerSelected();
     }
 
+    //EL BOTON QUE VALIDA SI ESTAS DENTRO DEL RANGO
     public void getpos(View vista)  {
 
         switch (selection){
@@ -1456,58 +1460,236 @@ public class Cultura2023 extends AppCompatActivity{
                 //condicionParaPasarEs(6);
                 setKeywordAndPosition();
                 break;
+            case "Rick and Morty":
+                setKeywordAndPosition();
+                break;
+            case "Do You Want Pepsi":
+                setKeywordAndPosition();
+                break;
+            case "Sangre Por Sangre Foodline":
+                setKeywordAndPosition();
+                break;
+            case "Sangre Por Sangre Watch El Paisaje":
+                setKeywordAndPosition();
+                break;
+            case "Training Day Rabbit Has The Gun":
+                setKeywordAndPosition();
+                break;
+            case "Hancock Train":
+                setKeywordAndPosition();
+                break;
+            case "Malcom in the Middle Teacher":
+                setKeywordAndPosition();
+                break;
+            case "Sangre Por Sangre Comedor":
+                setKeywordAndPosition();
+                break;
+            case "Dave Chapelle Man Rape":
+                setKeywordAndPosition();
+                break;
+            case "Análisis de cultura Gringa y Frases Coloquiales 2":
+                setKeywordAndPosition();
+                break;
+            case "Boys in the Hood":
+                setKeywordAndPosition();
+                break;
+            case "Cultura y Fonética":
+                setKeywordAndPosition();
+                break;
+            case "Kings of the Hills Drugs":
+                setKeywordAndPosition();
+                break;
         }
     }
 
     int intentos = 0;
 
+    //SELECCIONA LA PALABRA A BUSCAR
     public void setKeywordAndPosition(){
         lay_key_word.setVisibility(View.VISIBLE);
         VideoView vp = findViewById(R.id.video_player);
         int g = vp.getCurrentPosition();
+
+        String keyWord;
+        int StartTime,StopTime;
         switch (selection){
             case "Moonlight":
-                String keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                int StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                int StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+                posSele = 0;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Rick and Morty":
+                posSele = 1;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Do You Want Pepsi":
+                posSele = 2;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Sangre Por Sangre Foodline":
+                posSele = 3;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Sangre Por Sangre Watch El Paisaje":
+                posSele = 4;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Training Day Rabbit Has The Gun":
+                posSele = 5;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Hancock Train":
+                posSele = 6;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Malcom in the Middle Teacher":
+                posSele = 7;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Sangre Por Sangre Comedor":
+                posSele = 8;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Dave Chapelle Man Rape":
+                posSele = 9;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+            case "Análisis de cultura Gringa y Frases Coloquiales 2":
+                posSele = 10;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Boys in the Hood":
+                posSele = 11;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Cultura y Fonética":
+                posSele = 12;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+
+                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
+                break;
+
+            case "Kings of the Hills Drugs":
+                posSele = 13;
+                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
 
                 setKeyWordToCulture(g,keyWord,StartTime,StopTime);
                 break;
         }
     }
 
+    //VALIDACIONES DEL TIEMPO Y SI TERMINO LA LISTA DE PAlABRAS CLAVE
     public void setKeyWordToCulture(int g,String keyWord,int StartTime, int StopTime){
         VideoView vp = findViewById(R.id.video_player);
         text_key_word.setText(keyWord);
-        if(g> StartTime && g<StopTime) {
-            Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
-            text_key_word.setTextColor(Color.BLACK);
-            posKeyword++;
-            intentos = 0;
-            setKeywordAndPosition();
-
+        if(posKeyword >= KeyWordsObject[posSele].length){
+            Toast.makeText(this, "HAZ COMPLETADO ESTA PRACTICA CONTINUA CON OTRA", Toast.LENGTH_SHORT).show();
+            ResetearPage();
         }else{
-            intentos++;
-            if(intentos != 1){
-                Toast.makeText(this, ""+intentos, Toast.LENGTH_SHORT).show();
-                text_key_word.setTextColor(Color.RED);
-            }
-        }
-        if(intentos >= 4){
-            SpannableString ss= new SpannableString(keyWord);
-            ClickableSpan txtone= new ClickableSpan() {
-                @Override
-                public void onClick(@NonNull View view) {
-                    vp.seekTo(StartTime);
+            if(g> StartTime && g<StopTime) {
+                Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
+                text_key_word.setTextColor(Color.BLACK);
+                posKeyword++;
+                intentos = 0;
+                setKeywordAndPosition();
 
+            }else{
+                intentos++;
+                if(intentos != 1){
+                    Toast.makeText(this, ""+intentos, Toast.LENGTH_SHORT).show();
+                    text_key_word.setTextColor(Color.RED);
                 }
-            };
-            ss.setSpan(txtone,0,keyWord.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
-            text_key_word.setText(ss);
-            text_key_word.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+            if(intentos >= 4){
+                SpannableString ss= new SpannableString(keyWord);
+                ClickableSpan txtone= new ClickableSpan() {
+                    @Override
+                    public void onClick(@NonNull View view) {
+                        vp.seekTo(StartTime);
+
+                    }
+                };
+                ss.setSpan(txtone,0,keyWord.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+                text_key_word.setText(ss);
+                text_key_word.setMovementMethod(LinkMovementMethod.getInstance());
+            }
         }
     }
 
+    //TERMINAS LA PRACTICA Y TE MANDA TUTORIAL
+    public void ResetearPage(){
+        spin.setSelection(0);
+        intentos = 0;
+        text_exp.setText("Seleccione una estructura para continuar con la practica");
+        lay_key_word.setVisibility(View.GONE);
+        lay_btn_get.setVisibility(View.GONE);
+    }
+
+    public void activaSpinner(View v){
+        Spinner mySpinner = findViewById(R.id.spinuno);
+        mySpinner.performClick();
+    }
+    public void cultura_new(View vista) {
+        Intent intento = new Intent(this,  Culturalphrases.class);
+        startActivity(intento);
+    }
 
     //OTRA FUNC
     public void DialogueBox(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
@@ -1538,20 +1720,6 @@ public class Cultura2023 extends AppCompatActivity{
             .show();}
     public void mideTuNivel(View v){
         Toast.makeText(this, "Mide tu nivel de comprehesion", Toast.LENGTH_SHORT).show();
-    }
-    public void limpiarTxt(){
-//        text1.setText("");
-//        text2.setText("");
-//        text3.setText("");
-//        text4.setText("");
-//        text5.setText("");
-//        text6.setText("");
-//        text7.setText("");
-//        text8.setText("");
-//        text9.setText("");
-//        text10.setText("");
-//        text11.setText("");
-//        text12.setText("");
     }
     public void increaseCounter(){
         CounterToSubtractSelection= ++CounterToSubtractSelection;

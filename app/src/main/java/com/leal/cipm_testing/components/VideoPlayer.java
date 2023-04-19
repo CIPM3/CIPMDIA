@@ -16,7 +16,6 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.interfaces.OnVideoPositionPass;
 
 public class VideoPlayer extends Fragment {
     LinearLayout video_lay;
@@ -74,7 +73,6 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/moonlightexp.mp4");
                     }else{
-                        Toast.makeText(getContext(), "CLIP", Toast.LENGTH_SHORT).show();
                         ShowVideo("http://adrianlealcaldera.com/moonlightclip.mp4");
                     }
                     break;
@@ -82,51 +80,69 @@ public class VideoPlayer extends Fragment {
                 case "Rick and Morty":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/rickandmortyexp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/riackandmortyclip.mp4");
                     }
                     break;
 
                 case "Do You Want Pepsi":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/doyouwantpepsiExp1.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/doyouwantpepsiClip.mp4");
                     }
                     break;
                 case "Sangre Por Sangre Foodline":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangrefoodlineExp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrefoodlineClip.mp4");
                     }
 
                     break;
                 case "Sangre Por Sangre Watch El Paisaje":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeExp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeClip.mp4");
                     }
                     break;
                 case "Training Day Rabbit Has The Gun":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/trainingdayrabbithasthegunExp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/trainingdayrabbithasthegunClip.mp4");
                     }
                     break;
 
                 case "Hancock Train":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/hancocktrainExp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/hancocktrainClip.mp4");
                     }
                     break;
 
                 case "Malcom in the Middle Teacher":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/malconinthemiddleteacherExp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/malconinthemiddleteacherClip.mp4");
                     }
                     break;
 
                 case "Sangre Por Sangre Comedor":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Exp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Clip.mp4");
                     }
                     break;
                 case "Dave Chapelle Man Rape":
                     if(explanation){
                         ShowVideo("http://adrianlealcaldera.com/davechapelle(man%20rape)Exp.mp4");
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/davechapelle(man%20rape)Clip.mp4");
                     }
                     break;
 
@@ -134,24 +150,32 @@ public class VideoPlayer extends Fragment {
                 case "Análisis de cultura Gringa y Frases Coloquiales 2":
                     if(explanation){
                         ShowVideo("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Exp.mp4");
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Clip.mp4");
                     }
                     break;
 
                 case "Boys in the Hood":
                     if(explanation){
                         ShowVideo("https://adrianlealcaldera.com/BoyzntheHoodExp.mp4");
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/BoyzntheHoodClip.mp4");
                     }
                     break;
 
                 case "Cultura y Fonética":
                     if(explanation){
                         ShowVideo("https://adrianlealcaldera.com/CulturayFone%CC%81ticaExp.mp4");
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/CulturayFone%CC%81ticaClip.mp4");
                     }
                     break;
 
                 case "Kings of the Hills Drugs":
                     if(explanation){
                         ShowVideo("https://adrianlealcaldera.com/kingofthehilldrugsExp.mp4");
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/kingofthehilldrugseditedClip.mp4");
                     }
                     break;
             }

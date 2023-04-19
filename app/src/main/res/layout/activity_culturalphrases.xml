@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,105 +12,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        tools:ignore="MissingConstraints">
         <!--Header-->
         <LinearLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/ic_rect_ngulo_header"
             android:orientation="horizontal"
-            android:paddingHorizontal="30dp"
-
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@color/graybg"
             >
-
-            <LinearLayout
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_gravity="start|center"
-                android:background="@drawable/ic_grupo_back"
-                android:onClick="main"
-                >
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Frases Culturales"
-                    android:textColor="@color/black"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.leal.cipm_testing.components.header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:layout="@layout/fragment_header"
+                />
         </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        >
+        <!--listViewCulture-->
         <ListView
             android:id="@+id/listviewculture"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-        <!--BTNS OPC-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="20dp"
-            android:gravity="center"
-            android:elevation="30dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             >
 
-            <LinearLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_grupo_main"
-                android:onClick="main">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="28dp"
-                android:layout_height="30dp"
-                android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_grupo_check">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_grupo_chat"
-                android:onClick="chat_maestro">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_grupo_user"
-                android:onClick="profile">
-
-            </LinearLayout>
-        </LinearLayout>
+        </ListView>
     </LinearLayout>
+    <!--BTNS OPC-->
+    <LinearLayout
+        android:id="@+id/btn_opc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/graybg"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+            />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
