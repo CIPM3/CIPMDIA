@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/footeropc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
+                android:onClick="activaSpinner1"
                 android:paddingHorizontal="30dp">
                 <!--text-->
                 <LinearLayout
@@ -100,12 +100,13 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
 
-                <LinearLayout
+                <!--<LinearLayout
                     android:id="@+id/vf"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/ic_grupo_videobox"
                     android:onClick="showV"
+                    android:visibility="gone"
                     android:orientation="horizontal">
 
                 </LinearLayout>
@@ -116,8 +117,16 @@
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
-                    android:visibility="invisible"
-                    />
+                    android:visibility="gone"
+                    />-->
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView4"
+                    android:name="com.leal.cipm_testing.components.VideoPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_video_player"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <!--Texto Spinner2-->
@@ -153,8 +162,9 @@
 
                 <!--Spinner 2-->
                 <LinearLayout
+                    android:onClick="activaSpinner2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="3"
                     android:gravity="center_vertical">

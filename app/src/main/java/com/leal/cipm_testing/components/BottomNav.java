@@ -39,36 +39,24 @@ public class BottomNav extends Fragment {
         bgChat = view.findViewById(R.id.bgChat);
         bgProfile = view.findViewById(R.id.bgProfile);
 
-        btn_main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(getContext(), MainActivity.class);
-                startActivity(intento);
-            }
+        btn_main.setOnClickListener(v -> {
+            Intent intento = new Intent(getContext(), MainActivity.class);
+            startActivity(intento);
         });
 
-        btn_test_bottom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(getContext(), test_student.class);
-                startActivity(intento);
-            }
+        btn_test_bottom.setOnClickListener(v -> {
+            Intent intento = new Intent(getContext(), test_student.class);
+            startActivity(intento);
         });
 
-        btn_chat_maestro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(getContext(), chat_maestro.class);
-                startActivity(intento);
-            }
+        btn_chat_maestro.setOnClickListener(v -> {
+            Intent intento = new Intent(getContext(), chat_maestro.class);
+            startActivity(intento);
         });
 
-        btn_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(getContext(), profile.class);
-                startActivity(intento);
-            }
+        btn_profile.setOnClickListener(v -> {
+            Intent intento = new Intent(getContext(), profile.class);
+            startActivity(intento);
         });
 
         ActualizarDondeEstoy();

@@ -11,12 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/ic_grupo_videobox"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal"
+        android:visibility="visible"
+        />
+
+
 
     <VideoView
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/loadingVideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/white"
+            />
+    </LinearLayout>
 
 </FrameLayout>

@@ -18,7 +18,7 @@ import android.widget.VideoView;
 import com.leal.cipm_testing.R;
 
 public class VideoPlayer extends Fragment {
-    LinearLayout video_lay;
+    LinearLayout video_lay,loadingVideo;
     public VideoView video_player;
 
     //URL DE PRUEBA ESPERANDO QUE FUNCIONEN LOS VIDEOS DEL SERVIDOR
@@ -52,6 +52,7 @@ public class VideoPlayer extends Fragment {
 
         video_lay = view.findViewById(R.id.video_lay);
         video_player = view.findViewById(R.id.video_player);
+        loadingVideo = view.findViewById(R.id.loadingVideo);
 
 
         video_lay.setOnClickListener(v -> {
@@ -181,6 +182,372 @@ public class VideoPlayer extends Fragment {
             }
         }
 
+        if(currenttxt.contains("estructura_nuevo")){
+            switch (selection) {
+                case "Tutorial":
+                    ShowVideo("https://adrianlealcaldera.com/structurastut.mp4");
+                    break;
+                case "Present Simple":
+                    ShowVideo("http://adrianlealcaldera.com/presentesimple.mp4");
+                    break;
+
+                case "Present Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/presentecontinuo.mp4");
+                    break;
+
+                case "Present Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/presenteperfecto.mp4");
+                    break;
+
+                case "Present Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/presenteperfectoconti.mp4");
+                    break;
+
+                case "Past Simple":
+                    ShowVideo("http://adrianlealcaldera.com/pasadosimple.mp4");
+                    break;
+
+                case "Past Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/pasadocont.mp4");
+                    break;
+
+                case "Past Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/pasadoperf.mp4");
+                    break;
+
+                case "Past Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/pasadoperfcon.mp4");
+                    break;
+
+                case "Future Simple":
+                    ShowVideo("http://adrianlealcaldera.com/futurosimp1.mp4");
+                    break;
+
+                case "Future Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/futuroconti.mp4");
+                    break;
+
+                case "Future Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/futuroperf.mp4");
+                    break;
+
+                case "Future Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/futuroperfcon.mp4");
+                    break;
+
+                case "Would Simple":
+                    ShowVideo("http://adrianlealcaldera.com/wouldsimp.mp4");
+                    break;
+
+                case "Would Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/wouldconti.mp4");
+                    break;
+
+                case "Would Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/wouldperf.mp4");
+                    break;
+
+                case "Could Simple":
+                    ShowVideo("http://adrianlealcaldera.com/couldsimp.mp4");
+                    break;
+
+                case "Could Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/couldconti.mp4");
+                    Toast.makeText(getContext(), "El could continuous empieza en el minuto 5", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case "Could Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/couldperf.mp4");
+                    break;
+
+                case "Could Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/couldperf.mp4");
+                    Toast.makeText(getContext(), "El could perfect continuous empieza en el minuto 5:31", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case "Might Simple":
+                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    break;
+
+                case "Might Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    break;
+
+                case "Might Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    break;
+
+                case "Might Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    break;
+
+                case "Should Simple":
+                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    break;
+
+                case "Should Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    break;
+                case "Should Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    break;
+
+                case "Should Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    break;
+
+                case "Can Simple":
+                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    break;
+
+                case "Can Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    break;
+
+                case "Must Simple":
+                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    break;
+
+                case "Must Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    break;
+
+                case "Must Perfect":
+                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    break;
+
+                case "Must Perfect Continuous":
+                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    break;
+
+                case "Want To":
+                    ShowVideo("https://adrianlealcaldera.com/WantTo.mp4");
+                    break;
+
+                case "For To":
+                    ShowVideo("https://adrianlealcaldera.com/ForTo.mp4");
+                    break;
+
+                case "Wish Past Simple":
+                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    break;
+
+                case "Wish Past Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    break;
+
+                case "Wish Would":
+                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    break;
+
+                case "Used To":
+                    ShowVideo("https://adrianlealcaldera.com/UsedTo.mp4");
+                    break;
+
+                case "Be Used To":
+                    ShowVideo("https://adrianlealcaldera.com/UsedTo.mp4");
+                    break;
+
+                case "Incremento Paralelo":
+                    ShowVideo("https://adrianlealcaldera.com/incrementoParalelo.mp4");
+                    break;
+
+                case "Verbal Adjectives":
+                    ShowVideo("https://adrianlealcaldera.com/verlbaladjectives.mp4");
+                    break;
+
+                case "Reported Speech":
+                    ShowVideo("https://adrianlealcaldera.com/reportedspeech.mp4");
+                    break;
+
+                case "What Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "What Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "What Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "What Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "What Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "What Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "When Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "When Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "When Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "When Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "When Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "When Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Where Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Where Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Where Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Where Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Where Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Where Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Why Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Who Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Much Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Modals Simple":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Modals Continuous":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "How Many Modals Perfect":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+
+                case "Feel Like Simple":
+                    ShowVideo("https://adrianlealcaldera.com/Feel%20Like.mp4");
+                    break;
+            }
+        }
+
     }
     public void ShowVideo(String url){
 
@@ -193,11 +560,19 @@ public class VideoPlayer extends Fragment {
         video_player.requestFocus();
 
         //APLICAR AQUI UN LOADING
+        loadingVideo.setVisibility(View.VISIBLE);
 
         video_player.setOnPreparedListener(mediaPlayer -> {
             //VIDEO EMPIEZA
             video_player.start();
+            if (video_player.isPlaying()) {
+                loadingVideo.setVisibility(View.GONE);
+            } else {
+                loadingVideo.setVisibility(View.VISIBLE);
+            }
         });
+
+
         video_player.setOnCompletionListener(mediaPlayer -> {
             if(selection.contains("Tutorial")){
                 Toast.makeText(getContext(), "Selecciona un contenido para empezar", Toast.LENGTH_SHORT).show();
