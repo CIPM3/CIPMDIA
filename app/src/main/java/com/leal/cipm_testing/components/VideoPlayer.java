@@ -548,6 +548,35 @@ public class VideoPlayer extends Fragment {
             }
         }
 
+        if(currenttxt.contains("spa_int_nuevo")){
+            switch (selection) {
+                case "Tutorial":
+                    ShowVideo("http://adrianlealcaldera.com/intdeesptut.mp4");
+                    break;
+
+                case "Por Preposición":
+                    ShowVideo("http://adrianlealcaldera.com/intporprep.mp4");
+                    break;
+
+                case "Por Sujeto":
+                    ShowVideo("https://adrianlealcaldera.com/porsujetoreducidotamano.mp4");
+                    break;
+
+                case "Por Objeto":
+                    ShowVideo("https://adrianlealcaldera.com/porobjreducida.mp4");
+                    break;
+
+                case "Interferencia Reflexiva":
+                    ShowVideo("https://adrianlealcaldera.com/reflx.mp4");
+                    break;
+
+                case "Interferencia Pasiva":
+                    ShowVideo("https://adrianlealcaldera.com/pasiva.mp4");
+                    break;
+
+            }
+        }
+
     }
     public void ShowVideo(String url){
 

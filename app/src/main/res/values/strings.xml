@@ -368,6 +368,11 @@
         <item>Interferencia Pasiva</item>
     </string-array>
 
+    <string-array name="InterfrangoPremium">
+        <item>0 a 100</item>
+        <item>100 a 200</item>
+    </string-array>
+
     <string-array name="estructurasinterferencia">
         <item>Present Simple</item>
     </string-array>
