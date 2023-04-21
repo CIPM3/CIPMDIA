@@ -237,7 +237,7 @@
                         android:id="@+id/dif1"
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/ic_rect_ngulo_btnnocheck"
+                        android:background="@drawable/borde_azul"
                         android:text="Basico"
                         android:layout_marginRight="15dp"
                         android:textColor="@color/azul"
@@ -249,7 +249,7 @@
                         android:id="@+id/dif2"
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/ic_rect_ngulo_btnnocheck"
+                        android:background="@drawable/borde_azul"
                         android:onClick="dificulty2Activation"
                         android:text="Normal"
                         android:textColor="@color/azul"
@@ -260,7 +260,7 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/ic_rect_ngulo_btnnocheck"
+                        android:background="@drawable/borde_azul"
                         android:onClick="dificulty3Activation"
                         android:text="Intermedio"
                         android:textColor="@color/azul"
@@ -271,7 +271,7 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/ic_rect_ngulo_btnnocheck"
+                        android:background="@drawable/borde_azul"
                         android:text="Avanzado"
                         android:textColor="@color/azul"
                         android:textSize="14dp"
@@ -280,7 +280,6 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
-
 
             <!--Spanish Sentences-->
             <LinearLayout
@@ -343,7 +342,7 @@
                     android:textColor="@color/black"
                     android:hint="escribe tu respuesta o presiona microfono y di tu respuesta"
                     android:inputType="textPersonName"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     android:textColorHint="@color/black"
                     android:textSize="15dp"
                     android:layout_weight="1"
@@ -353,25 +352,25 @@
                     android:id="@+id/opclay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
-                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     >
                     <LinearLayout
                         android:id="@+id/respdecir"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_gravity="center"
                         android:background="@drawable/ic_microfono"
-                        android:layout_marginLeft="5dp"
                         android:visibility="visible"
                         android:onClick="speakdecir"
                         android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
                         >
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/resppass"
+                        android:id="@+id/resplay"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
@@ -379,30 +378,6 @@
                         android:background="@drawable/ic_controlar"
                         android:orientation="horizontal">
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/respinc"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_cruzar"
-                        android:layout_marginLeft="5dp"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/respescu"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_volumen"
-                        android:layout_marginLeft="5dp"
-                        android:visibility="gone"
-                        android:onClick="speakans"
-                        android:orientation="horizontal"
-                        >
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -412,60 +387,70 @@
                 android:id="@+id/answer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp"
                 android:visibility="gone"
+                android:gravity="center"
                 >
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Respuesta correcta es:"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_weight="5"
                     >
-                    <TextView
-                        android:id="@+id/txteng"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="5"
+                        >
+                        <TextView
+                            android:id="@+id/txteng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="eng"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
 
-                    <TextView
-                        android:id="@+id/txteng2"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        />
+                        <TextView
+                            android:id="@+id/txteng2"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="eng"
+                            android:textColor="@color/azul"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+
                     <LinearLayout
                         android:id="@+id/respescu2"
-                        android:layout_width="15dp"
+                        android:layout_width="8dp"
                         android:layout_height="15dp"
+                        android:layout_margin="15dp"
                         android:layout_gravity="center"
+                        android:layout_weight="1"
                         android:background="@drawable/ic_volumen"
-                        android:layout_marginLeft="5dp"
                         android:orientation="horizontal"
                         android:onClick="speakans"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         >
                     </LinearLayout>
                 </LinearLayout>
+
 
             </LinearLayout>
 
@@ -482,7 +467,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:background="@drawable/borde_azul"
                     android:gravity="center"
                     android:onClick="practice"
                     >
@@ -508,8 +493,8 @@
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
+                    android:layout_height="45dp"
+                    android:background="@drawable/borde_azul"
                     android:gravity="center"
                     android:onClick="checkanswer"
                     >

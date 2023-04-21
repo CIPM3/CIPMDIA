@@ -2,6 +2,8 @@ package com.leal.cipm_testing.components;
 
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -76,25 +78,20 @@ public class BottomNav extends Fragment {
     public void ActualizarDondeEstoy(){
         String currenttxt = SaberDondeEstoy();
 
-        Drawable mainSele = getResources().getDrawable(R.drawable.ic_grupo_mainsele);
-        Drawable testSele = getResources().getDrawable(R.drawable.ic_grupo_checksele);
-        Drawable chatSele = getResources().getDrawable(R.drawable.ic_grupo_chats);
-        Drawable profileSele = getResources().getDrawable(R.drawable.ic_grupo_prosele);
-
         if(currenttxt.contains("MainActivity")){
-            bgMain.setBackground(mainSele);
+            bgMain.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
         if(currenttxt.contains("test_student")){
-            bgTest.setBackground(testSele);
+            bgTest.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
         if(currenttxt.contains("chat_maestro")){
-            bgChat.setBackground(chatSele);
+            bgChat.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
         if(currenttxt.contains("profile")){
-            bgProfile.setBackground(profileSele);
+            bgProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
     };

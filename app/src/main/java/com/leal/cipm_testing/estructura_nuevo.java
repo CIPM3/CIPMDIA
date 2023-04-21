@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -53,7 +55,7 @@ public class estructura_nuevo extends AppCompatActivity {
     LinearLayout input_lay;
     LinearLayout btn_lay,btn_cont_lay;
     LinearLayout answer_lay;
-    LinearLayout resppass;
+    LinearLayout resplay;
     LinearLayout respescu;
     LinearLayout respescu2;
     LinearLayout respinc;
@@ -112,7 +114,7 @@ public class estructura_nuevo extends AppCompatActivity {
         btn_cont_lay = findViewById(R.id.btn_cont_lay);
         btn_lay = (LinearLayout) findViewById(R.id.btn_lay);
         answer_lay = (LinearLayout) findViewById(R.id.answer_lay);
-        resppass = (LinearLayout) findViewById(R.id.resppass);
+        resplay = (LinearLayout) findViewById(R.id.resplay);
         respescu = (LinearLayout) findViewById(R.id.respescu);
         respescu2 = (LinearLayout) findViewById(R.id.respescu2);
         vf = (LinearLayout) findViewById(R.id.vf);
@@ -30895,18 +30897,19 @@ public class estructura_nuevo extends AppCompatActivity {
     public void checarischeck(){
 
         if(algosele == "dif1"){
-            btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btndif);
+            //SE ACTIVA EL BTN
+            btndif1.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
             btndif1.setTextColor(Color.WHITE);
 
-            btndif2.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
+            btndif2.setBackgroundResource(R.drawable.borde_azul);
             btndif2.setTextColor(Color.parseColor("#407BFB"));
-            btndif3.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
+            btndif3.setBackgroundResource(R.drawable.borde_azul);
             btndif3.setTextColor(Color.parseColor("#407BFB"));
-            btndif4.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
+            btndif4.setBackgroundResource(R.drawable.borde_azul);
             btndif4.setTextColor(Color.parseColor("#407BFB"));
         }
         if(algosele == "dif2"){
-            btndif2.setBackgroundResource(R.drawable.ic_rect_ngulo_btndif);
+            btndif2.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
             btndif2.setTextColor(Color.WHITE);
 
             btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
@@ -30917,7 +30920,7 @@ public class estructura_nuevo extends AppCompatActivity {
             btndif4.setTextColor(Color.parseColor("#407BFB"));
         }
         if(algosele == "dif3"){
-            btndif3.setBackgroundResource(R.drawable.ic_rect_ngulo_btndif);
+            btndif3.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
             btndif3.setTextColor(Color.WHITE);
 
             btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
@@ -30928,7 +30931,7 @@ public class estructura_nuevo extends AppCompatActivity {
             btndif4.setTextColor(Color.parseColor("#407BFB"));
         }
         if(algosele == "dif4"){
-            btndif4.setBackgroundResource(R.drawable.ic_rect_ngulo_btndif);
+            btndif4.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
             btndif4.setTextColor(Color.WHITE);
 
             btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
@@ -30957,13 +30960,20 @@ public class estructura_nuevo extends AppCompatActivity {
 
         Toast.makeText(this, "Oracion 1"+ te2, Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "Oracion 2"+ t, Toast.LENGTH_SHORT).show();
+        //RESPUESTA CORRECTA
         if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2)) {
+            //ICONOS
+            Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
+
+            //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            resppass.setVisibility(View.VISIBLE);
-            respescu.setVisibility(View.GONE);
 
-            respinc.setVisibility(View.GONE);
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(correctIcon);
+
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
 
             btncheck.setText("Chequea tu respuesta");
@@ -30997,15 +31007,20 @@ public class estructura_nuevo extends AppCompatActivity {
                     }
                 }
             });
+            //RESPUESTA INCORRECTA
         } else {
+            //ICONOS
+            Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+
+            //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
             opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
 
-            resppass.setVisibility(View.GONE);
-            respescu.setVisibility(View.GONE);
-            respescu2.setVisibility(View.VISIBLE);
-            respinc.setVisibility(View.VISIBLE);
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(incorrectIcon);
 
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.VISIBLE);
 
             btncheck.setText("Checa Tu Respuesta ");
@@ -31078,14 +31093,15 @@ public class estructura_nuevo extends AppCompatActivity {
           iniciarentradavoz();
     }
     public void limpans(){
+        //RESETEA EL INPUT
         answerinp.setText("");
         answerinp.setBackgroundColor(Color.WHITE);
         opclay.setBackgroundColor(Color.WHITE);
 
-        resppass.setVisibility(View.GONE);
-        respescu.setVisibility(View.GONE);
+        //OCULTA EL LAYOYUT INCORRECTO O CORRECTO
+        resplay.setVisibility(View.GONE);
 
-        respinc.setVisibility(View.GONE);
+        //LAYOUT DE RESPUESTA SE OCULTA
         answer_lay.setVisibility(View.GONE);
     }
     private void iniciarentradavoz() {

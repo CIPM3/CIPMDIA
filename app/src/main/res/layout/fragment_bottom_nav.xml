@@ -42,6 +42,7 @@
             />
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/btn_chat_maestro"
         android:layout_width="80dp"
