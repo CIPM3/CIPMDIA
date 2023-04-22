@@ -46,7 +46,8 @@ BillingClient billingClient ;
                 .enablePendingPurchases()
                 .setListener(new PurchasesUpdatedListener() {
                     @Override
-                    public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
+                    public void onPurchasesUpdated(@NonNull BillingResult billingResult,
+                                                   @Nullable List<Purchase> list) {
                         if(billingResult.getResponseCode()==BillingClient.BillingResponseCode.OK&& list !=null){
                             for(Purchase purchase:list){
                                 if(purchase.getPurchaseState()==Purchase.PurchaseState.PURCHASED&&
@@ -61,9 +62,6 @@ BillingClient billingClient ;
                 .build();
         connectToGooglePlayBilling();
     }
-
-
-
 
     @Override
     protected void onResume() {

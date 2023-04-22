@@ -28,7 +28,9 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     String userid;
-    DocumentReference docref,docrefStructure,docrefVocab;
+    DocumentReference docref,docrefStructure,docrefVocab, docrefSpanishInt,docrefAvailability,docrefConsiousInt
+            ,docrefCulture
+            ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     StudentVocabRestultsModel svrm = new StudentVocabRestultsModel();
     Student studentObject = new Student();
@@ -37,20 +39,20 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     boolean isPlanIntermedioStandard,isPlanBasicRecommended, isCustomPlan100,isListeningPlan,isAdvancedPlan
             ,BasicListeningPlan
             ;
-  /*  String[] structureArray= new String[40];
-    String[] vocabArray=new String[11];
-    String[] spanishIntArray=new String[10];
-    String[] concsiousIntArray= new String[10];
-    String[] cultureArray= new String[10];
-    String[] availavilityArray=new String[10];*/
+
         String[] structureArray= {"", "", "", "",
           "", "", "", "","",""};
-    String[] vocabArray={"new String[40]", "voc", "tres", "cuatro",
-            "cinco", "seis", "siete", "ocho","nueve","diez"};
-    String[] spanishIntArray={"new String[40]", "sp"};
-    String[] concsiousIntArray={"new String[40]", "con"};
-    String[] cultureArray= {"new String[40]", "cult"};
-    String[] availavilityArray={"new String[40]", "av"};
+    String[] vocabArray= {"", "", "", "",
+            "", "", "", "","",""};
+    String[] spanishIntArray= {"", "", "", "",
+            ""};
+    String[] concsiousIntArray= {"", "", "", "",
+            "", "", "", "","",""};
+    String[] cultureArray=  {"", "", "", "",
+            "", "", "", "","",""};
+    String[] availavilityArray= {"", "", "", "",
+            "", "", "", "","",""};
+    SpanishintStudentModel spintstObject= new SpanishintStudentModel();
 
 
 
@@ -66,8 +68,11 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         docref=db.collection(userid).document("WhereisStudent");
         docrefStructure = db.collection(userid).document("structures");
         docrefVocab= db.collection(userid).document("vocabulary"    );
+        docrefSpanishInt=db.collection(userid).document("Interferencias");
+        docrefConsiousInt=db.collection(userid).document("Interferencias"  );
         CreatesCustomStructureArrayAfterTesting();
         CreatesCustomVocabArrayAfterTesting();
+        CreatesCustomerSpanishIntArrayAfterTesting();
 
 
     /*SendCustomStructuresToDb(structureArray,vocabArray,
@@ -105,8 +110,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             }
         });
     }
-
-
 
 //--------------------
     private void CreatesCustomVocabArrayAfterTesting() {
@@ -184,7 +187,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
     }
     private void CreatesCustomStructureArrayAfterTesting() {
-        docrefStructure.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        docrefStructure.get().
+                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 studentObject=  documentSnapshot.toObject(Student.class);
@@ -211,20 +215,21 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     structureArray[3]="";
                 }else {
                     structureArray[3]="Present Perfect Continuos";
-
                 }
                 if(studentObject.pastsimple){
-                    structureArray[3]="";
+                    structureArray[4]="";
                 }else {
-                    structureArray[3]="Past Simple";
+                    structureArray[4]="Past Simple";
 
                 }
+
                 List<String> list = new ArrayList<String>();
                 for(String s : structureArray) {
                     if(s != null && s.length() > 0) {
                         list.add(s);
                     }
                 }
+
                 structureArray = list.toArray(new String[list.size()]);
                 SendCustomStructuresToDb(structureArray,vocabArray,
                         spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);
@@ -232,12 +237,66 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         });
 
     }
+    private void CreatesCustomerSpanishIntArrayAfterTesting(){
+        docrefSpanishInt.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                spintstObject=documentSnapshot.toObject(SpanishintStudentModel.class);
+                assert spintstObject != null;
+                if(spintstObject.porsujeto){
+                    spanishIntArray[0]="";
+                }else {
+                    spanishIntArray[0]="Por Sujeto";
+                }
+                if(spintstObject.porobjeto){
+                    spanishIntArray[1]="";
+                }else {
+                    spanishIntArray[1]="Por Objeto";
+                }
+                if(spintstObject.porprep){
+                    spanishIntArray[2]="";
+                }else {
+                    spanishIntArray[2]="Por Preposición";
+                }
+                if(spintstObject.porrefl){
+                    spanishIntArray[3]="";
+                }else {
+                    spanishIntArray[3]="Interferencia Reflexiva";
+                }
+                if(spintstObject.porpasiva){
+                    spanishIntArray[4]="";
+                }else {
+                    spanishIntArray[4]="Interferencia Pasiva";
+                }
+
+                List<String> list = new ArrayList<String>();
+                for(String s : spanishIntArray) {
+                    if(s != null && s.length() > 0) {
+                        list.add(s);
+                    }
+                }
+
+
+                spanishIntArray = list.toArray(new String[list.size()]);
+                SendCustomStructuresToDb(structureArray,vocabArray,
+                        spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);
+            }
+        }) ;
+    }
+    private void CreatesCustomerAvailabilityArrayAfterTesting(){
+       docrefConsiousInt.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+           @Override
+           public void onSuccess(DocumentSnapshot documentSnapshot) {
+                spintstObject=documentSnapshot.toObject(SpanishintStudentModel.class);
+
+           }
+       });
+    }
+
 
 
     private void SendCustomStructuresToDb(String[] st,String[] vc, String[] spint, String[] conint,
-                                          String[] cult, String[ ] disp
-
-                                          ) {
+                                          String[] cult, String[ ] disp) {
         CollectionReference uid= db.collection(userid);
         CustomArrayAfterTestingHolder user = new CustomArrayAfterTestingHolder(
                 Arrays.asList(structureArray),Arrays.asList(vocabArray),

@@ -3,13 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_accessibility_new_vocab.xml" value="0.1465" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_connect_without_structure_speaking.xml" value="0.1465" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_baseline_people_outline_intsp.xml" value="0.1465" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_controlar.xml" value="0.1835" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_conint.xml" value="0.1175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_hut.xml" value="0.1" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_grupo_mainsele.xml" value="0.1175" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_microfono.xml" value="0.1175" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/drawable/ic_modales.xml" value="0.1175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout-xlarge/activity_spanish_int.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_choose_level.xml" value="0.22" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_chose_estruc.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_chose_vocab.xml" value="0.13496376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_conscisousinterference_nuevo.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_estructura_nuevo.xml" value="0.1" />
@@ -18,6 +25,7 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_main_testing.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_my_plan.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_plan_de_estudios_chooser.xml" value="0.175" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_premium.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_profile.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_register.xml" value="0.1358695652173913" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_registro2023.xml" value="0.14990942028985507" />
@@ -29,6 +37,7 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_structure_results.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_test_results.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_transicion.xml" value="0.11820652173913043" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_transicion_nuevo.xml" value="0.13134057971014493" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_tutorial_general.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_vocabulary_nuevo.xml" value="0.13496376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/fragment_con_int_test_results.xml" value="0.12590579710144928" />

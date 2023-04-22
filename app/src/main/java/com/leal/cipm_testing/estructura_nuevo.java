@@ -12541,7 +12541,8 @@ public class estructura_nuevo extends AppCompatActivity {
             case "Could Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(),
+                                new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");

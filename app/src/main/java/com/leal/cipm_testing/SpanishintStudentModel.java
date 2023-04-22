@@ -7,6 +7,8 @@ public class SpanishintStudentModel {
 
     boolean porobjeto,porsujeto,porprep,porrefl,porpasiva;
 
+
+
     public boolean isPorobjeto() {
         return porobjeto;
     }
