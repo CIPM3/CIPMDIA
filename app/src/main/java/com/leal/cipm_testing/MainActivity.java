@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         tvnameuser = findViewById(R.id.UserNameTv);
         //createRequest();
         hamtest= findViewById(R.id.hamtestbtn);
-//        testest= findViewById(R.id.testest);
+//      testest= findViewById(R.id.testest);
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
@@ -191,9 +191,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void myPlan(View vist){
-        Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+
+        Toast.makeText(this, "función en desarrollo", Toast.LENGTH_SHORT).show();
+       /* Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
         intent.putExtra("key", user.getUid());
-        startActivity(intent);
+        startActivity(intent);*/
 
 
 /*
@@ -229,8 +231,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void TestNuevo(View vist){
+
+        Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();
+      /*
         Intent intent = new Intent(this, test_student.class);
-        startActivity(intent);
+        startActivity(intent);*/
     }
     public void profile(View vist) {
 

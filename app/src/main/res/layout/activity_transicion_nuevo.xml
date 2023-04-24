@@ -108,10 +108,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/ic_grupo_videobox"
-                        android:orientation="horizontal"
                         android:onClick="showV"
-                        >
-                    </LinearLayout>
+                        android:orientation="horizontal"
+                        tools:visibility="visible"></LinearLayout>
 
                     <VideoView
                         android:id="@+id/vv"

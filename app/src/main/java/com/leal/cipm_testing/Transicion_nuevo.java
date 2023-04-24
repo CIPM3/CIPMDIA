@@ -1265,7 +1265,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    tts.speak("como dirías..." + sptx.getText().toString().trim(),
+                                            0, null, "zero");
                                 }
 
                             }
@@ -2118,6 +2119,7 @@ public class Transicion_nuevo extends AppCompatActivity {
 
     }
     public void speakans(View vista){
+        vf.setVisibility(View.GONE);
         ttr.setLanguage(Locale.ENGLISH);
         ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
             @Override
@@ -2135,7 +2137,6 @@ public class Transicion_nuevo extends AppCompatActivity {
             public void onError(String s) {
             }
         });
-
         ttr.speak(engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
     }
 
