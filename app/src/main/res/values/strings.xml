@@ -310,7 +310,16 @@
 
     </string-array>
 
-    <!--CULTURA PRUEBA-->
+    <!--CULTURA BASIC-->
+    <string-array name="cultura2023">
+        <item>Tutorial</item>
+        <item>Moonlight</item>
+        <item>Rick and Morty</item>
+        <item>Do You Want Pepsi</item>
+        <item>Sangre Por Sangre Foodline</item>
+        <item>Sangre Por Sangre Watch El Paisaje</item>
+    </string-array>
+    <!--CULTURA PREMIUM-->
     <string-array name="culturaPremium2023">
         <item>Tutorial</item>
         <item>Moonlight</item>

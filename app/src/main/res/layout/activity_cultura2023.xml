@@ -131,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:gravity="end|center"
                     android:onClick="cultura_new"
                     >
@@ -213,7 +213,7 @@
                         android:id="@+id/text_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Empezar Explicacion"
+                        android:text="Empezar Practica"
                         android:textColor="@color/azul"
                         android:textSize="17dp" />
                 </LinearLayout>
@@ -224,14 +224,13 @@
                     android:layout_height="35dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
                     android:gravity="center"
-                    android:onClick="saltarExp"
                     android:visibility="gone">
 
                     <TextView
                         android:id="@+id/btn_exp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Saltar Explicacion"
+                        android:text="Encontrar Palabra Clave"
                         android:textColor="@color/azul"
                         android:textSize="17dp" />
                 </LinearLayout>

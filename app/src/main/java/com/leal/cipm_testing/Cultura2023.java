@@ -71,7 +71,7 @@ public class Cultura2023 extends AppCompatActivity{
             isInTransition,isinIntcon,isBasicStructures;
 
     int posKeyword = 0,posSele = 0;
-    boolean explanation;
+    boolean explanation,clipMuestra;
 
     Object KeyWordsObject [][][] ={
             //Moonlight
@@ -84,6 +84,8 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             26000,
+                            //CLIP TIME START
+
                     },
                     //"Thought you was on vacation"
                     {
@@ -1120,7 +1122,8 @@ public class Cultura2023 extends AppCompatActivity{
 
 
 
-        explanation = true;
+        explanation = false;
+        clipMuestra = true;
 
         prefs = new Prefs(this);
         CounterToSubtractSelection=1;
@@ -1345,14 +1348,14 @@ public class Cultura2023 extends AppCompatActivity{
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium2023, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    explanation = true;
+                    explanation = false;
                     spinnerSelected();
                 }
 
@@ -1366,13 +1369,13 @@ public class Cultura2023 extends AppCompatActivity{
         } else if (prefs.getPremium()==0){
             //remove user all the premium features
             //show ads to the user
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura2023, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    explanation = true;
+                    explanation = false;
                     spinnerSelected();
 
                 }
@@ -1409,13 +1412,12 @@ public class Cultura2023 extends AppCompatActivity{
         }else {
             lay_btn_empezar.setVisibility(View.VISIBLE);
             videoPlayer();
-
         }
     }
 
     //ACTIVA LA INTERFAZ PARA EL VIDEO
     public void videoPlayer(){
-        if(explanation){
+        /*if(explanation){
             text_exp.setText("Mira la explicacion y cuando te sientas listo presiona");
             lay_btn_emp.setVisibility(View.GONE);
             lay_btn_salt.setVisibility(View.VISIBLE);
@@ -1427,12 +1429,38 @@ public class Cultura2023 extends AppCompatActivity{
             lay_btn_get.setVisibility(View.VISIBLE);
 
             setKeywordAndPosition();
+        }*/
+        if(explanation == false & clipMuestra == true){
+            text_exp.setText("Pon atencion al clip a continuacion y cuando termine haz click en empezar practica.");
+            lay_btn_emp.setOnClickListener(view -> {
+                explanation = true;
+                clipMuestra = false;
+                lay_btn_emp.setVisibility(View.GONE);
+                lay_btn_salt.setVisibility(View.VISIBLE);
+                saltarExp(explanation);
+            });
+        }
+
+        if(explanation == true & clipMuestra == false){
+            text_exp.setText("Escucha la explicacion de la palabra clave a encontrar. Cuando lo hagas haz click en encontrar palabra clave");
+            lay_btn_salt.setOnClickListener(view -> {
+                explanation = false;
+                clipMuestra = false;
+                lay_btn_salt.setVisibility(View.GONE);
+                lay_btn_get.setVisibility(View.VISIBLE);
+                lay_key_word.setVisibility(View.VISIBLE);
+                setKeywordAndPosition();
+                saltarExp(explanation);
+            });
+        }
+
+        if(explanation == false & clipMuestra == false){
+            text_exp.setText("Pon atencion al clip a continuacion y cuando escuches la palabra clave haz click en get");
         }
     }
 
     //SALTA LA EXPLICACION
-    public void saltarExp(View v){
-        explanation = false;
+    public void saltarExp(Boolean explanation){
         VideoPlayer video_player = new VideoPlayer();
         Bundle args = new Bundle();
         args.putBoolean("explicacion", explanation);
@@ -1442,6 +1470,7 @@ public class Cultura2023 extends AppCompatActivity{
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
                 .commit();
+
 
 
         spinnerSelected();
@@ -1639,27 +1668,22 @@ public class Cultura2023 extends AppCompatActivity{
     public void setKeyWordToCulture(int g,String keyWord,int StartTime, int StopTime){
         VideoView vp = findViewById(R.id.video_player);
         text_key_word.setText(keyWord);
+
         if(posKeyword >= KeyWordsObject[posSele].length){
             Toast.makeText(this, "HAZ COMPLETADO ESTA PRACTICA CONTINUA CON OTRA", Toast.LENGTH_SHORT).show();
             ResetearPage();
         }else{
             if(g> StartTime && g<StopTime) {
                 Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
-                text_key_word.setTextColor(Color.BLACK);
                 posKeyword++;
                 intentos = 0;
+
                 setKeywordAndPosition();
 
             }else{
-                intentos++;
-                if(intentos != 1){
-                    Toast.makeText(this, ""+intentos, Toast.LENGTH_SHORT).show();
-                    text_key_word.setTextColor(Color.RED);
-                }
-            }
-            if(intentos >= 4){
                 SpannableString ss= new SpannableString(keyWord);
-                ClickableSpan txtone= new ClickableSpan() {
+                ClickableSpan txtone;
+                txtone = new ClickableSpan() {
                     @Override
                     public void onClick(@NonNull View view) {
                         vp.seekTo(StartTime);

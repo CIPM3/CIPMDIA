@@ -548,6 +548,51 @@ public class VideoPlayer extends Fragment {
             }
         }
 
+        if(currenttxt.contains("vocabulary_nuevo")){
+            switch (selection) {
+                case "Tutorial":
+                    ShowVideo("https://adrianlealcaldera.com/vocabtut.mp4");
+                    break;
+                case "0 to 50":
+                    ShowVideo("http://adrianlealcaldera.com/vocablowq.mp4");
+                    break;
+
+                case "50 to 100":
+                    ShowVideo("http://adrianlealcaldera.com/51a100.mp4");
+                    break;
+
+                case "100 to 150":
+                    ShowVideo("http://adrianlealcaldera.com/100a150.mp4");
+                    break;
+
+                case "150 to 200":
+                    ShowVideo("http://adrianlealcaldera.com/151-200.mp4");
+                    break;
+
+                case "200 to 250":
+                    ShowVideo("http://adrianlealcaldera.com/200a250.mp4");
+                    break;
+
+                case "250 to 300":
+                    ShowVideo("http://adrianlealcaldera.com/250a300.mp4");
+                    break;
+
+                case "300 to 350":
+                    ShowVideo("http://adrianlealcaldera.com/300-350.mp4");
+                    break;
+
+                case "350 to 400":
+                    ShowVideo("http://adrianlealcaldera.com/350a400bq.mp4");
+                    break;
+
+                case "400 to 500":
+                    ShowVideo("http://adrianlealcaldera.com/400a500lq.mp4");
+                    break;
+
+
+            }
+        }
+
     }
     public void ShowVideo(String url){
 
@@ -582,6 +627,7 @@ public class VideoPlayer extends Fragment {
             }
         });
     }
+
     public void ResetVideo(){
         video_lay.setVisibility(View.VISIBLE);
         video_player.setVisibility(View.INVISIBLE);

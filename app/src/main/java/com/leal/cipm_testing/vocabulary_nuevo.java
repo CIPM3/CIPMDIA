@@ -10,6 +10,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -36,6 +37,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
 
 import java.util.ArrayList;
@@ -55,13 +57,15 @@ public class vocabulary_nuevo extends AppCompatActivity {
     VideoView vv;
     LinearLayout vf;
     LinearLayout opclay;
-    LinearLayout resppass;
+    LinearLayout resplay;
     LinearLayout respescu;
     LinearLayout respinc;
     LinearLayout answer_lay;
     LinearLayout spanish_lay;
     LinearLayout input_lay;
     LinearLayout btn_check_lay;
+
+    TextView btncheck;
     LinearLayout btn_emp_lay;
     LinearLayout btn_cont_lay;
     LinearLayout txt_exp;
@@ -105,9 +109,9 @@ public class vocabulary_nuevo extends AppCompatActivity {
         answerinp = findViewById(R.id.answerinput1);
         opclay = findViewById(R.id.opclay);
 
-        resppass = findViewById(R.id.resppass);
-        respescu = findViewById(R.id.respescu);
-        respinc = findViewById(R.id.respinc);
+        btncheck = findViewById(R.id.btncheck);
+
+        resplay = findViewById(R.id.resplay);
         answer_lay = findViewById(R.id.answer_lay);
         spanish_lay = findViewById(R.id.spanish_lay);
         input_lay = findViewById(R.id.input_lay);
@@ -125,6 +129,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
     }
     CustomArrayAfterTestingHolder caath ;
 
+    //DB FUNC
     private void PremiumControler() {
 
         // info que recive del plan de estudios chooser
@@ -166,7 +171,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             btn_check_lay.setVisibility(View.GONE);
                             btn_cont_lay.setVisibility(View.GONE);
 
-                            resppass.setVisibility(View.GONE);
                             respescu.setVisibility(View.GONE);
                             respinc.setVisibility(View.GONE);
 
@@ -223,7 +227,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                                         btn_check_lay.setVisibility(View.GONE);
                                         btn_cont_lay.setVisibility(View.GONE);
 
-                                        resppass.setVisibility(View.GONE);
                                         respescu.setVisibility(View.GONE);
                                         respinc.setVisibility(View.GONE);
 
@@ -270,7 +273,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             btn_check_lay.setVisibility(View.GONE);
                             btn_cont_lay.setVisibility(View.GONE);
 
-                            resppass.setVisibility(View.GONE);
                             respescu.setVisibility(View.GONE);
                             respinc.setVisibility(View.GONE);
 
@@ -315,7 +317,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                                         btn_check_lay.setVisibility(View.GONE);
                                         btn_cont_lay.setVisibility(View.GONE);
 
-                                        resppass.setVisibility(View.GONE);
                                         respescu.setVisibility(View.GONE);
                                         respinc.setVisibility(View.GONE);
 
@@ -351,7 +352,6 @@ public class vocabulary_nuevo extends AppCompatActivity {
                                 btn_check_lay.setVisibility(View.GONE);
                                 btn_cont_lay.setVisibility(View.GONE);
 
-                                resppass.setVisibility(View.GONE);
                                 respescu.setVisibility(View.GONE);
                                 respinc.setVisibility(View.GONE);
 
@@ -370,87 +370,10 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
 
 
+        }else{
+            checkPremiun();
         }
 
-
-
-        // si no es personalizado acesa a todas las funciones que le cooresponden
-        // ya sea pagado o gratis
-        else if (prefs.getPremium()==1){
-            //Give the user all the premium features
-            //hide ads if you are showing ads
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                    (this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
-
-                    vf.setVisibility(View.VISIBLE);
-                    vv.setVisibility(View.GONE);
-
-                    txt_exp.setVisibility(View.VISIBLE);
-                    btn_emp_lay.setVisibility(View.VISIBLE);
-
-                    spanish_lay.setVisibility(View.GONE);
-                    input_lay.setVisibility(View.GONE);
-
-                    btn_check_lay.setVisibility(View.GONE);
-                    btn_cont_lay.setVisibility(View.GONE);
-
-                    resppass.setVisibility(View.GONE);
-                    respescu.setVisibility(View.GONE);
-                    respinc.setVisibility(View.GONE);
-
-                    answerinp.setBackgroundColor(Color.WHITE);
-                    opclay.setBackgroundColor(Color.WHITE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-        } else if (prefs.getPremium()==0){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
-                    (this, R.array.vocab, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
-                    vf.setVisibility(View.VISIBLE);
-                    vv.setVisibility(View.GONE);
-                    txt_exp.setVisibility(View.VISIBLE);
-                    btn_emp_lay.setVisibility(View.VISIBLE);
-                    spanish_lay.setVisibility(View.GONE);
-                    input_lay.setVisibility(View.GONE);
-
-                    btn_check_lay.setVisibility(View.GONE);
-                    btn_cont_lay.setVisibility(View.GONE);
-
-                    resppass.setVisibility(View.GONE);
-                    respescu.setVisibility(View.GONE);
-                    respinc.setVisibility(View.GONE);
-
-                    answerinp.setBackgroundColor(Color.WHITE);
-                    opclay.setBackgroundColor(Color.WHITE);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-        }
     }
     public void inWhatActivityisTheStudent(){
 
@@ -497,6 +420,70 @@ public class vocabulary_nuevo extends AppCompatActivity {
         }
     }
 
+
+    //EMPIEZA ESTRUCTURA
+
+    //EVALUA SI EL USUARIO ES PREMIUM O NO
+    public void checkPremiun(){
+        //USUARIO PREMIUM
+        if(prefs.getPremium()==1){
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    spinnerSelected1();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
+
+            //USUARIO BASICO
+        } else if (prefs.getPremium()==0){
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocab, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    spinnerSelected1();
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+        }
+    }
+
+    //EVALUA QUE FUE SELECCIONADO
+    public void spinnerSelected1(){
+        selection = spin.getSelectedItem().toString();
+        textspin1.setText(selection);
+
+        VideoPlayer video_player = new VideoPlayer();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView4, video_player)
+                .commit();
+    }
+
+    //TOMA TODO EL ESPACIO PARA EL SPINNER 1
+    public void activaSpinner1(View v){
+        Spinner mySpinner = findViewById(R.id.spinuno);
+        mySpinner.performClick();
+    }
 
     public void showV(View vista) {
 
@@ -587,8 +574,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
         }
 
     }
+
     public void practice(View v) {
-        
         txt_exp.setVisibility(View.GONE);
         btn_emp_lay.setVisibility(View.GONE);
 
@@ -599,9 +586,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
         btn_cont_lay.setVisibility(View.VISIBLE);
         answer_lay.setVisibility(View.GONE);
 
-        resppass.setVisibility(View.GONE);
-        respescu.setVisibility(View.GONE);
-        respinc.setVisibility(View.GONE);
+        resplay.setVisibility(View.GONE);
 
         answerinp.setBackgroundColor(Color.WHITE);
         opclay.setBackgroundColor(Color.WHITE);
@@ -931,15 +916,21 @@ public class vocabulary_nuevo extends AppCompatActivity {
         String t = engtx.getText().toString().trim();
         String t2 = answerinp.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
+            //ICONOS
+            Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
+
+            //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
 
-            resppass.setVisibility(View.VISIBLE);
-            respescu.setVisibility(View.VISIBLE);
-            respinc.setVisibility(View.GONE);
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(correctIcon);
 
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
 
+            btncheck.setText("Chequea tu respuesta");
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int i) {
@@ -960,41 +951,43 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             }
                         });
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
-                        // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
-                        // volvemos a llamar premium controler y re/setea el array
-                        // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
 
-                        if(personalizedPlan ){
-                            SubtractSelectionAndSendinfoToDb();
-                        }
+
                     }
                 }
             });
+            //RESPUESTA INCORRECTA
         }
         else {
+            //ICONOS
+            Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+
+            //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
             opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
 
-            resppass.setVisibility(View.GONE);
-            respescu.setVisibility(View.VISIBLE);
-            respinc.setVisibility(View.VISIBLE);
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(incorrectIcon);
 
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.VISIBLE);
+
+            btncheck.setText("Checa Tu Respuesta ");
+            //if you say stop it returns part of the flow control system
+            if (answerinp.getText().toString().trim().equals("stop")) return;
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int i) {
                     if (i == TextToSpeech.SUCCESS) {
-                        engtx.setTextColor(Color.BLACK);
                         ttr.setLanguage(Locale.ENGLISH);
                         ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                             @Override
                             public void onStart(String s) {
-
                             }
 
                             @Override
                             public void onDone(String utteranceId) {
-
 
                             }
 
@@ -1002,10 +995,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
                             public void onError(String s) {
                             }
                         });
+                        ttr.speak("answer is incorrect the answer is: "+engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
-                        ttr.speak("answer is incorrect....the answer is..." + engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
-                        //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
-                        //with this yet
 
                     }
                 }
@@ -1046,6 +1037,8 @@ public class vocabulary_nuevo extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
         }
     }
+
+    //VALIDACIONES DE TEXTO Y AUDIO
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
