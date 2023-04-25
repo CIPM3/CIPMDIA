@@ -16,6 +16,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.availability_nuevo;
 
 public class VideoPlayer extends Fragment {
     LinearLayout video_lay,loadingVideo;
@@ -53,7 +54,6 @@ public class VideoPlayer extends Fragment {
         video_lay = view.findViewById(R.id.video_lay);
         video_player = view.findViewById(R.id.video_player);
         loadingVideo = view.findViewById(R.id.loadingVideo);
-
 
         video_lay.setOnClickListener(v -> {
             SelectUrl();
@@ -619,6 +619,53 @@ public class VideoPlayer extends Fragment {
                     break;
 
 
+            }
+        }
+
+        if(currenttxt.contains("availability_nuevo")){
+            switch (selection) {
+
+                case "Tutorial":
+                    ShowVideo("https://adrianlealcaldera.com/avtut.mp4");
+                    break;
+
+
+                case "Black Fathers":
+                    ShowVideo("http://adrianlealcaldera.com/blackfathers.mp4");
+                    break;
+
+                case "Is America Racist?":
+                    ShowVideo("http://adrianlealcaldera.com/isamericaracist.mp4");
+                    break;
+
+                case "Dont Compare Yourself to Others":
+                    ShowVideo("https://adrianlealcaldera.com/DontCompareYourselftoOthersPrag.mp4");
+                    break;
+
+                case "Fix Yourself":
+                    ShowVideo("https://adrianlealcaldera.com/FixYourself.mp4");
+                    break;
+
+                //Are Men and Women Different?
+                case "Are Men and Women Different?":
+                    ShowVideo("https://adrianlealcaldera.com/Are%20Men%20and%20Women%20Different.mp4");
+                    break;
+
+                case "Dont Waste Your Time":
+                    ShowVideo("https://adrianlealcaldera.com/Dating%20Dont%20Waste%20Your%20Time.mp4");
+                    break;
+
+                case "How to Make Our Cities Safer":
+                    ShowVideo("https://adrianlealcaldera.com/How%20to%20Make%20Our%20Cities%20Safer.mp4");
+                    break;
+
+                case "How to End Systemic Racism":
+                    ShowVideo("https://adrianlealcaldera.com/How%20to%20End%20Systemic%20Racism.mp4");
+                    break;
+
+                case "Should Government Bail Out Big Banks?":
+                    ShowVideo("https://adrianlealcaldera.com/Should%20Government%20Bail%20Out%20Big%20Banks.mp4");
+                    break;
             }
         }
 
