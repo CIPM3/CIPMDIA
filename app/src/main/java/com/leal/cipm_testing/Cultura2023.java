@@ -84,8 +84,11 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             26000,
-                            //CLIP TIME START
-
+                            //Exp time
+                            //timeStart
+                            44000,
+                            //timeStop
+                            509000,
                     },
                     //"Thought you was on vacation"
                     {
@@ -95,6 +98,12 @@ public class Cultura2023 extends AppCompatActivity{
                             36000,
                             //timeStop
                             38000,
+                            //Exp time
+                            //timeStart
+                            373000,
+                            //timeStop
+                            443000,
+
                     },
                     //"How peanut working out"
                     {
@@ -104,6 +113,25 @@ public class Cultura2023 extends AppCompatActivity{
                             48000,
                             //timeStop
                             50000,
+                            //Exp time
+                            //timeStart
+                            332000,
+                            //timeStop
+                            372000,
+                    },
+                    //"I got him in check"
+                    {
+                            //keyword
+                            "I got him in check",
+                            //timeStart
+                            50000,
+                            //timeStop
+                            52000,
+                            //Exp time
+                            //timeStart
+                            28600,
+                            //timeStop
+                            332000
                     },
                     //"I ain´t go let that go down"
                     {
@@ -118,6 +146,11 @@ public class Cultura2023 extends AppCompatActivity{
                             70000,
                             //timeStop
                             73000,*/
+                            //Exp time
+                            //timeStart
+                            227000,
+                            //timeStop
+                            286000
                     },
                     //"What´s up"
                     {
@@ -127,6 +160,11 @@ public class Cultura2023 extends AppCompatActivity{
                             93000,
                             //timeStop
                             95600,
+                            //Exp time
+                            //timeStart
+                            510000,
+                            //timeStop
+                            524000
                     },
                     //"It´s all good"
                     {
@@ -141,6 +179,11 @@ public class Cultura2023 extends AppCompatActivity{
                             103000,
                             //timeStop
                             105000,*/
+                            //Exp time
+                            //timeStart
+                            170000,
+                            //timeStop
+                            200000
                     },
                     //"What are you doing"
                     {
@@ -150,6 +193,11 @@ public class Cultura2023 extends AppCompatActivity{
                             97000,
                             //timeStop
                             99000,
+                            //Exp time
+                            //timeStart
+                            125000,
+                            //timeStop
+                            145000,
                     },
                     //"What is wrong with you"
                     {
@@ -159,6 +207,11 @@ public class Cultura2023 extends AppCompatActivity{
                             107000,
                             //timeStop
                             108000,
+                            //Exp time
+                            //timeStart
+                            201000,
+                            //timeStop
+                            226000
                     },
                     //"Get the fuck out of here"
                     {
@@ -168,6 +221,11 @@ public class Cultura2023 extends AppCompatActivity{
                             115000,
                             //timeStop
                             116000,
+                            //Exp time
+                            //timeStart
+                            146000,
+                            //timeStop
+                            169000,
                     },
                     //"Have you ever"
                     {
@@ -177,6 +235,11 @@ public class Cultura2023 extends AppCompatActivity{
                             179000,
                             //timeStop
                             180200,
+                            //Exp time
+                            //timeStart
+                            82000,
+                            //timeStop
+                            124000,
                     }
             },
 
@@ -190,6 +253,11 @@ public class Cultura2023 extends AppCompatActivity{
                             0,
                             //timeStop
                             2000,
+                            //Exp time
+                            //timeStart
+                            39000,
+                            //timeStop
+                            85000,
                     },
                     //"No can do"
                     {
@@ -199,6 +267,11 @@ public class Cultura2023 extends AppCompatActivity{
                             5000,
                             //timeStop
                             7000,
+                            //Exp time
+                            //timeStart
+                            86000,
+                            //timeStop
+                            106000,
                     },
                     //"When i feel like it"
                     {
@@ -208,6 +281,11 @@ public class Cultura2023 extends AppCompatActivity{
                             16000,
                             //timeStop
                             17500,
+                            //Exp time
+                            //timeStart
+                            107000,
+                            //timeStop
+                            135000,
                     },
                     //"You need to chill out"
                     {
@@ -217,6 +295,11 @@ public class Cultura2023 extends AppCompatActivity{
                             18000,
                             //timeStop
                             20000,
+                            //Exp time
+                            //timeStart
+                            136000,
+                            //timeStop
+                            192000,
                     },
                     //"Tryna - (trying to)"
                     {
@@ -226,6 +309,25 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             25000,
+                            //Exp time
+                            //timeStart
+                            193000,
+                            //timeStop
+                            213000,
+                    },
+                    //"You know what"
+                    {
+                            //keyword
+                            "You know what",
+                            //timeStart
+                            24000,
+                            //timeStop
+                            25000,
+                            //Exp time
+                            //timeStart
+                            214000,
+                            //timeStop
+                            237000,
                     },
                     //"Hanging out"
                     {
@@ -235,6 +337,11 @@ public class Cultura2023 extends AppCompatActivity{
                             26000,
                             //timeStop
                             28000,
+                            //Exp time
+                            //timeStart
+                            238000,
+                            //timeStop
+                            268000,
                     },
                     //"You're overthinking it"
                     {
@@ -244,6 +351,11 @@ public class Cultura2023 extends AppCompatActivity{
                             54000,
                             //timeStop
                             58000,
+                            //Exp time
+                            //timeStart
+                            283000,
+                            //timeStop
+                            308000,
                     },
                     //"Get your shit together"
                     {
@@ -253,6 +365,11 @@ public class Cultura2023 extends AppCompatActivity{
                             104000,
                             //timeStop
                             106000,
+                            //Exp time
+                            //timeStart
+                            309000,
+                            //timeStop
+                            343000,
                     },
                     //"To be into"
                     {
@@ -262,6 +379,11 @@ public class Cultura2023 extends AppCompatActivity{
                             4000,
                             //timeStop
                             5000,
+                            //Exp time
+                            //timeStart
+                            344000,
+                            //timeStop
+                            391000,
                     }
             },
 
@@ -275,6 +397,11 @@ public class Cultura2023 extends AppCompatActivity{
                             0,
                             //timeStop
                             2000,
+                            //Exp time
+                            //timeStart
+                            234000,
+                            //timeStop
+                            359000,
                     },
                     //"Ain't got no"
                     {
@@ -284,6 +411,11 @@ public class Cultura2023 extends AppCompatActivity{
                             6000,
                             //timeStop
                             7000,
+                            //Exp time
+                            //timeStart
+                            127000,
+                            //timeStop
+                            169000,
                     },
                     //"Do you want"
                     {
@@ -293,6 +425,11 @@ public class Cultura2023 extends AppCompatActivity{
                             7000,
                             //timeStop
                             8000,
+                            //Exp time
+                            //timeStart
+                            183000,
+                            //timeStop
+                            229000,
                     },
                     //"I was just wondering"
                     {
@@ -302,6 +439,11 @@ public class Cultura2023 extends AppCompatActivity{
                             15000,
                             //timeStop
                             16000,
+                            //Exp time
+                            //timeStart
+                            360000,
+                            //timeStop
+                            411000,
                     },
                     //"Might as well"
                     {
@@ -311,6 +453,11 @@ public class Cultura2023 extends AppCompatActivity{
                             16000,
                             //timeStop
                             17000,
+                            //Exp time
+                            //timeStart
+                            414000,
+                            //timeStop
+                            473000,
                     },
                     //"You feel me"
                     {
@@ -320,6 +467,11 @@ public class Cultura2023 extends AppCompatActivity{
                             17000,
                             //timeStop
                             18000,
+                            //Exp time
+                            //timeStart
+                            475000,
+                            //timeStop
+                            493000,
                     },
                     //"Is there a problem"
                     {
@@ -329,6 +481,11 @@ public class Cultura2023 extends AppCompatActivity{
                             28000,
                             //timeStop
                             30000,
+                            //Exp time
+                            //timeStart
+                            494000,
+                            //timeStop
+                            518000,
                     },
                     //"I didn't want"
                     {
@@ -338,6 +495,11 @@ public class Cultura2023 extends AppCompatActivity{
                             31000,
                             //timeStop
                             32000,
+                            //Exp time
+                            //timeStart
+                            519000,
+                            //timeStop
+                            539000,
                     },
                     //"Why would you"
                     {
@@ -352,6 +514,11 @@ public class Cultura2023 extends AppCompatActivity{
                             36000,
                             //timeStop
                             37000,*/
+                            //Exp time
+                            //timeStart
+                            540000,
+                            //timeStop
+                            556000,
                     }
             },
 
