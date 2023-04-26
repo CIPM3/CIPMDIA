@@ -210,7 +210,7 @@
         <item>Is America Racist?</item>
     </string-array>
     <string-array name="Transition">
-        <item>Tutorial para Transiciones</item>
+        <item>Tutorial</item>
         <item>Transiciones</item>
         <item>Random</item>
         <item>Conectores Standar Presente Simple</item>
@@ -238,7 +238,7 @@
         <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
     </string-array>
     <string-array name="TransitionGratis">
-        <item>Tutorial para Transiciones</item>
+        <item>Tutorial</item>
         <item>Transiciones</item>
         <item>Random</item>
         <item>Conectores Standar Presente Simple</item>

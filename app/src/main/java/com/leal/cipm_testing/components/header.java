@@ -12,13 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.leal.cipm_testing.Cultura2023;
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
 
 public class header extends Fragment {
     EditText editText;
+    String Screen;
 
     public header() {
         // Required empty public constructor
@@ -31,8 +34,7 @@ public class header extends Fragment {
         View view = inflater.inflate(R.layout.fragment_header, container, false);
         LinearLayout btn_main = view.findViewById(R.id.btn_main);
         btn_main.setOnClickListener(v -> {
-            Intent intento = new Intent(getContext(), MainActivity.class);
-            startActivity(intento);
+            NavegacionMain();
         });
         // Obtener referencia al EditText
         editText = view.findViewById(R.id.txtHeader);
@@ -56,51 +58,80 @@ public class header extends Fragment {
         if (currenttxt.contains("Cultura")) {
             // Cambiar el texto del EditText
             editText.setText("Culture");
+            Screen = "Cultura";
         }
 
         if (currenttxt.contains("test_student")) {
             // Cambiar el texto del EditText
             editText.setText("Test");
+            Screen = "Test";
         }
 
         if (currenttxt.contains("spa_int_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Spanish Interference");
+            Screen = "Spanish Interference";
         }
 
         if (currenttxt.contains("conscisousinterference")) {
             // Cambiar el texto del EditText
             editText.setText("Conscious Interference");
+            Screen = "Conscious Interference";
         }
 
         if (currenttxt.contains("availability_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Availability");
+            Screen = "Availability";
         }
 
         if (currenttxt.contains("estructura_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Structures");
+            Screen = "Structures";
         }
 
         if (currenttxt.contains("vocabulary_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Vocabulary");
+            Screen = "Vocabulary";
         }
 
         if (currenttxt.contains("Transicion_nuevo")) {
             // Cambiar el texto del EditText
             editText.setText("Transiciones");
+            Screen = "Transiciones";
         }
 
         if (currenttxt.contains("PlanDeEstudios")) {
             // Cambiar el texto del EditText
             editText.setText("Mi Plan");
+            Screen = "Mi Plan";
         }
 
         if (currenttxt.contains("Culturalphrases")) {
             // Cambiar el texto del EditText
             editText.setText("Frases Culturales");
+            Screen = "Frases Culturales";
+        }
+
+        if (currenttxt.contains("StoreActivity")) {
+            // Cambiar el texto del EditText
+            editText.setText("Hazte Premium");
+            Screen = "Hazte Premium";
         }
     };
+
+    public void NavegacionMain(){
+
+        if(Screen == "Frases Culturales"){
+            Intent intento = new Intent(getContext(), Cultura2023.class);
+            startActivity(intento);
+        }else{
+            Intent intento = new Intent(getContext(), MainActivity.class);
+            startActivity(intento);
+        }
+    }
+
+
 }

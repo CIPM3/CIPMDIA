@@ -12,6 +12,25 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+        <!--Header-->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@color/graybg"
+            >
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.leal.cipm_testing.components.header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:layout="@layout/fragment_header"
+                />
+        </LinearLayout>
 
         <!--Boton-->
         <LinearLayout
@@ -22,9 +41,11 @@
 
             <Button
                 android:id="@+id/itemSubPrice"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:background="@drawable/ic_grupo_btnblue"
+                android:layout_marginHorizontal="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/boton_redondeado"
+                android:backgroundTint="@color/azul"
                 android:text="Button" />
 
         </LinearLayout>
@@ -51,35 +72,60 @@
         <!--Video View-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingHorizontal="30dp"
-            >
+            android:paddingHorizontal="30dp">
 
-            <LinearLayout
-                android:id="@+id/playbuybtn"
+            <!--<LinearLayout
+                android:id="@+id/vf"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@drawable/ic_grupo_videobox"
-                android:onClick="showvid"
-                app:layout_constraintBottom_toBottomOf="@+id/buyvid"
-                android:orientation="horizontal"
-                >
+                android:onClick="showV"
+                android:visibility="gone"
+                android:orientation="horizontal">
 
             </LinearLayout>
 
             <VideoView
-                android:id="@+id/buyvid"
+                android:id="@+id/videoView1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:visibility="invisible"
-                app:layout_constraintTop_toBottomOf="@+id/itemSubPrice"
-                />
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />-->
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView4"
+                android:name="com.leal.cipm_testing.components.VideoPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_video_player"
+                android:layout_weight="1" />
         </LinearLayout>
 
+    </LinearLayout>
+    <!--BTNS OPC-->
+    <LinearLayout
+        android:id="@+id/btn_opc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/graybg"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

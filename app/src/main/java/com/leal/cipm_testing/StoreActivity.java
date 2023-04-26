@@ -45,8 +45,6 @@ public class StoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
-        b= (LinearLayout) findViewById(R.id.playbuybtn);
-        vv= (VideoView) findViewById(R.id.buyvid);
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
 
         billingClient = BillingClient.newBuilder(this)
@@ -156,19 +154,6 @@ public class StoreActivity extends AppCompatActivity {
         Log.d("TAG", "Purchase OrderID: " + purchases.getOrderId());
     }
 
-    public void showvid(View view){
-        Toast.makeText(this, "Video tarda unos segundos", Toast.LENGTH_SHORT).show();
-
-        vv.setVisibility(View.VISIBLE);
-        b.setVisibility(View.GONE);
-
-        Uri uri = Uri.parse("https://adrianlealcaldera.com/premium.mp4");
-        vv.setVideoURI(uri);
-        vv.setMediaController(new MediaController(this));
-        vv.requestFocus();
-        vv.start();
-
-    }
 
     protected void onResume() {
         super.onResume();

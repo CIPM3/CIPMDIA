@@ -669,6 +669,24 @@ public class VideoPlayer extends Fragment {
             }
         }
 
+        if (currenttxt.contains("Transicion_nuevo")) {
+            switch (selection) {
+                case "Tutorial":
+                    ShowVideo("https://adrianlealcaldera.com/app%20transici%C3%B3n.mp4");
+                    break;
+                case "Transiciones":
+                    ShowVideo("https://adrianlealcaldera.com/transiciones.mp4");
+                    break;
+                default:
+                    ShowVideo("https://adrianlealcaldera.com/transiciones.mp4");
+                    break;
+            }
+        }
+
+        if (currenttxt.contains("StoreActivity")) {
+            ShowVideo("https://adrianlealcaldera.com/premium.mp4");
+        }
+
     }
     public void ShowVideo(String url){
 
