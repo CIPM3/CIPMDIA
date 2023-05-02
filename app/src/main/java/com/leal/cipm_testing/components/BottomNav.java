@@ -16,13 +16,14 @@ import androidx.fragment.app.Fragment;
 
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.StoreActivity;
 import com.leal.cipm_testing.chat_maestro;
 import com.leal.cipm_testing.profile;
 import com.leal.cipm_testing.test_student;
 
 public class BottomNav extends Fragment {
 
-    LinearLayout bgMain,bgTest,bgChat,bgProfile;
+    LinearLayout bgMain,bgTest,bgChat,bgProfile,bgPremium;
     public BottomNav(){
 
     }
@@ -36,10 +37,12 @@ public class BottomNav extends Fragment {
         LinearLayout btn_chat_maestro = view.findViewById(R.id.btn_chat_maestro);
         LinearLayout btn_profile = view.findViewById(R.id.btn_profile);
         LinearLayout btn_test_bottom = view.findViewById(R.id.btn_test_bottom);
+        LinearLayout btn_premium_bottom = view.findViewById(R.id.btn_premium_bottom);
         bgMain = view.findViewById(R.id.bgMain);
         bgTest = view.findViewById(R.id.bgTest);
         bgChat = view.findViewById(R.id.bgChat);
         bgProfile = view.findViewById(R.id.bgProfile);
+        bgPremium = view.findViewById(R.id.bgPremium);
 
         btn_main.setOnClickListener(v -> {
             Intent intento = new Intent(getContext(), MainActivity.class);
@@ -58,6 +61,11 @@ public class BottomNav extends Fragment {
 
         btn_profile.setOnClickListener(v -> {
             Intent intento = new Intent(getContext(), profile.class);
+            startActivity(intento);
+        });
+
+        bgPremium.setOnClickListener(v -> {
+            Intent intento = new Intent(getContext(), StoreActivity.class);
             startActivity(intento);
         });
 
@@ -92,6 +100,10 @@ public class BottomNav extends Fragment {
 
         if(currenttxt.contains("profile")){
             bgProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+        }
+
+        if (currenttxt.contains("StoreActivity")) {
+            bgPremium.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#F8D22F")));
         }
 
     };

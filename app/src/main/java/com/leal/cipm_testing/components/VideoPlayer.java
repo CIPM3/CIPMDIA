@@ -27,6 +27,8 @@ public class VideoPlayer extends Fragment {
     private String selection;
     boolean explanation;
 
+    int start,stop;
+
     public VideoPlayer() {
         // Required empty public constructor
     }
@@ -39,6 +41,8 @@ public class VideoPlayer extends Fragment {
         if (args != null) {
             selection = args.getString("tema");
             explanation = args.getBoolean("explicacion");
+            start = args.getInt("inicio");
+            stop = args.getInt("final");
         }
     }
 
@@ -54,6 +58,8 @@ public class VideoPlayer extends Fragment {
         video_lay = view.findViewById(R.id.video_lay);
         video_player = view.findViewById(R.id.video_player);
         loadingVideo = view.findViewById(R.id.loadingVideo);
+
+
 
         video_lay.setOnClickListener(v -> {
             SelectUrl();
@@ -689,7 +695,7 @@ public class VideoPlayer extends Fragment {
 
     }
     public void ShowVideo(String url){
-
+        String currenttxt = SaberDondeEstoy();
         video_lay.setVisibility(View.GONE);
         video_player.setVisibility(View.VISIBLE);
 
@@ -706,9 +712,15 @@ public class VideoPlayer extends Fragment {
             video_player.start();
             if (video_player.isPlaying()) {
                 loadingVideo.setVisibility(View.GONE);
+                if (currenttxt.contains("Cultura")) {
+                    if(explanation){
+                        video_player.seekTo(start);
+                    }
+                }
             } else {
                 loadingVideo.setVisibility(View.VISIBLE);
             }
+            //FALTA EL METODO QUE LOCALICE EL FINAL
         });
 
 

@@ -87,7 +87,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStart Exp
                             44000,
                             //timeStop Exp
-                            509000,
+                            50900,
                     },
                     //"Thought you was on vacation"
                     {
@@ -1826,6 +1826,8 @@ public class Cultura2023 extends AppCompatActivity{
         Bundle args = new Bundle();
         args.putString("tema", selection);
         args.putBoolean("explicacion", explanation);
+        args.putInt("inicio", (int) KeyWordsObject[posSele][posKeyword][3]);
+        args.putInt("final", (int) KeyWordsObject[posSele][posKeyword][4]);
         video_player.setArguments(args);
 
         getSupportFragmentManager()
@@ -2106,9 +2108,7 @@ public class Cultura2023 extends AppCompatActivity{
                 Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
                 posKeyword++;
                 intentos = 0;
-
                 setKeywordAndPosition();
-
             }else{
                 SpannableString ss= new SpannableString(keyWord);
                 ClickableSpan txtone;
