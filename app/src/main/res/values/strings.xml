@@ -26,7 +26,7 @@
     </string-array>
     <string-array name="structures">
         <item>Tutorial</item>
-<!--        <item>Prueba</item>-->
+        <!--        <item>Prueba</item>-->
 
         <item>Present Simple</item>
         <item>Present Continuous</item>
@@ -106,7 +106,7 @@
         <item>Question Structure</item>
         <item>Question Structure Modals</item>
 
-<!--        <item>Feel Like Simple</item>-->
+        <!--        <item>Feel Like Simple</item>-->
         <item>Able To</item>
         <item>Phrasal Verbs</item>
         <item>Reported Speech</item>

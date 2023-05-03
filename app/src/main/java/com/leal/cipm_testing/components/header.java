@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.leal.cipm_testing.Cultura2023;
@@ -20,7 +21,7 @@ import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
 
 public class header extends Fragment {
-    EditText editText;
+    TextView editText;
     String Screen;
 
     public header() {

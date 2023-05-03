@@ -33,7 +33,7 @@
             android:layout_weight="0.4"
             >
 
-            <EditText
+            <TextView
                 android:id="@+id/txtHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
