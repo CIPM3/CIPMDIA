@@ -84,10 +84,8 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             26000,
-                            //timeStart Exp
-                            44000,
-                            //timeStop Exp
-                            50900,
+                            //URL EXP
+                            "https://media.istockphoto.com/id/1350173565/es/v%C3%ADdeo/empresario-dando-un-paso-adelante.mp4?s=mp4-640x640-is&k=20&c=eIZb2xFLcb1k2yKzhOthbn3n09p70Faj_5UPkgKqdPA="
                     },
                     //"Thought you was on vacation"
                     {
@@ -97,11 +95,8 @@ public class Cultura2023 extends AppCompatActivity{
                             36000,
                             //timeStop
                             38000,
-                            //timeStart Exp
-                            373000,
-                            //timeStop Exp
-                            443000,
-
+                            //URL EXP
+                            "https://media.istockphoto.com/id/1281599785/es/v%C3%ADdeo/empresario-frente-al-laberinto-y-camino-abierto-concepto-de-soluci%C3%B3n-de-negocio-animaci%C3%B3n-4k.mp4?s=mp4-640x640-is&k=20&c=_T_NtE7PeDRIVTv_n5LJ2uKVvfejS-qKs8A2zi53zuI="
                     },
                     //"How peanut working out"
                     {
@@ -111,10 +106,8 @@ public class Cultura2023 extends AppCompatActivity{
                             48000,
                             //timeStop
                             50000,
-                            //timeStart Exp
-                            332000,
-                            //timeStop Exp
-                            372000,
+                            //URL EXP
+                            "https://media.istockphoto.com/id/473098097/es/v%C3%ADdeo/hd-super-c%C3%A1mara-lenta-aventureros-navegar-por-los-r%C3%A1pidos.mp4?s=mp4-640x640-is&k=20&c=KRmIPMbQS7bH42znS_5KnsY6KWQQq_Yl4EzZijYDClo="
                     },
                     //"I got him in check"
                     {
@@ -1826,8 +1819,7 @@ public class Cultura2023 extends AppCompatActivity{
         Bundle args = new Bundle();
         args.putString("tema", selection);
         args.putBoolean("explicacion", explanation);
-        args.putInt("inicio", (int) KeyWordsObject[posSele][posKeyword][3]);
-        args.putInt("final", (int) KeyWordsObject[posSele][posKeyword][4]);
+        args.putString("video", (String) KeyWordsObject[posSele][posKeyword][3]);
         video_player.setArguments(args);
 
         getSupportFragmentManager()
@@ -1874,19 +1866,22 @@ public class Cultura2023 extends AppCompatActivity{
 
         if(explanation == true & clipMuestra == false){
             text_exp.setText("Escucha la explicacion de la palabra clave a encontrar. Cuando lo hagas haz click en encontrar palabra clave");
+            lay_btn_salt.setVisibility(View.VISIBLE);
+            lay_key_word.setVisibility(View.GONE);
             lay_btn_salt.setOnClickListener(view -> {
                 explanation = false;
                 clipMuestra = false;
-                lay_btn_salt.setVisibility(View.GONE);
-                lay_btn_get.setVisibility(View.VISIBLE);
-                lay_key_word.setVisibility(View.VISIBLE);
                 setKeywordAndPosition();
                 saltarExp(explanation);
             });
         }
 
         if(explanation == false & clipMuestra == false){
+            lay_btn_salt.setVisibility(View.GONE);
+            lay_btn_get.setVisibility(View.VISIBLE);
+            lay_key_word.setVisibility(View.VISIBLE);
             text_exp.setText("Pon atencion al clip a continuacion y cuando escuches la palabra clave haz click en get");
+
         }
     }
 
@@ -2108,6 +2103,8 @@ public class Cultura2023 extends AppCompatActivity{
                 Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
                 posKeyword++;
                 intentos = 0;
+                explanation = true;
+                saltarExp(explanation);
                 setKeywordAndPosition();
             }else{
                 SpannableString ss= new SpannableString(keyWord);

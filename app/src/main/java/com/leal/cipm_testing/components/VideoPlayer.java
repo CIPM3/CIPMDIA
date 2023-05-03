@@ -1,6 +1,7 @@
 package com.leal.cipm_testing.components;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -16,7 +17,6 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.availability_nuevo;
 
 public class VideoPlayer extends Fragment {
     LinearLayout video_lay,loadingVideo;
@@ -24,10 +24,8 @@ public class VideoPlayer extends Fragment {
 
     //URL DE PRUEBA ESPERANDO QUE FUNCIONEN LOS VIDEOS DEL SERVIDOR
     String urlPrueba = "https://media.istockphoto.com/id/1350173565/es/v%C3%ADdeo/empresario-dando-un-paso-adelante.mp4?s=mp4-640x640-is&k=20&c=eIZb2xFLcb1k2yKzhOthbn3n09p70Faj_5UPkgKqdPA=";
-    private String selection;
+    private String selection,video;
     boolean explanation;
-
-    int start,stop;
 
     public VideoPlayer() {
         // Required empty public constructor
@@ -41,8 +39,7 @@ public class VideoPlayer extends Fragment {
         if (args != null) {
             selection = args.getString("tema");
             explanation = args.getBoolean("explicacion");
-            start = args.getInt("inicio");
-            stop = args.getInt("final");
+            video = args.getString("video");
         }
     }
 
@@ -78,7 +75,7 @@ public class VideoPlayer extends Fragment {
                     break;
                 case "Moonlight":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/moonlightexp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/moonlightclip.mp4");
                     }
@@ -695,7 +692,6 @@ public class VideoPlayer extends Fragment {
 
     }
     public void ShowVideo(String url){
-        String currenttxt = SaberDondeEstoy();
         video_lay.setVisibility(View.GONE);
         video_player.setVisibility(View.VISIBLE);
 
@@ -712,15 +708,9 @@ public class VideoPlayer extends Fragment {
             video_player.start();
             if (video_player.isPlaying()) {
                 loadingVideo.setVisibility(View.GONE);
-                if (currenttxt.contains("Cultura")) {
-                    if(explanation){
-                        video_player.seekTo(start);
-                    }
-                }
             } else {
                 loadingVideo.setVisibility(View.VISIBLE);
             }
-            //FALTA EL METODO QUE LOCALICE EL FINAL
         });
 
 
@@ -732,6 +722,8 @@ public class VideoPlayer extends Fragment {
                 ResetVideo();
             }
         });
+
+
     }
     public void ResetVideo(){
         video_lay.setVisibility(View.VISIBLE);
@@ -746,5 +738,6 @@ public class VideoPlayer extends Fragment {
         txtActivity = txtActivitySinEliminar.replace(cadenaEliminar,"");
         return txtActivity;
     }
+
 
 }
