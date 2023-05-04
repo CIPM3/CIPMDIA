@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConInt2023"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="85dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <!--Header-->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:background="@color/graybg"
+                >
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView"
+                    android:name="com.leal.cipm_testing.components.header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_header"
+                    />
+            </LinearLayout>
+
+            <!--Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:onClick="activaSpinner"
+                >
+
+
+                <!--Spinner-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    >
+                    <!--text-->
+                    <TextView
+                        android:id="@+id/textspin1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del video"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinuno"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:spinnerMode="dialog"
+                        android:theme="@style/MySpinnerStyle"
+                        />
+                    <LinearLayout
+                        android:layout_gravity="end|center"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_grupo_select"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Video View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView5"
+                    android:name="com.leal.cipm_testing.components.VideoPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_video_player"
+                    />
+            </LinearLayout>
+
+            <!--texto-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="30dp">
+
+                <!--Texto-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Practice it"
+                        android:textColor="@color/azul"
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="85dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_rect_ngulo_selecline">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mide tu nivel de Comprehension"
+                        android:textColor="@color/azul"
+                        android:textAlignment="textEnd"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--TEXT -->
+            <TextView
+                android:id="@+id/spanishsentence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Escucha con atención y escribe lo que escuchas."
+                android:textColor="@color/black"
+                android:textSize="6.5pt" />
+
+            <!--FRASES FIELD-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <!--Input Eng-->
+                    <LinearLayout
+                        android:id="@+id/input_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="5dp"
+                        android:visibility="visible"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="?"
+                                android:textAlignment="center"
+                                android:textColor="@color/azul"
+                                android:textSize="22dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <EditText
+                            android:id="@+id/answerinput1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="escribe tu respuesta o presiona microfono y di tu respuesta"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="15dp"
+                            android:layout_weight="1"
+                            />
+                        <!--Validacion-->
+                        <LinearLayout
+                            android:id="@+id/opclay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+                            <LinearLayout
+                                android:id="@+id/respdecir"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/ic_microfono"
+                                android:visibility="visible"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5dp"
+                                >
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/resplay"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:background="@drawable/ic_controlar"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--EngCheck-->
+                    <LinearLayout
+                        android:id="@+id/answer_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="30dp"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Respuesta correcta es:"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:paddingLeft="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="5"
+                            >
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="10"
+                                >
+                                <TextView
+                                    android:id="@+id/txteng"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="eng"
+                                    android:textColor="@color/azul"
+                                    android:textSize="14dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/txteng2"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="eng"
+                                    android:textColor="@color/azul"
+                                    android:textSize="14dp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/respescu2"
+                                android:layout_width="8dp"
+                                android:layout_height="15dp"
+                                android:layout_margin="15dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_volumen"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                >
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--BTN VER EXPLICACION-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginVertical="2dp"
+                            android:gravity="center"
+                            android:background="@drawable/borde_azul"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ver explicacion"
+                                android:textColor="@color/azul"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+    <!--BTNS OPC-->
+    <LinearLayout
+        android:id="@+id/btn_opc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/graybg"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_bottom_nav"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

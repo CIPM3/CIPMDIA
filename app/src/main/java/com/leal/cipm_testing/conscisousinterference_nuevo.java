@@ -3,8 +3,6 @@ package com.leal.cipm_testing;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -33,6 +31,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
 
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
     LinearLayout respescu_1,respescu_2,respescu_3,respescu_4,respescu_5;
     EditText eng_1,eng_2,eng_3,eng_4,eng_5;
     String selection;
-    TextView txt1;
+    TextView textspin1;
     Spinner spin;
     EditText ai1, ai2, ai3, ai4, ai5;
     String r1, r2, r3, r4, r5;
@@ -85,8 +84,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         setContentView(R.layout.activity_conscisousinterference_nuevo);
         vv = findViewById(R.id.vv);
         vf = findViewById(R.id.vf);
-        spin = findViewById(R.id.spin1);
-        txt1 = findViewById(R.id.txt1);
+        spin = findViewById(R.id.spinuno);
+        textspin1 = findViewById(R.id.textspin1);
         ai1 = findViewById(R.id.ai1);
         ai2 = findViewById(R.id.ai2);
         ai3 = findViewById(R.id.ai3);
@@ -159,7 +158,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                            textspin1.setText(selection);
 
                             vf.setVisibility(View.VISIBLE);
                             vv.setVisibility(View.GONE);
@@ -197,7 +196,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
-                                    txt1.setText(selection);
+                                    textspin1.setText(selection);
 
                                     vf.setVisibility(View.VISIBLE);
                                     vv.setVisibility(View.GONE);
@@ -231,7 +230,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                            textspin1.setText(selection);
 
                             vf.setVisibility(View.VISIBLE);
                             vv.setVisibility(View.GONE);
@@ -263,7 +262,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                            textspin1.setText(selection);
 
                             vf.setVisibility(View.VISIBLE);
                             vv.setVisibility(View.GONE);
@@ -288,67 +287,7 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                 }
             }
         }else {
-            if(prefs.getPremium()==1){
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        txt1.setText(selection);
-
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
-
-                        limpiar_inputs();
-                        set_ans();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        if(i==tts.SUCCESS){
-                            int lang = tts.setLanguage(Locale.ENGLISH);
-                        }
-                    }
-                });
-            } else if(prefs.getPremium()==0){
-                ArrayAdapter<CharSequence > adapter = ArrayAdapter.createFromResource(this, R.array.rachel ,android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spin.setAdapter(adapter);
-                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        selection = spin.getSelectedItem().toString();
-                        txt1.setText(selection);
-
-                        vf.setVisibility(View.VISIBLE);
-                        vv.setVisibility(View.GONE);
-
-                        limpiar_inputs();
-                        set_ans();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        if(i==tts.SUCCESS){
-                            int lang = tts.setLanguage(Locale.ENGLISH);
-                        }
-                    }
-                });
-            }
+            checkPremiun();
         }
 
     }
@@ -415,6 +354,89 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
             }
         }
     }
+
+    //EMPIEZA ACTIVIDAD
+
+    //EVALUA SI EL USUARIO ES PREMIUM O NO
+    public void checkPremiun(){
+        //USUARIO PREMIUM
+        if(prefs.getPremium()==1){
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selection = spin.getSelectedItem().toString();
+                    textspin1.setText(selection);
+
+                    spinnerSelected();
+                    limpiar_inputs();
+                    set_ans();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if(i==tts.SUCCESS){
+                        int lang = tts.setLanguage(Locale.ENGLISH);
+                    }
+                }
+            });
+            //USUARIO BASICO
+        } else if(prefs.getPremium()==0){
+            ArrayAdapter<CharSequence > adapter = ArrayAdapter.createFromResource(this, R.array.rachel ,android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin.setAdapter(adapter);
+            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    selection = spin.getSelectedItem().toString();
+                    textspin1.setText(selection);
+
+                    spinnerSelected();
+                    limpiar_inputs();
+                    set_ans();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if(i==tts.SUCCESS){
+                        int lang = tts.setLanguage(Locale.ENGLISH);
+                    }
+                }
+            });
+        }
+    }
+
+    //EVALUA QUE FUE SELECCIONADO
+    public void spinnerSelected(){
+        selection = spin.getSelectedItem().toString();
+        textspin1.setText(selection);
+
+        if(selection.equals("Tutorial")){
+            Toast.makeText(this, "ESTAS EN TUTORIAL", Toast.LENGTH_SHORT).show();
+            /*text_exp.setText("Seleccione una estructura para continuar con la practica");
+            lay_btn_empezar.setVisibility(View.GONE);
+            txt_exp_est.setVisibility(View.VISIBLE);*/
+        }else {
+            Toast.makeText(this, "EMPIEZA CONS", Toast.LENGTH_SHORT).show();
+            /*lay_btn_empezar.setVisibility(View.VISIBLE);
+            videoPlayer();*/
+        }
+    }
+
     public void checkA(View view) {
         switch (control){
             case 1:
@@ -659,6 +681,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
         }
     }
+
+    //QUEDE AQUI
     public void set_ans(){
 
         switch (selection){
@@ -1277,6 +1301,12 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
         lay_resp_3.setVisibility(View.GONE);
         lay_resp_4.setVisibility(View.GONE);
         lay_resp_5.setVisibility(View.GONE);
+    }
+
+    //FUNC
+    public void activaSpinner(View v){
+        Spinner mySpinner = findViewById(R.id.spinuno);
+        mySpinner.performClick();
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

@@ -74,7 +74,7 @@ public class header extends Fragment {
             Screen = "Spanish Interference";
         }
 
-        if (currenttxt.contains("conscisousinterference")) {
+        if (currenttxt.contains("ConInt")) {
             // Cambiar el texto del EditText
             editText.setText("Conscious Interference");
             Screen = "Conscious Interference";

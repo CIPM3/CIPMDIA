@@ -161,7 +161,7 @@ public class spa_int_nuevo extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
-        vv = (VideoView) findViewById(R.id.videoView1);
+        //vv = (VideoView) findViewById(R.id.videoView1);
         vf = (LinearLayout) findViewById(R.id.vf);
         prefs = new Prefs(this);
         PremiumAndArrayControler();

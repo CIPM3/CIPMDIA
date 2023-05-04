@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".ConInt2023"
+            android:exported="false" />
+        <activity
             android:name=".Cultura2023"
             android:exported="false" />
         <activity

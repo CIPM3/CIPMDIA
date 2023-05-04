@@ -281,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void chose_conscis(View vista) {
-        Intent intento = new Intent(this, conscisousinterference_nuevo.class);
+        Intent intento = new Intent(this, ConInt2023.class);
         startActivity(intento);
        /* if(prefs.getPremium()==1){
             Intent intento = new Intent(this, conscisousinterference_nuevo.class);

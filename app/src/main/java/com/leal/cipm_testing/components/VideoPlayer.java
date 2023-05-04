@@ -580,6 +580,68 @@ public class VideoPlayer extends Fragment {
             }
         }
 
+        if(currenttxt.contains("ConInt2023")){
+            switch (selection) {
+
+                case "Tutorial":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/intconttut.mp4");
+                    }
+                    break;
+                case "Steve Jobs 1":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/billburrstevejobsclip1.mp4");
+                    }
+                    break;
+
+                //PD
+                case "Kot Fishing 1":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("http://adrianlealcaldera.com/kotfishing1Clip.mp4");
+                    }
+                    break;
+
+                case "Kot Fishing 2":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/kotfishing2Clip.mp4");
+                    }
+                    break;
+
+                //LUIS
+                case "Helicoptero 1":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/Helicoptero1Clip.mp4");
+                    }
+                    break;
+
+                case "Helicoptero 2":
+                    // video completo con los 5 diferentes temas
+                    if(explanation){
+
+                    }else{
+                        ShowVideo("https://adrianlealcaldera.com/Helicoptero2Clip.mp4");
+                    }
+                    break;
+
+            }
+
+        }
+
         if(currenttxt.contains("vocabulary_nuevo")){
             switch (selection) {
                 case "Tutorial":
