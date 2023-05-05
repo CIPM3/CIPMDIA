@@ -242,7 +242,6 @@ public class Culturalphrases extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(Culturalphrases.this, adapter.getItem(i), Toast.LENGTH_SHORT).show();
                 AlertDialog alertDialog = new AlertDialog.Builder(Culturalphrases.this)
 //set icon
                         .setIcon(android.R.drawable.ic_dialog_alert)

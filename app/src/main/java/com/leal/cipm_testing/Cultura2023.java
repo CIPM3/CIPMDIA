@@ -85,7 +85,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             26000,
                             //URL EXP
-                            "https://media.istockphoto.com/id/1350173565/es/v%C3%ADdeo/empresario-dando-un-paso-adelante.mp4?s=mp4-640x640-is&k=20&c=eIZb2xFLcb1k2yKzhOthbn3n09p70Faj_5UPkgKqdPA="
+                            "https://adrianlealcaldera.com/Ain't%20no%20refund%20-%20Moonlight.mp4"
                     },
                     //"Thought you was on vacation"
                     {
@@ -96,7 +96,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             38000,
                             //URL EXP
-                            "https://media.istockphoto.com/id/1281599785/es/v%C3%ADdeo/empresario-frente-al-laberinto-y-camino-abierto-concepto-de-soluci%C3%B3n-de-negocio-animaci%C3%B3n-4k.mp4?s=mp4-640x640-is&k=20&c=_T_NtE7PeDRIVTv_n5LJ2uKVvfejS-qKs8A2zi53zuI="
+                            "https://adrianlealcaldera.com/Thought%20you%20was%20on%20vacation%20-%20Moonlight.mp4"
                     },
                     //"How peanut working out"
                     {
@@ -107,7 +107,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             50000,
                             //URL EXP
-                            "https://media.istockphoto.com/id/473098097/es/v%C3%ADdeo/hd-super-c%C3%A1mara-lenta-aventureros-navegar-por-los-r%C3%A1pidos.mp4?s=mp4-640x640-is&k=20&c=KRmIPMbQS7bH42znS_5KnsY6KWQQq_Yl4EzZijYDClo="
+                            "https://adrianlealcaldera.com/How%20peanut%20working%20out%20-%20Moonlight.mp4"
                     },
                     //"I got him in check"
                     {
@@ -117,10 +117,8 @@ public class Cultura2023 extends AppCompatActivity{
                             50000,
                             //timeStop
                             52000,
-                            //timeStart Exp
-                            28600,
-                            //timeStop Exp
-                            332000
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20got%20him%20in%20check%20-%20Moonlight.mp4"
                     },
                     //"I ain´t go let that go down"
                     {
@@ -135,10 +133,8 @@ public class Cultura2023 extends AppCompatActivity{
                             70000,
                             //timeStop
                             73000,*/
-                            //timeStart Exp
-                            227000,
-                            //timeStop Exp
-                            286000
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20ain%C2%B4t%20go%20let%20that%20go%20down%20-%20Moonlight.mp4"
                     },
                     //"What´s up"
                     {
@@ -148,10 +144,8 @@ public class Cultura2023 extends AppCompatActivity{
                             93000,
                             //timeStop
                             95600,
-                            //timeStart Exp
-                            510000,
-                            //timeStop Exp
-                            524000
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%C2%B4s%20up%20-%20Moonlight.mp4"
                     },
                     //"It´s all good"
                     {
@@ -166,10 +160,8 @@ public class Cultura2023 extends AppCompatActivity{
                             103000,
                             //timeStop
                             105000,*/
-                            //timeStart Exp
-                            170000,
-                            //timeStop Exp
-                            200000
+                            //URL EXP
+                            "https://adrianlealcaldera.com/It%C2%B4s%20all%20good%20-%20Moonlight.mp4"
                     },
                     //"What are you doing"
                     {
@@ -179,10 +171,8 @@ public class Cultura2023 extends AppCompatActivity{
                             97000,
                             //timeStop
                             99000,
-                            //timeStart Exp
-                            125000,
-                            //timeStop Exp
-                            145000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%20are%20you%20doing%20-%20Moonlight.mp4"
                     },
                     //"What is wrong with you"
                     {
@@ -192,10 +182,8 @@ public class Cultura2023 extends AppCompatActivity{
                             107000,
                             //timeStop
                             108000,
-                            //timeStart Exp
-                            201000,
-                            //timeStop Exp
-                            226000
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%20is%20wrong%20with%20you%20-%20Moonlight.mp4"
                     },
                     //"Get the fuck out of here"
                     {
@@ -205,10 +193,8 @@ public class Cultura2023 extends AppCompatActivity{
                             115000,
                             //timeStop
                             116000,
-                            //timeStart Exp
-                            146000,
-                            //timeStop Exp
-                            169000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Get%20the%20fuck%20out%20of%20here%20-%20Moonlight.mp4"
                     },
                     //"Have you ever"
                     {
@@ -218,10 +204,8 @@ public class Cultura2023 extends AppCompatActivity{
                             179000,
                             //timeStop
                             180200,
-                            //timeStart Exp
-                            82000,
-                            //timeStop Exp
-                            124000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Have%20you%20ever%20-%20Moonlight.mp4"
                     }
             },
 
@@ -235,10 +219,8 @@ public class Cultura2023 extends AppCompatActivity{
                             0,
                             //timeStop
                             2000,
-                            //timeStart Exp
-                            39000,
-                            //timeStop Exp
-                            85000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What's%20up%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"No can do"
                     {
@@ -248,10 +230,8 @@ public class Cultura2023 extends AppCompatActivity{
                             5000,
                             //timeStop
                             7000,
-                            //timeStart Exp
-                            86000,
-                            //timeStop Exp
-                            106000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/No%20can%20do%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"When i feel like it"
                     {
@@ -261,10 +241,8 @@ public class Cultura2023 extends AppCompatActivity{
                             16000,
                             //timeStop
                             17500,
-                            //timeStart Exp
-                            107000,
-                            //timeStop Exp
-                            135000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/When%20i%20feel%20like%20it%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"You need to chill out"
                     {
@@ -274,10 +252,8 @@ public class Cultura2023 extends AppCompatActivity{
                             18000,
                             //timeStop
                             20000,
-                            //timeStart Exp
-                            136000,
-                            //timeStop Exp
-                            192000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20need%20to%20chill%20out%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"Tryna - (trying to)"
                     {
@@ -287,10 +263,8 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             25000,
-                            //timeStart Exp
-                            193000,
-                            //timeStop Exp
-                            213000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Tryna%20-%20(trying%20to)%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"You know what"
                     {
@@ -300,10 +274,8 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             25000,
-                            //timeStart Exp
-                            214000,
-                            //timeStop Exp
-                            237000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20know%20what%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"Hanging out"
                     {
@@ -313,10 +285,8 @@ public class Cultura2023 extends AppCompatActivity{
                             26000,
                             //timeStop
                             28000,
-                            //timeStart Exp
-                            238000,
-                            //timeStop Exp
-                            268000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Hanging%20out%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"You're overthinking it"
                     {
@@ -326,10 +296,8 @@ public class Cultura2023 extends AppCompatActivity{
                             54000,
                             //timeStop
                             58000,
-                            //timeStart Exp
-                            283000,
-                            //timeStop Exp
-                            308000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You're%20overthinking%20it%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"Get your shit together"
                     {
@@ -339,10 +307,8 @@ public class Cultura2023 extends AppCompatActivity{
                             104000,
                             //timeStop
                             106000,
-                            //timeStart Exp
-                            309000,
-                            //timeStop Exp
-                            343000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Get%20your%20shit%20together%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"To be into"
                     {
@@ -352,10 +318,8 @@ public class Cultura2023 extends AppCompatActivity{
                             4000,
                             //timeStop
                             5000,
-                            //timeStart Exp
-                            344000,
-                            //timeStop Exp
-                            391000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/To%20be%20into%20-%20Rick%20and%20Morty.mp4"
                     }
             },
 

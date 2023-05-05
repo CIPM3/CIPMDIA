@@ -83,7 +83,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Rick and Morty":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/rickandmortyexp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/riackandmortyclip.mp4");
                     }
