@@ -557,6 +557,8 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
 
     }
 
+
+    //OTHER FUNCS
     public void condicionParaPasarEs(int condicionNumber){
         if(CounterToSubtractSelection==condicionNumber){
             DialogueBox("Cambiar de Video y seguir a siguiente clase?");

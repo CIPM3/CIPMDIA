@@ -1,5 +1,6 @@
 package com.leal.cipm_testing;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,13 +8,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,9 +36,12 @@ import java.util.Locale;
 public class ConInt2023 extends AppCompatActivity {
 
     String selection;
-    TextView textspin1;
+    TextView textspin1,txteng,spanishsentence,txt_salt_btn;
     Spinner spin;
-    boolean explanation;
+    boolean explanation,clipMuestra;
+
+    LinearLayout btn_salt_exp,btn_check_ans,btn_show_ans;
+    LinearLayout btn_ver_exp,answer_lay,input_lay;
 
     TextToSpeech tts;
     int control;
@@ -57,6 +67,261 @@ public class ConInt2023 extends AppCompatActivity {
             isCustomPlan,isListeningPlan,isAdvancedPlan,AdvancedPlan,AdvancedPlanFromDb;
     Prefs prefs;
 
+    int posSele = 0;
+    int posKeyWord = 0;
+
+    String Rachel [][][]={
+            //Steve Jobs 1
+            {
+                    {
+                            //RESPUESTA 1
+                            "actually nerd jesus died in the last year right steve jobs",
+                            //URL
+                            "http://adrianlealcaldera.com/bb1.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb1.mp4"
+                    },
+                    {
+                            //RESPUESTA 2
+                            "yeah he died right i know i know a lot of nerds here tonight",
+                            //URL
+                            "http://adrianlealcaldera.com/bb2.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb2.mp4"
+                    },
+                    {
+                            //RESPUESTA 3
+                            "i know you sad",
+                            //URL
+                            "http://adrianlealcaldera.com/bb3.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb3.mp4"
+                    },
+                    {
+                            //RESPUESTA 4
+                            "I didn't get it",
+                            //URL
+                            "http://adrianlealcaldera.com/bb4.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb4.mp4"
+                    },
+                    {
+                            //RESPUESTA 5
+                            "I didn't get the big deal they made about that guy",
+                            //URL
+                            "http://adrianlealcaldera.com/bb5.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb5.mp4"
+                    },
+                    {
+                        "",
+                            ""
+                    }
+            },
+            //Steve Jobs 2
+            {
+                    {
+                            //RESPUESTA 1
+                            "Prueba"
+                            //URL
+
+                    },
+                    {
+                            //RESPUESTA 2
+                            "Prueba 2"
+                            //URL
+
+                    },
+                    {
+                            //RESPUESTA 3
+                            "Prueba 3"
+                            //URL
+
+                    },
+                    {
+                            //RESPUESTA 4
+                            "Prueba 4"
+                            //URL
+
+                    },
+                    {
+                            //RESPUESTA 5
+                            "Prueba 5"
+                            //URL
+
+                    },
+                    {
+                            "",
+                            ""
+                    }
+            },
+            //Kot Fishing 1
+            {
+                    {
+                            //RESPUESTA 1
+                            "Come on frank fish or get off the pot",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing1Clip1.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing1Exp1.mp4"
+                    },
+                    {
+                            //RESPUESTA 2
+                            "just a second how the heck does jack fish with this stuff",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing1Clip2.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing1Exp2.mp4"
+                    },
+                    {
+                            //RESPUESTA 3
+                            "i like beer don't you like beek i mean i love beer",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing1Clip3.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing1Exp3.mp4"
+                    },
+                    {
+                            //RESPUESTA 4
+                            "I just got one sweet jean vicent, i'm back",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing1Clip4.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing1Exp4.mp4"
+                    },
+                    {
+                            //RESPUESTA 5
+                            "that was quick talking about hank's the man damn go fishing magician",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing1Clip5.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing1Exp5.mp4"
+                    },
+                    {
+                            "",
+                            ""
+                    }
+            },
+            //Kot Fishing 2
+            {
+                    {
+                            //RESPUESTA 1
+                            "looks like they're hungry for worms today pass me one, will you hank",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing2Clip1.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing2exp1.mp4"
+                    },
+                    {
+                            //RESPUESTA 2
+                            "what's the matter batteries go dead on your electric spinner",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing2Clip2.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing2exp2.mp4"
+                    },
+                    {
+                            //RESPUESTA 3
+                            "Wo hank what you got there, blood dough balls",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing2Clip3.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing2exp3.mp4"
+                    },
+                    {
+                            //RESPUESTA 4
+                            "hank only fishes with worms why anything else would be cheating",
+                            //URL
+                            "https://adrianlealcaldera.com/KothFishing2Clip4.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/kotfishing2exp4.mp4"
+                    },
+                    {
+                            "",
+                            ""
+                    }
+            },
+            //Helicoptero 1
+            {
+                    {
+                            //RESPUESTA 1
+                            "I saw this story down in Orange County, Orange County, California in the sky. This guy gave helicopter your for 30 years, 30 years without incident.",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero1Clip1.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero1Exp1.mp4"
+                    },
+                    {
+                            //RESPUESTA 2
+                            "Hands the business off to his son, the American dream. “I built it up for 30 years. Here you go, son. Make the family and the family name proud.” ”All right, Dad, I love you.”",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero1Clip2.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero1Exp2.mp4"
+                    },
+                    {
+                            //RESPUESTA 3
+                            "All right? This poor kid, five days in, he’s supposed to give a tour to a couple, only the dude shows up.",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero1Clip3.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero1Exp3.mp4"
+                    },
+                    {
+                            //RESPUESTA 4
+                            "The kid thought it was weird, but he’s like, “I need the money. I gotta give him a tour.” Right? So he takes this guy up. Ten minutes into the tour, the dude fucking jumped out.",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero1Clip4.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero1Exp4.mp4"
+                    },
+                    {
+                            "",
+                            ""
+                    }
+            },
+            //Helicoptero 2
+            {
+                    {
+                            //RESPUESTA 1
+                            "Yeah, five days in. Five days in from the balloons and the cake. “We love you, son. Keep the family tree going. The traditional line.”",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero2Clip1.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero2Exp1.mp4"
+                    },
+                    {
+                            //RESPUESTA 2
+                            "Five fucking days later, this kid, he probably barely had the speech down. Just sitting there, flying the helicopter.",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero2Clip2.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero2Exp2.mp4"
+                    },
+                    {
+                            //RESPUESTA 3
+                            "All right, if you look out the left side of the aircraft, that’s Orange County. There’s over 27 miles of beaches there. Put your seatbelt back on, 27 miles of beaches.",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero2Clip3.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero2Exp3.mp4"
+                    },
+                    {
+                            //RESPUESTA 4
+                            "Was established as a county in 1903. Sir, please don’t open the door. Sir, what are you doing? Sir, no, no. Don’t",
+                            //URL
+                            "https://adrianlealcaldera.com/Helicoptero2Clip4.mp4",
+                            //EXPLICACION
+                            "https://adrianlealcaldera.com/Helicoptero2Exp4.mp4"
+                    },
+                    {
+                            "",
+                            ""
+                    }
+            }
+
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,8 +329,20 @@ public class ConInt2023 extends AppCompatActivity {
 
         spin = findViewById(R.id.spinuno);
         textspin1 = findViewById(R.id.textspin1);
+        txteng = findViewById(R.id.txteng);
+        txt_salt_btn = findViewById(R.id.txt_salt_btn);
+        spanishsentence = findViewById(R.id.spanishsentence);
+
+        btn_salt_exp = findViewById(R.id.btn_salt_exp);
+        btn_check_ans = findViewById(R.id.btn_check_ans);
+        btn_show_ans = findViewById(R.id.btn_show_ans);
+
+        btn_ver_exp = findViewById(R.id.btn_ver_exp);
+        answer_lay = findViewById(R.id.answer_lay);
+        input_lay = findViewById(R.id.input_lay);
 
         explanation = false;
+        clipMuestra = true;
 
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
@@ -396,7 +673,7 @@ public class ConInt2023 extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("tema", selection);
         args.putBoolean("explicacion", explanation);
-        //args.putString("video", (String) KeyWordsObject[posSele][posKeyword][3]);
+        args.putString("video", (String) Rachel[posSele][posKeyWord][1]);
         video_player.setArguments(args);
 
         getSupportFragmentManager()
@@ -405,18 +682,125 @@ public class ConInt2023 extends AppCompatActivity {
                 .commit();
 
         if(selection.equals("Tutorial")){
-            Toast.makeText(this, "ESTAS EN TUTORIAL", Toast.LENGTH_SHORT).show();
-            /*text_exp.setText("Seleccione una estructura para continuar con la practica");
-            lay_btn_empezar.setVisibility(View.GONE);
-            txt_exp_est.setVisibility(View.VISIBLE);*/
+            spanishsentence.setText("Seleccione una estructura para continuar con la practica");
+            btn_ver_exp.setVisibility(View.GONE);
+            answer_lay.setVisibility(View.GONE);
+            input_lay.setVisibility(View.GONE);
+            btn_salt_exp.setVisibility(View.GONE);
         }else {
-            Toast.makeText(this, "EMPIEZA CONS", Toast.LENGTH_SHORT).show();
-            /*lay_btn_empezar.setVisibility(View.VISIBLE);
-            videoPlayer();*/
+            spanishsentence.setVisibility(View.VISIBLE);
+            btn_ver_exp.setVisibility(View.GONE);
+            answer_lay.setVisibility(View.GONE);
+            input_lay.setVisibility(View.GONE);
+            btn_salt_exp.setVisibility(View.VISIBLE);
+            videoPlayer();
         }
     }
     public void activaSpinner(View v){
         Spinner mySpinner = findViewById(R.id.spinuno);
         mySpinner.performClick();
     }
+
+    public void videoPlayer(){
+        if(explanation == false & clipMuestra == true){
+            spanishsentence.setText("Pon atencion al clip a continuacion y cuando termine haz click en empezar practica.");
+            txt_salt_btn.setText("Empezar Practica");
+            btn_salt_exp.setOnClickListener(view -> {
+                explanation = true;
+                clipMuestra = false;
+                setKeywordAndPosition();
+                saltarExp(explanation);
+            });
+        }
+
+        if(explanation == true & clipMuestra == false){
+            spanishsentence.setText("Pon atencion a la explicacion a continuacion y cuando termine haz click en empezar practica.");
+            btn_salt_exp.setVisibility(View.GONE);
+            input_lay.setVisibility(View.VISIBLE);
+
+            btn_check_ans.setVisibility(View.VISIBLE);
+            btn_show_ans.setVisibility(View.VISIBLE);
+
+            btn_check_ans.setOnClickListener(view -> {
+
+            });
+        }
+    }
+
+    public void verClip(View v){
+        VideoPlayer video_player = new VideoPlayer();
+        Bundle args = new Bundle();
+        args.putString("video", (String) Rachel[posSele][posKeyWord][1]);
+        video_player.setArguments(args);
+        spinnerSelected();
+    }
+
+    //SELECCIONA LA PALABRA A BUSCAR
+    public void setKeywordAndPosition(){
+        spanishsentence.setVisibility(View.VISIBLE);
+        
+        String keyWord;
+        switch (selection){
+            case "Steve Jobs 1":
+                posSele = 0;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+            case "Kot Fishing 1":
+                posSele = 1;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+
+            case "Kot Fishing 2":
+                posSele = 2;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+            case "Helicoptero 1":
+                posSele = 3;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+            case "Helicoptero 2":
+                posSele = 4;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+        }
+    }
+
+    //VALIDACIONES DEL TIEMPO Y SI TERMINO LA LISTA DE PAlABRAS CLAVE
+    public void setKeyWordToCulture(String keyWord){
+
+        int limit = Rachel[posSele].length-1;
+        if(posKeyWord >= limit){
+            Toast.makeText(this, "HAZ COMPLETADO ESTA PRACTICA CONTINUA CON OTRA", Toast.LENGTH_SHORT).show();
+        }else{
+            txteng.setText(keyWord);
+            //CHEQUEAR RESPUESTA
+            posKeyWord++;
+        }
+    }
+
+    public void checkAns(){
+
+    }
+
+    public void saltarExp(Boolean explanation){
+        VideoPlayer video_player = new VideoPlayer();
+        Bundle args = new Bundle();
+        args.putBoolean("explicacion", explanation);
+        video_player.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+
+
+
+        spinnerSelected();
+    }
+
 }
