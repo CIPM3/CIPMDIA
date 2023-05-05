@@ -195,12 +195,13 @@
                         android:orientation="horizontal"
                         android:paddingHorizontal="30dp"
                         android:paddingVertical="5dp"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         >
 
                         <LinearLayout
+                            android:onClick="verClip"
                             android:layout_width="20dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:gravity="center"
                             >
                             <TextView
@@ -266,7 +267,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingHorizontal="30dp"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         android:gravity="center"
                         >
 
@@ -277,54 +278,44 @@
                             android:text="Respuesta correcta es:"
                             android:textColor="@color/black"
                             android:textSize="14dp"
-                            android:paddingLeft="10dp"
+                            android:paddingLeft="5dp"
                             />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
+                            android:gravity="center"
                             android:layout_weight="5"
                             >
+                            <TextView
+                                android:id="@+id/txteng"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="eng"
+                                android:textColor="@color/azul"
+                                android:textSize="14dp"
+                                android:layout_weight="10"
+                                />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
+                                android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:layout_weight="10"
-                                >
-                                <TextView
-                                    android:id="@+id/txteng"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="eng"
-                                    android:textColor="@color/azul"
-                                    android:textSize="14dp"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/txteng2"
-                                    android:visibility="gone"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="eng"
-                                    android:textColor="@color/azul"
-                                    android:textSize="14dp"
-                                    />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/respescu2"
-                                android:layout_width="8dp"
-                                android:layout_height="15dp"
-                                android:layout_margin="15dp"
-                                android:layout_gravity="center"
                                 android:layout_weight="1"
-                                android:background="@drawable/ic_volumen"
-                                android:orientation="horizontal"
-                                android:visibility="visible"
                                 >
+                                <LinearLayout
+                                    android:id="@+id/respescu2"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_margin="15dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_volumen"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    />
                             </LinearLayout>
+
                         </LinearLayout>
 
 
@@ -332,6 +323,7 @@
 
                     <!--BTN VER EXPLICACION-->
                     <LinearLayout
+                        android:id="@+id/btn_ver_exp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="30dp"
@@ -354,8 +346,90 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                </LinearLayout>
+                    <!--btn saltar explicacion-->
+                    <LinearLayout
+                        android:id="@+id/btn_salt_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="30dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        >
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/borde_azul"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:id="@+id/txt_salt_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Saltar Explicacion"
+                                android:textColor="@color/azul"
+                                android:textSize="16dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--btn check o intentar-->
+                    <LinearLayout
+                        android:id="@+id/btn_check_ans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="30dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/borde_azul"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chequea tu respuesta"
+                                android:textColor="@color/azul"
+                                android:textSize="16dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--btn Mostrar Repsuestas-->
+                    <LinearLayout
+                        android:id="@+id/btn_show_ans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="30dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/borde_azul"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mostrar Respuesta"
+                                android:textColor="@color/azul"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
             </ScrollView>
         </LinearLayout>
     </ScrollView>
