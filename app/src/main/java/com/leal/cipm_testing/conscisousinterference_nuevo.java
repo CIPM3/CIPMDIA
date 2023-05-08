@@ -1335,11 +1335,6 @@ public class conscisousinterference_nuevo extends AppCompatActivity {
                             ai5.setText(result.get(0));
                             break;
                     }
-
-                    // checkanswer();
-                    //dificulty2();
-
-
                 }
                 break;
         }

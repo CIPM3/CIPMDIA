@@ -1,12 +1,16 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -30,17 +34,18 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.VideoPlayer;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
 public class ConInt2023 extends AppCompatActivity {
 
     String selection;
-    TextView textspin1,txteng,spanishsentence,txt_salt_btn;
+    TextView textspin1,txteng,spanishsentence,txt_salt_btn,answerinput1;
     Spinner spin;
     boolean explanation,clipMuestra;
 
-    LinearLayout btn_salt_exp,btn_check_ans,btn_show_ans;
+    LinearLayout btn_salt_exp,btn_check_ans,btn_show_ans,input_lay_back;
     LinearLayout btn_ver_exp,answer_lay,input_lay;
 
     TextToSpeech tts;
@@ -336,10 +341,13 @@ public class ConInt2023 extends AppCompatActivity {
         btn_salt_exp = findViewById(R.id.btn_salt_exp);
         btn_check_ans = findViewById(R.id.btn_check_ans);
         btn_show_ans = findViewById(R.id.btn_show_ans);
+        input_lay_back = findViewById(R.id.input_lay_back);
 
         btn_ver_exp = findViewById(R.id.btn_ver_exp);
         answer_lay = findViewById(R.id.answer_lay);
         input_lay = findViewById(R.id.input_lay);
+
+        answerinput1 = findViewById(R.id.answerinput1);
 
         explanation = false;
         clipMuestra = true;
@@ -347,7 +355,6 @@ public class ConInt2023 extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
-
 
         prefs= new Prefs(this);
         PremiumAndArrayControler();
@@ -674,6 +681,10 @@ public class ConInt2023 extends AppCompatActivity {
         args.putString("tema", selection);
         args.putBoolean("explicacion", explanation);
         args.putString("video", (String) Rachel[posSele][posKeyWord][1]);
+        args.putString("videouno", (String) Rachel[posSele][posKeyWord][1]);
+        args.putString("videodos", (String) Rachel[posSele][posKeyWord][2]);
+        args.putBoolean("videoShow", videoShow);
+
         video_player.setArguments(args);
 
         getSupportFragmentManager()
@@ -720,19 +731,39 @@ public class ConInt2023 extends AppCompatActivity {
 
             btn_check_ans.setVisibility(View.VISIBLE);
             btn_show_ans.setVisibility(View.VISIBLE);
-
-            btn_check_ans.setOnClickListener(view -> {
-
-            });
         }
     }
 
-    public void verClip(View v){
+    public void saltarExp(Boolean explanation){
         VideoPlayer video_player = new VideoPlayer();
         Bundle args = new Bundle();
-        args.putString("video", (String) Rachel[posSele][posKeyWord][1]);
+        args.putBoolean("explicacion", explanation);
         video_player.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+
+
+
         spinnerSelected();
+    }
+
+    boolean videoShow;
+
+    public void activarVideo(Boolean videoShow){
+        spinnerSelected();
+    };
+
+    public void verClip(View v){
+        videoShow = false;
+        activarVideo(videoShow);
+    }
+
+    public void verExp(View v){
+        videoShow = true;
+        activarVideo(videoShow);
     }
 
     //SELECCIONA LA PALABRA A BUSCAR
@@ -779,28 +810,87 @@ public class ConInt2023 extends AppCompatActivity {
         }else{
             txteng.setText(keyWord);
             //CHEQUEAR RESPUESTA
-            posKeyWord++;
+            btn_check_ans.setOnClickListener(view -> {
+                String ans = answerinput1.getText().toString();
+                if (ans.equalsIgnoreCase(keyWord)) {
+                    Toast.makeText(this, "RESPUESTA CORRECTA", Toast.LENGTH_SHORT).show();
+                    answer_lay.setVisibility(View.GONE);
+                    input_lay_back.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                    passToNext();
+                } else {
+                    Toast.makeText(this, "RESPUESTA INCORRECTA", Toast.LENGTH_SHORT).show();
+                    input_lay_back.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                    answer_lay.setVisibility(View.VISIBLE);
+                    btn_ver_exp.setVisibility(View.VISIBLE);
+
+                    speak();
+                }
+
+            });
+        }
+    }
+    Boolean showActive = false;
+
+    public void passToNext(){
+        posKeyWord++;
+        answerinput1.setText("");
+        cleanInput();
+        setKeywordAndPosition();
+    }
+
+    public void cleanInput(){
+        input_lay_back.setBackgroundColor(Color.WHITE);
+    }
+
+    public void decir(View v){
+        iniciarentradavoz();
+    }
+
+    public void showAns(View v){
+
+        if(showActive == false){
+            answer_lay.setVisibility(View.VISIBLE);
+            showActive = true;
+        }else{
+            answer_lay.setVisibility(View.GONE);
+            showActive = false;
         }
     }
 
-    public void checkAns(){
-
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException e) {
+        }
     }
 
-    public void saltarExp(Boolean explanation){
-        VideoPlayer video_player = new VideoPlayer();
-        Bundle args = new Bundle();
-        args.putBoolean("explicacion", explanation);
-        video_player.setArguments(args);
+    public void speak(View vista){
+        String keyWord = (String) Rachel[posSele][posKeyWord][0];
+        tts.speak(keyWord, TextToSpeech.QUEUE_ADD, null);
+    }
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragmentContainerView5, video_player)
-                .commit();
-
+    public void speak(){
+        String keyWord = (String) Rachel[posSele][posKeyWord][0];
+        tts.speak("Answer Incorrect the answer is: "+keyWord, TextToSpeech.QUEUE_ADD, null);
+    }
 
 
-        spinnerSelected();
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+
+            case REC_CODE_SPEECH_INPUT:
+                if (resultCode == RESULT_OK && null != data) {
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    answerinput1.setText(result.get(0));
+                }
+                break;
+        }
+
     }
 
 }

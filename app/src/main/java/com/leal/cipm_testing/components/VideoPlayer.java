@@ -19,13 +19,13 @@ import android.widget.VideoView;
 import com.leal.cipm_testing.R;
 
 public class VideoPlayer extends Fragment {
-    LinearLayout video_lay,loadingVideo;
+    public LinearLayout video_lay,loadingVideo;
     public VideoView video_player;
 
     //URL DE PRUEBA ESPERANDO QUE FUNCIONEN LOS VIDEOS DEL SERVIDOR
     String urlPrueba = "https://media.istockphoto.com/id/1350173565/es/v%C3%ADdeo/empresario-dando-un-paso-adelante.mp4?s=mp4-640x640-is&k=20&c=eIZb2xFLcb1k2yKzhOthbn3n09p70Faj_5UPkgKqdPA=";
-    private String selection,video;
-    boolean explanation;
+    private String selection,video,video1,video2;
+    boolean explanation,videoShow;
 
     public VideoPlayer() {
         // Required empty public constructor
@@ -40,6 +40,10 @@ public class VideoPlayer extends Fragment {
             selection = args.getString("tema");
             explanation = args.getBoolean("explicacion");
             video = args.getString("video");
+            video1 = args.getString("videouno");
+            video2 = args.getString("videodos");
+            videoShow = args.getBoolean("videoShow");
+
         }
     }
 
@@ -586,7 +590,7 @@ public class VideoPlayer extends Fragment {
                 case "Tutorial":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        ShowVideo("https://adrianlealcaldera.com/intconttut.mp4");
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/intconttut.mp4");
                     }
@@ -594,7 +598,11 @@ public class VideoPlayer extends Fragment {
                 case "Steve Jobs 1":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        if(videoShow){
+                            ShowVideo(video2);
+                        }else{
+                            ShowVideo(video1);
+                        }
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/billburrstevejobsclip1.mp4");
                     }
@@ -604,7 +612,11 @@ public class VideoPlayer extends Fragment {
                 case "Kot Fishing 1":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        if(videoShow){
+                            ShowVideo(video2);
+                        }else{
+                            ShowVideo(video1);
+                        }
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/kotfishing1Clip.mp4");
                     }
@@ -613,7 +625,11 @@ public class VideoPlayer extends Fragment {
                 case "Kot Fishing 2":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        if(videoShow){
+                            ShowVideo(video2);
+                        }else{
+                            ShowVideo(video1);
+                        }
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/kotfishing2Clip.mp4");
                     }
@@ -623,7 +639,11 @@ public class VideoPlayer extends Fragment {
                 case "Helicoptero 1":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        if(videoShow){
+                            ShowVideo(video2);
+                        }else{
+                            ShowVideo(video1);
+                        }
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/Helicoptero1Clip.mp4");
                     }
@@ -632,7 +652,11 @@ public class VideoPlayer extends Fragment {
                 case "Helicoptero 2":
                     // video completo con los 5 diferentes temas
                     if(explanation){
-                        ShowVideo(video);
+                        if(videoShow){
+                            ShowVideo(video2);
+                        }else{
+                            ShowVideo(video1);
+                        }
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/Helicoptero2Clip.mp4");
                     }
