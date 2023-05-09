@@ -95,14 +95,14 @@ public class VideoPlayer extends Fragment {
 
                 case "Do You Want Pepsi":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/doyouwantpepsiExp1.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/doyouwantpepsiClip.mp4");
                     }
                     break;
                 case "Sangre Por Sangre Foodline":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrefoodlineExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangrefoodlineClip.mp4");
                     }
@@ -110,7 +110,7 @@ public class VideoPlayer extends Fragment {
                     break;
                 case "Sangre Por Sangre Watch El Paisaje":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeClip.mp4");
                     }
@@ -146,9 +146,10 @@ public class VideoPlayer extends Fragment {
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Clip.mp4");
                     }
                     break;
+
                 case "Dave Chapelle Man Rape":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/davechapelle(man%20rape)Exp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/davechapelle(man%20rape)Clip.mp4");
                     }
@@ -181,7 +182,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Kings of the Hills Drugs":
                     if(explanation){
-                        ShowVideo("https://adrianlealcaldera.com/kingofthehilldrugsExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/kingofthehilldrugseditedClip.mp4");
                     }

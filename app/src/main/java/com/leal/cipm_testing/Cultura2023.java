@@ -85,7 +85,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             26000,
                             //URL EXP
-                            "https://adrianlealcaldera.com/Ain't%20no%20refund%20-%20Moonlight.mp4"
+                            "https://adrianlealcaldera.com/Aint%20no%20refund%20-%20Moonlight.mp4"
                     },
                     //"Thought you was on vacation"
                     {
@@ -134,7 +134,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             73000,*/
                             //URL EXP
-                            "https://adrianlealcaldera.com/I%20ain%C2%B4t%20go%20let%20that%20go%20down%20-%20Moonlight.mp4"
+                            "https://adrianlealcaldera.com/I%20aint%20go%20let%20that%20go%20down%20-%20Moonlight.mp4"
                     },
                     //"What´s up"
                     {
@@ -145,7 +145,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             95600,
                             //URL EXP
-                            "https://adrianlealcaldera.com/What%C2%B4s%20up%20-%20Moonlight.mp4"
+                            "https://adrianlealcaldera.com/Whats%20up%20-%20Moonlight.mp4"
                     },
                     //"It´s all good"
                     {
@@ -161,7 +161,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             105000,*/
                             //URL EXP
-                            "https://adrianlealcaldera.com/It%C2%B4s%20all%20good%20-%20Moonlight.mp4"
+                            "https://adrianlealcaldera.com/Its%20all%20good%20-%20Moonlight.mp4"
                     },
                     //"What are you doing"
                     {
@@ -220,7 +220,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             2000,
                             //URL EXP
-                            "https://adrianlealcaldera.com/What's%20up%20-%20Rick%20and%20Morty.mp4"
+                            "https://adrianlealcaldera.com/Whats%20up%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"No can do"
                     {
@@ -297,7 +297,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             58000,
                             //URL EXP
-                            "https://adrianlealcaldera.com/You're%20overthinking%20it%20-%20Rick%20and%20Morty.mp4"
+                            "https://adrianlealcaldera.com/Youre%20overthinking%20it%20-%20Rick%20and%20Morty.mp4"
                     },
                     //"Get your shit together"
                     {
@@ -333,10 +333,8 @@ public class Cultura2023 extends AppCompatActivity{
                             0,
                             //timeStop
                             2000,
-                            //timeStart Exp
-                            234000,
-                            //timeStop Exp
-                            359000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Is%20there%20anything%20else%20a%20can%20get%20for%20you%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"Ain't got no"
                     {
@@ -346,10 +344,8 @@ public class Cultura2023 extends AppCompatActivity{
                             6000,
                             //timeStop
                             7000,
-                            //timeStart Exp
-                            127000,
-                            //timeStop Exp
-                            169000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Aint%20got%20no%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"Do you want"
                     {
@@ -359,10 +355,8 @@ public class Cultura2023 extends AppCompatActivity{
                             7000,
                             //timeStop
                             8000,
-                            //timeStart Exp
-                            183000,
-                            //timeStop Exp
-                            229000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Do%20you%20want%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"I was just wondering"
                     {
@@ -372,10 +366,8 @@ public class Cultura2023 extends AppCompatActivity{
                             15000,
                             //timeStop
                             16000,
-                            //timeStart Exp
-                            360000,
-                            //timeStop Exp
-                            411000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20was%20just%20wondering%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"Might as well"
                     {
@@ -385,10 +377,8 @@ public class Cultura2023 extends AppCompatActivity{
                             16000,
                             //timeStop
                             17000,
-                            //timeStart Exp
-                            414000,
-                            //timeStop Exp
-                            473000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Might%20as%20well%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"You feel me"
                     {
@@ -398,10 +388,8 @@ public class Cultura2023 extends AppCompatActivity{
                             17000,
                             //timeStop
                             18000,
-                            //timeStart Exp
-                            475000,
-                            //timeStop Exp
-                            493000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20feel%20me%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"Is there a problem"
                     {
@@ -411,10 +399,8 @@ public class Cultura2023 extends AppCompatActivity{
                             28000,
                             //timeStop
                             30000,
-                            //timeStart Exp
-                            494000,
-                            //timeStop Exp
-                            518000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Is%20there%20a%20problem%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"I didn't want"
                     {
@@ -424,10 +410,8 @@ public class Cultura2023 extends AppCompatActivity{
                             31000,
                             //timeStop
                             32000,
-                            //timeStart Exp
-                            519000,
-                            //timeStop Exp
-                            539000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20didnt%20want%20-%20Do%20You%20Want%20Pepsi.mp4"
                     },
                     //"Why would you"
                     {
@@ -442,10 +426,8 @@ public class Cultura2023 extends AppCompatActivity{
                             36000,
                             //timeStop
                             37000,*/
-                            //timeStart Exp
-                            540000,
-                            //timeStop Exp
-                            556000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Why%20would%20you%20-%20Do%20You%20Want%20Pepsi.mp4"
                     }
             },
 
@@ -459,10 +441,8 @@ public class Cultura2023 extends AppCompatActivity{
                             8000,
                             //timeStop
                             10000,
-                            //timeStart Exp
-                            264000,
-                            //timeStop Exp
-                            332000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20aint%20going%20to%20no%20prom%20soon%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"Ain't nothing but"
                     {
@@ -472,10 +452,8 @@ public class Cultura2023 extends AppCompatActivity{
                             15000,
                             //timeStop
                             16000,
-                            //timeStart Exp
-                            333000,
-                            //timeStop Exp
-                            384000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Aint%20nothing%20but%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"I ain't no muslim"
                     {
@@ -485,10 +463,8 @@ public class Cultura2023 extends AppCompatActivity{
                             25000,
                             //timeStop
                             27000,
-                            //timeStart Exp
-                            385000,
-                            //timeStop Exp
-                            408000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20aint%20no%20muslim%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"I ain't no moving"
                     {
@@ -498,10 +474,8 @@ public class Cultura2023 extends AppCompatActivity{
                             31000,
                             //timeStop
                             33000,
-                            //timeStart Exp
-                            440000,
-                            //timeStop Exp
-                            460000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20aint%20no%20moving%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"There is a ray of sunshine"
                     {
@@ -511,10 +485,8 @@ public class Cultura2023 extends AppCompatActivity{
                             61000,
                             //timeStop
                             63000,
-                            //timeStart Exp
-                            461000,
-                            //timeStop Exp
-                            494000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/There%20is%20a%20ray%20of%20sunshine%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"I ain't buying whats mine"
                     {
@@ -524,10 +496,8 @@ public class Cultura2023 extends AppCompatActivity{
                             132000,
                             //timeStop
                             134000,
-                            //timeStart Exp
-                            495000,
-                            //timeStop Exp
-                            520000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20aint%20buying%20whats%20mine%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     },
                     //"You've getting by with that shit"
                     {
@@ -537,10 +507,8 @@ public class Cultura2023 extends AppCompatActivity{
                             155000,
                             //timeStop
                             158000,
-                            //timeStart Exp
-                            521000,
-                            //timeStop Exp
-                            540000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Youve%20getting%20by%20with%20that%20shit%20-%20Sangre%20Por%20Sangre%20Foodline.mp4"
                     }
             },
 
@@ -554,10 +522,8 @@ public class Cultura2023 extends AppCompatActivity{
                             23000,
                             //timeStop
                             25000,
-                            //timeStart Exp
-                            79000,
-                            //timeStop Exp
-                            106000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Im%20here%20to%20jack%20you%20up%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     },
                     //"What do you want to do"
                     {
@@ -567,10 +533,8 @@ public class Cultura2023 extends AppCompatActivity{
                             42000,
                             //timeStop
                             44000,
-                            //timeStart Exp
-                            144000,
-                            //timeStop Exp
-                            180000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%20do%20you%20want%20to%20do%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     },
                     //"You gotta pay your dues"
                     {
@@ -580,10 +544,8 @@ public class Cultura2023 extends AppCompatActivity{
                             45000,
                             //timeStop
                             47000,
-                            //timeStart Exp
-                            116000,
-                            //timeStop Exp
-                            137000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20gotta%20pay%20your%20dues%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     },
                     //"You wanna throw down"
                     {
@@ -593,10 +555,8 @@ public class Cultura2023 extends AppCompatActivity{
                             48000,
                             //timeStop
                             50000,
-                            //timeStart Exp
-                            181000,
-                            //timeStop Exp
-                            221000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/You%20wanna%20throw%20down%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     },
                     //"Catch you on the rebound"
                     {
@@ -606,10 +566,8 @@ public class Cultura2023 extends AppCompatActivity{
                             82000,
                             //timeStop
                             85000,
-                            //timeStart Exp
-                            229000,
-                            //timeStop Exp
-                            255000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Catch%20you%20on%20the%20rebound%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     },
                     //"Should't done thate"
                     {
@@ -619,10 +577,8 @@ public class Cultura2023 extends AppCompatActivity{
                             135000,
                             //timeStop
                             137000,
-                            //timeStart Exp
-                            265000,
-                            //timeStop Exp
-                            304000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Shouldt%20done%20thate%20-%20Sangre%20Por%20Sangre%20Watch%20El%20Paisaje.mp4"
                     }
             },
 
@@ -1064,10 +1020,8 @@ public class Cultura2023 extends AppCompatActivity{
                             13000,
                             //timeStop
                             15000,*/
-                            //timeStart Exp
-                            73000,
-                            //timeStop Exp
-                            165000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Im%20one%20of%20those%20people%20-%20Dave%20Chapelle%20Man%20Rape.mp4"
                     },
                     //"And i'm scared to live"
                     {
@@ -1082,10 +1036,8 @@ public class Cultura2023 extends AppCompatActivity{
                             20000,
                             //timeStop
                             22000,*/
-                            //timeStart Exp
-                            166000,
-                            //timeStop Exp
-                            222000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/And%20im%20scared%20to%20live%20-%20Dave%20Chapelle%20Man%20Rape.mp4"
                     }
             },
 
@@ -1436,10 +1388,8 @@ public class Cultura2023 extends AppCompatActivity{
                             10900,
                             //timeStop
                             11200,
-                            //timeStart Exp
-                            372000,
-                            //timeStop Exp
-                            380000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%20do%20you%20want%20-%20Kings%20of%20the%20Hills%20Drugs.mp4"
                     },
                     //"Are you looking to"
                     {
@@ -1449,10 +1399,8 @@ public class Cultura2023 extends AppCompatActivity{
                             15000,
                             //timeStop
                             17000,
-                            //timeStart Exp
-                            299000,
-                            //timeStop Exp
-                            345000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/Are%20you%20looking%20to%20-%20Kings%20of%20the%20Hills%20Drugs.mp4"
                     },
                     //"I have been thinking about"
                     {
@@ -1462,10 +1410,8 @@ public class Cultura2023 extends AppCompatActivity{
                             22000,
                             //timeStop
                             24000,
-                            //timeStart Exp
-                            258000,
-                            //timeStop Exp
-                            298000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/I%20have%20been%20thinking%20about%20-%20Kings%20of%20the%20Hills%20Drugs.mp4"
                     },
                     //"What do you need"
                     {
@@ -1475,10 +1421,8 @@ public class Cultura2023 extends AppCompatActivity{
                             24000,
                             //timeStop
                             26000,
-                            //timeStart Exp
-                            359000,
-                            //timeStop Exp
-                            371000,
+                            //URL EXP
+                            "https://adrianlealcaldera.com/What%20do%20you%20need%20-%20Kings%20of%20the%20Hills%20Drugs.mp4"
                     }
 
             }
@@ -1734,8 +1678,8 @@ public class Cultura2023 extends AppCompatActivity{
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==1){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium2023, android.R.layout.simple_spinner_item);
+        if(prefs.getPremium()==0){
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPrem, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1794,8 +1738,7 @@ public class Cultura2023 extends AppCompatActivity{
 
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura para continuar con la practica");
-            lay_btn_empezar.setVisibility(View.GONE);
-            txt_exp_est.setVisibility(View.VISIBLE);
+            ocultartodo();
         }else {
             lay_btn_empezar.setVisibility(View.VISIBLE);
             videoPlayer();
@@ -2070,6 +2013,8 @@ public class Cultura2023 extends AppCompatActivity{
                 explanation = true;
                 saltarExp(explanation);
                 setKeywordAndPosition();
+                lay_key_word.setVisibility(View.GONE);
+                lay_btn_get.setVisibility(View.GONE);
             }else{
                 SpannableString ss= new SpannableString(keyWord);
                 ClickableSpan txtone;
@@ -2148,6 +2093,12 @@ public class Cultura2023 extends AppCompatActivity{
         if(CounterToSubtractSelection>condicionNumber){
             DialogueBox("Cambiar de Video y seguir a siguiente clase?");
         }
+    }
+    public void ocultartodo(){
+        lay_btn_empezar.setVisibility(View.GONE);
+        txt_exp_est.setVisibility(View.VISIBLE);
+        lay_key_word.setVisibility(View.GONE);
+        lay_btn_get.setVisibility(View.GONE);
     }
 
     //getPos

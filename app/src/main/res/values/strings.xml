@@ -339,6 +339,17 @@
         <item>Kings of the Hills Drugs</item>
     </string-array>
 
+    <string-array name="culturaPrem">
+        <item>Tutorial</item>
+        <item>Moonlight</item>
+        <item>Rick and Morty</item>
+        <item>Do You Want Pepsi</item>
+        <item>Sangre Por Sangre Foodline</item>
+        <item>Sangre Por Sangre Watch El Paisaje</item>
+        <item>Dave Chapelle Man Rape</item>
+        <item>Kings of the Hills Drugs</item>
+    </string-array>
+
     <string-array name="rango">
         <item>0 a 100</item>
 

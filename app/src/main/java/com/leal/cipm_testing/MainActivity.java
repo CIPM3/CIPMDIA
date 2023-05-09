@@ -191,11 +191,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void myPlan(View vist){
-
-        Toast.makeText(this, "función en desarrollo", Toast.LENGTH_SHORT).show();
-       /* Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+       Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
         intent.putExtra("key", user.getUid());
-        startActivity(intent);*/
+        startActivity(intent);
 
 
 /*
