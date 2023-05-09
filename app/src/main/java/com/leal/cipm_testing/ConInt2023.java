@@ -69,7 +69,7 @@ public class ConInt2023 extends AppCompatActivity {
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
-            isCustomPlan,isListeningPlan,isAdvancedPlan,AdvancedPlan,AdvancedPlanFromDb;
+            isCustomPlan,isListeningPlan,isAdvancedPlan,AdvancedPlan,AdvancedPlanFromDb,rachelfinish;
     Prefs prefs;
 
     int posSele = 0;
@@ -117,47 +117,27 @@ public class ConInt2023 extends AppCompatActivity {
                             "http://adrianlealcaldera.com/bb5.mp4",
                             //EXPLICACION
                             "http://adrianlealcaldera.com/expbb5.mp4"
-                    },
-                    {
-                        "",
-                            ""
                     }
             },
             //Steve Jobs 2
             {
                     {
                             //RESPUESTA 1
-                            "Prueba"
+                            "Prueba",
                             //URL
+                            "http://adrianlealcaldera.com/bb5.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb5.mp4"
 
                     },
                     {
                             //RESPUESTA 2
-                            "Prueba 2"
+                            "Prueba 2",
                             //URL
+                            "http://adrianlealcaldera.com/bb5.mp4",
+                            //EXPLICACION
+                            "http://adrianlealcaldera.com/expbb5.mp4"
 
-                    },
-                    {
-                            //RESPUESTA 3
-                            "Prueba 3"
-                            //URL
-
-                    },
-                    {
-                            //RESPUESTA 4
-                            "Prueba 4"
-                            //URL
-
-                    },
-                    {
-                            //RESPUESTA 5
-                            "Prueba 5"
-                            //URL
-
-                    },
-                    {
-                            "",
-                            ""
                     }
             },
             //Kot Fishing 1
@@ -202,10 +182,6 @@ public class ConInt2023 extends AppCompatActivity {
                             //EXPLICACION
                             "https://adrianlealcaldera.com/kotfishing1Exp5.mp4"
                     },
-                    {
-                            "",
-                            ""
-                    }
             },
             //Kot Fishing 2
             {
@@ -240,10 +216,6 @@ public class ConInt2023 extends AppCompatActivity {
                             "https://adrianlealcaldera.com/KothFishing2Clip4.mp4",
                             //EXPLICACION
                             "https://adrianlealcaldera.com/kotfishing2exp4.mp4"
-                    },
-                    {
-                            "",
-                            ""
                     }
             },
             //Helicoptero 1
@@ -279,10 +251,6 @@ public class ConInt2023 extends AppCompatActivity {
                             "https://adrianlealcaldera.com/Helicoptero1Clip4.mp4",
                             //EXPLICACION
                             "https://adrianlealcaldera.com/Helicoptero1Exp4.mp4"
-                    },
-                    {
-                            "",
-                            ""
                     }
             },
             //Helicoptero 2
@@ -318,10 +286,6 @@ public class ConInt2023 extends AppCompatActivity {
                             "https://adrianlealcaldera.com/Helicoptero2Clip4.mp4",
                             //EXPLICACION
                             "https://adrianlealcaldera.com/Helicoptero2Exp4.mp4"
-                    },
-                    {
-                            "",
-                            ""
                     }
             }
 
@@ -351,6 +315,7 @@ public class ConInt2023 extends AppCompatActivity {
 
         explanation = false;
         clipMuestra = true;
+        rachelfinish = false;
 
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
@@ -695,6 +660,8 @@ public class ConInt2023 extends AppCompatActivity {
         if(selection.equals("Tutorial")){
             spanishsentence.setText("Seleccione una estructura para continuar con la practica");
             btn_ver_exp.setVisibility(View.GONE);
+            btn_check_ans.setVisibility(View.GONE);
+            btn_show_ans.setVisibility(View.GONE);
             answer_lay.setVisibility(View.GONE);
             input_lay.setVisibility(View.GONE);
             btn_salt_exp.setVisibility(View.GONE);
@@ -713,9 +680,13 @@ public class ConInt2023 extends AppCompatActivity {
     }
 
     public void videoPlayer(){
+        btn_check_ans.setVisibility(View.GONE);
+        btn_show_ans.setVisibility(View.GONE);
         if(explanation == false & clipMuestra == true){
+
             spanishsentence.setText("Pon atencion al clip a continuacion y cuando termine haz click en empezar practica.");
             txt_salt_btn.setText("Empezar Practica");
+
             btn_salt_exp.setOnClickListener(view -> {
                 explanation = true;
                 clipMuestra = false;
@@ -725,7 +696,7 @@ public class ConInt2023 extends AppCompatActivity {
         }
 
         if(explanation == true & clipMuestra == false){
-            spanishsentence.setText("Pon atencion a la explicacion a continuacion y cuando termine haz click en empezar practica.");
+            spanishsentence.setText("Pon atencion a la siguiente frase a continuacion y cuando termine escribe lo que entendiste.");
             btn_salt_exp.setVisibility(View.GONE);
             input_lay.setVisibility(View.VISIBLE);
 
@@ -777,24 +748,29 @@ public class ConInt2023 extends AppCompatActivity {
                 keyWord = (String) Rachel[posSele][posKeyWord][0];
                 setKeyWordToCulture(keyWord);
                 break;
-            case "Kot Fishing 1":
+            case "Steve Jobs 2":
                 posSele = 1;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+            case "Kot Fishing 1":
+                posSele = 2;
                 keyWord = (String) Rachel[posSele][posKeyWord][0];
                 setKeyWordToCulture(keyWord);
                 break;
 
             case "Kot Fishing 2":
-                posSele = 2;
-                keyWord = (String) Rachel[posSele][posKeyWord][0];
-                setKeyWordToCulture(keyWord);
-                break;
-            case "Helicoptero 1":
                 posSele = 3;
                 keyWord = (String) Rachel[posSele][posKeyWord][0];
                 setKeyWordToCulture(keyWord);
                 break;
-            case "Helicoptero 2":
+            case "Helicoptero 1":
                 posSele = 4;
+                keyWord = (String) Rachel[posSele][posKeyWord][0];
+                setKeyWordToCulture(keyWord);
+                break;
+            case "Helicoptero 2":
+                posSele = 5;
                 keyWord = (String) Rachel[posSele][posKeyWord][0];
                 setKeyWordToCulture(keyWord);
                 break;
@@ -803,43 +779,43 @@ public class ConInt2023 extends AppCompatActivity {
 
     //VALIDACIONES DEL TIEMPO Y SI TERMINO LA LISTA DE PAlABRAS CLAVE
     public void setKeyWordToCulture(String keyWord){
-
-        int limit = Rachel[posSele].length-1;
-        if(posKeyWord >= limit){
-            Toast.makeText(this, "HAZ COMPLETADO ESTA PRACTICA CONTINUA CON OTRA", Toast.LENGTH_SHORT).show();
-        }else{
-            txteng.setText(keyWord);
-            //CHEQUEAR RESPUESTA
-            btn_check_ans.setOnClickListener(view -> {
-                String ans = answerinput1.getText().toString();
-                if (ans.equalsIgnoreCase(keyWord)) {
-                    Toast.makeText(this, "RESPUESTA CORRECTA", Toast.LENGTH_SHORT).show();
-                    answer_lay.setVisibility(View.GONE);
-                    input_lay_back.setBackgroundColor(Color.parseColor("#E6FBEB"));
+        txteng.setText(keyWord);
+        int limit = Rachel[posSele].length;
+        //CHEQUEAR RESPUESTA
+        btn_check_ans.setOnClickListener(view -> {
+            String ans = answerinput1.getText().toString();
+            if (ans.equalsIgnoreCase(keyWord)) {
+                answer_lay.setVisibility(View.GONE);
+                input_lay_back.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                if(posKeyWord >= limit-1){
+                    speakPass(true);
+                    cleanInput();
+                }else{
+                    speakPass(rachelfinish);
                     passToNext();
-                } else {
-                    Toast.makeText(this, "RESPUESTA INCORRECTA", Toast.LENGTH_SHORT).show();
-                    input_lay_back.setBackgroundColor(Color.parseColor("#FEE6E6"));
-                    answer_lay.setVisibility(View.VISIBLE);
-                    btn_ver_exp.setVisibility(View.VISIBLE);
 
-                    speak();
                 }
+            } else {
+                input_lay_back.setBackgroundColor(Color.parseColor("#FEE6E6"));
+                answer_lay.setVisibility(View.VISIBLE);
+                btn_ver_exp.setVisibility(View.VISIBLE);
+                speak();
+            }
 
-            });
-        }
+        });
     }
     Boolean showActive = false;
 
     public void passToNext(){
         posKeyWord++;
-        answerinput1.setText("");
         cleanInput();
         setKeywordAndPosition();
     }
 
     public void cleanInput(){
         input_lay_back.setBackgroundColor(Color.WHITE);
+        answerinput1.setText("");
+        btn_ver_exp.setVisibility(View.GONE);
     }
 
     public void decir(View v){
@@ -875,6 +851,14 @@ public class ConInt2023 extends AppCompatActivity {
     public void speak(){
         String keyWord = (String) Rachel[posSele][posKeyWord][0];
         tts.speak("Answer Incorrect the answer is: "+keyWord, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public void speakPass(boolean rachelfinish){
+        if(rachelfinish == false){
+            tts.speak("excellent. let's try with another one.", TextToSpeech.QUEUE_ADD, null);
+        }else{
+            tts.speak("excellent. you finish: "+selection+", now continue with other.", TextToSpeech.QUEUE_ADD, null);
+        }
     }
 
 
