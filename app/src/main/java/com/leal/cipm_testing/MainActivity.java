@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void vocabulary(View vista) {
 
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, vocabulary.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void availability(View vista) {
 
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(this, availability.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //billing
     public void Cultura(View vista) {
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             Intent intento = new Intent(MainActivity.this, Culture.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -212,16 +212,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void ConInt(View vista) {
-
-
         if(prefs.getPremium()==0){
             Intent intento = new Intent(this, rachel.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
         }
-
-
     }
     public void premium(View vist) {
         Intent intent = new Intent(this, StoreActivity.class);
@@ -229,11 +225,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void TestNuevo(View vist){
-
-        Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();
-      /*
+        /*Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();*/
         Intent intent = new Intent(this, test_student.class);
-        startActivity(intent);*/
+        startActivity(intent);
     }
     public void profile(View vist) {
 
