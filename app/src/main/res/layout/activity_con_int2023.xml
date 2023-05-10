@@ -8,6 +8,7 @@
     tools:context=".ConInt2023"
     android:background="@color/white"
     >
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
@@ -15,35 +16,32 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="85dp"
-        >
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintTop_toTopOf="parent">
             <!--Header-->
             <LinearLayout
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:elevation="5dp"
                 android:background="@color/graybg"
-                >
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView"
                     android:name="com.leal.cipm_testing.components.header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:layout="@layout/fragment_header"
-                    />
+                    tools:layout="@layout/fragment_header" />
             </LinearLayout>
 
             <!--Spinner-->
@@ -51,10 +49,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
                 android:onClick="activaSpinner"
-                >
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
 
 
                 <!--Spinner-->
@@ -64,34 +61,31 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="start"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
                     <!--text-->
                     <TextView
                         android:id="@+id/textspin1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre del video"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:textSize="22dp"
-                        android:textStyle="bold"
                         android:layout_weight="1"
-                        />
+                        android:text="Nombre del video"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/spinuno"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:spinnerMode="dialog"
-                        android:theme="@style/MySpinnerStyle"
-                        />
+                        android:theme="@style/MySpinnerStyle" />
+
                     <LinearLayout
-                        android:layout_gravity="end|center"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/ic_grupo_select"
-                        />
+                        android:layout_gravity="end|center"
+                        android:background="@drawable/ic_grupo_select" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -110,8 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:layout="@layout/fragment_video_player"
-                    />
+                    tools:layout="@layout/fragment_video_player" />
             </LinearLayout>
 
             <!--texto-->
@@ -145,20 +138,21 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="end"
                     android:layout_weight="1"
-                    >
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mide tu nivel de Comprehension"
-                        android:textColor="@color/azul"
                         android:textAlignment="textEnd"
+                        android:textColor="@color/azul"
                         android:textSize="14dp"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -179,6 +173,7 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -195,72 +190,71 @@
                         android:orientation="horizontal"
                         android:paddingHorizontal="30dp"
                         android:paddingVertical="5dp"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:id="@+id/input_lay_back"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            >
+                            android:layout_height="match_parent">
+
                             <LinearLayout
-                                android:onClick="verClip"
+                                android:id="@+id/btn_clip"
                                 android:layout_width="20dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                >
+                                android:onClick="verClip">
+
                                 <TextView
+                                    android:id="@+id/txtclip"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="?"
+                                    android:text="s"
                                     android:textAlignment="center"
                                     android:textColor="@color/azul"
                                     android:textSize="22dp"
                                     android:textStyle="bold" />
                             </LinearLayout>
+
                             <EditText
                                 android:id="@+id/answerinput1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:ems="10"
-                                android:textColor="@color/black"
                                 android:hint="escribe tu respuesta o presiona microfono y di tu respuesta"
                                 android:inputType="textPersonName"
                                 android:paddingLeft="10dp"
+                                android:textColor="@color/black"
                                 android:textColorHint="@color/black"
-                                android:textSize="15dp"
-                                android:layout_weight="1"
-                                />
+                                android:textSize="15dp" />
                             <!--Validacion-->
                             <LinearLayout
                                 android:id="@+id/opclay"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="5"
-                                android:padding="5dp"
                                 android:gravity="center"
                                 android:orientation="horizontal"
-                                >
+                                android:padding="5dp">
+
                                 <LinearLayout
                                     android:id="@+id/respdecir"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:background="@drawable/ic_microfono"
-                                    android:visibility="visible"
-                                    android:orientation="horizontal"
-                                    android:onClick="decir"
                                     android:layout_marginRight="5dp"
-                                    >
-                                </LinearLayout>
+                                    android:background="@drawable/ic_microfono"
+                                    android:onClick="decir"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"></LinearLayout>
 
                                 <LinearLayout
                                     android:id="@+id/resplay"
                                     android:layout_width="15dp"
                                     android:layout_height="15dp"
                                     android:layout_gravity="center"
-                                    android:visibility="gone"
                                     android:background="@drawable/ic_controlar"
-                                    android:orientation="horizontal">
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
 
                                 </LinearLayout>
                             </LinearLayout>
@@ -273,56 +267,52 @@
                         android:id="@+id/answer_lay"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingHorizontal="30dp"
-                        android:visibility="gone"
-                        android:gravity="center"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:paddingLeft="5dp"
                             android:text="Respuesta correcta es:"
                             android:textColor="@color/black"
-                            android:textSize="14dp"
-                            android:paddingLeft="5dp"
-                            />
+                            android:textSize="14dp" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center"
                             android:layout_weight="5"
-                            >
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
                             <TextView
                                 android:id="@+id/txteng"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="10"
                                 android:text="eng"
                                 android:textColor="@color/azul"
-                                android:textSize="14dp"
-                                android:layout_weight="10"
-                                />
+                                android:textSize="14dp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
                                 android:layout_weight="1"
-                                >
+                                android:gravity="center">
+
                                 <LinearLayout
                                     android:id="@+id/respescu2"
                                     android:layout_width="15dp"
                                     android:layout_height="15dp"
-                                    android:layout_margin="15dp"
                                     android:layout_gravity="center"
+                                    android:layout_margin="15dp"
                                     android:background="@drawable/ic_volumen"
-                                    android:orientation="horizontal"
                                     android:onClick="speak"
-                                    android:visibility="visible"
-                                    />
+                                    android:orientation="horizontal"
+                                    android:visibility="visible" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -335,24 +325,23 @@
                         android:id="@+id/btn_ver_exp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="30dp"
-                        >
+                        android:layout_marginHorizontal="30dp">
+
                         <LinearLayout
                             android:layout_width="100dp"
                             android:layout_height="40dp"
-                            android:onClick="verExp"
                             android:layout_marginVertical="2dp"
-                            android:gravity="center"
                             android:background="@drawable/borde_azul"
-                            >
+                            android:gravity="center"
+                            android:onClick="verExp">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Ver explicacion"
-                                android:textColor="@color/azul"
                                 android:textAlignment="center"
-                                android:textSize="12dp"
-                                />
+                                android:textColor="@color/azul"
+                                android:textSize="12dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -361,17 +350,15 @@
                         android:id="@+id/btn_salt_exp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="30dp"
                         android:layout_marginTop="20dp"
                         android:orientation="vertical"
-                        >
+                        android:paddingHorizontal="30dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@drawable/borde_azul"
-                            android:gravity="center"
-                            >
+                            android:gravity="center">
 
                             <TextView
                                 android:id="@+id/txt_salt_btn"
@@ -379,8 +366,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Saltar Explicacion"
                                 android:textColor="@color/azul"
-                                android:textSize="16dp"
-                                />
+                                android:textSize="16dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -389,27 +375,24 @@
                         android:id="@+id/btn_check_ans"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="30dp"
                         android:layout_marginTop="20dp"
-                        android:orientation="vertical"
-                        android:visibility="gone"
                         android:onClick="check"
-                        >
+                        android:orientation="vertical"
+                        android:paddingHorizontal="30dp"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@drawable/borde_azul"
-                            android:gravity="center"
-                            >
+                            android:gravity="center">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Chequea tu respuesta"
                                 android:textColor="@color/azul"
-                                android:textSize="16dp"
-                                />
+                                android:textSize="16dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -418,26 +401,24 @@
                         android:id="@+id/btn_show_ans"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="30dp"
                         android:layout_marginTop="20dp"
-                        android:orientation="vertical"
-                        android:visibility="gone"
                         android:onClick="showAns"
-                        >
+                        android:orientation="vertical"
+                        android:paddingHorizontal="30dp"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@drawable/borde_azul"
-                            android:gravity="center"
-                            >
+                            android:gravity="center">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Mostrar Respuesta"
                                 android:textColor="@color/azul"
-                                android:textSize="16dp"/>
+                                android:textSize="16dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -445,15 +426,15 @@
             </ScrollView>
         </LinearLayout>
     </ScrollView>
+
     <!--BTNS OPC-->
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/graybg"
-        android:orientation="vertical"
-        android:elevation="5dp"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.fragment.app.FragmentContainerView
@@ -461,7 +442,7 @@
             android:name="com.leal.cipm_testing.components.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_bottom_nav"
-            />
+            tools:layout="@layout/fragment_bottom_nav" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

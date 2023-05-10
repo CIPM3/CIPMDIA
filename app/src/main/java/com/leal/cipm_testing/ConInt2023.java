@@ -41,11 +41,11 @@ import java.util.Locale;
 public class ConInt2023 extends AppCompatActivity {
 
     String selection;
-    TextView textspin1,txteng,spanishsentence,txt_salt_btn,answerinput1;
+    TextView textspin1,txteng,spanishsentence,txt_salt_btn,answerinput1,txtclip;
     Spinner spin;
     boolean explanation,clipMuestra;
 
-    LinearLayout btn_salt_exp,btn_check_ans,btn_show_ans,input_lay_back;
+    LinearLayout btn_salt_exp,btn_check_ans,btn_show_ans,input_lay_back,btn_clip;
     LinearLayout btn_ver_exp,answer_lay,input_lay;
 
     TextToSpeech tts;
@@ -300,6 +300,7 @@ public class ConInt2023 extends AppCompatActivity {
         textspin1 = findViewById(R.id.textspin1);
         txteng = findViewById(R.id.txteng);
         txt_salt_btn = findViewById(R.id.txt_salt_btn);
+        txtclip = findViewById(R.id.txtclip);
         spanishsentence = findViewById(R.id.spanishsentence);
 
         btn_salt_exp = findViewById(R.id.btn_salt_exp);
@@ -310,6 +311,7 @@ public class ConInt2023 extends AppCompatActivity {
         btn_ver_exp = findViewById(R.id.btn_ver_exp);
         answer_lay = findViewById(R.id.answer_lay);
         input_lay = findViewById(R.id.input_lay);
+        btn_clip = findViewById(R.id.btn_clip);
 
         answerinput1 = findViewById(R.id.answerinput1);
 
@@ -732,6 +734,11 @@ public class ConInt2023 extends AppCompatActivity {
         activarVideo(videoShow);
     }
 
+    public void verClip(){
+        videoShow = false;
+        activarVideo(videoShow);
+    }
+
     public void verExp(View v){
         videoShow = true;
         activarVideo(videoShow);
@@ -742,6 +749,8 @@ public class ConInt2023 extends AppCompatActivity {
         spanishsentence.setVisibility(View.VISIBLE);
         
         String keyWord;
+        String numbertext = String.valueOf(posKeyWord+1);
+        txtclip.setText(numbertext);
         switch (selection){
             case "Steve Jobs 1":
                 posSele = 0;
@@ -793,7 +802,7 @@ public class ConInt2023 extends AppCompatActivity {
                 }else{
                     speakPass(rachelfinish);
                     passToNext();
-
+                    verClip();
                 }
             } else {
                 input_lay_back.setBackgroundColor(Color.parseColor("#FEE6E6"));
@@ -855,9 +864,10 @@ public class ConInt2023 extends AppCompatActivity {
 
     public void speakPass(boolean rachelfinish){
         if(rachelfinish == false){
-            tts.speak("excellent. let's try with another one.", TextToSpeech.QUEUE_ADD, null);
+            tts.speak("excellent. let's try with another one.Click on the video to see the clip", TextToSpeech.QUEUE_ADD, null);
         }else{
             tts.speak("excellent. you finish: "+selection+", now continue with other.", TextToSpeech.QUEUE_ADD, null);
+            spin.setSelection(0);
         }
     }
 

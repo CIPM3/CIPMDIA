@@ -1,14 +1,18 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -16,6 +20,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,7 +35,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.VideoPlayer;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 
 public class Cultura2023 extends AppCompatActivity{
@@ -48,6 +55,11 @@ public class Cultura2023 extends AppCompatActivity{
     LinearLayout txt_exp_est,lay_btn_empezar,lay_btn_emp,lay_btn_salt,lay_btn_get,lay_key_word;
     public String selection;
     boolean clip;
+
+    TextToSpeech tts;
+    int control;
+    public static final int REC_CODE_SPEECH_INPUT = 100;
+    private ImageButton botonhablar;
 
 
     //DB
@@ -97,7 +109,8 @@ public class Cultura2023 extends AppCompatActivity{
                             38000,
                             //URL EXP
                             "https://adrianlealcaldera.com/Thought%20you%20was%20on%20vacation%20-%20Moonlight.mp4"
-                    },
+                    }
+                    ,
                     //"How peanut working out"
                     {
                             //keyword
@@ -1678,7 +1691,7 @@ public class Cultura2023 extends AppCompatActivity{
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPrem, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -1692,6 +1705,15 @@ public class Cultura2023 extends AppCompatActivity{
                 @Override
                 public void onNothingSelected(AdapterView<?> adapterView) {
 
+                }
+            });
+
+            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if(i==tts.SUCCESS){
+                        int lang = tts.setLanguage(Locale.ENGLISH);
+                    }
                 }
             });
 
@@ -1713,6 +1735,15 @@ public class Cultura2023 extends AppCompatActivity{
                 @Override
                 public void onNothingSelected(AdapterView<?> adapterView) {
 
+                }
+            });
+
+            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if(i==tts.SUCCESS){
+                        int lang = tts.setLanguage(Locale.ENGLISH);
+                    }
                 }
             });
         }
@@ -2001,35 +2032,33 @@ public class Cultura2023 extends AppCompatActivity{
     public void setKeyWordToCulture(int g,String keyWord,int StartTime, int StopTime){
         VideoView vp = findViewById(R.id.video_player);
         text_key_word.setText(keyWord);
+        int limit = KeyWordsObject[posSele].length;
+            SpannableString ss= new SpannableString(keyWord);
+            ClickableSpan txtone;
+            txtone = new ClickableSpan() {
+                @Override
+                public void onClick(@NonNull View view) {
+                    vp.seekTo(StartTime);
 
-        if(posKeyword >= KeyWordsObject[posSele].length){
-            Toast.makeText(this, "HAZ COMPLETADO ESTA PRACTICA CONTINUA CON OTRA", Toast.LENGTH_SHORT).show();
-            ResetearPage();
-        }else{
+                }
+            };
+            ss.setSpan(txtone,0,keyWord.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+            text_key_word.setText(ss);
+            text_key_word.setMovementMethod(LinkMovementMethod.getInstance());
             if(g> StartTime && g<StopTime) {
-                Toast.makeText(this, "Felicidades la encontraste", Toast.LENGTH_SHORT).show();
-                posKeyword++;
-                intentos = 0;
-                explanation = true;
-                saltarExp(explanation);
-                setKeywordAndPosition();
-                lay_key_word.setVisibility(View.GONE);
-                lay_btn_get.setVisibility(View.GONE);
-            }else{
-                SpannableString ss= new SpannableString(keyWord);
-                ClickableSpan txtone;
-                txtone = new ClickableSpan() {
-                    @Override
-                    public void onClick(@NonNull View view) {
-                        vp.seekTo(StartTime);
-
-                    }
-                };
-                ss.setSpan(txtone,0,keyWord.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
-                text_key_word.setText(ss);
-                text_key_word.setMovementMethod(LinkMovementMethod.getInstance());
+                if(posKeyword >= limit-1){
+                    speakPass(true);
+                }else{
+                    posKeyword++;
+                    intentos = 0;
+                    explanation = true;
+                    saltarExp(explanation);
+                    setKeywordAndPosition();
+                    lay_key_word.setVisibility(View.GONE);
+                    lay_btn_get.setVisibility(View.GONE);
+                    speakPass(false);
+                }
             }
-        }
     }
 
     //TERMINAS LA PRACTICA Y TE MANDA TUTORIAL
@@ -2099,6 +2128,38 @@ public class Cultura2023 extends AppCompatActivity{
         txt_exp_est.setVisibility(View.VISIBLE);
         lay_key_word.setVisibility(View.GONE);
         lay_btn_get.setVisibility(View.GONE);
+    }
+
+    public void speakPass(boolean cultureFinish){
+        if(cultureFinish == false){
+            tts.speak("excellent. let's try with another one.Click on the video to see the clip", TextToSpeech.QUEUE_ADD, null);
+        }else{
+            tts.speak("excellent. you finish: "+selection+", now continue with other.", TextToSpeech.QUEUE_ADD, null);
+            spin.setSelection(0);
+        }
+    }
+
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException e) {
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+
+            case REC_CODE_SPEECH_INPUT:
+                if (resultCode == RESULT_OK && null != data) {
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                }
+                break;
+        }
+
     }
 
     //getPos
