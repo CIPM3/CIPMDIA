@@ -125,7 +125,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Hancock Train":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/hancocktrainExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/hancocktrainClip.mp4");
                     }
@@ -133,7 +133,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Malcom in the Middle Teacher":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/malconinthemiddleteacherExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/malconinthemiddleteacherClip.mp4");
                     }
@@ -141,7 +141,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Sangre Por Sangre Comedor":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Exp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Clip.mp4");
                     }
@@ -158,7 +158,7 @@ public class VideoPlayer extends Fragment {
                 //luis R
                 case "Análisis de cultura Gringa y Frases Coloquiales 2":
                     if(explanation){
-                        ShowVideo("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Exp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/analisisdeculturagringayfrasescoloquiales2Clip.mp4");
                     }
