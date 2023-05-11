@@ -314,7 +314,7 @@
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:onClick="chose_aval"
+                    android:onClick="availability"
                     >
 
                     <LinearLayout

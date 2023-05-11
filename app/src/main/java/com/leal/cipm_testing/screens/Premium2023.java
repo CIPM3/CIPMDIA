@@ -1,20 +1,14 @@
-package com.leal.cipm_testing;
-
-
-
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -30,20 +24,24 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
 
 import java.util.ArrayList;
 import java.util.List;
-public class StoreActivity extends AppCompatActivity {
+
+public class Premium2023 extends AppCompatActivity {
     BillingClient billingClient;
     Prefs prefs;
     Button btn_sub_monthly_price;
     VideoView vv;
     LinearLayout b;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_store);
+        setContentView(R.layout.activity_premium2023);
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
 
@@ -121,7 +119,7 @@ public class StoreActivity extends AppCompatActivity {
                 .setSkuDetails(skuDetails)
                 .build();
 
-        billingClient.launchBillingFlow(StoreActivity.this, billingFlowParams);
+        billingClient.launchBillingFlow(Premium2023.this, billingFlowParams);
     }
 
     void verifySubPurchase(Purchase purchases) {
@@ -138,7 +136,7 @@ public class StoreActivity extends AppCompatActivity {
                     //Toast.makeText(SubscriptionActivity.this, "Item Consumed", Toast.LENGTH_SHORT).show();
                     // Handle the success of the consume operation.
                     //user prefs to set premium
-                    Toast.makeText(StoreActivity.this, "You are a premium user now", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Premium2023.this, "You are a premium user now", Toast.LENGTH_SHORT).show();
                     //updateUser();
 
                     //Setting premium to 1

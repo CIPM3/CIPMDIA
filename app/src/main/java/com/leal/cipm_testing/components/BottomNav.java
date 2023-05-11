@@ -4,21 +4,19 @@ package com.leal.cipm_testing.components;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.StoreActivity;
 import com.leal.cipm_testing.chat_maestro;
 import com.leal.cipm_testing.profile;
+import com.leal.cipm_testing.screens.Premium2023;
 import com.leal.cipm_testing.test_student;
 
 public class BottomNav extends Fragment {
@@ -65,7 +63,7 @@ public class BottomNav extends Fragment {
         });
 
         bgPremium.setOnClickListener(v -> {
-            Intent intento = new Intent(getContext(), StoreActivity.class);
+            Intent intento = new Intent(getContext(), Premium2023.class);
             startActivity(intento);
         });
 
@@ -102,7 +100,7 @@ public class BottomNav extends Fragment {
             bgProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if (currenttxt.contains("StoreActivity")) {
+        if (currenttxt.contains("screens.Premium")) {
             bgPremium.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#F8D22F")));
         }
 

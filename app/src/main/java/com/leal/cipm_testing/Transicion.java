@@ -26,6 +26,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.screens.Availability2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -241,7 +242,7 @@ public class Transicion extends AppCompatActivity {
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(Transicion.this,availability_nuevo.class);
+            Intent intent = new Intent(Transicion.this, Availability2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("isCustom",false);
             startActivity(intent);

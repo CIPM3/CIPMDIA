@@ -712,7 +712,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("availability_nuevo")){
+        if(currenttxt.contains("screens.Availability")){
             switch (selection) {
 
                 case "Tutorial":
@@ -773,7 +773,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if (currenttxt.contains("StoreActivity")) {
+        if (currenttxt.contains("screens.Premium")) {
             ShowVideo("https://adrianlealcaldera.com/premium.mp4");
         }
 

@@ -1,17 +1,13 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -22,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,14 +27,23 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.Defs;
+import com.leal.cipm_testing.Dialog;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.conscisousinterference_nuevo;
+import com.leal.cipm_testing.cultura_nuevo;
+import com.leal.cipm_testing.estructura_nuevo;
+import com.leal.cipm_testing.texts;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
-public class availability_nuevo extends AppCompatActivity {
+public class Availability2023 extends AppCompatActivity {
+
     TextView tv;
     TextView textspin1;
     Spinner spin;
@@ -58,7 +62,7 @@ public class availability_nuevo extends AppCompatActivity {
     FirebaseAuth mAuth=FirebaseAuth.getInstance();
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
-    String[] temp =objetoArrays.pragerGratis;
+    String[] temp = objetoArrays.pragerGratis;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
@@ -76,7 +80,7 @@ public class availability_nuevo extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_availability_nuevo);
+        setContentView(R.layout.activity_availability2023);
 
         tv = findViewById(R.id.txt_view);
         pregtxt = findViewById(R.id.pregtxt);
@@ -267,7 +271,7 @@ public class availability_nuevo extends AppCompatActivity {
         if(temp.length==1){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(availability_nuevo.this,estructura_nuevo.class);
+            Intent intent = new Intent(Availability2023.this, estructura_nuevo.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("basicSctructures",isBasicStructures );
             intent.putExtra("isCustom",false);
@@ -281,7 +285,7 @@ public class availability_nuevo extends AppCompatActivity {
         }
     }
     public void PasarSiguienteEstructura(View v){
-        AlertDialog alertDialog = new AlertDialog.Builder(availability_nuevo.this)
+        AlertDialog alertDialog = new AlertDialog.Builder(Availability2023.this)
 //set icon
                 .setIcon(android.R.drawable.ic_dialog_alert)
 //set title
@@ -293,12 +297,12 @@ public class availability_nuevo extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if(BasicListeningPlan||BasicListeningPlanFromDb){
-                            Intent intent = new Intent(availability_nuevo.this, conscisousinterference_nuevo.class);
+                            Intent intent = new Intent(Availability2023.this, conscisousinterference_nuevo.class);
                             intent.putExtra("isThePlanPersonalized",personalizedPlan);
                             intent.putExtra("isCustom",false);
                             startActivity(intent);
                         }else {
-                            Intent intent = new Intent(availability_nuevo.this, cultura_nuevo.class);
+                            Intent intent = new Intent(Availability2023.this, cultura_nuevo.class);
                             intent.putExtra("isThePlanPersonalized",personalizedPlan);
                             intent.putExtra("isCustom",false);
                             startActivity(intent);
@@ -7383,52 +7387,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                            "Kweisi Mfume, the president of the NAACP."
+                                "Kweisi Mfume, the president of the NAACP."
                         },
                         {
-                            "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison."
+                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison."
                         },
                         {
-                            "They are more likely to end up in jail."
+                                "They are more likely to end up in jail."
                         },
                         {
-                            "41 percent."
+                                "41 percent."
                         },
                         {
-                            "Yes, according to economist Walter Williams."
+                                "Yes, according to economist Walter Williams."
                         },
                         {
-                            "73 percent."
+                                "73 percent."
                         },
                         {
-                            "The welfare system that allows women to marry the government."
+                                "The welfare system that allows women to marry the government."
                         },
                         {
-                             "Tupac Shaku."
+                                "Tupac Shaku."
                         },
                         {
-                            "Learned helplessness."
+                                "Learned helplessness."
                         },
                         {
-                            "64 percent of poor respondents said yes."
+                                "64 percent of poor respondents said yes."
                         },
                         {
-                            "Discipline and confidence."
+                                "Discipline and confidence."
                         },
                         {
-                            "The ability to calm a child down and teach them how to be a man."
+                                "The ability to calm a child down and teach them how to be a man."
                         },
                         {
-                            "Janitor."
+                                "Janitor."
                         },
                         {
-                            "Hard work wins, and you get out of life what you put into it."
+                                "Hard work wins, and you get out of life what you put into it."
                         },
                         {
-                            "A government policy that prioritizes the importance of fathers."
+                                "A government policy that prioritizes the importance of fathers."
                         },
                         {
-                            "Larry Elder."
+                                "Larry Elder."
                         }
                 };
 
@@ -7557,52 +7561,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                            "60%"
+                                "60%"
                         },
                         {
-                            "4%"
+                                "4%"
                         },
                         {
-                            "87%"
+                                "87%"
                         },
                         {
-                            "1.7%"
+                                "1.7%"
                         },
                         {
-                            "12%"
+                                "12%"
                         },
                         {
-                            "123"
+                                "123"
                         },
                         {
-                            "246"
+                                "246"
                         },
                         {
-                            "National Institute of Justice"
+                                "National Institute of Justice"
                         },
                         {
-                            "Race, Trust, and Police Legitimacy"
+                                "Race, Trust, and Police Legitimacy"
                         },
                         {
-                            "75%"
+                                "75%"
                         },
                         {
-                            "Blacks"
+                                "Blacks"
                         },
                         {
-                           "18 points"
+                                "18 points"
                         },
                         {
-                            "75%"
+                                "75%"
                         },
                         {
-                           "National Highway Traffic Safety Administration"
+                                "National Highway Traffic Safety Administration"
                         },
                         {
-                            "Legal protections"
+                                "Legal protections"
                         },
                         {
-                            "Black"
+                                "Black"
                         }
                 };
 
@@ -7731,52 +7735,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                            "Stop comparing yourself to others"
+                                "Stop comparing yourself to others"
                         },
                         {
-                            "Jerry Seinfeld"
+                                "Jerry Seinfeld"
                         },
                         {
-                            "Jimmy Fallon"
+                                "Jimmy Fallon"
                         },
                         {
-                            "10 years"
+                                "10 years"
                         },
                         {
-                            "Making a living, pursuing excellence, and finding meaning in what you do"
+                                "Making a living, pursuing excellence, and finding meaning in what you do"
                         },
                         {
-                            "Their ability to turn dark personal struggles into brilliant comedy"
+                                "Their ability to turn dark personal struggles into brilliant comedy"
                         },
                         {
-                            "It creates unrealistic expectations"
+                                "It creates unrealistic expectations"
                         },
                         {
-                            "The complete package of their life"
+                                "The complete package of their life"
                         },
                         {
-                            "It's hard"
+                                "It's hard"
                         },
                         {
-                            "Big venues and prime-time shows"
+                                "Big venues and prime-time shows"
                         },
                         {
-                            "Selling out small venues and having a late-night show with half a million viewers"
+                                "Selling out small venues and having a late-night show with half a million viewers"
                         },
                         {
-                            "Everyone is a package deal"
+                                "Everyone is a package deal"
                         },
                         {
-                            "Making a living, pursuing excellence, and finding meaning in what you do"
+                                "Making a living, pursuing excellence, and finding meaning in what you do"
                         },
                         {
-                            "10 years"
+                                "10 years"
                         },
                         {
-                            "Not considering the whole package of someone else's life"
+                                "Not considering the whole package of someone else's life"
                         },
                         {
-                            "To compare yourself only to the past version of yourself"
+                                "To compare yourself only to the past version of yourself"
                         }
                 };
 
@@ -8082,52 +8086,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                            "To describe the differences between men and women."
+                                "To describe the differences between men and women."
                         },
                         {
-                            "They are completely different."
+                                "They are completely different."
                         },
                         {
-                            "Great-grandmother"
+                                "Great-grandmother"
                         },
                         {
-                            "Believing men and women are the same."
+                                "Believing men and women are the same."
                         },
                         {
-                            "A story about a girl who pretended her toy trucks were sleeping."
+                                "A story about a girl who pretended her toy trucks were sleeping."
                         },
                         {
-                            "No, never."
+                                "No, never."
                         },
                         {
-                            "As a casual form of entertainment."
+                                "As a casual form of entertainment."
                         },
                         {
-                            "She feels vulnerable."
+                                "She feels vulnerable."
                         },
                         {
-                            "It is more satisfying emotionally, psychologically, physically, and spiritually."
+                                "It is more satisfying emotionally, psychologically, physically, and spiritually."
                         },
                         {
-                            "The academic and intellectual community."
+                                "The academic and intellectual community."
                         },
                         {
-                            "An Associate Professor of Theology and Philosophy at Biola University."
+                                "An Associate Professor of Theology and Philosophy at Biola University."
                         },
                         {
-                            "To trust common sense and recognize the differences between men and women."
+                                "To trust common sense and recognize the differences between men and women."
                         },
                         {
-                            "Because sex and intimacy have deeper meaning for women."
+                                "Because sex and intimacy have deeper meaning for women."
                         },
                         {
-                            "To avoid conforming to gender stereotypes."
+                                "To avoid conforming to gender stereotypes."
                         },
                         {
-                            "A story about a boy turning a toy truck into a weapon."
+                                "A story about a boy turning a toy truck into a weapon."
                         },
                         {
-                            "Because it is a big deal with deep emotional, psychological, and physical implications."
+                                "Because it is a big deal with deep emotional, psychological, and physical implications."
                         }
                 };
 
@@ -8435,52 +8439,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                            "The woke left is responsible for systemic racism in America."
+                                "The woke left is responsible for systemic racism in America."
                         },
                         {
-                            "Without truth, there can be no peace or harmony."
+                                "Without truth, there can be no peace or harmony."
                         },
                         {
-                            "All of the above."
+                                "All of the above."
                         },
                         {
-                            "The ideology of the left."
+                                "The ideology of the left."
                         },
                         {
-                            "An epidemic of fake claims of racism against people of color."
+                                "An epidemic of fake claims of racism against people of color."
                         },
                         {
-                            "The incident had nothing to do with Floyd being black."
+                                "The incident had nothing to do with Floyd being black."
                         },
                         {
-                            "They are lower than for other students."
+                                "They are lower than for other students."
                         },
                         {
-                            "Judging each person on their merits, not their skin color."
+                                "Judging each person on their merits, not their skin color."
                         },
                         {
-                            "To hold people of color back."
+                                "To hold people of color back."
                         },
                         {
-                            "It is responsible for systemic racism in America."
+                                "It is responsible for systemic racism in America."
                         },
                         {
-                            "The speaker believes the ideology of the left is responsible for systemic racism."
+                                "The speaker believes the ideology of the left is responsible for systemic racism."
                         },
                         {
-                            "The creation of false race hoaxes by the left."
+                                "The creation of false race hoaxes by the left."
                         },
                         {
-                            "They are real and should be addressed."
+                                "They are real and should be addressed."
                         },
                         {
-                            "Judging each person on their merits, not their skin color."
+                                "Judging each person on their merits, not their skin color."
                         },
                         {
-                            "The left."
+                                "The left."
                         },
                         {
-                            "By questioning whether certain beliefs are helping or hurting Black people."
+                                "By questioning whether certain beliefs are helping or hurting Black people."
                         },
                 };
 
@@ -8785,52 +8789,52 @@ public class availability_nuevo extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                            "It was caused by three decades of bank de-regulation."
+                                "It was caused by three decades of bank de-regulation."
                         },
                         {
-                            "Banks stopped lending money to other banks."
+                                "Banks stopped lending money to other banks."
                         },
                         {
-                            "To pump taxpayer cash into America's banks and financial institutions."
+                                "To pump taxpayer cash into America's banks and financial institutions."
                         },
                         {
-                            "The bank was too large and powerful to be allowed to fail."
+                                "The bank was too large and powerful to be allowed to fail."
                         },
                         {
-                            "It created a long-term expectation that the government would always bail out big banks."
+                                "It created a long-term expectation that the government would always bail out big banks."
                         },
                         {
-                            "It bailed out the hedge fund and several big banks that were at risk of failing."
+                                "It bailed out the hedge fund and several big banks that were at risk of failing."
                         },
                         {
-                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
                         },
                         {
-                            "The government wanted to send a message to the financial industry that it could not always rely on government bailouts."
+                                "The government wanted to send a message to the financial industry that it could not always rely on government bailouts."
                         },
                         {
-                            "It led to a credit-market freeze."
+                                "It led to a credit-market freeze."
                         },
                         {
-                            "The government must stop guaranteeing the big banks' losses."
+                                "The government must stop guaranteeing the big banks' losses."
                         },
                         {
-                            "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets."
+                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets."
                         },
                         {
-                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
                         },
                         {
-                            "Banks should expect government bailouts in times of crisis."
+                                "Banks should expect government bailouts in times of crisis."
                         },
                         {
-                            "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
                         },
                         {
-                            "Because he believed that the global financial system was in danger of collapsing."
+                                "Because he believed that the global financial system was in danger of collapsing."
                         },
                         {
-                            "Decrease government involvement in the financial industry."
+                                "Decrease government involvement in the financial industry."
                         }
                 };
 

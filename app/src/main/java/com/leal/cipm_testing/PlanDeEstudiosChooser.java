@@ -16,6 +16,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.screens.Availability2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -519,7 +520,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             startActivity(intent);
 
         }else if(isInPrager){
-            intent = new Intent(PlanDeEstudiosChooser.this,availability_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this, Availability2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("FromListeningDb",isListeningPlan);

@@ -33,6 +33,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
 import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.screens.Availability2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -310,7 +311,7 @@ public class Transicion_nuevo extends AppCompatActivity {
 
                 startActivity(intent);
             }else {
-                Intent intent = new Intent(Transicion_nuevo.this,availability_nuevo.class);
+                Intent intent = new Intent(Transicion_nuevo.this, Availability2023.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
                 startActivity(intent);

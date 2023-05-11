@@ -2,12 +2,8 @@ package com.leal.cipm_testing;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,23 +16,15 @@ import android.widget.Toast;
 
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.Premium2023;
 
 import im.crisp.client.Crisp;
 
@@ -150,6 +138,24 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
+
+    //SCREENS
+    public void availability(View vista) {
+
+        if(prefs.getPremium()==0){
+            Intent intent = new Intent(this, Availability2023.class);
+            startActivity(intent);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+    public void premium(View vist) {
+        Intent intent = new Intent(this, Premium2023.class);
+        startActivity(intent);
+    }
+
     public void tutorialGeneral(View vista) {
         if(prefs.getPremium()==0){
             Intent intento = new Intent(this, Transicion_nuevo.class);
@@ -170,17 +176,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void availability(View vista) {
 
-        if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, availability.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
-
-
-    }
     //billing
     public void Cultura(View vista) {
         if(prefs.getPremium()==0){
@@ -219,10 +215,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
         }
     }
-    public void premium(View vist) {
-        Intent intent = new Intent(this, StoreActivity.class);
-        startActivity(intent);
-    }
+
 
     public void TestNuevo(View vist){
         /*Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();*/
@@ -259,17 +252,6 @@ public class MainActivity extends AppCompatActivity {
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
         }
-
-    }
-    public void chose_aval(View vista) {
-
-        if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, availability_nuevo.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
-
 
     }
     public void chose_conscis(View vista) {

@@ -80,7 +80,7 @@ public class header extends Fragment {
             Screen = "Conscious Interference";
         }
 
-        if (currenttxt.contains("availability_nuevo")) {
+        if (currenttxt.contains("screens.Availability")) {
             // Cambiar el texto del EditText
             editText.setText("Availability");
             Screen = "Availability";
@@ -116,7 +116,7 @@ public class header extends Fragment {
             Screen = "Frases Culturales";
         }
 
-        if (currenttxt.contains("StoreActivity")) {
+        if (currenttxt.contains("screens.Premium")) {
             // Cambiar el texto del EditText
             editText.setText("Hazte Premium");
             Screen = "Hazte Premium";

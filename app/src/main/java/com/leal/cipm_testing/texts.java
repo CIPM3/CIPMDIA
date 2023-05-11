@@ -2,7 +2,7 @@ package com.leal.cipm_testing;
 
 public class texts {
 
-    String BlackFathers = "Years ago, I interviewed Kweisi Mfume, then the president of the NAACP. “As between the presence of white racism and the absence of black fathers,” I asked, “Which poses the bigger threat to the black community?” Without missing a beat, he said, “The absence of black fathers.”\n" +
+    public String BlackFathers = "Years ago, I interviewed Kweisi Mfume, then the president of the NAACP. “As between the presence of white racism and the absence of black fathers,” I asked, “Which poses the bigger threat to the black community?” Without missing a beat, he said, “The absence of black fathers.”\n" +
             "\n" +
             "It was President Barack Obama who said, \"We all know the statistics. That children who grow up without a father are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison.”\n" +
             "\n" +
@@ -36,7 +36,7 @@ public class texts {
             "\n" +
             "I’m Larry Elder for Prager University.";
 
-    String isAmericaRacist = "Is racism still a major problem in Ame\u00AD\u00ADrica\u00AD? President Barack Obama certainly thinks so. He said that racism is “in our DNA.” Really? If racism is in our DNA, doesn’t that mean it's immutable, unchangeable?\n" +
+    public String isAmericaRacist = "Is racism still a major problem in Ame\u00AD\u00ADrica\u00AD? President Barack Obama certainly thinks so. He said that racism is “in our DNA.” Really? If racism is in our DNA, doesn’t that mean it's immutable, unchangeable?\n" +
             "\n" +
             "But America has changed -- and dramatically so. In 1960, 60% of Americans said they would never vote for a black president. Almost 50 years later, the black man who said racism is in America’s DNA was elected president, and four years later re-elected. That’s only the most obvious example of racial progress. There are many others.\n" +
             "\n" +
@@ -71,7 +71,7 @@ public class texts {
             "I’m Larry Elder for Prager University.\n" +
             "\n";
 
-    String DontCompareYourselftoOthers = "Do you ever look at the lives of people around you and say, “Man, I wish that was me!”?\n" +
+    public String DontCompareYourselftoOthers = "Do you ever look at the lives of people around you and say, “Man, I wish that was me!”?\n" +
             "\n" +
             "You know you do. Everybody does. But I bet you never compared yourself to me. Haven’t heard of me? I do have my own TV show...in the middle of the night.\n" +
             "\n" +
@@ -114,7 +114,7 @@ public class texts {
             "\n" +
             "I’m Tom Shillue for Prager University.\n";
 
-    String fixyoursel = "Blaming others for your problems is a complete waste of time. When you do that, you don’t learn anything.\n" +
+    public String fixyoursel = "Blaming others for your problems is a complete waste of time. When you do that, you don’t learn anything.\n" +
             "\n" +
             "You can’t grow, and you can’t mature. Thus, you can’t make your life better.\n" +
             "\n" +
@@ -163,7 +163,7 @@ public class texts {
             "\n" +
             "I’m Jordan Peterson, Professor of Psychology at the University of Toronto, for Prager University.\n";
 
-    String AreMenAndWomenDifferent = "Have you ever pushed a beach ball underwater? What happens? It pops right back up!\n" +
+    public String AreMenAndWomenDifferent = "Have you ever pushed a beach ball underwater? What happens? It pops right back up!\n" +
             "Because of its nature, a beach ball will not stay submerged.\n" +
             "\n" +
             "The same is true for men and women. Each has a distinct nature that will always rise to the surface.\n" +
@@ -204,7 +204,7 @@ public class texts {
             "\n" +
             "I'm Sean McDowell, Associate Professor of Theology and Philosophy at Biola University, for Prager University.";
 
-    String dontWasteYourTime = "Women, here’s a revolutionary idea: Date with a purpose. What purpose? Getting married.\n" +
+    public String dontWasteYourTime = "Women, here’s a revolutionary idea: Date with a purpose. What purpose? Getting married.\n" +
             "\n" +
             "Whoa! Am I moving too fast for you? Making you uncomfortable? Dating, you say, is just—well, dating. You know—hook ups, casual flings, having fun.\n" +
             "\n" +
@@ -252,7 +252,7 @@ public class texts {
             "\n" +
             "I’m Lauren Chen, host of Pseudo-Intellectual on BlazeTV, for Prager University.\n";
 
-    String HowtoMakeOurCitiesSafer = "After two decades of relative peace, violent crime has again become a major issue in the United States.\n" +
+    public String HowtoMakeOurCitiesSafer = "After two decades of relative peace, violent crime has again become a major issue in the United States.\n" +
             "\n" +
             "In 2020, homicides rose by 30 percent, a record for a one-year increase.\n" +
             "\n" +
@@ -340,7 +340,7 @@ public class texts {
             "\n" +
             "I’m Tom Hogan, former federal and local prosecutor and criminal defense lawyer, for Prager University.";
 
-    String howtoEndSystemicRacism = "There is systemic racism in this country. \n" +
+    public String howtoEndSystemicRacism = "There is systemic racism in this country. \n" +
             "\n" +
             "And people of color are paying a terrible price because of it.\n" +
             "\n" +
@@ -439,7 +439,7 @@ public class texts {
             "\n" +
             "I’m Amala Ekpunobi for Prager University.\n";
 
-    String ShouldGovernmentBailOutBigBanks = "In 2008, America experienced the biggest meltdown of its financial sector since the Great Depression. The conventional wisdom is that this failure and subsequent government rescue, commonly known as \"the bailout\" was brought about by three decades of bank de-regulation. There were a lot of causes for the meltdown, but deregulation wasn't one of them. Ironically, it wasn't because the banks had become unmoored from government control that led them into the financial storm, it was because they had become too closely tied to government. For three decades Uncle Sam, like an enabling parent, had always \"been there\" when the big banks got into trouble. The shock in 2008 was that for one brief moment, Uncle Sam wasn't there. \n" +
+    public String ShouldGovernmentBailOutBigBanks = "In 2008, America experienced the biggest meltdown of its financial sector since the Great Depression. The conventional wisdom is that this failure and subsequent government rescue, commonly known as \"the bailout\" was brought about by three decades of bank de-regulation. There were a lot of causes for the meltdown, but deregulation wasn't one of them. Ironically, it wasn't because the banks had become unmoored from government control that led them into the financial storm, it was because they had become too closely tied to government. For three decades Uncle Sam, like an enabling parent, had always \"been there\" when the big banks got into trouble. The shock in 2008 was that for one brief moment, Uncle Sam wasn't there. \n" +
             "\n" +
             "In the wee hours of September 15, 2008, Lehman Brothers filed for bankruptcy. The financial industry waited for the Feds to step in and save Lehman bondholders like it saved those of Bear Stearns some months earlier. That didn't happen. Global financial markets seized up. As the Dow Jones Industrial average fell 498 points, or nearly 4.4 percent, financial institutions effectively went on strike. Banks wouldn't lend money to other banks and thus, indirectly, to the public because they had no idea which financial institution might go belly up next. The economy can withstand a stock-market crash, but a credit-market freeze -- essentially a cash freeze -- can cause a Depression, as credit underpins almost all business and personal activities. Indeed, some large companies, including General Electric, were so dependent on these short-term credit markets that they were in danger of not being able to pay their workers. \n" +
             "\n" +
