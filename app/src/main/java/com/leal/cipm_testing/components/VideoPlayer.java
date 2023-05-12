@@ -117,7 +117,7 @@ public class VideoPlayer extends Fragment {
                     break;
                 case "Training Day Rabbit Has The Gun":
                     if(explanation){
-                        ShowVideo("http://adrianlealcaldera.com/trainingdayrabbithasthegunExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("http://adrianlealcaldera.com/trainingdayrabbithasthegunClip.mp4");
                     }
@@ -166,7 +166,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Boys in the Hood":
                     if(explanation){
-                        ShowVideo("https://adrianlealcaldera.com/BoyzntheHoodExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/BoyzntheHoodClip.mp4");
                     }
@@ -174,7 +174,7 @@ public class VideoPlayer extends Fragment {
 
                 case "Cultura y Fonética":
                     if(explanation){
-                        ShowVideo("https://adrianlealcaldera.com/CulturayFone%CC%81ticaExp.mp4");
+                        ShowVideo(video);
                     }else{
                         ShowVideo("https://adrianlealcaldera.com/CulturayFone%CC%81ticaClip.mp4");
                     }

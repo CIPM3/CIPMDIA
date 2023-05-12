@@ -606,7 +606,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             14000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Is%20no%20fun%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"Who want to get paid"
                     {
@@ -622,7 +622,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             37000,*/
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Who%20want%20to%20get%20paid%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"I'm glad to hear that"
                     {
@@ -633,7 +633,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             51000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Im%20glad%20to%20hear%20that%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"What are you gonna do"
                     {
@@ -644,7 +644,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             59000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/What%20are%20you%20gonna%20do%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"There it is"
                     {
@@ -655,7 +655,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             69000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/There%20it%20is%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"Havent ever - ain't never"
                     {
@@ -666,7 +666,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             75000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Havent%20ever%20-%20aint%20never%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"You get me twisted"
                     {
@@ -677,7 +677,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             120000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/You%20get%20me%20twisted%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"Ain't got it in you"
                     {
@@ -693,7 +693,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             178000,*/
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Aint%20got%20it%20in%20you%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"Ima get - i'm going to get"
                     {
@@ -719,7 +719,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             177000,*/
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Ima%20get%20-%20im%20going%20to%20get%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     },
                     //"You ain't go"
                     {
@@ -735,7 +735,7 @@ public class Cultura2023 extends AppCompatActivity{
                              //timeStop
                              160000,*/
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/You%20aint%20go%20-%20Training%20Day%20Rabbit%20Has%20The%20Gun.mp4"
                     }
             },
 
@@ -1077,7 +1077,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             14000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Whats%20wrong%20with%20you%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"What the fuck are you looking at"
                     {
@@ -1088,7 +1088,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             17000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/What%20the%20fuck%20are%20you%20looking%20at%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"I’m Still trying to find out “Tryna”"
                     {
@@ -1099,7 +1099,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             19000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Im%20Still%20trying%20to%20find%20out%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"We got a problem here?"
                     {
@@ -1110,7 +1110,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             23000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/We%20got%20a%20problem%20here%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"Start some shit"
                     {
@@ -1121,7 +1121,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             57000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Start%20some%20shit%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"That’s why fool be getting shot all the time"
                     {
@@ -1132,7 +1132,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             63000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Thats%20why%20fool%20be%20getting%20shot%20all%20the%20time%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"Tryna show how hard they is"
                     {
@@ -1143,7 +1143,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             66000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Tryna%20show%20how%20hard%20they%20is%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"You be doing that shit, too"
                     {
@@ -1154,7 +1154,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             72000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/You%20be%20doing%20that%20shit,%20too%20-%20Boys%20in%20the%20Hood.mp4"
                     },
                     //"I’m getting the fuck out of LA"
                     {
@@ -1165,7 +1165,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             106000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Im%20getting%20the%20fuck%20out%20of%20LA%20-%20Boys%20in%20the%20Hood.mp4"
                     }
             },
 
@@ -1180,7 +1180,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             2080,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Look%20man%20I%20dont%20mean%20no%20disrespect%20or%20nothing%20G%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"I’m just trying to see"
                     {
@@ -1191,7 +1191,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             3000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Im%20just%20trying%20to%20see%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"If can get a little bro"
                     {
@@ -1202,7 +1202,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             3450,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/If%20can%20get%20a%20little%20bro%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"You can’t get nothing man"
                     {
@@ -1213,7 +1213,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             5000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/You%20cant%20get%20nothing%20man%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"You know what time it is"
                     {
@@ -1224,7 +1224,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             6000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/You%20know%20what%20time%20it%20is%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"I keep looking out for you"
                     {
@@ -1235,7 +1235,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             7500,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/I%20keep%20looking%20out%20for%20you%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"Just a little something man"
                     {
@@ -1246,7 +1246,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             8800,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/Just%20a%20little%20something%20man%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"All my soothing cost a little something"
                     {
@@ -1257,7 +1257,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             10800,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/All%20my%20soothing%20cost%20a%20little%20something%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"If you ain’t got it get to stepping"
                     {
@@ -1268,7 +1268,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             12070,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/If%20you%20aint%20got%20it%20get%20to%20stepping%20-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
                     //"I am not fixing to repeat myself"
                     {
@@ -1279,7 +1279,7 @@ public class Cultura2023 extends AppCompatActivity{
                             //timeStop
                             14000,
                             //URL EXP
-                            ""
+                            "https://adrianlealcaldera.com/I%20am%20not%20fixing%20to%20repeat%20myself-%20Cultura%20y%20Fone%CC%81tica.mp4"
                     },
             },
 
@@ -1584,7 +1584,7 @@ public class Cultura2023 extends AppCompatActivity{
     public void checkPremiun(){
         //USUARIO PREMIUM
         if(prefs.getPremium()==0){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPrem, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium2023, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
