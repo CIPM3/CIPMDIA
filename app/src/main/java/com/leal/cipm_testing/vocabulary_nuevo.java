@@ -39,6 +39,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
 import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.screens.Estructura2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -406,7 +407,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
         if(temp.length==1){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(vocabulary_nuevo.this,estructura_nuevo.class);
+            Intent intent = new Intent(vocabulary_nuevo.this, Estructura2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("basicSctructures",isBasicStructures );
             intent.putExtra("isCustom",false);

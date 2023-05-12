@@ -20,9 +20,11 @@ public class Generator3 {
     String ob2;
     String eng2;
     String eng;
-    String gens;
-    String gene;
-    String gene2;
+
+    public String gens;
+    public String gene;
+    public String gene2;
+
 
     String verbDif1[]={
             "Intrans ","Special ","People ",

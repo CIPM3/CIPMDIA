@@ -24,6 +24,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.Cultura2023;
+import com.leal.cipm_testing.screens.Estructura2023;
 import com.leal.cipm_testing.screens.Premium2023;
 
 import im.crisp.client.Crisp;
@@ -155,6 +157,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Premium2023.class);
         startActivity(intent);
     }
+    public void estructura(View vist) {
+        Intent intent = new Intent(this, Estructura2023.class);
+        startActivity(intent);
+    }
+
+    public void Cultura(View vista) {
+        if(prefs.getPremium()==0){
+            Intent intento = new Intent(MainActivity.this, Cultura2023.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void tutorialGeneral(View vista) {
         if(prefs.getPremium()==0){
@@ -178,14 +193,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //billing
-    public void Cultura(View vista) {
-        if(prefs.getPremium()==0){
-            Intent intento = new Intent(MainActivity.this, Culture.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
-    }
+
     public void myPlan(View vist){
        Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
         intent.putExtra("key", user.getUid());
@@ -237,10 +245,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Provisonal ventanas de eleccion
-    public void chose_est(View vista) {
-        Intent intento = new Intent(this, estructura_nuevo.class);
-        startActivity(intento);
-    }
     public void chose_vocab(View vista) {
         Intent intento = new Intent(this, vocabulary_nuevo.class);
         startActivity(intento);

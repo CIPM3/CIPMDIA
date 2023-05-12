@@ -242,13 +242,13 @@ public class Generator<vib> {
                     "el padre", "la madre"}
     };
 
-    String gens;
-    String gene;
-    String gene2;
-    String gene3;
-    String gene4;
-    String gene5;
-    String gene6;
+    public String gens;
+    public String gene;
+    public String gene2;
+    public String gene3;
+    public String gene4;
+    public String gene5;
+    public String gene6;
 
     // presentes
     public void GenPresSimp1() {

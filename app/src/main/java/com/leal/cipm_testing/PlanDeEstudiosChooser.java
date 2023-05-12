@@ -17,6 +17,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.Cultura2023;
+import com.leal.cipm_testing.screens.Estructura2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -351,7 +353,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         BasicListeningPlan=true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,cultura_nuevo.class);
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this, Cultura2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("BasicListeningPlan",BasicListeningPlan);
                         startActivity(intent);
@@ -411,7 +413,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         nonbasics=true;
                         isPlanIntermedioStandard=true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this, Estructura2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("isNonBasics",nonbasics);
                         intent.putExtra("isPlanIntermedioStandard",isPlanIntermedioStandard);
@@ -494,7 +496,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
         }else if(isInStructure){
-            intent = new Intent(PlanDeEstudiosChooser.this,estructura_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this,Estructura2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("isFromListeningDb",isListeningPlan) ;
@@ -527,7 +529,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
             startActivity(intent);
         }else if(isInCulture){
-            intent = new Intent(PlanDeEstudiosChooser.this,cultura_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this,Cultura2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("FromBasicRecomended",isPlanBasicRecommended);

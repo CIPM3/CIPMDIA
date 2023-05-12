@@ -3,20 +3,15 @@ package com.leal.cipm_testing.components;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.leal.cipm_testing.Cultura2023;
+import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
 
@@ -86,7 +81,7 @@ public class header extends Fragment {
             Screen = "Availability";
         }
 
-        if (currenttxt.contains("estructura_nuevo")) {
+        if (currenttxt.contains("screens.Estructura")) {
             // Cambiar el texto del EditText
             editText.setText("Structures");
             Screen = "Structures";

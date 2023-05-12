@@ -1,4 +1,4 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,7 +9,6 @@ import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -33,7 +32,13 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.Culturalphrases;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
+import com.leal.cipm_testing.conscisousinterference_nuevo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -1338,9 +1343,6 @@ public class Cultura2023 extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cultura2023);
 
-        vv = findViewById(R.id.videoView1);
-        vf = findViewById(R.id.videoView1box);
-
         spin = findViewById(R.id.spinuno);
         textspin1 = findViewById(R.id.textspin1);
 
@@ -1416,7 +1418,7 @@ public class Cultura2023 extends AppCompatActivity{
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             vmp=documentSnapshot.toObject(VocabModeloPersistencia.class );
                             assert vmp != null;
-                            temp= vmp.resultArray.toArray(new String[0]);
+                            temp= vmp.getResultArray().toArray(new String[0]);
                             ArrayAdapter<String> adapter = new ArrayAdapter<String>(Cultura2023.this, android.R.layout.simple_list_item_1,temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
@@ -1539,13 +1541,13 @@ public class Cultura2023 extends AppCompatActivity{
         if(temp.length==1){
 
             if(BasicListeningPlan || BasicListeningPlanFromDb ){
-                Intent intent = new Intent(Cultura2023.this,estructura_nuevo.class);
+                Intent intent = new Intent(Cultura2023.this, Estructura2023.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 intent.putExtra("basicSctructures",true);
                 intent.putExtra("BasicListeningPlan",BasicListeningPlan || BasicListeningPlanFromDb);
                 startActivity(intent);
             }else{
-                Intent intent = new Intent(Cultura2023.this,conscisousinterference_nuevo.class);
+                Intent intent = new Intent(Cultura2023.this, conscisousinterference_nuevo.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 startActivity(intent);
             }
@@ -1561,7 +1563,7 @@ public class Cultura2023 extends AppCompatActivity{
             if(temp.length==1){
 
                 if(BasicListeningPlan || BasicListeningPlanFromDb ){
-                    Intent intent = new Intent(Cultura2023.this,estructura_nuevo.class);
+                    Intent intent = new Intent(Cultura2023.this,Estructura2023.class);
                     intent.putExtra("isThePlanPersonalized",personalizedPlan);
                     intent.putExtra("basicSctructures",true);
                     intent.putExtra("BasicListeningPlan",BasicListeningPlan || BasicListeningPlanFromDb);
@@ -1646,6 +1648,65 @@ public class Cultura2023 extends AppCompatActivity{
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
 
+        if(selection.equals("Tutorial")){
+            text_exp.setText("Seleccione una estructura para continuar con la practica");
+            ocultartodo();
+        }else {
+            lay_btn_empezar.setVisibility(View.VISIBLE);
+            videoPlayer();
+        }
+        switch (selection){
+            case "Moonlight":
+                posSele = 0;
+                break;
+            case "Rick and Morty":
+                posSele = 1;
+                break;
+
+            case "Do You Want Pepsi":
+                posSele = 2;
+                break;
+            case "Sangre Por Sangre Foodline":
+                posSele = 3;
+                break;
+            case "Sangre Por Sangre Watch El Paisaje":
+                posSele = 4;
+                break;
+            case "Training Day Rabbit Has The Gun":
+                posSele = 5;
+                break;
+
+            case "Hancock Train":
+                posSele = 6;
+                break;
+
+            case "Malcom in the Middle Teacher":
+                posSele = 7;
+                break;
+
+            case "Sangre Por Sangre Comedor":
+                posSele = 8;
+                break;
+            case "Dave Chapelle Man Rape":
+                posSele = 9;
+                break;
+            case "Análisis de cultura Gringa y Frases Coloquiales 2":
+                posSele = 10;
+                break;
+
+            case "Boys in the Hood":
+                posSele = 11;
+                break;
+
+            case "Cultura y Fonética":
+                posSele = 12;
+                break;
+
+            case "Kings of the Hills Drugs":
+                posSele = 13;
+                break;
+        }
+
         VideoPlayer video_player = new VideoPlayer();
         Bundle args = new Bundle();
         args.putString("tema", selection);
@@ -1657,15 +1718,6 @@ public class Cultura2023 extends AppCompatActivity{
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
                 .commit();
-
-
-        if(selection.equals("Tutorial")){
-            text_exp.setText("Seleccione una estructura para continuar con la practica");
-            ocultartodo();
-        }else {
-            lay_btn_empezar.setVisibility(View.VISIBLE);
-            videoPlayer();
-        }
     }
 
     //ACTIVA LA INTERFAZ PARA EL VIDEO
@@ -1797,127 +1849,12 @@ public class Cultura2023 extends AppCompatActivity{
 
         String keyWord;
         int StartTime,StopTime;
-        switch (selection){
-            case "Moonlight":
-                posSele = 0;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
 
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Rick and Morty":
-                posSele = 1;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
+        keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
+        StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
+        StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
 
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Do You Want Pepsi":
-                posSele = 2;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Sangre Por Sangre Foodline":
-                posSele = 3;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Sangre Por Sangre Watch El Paisaje":
-                posSele = 4;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Training Day Rabbit Has The Gun":
-                posSele = 5;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Hancock Train":
-                posSele = 6;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Malcom in the Middle Teacher":
-                posSele = 7;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Sangre Por Sangre Comedor":
-                posSele = 8;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Dave Chapelle Man Rape":
-                posSele = 9;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-            case "Análisis de cultura Gringa y Frases Coloquiales 2":
-                posSele = 10;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Boys in the Hood":
-                posSele = 11;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Cultura y Fonética":
-                posSele = 12;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-
-            case "Kings of the Hills Drugs":
-                posSele = 13;
-                keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
-                StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
-                StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
-
-                setKeyWordToCulture(g,keyWord,StartTime,StopTime);
-                break;
-        }
+        setKeyWordToCulture(g,keyWord,StartTime,StopTime);
     }
 
     //VALIDACIONES DEL TIEMPO Y SI TERMINO LA LISTA DE PAlABRAS CLAVE

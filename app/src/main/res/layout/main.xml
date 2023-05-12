@@ -148,7 +148,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/ic_grupo_146"
                     android:gravity="bottom"
-                    android:onClick="chose_est"
+                    android:onClick="estructura"
                     android:orientation="vertical">
 
                     <TextView
@@ -225,7 +225,7 @@
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:onClick="chose_cultura"
+                    android:onClick="Cultura"
                     >
 
                     <LinearLayout

@@ -1,29 +1,23 @@
-package com.leal.cipm_testing;
-
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,15 +29,23 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.CustomArrayAfterTestingHolder;
+import com.leal.cipm_testing.Generator;
+import com.leal.cipm_testing.Generator2;
+import com.leal.cipm_testing.Generator3;
+import com.leal.cipm_testing.Generator4;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.spa_int_nuevo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class estructura_nuevo extends AppCompatActivity {
+public class Estructura2023 extends AppCompatActivity {
     Spinner spin;
     Spinner spin2;
     TextView txt1;
@@ -95,19 +97,19 @@ public class estructura_nuevo extends AppCompatActivity {
             isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
-     DocumentReference docrefStructures;
+    DocumentReference docrefStructures;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_estructura_nuevo);
+        setContentView(R.layout.activity_estructura2023);
+
         spin = (Spinner) findViewById(R.id.spinuno);
         txt1 = (TextView) findViewById(R.id.textspin1);
         txteng = (TextView) findViewById(R.id.txteng);
         txteng2 = (TextView) findViewById(R.id.txteng2);
         spin2 = (Spinner) findViewById(R.id.spinrango);
         txt2 = (TextView) findViewById(R.id.textspin2);
-        vv = (VideoView) findViewById(R.id.videoView1);
         texto_inicial = (LinearLayout) findViewById(R.id.texto_inicial);
         spanish_lay = (LinearLayout) findViewById(R.id.spanish_lay);
         input_lay = (LinearLayout) findViewById(R.id.input_lay);
@@ -170,6 +172,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
         PremiumControler();
     }
+
     boolean isCustom;
     boolean isNonBasics;
     boolean isBasics;
@@ -239,9 +242,9 @@ public class estructura_nuevo extends AppCompatActivity {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
 
-                            temp= vmp.basicStructuresArray.toArray(new String[0]);
+                            temp= vmp.getBasicStructuresArray().toArray(new String[0]);
 
-                            adapter = new ArrayAdapter<String>(estructura_nuevo.this, android.R.layout.simple_list_item_1, temp);
+                            adapter = new ArrayAdapter<String>(Estructura2023.this, android.R.layout.simple_list_item_1, temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -472,7 +475,7 @@ public class estructura_nuevo extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                              selection = spin.getSelectedItem().toString();
+                            selection = spin.getSelectedItem().toString();
                             txt1.setText(selection);
 
                             vv.setVisibility(View.GONE);
@@ -506,9 +509,9 @@ public class estructura_nuevo extends AppCompatActivity {
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             studentObject=documentSnapshot.toObject(CustomArrayAfterTestingHolder.class) ;
                             assert studentObject != null;
-                            temp= studentObject.StructureArrayAfterTEsting.toArray(new String[0]);
+                            temp= studentObject.getStructureArrayAfterTEsting().toArray(new String[0]);
 
-                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(estructura_nuevo.this, R.array.rango, android.R.layout.simple_spinner_item);
+                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Estructura2023.this, R.array.rango, android.R.layout.simple_spinner_item);
                             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin2.setAdapter(adapter2);
                             spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -576,22 +579,22 @@ public class estructura_nuevo extends AppCompatActivity {
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-           if(isBasicsArray){
-               Toast.makeText(this,"hay que cambiar array",Toast.LENGTH_SHORT).show();
-               temp= arrayGetter.nonBasicStructures;
-               isNonBasicsArray=true;
-               PremiumControler();
-               sendInfotoDb();
-           }else if(isNonBasicsArray){
+            if(isBasicsArray){
+                Toast.makeText(this,"hay que cambiar array",Toast.LENGTH_SHORT).show();
+                temp= arrayGetter.nonBasicStructures;
+                isNonBasicsArray=true;
+                PremiumControler();
+                sendInfotoDb();
+            }else if(isNonBasicsArray){
 
-               Intent intent = new Intent(estructura_nuevo.this,spa_int_nuevo.class);
-               intent.putExtra("isThePlanPersonalized",personalizedPlan);
-               intent.putExtra("PlanIntermedioStandard",isPlanIntermedio||isplanintermedioFromDb);
-               intent.putExtra("isCustom",false);
-               intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
+                Intent intent = new Intent(Estructura2023.this, spa_int_nuevo.class);
+                intent.putExtra("isThePlanPersonalized",personalizedPlan);
+                intent.putExtra("PlanIntermedioStandard",isPlanIntermedio||isplanintermedioFromDb);
+                intent.putExtra("isCustom",false);
+                intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
 
-               startActivity(intent);
-           }
+                startActivity(intent);
+            }
         }else{
             // aqui el temp que es un array es igual a este metodo que le quita la seleci[on
             temp = RemoveApprovedElementFromArray(selection);
@@ -12543,39 +12546,39 @@ public class estructura_nuevo extends AppCompatActivity {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(),
                                 new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
+                                    @Override
+                                    public void onInit(int i) {
+                                        Locale spanish = new Locale("es", "MX");
+                                        if (i == TextToSpeech.SUCCESS) {
+                                            int lang = tt1.setLanguage(spanish);
+                                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                                @Override
+                                                public void onStart(String s) {
+                                                }
+
+                                                @Override
+                                                public void onDone(String utteranceId) {
+                                                    // iniciarentradavoz();
+                                                }
+
+                                                @Override
+                                                public void onError(String s) {
+                                                }
+                                            });
+                                            Generator gen1 = new Generator();
+                                            gen1.GenCouldPerfCont2();
+                                            sptx.setText(gen1.gens);
+                                            txteng.setText(gen1.gene);
+
+                                            answerinp.setText("");
+                                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+
                                         }
 
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
-                                        }
+                                    }
 
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCouldPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                                });
                         break;
 
                     case "100 a 200":
@@ -31001,7 +31004,7 @@ public class estructura_nuevo extends AppCompatActivity {
 
                         if(personalizedPlan ){
                             SubtractSelectionAndSendinfoToDb();
-                            Toast.makeText(estructura_nuevo.this, "is in personalized", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Estructura2023.this, "is in personalized", Toast.LENGTH_SHORT).show();
 
                         }
 
@@ -31091,7 +31094,7 @@ public class estructura_nuevo extends AppCompatActivity {
         ttr.speak(txteng.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
     }
     public void speakdecir(View vista){
-          iniciarentradavoz();
+        iniciarentradavoz();
     }
     public void limpans(){
         //RESETEA EL INPUT
@@ -33162,6 +33165,4 @@ public class estructura_nuevo extends AppCompatActivity {
         }
 
     }
-
-
 }

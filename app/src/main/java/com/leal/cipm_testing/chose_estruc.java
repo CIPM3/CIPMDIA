@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.leal.cipm_testing.screens.Estructura2023;
+
 public class chose_estruc extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,7 @@ public class chose_estruc extends AppCompatActivity {
 
 
     public void est_new(View vista) {
-        Intent intento = new Intent(this, estructura_nuevo.class);
+        Intent intento = new Intent(this, Estructura2023.class);
         startActivity(intento);
     }
 
@@ -26,12 +28,12 @@ public class chose_estruc extends AppCompatActivity {
     }
 
     public void chat_maestro(View vista) {
-        Intent intento = new Intent(this, estructura_nuevo.class);
+        Intent intento = new Intent(this, Estructura2023.class);
         startActivity(intento);
     }
 
     public void profile(View vista) {
-        Intent intento = new Intent(this, estructura_nuevo.class);
+        Intent intento = new Intent(this, Estructura2023.class);
         startActivity(intento);
     }
 }

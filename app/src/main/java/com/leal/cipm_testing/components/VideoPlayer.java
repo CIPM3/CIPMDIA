@@ -190,7 +190,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("estructura_nuevo")){
+        if(currenttxt.contains("screens.Estructura")){
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/structurastut.mp4");

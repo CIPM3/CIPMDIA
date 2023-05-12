@@ -35,8 +35,6 @@ import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.conscisousinterference_nuevo;
-import com.leal.cipm_testing.cultura_nuevo;
-import com.leal.cipm_testing.estructura_nuevo;
 import com.leal.cipm_testing.texts;
 
 import java.text.DecimalFormat;
@@ -271,7 +269,7 @@ public class Availability2023 extends AppCompatActivity {
         if(temp.length==1){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(Availability2023.this, estructura_nuevo.class);
+            Intent intent = new Intent(Availability2023.this, Estructura2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("basicSctructures",isBasicStructures );
             intent.putExtra("isCustom",false);
@@ -302,7 +300,7 @@ public class Availability2023 extends AppCompatActivity {
                             intent.putExtra("isCustom",false);
                             startActivity(intent);
                         }else {
-                            Intent intent = new Intent(Availability2023.this, cultura_nuevo.class);
+                            Intent intent = new Intent(Availability2023.this, Cultura2023.class);
                             intent.putExtra("isThePlanPersonalized",personalizedPlan);
                             intent.putExtra("isCustom",false);
                             startActivity(intent);

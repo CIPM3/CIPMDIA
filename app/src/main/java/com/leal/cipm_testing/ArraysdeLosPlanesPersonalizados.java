@@ -12,14 +12,14 @@ public class ArraysdeLosPlanesPersonalizados {
     public String[] pragerGratis= {"Tutorial","Black Fathers","Is America Racist?"};
     String[] arrayVocab= {"0 to 50", "50 to 100"};
     // faltan los demas modales
-    String[] basicStructures = {"Present Simple", "Present Continuous","Present Perfect","Present Perfect Continuous",
+    public String[] basicStructures = {"Present Simple", "Present Continuous","Present Perfect","Present Perfect Continuous",
             "Past Simple", "Past Continuous", "Past Perfect","Past Perfect Continuous", "Future Simple",
             "Future Continuous", "Future Perfect", "Future Perfect Continuous", "Would Simple", "Would Continuous",
             "Would Perfect", "Would Perfect Continuous" };
-    String[] nonBasicStructures =
+    public String[] nonBasicStructures =
             {"For To","Want To", "Supposed To Present", "Wish Past Perfect","Used To", "Be Used To"};
 
-    String culturaGratis[] = {"Tutorial"
+    public String[] culturaGratis = {"Tutorial"
     , "Moonlight Explanation 1", "Moonlight Clip 1",
             "Rick and Morty Explanation 2",
             "Rick and Morty Clip 2","Do You Want Pepsi Explanation 3", "Do You Want Pepsi Clip 3",

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Cultura2023">
+    tools:context=".screens.Cultura2023">
 
     <ScrollView
         android:id="@+id/scrollView5"
