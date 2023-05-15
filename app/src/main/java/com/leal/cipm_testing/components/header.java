@@ -51,6 +51,11 @@ public class header extends Fragment {
     public void ActualizarDondeEstoy(){
         String currenttxt = SaberDondeEstoy();
 
+        if(currenttxt.contains("FormularioInfo")){
+            editText.setText("Formulario");
+            Screen = "Formulario";
+        }
+
         if (currenttxt.contains("Cultura")) {
             // Cambiar el texto del EditText
             editText.setText("Culture");

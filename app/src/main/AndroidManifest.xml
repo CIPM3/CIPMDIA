@@ -17,27 +17,28 @@
 
         <!-- CARPETA SCREENS -->
         <activity
-            android:name=".screens.Estructura2023"
+            android:name=".FormularioInfo2023"
             android:exported="false"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.Estructura2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".screens.Premium2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".screens.Availability2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".screens.Cultura2023"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
-        <!-- FIN CARPETA SCREENS -->
+            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
         <activity
             android:name=".ConInt2023"
             android:exported="false" />
-
         <activity
             android:name=".test_student"
             android:exported="false" />

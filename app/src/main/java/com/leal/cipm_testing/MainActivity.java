@@ -192,6 +192,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void Form(View v){
+        Intent intento = new Intent(this, FormularioInfo2023.class);
+        startActivity(intento);
+    }
+
     //billing
 
     public void myPlan(View vist){
