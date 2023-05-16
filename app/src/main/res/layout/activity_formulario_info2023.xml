@@ -51,11 +51,11 @@
                 android:layout_marginVertical="20dp"
                 android:gravity="center"
                 >
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/user_photo"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/add_foto"
-                    android:backgroundTint="@color/gray_light"
                     />
             </LinearLayout>
             <!--INPUTS NOMBRE APELLIDO-->
