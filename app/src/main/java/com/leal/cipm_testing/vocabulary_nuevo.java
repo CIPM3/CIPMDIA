@@ -70,6 +70,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
     LinearLayout btn_emp_lay;
     LinearLayout btn_cont_lay;
     LinearLayout txt_exp;
+    TextView spa_sent;
     Spinner spin;
     String selection;
     TextView sptx;
@@ -102,8 +103,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulary_nuevo);
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
-        vf = findViewById(R.id.vf);
-        vv = findViewById(R.id.vv);
+
 
         sptx = findViewById(R.id.spanishsentence);
         engtx = findViewById(R.id.txteng);
@@ -112,6 +112,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
         btncheck = findViewById(R.id.btncheck);
 
+        spa_sent = findViewById(R.id.spa_sent);
         resplay = findViewById(R.id.resplay);
         answer_lay = findViewById(R.id.answer_lay);
         spanish_lay = findViewById(R.id.spanish_lay);
@@ -427,7 +428,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -478,6 +479,23 @@ public class vocabulary_nuevo extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView4, video_player)
                 .commit();
+
+        if(selection.equals("Tutorial")){
+            spa_sent.setText("Seleccione una estructura y rango para continuar con la practica");
+            btn_emp_lay.setVisibility(View.GONE);
+            txt_exp.setVisibility(View.VISIBLE);
+            ocultartodo();
+        }else {
+            btn_emp_lay.setVisibility(View.VISIBLE);
+            videoPlayer();
+        }
+    }
+
+    //ACTIVA LA INTERFAZ PARA EL VIDEO
+    public void videoPlayer(){
+        spa_sent.setText("Lee la frase y escribela en ingles");
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        ocultarlay();
     }
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER 1
@@ -486,430 +504,338 @@ public class vocabulary_nuevo extends AppCompatActivity {
         mySpinner.performClick();
     }
 
-    public void showV(View vista) {
-
-        vf.setVisibility(View.GONE);
-        vv.setVisibility(View.VISIBLE);
-
-        switch (selection) {
-            case "Tutorial":
-                Uri urit = Uri.parse("https://adrianlealcaldera.com/vocabtut.mp4");
-                vv.setVideoURI(urit);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-            case "0 to 50":
-                Uri uri = Uri.parse("http://adrianlealcaldera.com/vocablowq.mp4");
-                vv.setVideoURI(uri);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "50 to 100":
-                Uri uri1 = Uri.parse("http://adrianlealcaldera.com/51a100.mp4");
-                vv.setVideoURI(uri1);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "100 to 150":
-                Uri uri2 = Uri.parse("http://adrianlealcaldera.com/100a150.mp4");
-                vv.setVideoURI(uri2);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "150 to 200":
-                Uri uri3 = Uri.parse("http://adrianlealcaldera.com/151-200.mp4");
-                vv.setVideoURI(uri3);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "200 to 250":
-                Uri uri4 = Uri.parse("http://adrianlealcaldera.com/200a250.mp4");
-                vv.setVideoURI(uri4);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "250 to 300":
-                Uri uri5 = Uri.parse("http://adrianlealcaldera.com/250a300.mp4");
-                vv.setVideoURI(uri5);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "300 to 350":
-                Uri uri6 = Uri.parse("http://adrianlealcaldera.com/300-350.mp4");
-                vv.setVideoURI(uri6);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "350 to 400":
-                Uri uri7 = Uri.parse("http://adrianlealcaldera.com/350a400bq.mp4");
-                vv.setVideoURI(uri7);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-            case "400 to 500":
-                Uri uri8 = Uri.parse("http://adrianlealcaldera.com/400a500lq.mp4");
-                vv.setVideoURI(uri8);
-                vv.setMediaController(new MediaController(this));
-                vv.requestFocus();
-                vv.start();
-                break;
-
-
-        }
-
-    }
-
     public void practice(View v) {
-        txt_exp.setVisibility(View.GONE);
         btn_emp_lay.setVisibility(View.GONE);
 
         spanish_lay.setVisibility(View.VISIBLE);
         input_lay.setVisibility(View.VISIBLE);
 
         btn_check_lay.setVisibility(View.VISIBLE);
-        btn_cont_lay.setVisibility(View.VISIBLE);
+        btn_cont_lay.setVisibility(View.GONE);
         answer_lay.setVisibility(View.GONE);
 
         resplay.setVisibility(View.GONE);
 
         answerinp.setBackgroundColor(Color.WHITE);
         opclay.setBackgroundColor(Color.WHITE);
+        if(!selection.equals("Tutorial")){
+            mostrarlay();
+            switch (selection) {
 
-        switch (selection) {
+                case "0 to 50":
+                    gen.gencerotofifty();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-
-            case "Tutorial":
-
-                Toast.makeText(this, "estas en tutorial, elige un rango", Toast.LENGTH_SHORT).show();
-                break;
-            case "0 to 50":
-                gen.gencerotofifty();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
-
-                tts = new TextToSpeech(getApplicationContext(),
-                        new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                    tts = new TextToSpeech(getApplicationContext(),
+                            new TextToSpeech.OnInitListener() {
                                 @Override
-                                public void onStart(String s) {
-                                }
+                                public void onInit(int i) {
+                                    Locale spanish = new Locale("es", "MX");
+                                    if (i == TextToSpeech.SUCCESS) {
+                                        int lang = tts.setLanguage(spanish);
+                                        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                            @Override
+                                            public void onStart(String s) {
+                                            }
 
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                   // iniciarentradavoz();
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
-                        }
-
-                    }
-                });
-                break;
-
-            case "50 to 100":
-                gen.fiftohun();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
-
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                            @Override
+                                            public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                                // iniciarentradavoz();
+                                            }
 
-                                @Override
-                                public void onError(String s) {
+                                            @Override
+                                            public void onError(String s) {
+                                            }
+                                        });
+                                        tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    }
+
                                 }
                             });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                    break;
+
+                case "50 to 100":
+                    gen.fiftohun();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
+
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
+
+                                    @Override
+                                    public void onDone(String utteranceId) {
+
+
+                                        // iniciarentradavoz();
+                                    }
+
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
 
-                    }
-                });
-                break;
+                case "100 to 150":
+                    gen.cientociencin();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-            case "100 to 150":
-                gen.cientociencin();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
+                case "150 to 200":
+                    gen.C150a200();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-                    }
-                });
-                break;
-            case "150 to 200":
-                gen.C150a200();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
+                case "200 to 250":
+                    gen.C200a250();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-                    }
-                });
-                break;
-            case "200 to 250":
-                gen.C200a250();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
+                case "250 to 300":
+                    gen.C250a300();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-                    }
-                });
-                break;
-            case "250 to 300":
-                gen.C250a300();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
+                case "300 to 350":
+                    gen.C300a350();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-                    }
-                });
-                break;
-            case "300 to 350":
-                gen.C300a350();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
 
-                    }
-                });
-                break;
+                case "350 to 400":
+                    gen.C350a400();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-            case "350 to 400":
-                gen.C350a400();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
+                case "400 to 500":
+                    gen.C400a500();
+                    answerinp.setText("");
+                    sptx.setText(gen.gens);
+                    engtx.setText(gen.gene);
 
-                    }
-                });
-                break;
-            case "400 to 500":
-                gen.C400a500();
-                answerinp.setText("");
-                sptx.setText(gen.gens);
-                engtx.setText(gen.gene);
+                    tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        @Override
+                        public void onInit(int i) {
+                            Locale spanish = new Locale("es", "MX");
+                            if (i == TextToSpeech.SUCCESS) {
+                                int lang = tts.setLanguage(spanish);
+                                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                    @Override
+                                    public void onStart(String s) {
+                                    }
 
-                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tts.setLanguage(spanish);
-                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
+                                    @Override
+                                    public void onDone(String utteranceId) {
 
 
-                                   // iniciarentradavoz();
-                                }
+                                        // iniciarentradavoz();
+                                    }
 
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                                    @Override
+                                    public void onError(String s) {
+                                    }
+                                });
+                                tts.speak("como dirías..." + sptx.getText().toString().trim(), 0, null, "zero");
+                            }
+
                         }
+                    });
+                    break;
 
-                    }
-                });
-                break;
-
+            }
+        }else{
+            Toast.makeText(this, "estas en tutorial, elige una interferencia", Toast.LENGTH_SHORT).show();
         }
     }
     public void checkanswer(View vista) {
@@ -930,6 +856,12 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
             //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
+
+            //PASAR DE PREGUNTA
+            btn_cont_lay.setVisibility(View.VISIBLE);
+
+            //ESCONDER CHEQUEAR RESPUESTA
+            btn_check_lay.setVisibility(View.GONE);
 
             btncheck.setText("Chequea tu respuesta");
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -1002,6 +934,10 @@ public class vocabulary_nuevo extends AppCompatActivity {
                     }
                 }
             });
+
+            //PASAR DE PREGUNTA
+            btn_cont_lay.setVisibility(View.VISIBLE);
+
         }
 
     }
@@ -1037,6 +973,29 @@ public class vocabulary_nuevo extends AppCompatActivity {
             startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException e) {
         }
+    }
+
+    public void ocultartodo(){
+        spanish_lay.setVisibility(View.GONE);
+        input_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+    }
+    public void ocultarlay(){
+        spanish_lay.setVisibility(View.GONE);
+        input_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+    }
+    public void mostrarlay(){
+        spanish_lay.setVisibility(View.VISIBLE);
+        input_lay.setVisibility(View.VISIBLE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.VISIBLE);
     }
 
     //VALIDACIONES DE TEXTO Y AUDIO
