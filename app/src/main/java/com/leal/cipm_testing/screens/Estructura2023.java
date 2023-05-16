@@ -609,7 +609,7 @@ public class Estructura2023 extends AppCompatActivity {
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==1){
+        if(prefs.getPremium()==0){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -30949,11 +30949,10 @@ public class Estructura2023 extends AppCompatActivity {
     //MUESTRA LOS LAY DE STRUCTURA
     public void mostrar_layout(){
         texto_inicial.setVisibility(View.GONE);
-
         spanish_lay.setVisibility(View.VISIBLE);
         input_lay.setVisibility(View.VISIBLE);
         btn_lay.setVisibility(View.VISIBLE);
-        btn_cont_lay.setVisibility(View.VISIBLE);
+        btn_cont_lay.setVisibility(View.GONE);
     }
 
     //VALIDACIONES DE TEXTO Y AUDIO
@@ -30976,6 +30975,9 @@ public class Estructura2023 extends AppCompatActivity {
             //LAYOUT QUE MUESTRA ICONOS
             resplay.setVisibility(View.VISIBLE);
             resplay.setBackground(correctIcon);
+
+            //ESCONDER BOTON CHEQUEA TU RESPUESTA
+            btn_lay.setVisibility(View.GONE);
 
             //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);

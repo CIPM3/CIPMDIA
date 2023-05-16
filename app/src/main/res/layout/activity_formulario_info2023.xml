@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FormularioInfo2023"
-    android:background="@color/white"
+    android:background="@color/azul"
     >
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
         android:orientation="vertical"
+        android:background="@color/azul"
         >
-
         <!--Header-->
         <LinearLayout
             android:id="@+id/header"
@@ -51,76 +54,101 @@
                 android:layout_marginVertical="20dp"
                 android:gravity="center"
                 >
-                <ImageView
-                    android:id="@+id/user_photo"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/add_foto"
-                    />
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/roundedlayout"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/user_photo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/add_foto">
+                    </ImageView>
+                </LinearLayout>
             </LinearLayout>
+
             <!--INPUTS NOMBRE APELLIDO-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 >
+                <!--NOMBRE APELLIDO-->
                 <EditText
                     android:id="@+id/input_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/boton_redondeado"
-                    android:backgroundTint="@color/gray_light"
+                    android:backgroundTint="@color/white"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="5dp"
                     android:textSize="15dp"
                     android:hint="Nombre"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:layout_weight="1"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
                     android:textStyle="bold"
-                    android:layout_marginRight="2dp"
                     />
+
+                <!--APELLIDO-->
                 <EditText
                     android:id="@+id/input_apellido"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/boton_redondeado"
-                    android:backgroundTint="@color/gray_light"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="10dp"
                     android:paddingHorizontal="10dp"
-                    android:paddingVertical="5dp"
                     android:textSize="15dp"
                     android:hint="Apellido"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:layout_weight="1"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
                     android:textStyle="bold"
-                    android:layout_marginLeft="2dp"
+                    />
+
+                <!--NUMERO-->
+                <EditText
+                    android:id="@+id/input_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/boton_redondeado"
+                    android:backgroundTint="@color/white"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="15dp"
+                    android:hint="Telefono"
+                    android:inputType="number"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
+                    android:textStyle="bold"
                     />
             </LinearLayout>
+
             <!--SPINNERS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="5dp"
                 >
-                <!--Spinner-->
+                <!--Spinner Donde Eres-->
                 <LinearLayout
                     android:onClick="activaSpinner1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical"
                     android:gravity="bottom"
-                    android:layout_weight="1"
                     android:layout_marginRight="2dp"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="De Donde eres?"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:textAlignment="textStart"
                         android:layout_marginBottom="10dp"
@@ -128,8 +156,10 @@
                         />
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:orientation="horizontal"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/white"
                         >
                         <!--text-->
                         <LinearLayout
@@ -146,8 +176,11 @@
                                 android:layout_height="wrap_content"
                                 android:text="Mexico"
                                 android:textColor="@color/gray"
+                                android:textColorHint="@color/gray"
                                 android:textSize="15dp"
                                 android:textStyle="bold"
+                                android:paddingVertical="5dp"
+                                android:paddingHorizontal="10dp"
                                 />
                         </LinearLayout>
 
@@ -165,37 +198,39 @@
                                 android:layout_height="25dp"
                                 android:background="@drawable/ic_grupo_select"
                                 android:gravity="end"
+                                android:layout_marginEnd="10dp"
                                 android:spinnerMode="dialog"
                                 android:theme="@style/MySpinnerStyle"
                                 />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-                <!--Spinner-->
+
+                <!--Spinner Clases Antes-->
                 <LinearLayout
                     android:onClick="activaSpinner2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="bottom"
                     android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_marginLeft="2dp"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Haz tomado clases antes?"
-                        android:textColor="@color/gray"
-                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_marginBottom="10dp"
                         android:textSize="14dp"
                         />
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:orientation="horizontal"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/white"
                         >
                         <!--text-->
                         <LinearLayout
@@ -213,8 +248,11 @@
                                 android:layout_weight="1"
                                 android:text="Estoy Empezando"
                                 android:textColor="@color/gray"
-                                android:textSize="13dp"
+                                android:textColorHint="@color/gray"
+                                android:textSize="15dp"
                                 android:textStyle="bold"
+                                android:paddingVertical="5dp"
+                                android:paddingHorizontal="10dp"
                                 />
                         </LinearLayout>
 
@@ -232,55 +270,29 @@
                                 android:layout_height="25dp"
                                 android:background="@drawable/ic_grupo_select"
                                 android:gravity="end"
+                                android:layout_marginEnd="10dp"
                                 android:spinnerMode="dialog"
                                 android:theme="@style/MySpinnerStyle"
                                 />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <!--NUMERO DE TELEFONO-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                >
-                <EditText
-                    android:id="@+id/input_telefono"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="@drawable/boton_redondeado"
-                    android:backgroundTint="@color/gray_light"
-                    android:paddingVertical="5dp"
-                    android:paddingHorizontal="10dp"
-                    android:textSize="15dp"
-                    android:hint="Telefono"
-                    android:inputType="number"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:layout_weight="1"
-                    android:textStyle="bold"
-                    />
-            </LinearLayout>
-            <!--SPINNER TIEMPO ESTUDIANDO-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <!--Spinner-->
+
+                <!--Spinner Tiempo Estudiando-->
                 <LinearLayout
                     android:onClick="activaSpinner3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="bottom"
                     android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_marginRight="2dp"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cuanto Tiempo llevas Estudiando Ingles?"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:textAlignment="textStart"
                         android:layout_marginBottom="10dp"
@@ -288,8 +300,10 @@
                         />
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:orientation="horizontal"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/white"
                         >
                         <!--text-->
                         <LinearLayout
@@ -297,7 +311,6 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center"
-
                             >
 
                             <TextView
@@ -306,8 +319,11 @@
                                 android:layout_height="wrap_content"
                                 android:text="Estoy Empezando"
                                 android:textColor="@color/gray"
+                                android:textColorHint="@color/gray"
                                 android:textSize="15dp"
                                 android:textStyle="bold"
+                                android:paddingVertical="5dp"
+                                android:paddingHorizontal="10dp"
                                 />
                         </LinearLayout>
 
@@ -325,6 +341,7 @@
                                 android:layout_height="25dp"
                                 android:background="@drawable/ic_grupo_select"
                                 android:gravity="end"
+                                android:layout_marginEnd="10dp"
                                 android:spinnerMode="dialog"
                                 android:theme="@style/MySpinnerStyle"
                                 />
@@ -333,13 +350,14 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <!--BTN ENVIAR FORMULARIO-->
             <LinearLayout
                 android:id="@+id/btn_enviarInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -347,13 +365,14 @@
                     android:background="@drawable/boton_redondeado"
                     android:layout_marginVertical="10dp"
                     android:gravity="center"
-                    android:backgroundTint="@color/gray_light"
+                    android:backgroundTint="@color/rojo"
                     android:onClick="EnviarForm"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:textSize="15dp"
                         android:textStyle="bold"
                         android:text="Enviar Informacion"/>
                 </LinearLayout>
@@ -361,6 +380,7 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 
     <!--BTNS OPC-->
     <LinearLayout

@@ -393,39 +393,41 @@
     </string-array>
 
     <string-array name="paises">
-        <item>México</item>
-        <item>Estados Unidos</item>
-        <item>Canadá</item>
+        <item>Elige un País</item>
         <item>Argentina</item>
-        <item>Brasil</item>
-        <item>Colombia</item>
-        <item>Venezuela</item>
-        <item>Perú</item>
-        <item>Chile</item>
-        <item>Ecuador</item>
-        <item>Bolivia</item>
-        <item>Paraguay</item>
-        <item>Uruguay</item>
-        <item>Costa Rica</item>
-        <item>Panamá</item>
-        <item>Honduras</item>
-        <item>El Salvador</item>
-        <item>Nicaragua</item>
-        <item>Guatemala</item>
-        <item>Belice</item>
-        <item>Antigua y Barbuda</item>
         <item>Bahamas</item>
         <item>Barbados</item>
+        <item>Belice</item>
+        <item>Bolivia</item>
+        <item>Brasil</item>
+        <item>Canadá</item>
+        <item>Chile</item>
+        <item>Colombia</item>
         <item>Dominica</item>
+        <item>Ecuador</item>
         <item>Granada</item>
+        <item>Guatemala</item>
         <item>Haití</item>
+        <item>Honduras</item>
         <item>Jamaica</item>
-        <item>Santa Lucía</item>
+        <item>México</item>
+        <item>Nicaragua</item>
+        <item>Panamá</item>
+        <item>Paraguay</item>
+        <item>Perú</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+        <item>Antigua y Barbuda</item>
+        <item>Costa Rica</item>
+        <item>El Salvador</item>
+        <item>Estados Unidos</item>
         <item>San Cristóbal y Nieves</item>
         <item>San Vicente y las Granadinas</item>
+        <item>Santa Lucía</item>
         <item>Trinidad y Tobago</item>
     </string-array>
     <string-array name="tiempoClases">
+        <item>Elige una opción</item>
         <item>Estoy empezando</item>
         <item>Menos de 6 meses</item>
         <item>1 año</item>
@@ -434,6 +436,7 @@
         <item>Más de 4 años</item>
     </string-array>
     <string-array name="TomadoClases">
+        <item>Elige una opción</item>
         <item>Sí, he tomado.</item>
         <item>No, nunca he tomado.</item>
     </string-array>

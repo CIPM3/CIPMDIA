@@ -162,7 +162,7 @@ public class spa_int_nuevo extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
         //vv = (VideoView) findViewById(R.id.videoView1);
-        vf = (LinearLayout) findViewById(R.id.vf);
+        //vf = (LinearLayout) findViewById(R.id.vf);
         prefs = new Prefs(this);
         PremiumAndArrayControler();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -659,6 +659,7 @@ public class spa_int_nuevo extends AppCompatActivity {
         EditText text = (EditText)findViewById(R.id.answerinput);
         btn_intent_lay.setVisibility(View.GONE);
         text.setText("");
+        btns_lay.setVisibility(View.GONE);
         resppass.setVisibility(View.GONE);
         respinc.setVisibility(View.GONE);
         answerinput.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1304,7 +1305,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             answer_lay.setVisibility(View.GONE);
             btns_lay.setVisibility(View.GONE);
             answer_lay.setVisibility(View.GONE);
-            btn_check_lay.setVisibility(View.VISIBLE);
+            btn_check_lay.setVisibility(View.GONE);
             answer_pos.setVisibility(View.GONE);
 
             resppass.setVisibility(View.VISIBLE);
@@ -1363,6 +1364,7 @@ public class spa_int_nuevo extends AppCompatActivity {
             respescu2.setVisibility(View.VISIBLE);
             respinc.setVisibility(View.VISIBLE);
         }
+
 
     }
     public void possibleanswers(View view){

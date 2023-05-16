@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -59,6 +60,7 @@ public class Transicion_nuevo extends AppCompatActivity {
     String selection;
     TextView sptx;
     TextView engtx;
+    TextView spa_sent;
     EditText answerinp;
     TextView textspin1;
     TextToSpeech ttr;
@@ -97,7 +99,7 @@ public class Transicion_nuevo extends AppCompatActivity {
         engtx = findViewById(R.id.txteng);
         answerinp = findViewById(R.id.answerinput1);
         opclay = findViewById(R.id.opclay);
-
+        spa_sent = findViewById(R.id.spa_sent);
         resplay = findViewById(R.id.resplay);
         answer_lay = findViewById(R.id.answer_lay);
         spanish_lay = findViewById(R.id.spanish_lay);
@@ -385,15 +387,28 @@ public class Transicion_nuevo extends AppCompatActivity {
                 .commit();
 
 
-        /*if(selection.equals("Tutorial")){
-            text_exp.setText("Seleccione una estructura para continuar con la practica");
-            lay_btn_empezar.setVisibility(View.GONE);
-            txt_exp_est.setVisibility(View.VISIBLE);
-        }else {
-            lay_btn_empezar.setVisibility(View.VISIBLE);
+        if(selection.equals("Tutorial")){
+            spa_sent.setText("Seleccione una estructura para continuar con la practica");
+            btn_emp_lay.setVisibility(View.GONE);
+            txt_exp.setVisibility(View.VISIBLE);
+            ocultartodo();
+        }else if(selection.equals("Transiciones")){
+            spa_sent.setText("Seleccione una estructura para continuar con la practica");
+            btn_emp_lay.setVisibility(View.GONE);
+            txt_exp.setVisibility(View.VISIBLE);
+            ocultartodo();
+        } else{
+            btn_emp_lay.setVisibility(View.VISIBLE);
             videoPlayer();
 
-        }*/
+        }
+    }
+
+    //ACTIVA LA INTERFAZ PARA EL VIDEO
+    public void videoPlayer(){
+        spa_sent.setText("Lee la frase y escribela en ingles");
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        ocultarlay();
     }
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER 1
@@ -407,13 +422,6 @@ public class Transicion_nuevo extends AppCompatActivity {
 
 
         switch (selection){
-
-            case "Tutorial":
-                Toast.makeText(this, "estas en tutorial, elige una estructura", Toast.LENGTH_SHORT).show();
-                break;
-            case "Transiciones":
-                Toast.makeText(this, "estas en tutorial, elige una estructura", Toast.LENGTH_SHORT).show();
-                break;
             case "Random":
                 activarInputs();
                 GenConectoresStandarRandomPremium();
@@ -1236,7 +1244,7 @@ public class Transicion_nuevo extends AppCompatActivity {
         input_lay.setVisibility(View.VISIBLE);
 
         btn_check_lay.setVisibility(View.VISIBLE);
-        btn_cont_lay.setVisibility(View.VISIBLE);
+        btn_cont_lay.setVisibility(View.GONE);
         answer_lay.setVisibility(View.GONE);
 
         resplay.setVisibility(View.GONE);
@@ -2055,14 +2063,22 @@ public class Transicion_nuevo extends AppCompatActivity {
         String t = engtx.getText().toString().trim();
         String t2 = answerinp.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
+            //ICONOS
+            Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
+
+            //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
 
+            //LAYOUT QUE MUESTRA ICONOS
             resplay.setVisibility(View.VISIBLE);
-            respescu.setVisibility(View.VISIBLE);
-            
+            resplay.setBackground(correctIcon);
 
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
+
+            //ESCONDER CHEQUEAR RESPUESTA
+            btn_check_lay.setVisibility(View.GONE);
 
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
@@ -2088,19 +2104,27 @@ public class Transicion_nuevo extends AppCompatActivity {
                         // volvemos a llamar premium controler y re/setea el array
                         // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
 
-                        if(true){
+                        /*if(true){
                             Toast.makeText(Transicion_nuevo.this, "before subtract", Toast.LENGTH_SHORT).show();
                             SubtractSelectionAndSendinfoToDb();
-                        }
+                        }*/
                     }
                 }
             });
         }
         else {
+            //ICONOS
+            Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+
+            //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
             opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
 
-            resplay.setVisibility(View.GONE);
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(incorrectIcon);
+
+            //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.VISIBLE);
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
@@ -2132,6 +2156,9 @@ public class Transicion_nuevo extends AppCompatActivity {
                     }
                 }
             });
+
+            //PASAR DE PREGUNTA
+            btn_cont_lay.setVisibility(View.VISIBLE);
         }
 
     }
@@ -2154,6 +2181,29 @@ public class Transicion_nuevo extends AppCompatActivity {
             }
         });
         ttr.speak(engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+    }
+
+    public void ocultartodo(){
+        spanish_lay.setVisibility(View.GONE);
+        input_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+    }
+    public void ocultarlay(){
+        spanish_lay.setVisibility(View.GONE);
+        input_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+    }
+    public void mostrarlay(){
+        spanish_lay.setVisibility(View.VISIBLE);
+        input_lay.setVisibility(View.VISIBLE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.VISIBLE);
     }
 
     //Plugins
