@@ -325,4 +325,11 @@ public class FormularioInfo2023 extends AppCompatActivity {
             Toast.makeText(this, "Ocurrio un Error al enviar la informacion.", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    //VOLVER A MAIN
+    public void main(View vista) {
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
+    }
 }

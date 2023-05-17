@@ -28,7 +28,7 @@
             <!--Hazte Premium-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="100dp"
                 android:background="@color/azul"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
@@ -46,12 +46,12 @@
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/boton_redondeado"
                         android:textColor="@color/black"
-                        android:onClick="premium"
+                        android:onClick="Form"
                         android:textStyle="bold"
-                        android:text="Hazte Premium Aqui"
+                        android:text="Llena el formulario"
                         android:backgroundTint="@color/amarillo"
                         />
 
@@ -100,7 +100,7 @@
 
             </LinearLayout>
 
-            <!--HACER EL TEST-->
+            <!--HACER EL TEST
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -131,12 +131,31 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+            </LinearLayout>-->
+
+            <!--SEPARADOR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/azul"
+                    >
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 >
@@ -355,7 +374,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:background="@drawable/ic_grupo_tes"
+                    android:background="@drawable/ic_grupo_hut"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     android:paddingHorizontal="20dp">
@@ -428,7 +447,6 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:background="@mipmap/logo"
-                    android:onClick="Form"
                     />
                 <LinearLayout
                     android:layout_width="wrap_content"
