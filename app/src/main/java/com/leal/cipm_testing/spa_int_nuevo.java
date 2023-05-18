@@ -33,6 +33,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.components.BottomNav;
 import com.leal.cipm_testing.components.VideoPlayer;
 import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.screens.Transicion2023;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -481,7 +482,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(spa_int_nuevo.this,Transicion_nuevo.class);
+            Intent intent = new Intent(spa_int_nuevo.this, Transicion2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("isCustom",false);
             intent.putExtra("planintermedio",isplanintermedio||isplanintermedioFromDb);

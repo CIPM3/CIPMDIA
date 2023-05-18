@@ -24,9 +24,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.ConInt2023;
 import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.screens.Estructura2023;
+import com.leal.cipm_testing.screens.FormularioInfo2023;
 import com.leal.cipm_testing.screens.Premium2023;
+import com.leal.cipm_testing.screens.Transicion2023;
 
 import im.crisp.client.Crisp;
 
@@ -171,9 +174,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void tutorialGeneral(View vista) {
+    public void myPlan(View vist){
+//       Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+//        intent.putExtra("key", user.getUid());
+//        startActivity(intent);
+
+        Toast.makeText(this, "Actividad en Mantenimiento.", Toast.LENGTH_SHORT).show();
+/*
+        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
+            Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
+        }else{
+            if(prefs.getPremium()==1){
+                Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
+                intent.putExtra("key", user.getUid());
+                startActivity(intent);
+            }else if(prefs.getPremium()==0){
+                Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+            }
+        }
+      */
+
+    }
+    public void Transiciones(View vista) {
         if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, Transicion_nuevo.class);
+            Intent intento = new Intent(this, Transicion2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
@@ -199,27 +223,7 @@ public class MainActivity extends AppCompatActivity {
 
     //billing
 
-    public void myPlan(View vist){
-       Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
-        intent.putExtra("key", user.getUid());
-        startActivity(intent);
 
-
-/*
-        if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
-            Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
-        }else{
-            if(prefs.getPremium()==1){
-                Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
-                intent.putExtra("key", user.getUid());
-                startActivity(intent);
-            }else if(prefs.getPremium()==0){
-                Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-            }
-        }
-      */
-
-    }
     public void ConInt(View vista) {
         if(prefs.getPremium()==0){
             Intent intento = new Intent(this, rachel.class);
@@ -230,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //OJO
     public void TestNuevo(View vist){
         /*Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();*/
         Intent intent = new Intent(this, test_student.class);
@@ -253,15 +258,6 @@ public class MainActivity extends AppCompatActivity {
     public void chose_vocab(View vista) {
         Intent intento = new Intent(this, vocabulary_nuevo.class);
         startActivity(intento);
-    }
-    public void chose_cultura(View vista) {
-        if(prefs.getPremium()==0){
-            Intent intento = new Intent(MainActivity.this, Cultura2023.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
-
     }
     public void chose_conscis(View vista) {
         Intent intento = new Intent(this, ConInt2023.class);

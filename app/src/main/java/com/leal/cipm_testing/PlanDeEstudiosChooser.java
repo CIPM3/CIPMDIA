@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.screens.Availability2023;
 import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.screens.Estructura2023;
+import com.leal.cipm_testing.screens.Transicion2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -514,7 +515,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             startActivity(intent);
         }
         else if(isInTransition){
-            intent = new Intent(PlanDeEstudiosChooser.this,Transicion_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this, Transicion2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("FromListeningDb",isListeningPlan);

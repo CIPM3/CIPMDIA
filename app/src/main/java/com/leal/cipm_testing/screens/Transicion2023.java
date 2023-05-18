@@ -1,15 +1,12 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -19,10 +16,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,16 +26,19 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.Generator;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
-import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.conscisousinterference_nuevo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class Transicion_nuevo extends AppCompatActivity {
+public class Transicion2023 extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     VideoView vv;
@@ -87,11 +85,11 @@ public class Transicion_nuevo extends AppCompatActivity {
     boolean isFromListeningPlanDb,isPlanIntermedioFromDb,isFromListeningPlan;
     Prefs prefs;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transicion_nuevo);
+        setContentView(R.layout.activity_transicion2023);
+
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
 
@@ -111,7 +109,7 @@ public class Transicion_nuevo extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
-        prefs = new Prefs(Transicion_nuevo.this);
+        prefs = new Prefs(Transicion2023.this);
 
         PremiumAndArrayControler();
     }
@@ -161,8 +159,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                         btn_cont_lay.setVisibility(View.GONE);
 
                         resplay.setVisibility(View.GONE);
-                        
-                        
+
+
 
                         answerinp.setBackgroundColor(Color.WHITE);
                         opclay.setBackgroundColor(Color.WHITE);
@@ -189,7 +187,7 @@ public class Transicion_nuevo extends AppCompatActivity {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
                             temp= vmp.resultArray.toArray(new String[0]);
-                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(Transicion_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(Transicion2023.this, android.R.layout.simple_list_item_1,temp  );
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
@@ -207,8 +205,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                                     btn_cont_lay.setVisibility(View.GONE);
 
                                     resplay.setVisibility(View.GONE);
-                                    
-                                    
+
+
 
                                     answerinp.setBackgroundColor(Color.WHITE);
                                     opclay.setBackgroundColor(Color.WHITE);
@@ -244,8 +242,8 @@ public class Transicion_nuevo extends AppCompatActivity {
                             btn_cont_lay.setVisibility(View.GONE);
 
                             resplay.setVisibility(View.GONE);
-                            
-                            
+
+
 
                             answerinp.setBackgroundColor(Color.WHITE);
                             opclay.setBackgroundColor(Color.WHITE);
@@ -307,13 +305,13 @@ public class Transicion_nuevo extends AppCompatActivity {
         if(temp.length==1){
 
             if(isPlanIntermedio||isPlanIntermedioFromDb){
-                Intent intent = new Intent(Transicion_nuevo.this,conscisousinterference_nuevo.class);
+                Intent intent = new Intent(Transicion2023.this, conscisousinterference_nuevo.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 intent.putExtra("planintermedio",isPlanIntermedio);
 
                 startActivity(intent);
             }else {
-                Intent intent = new Intent(Transicion_nuevo.this, Availability2023.class);
+                Intent intent = new Intent(Transicion2023.this, Availability2023.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 intent.putExtra("BasicListeningPlan",isFromListeningPlan||isFromListeningPlanDb);
                 startActivity(intent);
@@ -2232,5 +2230,4 @@ public class Transicion_nuevo extends AppCompatActivity {
         }
 
     }
-
 }

@@ -7,7 +7,7 @@ import java.util.List;
 @IgnoreExtraProperties
 public class VocabModeloPersistencia {
 
-    List<String> resultArray, basicStructuresArray,nonBasicStructuresArray;
+    public List<String> resultArray, basicStructuresArray,nonBasicStructuresArray;
     boolean isInVocab,isInStructure,isInSpanishInt,
             isInCulture,isInPrager,isInTransition,isInintCon,
     isPlanIntermedioStandard,isPlanBasicRecommended,

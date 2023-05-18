@@ -1,4 +1,4 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,11 +22,12 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.leal.cipm_testing.MainActivity;
+import com.leal.cipm_testing.R;
 
 public class FormularioInfo2023 extends AppCompatActivity {
 

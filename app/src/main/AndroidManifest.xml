@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.leal.cipm_testing">
+    package="com.leal.cipm_testing" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="n">
+        tools:targetApi="n" >
 
         <!-- CARPETA SCREENS -->
         <activity
-            android:name=".FormularioInfo2023"
+            android:name=".screens.FormularioInfo2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".screens.Estructura2023"
             android:exported="false"
@@ -35,13 +35,7 @@
         <activity
             android:name=".screens.Cultura2023"
             android:exported="false"
-            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
-        <activity
-            android:name=".ConInt2023"
-            android:exported="false" />
-        <activity
-            android:name=".test_student"
-            android:exported="false" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Registro2023"
             android:exported="false"
@@ -50,11 +44,19 @@
             android:name=".Login2023"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
-            android:name=".Transicion_nuevo"
-            android:exported="false" />
+            android:name=".screens.Transicion2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Transicion"
+            android:name=".screens.ConInt2023"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <!-- FIN CARPETA SCREENS -->
+
+        <activity
+            android:name=".test_student"
             android:exported="false" />
         <activity
             android:name=".MyPlan"
@@ -94,7 +96,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -116,9 +118,7 @@
         <activity
             android:name=".chat_maestro"
             android:exported="false" />
-        <activity
-            android:name=".chose_cultura"
-            android:exported="false" />
+
         <activity
             android:name=".chose_vocab"
             android:exported="false" />
@@ -137,7 +137,7 @@
 
         <service
             android:name=".PushNotificationService"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

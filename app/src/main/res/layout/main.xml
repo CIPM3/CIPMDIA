@@ -367,7 +367,7 @@
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="20dp"
-                android:onClick="tutorialGeneral"
+                android:onClick="Transiciones"
 
                 >
 

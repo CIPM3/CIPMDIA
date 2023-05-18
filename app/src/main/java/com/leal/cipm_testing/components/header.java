@@ -98,7 +98,7 @@ public class header extends Fragment {
             Screen = "Vocabulary";
         }
 
-        if (currenttxt.contains("Transicion_nuevo")) {
+        if (currenttxt.contains("screens.Transicion")) {
             // Cambiar el texto del EditText
             editText.setText("Transiciones");
             Screen = "Transiciones";

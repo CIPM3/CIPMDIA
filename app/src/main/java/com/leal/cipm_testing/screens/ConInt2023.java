@@ -1,6 +1,5 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +11,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +26,12 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.MainActivity;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
+import com.leal.cipm_testing.chat_maestro;
 import com.leal.cipm_testing.components.VideoPlayer;
 
 import java.util.ArrayList;
@@ -509,7 +509,7 @@ public class ConInt2023 extends AppCompatActivity {
                 DialogueBox("Pasar Con Maestro Para Determinar tu Nivel?");
 
             }else {
-                Intent intent = new Intent(ConInt2023.this,MainActivity.class);
+                Intent intent = new Intent(ConInt2023.this, MainActivity.class);
                 startActivity(intent);
             }
 
@@ -549,7 +549,7 @@ public class ConInt2023 extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     if(message.equalsIgnoreCase("Pasar Con Maestro Para Determinar tu Nivel?"))
-                    { Intent intent = new Intent(ConInt2023.this,chat_maestro.class);
+                    { Intent intent = new Intent(ConInt2023.this, chat_maestro.class);
                         startActivity(intent);
                     }else {
                         SubtractSelectionAndSendinfoToDb();
