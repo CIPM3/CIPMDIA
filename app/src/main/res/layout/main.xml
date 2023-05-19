@@ -34,7 +34,7 @@
                 android:paddingHorizontal="15dp"
                 android:paddingTop="30dp"
                 android:paddingBottom="20dp"
-                android:onClick="tutorialGeneral"
+                android:onClick="Form"
 
                 >
 
@@ -202,7 +202,7 @@
                     android:background="@drawable/ic_grupo_147"
                     android:gravity="bottom"
                     android:orientation="vertical"
-                    android:onClick="chose_vocab"
+                    android:onClick="vocabulary"
                     >
 
                     <TextView
@@ -274,7 +274,7 @@
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:onClick="chose_spa_int"
+                    android:onClick="SpaInt"
                     >
 
                     <LinearLayout
@@ -302,7 +302,7 @@
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:onClick="chose_conscis"
+                    android:onClick="ConInt"
                     >
 
                     <LinearLayout

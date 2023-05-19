@@ -61137,7 +61137,7 @@ gene2 = o.ps4eng2;
 
     // interferencias
     // genera interferencias de presente Simp por preposición
-    String gene7;
+    public String gene7;
     //interferencias empiezan
     public void generatepsporprep(){
         int rand = (int)(Math.random()* pronombres.length);

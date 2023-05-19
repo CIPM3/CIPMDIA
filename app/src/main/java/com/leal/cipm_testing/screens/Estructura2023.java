@@ -39,7 +39,6 @@ import com.leal.cipm_testing.Prefs;
 import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.spa_int_nuevo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -119,7 +118,6 @@ public class Estructura2023 extends AppCompatActivity {
         resplay = (LinearLayout) findViewById(R.id.resplay);
         respescu = (LinearLayout) findViewById(R.id.respescu);
         respescu2 = (LinearLayout) findViewById(R.id.respescu2);
-        vf = (LinearLayout) findViewById(R.id.vf);
         respinc = (LinearLayout) findViewById(R.id.respinc);
         opclay = (LinearLayout) findViewById(R.id.opclay);
         btncheck = (TextView) findViewById(R.id.btncheck);
@@ -587,7 +585,7 @@ public class Estructura2023 extends AppCompatActivity {
                 sendInfotoDb();
             }else if(isNonBasicsArray){
 
-                Intent intent = new Intent(Estructura2023.this, spa_int_nuevo.class);
+                Intent intent = new Intent(Estructura2023.this, SpaInt2023.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 intent.putExtra("PlanIntermedioStandard",isPlanIntermedio||isplanintermedioFromDb);
                 intent.putExtra("isCustom",false);

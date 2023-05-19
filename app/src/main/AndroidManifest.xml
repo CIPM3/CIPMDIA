@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.leal.cipm_testing" >
+    package="com.leal.cipm_testing">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="n" >
+        tools:targetApi="n">
 
         <!-- CARPETA SCREENS -->
         <activity
@@ -44,7 +44,6 @@
             android:name=".Login2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".screens.Transicion2023"
             android:exported="false"
@@ -52,9 +51,16 @@
         <activity
             android:name=".screens.ConInt2023"
             android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.Vocabulary2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.SpaInt2023"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <!-- FIN CARPETA SCREENS -->
-
         <activity
             android:name=".test_student"
             android:exported="false" />
@@ -77,9 +83,6 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".spa_int_nuevo"
-            android:exported="false" />
-        <activity
             android:name=".SignIn"
             android:exported="false" />
         <activity
@@ -96,7 +99,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -104,40 +107,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chose_conscisousinterference"
-            android:exported="false" />
-        <activity
-            android:name=".conscisousinterference_nuevo"
-            android:exported="false" />
-        <activity
-            android:name=".vocabulary_nuevo"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".chat_maestro"
             android:exported="false" />
 
-        <activity
-            android:name=".chose_vocab"
-            android:exported="false" />
-        <activity
-            android:name=".chose_estruc"
-            android:exported="false" />
-        <activity
-            android:name=".rachel"
-            android:exported="false" />
-        <activity
-            android:name=".SpanishInt"
-            android:exported="false" />
-        <activity
-            android:name=".vocabulary"
-            android:exported="false" />
-
         <service
             android:name=".PushNotificationService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

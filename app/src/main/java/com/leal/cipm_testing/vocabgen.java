@@ -4,8 +4,8 @@ package com.leal.cipm_testing;
 import android.widget.ListView;
 
 public class vocabgen {
-    String gens;
-    String gene;
+    public String gens;
+    public String gene;
     cerotofifty ob = new cerotofifty();
 
     public void gencerotofifty() {

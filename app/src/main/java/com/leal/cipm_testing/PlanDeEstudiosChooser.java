@@ -17,9 +17,12 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.ConInt2023;
 import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.screens.Estructura2023;
+import com.leal.cipm_testing.screens.SpaInt2023;
 import com.leal.cipm_testing.screens.Transicion2023;
+import com.leal.cipm_testing.screens.Vocabulary2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -324,7 +327,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         isPlanBasicRecommended= true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this, Vocabulary2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("BasicRecomendedPlan",isPlanBasicRecommended);
                         startActivity(intent);
@@ -384,7 +387,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //no hemos decidido a donde mandarlo todavia despues del examen
                         isCustomPlan100 =true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this,Vocabulary2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("Custom100Plan", isCustomPlan100);
                         startActivity(intent);
@@ -445,7 +448,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         isAdvancedPlan=true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this,conscisousinterference_nuevo.class);
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this, ConInt2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         intent.putExtra("AdvancedPlan",isAdvancedPlan);
 
@@ -492,7 +495,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         Intent intent;
         getDBState();
         if(isInVocab){
-            intent = new Intent(PlanDeEstudiosChooser.this,vocabulary_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this,Vocabulary2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
@@ -505,7 +508,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
             startActivity(intent);
         }else if(isInSpanishInt){
-            intent = new Intent(PlanDeEstudiosChooser.this,spa_int_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this, SpaInt2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("isFromListeningDb",isListeningPlan) ;
@@ -538,7 +541,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             startActivity(intent);
         }else if(isInintCons ){
             //esta no esta en la base de datos
-            intent = new Intent(PlanDeEstudiosChooser.this,conscisousinterference_nuevo.class);
+            intent = new Intent(PlanDeEstudiosChooser.this,ConInt2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);

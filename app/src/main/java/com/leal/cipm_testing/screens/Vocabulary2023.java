@@ -1,30 +1,21 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,23 +27,19 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.CustomArrayAfterTestingHolder;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
-import com.leal.cipm_testing.screens.Estructura2023;
+import com.leal.cipm_testing.vocabgen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
 
-import io.grpc.internal.SharedResourceHolder;
-
-public class vocabulary_nuevo extends AppCompatActivity {
+public class Vocabulary2023 extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     VideoView vv;
@@ -79,7 +66,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
     TextView textspin1;
     TextToSpeech ttr;
     TextToSpeech tts;
-    FirebaseAuth       mAuth;
+    FirebaseAuth mAuth;
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
     String[] temp =objetoArrays.arrayVocab;
@@ -96,11 +83,11 @@ public class vocabulary_nuevo extends AppCompatActivity {
     DocumentReference docrefVocab;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vocabulary_nuevo);
+        setContentView(R.layout.activity_vocabulary2023);
+
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
 
@@ -125,10 +112,11 @@ public class vocabulary_nuevo extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
         docrefVocab = db.collection(userid).document("CustomArrayLists");
-        prefs = new Prefs(vocabulary_nuevo.this);
+        prefs = new Prefs(Vocabulary2023.this);
 
         PremiumControler();
     }
+
     CustomArrayAfterTestingHolder caath ;
 
     //DB FUNC
@@ -139,7 +127,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
         personalizedPlan = reciver.getBooleanExtra("isThePlanPersonalized",false);
         isCustom = reciver.getBooleanExtra("isCustom",false);
         is100Custom=reciver.getBooleanExtra("Custom100Plan",false);
-        
+
 
         //si es personalizado jala el array para empezar y luego el de la
         // base de datos correspondiente
@@ -211,7 +199,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
 
                                 ArrayAdapter<String> adapter =
                                         new ArrayAdapter<String>
-                                                        (vocabulary_nuevo.this,
+                                                (Vocabulary2023.this,
                                                         android.R.layout.simple_list_item_1, temp);
                                 spin.setAdapter(adapter);
                                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -302,7 +290,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
                                 vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                                 assert vmp != null;
                                 temp= vmp.resultArray.toArray(new String[0]);
-                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(vocabulary_nuevo.this, android.R.layout.simple_list_item_1,temp  );
+                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(Vocabulary2023.this, android.R.layout.simple_list_item_1,temp  );
                                 spin.setAdapter(adapter);
                                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -408,7 +396,7 @@ public class vocabulary_nuevo extends AppCompatActivity {
         if(temp.length==1){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(vocabulary_nuevo.this, Estructura2023.class);
+            Intent intent = new Intent(Vocabulary2023.this, Estructura2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("basicSctructures",isBasicStructures );
             intent.putExtra("isCustom",false);

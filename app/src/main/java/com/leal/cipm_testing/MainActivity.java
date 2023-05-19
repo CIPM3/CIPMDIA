@@ -29,7 +29,9 @@ import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.screens.Estructura2023;
 import com.leal.cipm_testing.screens.FormularioInfo2023;
 import com.leal.cipm_testing.screens.Premium2023;
+import com.leal.cipm_testing.screens.SpaInt2023;
 import com.leal.cipm_testing.screens.Transicion2023;
+import com.leal.cipm_testing.screens.Vocabulary2023;
 
 import im.crisp.client.Crisp;
 
@@ -207,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
     public void vocabulary(View vista) {
 
         if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, vocabulary.class);
+            Intent intento = new Intent(this, Vocabulary2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
@@ -221,17 +223,31 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
 
-    //billing
-
-
     public void ConInt(View vista) {
         if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, rachel.class);
+            Intent intento = new Intent(this, ConInt2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void SpaInt(View vista) {
+        if(prefs.getPremium()==0){
+            Intent intento = new Intent(this, SpaInt2023.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }
+
+
+        //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
+    }
+
+    //billing
+
+
+
 
 
     //OJO
@@ -252,34 +268,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void masinfo(View vist) {
         gotoURl("https://www.cursosdeinglespersonalizadosenmonterrey.com/");
-    }
-
-    //Provisonal ventanas de eleccion
-    public void chose_vocab(View vista) {
-        Intent intento = new Intent(this, vocabulary_nuevo.class);
-        startActivity(intento);
-    }
-    public void chose_conscis(View vista) {
-        Intent intento = new Intent(this, ConInt2023.class);
-        startActivity(intento);
-       /* if(prefs.getPremium()==1){
-            Intent intento = new Intent(this, conscisousinterference_nuevo.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }*/
-
-    }
-    public void chose_spa_int(View vista) {
-        if(prefs.getPremium()==0){
-            Intent intento = new Intent(this, spa_int_nuevo.class);
-            startActivity(intento);
-        }else if(prefs.getPremium()==0){
-            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
-        }
-
-
-        //Toast.makeText(this, "Esta parte esta bajo construción, perdón por el inconveniente", Toast.LENGTH_SHORT).show();
     }
 
     public void Open_menu(View vista){

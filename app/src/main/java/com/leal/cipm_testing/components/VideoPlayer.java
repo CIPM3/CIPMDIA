@@ -71,7 +71,7 @@ public class VideoPlayer extends Fragment {
     }
     public void SelectUrl() {
         String currenttxt = SaberDondeEstoy();
-        if (currenttxt.contains("Cultura")) {
+        if (currenttxt.contains("screens.Cultura")) {
             // Cambiar el video
             switch (selection){
                 case "Tutorial":
@@ -556,7 +556,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("spa_int_nuevo")){
+        if(currenttxt.contains("screens.SpaInt")){
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("http://adrianlealcaldera.com/intdeesptut.mp4");
@@ -585,7 +585,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("ConInt2023")){
+        if(currenttxt.contains("screens.ConInt2023")){
             switch (selection) {
 
                 case "Tutorial":
@@ -667,7 +667,7 @@ public class VideoPlayer extends Fragment {
 
         }
 
-        if(currenttxt.contains("vocabulary_nuevo")){
+        if(currenttxt.contains("screens.Vocabulary")){
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/vocabtut.mp4");
@@ -759,7 +759,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if (currenttxt.contains("Transicion_nuevo")) {
+        if (currenttxt.contains("screens.Transicion")) {
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/app%20transici%C3%B3n.mp4");

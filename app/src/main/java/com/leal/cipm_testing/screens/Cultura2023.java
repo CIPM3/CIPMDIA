@@ -38,7 +38,6 @@ import com.leal.cipm_testing.Prefs;
 import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.conscisousinterference_nuevo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -1547,7 +1546,7 @@ public class Cultura2023 extends AppCompatActivity{
                 intent.putExtra("BasicListeningPlan",BasicListeningPlan || BasicListeningPlanFromDb);
                 startActivity(intent);
             }else{
-                Intent intent = new Intent(Cultura2023.this, conscisousinterference_nuevo.class);
+                Intent intent = new Intent(Cultura2023.this, ConInt2023.class);
                 intent.putExtra("isThePlanPersonalized",personalizedPlan);
                 startActivity(intent);
             }
@@ -1570,7 +1569,7 @@ public class Cultura2023 extends AppCompatActivity{
 
                     startActivity(intent);
                 }else {
-                    Intent intent = new Intent(Cultura2023.this,conscisousinterference_nuevo.class);
+                    Intent intent = new Intent(Cultura2023.this,ConInt2023.class);
                     intent.putExtra("isThePlanPersonalized",personalizedPlan);
                     startActivity(intent);
                 }

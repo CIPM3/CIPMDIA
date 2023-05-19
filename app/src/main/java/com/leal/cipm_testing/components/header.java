@@ -68,7 +68,7 @@ public class header extends Fragment {
             Screen = "Test";
         }
 
-        if (currenttxt.contains("spa_int_nuevo")) {
+        if (currenttxt.contains("screens.SpaInt")) {
             // Cambiar el texto del EditText
             editText.setText("Spanish Interference");
             Screen = "Spanish Interference";
@@ -92,7 +92,7 @@ public class header extends Fragment {
             Screen = "Structures";
         }
 
-        if (currenttxt.contains("vocabulary_nuevo")) {
+        if (currenttxt.contains("screens.Vocabulary")) {
             // Cambiar el texto del EditText
             editText.setText("Vocabulary");
             Screen = "Vocabulary";

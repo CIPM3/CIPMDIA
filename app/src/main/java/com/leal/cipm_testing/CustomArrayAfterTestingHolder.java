@@ -5,7 +5,7 @@ import java.util.List;
 public class CustomArrayAfterTestingHolder {
 
     List<String> StructureArrayAfterTEsting;
-    List<String> VocabArrayAfterTEsting;
+    public List<String> VocabArrayAfterTEsting;
     List<String> SpanishInterferenceArrayAfterTEsting;
     List<String> ConsciousInterferenceArrayAfterTEsting; 
     List<String> CultureArrayAfterTEsting; 

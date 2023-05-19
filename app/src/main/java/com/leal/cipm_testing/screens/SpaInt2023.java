@@ -1,13 +1,10 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -18,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,10 +26,13 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
+import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
+import com.leal.cipm_testing.Generator;
+import com.leal.cipm_testing.Generator2;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.VocabModeloPersistencia;
 import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.components.header;
-import com.leal.cipm_testing.screens.Transicion2023;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -41,7 +40,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class spa_int_nuevo extends AppCompatActivity {
+public class SpaInt2023 extends AppCompatActivity {
     String t0, t1, t2, t3, t4, t5, t6;
 
     LinearLayout vf;
@@ -94,7 +93,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     TextToSpeech tt1;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
     String[] ArrayWithElementRemoved;
-    FirebaseAuth       mAuth;
+    FirebaseAuth mAuth;
     int PositionOfElementsLeft=0;
     String[] temp= {"Por Sujeto", "Por Preposición", "Por Objeto","Interferencia Reflexiva",
             "Interferencia Pasiva"};
@@ -113,10 +112,12 @@ public class spa_int_nuevo extends AppCompatActivity {
 
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     public static final int REC_CODE_SPEECH_INPUT = 100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spa_int_nuevo);
+        setContentView(R.layout.activity_spa_int2023);
+
         spanish_lay = (LinearLayout) findViewById(R.id.spanish_lay);
         input_lay = (LinearLayout) findViewById(R.id.input_lay);
         opclay = (LinearLayout) findViewById(R.id.opclay);
@@ -174,6 +175,8 @@ public class spa_int_nuevo extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
     //DB FUNC
@@ -257,7 +260,7 @@ public class spa_int_nuevo extends AppCompatActivity {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
                             temp= vmp.resultArray.toArray(new String[0]);
-                            adapter = new ArrayAdapter<String>(spa_int_nuevo.this, android.R.layout.simple_list_item_1, temp);
+                            adapter = new ArrayAdapter<String>(SpaInt2023.this, android.R.layout.simple_list_item_1, temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -482,7 +485,7 @@ public class spa_int_nuevo extends AppCompatActivity {
     }
     public void SubtractSelectionAndSendinfoToDb(){
         if(temp.length==1){
-            Intent intent = new Intent(spa_int_nuevo.this, Transicion2023.class);
+            Intent intent = new Intent(SpaInt2023.this, Transicion2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
             intent.putExtra("isCustom",false);
             intent.putExtra("planintermedio",isplanintermedio||isplanintermedioFromDb);
@@ -635,9 +638,9 @@ public class spa_int_nuevo extends AppCompatActivity {
 
     //ACTIVA LA INTERFAZ PARA EL VIDEO
     public void videoPlayer(){
-            text_exp.setText("Lee la frase y escribela en ingles");
-            btn_emp_lay.setVisibility(View.VISIBLE);
-            ocultarlay();
+        text_exp.setText("Lee la frase y escribela en ingles");
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        ocultarlay();
     }
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER 1, 2, 3
@@ -1403,5 +1406,4 @@ public class spa_int_nuevo extends AppCompatActivity {
         }
 
     }
-
 }
