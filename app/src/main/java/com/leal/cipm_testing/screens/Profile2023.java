@@ -1,17 +1,16 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -25,13 +24,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.screens.Login2023;
+import com.leal.cipm_testing.R;
 
 import java.util.Map;
 
 import im.crisp.client.Crisp;
 
-public class profile extends AppCompatActivity {
+public class Profile2023 extends AppCompatActivity {
     Button logoutbtn,hamtest;
     ImageView Imgdeluser;
     TextView nombredeluser;
@@ -47,12 +46,10 @@ public class profile extends AppCompatActivity {
     DocumentReference docRef;
 
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-
+        setContentView(R.layout.activity_profile2);
         //VARIABLES
         tvnameuser = findViewById(R.id.UserNameTv);
         mAuth= FirebaseAuth.getInstance();
@@ -75,7 +72,6 @@ public class profile extends AppCompatActivity {
         btn_menu_closed.setVisibility(View.GONE);
 
         docRef  = db.collection(userid).document("EstudentsInfo");
-
     }
 
     protected void onStart() {

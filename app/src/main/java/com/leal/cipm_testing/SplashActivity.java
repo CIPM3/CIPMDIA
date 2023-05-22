@@ -10,6 +10,7 @@ import android.os.Handler;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingResult;
+import com.leal.cipm_testing.screens.Login2023;
 
 
 public class SplashActivity extends AppCompatActivity {

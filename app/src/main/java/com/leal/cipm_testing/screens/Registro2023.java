@@ -1,14 +1,12 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.leal.cipm_testing.R;
 
 public class Registro2023 extends AppCompatActivity {
     private EditText etname,etRegEmail,etRegPassword,etpassword2;
@@ -48,7 +47,7 @@ public class Registro2023 extends AppCompatActivity {
         tvloginhere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Registro2023.this,Login2023.class));
+                startActivity(new Intent(Registro2023.this, Login2023.class));
             }
         });
     }

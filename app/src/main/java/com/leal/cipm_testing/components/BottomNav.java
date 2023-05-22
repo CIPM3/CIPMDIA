@@ -15,8 +15,8 @@ import androidx.fragment.app.Fragment;
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.chat_maestro;
-import com.leal.cipm_testing.profile;
 import com.leal.cipm_testing.screens.Premium2023;
+import com.leal.cipm_testing.screens.Profile2023;
 import com.leal.cipm_testing.test_student;
 
 public class BottomNav extends Fragment {
@@ -58,7 +58,7 @@ public class BottomNav extends Fragment {
         });
 
         btn_profile.setOnClickListener(v -> {
-            Intent intento = new Intent(getContext(), profile.class);
+            Intent intento = new Intent(getContext(), Profile2023.class);
             startActivity(intento);
         });
 
@@ -88,7 +88,7 @@ public class BottomNav extends Fragment {
             bgMain.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if(currenttxt.contains("test_student")){
+        if(currenttxt.contains("screens.Test")){
             bgTest.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
@@ -96,7 +96,7 @@ public class BottomNav extends Fragment {
             bgChat.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if(currenttxt.contains("profile")){
+        if(currenttxt.contains("screens.Profile")){
             bgProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 

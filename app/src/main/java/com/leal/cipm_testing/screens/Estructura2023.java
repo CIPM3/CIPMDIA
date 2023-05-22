@@ -43,6 +43,7 @@ import com.leal.cipm_testing.components.VideoPlayer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Estructura2023 extends AppCompatActivity {
     Spinner spin;
@@ -721,35 +722,30 @@ public class Estructura2023 extends AppCompatActivity {
     public void dificulty1Activation(View vista){
         limpans();
         algosele = "dif1";
-        checarischeck();
-        mostrar_layout();
         r = 0;
+        practice();
     }
     public void dificulty2Activation(View vista){
         limpans();
         algosele = "dif2";
-        checarischeck();
-        mostrar_layout();
         r = 1;
-
+        practice();
     }
     public void dificulty3Activation(View vista){
         limpans();
         algosele = "dif3";
-        checarischeck();
-        mostrar_layout();
         r = 2;
+        practice();
     }
     public void dificulty4Activation(View vista){
         limpans();
         algosele = "dif4";
-        checarischeck();
-        mostrar_layout();
         r = 3;
+        practice();
     }
 
     //ACTIVA LA PRACTICA
-    public void practice(View vista){
+    public void practice(){
         switch(r){
             case 0:
                 dificulty1();
@@ -9790,6 +9786,7 @@ public class Estructura2023 extends AppCompatActivity {
         checarischeck();
         mostrar_layout();
         r = 1;
+
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -18694,6 +18691,7 @@ public class Estructura2023 extends AppCompatActivity {
         checarischeck();
         mostrar_layout();
         r = 2;
+
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -24798,6 +24796,7 @@ public class Estructura2023 extends AppCompatActivity {
         checarischeck();
         mostrar_layout();
         r = 3;
+
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -30897,60 +30896,66 @@ public class Estructura2023 extends AppCompatActivity {
     }
     //CHECAR QUE BTN FUE SELECCIONADO
     public void checarischeck(){
+        if(!selection.equals("Tutorial")){
+            if(algosele == "dif1"){
+                //SE ACTIVA EL BTN
+                btndif1.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif1.setTextColor(Color.WHITE);
 
-        if(algosele == "dif1"){
-            //SE ACTIVA EL BTN
-            btndif1.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
-            btndif1.setTextColor(Color.WHITE);
+                btndif2.setBackgroundResource(R.drawable.borde_azul);
+                btndif2.setTextColor(Color.parseColor("#407BFB"));
+                btndif3.setBackgroundResource(R.drawable.borde_azul);
+                btndif3.setTextColor(Color.parseColor("#407BFB"));
+                btndif4.setBackgroundResource(R.drawable.borde_azul);
+                btndif4.setTextColor(Color.parseColor("#407BFB"));
+            }
+            if(algosele == "dif2"){
+                //SE ACTIVA EL BTN
+                btndif2.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif2.setTextColor(Color.WHITE);
 
-            btndif2.setBackgroundResource(R.drawable.borde_azul);
-            btndif2.setTextColor(Color.parseColor("#407BFB"));
-            btndif3.setBackgroundResource(R.drawable.borde_azul);
-            btndif3.setTextColor(Color.parseColor("#407BFB"));
-            btndif4.setBackgroundResource(R.drawable.borde_azul);
-            btndif4.setTextColor(Color.parseColor("#407BFB"));
-        }
-        if(algosele == "dif2"){
-            btndif2.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
-            btndif2.setTextColor(Color.WHITE);
+                btndif1.setBackgroundResource(R.drawable.borde_azul);
+                btndif1.setTextColor(Color.parseColor("#407BFB"));
+                btndif3.setBackgroundResource(R.drawable.borde_azul);
+                btndif3.setTextColor(Color.parseColor("#407BFB"));
+                btndif4.setBackgroundResource(R.drawable.borde_azul);
+                btndif4.setTextColor(Color.parseColor("#407BFB"));
+            }
+            if(algosele == "dif3"){
+                //SE ACTIVA EL BTN
+                btndif3.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif2.setTextColor(Color.WHITE);
 
-            btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif1.setTextColor(Color.parseColor("#407BFB"));
-            btndif3.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif3.setTextColor(Color.parseColor("#407BFB"));
-            btndif4.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif4.setTextColor(Color.parseColor("#407BFB"));
-        }
-        if(algosele == "dif3"){
-            btndif3.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
-            btndif3.setTextColor(Color.WHITE);
+                btndif1.setBackgroundResource(R.drawable.borde_azul);
+                btndif1.setTextColor(Color.parseColor("#407BFB"));
+                btndif2.setBackgroundResource(R.drawable.borde_azul);
+                btndif2.setTextColor(Color.parseColor("#407BFB"));
+                btndif4.setBackgroundResource(R.drawable.borde_azul);
+                btndif4.setTextColor(Color.parseColor("#407BFB"));
+            }
+            if(algosele == "dif4"){
+                //SE ACTIVA EL BTN
+                btndif4.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif4.setTextColor(Color.WHITE);
 
-            btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif1.setTextColor(Color.parseColor("#407BFB"));
-            btndif2.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif2.setTextColor(Color.parseColor("#407BFB"));
-            btndif4.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif4.setTextColor(Color.parseColor("#407BFB"));
-        }
-        if(algosele == "dif4"){
-            btndif4.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
-            btndif4.setTextColor(Color.WHITE);
-
-            btndif1.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif1.setTextColor(Color.parseColor("#407BFB"));
-            btndif2.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif2.setTextColor(Color.parseColor("#407BFB"));
-            btndif3.setBackgroundResource(R.drawable.ic_rect_ngulo_btnnocheck);
-            btndif3.setTextColor(Color.parseColor("#407BFB"));
+                btndif1.setBackgroundResource(R.drawable.borde_azul);
+                btndif1.setTextColor(Color.parseColor("#407BFB"));
+                btndif2.setBackgroundResource(R.drawable.borde_azul);
+                btndif2.setTextColor(Color.parseColor("#407BFB"));
+                btndif3.setBackgroundResource(R.drawable.borde_azul);
+                btndif3.setTextColor(Color.parseColor("#407BFB"));
+            }
         }
     }
     //MUESTRA LOS LAY DE STRUCTURA
     public void mostrar_layout(){
-        texto_inicial.setVisibility(View.GONE);
-        spanish_lay.setVisibility(View.VISIBLE);
-        input_lay.setVisibility(View.VISIBLE);
-        btn_lay.setVisibility(View.VISIBLE);
-        btn_cont_lay.setVisibility(View.GONE);
+        if(!selection.equals("Tutorial")){
+            texto_inicial.setVisibility(View.GONE);
+            spanish_lay.setVisibility(View.VISIBLE);
+            input_lay.setVisibility(View.VISIBLE);
+            btn_lay.setVisibility(View.VISIBLE);
+            btn_cont_lay.setVisibility(View.GONE);
+        }
     }
 
     //VALIDACIONES DE TEXTO Y AUDIO

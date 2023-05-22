@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.leal.cipm_testing">
+    package="com.leal.cipm_testing" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="n">
-
+        tools:targetApi="n" >
+        <activity
+            android:name=".Profile2023"
+            android:exported="false" />
         <!-- CARPETA SCREENS -->
         <activity
             android:name=".screens.FormularioInfo2023"
@@ -37,11 +39,11 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Registro2023"
+            android:name=".screens.Registro2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Login2023"
+            android:name=".screens.Login2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -59,11 +61,7 @@
         <activity
             android:name=".screens.SpaInt2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <!-- FIN CARPETA SCREENS -->
-        <activity
-            android:name=".test_student"
-            android:exported="false" />
+            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
         <activity
             android:name=".MyPlan"
             android:exported="false" />
@@ -80,15 +78,6 @@
             android:name=".TestResults"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignIn"
-            android:exported="false" />
-        <activity
-            android:name=".profile"
-            android:exported="false" />
-        <activity
             android:name=".MainTesting"
             android:exported="false" />
         <activity
@@ -99,7 +88,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -115,7 +104,7 @@
 
         <service
             android:name=".PushNotificationService"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
