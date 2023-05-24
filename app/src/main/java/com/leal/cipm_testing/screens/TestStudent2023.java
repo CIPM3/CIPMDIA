@@ -1,12 +1,9 @@
-package com.leal.cipm_testing;
+package com.leal.cipm_testing.screens;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
@@ -25,28 +22,41 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.components.BottomNav;
-import com.leal.cipm_testing.components.header;
+import com.leal.cipm_testing.C150a200;
+import com.leal.cipm_testing.C200a250;
+import com.leal.cipm_testing.C250a300;
+import com.leal.cipm_testing.C300a350;
+import com.leal.cipm_testing.C350a400;
+import com.leal.cipm_testing.C400a500;
+import com.leal.cipm_testing.Generator;
+import com.leal.cipm_testing.MainActivity;
+import com.leal.cipm_testing.Prefs;
+import com.leal.cipm_testing.R;
+import com.leal.cipm_testing.Student;
+import com.leal.cipm_testing.StudentVocabRestultsModel;
+import com.leal.cipm_testing.TestResults;
+import com.leal.cipm_testing.cerotofifty;
+import com.leal.cipm_testing.cientociencincuenta;
+import com.leal.cipm_testing.fiftytohundred;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class test_student extends AppCompatActivity {
+public class TestStudent2023 extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String             txteng,userid;
-    FirebaseAuth       mAuth;
+    FirebaseAuth mAuth;
 
     LinearLayout lay_chosel_level,lay_chosel_structure,btn_lay_test_result,lay_test_text_input
             ,btn_lay_siguiente_preg,btn_lay_enviar_resp;
     Spinner spinlevel,spinstructure;
-    
+
     EditText answerinput;
 
-    TextToSpeech       tt1;
+    TextToSpeech tt1;
 
     Timer timer;
     TimerTask timerTask;
@@ -83,11 +93,10 @@ public class test_student extends AppCompatActivity {
     Student studentObject= new Student();
     StudentVocabRestultsModel vocabDbChecker= new StudentVocabRestultsModel();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_student);
+        setContentView(R.layout.activity_test_student2023);
 
         timer = new Timer();
         timerText= (TextView) findViewById(R.id.timertextv);
@@ -103,7 +112,7 @@ public class test_student extends AppCompatActivity {
 
         spanishsentence = findViewById(R.id.spanishsentence);
         answerinput = findViewById(R.id.answerinput1);
-        
+
         spinlevel = findViewById(R.id.spinlevel);
         spinstructure = findViewById(R.id.spinstructure);
 
@@ -363,12 +372,8 @@ public class test_student extends AppCompatActivity {
         Intent intento = new Intent(this, MainActivity.class);
         startActivity(intento);
     }
-    public void profile(View vist) {
-        Intent crispIntent = new Intent(this, profile.class);
-        startActivity(crispIntent);
-    }
     public void chat_maestro(View vist) {
-        Intent crispIntent = new Intent(this, chat_maestro.class);
+        Intent crispIntent = new Intent(this, ChatMaestro2023.class);
         startActivity(crispIntent);
     }
 
@@ -8702,7 +8707,7 @@ public class test_student extends AppCompatActivity {
 
         uid.document("Interferencias").set(user);
     }*/
-    
+
     /*public void soundtest(){
 
         save.setVisibility(View.VISIBLE);
@@ -9697,5 +9702,4 @@ public class test_student extends AppCompatActivity {
             "There's no such thing as a free lunch",
 
     };
-
 }

@@ -14,10 +14,10 @@ import androidx.fragment.app.Fragment;
 
 import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.chat_maestro;
+import com.leal.cipm_testing.screens.ChatMaestro2023;
 import com.leal.cipm_testing.screens.Premium2023;
 import com.leal.cipm_testing.screens.Profile2023;
-import com.leal.cipm_testing.test_student;
+import com.leal.cipm_testing.screens.TestStudent2023;
 
 public class BottomNav extends Fragment {
 
@@ -48,12 +48,12 @@ public class BottomNav extends Fragment {
         });
 
         btn_test_bottom.setOnClickListener(v -> {
-            Intent intento = new Intent(getContext(), test_student.class);
+            Intent intento = new Intent(getContext(), TestStudent2023.class);
             startActivity(intento);
         });
 
         btn_chat_maestro.setOnClickListener(v -> {
-            Intent intento = new Intent(getContext(), chat_maestro.class);
+            Intent intento = new Intent(getContext(), ChatMaestro2023.class);
             startActivity(intento);
         });
 
@@ -88,19 +88,19 @@ public class BottomNav extends Fragment {
             bgMain.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if(currenttxt.contains("screens.Test")){
+        if(currenttxt.contains("TestStudent")){
             bgTest.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if(currenttxt.contains("chat_maestro")){
+        if(currenttxt.contains("ChatMaestro")){
             bgChat.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if(currenttxt.contains("screens.Profile")){
+        if(currenttxt.contains("Profile")){
             bgProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
         }
 
-        if (currenttxt.contains("screens.Premium")) {
+        if (currenttxt.contains("Premium")) {
             bgPremium.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#F8D22F")));
         }
 

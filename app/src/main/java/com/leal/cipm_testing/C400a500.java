@@ -118,8 +118,8 @@ public class C400a500 {
     String ad[] = {"perhaps ", "sometimes "};
     String adv[] = {"quiza ", "aveces "};
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab400a450(){
         if(j==alleng.length) {

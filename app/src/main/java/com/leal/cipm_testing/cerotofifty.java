@@ -94,8 +94,8 @@ public class cerotofifty {
     String est[] = {"estoy ", "estas ", "está ", "está ", "está ", "están ", "estamos "};
 
     // este metodo genera prepossiciones, articulos y objetos
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab0a50(){
         if(j==alleng.length) {

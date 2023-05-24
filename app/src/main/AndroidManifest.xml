@@ -14,9 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n" >
-        <activity
-            android:name=".Profile2023"
-            android:exported="false" />
+
         <!-- CARPETA SCREENS -->
         <activity
             android:name=".screens.FormularioInfo2023"
@@ -61,7 +59,21 @@
         <activity
             android:name=".screens.SpaInt2023"
             android:exported="false"
-            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.ChatMaestro2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.Profile2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".screens.TestStudent2023"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <!-- FIN CARPETA SCREENS -->
         <activity
             android:name=".MyPlan"
             android:exported="false" />
@@ -97,9 +109,6 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".chat_maestro"
             android:exported="false" />
 
         <service

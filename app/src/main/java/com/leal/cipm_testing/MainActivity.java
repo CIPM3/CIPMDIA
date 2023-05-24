@@ -24,6 +24,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.leal.cipm_testing.screens.Availability2023;
+import com.leal.cipm_testing.screens.ChatMaestro2023;
 import com.leal.cipm_testing.screens.ConInt2023;
 import com.leal.cipm_testing.screens.Cultura2023;
 import com.leal.cipm_testing.screens.Estructura2023;
@@ -31,6 +32,7 @@ import com.leal.cipm_testing.screens.FormularioInfo2023;
 import com.leal.cipm_testing.screens.Login2023;
 import com.leal.cipm_testing.screens.Premium2023;
 import com.leal.cipm_testing.screens.SpaInt2023;
+import com.leal.cipm_testing.screens.TestStudent2023;
 import com.leal.cipm_testing.screens.Transicion2023;
 import com.leal.cipm_testing.screens.Vocabulary2023;
 
@@ -254,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
     //OJO
     public void TestNuevo(View vist){
         /*Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();*/
-        Intent intent = new Intent(this, test_student.class);
+        Intent intent = new Intent(this, TestStudent2023.class);
         startActivity(intent);
     }
     public void profile(View vist) {
@@ -264,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chat_maestro(View vist) {
-        Intent crispIntent = new Intent(this, chat_maestro.class);
+        Intent crispIntent = new Intent(this, ChatMaestro2023.class);
         startActivity(crispIntent);
     }
     public void masinfo(View vist) {

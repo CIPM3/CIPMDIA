@@ -87,7 +87,7 @@ public class StudentVocabRestultsModel {
     }
 
     // 0 a 50 booleanos
-    boolean the,tobe,and,of,a,in,to,tohave,it,I,
+    public boolean the,tobe,and,of,a,in,to,tohave,it,I,
             that1,that2,for1,for2,you,he,with,
             on,todo,tosay, this1,they,at,but,we,his,
             from1,from2,since,by,she, or,as1,as2,what1,what2,togo,
@@ -95,7 +95,7 @@ public class StudentVocabRestultsModel {
             about2,toknow,will,up;
 
     //50 a 100 booleanos
-    boolean one,time,there,year,so,think,when,which,
+    public boolean one,time,there,year,so,think,when,which,
             them,some,me,people,take,out,into,just,
             see1,him,your,come,could,now,than,like,other,
             how,then,its,our,two,more,these,want,way,look,
@@ -104,7 +104,7 @@ public class StudentVocabRestultsModel {
 
 
     //100 a 150 booleanos
-    boolean only ,those ,tell ,one1 ,very ,her1 ,even ,
+    public boolean only ,those ,tell ,one1 ,very ,her1 ,even ,
             back ,any ,good ,woman ,through ,us ,life ,child ,
             there1 ,work ,down ,may ,after ,should ,call ,world,
             over ,school ,still ,try1 ,in1 ,as ,last ,ask ,need ,
@@ -116,7 +116,7 @@ public class StudentVocabRestultsModel {
 
 
     //150 a 200 booleanos
-    boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
+    public boolean old ,while1 ,mean ,on2 ,keep ,student ,why ,
             let ,great ,same ,big ,group ,begin ,seem ,
             country ,help ,talk ,where ,turn ,problem ,
             every ,start ,hand ,might ,american ,show ,
@@ -127,7 +127,7 @@ public class StudentVocabRestultsModel {
 
 
     //200 a 250 booleanos
-    boolean goverment ,run ,small ,number ,off ,always ,move ,
+    public boolean goverment ,run ,small ,number ,off ,always ,move ,
             like2 ,night ,live ,mr ,point ,believe ,hold ,today ,bring ,
             happen ,next ,without ,before ,large ,all2 ,million ,must ,
             home ,under ,water ,room ,write ,mother ,area ,national ,
@@ -136,19 +136,8 @@ public class StudentVocabRestultsModel {
             side ,kind ;
 
 
-
-
-
-
-
-
-
-
-
-
-
     //250 a 300 booleanos
-    boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
+    public boolean four ,head ,far ,black ,long1 ,both2 ,little ,house ,yes ,
             after2 ,since2 ,long2 ,provide ,service ,around ,friend ,
             important ,father ,sit ,away ,until ,power ,hour ,
             game ,often ,yet ,line ,political ,end ,among ,ever ,stand ,
@@ -161,7 +150,7 @@ public class StudentVocabRestultsModel {
 
 
     //300 a 350 booleanos
-    boolean  five ,once ,white ,least ,president ,learn ,
+    public boolean  five ,once ,white ,least ,president ,learn ,
             real ,change2 ,team ,minute ,best ,several ,
             idea ,kid ,body ,information ,nothing ,ago ,
             right3 ,lead ,social ,understand ,whether ,
@@ -174,7 +163,7 @@ public class StudentVocabRestultsModel {
 
 
     //350 a 400 booleanos
-    boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
+    public boolean war ,history ,party ,within ,togrow ,result ,open ,change ,
             morning ,towalk ,reason ,low ,towin ,toresearch ,girl ,guy ,early ,
             food ,before2 ,moment ,himself ,toair , teacher ,toforce ,tooffer ,
             enough ,both ,education ,across ,although ,toremember ,foot ,second ,
@@ -185,7 +174,7 @@ public class StudentVocabRestultsModel {
 
 
     //400 a 450 booleanos
-    boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
+    public boolean human ,towait ,toserve ,market ,todie ,tosend ,toexpect ,home2 ,sense ,
             tobuild ,tostay ,tofall ,oh ,nation ,toplan ,cut ,college ,interest ,
             death ,course ,someone ,experience ,behind ,reach ,local ,
             tokill ,six ,remain , effect ,use2 ,yeah ,tosuggest ,class2 ,
@@ -199,7 +188,7 @@ public class StudentVocabRestultsModel {
 
 
     //450 a 500 booleanos
-    boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
+    public boolean report ,role ,better ,economic ,effort ,up2 ,todecide ,rate , strong ,
             possible ,heart ,drug ,toshow ,leader ,light ,voice , wife ,whole ,police ,
             mind ,finally2 ,topull ,toreturn ,free ,military ,price ,report2 ,
             less ,accordingto,decision ,toexplain , son ,hope ,even2 ,todevelop ,

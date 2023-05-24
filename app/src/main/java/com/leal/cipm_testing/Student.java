@@ -6,31 +6,31 @@ import androidx.annotation.NonNull;
 public class Student {
 
     String name;
-    boolean presentesimple, presenteContinuo, presentePerfecto, presentePerfectoContinuo;
-    boolean pastsimple, pastContinuo, pastPerfecto, pastPerfectoContinuo;
-    boolean futuresimple, futureContinuo, futurePerfecto, futurePerfectoContinuo;
-    boolean wouldsimple, wouldContinuo, wouldPerfecto, wouldPerfectoContinuo;
-    boolean couldsimple, couldContinuo, couldPerfecto, couldPerfectoContinuo;
-    boolean mightsimple, mightContinuo, mightPerfecto, mightPerfectoContinuo;
-    boolean cansimple, canContinuo, mustsimple, mustContinuo;
-    boolean shouldsimple, shouldContinuo, shouldPerfecto, shouldPerfectoContinuo;
-    boolean wantTo, forTo, supposedToPresent, wishPastPerfect, usedTo, beUsedTo;
+    public boolean presentesimple, presenteContinuo, presentePerfecto, presentePerfectoContinuo;
+    public boolean pastsimple, pastContinuo, pastPerfecto, pastPerfectoContinuo;
+    public boolean futuresimple, futureContinuo, futurePerfecto, futurePerfectoContinuo;
+    public boolean wouldsimple, wouldContinuo, wouldPerfecto, wouldPerfectoContinuo;
+    public boolean couldsimple, couldContinuo, couldPerfecto, couldPerfectoContinuo;
+    public boolean mightsimple, mightContinuo, mightPerfecto, mightPerfectoContinuo;
+    public boolean cansimple, canContinuo, mustsimple, mustContinuo;
+    public boolean shouldsimple, shouldContinuo, shouldPerfecto, shouldPerfectoContinuo;
+    public boolean wantTo, forTo, supposedToPresent, wishPastPerfect, usedTo, beUsedTo;
 
     //LR
-    boolean feelLikeSimple, reportedSpeech, incrementoParalelo, verbalAdjectives, relativeClause;
-    boolean questionStructure, questionStructureModals;
+    public boolean feelLikeSimple, reportedSpeech, incrementoParalelo, verbalAdjectives, relativeClause;
+    public boolean questionStructure, questionStructureModals;
 
 
 
-    boolean vocab0a50;
-    boolean vocab50a100;
-    boolean vocab100a150;
-    boolean vocab150a200;
-    boolean vocab200a250;
-    boolean vocab250a300;
-    boolean vocab300a350;
-    boolean vocab350a400;
-    boolean vocab400a450;
+    public boolean vocab0a50;
+    public boolean vocab50a100;
+    public boolean vocab100a150;
+    public boolean vocab150a200;
+    public boolean vocab200a250;
+    public boolean vocab250a300;
+    public boolean vocab300a350;
+    public boolean vocab350a400;
+    public boolean vocab400a450;
 
     int presentesimpleint;
     //5 Agregar el modelo time y generar los get y set

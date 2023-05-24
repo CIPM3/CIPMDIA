@@ -79,8 +79,8 @@ public class fiftytohundred {
     String gens;
     String gene;
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab50a100(){
         if(j==alleng.length) {

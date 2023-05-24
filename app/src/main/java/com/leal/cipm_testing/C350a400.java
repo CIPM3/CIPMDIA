@@ -87,8 +87,8 @@ public class C350a400 {
     String gens;
     String gene;
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab350a400(){
         if(j==alleng.length) {

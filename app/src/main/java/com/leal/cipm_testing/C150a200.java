@@ -102,8 +102,8 @@ public class C150a200 {
     String gens;
     String gene;
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab150a200(){
         if(j==alleng.length) {

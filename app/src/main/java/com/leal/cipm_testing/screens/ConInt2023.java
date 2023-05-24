@@ -31,7 +31,6 @@ import com.leal.cipm_testing.MainActivity;
 import com.leal.cipm_testing.Prefs;
 import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.VocabModeloPersistencia;
-import com.leal.cipm_testing.chat_maestro;
 import com.leal.cipm_testing.components.VideoPlayer;
 
 import java.util.ArrayList;
@@ -549,7 +548,7 @@ public class ConInt2023 extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     if(message.equalsIgnoreCase("Pasar Con Maestro Para Determinar tu Nivel?"))
-                    { Intent intent = new Intent(ConInt2023.this, chat_maestro.class);
+                    { Intent intent = new Intent(ConInt2023.this, ChatMaestro2023.class);
                         startActivity(intent);
                     }else {
                         SubtractSelectionAndSendinfoToDb();

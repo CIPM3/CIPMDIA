@@ -62,7 +62,7 @@ public class header extends Fragment {
             Screen = "Cultura";
         }
 
-        if (currenttxt.contains("test_student")) {
+        if (currenttxt.contains("screens.TestStudent")) {
             // Cambiar el texto del EditText
             editText.setText("Test");
             Screen = "Test";
@@ -74,7 +74,7 @@ public class header extends Fragment {
             Screen = "Spanish Interference";
         }
 
-        if (currenttxt.contains("ConInt")) {
+        if (currenttxt.contains("screens.ConInt")) {
             // Cambiar el texto del EditText
             editText.setText("Conscious Interference");
             Screen = "Conscious Interference";

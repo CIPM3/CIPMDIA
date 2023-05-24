@@ -81,8 +81,8 @@ public class cientociencincuenta {
     String sp[] = {"woman ", "child ", "back ", "life ", "world ", "state ", "school ", "family "};
     String sps[] = {"mujer ", "niño ", "espalda ", "vida ", "mundo ", "estado ", "escuela ", "familia "};
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab100a150(){
         if(j==alleng.length) {

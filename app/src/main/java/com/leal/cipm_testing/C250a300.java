@@ -23,8 +23,8 @@ public class C250a300 {
     String gens;
     String gene;
 
-    String ob;
-    String eng;
+    public String ob;
+    public String eng;
     public static int j=0;
     public void vocab250a300(){
         if(j==alleng.length) {
