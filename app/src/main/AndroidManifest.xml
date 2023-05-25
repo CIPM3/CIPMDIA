@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n" >
-
         <!-- CARPETA SCREENS -->
         <activity
             android:name=".screens.FormularioInfo2023"
@@ -68,12 +67,10 @@
             android:name=".screens.Profile2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".screens.TestStudent2023"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <!-- FIN CARPETA SCREENS -->
+            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
         <activity
             android:name=".MyPlan"
             android:exported="false" />
@@ -91,12 +88,6 @@
             android:exported="false" />
         <activity
             android:name=".MainTesting"
-            android:exported="false" />
-        <activity
-            android:name=".TutorialGeneral"
-            android:exported="false" />
-        <activity
-            android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

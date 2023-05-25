@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
         Toast.makeText(this, "Actividad en Mantenimiento.", Toast.LENGTH_SHORT).show();
+
 /*
         if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
             Toast.makeText(this, "Favor de registrarse con email y password para hacer Plan", Toast.LENGTH_SHORT).show();
