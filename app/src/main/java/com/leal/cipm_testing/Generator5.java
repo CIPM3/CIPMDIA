@@ -33,28 +33,30 @@ public class Generator5 {
     public String gene2;
 
 
+    //FALTAN SPECIAL Y NOBLES
     String verbDif1[]={
-            "Intrans ","Special ","People ",
-            "Oo ","Nobles "
+            "Intrans ","People ",
+            "Oo "
     };
 
     String verbDif2[]={
-            "Intrans ","Special ","People ",
-            "Oo ","Nobles "
+            "Intrans ","People ",
+            "Oo "
     };
 
     String verbDif3[]={
-            "Intrans ","Special ","People ",
-            "Oo ","Nobles "
+            "Intrans ","People ",
+            "Oo "
     };
 
     String verbDif4[]={
-            "Special ","People ",
-            "Oo ","Nobles "
+            "Intrans ","People ",
+            "Oo "
     };
 
     String verbOP[]={
-            "People ", "Oo "
+            "Intrans ","People ",
+            "Oo "
     };
 
 
@@ -65,12 +67,33 @@ public class Generator5 {
     //PRESENTES DIF 1
     public void GenPresSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
-        int verbRand = (int) (Math.random() * verbOP.length);
-        String verb = verbOP[verbRand];
+        int verbRand = (int) (Math.random() * verbDif1.length);
+        String verb = verbDif1[verbRand];
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp1;
+                        gene = i.eng1;
+                        gene2 = i.eng12;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp1;
+                        gene = s.eng1;
+                        gene2 = s.eng12;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps1;
+                        gene = ab.ps1eng;
+                        gene2 = ab.ps1eng2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -85,10 +108,38 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp2;
+                        gene = i.eng2;
+                        gene2 = i.eng22;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp2;
+                        gene = s.eng2;
+                        gene2 = s.eng22;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps2;
+                        gene = ab.ps2eng;
+                        gene2 = ab.ps2eng2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -103,10 +154,38 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp3;
+                        gene = i.eng3;
+                        gene2 = i.eng32;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp3;
+                        gene = s.eng3;
+                        gene2 = s.eng32;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps3;
+                        gene = ab.ps3eng;
+                        gene2 = ab.ps3eng2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -121,10 +200,38 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp4;
+                        gene = i.eng4;
+                        gene2 = i.eng42;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps3ella;
+                        gene = ab.ps3she;
+                        gene2 = ab.ps3she2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -139,10 +246,38 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp5;
+                        gene = i.eng5;
+                        gene2 = i.eng52;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps3eso;
+                        gene = ab.ps3it;
+                        gene2 = ab.ps3it2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -157,10 +292,38 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp6;
+                        gene = i.eng6;
+                        gene2 = i.eng62;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp4;
+                        gene = s.eng4;
+                        gene2 = s.eng42;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps4;
+                        gene = ab.ps4eng;
+                        gene2 = ab.ps4eng2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -175,10 +338,38 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
+                    case "Intrans ":
+                        Intrans5 i = new Intrans5();
+                        i.GenPresSimp1();
+                        gens = i.sp7;
+                        gene = i.eng7;
+                        gene2 = i.eng72;
+                        break;
+                    case "Special ":
+                        Special4 s = new Special4();
+                        s.GenPresSimp1();
+                        gens = s.sp5;
+                        gene = s.eng5;
+                        gene2 = s.eng52;
+                        break;
+                    case "Abstractos ":
+                        Abstractos2 ab = new Abstractos2();
+                        //ab.GenPresSimp1();
+                        gens = ab.ps5;
+                        gene = ab.ps5eng;
+                        gene2 = ab.ps5eng2;
+                        break;
                     case "People ":
                         People5 p = new People5();
                         p.GenPresSimp1();
@@ -192,6 +383,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -206,7 +404,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -240,12 +438,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -279,12 +484,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -318,12 +530,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -357,12 +576,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -396,12 +622,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -435,12 +668,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -473,6 +713,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -487,7 +734,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -521,12 +768,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -560,12 +814,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -599,12 +860,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -638,12 +906,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -677,12 +952,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -716,12 +998,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -754,6 +1043,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -768,7 +1064,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -802,12 +1098,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -841,12 +1144,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -880,12 +1190,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -919,12 +1236,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -958,12 +1282,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -997,12 +1328,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -1036,12 +1374,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPresPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //PASADOS DIF 1
+    //PASADOS
     public void GenPastSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -1051,7 +1396,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -1085,12 +1430,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -1124,12 +1476,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -1163,12 +1522,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -1202,12 +1568,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -1241,12 +1614,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -1280,12 +1660,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -1318,6 +1705,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -1332,7 +1726,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -1366,12 +1760,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -1405,12 +1806,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -1444,12 +1852,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -1483,12 +1898,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -1522,12 +1944,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -1561,12 +1990,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -1599,6 +2035,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -1613,7 +2056,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -1647,12 +2090,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -1686,12 +2136,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -1725,12 +2182,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -1764,12 +2228,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -1803,12 +2274,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -1842,12 +2320,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -1880,6 +2365,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -1894,7 +2386,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -1928,12 +2420,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -1967,12 +2466,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -2006,12 +2512,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -2045,12 +2558,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -2084,12 +2604,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -2123,12 +2650,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -2162,12 +2696,18 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenPassPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //FUTUROS DIF 1
     public void GenFutSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -2177,7 +2717,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -2211,12 +2751,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -2250,12 +2797,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -2289,12 +2843,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -2328,12 +2889,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -2367,12 +2935,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -2406,12 +2981,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -2444,6 +3026,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -2458,7 +3047,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -2492,12 +3081,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -2531,12 +3127,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -2570,12 +3173,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -2609,12 +3219,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -2648,12 +3265,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -2687,12 +3311,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -2725,6 +3356,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -2739,7 +3377,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -2773,12 +3411,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -2812,12 +3457,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -2851,12 +3503,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -2890,12 +3549,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -2929,12 +3595,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -2968,12 +3641,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -3006,6 +3686,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -3020,7 +3707,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -3054,12 +3741,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -3093,12 +3787,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -3132,12 +3833,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -3171,12 +3879,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -3210,12 +3925,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -3249,12 +3971,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -3288,12 +4017,18 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenFutPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //WOULD DIF 1
     public void GenWouldSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -3303,7 +4038,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -3337,12 +4072,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -3376,12 +4118,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -3415,12 +4164,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -3454,12 +4210,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -3493,12 +4256,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -3532,12 +4302,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -3570,6 +4347,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -3584,7 +4368,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -3618,12 +4402,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -3657,12 +4448,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -3696,12 +4494,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -3735,12 +4540,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -3774,12 +4586,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -3813,12 +4632,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -3851,6 +4677,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -3865,7 +4698,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -3899,12 +4732,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -3938,12 +4778,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -3977,12 +4824,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -4016,12 +4870,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -4055,12 +4916,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -4094,12 +4962,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -4132,6 +5007,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -4146,7 +5028,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -4180,12 +5062,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -4219,12 +5108,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -4258,12 +5154,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -4297,12 +5200,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -4336,12 +5246,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -4375,12 +5292,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -4414,12 +5338,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenWouldPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //COULD DIF 1
+    //COULD
     public void GenCouldSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -4429,7 +5360,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -4463,12 +5394,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -4502,12 +5440,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -4541,12 +5486,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -4580,12 +5532,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -4619,12 +5578,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -4658,12 +5624,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -4696,6 +5669,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -4710,7 +5690,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -4744,12 +5724,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -4783,12 +5770,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -4822,12 +5816,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -4861,12 +5862,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -4900,12 +5908,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -4939,12 +5954,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -4977,6 +5999,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -4991,7 +6020,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -5025,12 +6054,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -5064,12 +6100,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -5103,12 +6146,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -5142,12 +6192,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -5181,12 +6238,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -5220,12 +6284,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -5258,6 +6329,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -5272,7 +6350,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -5306,12 +6384,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -5345,12 +6430,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -5384,12 +6476,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -5423,12 +6522,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -5462,12 +6568,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -5501,12 +6614,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -5540,12 +6660,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCouldPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //SHOULD DIF 1
+    //SHOULD
     public void GenShouldSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -5555,7 +6682,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -5589,12 +6716,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -5628,12 +6762,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -5667,12 +6808,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -5706,12 +6854,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -5745,12 +6900,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -5784,12 +6946,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -5822,6 +6991,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -5836,7 +7012,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -5870,12 +7046,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -5909,12 +7092,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -5948,12 +7138,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -5987,12 +7184,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -6026,12 +7230,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -6065,12 +7276,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -6103,6 +7321,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -6117,7 +7342,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -6151,12 +7376,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -6190,12 +7422,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -6229,12 +7468,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -6268,12 +7514,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -6307,12 +7560,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -6346,12 +7606,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -6384,6 +7651,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -6398,7 +7672,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -6432,12 +7706,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -6471,12 +7752,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -6510,12 +7798,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -6549,12 +7844,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -6588,12 +7890,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -6627,12 +7936,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -6666,12 +7982,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenShouldPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //MIGHT DIF 1
+    //MIGHT
     public void GenMightSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -6681,7 +8004,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -6715,12 +8038,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -6754,12 +8084,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -6793,12 +8130,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -6832,12 +8176,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -6871,12 +8222,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -6910,12 +8268,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -6948,6 +8313,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -6962,7 +8334,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -6996,12 +8368,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -7035,12 +8414,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -7074,12 +8460,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -7113,12 +8506,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -7152,12 +8552,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -7191,12 +8598,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -7229,6 +8643,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -7243,7 +8664,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -7277,12 +8698,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -7316,12 +8744,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -7355,12 +8790,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -7394,12 +8836,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -7433,12 +8882,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -7472,12 +8928,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -7510,6 +8973,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerf1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -7524,7 +8994,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -7558,12 +9028,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -7597,12 +9074,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -7636,12 +9120,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -7675,12 +9166,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -7714,12 +9212,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -7753,12 +9258,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -7792,12 +9304,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMightPerfCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //CAN DIF 1
+    //CAN
     public void GenCanSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -7807,7 +9326,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -7841,12 +9360,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -7880,12 +9406,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -7919,12 +9452,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -7958,12 +9498,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -7997,12 +9544,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -8036,12 +9590,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -8074,6 +9635,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -8088,7 +9656,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -8122,12 +9690,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -8161,12 +9736,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -8200,12 +9782,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -8239,12 +9828,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -8278,12 +9874,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -8317,12 +9920,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -8356,12 +9966,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenCanCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //MUST DIF 1
+    //MUST
     public void GenMustSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -8371,7 +9988,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -8405,12 +10022,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -8444,12 +10068,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -8483,12 +10114,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -8522,12 +10160,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -8561,12 +10206,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -8600,12 +10252,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -8638,6 +10297,13 @@ public class Generator5 {
                         gens = o.ps5;
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
+                        break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustSimp1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
                         break;
                 }
                 break;
@@ -8652,7 +10318,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -8686,12 +10352,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -8725,12 +10398,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -8764,12 +10444,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -8803,12 +10490,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -8842,12 +10536,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -8881,12 +10582,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -8920,12 +10628,18 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenMustCont1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //ABLE TO DIF 1
     public void GenAbleTo1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
@@ -8935,7 +10649,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -8969,12 +10683,19 @@ public class Generator5 {
                         gene = o.ps1eng;
                         gene2 = o.ps1eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
                 }
                 break;
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -9008,12 +10729,19 @@ public class Generator5 {
                         gene = o.ps2eng;
                         gene2 = o.ps2eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
                 }
                 break;
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -9047,12 +10775,19 @@ public class Generator5 {
                         gene = o.ps3eng;
                         gene2 = o.ps3eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps3;
+                        gene = n.ps3eng;
+                        gene2 = n.ps3eng2;
+                        break;
                 }
                 break;
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -9086,12 +10821,19 @@ public class Generator5 {
                         gene = o.ps3she;
                         gene2 = o.ps3she2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps3ella;
+                        gene = n.ps3she;
+                        gene2 = n.ps3she2;
+                        break;
                 }
                 break;
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -9125,12 +10867,19 @@ public class Generator5 {
                         gene = o.ps3it;
                         gene2 = o.ps3iteng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps3eso;
+                        gene = n.ps3it;
+                        gene2 = n.ps3iteng2;
+                        break;
                 }
                 break;
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -9164,12 +10913,19 @@ public class Generator5 {
                         gene = o.ps4eng;
                         gene2 = o.ps4eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps4;
+                        gene = n.ps4eng;
+                        gene2 = n.ps4eng2;
+                        break;
                 }
                 break;
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo1();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -9203,12 +10959,19 @@ public class Generator5 {
                         gene = o.ps5eng;
                         gene2 = o.ps5eng2;
                         break;
+                    case "Nobles ":
+                        Nobles4 n = new Nobles4();
+                        n.GenAbleTo1();
+                        gens = n.ps5;
+                        gene = n.ps5eng;
+                        gene2 = n.ps5eng2;
+                        break;
                 }
                 break;
         }
     }
 
-    //WANT TO DIF 1
+    //wanTo
     public void GenWantYouTo1() {
         int rand = (int) (Math.random() * pronombres.length);
 
@@ -9220,25 +10983,32 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps1;
+                        gene = nb.ps1eng;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps1;
                         gene = pe.ps1eng;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps1;
                         gene = o.ps1eng;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp1;
                         gene = sp.eng1;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp1;
@@ -9251,25 +11021,32 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps2;
+                        gene = nb.ps2eng;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps2;
                         gene = pe.ps2eng;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps2;
                         gene = o.ps2eng;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp2;
                         gene = sp.eng2;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp2;
@@ -9281,25 +11058,32 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps3;
+                        gene = nb.ps3eng;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps3;
                         gene = pe.ps3eng;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps3;
                         gene = o.ps3eng;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp3;
                         gene = sp.eng3;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp3;
@@ -9311,25 +11095,32 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps3ella;
+                        gene = nb.ps3she;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps3ella;
                         gene = pe.ps3she;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps3ella;
                         gene = o.ps3she;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp4;
@@ -9341,25 +11132,32 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps3eso;
+                        gene = nb.ps3it;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps3eso;
                         gene = pe.ps3it;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps3eso;
                         gene = o.ps3it;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp5;
@@ -9371,25 +11169,32 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps4;
+                        gene = nb.ps4eng;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps4;
                         gene = pe.ps4eng;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps4;
                         gene = o.ps4eng;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp4;
                         gene = sp.eng4;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp6;
@@ -9401,25 +11206,32 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case 0:
+                        Nobles4 nb = new Nobles4();
+                        nb.WantYouTo1();
+                        gens = nb.ps5;
+                        gene = nb.ps5eng;
+                        break;
+
+                    case 1:
                         People5 pe = new People5();
                         pe.WantYouTo1();
                         gens = pe.ps5;
                         gene = pe.ps5eng;
                         break;
 
-                    case 1:
+                    case 2:
                         Oo5 o = new Oo5();
                         o.WantYouTo1();
                         gens = o.ps5;
                         gene = o.ps5eng;
                         break;
-                    /*case 2:
+                    /*case 3:
                         Special4 sp = new Special4();
                         sp.wantyouto1();
                         gens = sp.sp5;
                         gene = sp.eng5;
                         break;
-                    case 3:
+                    case 4:
                         Intrans2 it = new Intrans2();
                         it.wantyouto1();
                         gens = it.sp7;
@@ -9430,7 +11242,7 @@ public class Generator5 {
                 break;
         }
     }
-    //FOR ME TO DIF 1
+    //for To x
     public void GenForTo1() {
         int rand = (int) (Math.random() * pronombres.length);
 
@@ -9700,7 +11512,9 @@ public class Generator5 {
         }
     }
 
-    //SUPOSSED TO DIF 1
+
+
+    //supposed to
     public void GenSupposedToPresente1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
@@ -10090,7 +11904,7 @@ public class Generator5 {
         }
     }
 
-    //WISH DIF 1
+    //WISH
     public void GenWishPastSimple1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
@@ -10678,7 +12492,6 @@ public class Generator5 {
         }
     }
 
-    // USED TO DIF 1
     public void GenUsedTo1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
@@ -10875,7 +12688,6 @@ public class Generator5 {
                 break;
         }
     }
-    // BE USED TO DIF 1
     public void GenBeUsedTo1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verb = (int) (Math.random() * 4);
@@ -11219,7 +13031,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -11258,7 +13070,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -11297,7 +13109,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -11336,7 +13148,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -11375,7 +13187,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -11414,7 +13226,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -11453,7 +13265,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -11500,7 +13312,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -11539,7 +13351,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -11578,7 +13390,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -11617,7 +13429,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -11656,7 +13468,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -11695,7 +13507,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -11734,7 +13546,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -11781,7 +13593,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -11820,7 +13632,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -11859,7 +13671,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -11898,7 +13710,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -11937,7 +13749,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -11976,7 +13788,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -12015,7 +13827,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -12064,7 +13876,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -12103,7 +13915,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -12142,7 +13954,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -12181,7 +13993,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -12220,7 +14032,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -12259,7 +14071,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -12298,7 +14110,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -12345,7 +14157,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -12384,7 +14196,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -12423,7 +14235,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -12462,7 +14274,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -12501,7 +14313,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -12540,7 +14352,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -12579,7 +14391,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -12626,7 +14438,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -12665,7 +14477,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -12704,7 +14516,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -12743,7 +14555,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -12782,7 +14594,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -12821,7 +14633,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -12860,7 +14672,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -12907,7 +14719,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -12946,7 +14758,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -12985,7 +14797,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -13024,7 +14836,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -13063,7 +14875,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -13102,7 +14914,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -13141,7 +14953,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -13190,7 +15002,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -13229,7 +15041,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -13268,7 +15080,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -13307,7 +15119,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -13346,7 +15158,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -13385,7 +15197,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -13424,7 +15236,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -13471,7 +15283,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -13510,7 +15322,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -13549,7 +15361,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -13588,7 +15400,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -13627,7 +15439,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -13666,7 +15478,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -13705,7 +15517,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -13752,7 +15564,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -13791,7 +15603,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -13830,7 +15642,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -13869,7 +15681,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -13908,7 +15720,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -13947,7 +15759,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -13986,7 +15798,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -14033,7 +15845,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -14072,7 +15884,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -14111,7 +15923,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -14150,7 +15962,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -14189,7 +16001,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -14228,7 +16040,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -14267,7 +16079,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -14316,7 +16128,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -14355,7 +16167,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -14394,7 +16206,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -14433,7 +16245,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -14472,7 +16284,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -14511,7 +16323,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -14550,7 +16362,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -14597,7 +16409,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -14636,7 +16448,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -14675,7 +16487,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -14714,7 +16526,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -14753,7 +16565,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -14792,7 +16604,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -14831,7 +16643,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -14878,7 +16690,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -14917,7 +16729,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -14956,7 +16768,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -14995,7 +16807,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -15034,7 +16846,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -15073,7 +16885,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -15112,7 +16924,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -15159,7 +16971,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -15198,7 +17010,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -15237,7 +17049,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -15276,7 +17088,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -15315,7 +17127,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -15354,7 +17166,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -15393,7 +17205,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -15442,7 +17254,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -15481,7 +17293,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -15520,7 +17332,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -15559,7 +17371,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -15598,7 +17410,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -15637,7 +17449,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -15676,7 +17488,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -15723,7 +17535,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -15762,7 +17574,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -15801,7 +17613,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -15840,7 +17652,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -15879,7 +17691,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -15918,7 +17730,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -15957,7 +17769,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -16004,7 +17816,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -16043,7 +17855,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -16082,7 +17894,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -16121,7 +17933,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -16160,7 +17972,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -16199,7 +18011,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -16238,7 +18050,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -16285,7 +18097,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -16324,7 +18136,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -16363,7 +18175,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -16402,7 +18214,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -16441,7 +18253,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -16480,7 +18292,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -16519,7 +18331,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -16568,7 +18380,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -16607,7 +18419,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -16646,7 +18458,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -16685,7 +18497,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -16724,7 +18536,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -16763,7 +18575,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -16802,7 +18614,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -16849,7 +18661,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -16888,7 +18700,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -16927,7 +18739,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -16966,7 +18778,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -17005,7 +18817,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -17044,7 +18856,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -17083,7 +18895,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -17130,7 +18942,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -17169,7 +18981,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -17208,7 +19020,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -17247,7 +19059,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -17286,7 +19098,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -17325,7 +19137,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -17364,7 +19176,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -17411,7 +19223,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -17450,7 +19262,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -17489,7 +19301,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -17528,7 +19340,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -17567,7 +19379,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -17606,7 +19418,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -17645,7 +19457,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -17694,7 +19506,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -17733,7 +19545,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -17772,7 +19584,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -17811,7 +19623,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -17850,7 +19662,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -17889,7 +19701,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -17928,7 +19740,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -17975,7 +19787,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -18014,7 +19826,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -18053,7 +19865,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -18092,7 +19904,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -18131,7 +19943,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -18170,7 +19982,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -18209,7 +20021,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -18256,7 +20068,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -18295,7 +20107,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -18334,7 +20146,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -18373,7 +20185,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -18412,7 +20224,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -18451,7 +20263,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -18490,7 +20302,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -18537,7 +20349,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -18576,7 +20388,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -18615,7 +20427,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -18654,7 +20466,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -18693,7 +20505,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -18732,7 +20544,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -18771,7 +20583,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -18820,7 +20632,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -18859,7 +20671,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -18898,7 +20710,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -18937,7 +20749,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -18976,7 +20788,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -19015,7 +20827,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -19054,7 +20866,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -19101,7 +20913,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -19140,7 +20952,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -19179,7 +20991,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -19218,7 +21030,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -19257,7 +21069,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -19296,7 +21108,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -19335,7 +21147,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -19384,7 +21196,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -19423,7 +21235,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -19462,7 +21274,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -19501,7 +21313,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -19540,7 +21352,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -19579,7 +21391,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -19618,7 +21430,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -19665,7 +21477,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -19704,7 +21516,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -19743,7 +21555,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -19782,7 +21594,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -19821,7 +21633,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -19860,7 +21672,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -19899,7 +21711,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -19948,7 +21760,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -19987,7 +21799,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -20026,7 +21838,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -20065,7 +21877,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -20104,7 +21916,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -20143,7 +21955,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -20182,7 +21994,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo2();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -22247,7 +24059,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -22286,7 +24098,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -22325,7 +24137,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -22364,7 +24176,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -22403,7 +24215,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -22442,7 +24254,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -22481,7 +24293,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -22528,7 +24340,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -22567,7 +24379,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -22606,7 +24418,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -22645,7 +24457,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -22684,7 +24496,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -22723,7 +24535,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -22762,7 +24574,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -22809,7 +24621,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -22848,7 +24660,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -22887,7 +24699,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -22926,7 +24738,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -22965,7 +24777,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -23004,7 +24816,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -23043,7 +24855,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPresPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -23092,7 +24904,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -23131,7 +24943,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -23170,7 +24982,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -23209,7 +25021,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -23248,7 +25060,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -23287,7 +25099,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -23326,7 +25138,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -23373,7 +25185,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -23412,7 +25224,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -23451,7 +25263,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -23490,7 +25302,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -23529,7 +25341,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -23568,7 +25380,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -23607,7 +25419,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -23654,7 +25466,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -23693,7 +25505,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -23732,7 +25544,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -23771,7 +25583,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -23810,7 +25622,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -23849,7 +25661,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -23888,7 +25700,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -23935,7 +25747,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -23974,7 +25786,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -24013,7 +25825,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -24052,7 +25864,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -24091,7 +25903,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -24130,7 +25942,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -24169,7 +25981,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenPastPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -24218,7 +26030,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -24257,7 +26069,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -24296,7 +26108,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -24335,7 +26147,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -24374,7 +26186,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -24413,7 +26225,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -24452,7 +26264,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -24499,7 +26311,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -24538,7 +26350,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -24577,7 +26389,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -24616,7 +26428,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -24655,7 +26467,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -24694,7 +26506,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -24733,7 +26545,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -24780,7 +26592,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -24819,7 +26631,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -24858,7 +26670,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -24897,7 +26709,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -24936,7 +26748,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -24975,7 +26787,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -25014,7 +26826,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -25061,7 +26873,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -25100,7 +26912,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -25139,7 +26951,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -25178,7 +26990,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -25217,7 +27029,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -25256,7 +27068,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -25295,7 +27107,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenFutPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -25344,7 +27156,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -25383,7 +27195,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -25422,7 +27234,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -25461,7 +27273,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -25500,7 +27312,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -25539,7 +27351,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -25578,7 +27390,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -25625,7 +27437,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -25664,7 +27476,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -25703,7 +27515,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -25742,7 +27554,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -25781,7 +27593,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -25820,7 +27632,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -25859,7 +27671,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -25906,7 +27718,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -25945,7 +27757,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -25984,7 +27796,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -26023,7 +27835,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -26062,7 +27874,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -26101,7 +27913,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -26140,7 +27952,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -26187,7 +27999,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -26226,7 +28038,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -26265,7 +28077,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -26304,7 +28116,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -26343,7 +28155,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -26382,7 +28194,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -26421,7 +28233,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenWouldPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -26470,7 +28282,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -26509,7 +28321,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -26548,7 +28360,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -26587,7 +28399,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -26626,7 +28438,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -26665,7 +28477,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -26704,7 +28516,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -26751,7 +28563,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -26790,7 +28602,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -26829,7 +28641,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -26868,7 +28680,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -26907,7 +28719,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -26946,7 +28758,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -26985,7 +28797,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -27032,7 +28844,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -27071,7 +28883,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -27110,7 +28922,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -27149,7 +28961,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -27188,7 +29000,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -27227,7 +29039,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -27266,7 +29078,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -27313,7 +29125,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -27352,7 +29164,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -27391,7 +29203,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -27430,7 +29242,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -27469,7 +29281,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -27508,7 +29320,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -27547,7 +29359,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCouldPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -27596,7 +29408,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -27635,7 +29447,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -27674,7 +29486,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -27713,7 +29525,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -27752,7 +29564,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -27791,7 +29603,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -27830,7 +29642,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -27877,7 +29689,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -27916,7 +29728,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -27955,7 +29767,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -27994,7 +29806,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -28033,7 +29845,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -28072,7 +29884,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -28111,7 +29923,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -28158,7 +29970,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -28197,7 +30009,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -28236,7 +30048,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -28275,7 +30087,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -28314,7 +30126,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -28353,7 +30165,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -28392,7 +30204,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -28439,7 +30251,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -28478,7 +30290,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -28517,7 +30329,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -28556,7 +30368,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -28595,7 +30407,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -28634,7 +30446,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -28673,7 +30485,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenShouldPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -28722,7 +30534,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -28761,7 +30573,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -28800,7 +30612,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -28839,7 +30651,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -28878,7 +30690,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -28917,7 +30729,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -28956,7 +30768,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -29003,7 +30815,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -29042,7 +30854,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -29081,7 +30893,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -29120,7 +30932,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -29159,7 +30971,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -29198,7 +31010,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -29237,7 +31049,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -29284,7 +31096,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -29323,7 +31135,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -29362,7 +31174,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -29401,7 +31213,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -29440,7 +31252,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -29479,7 +31291,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -29518,7 +31330,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerf3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -29565,7 +31377,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -29604,7 +31416,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -29643,7 +31455,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -29682,7 +31494,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -29721,7 +31533,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -29760,7 +31572,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -29799,7 +31611,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMightPerfCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -29848,7 +31660,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -29887,7 +31699,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -29926,7 +31738,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -29965,7 +31777,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -30004,7 +31816,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -30043,7 +31855,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -30082,7 +31894,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -30129,7 +31941,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -30168,7 +31980,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -30207,7 +32019,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -30246,7 +32058,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -30285,7 +32097,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -30324,7 +32136,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -30363,7 +32175,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenCanCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -30412,7 +32224,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -30451,7 +32263,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -30490,7 +32302,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -30529,7 +32341,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -30568,7 +32380,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -30607,7 +32419,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -30646,7 +32458,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustSimp3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -30693,7 +32505,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -30732,7 +32544,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -30771,7 +32583,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -30810,7 +32622,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -30849,7 +32661,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -30888,7 +32700,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -30927,7 +32739,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenMustCont3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -30976,7 +32788,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -31015,7 +32827,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -31054,7 +32866,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -31093,7 +32905,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -31132,7 +32944,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -31171,7 +32983,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -31210,7 +33022,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         i.GenAbleTo3();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -33278,7 +35090,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -33317,7 +35129,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -33356,7 +35168,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -33395,7 +35207,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -33434,7 +35246,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -33473,7 +35285,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -33512,7 +35324,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -33559,7 +35371,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -33598,7 +35410,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -33637,7 +35449,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -33676,7 +35488,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -33715,7 +35527,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -33754,7 +35566,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -33793,7 +35605,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -33840,7 +35652,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -33879,7 +35691,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -33918,7 +35730,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -33957,7 +35769,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -33996,7 +35808,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -34035,7 +35847,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -34074,7 +35886,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPresPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -34123,7 +35935,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -34162,7 +35974,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -34201,7 +36013,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -34240,7 +36052,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -34279,7 +36091,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -34318,7 +36130,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -34357,7 +36169,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -34404,7 +36216,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -34443,7 +36255,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -34482,7 +36294,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -34521,7 +36333,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -34560,7 +36372,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -34599,7 +36411,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -34638,7 +36450,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -34685,7 +36497,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -34724,7 +36536,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -34763,7 +36575,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -34802,7 +36614,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -34841,7 +36653,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -34880,7 +36692,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -34919,7 +36731,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -34966,7 +36778,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -35005,7 +36817,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -35044,7 +36856,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -35083,7 +36895,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -35122,7 +36934,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -35161,7 +36973,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -35200,7 +37012,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenPastPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -35249,7 +37061,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -35288,7 +37100,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -35327,7 +37139,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -35366,7 +37178,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -35405,7 +37217,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -35444,7 +37256,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -35483,7 +37295,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -35530,7 +37342,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -35569,7 +37381,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -35608,7 +37420,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -35647,7 +37459,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -35686,7 +37498,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -35725,7 +37537,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -35764,7 +37576,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -35811,7 +37623,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -35850,7 +37662,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -35889,7 +37701,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -35928,7 +37740,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -35967,7 +37779,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -36006,7 +37818,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -36045,7 +37857,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -36092,7 +37904,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -36131,7 +37943,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -36170,7 +37982,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -36209,7 +38021,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -36248,7 +38060,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -36287,7 +38099,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -36326,7 +38138,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenFutPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -36375,7 +38187,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -36414,7 +38226,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -36453,7 +38265,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -36492,7 +38304,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -36531,7 +38343,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -36570,7 +38382,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -36609,7 +38421,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -36656,7 +38468,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -36695,7 +38507,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -36734,7 +38546,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -36773,7 +38585,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -36812,7 +38624,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -36851,7 +38663,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -36890,7 +38702,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -36937,7 +38749,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -36976,7 +38788,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -37015,7 +38827,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -37054,7 +38866,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -37093,7 +38905,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -37132,7 +38944,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -37171,7 +38983,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -37218,7 +39030,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -37257,7 +39069,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -37296,7 +39108,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -37335,7 +39147,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -37374,7 +39186,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -37413,7 +39225,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -37452,7 +39264,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenWouldPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -37501,7 +39313,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -37540,7 +39352,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -37579,7 +39391,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -37618,7 +39430,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -37657,7 +39469,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -37696,7 +39508,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -37735,7 +39547,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -37782,7 +39594,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -37821,7 +39633,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -37860,7 +39672,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -37899,7 +39711,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -37938,7 +39750,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -37977,7 +39789,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -38016,7 +39828,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -38063,7 +39875,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -38102,7 +39914,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -38141,7 +39953,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -38180,7 +39992,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -38219,7 +40031,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -38258,7 +40070,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -38297,7 +40109,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -38344,7 +40156,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -38383,7 +40195,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -38422,7 +40234,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -38461,7 +40273,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -38500,7 +40312,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -38539,7 +40351,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -38578,7 +40390,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCouldPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -38627,7 +40439,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -38666,7 +40478,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -38705,7 +40517,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -38744,7 +40556,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -38783,7 +40595,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -38822,7 +40634,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -38861,7 +40673,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -38908,7 +40720,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -38947,7 +40759,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -38986,7 +40798,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -39025,7 +40837,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -39064,7 +40876,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -39103,7 +40915,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -39142,7 +40954,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -39189,7 +41001,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -39228,7 +41040,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -39267,7 +41079,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -39306,7 +41118,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -39345,7 +41157,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -39384,7 +41196,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -39423,7 +41235,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -39470,7 +41282,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -39509,7 +41321,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -39548,7 +41360,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -39587,7 +41399,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -39626,7 +41438,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -39665,7 +41477,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -39704,7 +41516,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenShouldPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -39753,7 +41565,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -39792,7 +41604,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -39831,7 +41643,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -39870,7 +41682,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -39909,7 +41721,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -39948,7 +41760,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -39987,7 +41799,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -40034,7 +41846,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -40073,7 +41885,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -40112,7 +41924,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -40151,7 +41963,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -40190,7 +42002,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -40229,7 +42041,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -40268,7 +42080,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -40315,7 +42127,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -40354,7 +42166,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -40393,7 +42205,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -40432,7 +42244,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -40471,7 +42283,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -40510,7 +42322,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -40549,7 +42361,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerf4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -40596,7 +42408,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -40635,7 +42447,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -40674,7 +42486,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -40713,7 +42525,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -40752,7 +42564,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -40791,7 +42603,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -40830,7 +42642,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMightPerfCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -40879,7 +42691,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -40918,7 +42730,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -40957,7 +42769,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -40996,7 +42808,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -41035,7 +42847,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -41074,7 +42886,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -41113,7 +42925,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -41160,7 +42972,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -41199,7 +43011,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -41238,7 +43050,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -41277,7 +43089,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -41316,7 +43128,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -41355,7 +43167,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -41394,7 +43206,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenCanCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -41443,7 +43255,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -41482,7 +43294,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -41521,7 +43333,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -41560,7 +43372,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -41599,7 +43411,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -41638,7 +43450,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -41677,7 +43489,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustSimp4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -41724,7 +43536,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -41763,7 +43575,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -41802,7 +43614,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -41841,7 +43653,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -41880,7 +43692,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -41919,7 +43731,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -41958,7 +43770,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenMustCont4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -42007,7 +43819,7 @@ public class Generator5 {
             case "yo ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp1;
                         gene = i.eng1;
@@ -42046,7 +43858,7 @@ public class Generator5 {
             case "tú ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp2;
                         gene = i.eng2;
@@ -42085,7 +43897,7 @@ public class Generator5 {
             case "él ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp3;
                         gene = i.eng3;
@@ -42124,7 +43936,7 @@ public class Generator5 {
             case "ella ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp4;
                         gene = i.eng4;
@@ -42163,7 +43975,7 @@ public class Generator5 {
             case "eso ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp5;
                         gene = i.eng5;
@@ -42202,7 +44014,7 @@ public class Generator5 {
             case "ellos ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp6;
                         gene = i.eng6;
@@ -42241,7 +44053,7 @@ public class Generator5 {
             case "nosotros ":
                 switch (verb) {
                     case "Intrans ":
-                        Intrans4 i = new Intrans4();
+                        Intrans5 i = new Intrans5();
                         //i.GenAbleTo4();
                         gens = i.sp7;
                         gene = i.eng7;
@@ -42311,7 +44123,7 @@ public class Generator5 {
                         gene = sp.eng1;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp1;
                         gene = it.eng1;
@@ -42342,7 +44154,7 @@ public class Generator5 {
                         gene = sp.eng2;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp2;
                         gene = it.eng2;
@@ -42372,7 +44184,7 @@ public class Generator5 {
                         gene = sp.eng3;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp3;
                         gene = it.eng3;
@@ -42402,7 +44214,7 @@ public class Generator5 {
                         gene = sp.eng3she;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp4;
                         gene = it.eng4;
@@ -42432,7 +44244,7 @@ public class Generator5 {
                         gene = sp.sp3it;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp5;
                         gene = it.eng5;
@@ -42462,7 +44274,7 @@ public class Generator5 {
                         gene = sp.eng4;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp6;
                         gene = it.eng6;
@@ -42492,7 +44304,7 @@ public class Generator5 {
                         gene = sp.eng5;
                         break;
                     case 3:
-                        Intrans2 it = new Intrans4();
+                        Intrans2 it = new Intrans5();
                         it.wantyouto4();
                         gens = it.sp7;
                         gene = it.eng7;

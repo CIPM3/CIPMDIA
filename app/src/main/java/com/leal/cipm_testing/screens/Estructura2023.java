@@ -35,6 +35,7 @@ import com.leal.cipm_testing.Generator;
 import com.leal.cipm_testing.Generator2;
 import com.leal.cipm_testing.Generator3;
 import com.leal.cipm_testing.Generator4;
+import com.leal.cipm_testing.Generator5;
 import com.leal.cipm_testing.Prefs;
 import com.leal.cipm_testing.R;
 import com.leal.cipm_testing.VocabModeloPersistencia;
@@ -768,10 +769,8 @@ public class Estructura2023 extends AppCompatActivity {
     //DIFICULTAD 1
     public void dificulty1() {
         limpans();
-        algosele = "dif1";
         checarischeck();
         mostrar_layout();
-        r = 0;
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -899,6 +898,38 @@ public class Estructura2023 extends AppCompatActivity {
                                         }
                                     });
                                     Generator4 gen1 = new Generator4();
+                                    gen1.GenPresSimp1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                }
+                            }
+                        });
+                        break;
+                    case "400 a 500":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+                                            // iniciarentradavoz();
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator5 gen1 = new Generator5();
                                     gen1.GenPresSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -9782,10 +9813,8 @@ public class Estructura2023 extends AppCompatActivity {
     }
     public void dificulty2() {
         limpans();
-        algosele = "dif2";
         checarischeck();
         mostrar_layout();
-        r = 1;
 
         switch (selection) {
             case "Tutorial":
@@ -18687,10 +18716,8 @@ public class Estructura2023 extends AppCompatActivity {
     }
     public void dificulty3() {
         limpans();
-        algosele = "dif3";
         checarischeck();
         mostrar_layout();
-        r = 2;
 
         switch (selection) {
             case "Tutorial":
@@ -24792,10 +24819,8 @@ public class Estructura2023 extends AppCompatActivity {
     }
     public void dificulty4() {
         limpans();
-        algosele = "dif4";
         checarischeck();
         mostrar_layout();
-        r = 3;
 
         switch (selection) {
             case "Tutorial":
@@ -30899,7 +30924,7 @@ public class Estructura2023 extends AppCompatActivity {
         if(!selection.equals("Tutorial")){
             if(algosele == "dif1"){
                 //SE ACTIVA EL BTN
-                btndif1.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif1.setBackgroundResource(R.drawable.boton_redondeado_azul);
                 btndif1.setTextColor(Color.WHITE);
 
                 btndif2.setBackgroundResource(R.drawable.borde_azul);
@@ -30911,7 +30936,7 @@ public class Estructura2023 extends AppCompatActivity {
             }
             if(algosele == "dif2"){
                 //SE ACTIVA EL BTN
-                btndif2.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif2.setBackgroundResource(R.drawable.boton_redondeado_azul);
                 btndif2.setTextColor(Color.WHITE);
 
                 btndif1.setBackgroundResource(R.drawable.borde_azul);
@@ -30923,27 +30948,27 @@ public class Estructura2023 extends AppCompatActivity {
             }
             if(algosele == "dif3"){
                 //SE ACTIVA EL BTN
-                btndif3.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
-                btndif2.setTextColor(Color.WHITE);
+                btndif3.setBackgroundResource(R.drawable.boton_redondeado_azul);
+                btndif3.setTextColor(Color.WHITE);
 
-                btndif1.setBackgroundResource(R.drawable.borde_azul);
-                btndif1.setTextColor(Color.parseColor("#407BFB"));
                 btndif2.setBackgroundResource(R.drawable.borde_azul);
                 btndif2.setTextColor(Color.parseColor("#407BFB"));
+                btndif1.setBackgroundResource(R.drawable.borde_azul);
+                btndif1.setTextColor(Color.parseColor("#407BFB"));
                 btndif4.setBackgroundResource(R.drawable.borde_azul);
                 btndif4.setTextColor(Color.parseColor("#407BFB"));
             }
             if(algosele == "dif4"){
                 //SE ACTIVA EL BTN
-                btndif4.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#407BFB")));
+                btndif4.setBackgroundResource(R.drawable.boton_redondeado_azul);
                 btndif4.setTextColor(Color.WHITE);
 
-                btndif1.setBackgroundResource(R.drawable.borde_azul);
-                btndif1.setTextColor(Color.parseColor("#407BFB"));
                 btndif2.setBackgroundResource(R.drawable.borde_azul);
                 btndif2.setTextColor(Color.parseColor("#407BFB"));
                 btndif3.setBackgroundResource(R.drawable.borde_azul);
                 btndif3.setTextColor(Color.parseColor("#407BFB"));
+                btndif1.setBackgroundResource(R.drawable.borde_azul);
+                btndif1.setTextColor(Color.parseColor("#407BFB"));
             }
         }
     }
