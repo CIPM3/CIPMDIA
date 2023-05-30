@@ -930,7 +930,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                             });
 
                                     break;
-                                case "100 a 100":
+                                case "100 a 200":
                                     tt1= new TextToSpeech(getApplicationContext(),
                                             new TextToSpeech.OnInitListener() {
                                                 @Override
@@ -954,7 +954,6 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         n.generatepsporObjeto();
                                                         sptx.setText(n.gens);
                                                         engtx.setText(n.gene);// he
-
                                                         t0= n.gene;
                                                         txteng1.setText(t0);
                                                         t1= n.gene2;
