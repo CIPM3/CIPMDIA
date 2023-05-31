@@ -36,27 +36,27 @@ public class Generator5 {
     //FALTAN SPECIAL Y NOBLES
     String verbDif1[]={
             "Intrans ","People ",
-            "Oo "
+            "Oo ","Special "
     };
 
     String verbDif2[]={
             "Intrans ","People ",
-            "Oo "
+            "Oo ","Special "
     };
 
     String verbDif3[]={
             "Intrans ","People ",
-            "Oo "
+            "Oo ","Special "
     };
 
     String verbDif4[]={
             "Intrans ","People ",
-            "Oo "
+            "Oo ","Special "
     };
 
     String verbOP[]={
             "Intrans ","People ",
-            "Oo "
+            "Oo ","Special "
     };
 
 
@@ -81,7 +81,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -127,7 +127,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -173,7 +173,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -219,7 +219,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -265,7 +265,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -311,7 +311,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -357,7 +357,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -411,7 +411,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -457,7 +457,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -503,7 +503,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -549,7 +549,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -595,7 +595,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -641,7 +641,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -687,7 +687,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -741,7 +741,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -787,7 +787,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -833,7 +833,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -879,7 +879,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -925,7 +925,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -971,7 +971,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1017,7 +1017,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1071,7 +1071,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -1117,7 +1117,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -1163,7 +1163,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -1209,7 +1209,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1255,7 +1255,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1301,7 +1301,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1347,7 +1347,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1403,7 +1403,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -1449,7 +1449,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -1495,7 +1495,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -1541,7 +1541,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1587,7 +1587,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1633,7 +1633,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1679,7 +1679,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1733,7 +1733,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -1779,7 +1779,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -1825,7 +1825,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -1871,7 +1871,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -1917,7 +1917,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -1963,7 +1963,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2009,7 +2009,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2063,7 +2063,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -2109,7 +2109,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -2155,7 +2155,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -2201,7 +2201,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2247,7 +2247,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2293,7 +2293,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2339,7 +2339,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2393,7 +2393,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -2439,7 +2439,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -2485,7 +2485,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -2531,7 +2531,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2577,7 +2577,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2623,7 +2623,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2669,7 +2669,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2724,7 +2724,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -2770,7 +2770,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -2816,7 +2816,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -2862,7 +2862,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -2908,7 +2908,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -2954,7 +2954,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3000,7 +3000,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3054,7 +3054,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -3100,7 +3100,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -3146,7 +3146,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -3192,7 +3192,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3238,7 +3238,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3284,7 +3284,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3330,7 +3330,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3384,7 +3384,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -3430,7 +3430,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -3476,7 +3476,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -3522,7 +3522,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3568,7 +3568,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3614,7 +3614,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3660,7 +3660,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3714,7 +3714,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -3760,7 +3760,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -3806,7 +3806,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -3852,7 +3852,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3898,7 +3898,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -3944,7 +3944,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -3990,7 +3990,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4045,7 +4045,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -4091,7 +4091,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -4137,7 +4137,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -4183,7 +4183,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4229,7 +4229,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4275,7 +4275,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4321,7 +4321,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4375,7 +4375,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -4421,7 +4421,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -4467,7 +4467,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -4513,7 +4513,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4559,7 +4559,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4605,7 +4605,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4651,7 +4651,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4705,7 +4705,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -4751,7 +4751,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -4797,7 +4797,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -4843,7 +4843,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4889,7 +4889,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -4935,7 +4935,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -4981,7 +4981,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5035,7 +5035,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -5081,7 +5081,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -5127,7 +5127,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -5173,7 +5173,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5219,7 +5219,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5265,7 +5265,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5311,7 +5311,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5367,7 +5367,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -5413,7 +5413,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -5459,7 +5459,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -5505,7 +5505,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5551,7 +5551,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5597,7 +5597,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5643,7 +5643,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5697,7 +5697,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -5743,7 +5743,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -5789,7 +5789,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -5835,7 +5835,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5881,7 +5881,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -5927,7 +5927,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -5973,7 +5973,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6027,7 +6027,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -6073,7 +6073,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -6119,7 +6119,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -6165,7 +6165,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6211,7 +6211,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6257,7 +6257,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6303,7 +6303,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6357,7 +6357,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -6403,7 +6403,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -6449,7 +6449,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -6495,7 +6495,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6541,7 +6541,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6587,7 +6587,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6633,7 +6633,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6689,7 +6689,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -6735,7 +6735,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -6781,7 +6781,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -6827,7 +6827,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6873,7 +6873,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -6919,7 +6919,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -6965,7 +6965,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7019,7 +7019,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -7065,7 +7065,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -7111,7 +7111,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -7157,7 +7157,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7203,7 +7203,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7249,7 +7249,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7295,7 +7295,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7349,7 +7349,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -7395,7 +7395,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -7441,7 +7441,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -7487,7 +7487,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7533,7 +7533,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7579,7 +7579,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7625,7 +7625,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7679,7 +7679,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -7725,7 +7725,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -7771,7 +7771,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -7817,7 +7817,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7863,7 +7863,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -7909,7 +7909,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -7955,7 +7955,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8011,7 +8011,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -8057,7 +8057,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -8103,7 +8103,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -8149,7 +8149,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8195,7 +8195,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8241,7 +8241,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8287,7 +8287,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8341,7 +8341,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -8387,7 +8387,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -8433,7 +8433,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -8479,7 +8479,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8525,7 +8525,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8571,7 +8571,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8617,7 +8617,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8671,7 +8671,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -8717,7 +8717,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -8763,7 +8763,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -8809,7 +8809,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8855,7 +8855,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -8901,7 +8901,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -8947,7 +8947,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9001,7 +9001,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -9047,7 +9047,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -9093,7 +9093,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -9139,7 +9139,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9185,7 +9185,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9231,7 +9231,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9277,7 +9277,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9333,7 +9333,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -9379,7 +9379,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -9425,7 +9425,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -9471,7 +9471,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9517,7 +9517,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9563,7 +9563,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9609,7 +9609,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9663,7 +9663,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -9709,7 +9709,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -9755,7 +9755,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -9801,7 +9801,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9847,7 +9847,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9893,7 +9893,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -9939,7 +9939,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -9995,7 +9995,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -10041,7 +10041,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -10087,7 +10087,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -10133,7 +10133,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10179,7 +10179,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -10225,7 +10225,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10271,7 +10271,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -10325,7 +10325,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -10371,7 +10371,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -10417,7 +10417,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -10463,7 +10463,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10509,7 +10509,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -10555,7 +10555,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10601,7 +10601,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -10656,7 +10656,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -10702,7 +10702,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -10748,7 +10748,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -10794,7 +10794,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10840,7 +10840,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -10886,7 +10886,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -10932,7 +10932,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo1();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -11003,7 +11003,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -11041,7 +11041,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -11078,7 +11078,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -11115,7 +11115,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -11152,7 +11152,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -11189,7 +11189,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -11226,7 +11226,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto1();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -11272,7 +11272,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -11310,7 +11310,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -11347,7 +11347,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -11384,7 +11384,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -11421,7 +11421,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -11458,7 +11458,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -11495,7 +11495,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     /*case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo1();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -13038,7 +13038,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -13077,7 +13077,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -13116,7 +13116,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -13155,7 +13155,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13194,7 +13194,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13233,7 +13233,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13272,7 +13272,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13319,7 +13319,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -13358,7 +13358,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -13397,7 +13397,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -13436,7 +13436,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13475,7 +13475,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13514,7 +13514,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13553,7 +13553,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13600,7 +13600,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -13639,7 +13639,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -13678,7 +13678,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -13717,7 +13717,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13756,7 +13756,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13795,7 +13795,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -13834,7 +13834,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -13883,7 +13883,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -13922,7 +13922,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -13961,7 +13961,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -14000,7 +14000,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14039,7 +14039,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14078,7 +14078,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14117,7 +14117,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14164,7 +14164,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -14203,7 +14203,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -14242,7 +14242,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -14281,7 +14281,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14320,7 +14320,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14359,7 +14359,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14398,7 +14398,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14445,7 +14445,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -14484,7 +14484,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -14523,7 +14523,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -14562,7 +14562,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14601,7 +14601,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14640,7 +14640,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14679,7 +14679,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14726,7 +14726,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -14765,7 +14765,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -14804,7 +14804,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -14843,7 +14843,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14882,7 +14882,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -14921,7 +14921,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -14960,7 +14960,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15009,7 +15009,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -15048,7 +15048,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -15087,7 +15087,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -15126,7 +15126,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15165,7 +15165,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15204,7 +15204,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15243,7 +15243,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15290,7 +15290,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -15329,7 +15329,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -15368,7 +15368,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -15407,7 +15407,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15446,7 +15446,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15485,7 +15485,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15524,7 +15524,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15571,7 +15571,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -15610,7 +15610,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -15649,7 +15649,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -15688,7 +15688,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15727,7 +15727,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15766,7 +15766,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -15805,7 +15805,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -15852,7 +15852,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -15891,7 +15891,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -15930,7 +15930,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -15969,7 +15969,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16008,7 +16008,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16047,7 +16047,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16086,7 +16086,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16135,7 +16135,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -16174,7 +16174,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -16213,7 +16213,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -16252,7 +16252,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16291,7 +16291,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16330,7 +16330,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16369,7 +16369,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16416,7 +16416,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -16455,7 +16455,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -16494,7 +16494,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -16533,7 +16533,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16572,7 +16572,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16611,7 +16611,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16650,7 +16650,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16697,7 +16697,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -16736,7 +16736,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -16775,7 +16775,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -16814,7 +16814,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16853,7 +16853,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16892,7 +16892,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -16931,7 +16931,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -16978,7 +16978,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -17017,7 +17017,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -17056,7 +17056,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -17095,7 +17095,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17134,7 +17134,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17173,7 +17173,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17212,7 +17212,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17261,7 +17261,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -17300,7 +17300,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -17339,7 +17339,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -17378,7 +17378,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17417,7 +17417,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17456,7 +17456,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17495,7 +17495,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17542,7 +17542,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -17581,7 +17581,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -17620,7 +17620,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -17659,7 +17659,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17698,7 +17698,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17737,7 +17737,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17776,7 +17776,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -17823,7 +17823,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -17862,7 +17862,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -17901,7 +17901,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -17940,7 +17940,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -17979,7 +17979,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18018,7 +18018,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18057,7 +18057,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18104,7 +18104,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -18143,7 +18143,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -18182,7 +18182,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -18221,7 +18221,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18260,7 +18260,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18299,7 +18299,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18338,7 +18338,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18387,7 +18387,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -18426,7 +18426,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -18465,7 +18465,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -18504,7 +18504,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18543,7 +18543,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18582,7 +18582,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18621,7 +18621,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18668,7 +18668,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -18707,7 +18707,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -18746,7 +18746,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -18785,7 +18785,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18824,7 +18824,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18863,7 +18863,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -18902,7 +18902,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -18949,7 +18949,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -18988,7 +18988,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -19027,7 +19027,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -19066,7 +19066,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19105,7 +19105,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19144,7 +19144,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19183,7 +19183,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19230,7 +19230,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -19269,7 +19269,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -19308,7 +19308,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -19347,7 +19347,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19386,7 +19386,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19425,7 +19425,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19464,7 +19464,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19513,7 +19513,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -19552,7 +19552,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -19591,7 +19591,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -19630,7 +19630,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19669,7 +19669,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19708,7 +19708,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19747,7 +19747,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19794,7 +19794,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -19833,7 +19833,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -19872,7 +19872,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -19911,7 +19911,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -19950,7 +19950,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -19989,7 +19989,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20028,7 +20028,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20075,7 +20075,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -20114,7 +20114,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -20153,7 +20153,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -20192,7 +20192,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20231,7 +20231,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20270,7 +20270,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20309,7 +20309,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20356,7 +20356,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -20395,7 +20395,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -20434,7 +20434,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -20473,7 +20473,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20512,7 +20512,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20551,7 +20551,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20590,7 +20590,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20639,7 +20639,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -20678,7 +20678,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -20717,7 +20717,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -20756,7 +20756,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20795,7 +20795,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20834,7 +20834,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -20873,7 +20873,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -20920,7 +20920,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -20959,7 +20959,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -20998,7 +20998,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -21037,7 +21037,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21076,7 +21076,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21115,7 +21115,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21154,7 +21154,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21203,7 +21203,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -21242,7 +21242,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -21281,7 +21281,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -21320,7 +21320,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21359,7 +21359,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21398,7 +21398,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21437,7 +21437,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21484,7 +21484,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -21523,7 +21523,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -21562,7 +21562,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -21601,7 +21601,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21640,7 +21640,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21679,7 +21679,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21718,7 +21718,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21767,7 +21767,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -21806,7 +21806,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -21845,7 +21845,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -21884,7 +21884,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -21923,7 +21923,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -21962,7 +21962,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -22001,7 +22001,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo2();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -22058,7 +22058,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -22089,7 +22089,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -22119,7 +22119,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -22149,7 +22149,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -22179,7 +22179,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -22209,7 +22209,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -22239,7 +22239,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto2();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -22284,7 +22284,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -22319,7 +22319,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -22354,7 +22354,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -22389,7 +22389,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -22424,7 +22424,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -22459,7 +22459,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -22494,7 +22494,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo2();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -24066,7 +24066,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -24105,7 +24105,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -24144,7 +24144,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -24183,7 +24183,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24222,7 +24222,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24261,7 +24261,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24300,7 +24300,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24347,7 +24347,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -24386,7 +24386,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -24425,7 +24425,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -24464,7 +24464,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24503,7 +24503,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24542,7 +24542,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24581,7 +24581,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24628,7 +24628,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -24667,7 +24667,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -24706,7 +24706,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -24745,7 +24745,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24784,7 +24784,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24823,7 +24823,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -24862,7 +24862,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -24911,7 +24911,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -24950,7 +24950,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -24989,7 +24989,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -25028,7 +25028,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25067,7 +25067,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25106,7 +25106,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25145,7 +25145,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25192,7 +25192,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -25231,7 +25231,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -25270,7 +25270,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -25309,7 +25309,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25348,7 +25348,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25387,7 +25387,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25426,7 +25426,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25473,7 +25473,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -25512,7 +25512,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -25551,7 +25551,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -25590,7 +25590,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25629,7 +25629,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25668,7 +25668,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25707,7 +25707,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25754,7 +25754,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -25793,7 +25793,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -25832,7 +25832,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -25871,7 +25871,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25910,7 +25910,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -25949,7 +25949,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -25988,7 +25988,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26037,7 +26037,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -26076,7 +26076,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -26115,7 +26115,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -26154,7 +26154,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26193,7 +26193,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26232,7 +26232,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26271,7 +26271,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26318,7 +26318,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -26357,7 +26357,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -26396,7 +26396,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -26435,7 +26435,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26474,7 +26474,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26513,7 +26513,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26552,7 +26552,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26599,7 +26599,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -26638,7 +26638,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -26677,7 +26677,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -26716,7 +26716,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26755,7 +26755,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26794,7 +26794,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -26833,7 +26833,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -26880,7 +26880,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -26919,7 +26919,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -26958,7 +26958,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -26997,7 +26997,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27036,7 +27036,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27075,7 +27075,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27114,7 +27114,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27163,7 +27163,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -27202,7 +27202,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -27241,7 +27241,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -27280,7 +27280,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27319,7 +27319,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27358,7 +27358,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27397,7 +27397,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27444,7 +27444,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -27483,7 +27483,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -27522,7 +27522,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -27561,7 +27561,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27600,7 +27600,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27639,7 +27639,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27678,7 +27678,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27725,7 +27725,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -27764,7 +27764,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -27803,7 +27803,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -27842,7 +27842,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27881,7 +27881,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -27920,7 +27920,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -27959,7 +27959,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28006,7 +28006,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -28045,7 +28045,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -28084,7 +28084,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -28123,7 +28123,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28162,7 +28162,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28201,7 +28201,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28240,7 +28240,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28289,7 +28289,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -28328,7 +28328,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -28367,7 +28367,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -28406,7 +28406,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28445,7 +28445,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28484,7 +28484,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28523,7 +28523,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28570,7 +28570,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -28609,7 +28609,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -28648,7 +28648,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -28687,7 +28687,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28726,7 +28726,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28765,7 +28765,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -28804,7 +28804,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -28851,7 +28851,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -28890,7 +28890,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -28929,7 +28929,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -28968,7 +28968,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29007,7 +29007,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29046,7 +29046,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29085,7 +29085,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29132,7 +29132,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -29171,7 +29171,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -29210,7 +29210,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -29249,7 +29249,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29288,7 +29288,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29327,7 +29327,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29366,7 +29366,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29415,7 +29415,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -29454,7 +29454,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -29493,7 +29493,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -29532,7 +29532,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29571,7 +29571,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29610,7 +29610,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29649,7 +29649,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29696,7 +29696,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -29735,7 +29735,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -29774,7 +29774,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -29813,7 +29813,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29852,7 +29852,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29891,7 +29891,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -29930,7 +29930,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -29977,7 +29977,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -30016,7 +30016,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -30055,7 +30055,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -30094,7 +30094,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30133,7 +30133,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30172,7 +30172,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30211,7 +30211,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30258,7 +30258,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -30297,7 +30297,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -30336,7 +30336,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -30375,7 +30375,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30414,7 +30414,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30453,7 +30453,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30492,7 +30492,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30541,7 +30541,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -30580,7 +30580,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -30619,7 +30619,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -30658,7 +30658,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30697,7 +30697,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30736,7 +30736,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30775,7 +30775,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -30822,7 +30822,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -30861,7 +30861,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -30900,7 +30900,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -30939,7 +30939,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -30978,7 +30978,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31017,7 +31017,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31056,7 +31056,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31103,7 +31103,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -31142,7 +31142,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -31181,7 +31181,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -31220,7 +31220,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31259,7 +31259,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31298,7 +31298,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31337,7 +31337,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31384,7 +31384,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -31423,7 +31423,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -31462,7 +31462,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -31501,7 +31501,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31540,7 +31540,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31579,7 +31579,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31618,7 +31618,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31667,7 +31667,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -31706,7 +31706,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -31745,7 +31745,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -31784,7 +31784,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31823,7 +31823,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31862,7 +31862,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -31901,7 +31901,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -31948,7 +31948,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -31987,7 +31987,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -32026,7 +32026,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -32065,7 +32065,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32104,7 +32104,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32143,7 +32143,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32182,7 +32182,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32231,7 +32231,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -32270,7 +32270,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -32309,7 +32309,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -32348,7 +32348,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32387,7 +32387,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32426,7 +32426,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32465,7 +32465,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32512,7 +32512,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -32551,7 +32551,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -32590,7 +32590,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -32629,7 +32629,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32668,7 +32668,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32707,7 +32707,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32746,7 +32746,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32795,7 +32795,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -32834,7 +32834,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -32873,7 +32873,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -32912,7 +32912,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -32951,7 +32951,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -32990,7 +32990,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -33029,7 +33029,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo3();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -33086,7 +33086,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -33117,7 +33117,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -33147,7 +33147,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -33177,7 +33177,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -33207,7 +33207,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -33237,7 +33237,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -33267,7 +33267,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto3();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -33312,7 +33312,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -33350,7 +33350,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -33387,7 +33387,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -33424,7 +33424,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -33461,7 +33461,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -33498,7 +33498,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -33535,7 +33535,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo3();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -35097,7 +35097,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -35136,7 +35136,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -35175,7 +35175,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -35214,7 +35214,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35253,7 +35253,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35292,7 +35292,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35331,7 +35331,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35378,7 +35378,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -35417,7 +35417,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -35456,7 +35456,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -35495,7 +35495,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35534,7 +35534,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35573,7 +35573,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35612,7 +35612,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35659,7 +35659,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -35698,7 +35698,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -35737,7 +35737,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -35776,7 +35776,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35815,7 +35815,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35854,7 +35854,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -35893,7 +35893,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPresPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -35942,7 +35942,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -35981,7 +35981,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -36020,7 +36020,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -36059,7 +36059,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36098,7 +36098,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36137,7 +36137,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36176,7 +36176,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36223,7 +36223,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -36262,7 +36262,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -36301,7 +36301,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -36340,7 +36340,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36379,7 +36379,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36418,7 +36418,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36457,7 +36457,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36504,7 +36504,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -36543,7 +36543,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -36582,7 +36582,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -36621,7 +36621,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36660,7 +36660,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36699,7 +36699,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36738,7 +36738,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36785,7 +36785,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -36824,7 +36824,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -36863,7 +36863,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -36902,7 +36902,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -36941,7 +36941,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -36980,7 +36980,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37019,7 +37019,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenPastPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37068,7 +37068,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -37107,7 +37107,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -37146,7 +37146,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -37185,7 +37185,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37224,7 +37224,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37263,7 +37263,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37302,7 +37302,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37349,7 +37349,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -37388,7 +37388,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -37427,7 +37427,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -37466,7 +37466,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37505,7 +37505,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37544,7 +37544,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37583,7 +37583,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37630,7 +37630,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -37669,7 +37669,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -37708,7 +37708,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -37747,7 +37747,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37786,7 +37786,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37825,7 +37825,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -37864,7 +37864,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -37911,7 +37911,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -37950,7 +37950,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -37989,7 +37989,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -38028,7 +38028,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38067,7 +38067,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38106,7 +38106,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38145,7 +38145,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenFutPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38194,7 +38194,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -38233,7 +38233,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -38272,7 +38272,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -38311,7 +38311,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38350,7 +38350,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38389,7 +38389,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38428,7 +38428,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38475,7 +38475,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -38514,7 +38514,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -38553,7 +38553,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -38592,7 +38592,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38631,7 +38631,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38670,7 +38670,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38709,7 +38709,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38756,7 +38756,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -38795,7 +38795,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -38834,7 +38834,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -38873,7 +38873,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38912,7 +38912,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -38951,7 +38951,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -38990,7 +38990,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39037,7 +39037,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -39076,7 +39076,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -39115,7 +39115,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -39154,7 +39154,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39193,7 +39193,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39232,7 +39232,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39271,7 +39271,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenWouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39320,7 +39320,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -39359,7 +39359,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -39398,7 +39398,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -39437,7 +39437,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39476,7 +39476,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39515,7 +39515,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39554,7 +39554,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39601,7 +39601,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -39640,7 +39640,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -39679,7 +39679,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -39718,7 +39718,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39757,7 +39757,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39796,7 +39796,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -39835,7 +39835,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -39882,7 +39882,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -39921,7 +39921,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -39960,7 +39960,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -39999,7 +39999,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40038,7 +40038,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40077,7 +40077,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40116,7 +40116,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40163,7 +40163,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -40202,7 +40202,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -40241,7 +40241,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -40280,7 +40280,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40319,7 +40319,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40358,7 +40358,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40397,7 +40397,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40446,7 +40446,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -40485,7 +40485,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -40524,7 +40524,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -40563,7 +40563,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40602,7 +40602,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40641,7 +40641,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40680,7 +40680,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40727,7 +40727,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -40766,7 +40766,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -40805,7 +40805,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -40844,7 +40844,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40883,7 +40883,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -40922,7 +40922,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -40961,7 +40961,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41008,7 +41008,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -41047,7 +41047,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -41086,7 +41086,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -41125,7 +41125,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41164,7 +41164,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41203,7 +41203,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41242,7 +41242,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41289,7 +41289,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -41328,7 +41328,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -41367,7 +41367,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -41406,7 +41406,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41445,7 +41445,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41484,7 +41484,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41523,7 +41523,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenShouldPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41572,7 +41572,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -41611,7 +41611,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -41650,7 +41650,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -41689,7 +41689,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41728,7 +41728,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41767,7 +41767,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -41806,7 +41806,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -41853,7 +41853,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -41892,7 +41892,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -41931,7 +41931,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -41970,7 +41970,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42009,7 +42009,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42048,7 +42048,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42087,7 +42087,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42134,7 +42134,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -42173,7 +42173,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -42212,7 +42212,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -42251,7 +42251,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42290,7 +42290,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42329,7 +42329,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42368,7 +42368,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerf4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42415,7 +42415,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -42454,7 +42454,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -42493,7 +42493,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -42532,7 +42532,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42571,7 +42571,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42610,7 +42610,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42649,7 +42649,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMightPerfCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42698,7 +42698,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -42737,7 +42737,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -42776,7 +42776,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -42815,7 +42815,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42854,7 +42854,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42893,7 +42893,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -42932,7 +42932,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -42979,7 +42979,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -43018,7 +43018,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -43057,7 +43057,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -43096,7 +43096,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43135,7 +43135,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43174,7 +43174,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43213,7 +43213,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenCanCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43262,7 +43262,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -43301,7 +43301,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -43340,7 +43340,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -43379,7 +43379,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43418,7 +43418,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43457,7 +43457,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43496,7 +43496,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustSimp4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43543,7 +43543,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -43582,7 +43582,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -43621,7 +43621,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -43660,7 +43660,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43699,7 +43699,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43738,7 +43738,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43777,7 +43777,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenMustCont4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -43826,7 +43826,7 @@ public class Generator5 {
                         gene2 = i.eng12;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp1;
                         gene = s.eng1;
@@ -43865,7 +43865,7 @@ public class Generator5 {
                         gene2 = i.eng22;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp2;
                         gene = s.eng2;
@@ -43904,7 +43904,7 @@ public class Generator5 {
                         gene2 = i.eng32;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp3;
                         gene = s.eng3;
@@ -43943,7 +43943,7 @@ public class Generator5 {
                         gene2 = i.eng42;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -43982,7 +43982,7 @@ public class Generator5 {
                         gene2 = i.eng52;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -44021,7 +44021,7 @@ public class Generator5 {
                         gene2 = i.eng62;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp4;
                         gene = s.eng4;
@@ -44060,7 +44060,7 @@ public class Generator5 {
                         gene2 = i.eng72;
                         break;
                     case "Special ":
-                        Special4 s = new Special4();
+                        Special5 s = new Special5();
                         s.GenAbleTo4();
                         gens = s.sp5;
                         gene = s.eng5;
@@ -44117,7 +44117,7 @@ public class Generator5 {
                         gene = o.ps1eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -44148,7 +44148,7 @@ public class Generator5 {
                         gene = o.ps2eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -44178,7 +44178,7 @@ public class Generator5 {
                         gene = o.ps3eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -44208,7 +44208,7 @@ public class Generator5 {
                         gene = o.ps3she;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -44238,7 +44238,7 @@ public class Generator5 {
                         gene = o.ps3it;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -44268,7 +44268,7 @@ public class Generator5 {
                         gene = o.ps4eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -44298,7 +44298,7 @@ public class Generator5 {
                         gene = o.ps5eng;
                         break;
                     /*case 2:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.wantyouto4();
                         gens = sp.sp5;
                         gene = sp.eng5;
@@ -44348,7 +44348,7 @@ public class Generator5 {
                         gene2 = p.ps1eng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp1;
                         gene = sp.eng1;
@@ -44383,7 +44383,7 @@ public class Generator5 {
                         gene2 = p.ps2eng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp2;
                         gene = sp.eng2;
@@ -44419,7 +44419,7 @@ public class Generator5 {
                         gene2 = p.ps3eng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp3;
                         gene = sp.eng3;
@@ -44454,7 +44454,7 @@ public class Generator5 {
                         gene2 = p.ps3she2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp3ella;
                         gene = sp.eng3she;
@@ -44487,7 +44487,7 @@ public class Generator5 {
                         gene2 = p.ps3iteng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp3eso;
                         gene = sp.sp3it;
@@ -44522,7 +44522,7 @@ public class Generator5 {
                         gene2 = p.ps4eng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp4;
                         gene = sp.eng4;
@@ -44557,7 +44557,7 @@ public class Generator5 {
                         gene2 = p.ps5eng2;
                         break;
                     case 3:
-                        Special4 sp = new Special4();
+                        Special5 sp = new Special5();
                         sp.forSubTo4();
                         gens = sp.sp5;
                         gene = sp.eng5;
