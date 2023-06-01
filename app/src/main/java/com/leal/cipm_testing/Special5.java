@@ -30,11 +30,11 @@ public class Special5 {
     };
 
     String v1[]={
-            "sucede ", "dobla "
+            "me sucedio ", "me doblo "
     };
 
     String v2[]={
-            "sucede ", "dobla "
+            "te sucedio ", "te doblas "
     };
 
     String verbs3[]={
@@ -42,114 +42,115 @@ public class Special5 {
     };
 
     String v3[]={
-            "sucede ", "dobla "
+            "te sucedio ", "se doblas "
     };
 
     String v4[]={
-            "sucede ", "dobla "
+            "les suceden ", "se doblan "
     };
 
     String v5nos[]={
-            "sucede ", "dobla "
+            "nos suceden ", "nos doblamos "
     };
 
     String vsf1[]={
-            "sucedera ", "doblaras "
+            "me sucedera ", "me doblare "
     };
 
     String vsf2[]={
-            "sucedera ", "doblaras "
+            "te sucedera ", "te doblaras "
     };
 
     String vsf3[]={
-            "sucedera ", "doblaras "
+            "le sucedera ", "se doblara "
     };
 
     String vsf4[]={
-            "sucedera ", "doblaras "
+            "les sucederan ", "se doblaran "
     };
 
     String vsf5[]={
-            "sucedera ", "doblaras "
+            "nos sucederan ", "nos doblaremos "
     };
 
     String vsb1w[]={
-            "sucederia ", "doblaras "
+            "me sucederia ", "me doblaria "
     };
 
     String vsb2w[]={
-            "sucederia ", "doblaras "
+            "te sucederia ", "te doblaras "
     };
 
     String vsb3w[]={
-            "sucederia ", "doblaras "
+            "le sucederia ", "le doblarias "
     };
 
     String vsb4w[]={
-            "sucederia ", "doblaras "
+            "le sucederian ", "le doblarian "
     };
 
     String vsb5w[]={
-            "sucederia ", "doblaras "
+            "nos sucederian ", "nos doblariamos "
     };
 
     String vsp1[]={
-            "suceda ", "dobles "
+            "me suceda ", "me doble "
     };
 
     String vsp2[]={
-            "suceda ", "dobles "
+            "te suceda ", "te dobles "
     };
 
     String vsp3[]={
-            "suceda ", "dobles "
+            "le suceda ", "te dobles "
     };
 
     String vsp4[]={
+            "le sucedan ","se doblen "
     };
 
     String vsp5[]={
-            "suceda ", "dobles "
+            "nos sucedan ", "nos doblemos "
     };
 
     String vsp1i[]={
-            "sucedia ", "doblabas "
+            "me sucedia ", "me doblaba "
     };
 
     String vsp2i[]={
-            "sucedia ", "doblabas "
+            "te sucedia ", "te doblabas "
     };
 
     String vsp3i[]={
-            "sucedia ", "doblabas "
+            "le sucedia ", "le doblabas "
     };
 
     String vsp4i[]={
-            "sucedia ", "doblaban "
+            "le sucedian ", "le doblaban "
     };
 
     String vsp5i[]={
-            "sucedia ", "doblabamos "
+            "nos sucedian ", "nos doblabamos "
     };
 
     String v1s[]={
-            "sucede ", "dobla "
+            "me sucede ", "me dobla "
     };
 
     String v2s[]={
-            "sucede ", "dobla "
+            "le sucede ", "le dobla "
     };
 
     String v3s[]={
-            "sucede ", "dobla "
+            "le sucede ", "le dobla "
     };
 
     String v4s[]={
-            "sucede ", "dobla "
+            "le suceden ", "le doblan "
     };
 
     String v5s[]={
-            "sucede ", "dobla "
+            "nos suceden ", "nos doblan "
     };
 
     // soreport
