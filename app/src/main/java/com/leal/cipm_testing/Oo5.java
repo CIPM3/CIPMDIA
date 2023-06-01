@@ -7,195 +7,192 @@ public class Oo5 {
     //with, at, during, until,among,in,by,since,under,around,near
 
     //VERBOS ORIENTADO A OBJETOS
-    String vnbs[] = {
-            "arreglar ", "conectar ", "agarrar ", "chocar ", "dividir ", "lavar ", "malgastar ",
-            "jalar ", "coleccionar ", "llenar ", "exponer ", "reparar ", "partir "
-
-    };
     String vnb[] = {
-            "fix ", "connect ", "grab ", "crash ", "divide ", "wash ", "waste ", "pull ",
-            "collect ", "fill ", "expose ", "repair ", "split "
+            "paint ", "drag ", "gather ", "throw ", "damage ",
+            "looks at ", "enjoy ", "clean "
     };
+    String vnbs[] = {
+            "pintar ", "arrastrar ", "recoger ", "lanzar ", "dañar ",
+            "mirar ", "disfrutar ", "limpiar "
+    };
+
+    //VERBOS TERCERA PERSONA
     String vn3[] = {
-            "fixes ", "connects ", "grabs ", "crashes ", "divides ", "washes ", "wastes ",
-            "pulls ", "collects ", "fills ", "exposes ", "repairs ", "splits "
+            "paints ", "drags ", "gathers ", "throws ", "damages ",
+            "looks at ", "enjoys ", "cleans "
     };
 
     //PRESENTES
     String vn1[] = {
-            "arreglo ", "conecto ", "agarro ", "choco ", "divido ", "lavo ", "malgasto ",
-            "jalo ", "colecciono ", "lleno ", "expongo ", "reparo ", "parto "
+            "pinto ", "arrastro ", "recojo ", "lanzo ", "daño ",
+            "miro ", "disfruto ", "limpio "
     };
     String vn2[] = {
-            "arreglas ", "conectas ", "agarras ", "chocas ", "divides ", "lavas ", "malgastas ",
-            "jalas ", "coleccionas ", "llenas ", "expones ", "reparas ", "partes "
+            "pintas ", "arrastras ", "recoges ", "lanzas ", "dañas ",
+            "miras ", "disfrutas ", "limpias "
     };
     String vnb3[] = {
-            "arregla ", "conecta ", "agarra ", "choca ", "divide ", "lava ", "malgasta ",
-            "jala ", "colecciona ", "llena ", "expone ", "repara ", "parte "
+            "pinta ", "arrastra ", "recoge ", "lanza ", "daña ",
+            "mira ", "disfruta ", "limpia "
     };
     String vn4[] = {
-            "arreglan ", "conectan ", "agarran ", "chocan ", "dividen ", "lavan ", "malgastan ",
-            "jalan ", "coleccionan ", "llenan ", "exponen ", "reparan ", "parten "
+            "pintan ", "arrastran ", "recogen ", "lanzan ", "dañan ",
+            "miran ", "disfrutan ", "limpian "
     };
     String vn5[] = {
-            "arreglamos ", "conectamos ", "agarramos ", "chocamos ", "dividimos ", "lavamos ",
-            "malgastamos ", "jalamos ", "coleccionamos ", "llenamos ", "exponemos ", "reparamos ",
-            "partimos "
+            "pintamos ", "arrastramos ", "recogemos ", "lanzamos ", "dañamos ",
+            "miramos ", "disfrutamos ", "limpiamos "
     };
 
     //ING
     String vnbc[] = {
-            "fixing ", "connecting ", "grabbing ", "crashing ", "dividing ", "washing ", "wasting ",
-            "pulling ", "collecting ", "filling ", "exposing ", "repairing ", "splitting "
+            "painting  ", "dragging ", "gathering ", "throwing ", "damaging ",
+            "looking at ", "enjoying ", "cleaning "
     };
     String vnbcs[] = {
-            "arreglando ", "conectando ", "agarrando ", "chocando ", "dividiendo ", "lavando ", "malgastando ",
-            "jalando ", "coleccionando ", "llenando ", "exponiendo ", "reparando ", "partiendo "
+            "pintando  ", "arrastrando ", "recogiendo ", "tirando ", "dañando",
+            "mirando ", "disfrutando ", "limpiando "
     };
 
     //PARTICIPIO
     String vpeng[] = {
-            "fixed ", "connected ", "grabbed ", "crashed ", "divided ", "washed ", "wasted ", "pulled ",
-            "collected ", "filled ", "exposed ", "repaired ", "split "
+            "painted ", "dragged ", "gathered ", "thrown ", "damaged ",
+            "looked at ", "enjoyed ", "cleaned "
     };
     String vpsp[] = {
-            "arreglado ", "conectado ", "agarrado ", "chocado ", "dividido ", "lavado ", "malgastado ",
-            "jalado ", "coleccionado ", "llenado ", "expuesto ", "reparado ", "partido "
+            "pintado ", "arrastrado ", "recogido ", "tirado ", "dañado ",
+            "mirado ", "disfrutado ", "limpiado "
     };
 
     //IMPERFECTO AND PRETERITO
     String vnbp[] = {
-            "fixed ", "connected ", "grabbed ", "crashed ", "divided ", "washed ", "wasted ", "pulled ",
-            "collected ", "filled ", "exposed ", "repaired ", "split "
+            "painted ", "dragged ", "gathered ", "thrown ", "damaged ",
+            "looked at ", "enjoyed ", "cleaned "
     };
 
     String ps1pre[] = {
-            "arreglé ", "conecté ", "agarré ", "choqué ", "dividí ", "lavé ", "malgasté ", "jalé ",
-            "coleccioné ", "llené ", "expuse ", "reparé ", "partí "
+            "pinté ", "arrastré ", "recogí ", "lancé ", "dañé ",
+            "miré ", "disfruté ", "limpié "
     };
     String ps1imp[] = {
-            "arreglaba ", "conectaba ", "agarraba ", "chocaba ", "dividía ", "lavaba ", "malgastaba ",
-            "jalaba ", "coleccionaba ", "llenaba ", "exponía ", "reparaba ", "partía "
+            "pintaba ", "arrastraba ", "recogía ", "lanzaba ", "dañaba ",
+            "miraba ", "disfrutaba ", "limpiaba "
     };
     String ps2pre[] = {
-            "arreglaste ", "conectaste ", "agarraste ", "chocaste ", "dividiste ", "lavaste ", "malgastaste ",
-            "jalaste ", "coleccionaste ", "llenaste ", "expusiste ", "reparaste ", "partiste "
+            "pintaste ", "arrastraste ", "recogiste ", "lanzaste ", "dañaste ",
+            "miraste ", "disfrutaste ", "limpiaste "
     };
     String ps2imp[] = {
-            "arreglabas ", "conectabas ", "agarrabas ", "chocabas ", "dividías ", "lavabas ", "malgastabas ",
-            "jalabas ", "coleccionabas ", "llenabas ", "exponías ", "reparabas ", "partías "
+            "pintabas ", "arrastrabas ", "recogías ", "lanzabas ", "dañabas ",
+            "mirabas ", "disfrutabas ", "limpiabas "
     };
     String ps3p[] = {
-            "arregló ", "conectó ", "agarró ", "chocó ", "dividió ", "lavó ", "malgastó ", "jaló ",
-            "coleccionó ", "llenó ", "expuso ", "reparó ", "partió "
+            "pintó ", "arrastró ", "recogió ", "lanzó ", "dañó ",
+            "miró ", "disfrutó ", "limpió "
     };
     String ps3imp[] = {
-            "arreglaba ", "conectaba ", "agarraba ", "chocaba ", "dividía ", "lavaba ", "malgastaba ",
-            "jalaba ", "coleccionaba ", "llenaba ", "exponía ", "reparaba ", "partía "
+            "pintaba ", "arrastraba ", "recogía ", "lanzaba ", "dañaba ",
+            "miraba ", "disfrutaba ", "limpiaba "
     };
     String vn4p[] = {
-            "arreglaron ", "conectaron ", "agarraron ", "chocaron ", "dividieron ", "lavaron ", "malgastaron ",
-            "jalaron ", "coleccionaron ", "llenaron ", "expusieron ", "repararon ", "partieron "
+            "pintaron ", "arrastraron ", "recogieron ", "lanzaron ", "dañaron ",
+            "miraron ", "disfrutaron ", "limpiaron "
     };
     String vn4imp[] = {
-            "arreglaban ", "conectaban ", "agarraban ", "chocaban ", "dividían ", "lavaban ", "malgastaban ",
-            "jalaban ", "coleccionaban ", "llenaban ", "exponían ", "reparaban ", "partían "
+            "pintaban ", "arrastraban ", "recogían ", "lanzaban ", "dañaban ",
+            "miraban ", "disfrutaban ", "limpiaban "
     };
     String vn5p[] = {
-            "arreglamos ", "conectamos ", "agarramos ", "chocamos ", "dividimos ", "lavamos ", "malgastamos ",
-            "jalamos ", "coleccionamos ", "llenamos ", "expusimos ", "reparamos ", "partimos "
+            "pintamos ", "arrastramos ", "recogimos ", "lanzamos ", "dañamos ",
+            "miramos ", "disfrutamos ", "limpiamos "
     };
     String vn5imp[] = {
-            "arreglábamos ", "conectábamos ", "agarrábamos ", "chocábamos ", "dividíamos ", "lavábamos ",
-            "malgastábamos ", "jalábamos ", "coleccionábamos ", "llenábamos ", "exponíamos ", "reparábamos ",
-            "partíamos "
+            "pintábamos ", "arrastrábamos ", "recogíamos ", "lanzábamos ", "dañábamos ",
+            "mirábamos ", "disfrutábamos ", "limpiábamos "
     };
 
     //FUTUROS
     String vn1f[] = {
-            "arreglaré ", "conectaré ", "agarraré ", "chocaré ", "dividiré ", "lavaré ", "malgastaré ",
-            "jalaré ", "coleccionaré ", "llenaré ", "expondré ", "repararé ", "partiré "
+            "pintaré ", "arrastraré ", "recogeré ", "lanzaré ", "dañaré ",
+            "miraré ", "disfrutaré ", "limpiaré "
     };
     String vn2f[] = {
-            "arreglarás ", "conectarás ", "agarrarás ", "chocarás ", "dividirás ", "lavarás ", "malgastarás ",
-            "jalarás ", "coleccionarás ", "llenarás ", "expondrás ", "repararás ", "partirás "
+            "pintarás ", "arrastrarás ", "recogerás ", "lanzarás ", "dañarás ",
+            "mirarás ", "disfrutarás ", "limpiarás "
     };
     String vn3f[] = {
-            "arreglará ", "conectará ", "agarrará ", "chocará ", "dividirá ", "lavará ", "malgastará ",
-            "jalará ", "coleccionará ", "llenará ", "expondrá ", "reparará ", "partirá "
+            "pintará ", "arrastrará ", "recogerá ", "lanzará ", "dañará ",
+            "mirará ", "disfrutará ", "limpiará "
     };
     String vn4f[] = {
-            "arreglarán ", "conectarán ", "agarrarán ", "chocarán ", "dividirán ", "lavarán ", "malgastarán ",
-            "jalarán ", "coleccionarán ", "llenarán ", "expondrán ", "repararán ", "partirán "
+            "pintarán ", "arrastrarán ", "recogerán ", "lanzarán ", "dañarán ",
+            "mirarán ", "disfrutarán ", "limpiarán "
     };
     String vn5f[] = {
-            "arreglaremos ", "conectaremos ", "agarraremos ", "chocaremos ", "dividiremos ", "lavaremos ",
-            "malgastaremos ", "jalaremos ", "coleccionaremos ", "llenaremos ", "expondremos ", "repararemos ",
-            "partiremos "
+            "pintaremos ", "arrastraremos ", "recogeremos ", "lanzaremos ", "dañaremos ",
+            "miraremos ", "disfrutaremos ", "limpiaremos "
     };
 
     //CONDICIONAL
     String vn1w[] = {
-            "arreglaría ", "conectaría ", "agarraría ", "chocaría ", "dividiría ", "lavaría ", "malgastaría ",
-            "jalaría ", "coleccionaría ", "llenaría ", "exponerdría ", "repararía ", "partiría "
+            "pintaría ", "arrastraría ", "recogería ", "lanzaría ", "dañaría ",
+            "miraría ", "disfrutaría ", "limpiaría "
     };
     String vn2w[] = {
-            "arreglarías ", "conectarías ", "agarrarías ", "chocarías ", "dividirías ", "lavarías ", "malgastarías ",
-            "jalarías ", "coleccionarías ", "llenarías ", "exponerdrías ", "repararías ", "partirías "
+            "pintarías ", "arrastrarías ", "recogerías ", "lanzarías ", "dañarías ",
+            "mirarías ", "disfrutarías ", "limpiarías "
     };
     String vn3w[] = {
-            "arreglaría ", "conectaría ", "agarraría ", "chocaría ", "dividiría ", "lavaría ", "malgastaría ",
-            "jalaría ", "coleccionaría ", "llenaría ", "exponerdría ", "repararía ", "partiría "
+            "pintaría ", "arrastraría ", "recogería ", "lanzaría ", "dañaría ",
+            "miraría ", "disfrutaría ", "limpiaría "
     };
     String vn4w[] = {
-            "arreglarían ", "conectarían ", "agarrarían ", "chocarían ", "dividirían ", "lavarían ", "malgastarían ",
-            "jalarían ", "coleccionarían ", "llenarían ", "exponerdrían ", "repararían ", "partirían "
+            "pintarían ", "arrastrarían ", "recogerían ", "lanzarían ", "dañarían ",
+            "mirarían ", "disfrutarían ", "limpiarían "
     };
     String vn5w[] = {
-            "arreglaríamos ", "conectaríamos ", "agarraríamos ", "chocaríamos ", "dividiríamos ", "lavaríamos ", "malgastaríamos ",
-            "jalaríamos ", "coleccionaríamos ", "llenaríamos ", "exponerdríamos ", "repararíamos ", "partiríamos "
+            "pintaríamos ", "arrastraríamos ", "recogeríamos ", "lanzaríamos ", "dañaríamos ",
+            "miraríamos ", "disfrutaríamos ", "limpiaríamos "
     };
 
     //SUBJUNTIVOS
     String vn1y3subj[] = {
-            "arregle ", "conecte ", "agarre ", "choque ", "divida ", "lave ", "malgaste ",
-            "jale ", "coleccione ", "llene ", "exponga ", "repare ", "parta "
+            "pinte ", "arrastre ", "recoja ", "lance ", "dañe ",
+            "mire ", "disfrute ", "limpie "
     };
     String vn2subj[] = {
-            "arregles ", "conectes ", "agarres ", "choques ", "dividas ", "laves ", "malgastes ",
-            "jales ", "colecciones ", "llenes ", "expongas ", "repares ", "partas "
+            "pintes ", "arrastres ", "recojas ", "lances ", "dañes ",
+            "mires ", "disfrutes ", "limpies "
     };
     String vn4subj[] = {
-            "arreglen ", "conecten ", "agarren ", "choquen ", "dividan ", "laven ", "malgasten ",
-            "jalen ", "coleccionen ", "llenen ", "expongan ", "reparen ", "partan "
+            "pinten ", "arrastren ", "recojan ", "lancen ", "dañen ",
+            "miren ", "disfruten ", "limpien "
     };
     String vn5subj[] = {
-            "arreglemos ", "conectemos ", "agarremos ", "choquemos ", "dividamos ", "lavemos ",
-            "malgastemos ", "jalemos ", "coleccionemos ", "llenemos ", "expongamos ", "reparemos ",
-            "partamos "
+            "pintemos ", "arrastremos ", "recojamos ", "lancemos ", "dañemos ",
+            "miremos ", "disfrutemos ", "limpiemos "
     };
 
     //WISH
     String ps1wish[] = {
-            "arreglara ", "conectara ", "agarrara ", "chocara ", "dividiera ", "lavara ", "malgastara ",
-            "jalara ", "coleccionara ", "llenara ", "expusiera ", "reparara ", "partiera "
+            "pintara ", "arrastrara ", "recogiera ", "lanzara ", "dañara ",
+            "mirara ", "disfrutara ", "limpiara "
     };
     String ps2wish[] = {
-            "arreglaras ", "conectaras ", "agarraras ", "chocaras ", "dividieras ", "lavaras ", "malgastaras ",
-            "jalaras ", "coleccionaras ", "llenaras ", "expusieras ", "repararas ", "partieras "
+            "pintaras ", "arrastraras ", "recogieras ", "lanzaras ", "dañaras ",
+            "miraras ", "disfrutaras ", "limpiaras "
     };
     String ps3wish[] = {
-            "arreglara ", "conectara ", "agarrara ", "chocara ", "dividiera ", "lavara ", "malgastara ",
-            "jalara ", "coleccionara ", "llenara ", "expusiera ", "reparara ", "partiera "
+            "pintara ", "arrastrara ", "recogiera ", "lanzara ", "dañara ",
+            "mirara ", "disfrutara ", "limpiara "
     };
     String ps4wish[] = {
-            "arreglaran ", "conectaran ", "agarraran ", "chocaran ", "dividieran ", "lavaran ", "malgastaran ",
-            "jalaran ", "coleccionaran ", "llenaran ", "expusieran ", "repararan ", "partieran "
+            "pintaran ", "arrastraran ", "recogieran ", "lanzaran ", "dañaran ",
+            "miraran", "disfrutaran ", "limpiaran "
     };
     String ps5wish[] = {
-            "arregláramos ", "conectáramos ", "agarráramos ", "chocáramos ", "dividiéramos ", "laváramos ", "malgastáramos ",
-            "jaláramos ", "coleccionáramos ", "llenáramos ", "expusiéramos ", "reparáramos ", "partiéramos "
+            "pintáramos ", "arrastráramos ", "recogiéramos ", "lanzáramos ", "dañáramos ",
+            "miráramos ", "disfrutáramos ", "limpiáramos "
     };
 
     //OBJETOS
