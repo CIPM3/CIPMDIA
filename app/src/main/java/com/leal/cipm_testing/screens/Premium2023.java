@@ -5,10 +5,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -36,15 +40,18 @@ public class Premium2023 extends AppCompatActivity {
     Button btn_sub_monthly_price;
     VideoView vv;
     LinearLayout b;
-
+    TextView cancelPolicy ;
+    String cancelationPolicy;
+    Button cancelSuscriptionBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium2023);
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
+        cancelPolicy = findViewById(R.id.cancelPolicyTv);
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
-
+        cancelSuscriptionBtn=findViewById(R.id.CancelBtn);
         billingClient = BillingClient.newBuilder(this)
                 .enablePendingPurchases()
                 .setListener(
@@ -62,8 +69,19 @@ public class Premium2023 extends AppCompatActivity {
 
         //start the connection after initializing the billing client
         establishConnection();
+    cancelationPolicy= "con la suscripción acedes a: \n1. mas estructuras del lenguaje\n " +
+            "2. mas rango de palabras (practicas las mismas estructuras con palabras menos comunes)\n" +
+            "3. se cobra una vez al mes - 50 pesos mexicanos \n" +
+            "4. no es necesario estar suscrito para usar el app, pero si es necesaria para acesear a todas sus funciones\n " +
+            "5. para cancelar presiona el boton de abajo y te llevara a Google Play Suscription Center \n";
+        cancelPolicy.setText(cancelationPolicy);
+        cancelSuscriptionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoURl("https://support.google.com/googleplay/workflow/9827184?hl=en");
 
-
+            }
+        });
     }
 
     void establishConnection() {
@@ -151,8 +169,13 @@ public class Premium2023 extends AppCompatActivity {
         Log.d("TAG", "Purchase Time: " + purchases.getPurchaseTime());
         Log.d("TAG", "Purchase OrderID: " + purchases.getOrderId());
     }
+    public void goToCancelSuscription(View vista){
+    }
 
-
+    private void gotoURl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
     protected void onResume() {
         super.onResume();
 

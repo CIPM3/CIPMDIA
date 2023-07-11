@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     //SCREENS
     public void availability(View vista) {
 
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             Intent intent = new Intent(this, Availability2023.class);
             startActivity(intent);
         }else if(prefs.getPremium()==0){
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Cultura(View vista) {
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             Intent intento = new Intent(MainActivity.this, Cultura2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void Transiciones(View vista) {
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             Intent intento = new Intent(this, Transicion2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void vocabulary(View vista) {
 
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             Intent intento = new Intent(this, Vocabulary2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -228,16 +228,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ConInt(View vista) {
-        if(prefs.getPremium()==0){
+
+
+        if(prefs.getPremium()==1){
             Intent intento = new Intent(this, ConInt2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
             Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
         }
+
+
     }
 
     public void SpaInt(View vista) {
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             Intent intento = new Intent(this, SpaInt2023.class);
             startActivity(intento);
         }else if(prefs.getPremium()==0){
@@ -256,7 +260,9 @@ public class MainActivity extends AppCompatActivity {
 
     //OJO
     public void TestNuevo(View vist){
-        /*Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();*/
+
+        Toast.makeText(this, "funcion en desarrollo", Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, TestStudent2023.class);
         startActivity(intent);
     }
@@ -271,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(crispIntent);
     }
     public void masinfo(View vist) {
+
         gotoURl("https://www.cursosdeinglespersonalizadosenmonterrey.com/");
     }
 

@@ -416,7 +416,7 @@ public class Vocabulary2023 extends AppCompatActivity {
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.vocabPremium, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);

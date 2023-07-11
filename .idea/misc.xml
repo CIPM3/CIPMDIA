@@ -26,6 +26,7 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_my_plan.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_plan_de_estudios_chooser.xml" value="0.175" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_premium.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_premium2023.xml" value="0.1" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_profile.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_register.xml" value="0.1358695652173913" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_registro2023.xml" value="0.14990942028985507" />
@@ -36,6 +37,7 @@
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_splash_screen.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_structure_results.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_test_results.xml" value="0.1" />
+        <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_test_student.xml" value="0.13903985507246377" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_transicion.xml" value="0.11820652173913043" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_transicion_nuevo.xml" value="0.13134057971014493" />
         <entry key="..\:/Users/Adrian/Documents/GitHub/CIPMDIA/app/src/main/res/layout/activity_tutorial_general.xml" value="0.16304347826086957" />
@@ -101,5 +103,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

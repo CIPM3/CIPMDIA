@@ -609,7 +609,7 @@ public class Estructura2023 extends AppCompatActivity {
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         //USUARIO PREMIUM
-        if(prefs.getPremium()==0){
+        if(prefs.getPremium()==1){
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -778,7 +778,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                        tt1 = new TextToSpeech(getApplicationContext(),
+                                new TextToSpeech.OnInitListener() {
                             @Override
                             public void onInit(int i) {
                                 Locale spanish = new Locale("es", "MX");
@@ -836,7 +837,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(),
+                                            TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
                             }

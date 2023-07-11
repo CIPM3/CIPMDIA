@@ -11,14 +11,6 @@ public class Nobles {
             "owe ", "incorporate ", "organize "
     };
 
-    String vb[] = {
-            "tiene ","obtiene ","ve ","necesita ","sabe ","encuentra ","toma ","quiere ","incluye ",
-            "agradece ","agrega ","elige ","desarrolla ","recuerda ","trae ","protege ",
-            "evita ","describe ","prefiere ","descubre ","espera ","pierde ","oye ","representa ",
-            "olvida ","acepta ","compara ","imagina ","reconoce ","reemplaza ","pide prestado ","examina ",
-            "debe ","incorpora ","organiza "
-    };
-
     // verbos nobles base spanish
     String vnbs[] = {"tener ", "obtener ", "ver ", "necesitar ", "saber ", "encontrar ", "tomar ", "querer ", "incluir ",
             "agradecer ", "agregar ", "elegir ", "desarrollar ", "recordar ", "traer ", "protejer ",
@@ -20009,7 +20001,7 @@ public class Nobles {
         int neg = 0;
         switch (neg) {
             case 0:
-                ps1 = nnoblesesp[v] + "que " + vb[v];
+                ps1 = nnoblesesp[v] + "que " + vn3[v];
                 ps1eng = "the " + vnbc[v] + nnoblesW[v];
                 break;
         }

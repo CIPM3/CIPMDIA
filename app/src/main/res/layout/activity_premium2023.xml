@@ -108,6 +108,15 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/cancelPolicyTv"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:fontFamily="sans-serif-black"
+            android:text="cancelpolicytv"
+            android:textColor="#E53935"
+            android:textSize="12sp" />
+
     </LinearLayout>
     <!--BTNS OPC-->
     <LinearLayout
@@ -115,18 +124,25 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/graybg"
-        android:orientation="vertical"
         android:elevation="5dp"
         android:gravity="center"
+        android:onClick="goToCancelSuscription"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/CancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E53935"
+            android:text="Click To Cancel in Google Play " />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
             android:name="com.leal.cipm_testing.components.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_bottom_nav"
-            />
+            tools:layout="@layout/fragment_bottom_nav" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
