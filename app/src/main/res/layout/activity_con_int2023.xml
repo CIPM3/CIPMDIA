@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.ConInt2023"
+    tools:context=".ConInt2023"
     android:background="@color/white"
     >
 
@@ -16,7 +16,9 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="85dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +39,7 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView"
-                    android:name="com.leal.cipm_testing.components.header"
+                    android:name="com.leal.cipm_testing.header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -100,7 +102,7 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView5"
-                    android:name="com.leal.cipm_testing.components.VideoPlayer"
+                    android:name="com.leal.cipm_testing.VideoPlayer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -167,7 +169,8 @@
                 android:layout_marginTop="15dp"
                 android:text="Escucha con atención y escribe lo que escuchas."
                 android:textColor="@color/black"
-                android:textSize="6.5pt" />
+                android:textSize="6.5pt"
+                android:visibility="visible" />
 
             <!--FRASES FIELD-->
             <ScrollView
@@ -211,7 +214,7 @@
                                     android:text="s"
                                     android:textAlignment="center"
                                     android:textColor="@color/azul"
-                                    android:textSize="22dp"
+                                    android:textSize="30dp"
                                     android:textStyle="bold" />
                             </LinearLayout>
 
@@ -303,16 +306,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center">
 
-                                <LinearLayout
-                                    android:id="@+id/respescu2"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="15dp"
-                                    android:background="@drawable/ic_volumen"
-                                    android:onClick="speak"
-                                    android:orientation="horizontal"
-                                    android:visibility="visible" />
+
                             </LinearLayout>
 
                         </LinearLayout>
@@ -439,7 +433,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav" />

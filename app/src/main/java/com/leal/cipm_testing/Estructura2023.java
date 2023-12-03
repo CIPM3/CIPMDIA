@@ -1,17 +1,25 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,31 +37,28 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
-import com.leal.cipm_testing.CustomArrayAfterTestingHolder;
-import com.leal.cipm_testing.Generator;
-import com.leal.cipm_testing.Generator2;
-import com.leal.cipm_testing.Generator3;
-import com.leal.cipm_testing.Generator4;
-import com.leal.cipm_testing.Generator5;
-import com.leal.cipm_testing.Prefs;
-import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.VocabModeloPersistencia;
-import com.leal.cipm_testing.components.VideoPlayer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
-import java.util.Objects;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 
 public class Estructura2023 extends AppCompatActivity {
+    private ActivityResultLauncher<Intent> speechRecognitionLauncher;
+
     Spinner spin;
     Spinner spin2;
     TextView txt1;
     TextView txt2;
     String selection;
     String selection2;
-    LinearLayout texto_inicial;
+    LinearLayout texto_inicial,averageresponetimelayout;
     LinearLayout spanish_lay;
     LinearLayout input_lay;
     LinearLayout btn_lay,btn_cont_lay;
@@ -80,6 +85,7 @@ public class Estructura2023 extends AppCompatActivity {
     Button btndif2;
     Button btndif3;
     Button btndif4;
+    TextView palabraclave,verboEs,tiempopromedioderespuestatexto;
     String[] temp,isFromCustom100Db;
     boolean personalizedPlan,iscustom100;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
@@ -89,7 +95,6 @@ public class Estructura2023 extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseAuth mAuth;
     String userid;
-    String[] EmptyArray;
     DocumentReference docref;
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
@@ -99,6 +104,29 @@ public class Estructura2023 extends AppCompatActivity {
     int r;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     DocumentReference docrefStructures;
+    VideoPlayer video_player = new VideoPlayer();
+    AnimationDrawable flashingAnimation;
+    int condicionparapasar;
+    double scoredeestructuras;
+    int totalstructurecount;
+
+    Timer timer;
+    TimerTask timerTask;
+    Double timen = 0.0;
+    double prom;
+
+    int counter;
+    int roundedMilliseconds;
+    double total;
+    double one;
+    double two;
+    double three;
+    double four ;
+    double five;
+    boolean presentSimplePassed;
+    CollectionReference uid;
+    Map<String, Object> userdb = new HashMap<>();
+    DocumentReference scoresStructureDBDocRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +145,13 @@ public class Estructura2023 extends AppCompatActivity {
         btn_cont_lay = findViewById(R.id.btn_cont_lay);
         btn_lay = (LinearLayout) findViewById(R.id.btn_lay);
         answer_lay = (LinearLayout) findViewById(R.id.answer_lay);
+
+        averageresponetimelayout = findViewById(R.id.averageresponsetime);
+        averageresponetimelayout.setVisibility(View.INVISIBLE);
+
+        tiempopromedioderespuestatexto=findViewById(R.id.actualtimetext);
+        tiempopromedioderespuestatexto.setVisibility(View.VISIBLE);
+
         resplay = (LinearLayout) findViewById(R.id.resplay);
         respescu = (LinearLayout) findViewById(R.id.respescu);
         respescu2 = (LinearLayout) findViewById(R.id.respescu2);
@@ -125,14 +160,18 @@ public class Estructura2023 extends AppCompatActivity {
         btncheck = (TextView) findViewById(R.id.btncheck);
         sptx = (TextView) findViewById(R.id.spanishsentence);
         answerinp = (EditText) findViewById(R.id.answerinput1);
-
         btndif1 = (Button) findViewById(R.id.dif1);
         btndif2 = (Button) findViewById(R.id.dif2);
+
+        palabraclave= findViewById(R.id.textextra);
+        verboEs=findViewById(R.id.textextra2);
+        palabraclave.setVisibility(View.INVISIBLE);
+        verboEs.setVisibility(View.INVISIBLE);
 
         btndif3 = (Button) findViewById(R.id.dif3);
         btndif4 = (Button) findViewById(R.id.dif4);
         prefs = new Prefs(this);
-
+        condicionparapasar = 0;
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
@@ -141,6 +180,16 @@ public class Estructura2023 extends AppCompatActivity {
                 }
             }
         });
+        timer = new Timer();
+
+        counter=0;
+        total=76;
+        one= 0;
+        two =0;
+        three=0;
+        four=0;
+        five=0;
+
 
         Intent reciver = getIntent();
 
@@ -155,29 +204,51 @@ public class Estructura2023 extends AppCompatActivity {
         iscustom100= reciver.getBooleanExtra("Custom100Plan",false);
 
 
+
+        temp = new String[]{"empty", "array"};
         if(isNonBasics){
             temp= arrayGetter.nonBasicStructures;
         }else {
             temp=arrayGetter.basicStructures;
 
         }
+        totalstructurecount = arrayGetter.basicStructures.length + arrayGetter.nonBasicStructures.length;
 
-        EmptyArray= new String[]{"empty", "array"};
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
         docrefStructures = db.collection(userid).document( "CustomArrayLists");
+        uid= db.collection(userid);
 
 
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
 
+
+        flashingAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_flash_animation);
+        btndif1.setBackground(flashingAnimation);
+
+
+        escribirEnelInputTextResultadodeUtterance();
         PremiumControler();
+
+
     }
+
+
 
     boolean isCustom;
     boolean isNonBasics;
     boolean isBasics;
     boolean isBasicsArray;
     boolean isNonBasicsArray;
+    double division;
+    double result;
 
     //DB FUNC
     public void PremiumControler(){
@@ -195,29 +266,37 @@ public class Estructura2023 extends AppCompatActivity {
                 }else {isBasicsArray=true;}
                 // aqui tiene que jalar de la base de datos el temp
                 if (prefs.getPremium()==1){
-                    //Give the user all the premium features
-                    //hide ads if you are showing ads
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    //remove user all the premium features
+                    //show ads to the user
+                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
+                            assert vmp != null;
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-                        }
+                            temp= vmp.getResultArray().toArray(new String[0]);
+                            // temp = new String[]{"empty", "array"};
+                            adapter = new ArrayAdapter<String>(Estructura2023.this, android.R.layout.simple_list_item_1, temp);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin.setAdapter(adapter);
+                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    spinnerSelected1();
+                                }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                }
+                            });
 
                         }
                     });
 
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    //espacio.......................................
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
+                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adapter2);
                     spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -232,8 +311,7 @@ public class Estructura2023 extends AppCompatActivity {
                         }
                     });
 
-
-                } else if (prefs.getPremium()==0){
+                }else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
                     docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -242,19 +320,16 @@ public class Estructura2023 extends AppCompatActivity {
                             vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
                             assert vmp != null;
 
-                            temp= vmp.getBasicStructuresArray().toArray(new String[0]);
-
+                            temp= vmp.getResultArray().toArray(new String[0]);
+                           // temp = new String[]{"empty", "array"};
                             adapter = new ArrayAdapter<String>(Estructura2023.this, android.R.layout.simple_list_item_1, temp);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spin.setAdapter(adapter);
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection = spin.getSelectedItem().toString();
-                                    txt1.setText(selection);
+                                    spinnerSelected1();
 
-                                    vv.setVisibility(View.GONE);
-                                    vf.setVisibility(View.VISIBLE);
                                 }
 
                                 @Override
@@ -302,11 +377,9 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                           spinnerSelected1();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
+
                         }
 
                         @Override
@@ -341,11 +414,8 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                           spinnerSelected1();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
                         }
 
                         @Override
@@ -386,11 +456,9 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                            spinnerSelected1();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
+
                         }
 
                         @Override
@@ -429,11 +497,9 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                            spinnerSelected1();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
+
                         }
 
                         @Override
@@ -460,49 +526,40 @@ public class Estructura2023 extends AppCompatActivity {
 
                 }
             }
+            // we are putting a lid on custom100 for now
             else if(iscustom100){
+                // we are going to put a lid on this one for a while
                 Toast.makeText(this, "custom100", Toast.LENGTH_SHORT).show();
-
                 // aqui tiene que jalar de la base de datos el temp
                 if (prefs.getPremium()==1){
-                    //Give the user all the premium features
-                    //hide ads if you are showing ads
-                    temp= isFromCustom100Db;
 
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    docrefStructures.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            txt1.setText(selection);
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            studentObject=documentSnapshot.toObject(CustomArrayAfterTestingHolder.class) ;
+                            assert studentObject != null;
+                            temp= studentObject.getStructureArrayAfterTEsting().toArray(new String[0]);
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-                        }
+                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Estructura2023.this, R.array.rango, android.R.layout.simple_spinner_item);
+                            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spin2.setAdapter(adapter2);
+                            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    selection2 = spin2.getSelectedItem().toString();
+                                    txt2.setText(selection2);
+                                }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
 
-                        }
-                    });
-
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin2.setAdapter(adapter2);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection2 = spin2.getSelectedItem().toString();
-                            txt2.setText(selection2);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
+                                }
+                            });
                         }
                     });
+
+
+
                 } else if (prefs.getPremium()==0){
                     docrefStructures.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
@@ -610,6 +667,9 @@ public class Estructura2023 extends AppCompatActivity {
     public void checkPremiun(){
         //USUARIO PREMIUM
         if(prefs.getPremium()==1){
+            btndif4.setVisibility(View.GONE);
+            btndif3.setVisibility(View.GONE);
+            btndif2.setVisibility(View.GONE);
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -643,9 +703,9 @@ public class Estructura2023 extends AppCompatActivity {
 
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
-            btndif4.setVisibility(View.INVISIBLE);
-            btndif3.setVisibility(View.INVISIBLE);
-
+            btndif4.setVisibility(View.GONE);
+            btndif3.setVisibility(View.GONE);
+            btndif2.setVisibility(View.GONE);
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
@@ -679,32 +739,21 @@ public class Estructura2023 extends AppCompatActivity {
             });
         }
     }
-
     //EVALUA QUE FUE SELECCIONADO
     public void spinnerSelected1(){
+
+
         selection = spin.getSelectedItem().toString();
         txt1.setText(selection);
-
-        VideoPlayer video_player = new VideoPlayer();
-        Bundle args = new Bundle();
-        args.putString("tema", selection);
-        video_player.setArguments(args);
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragmentContainerView4, video_player)
-                .commit();
+        if(video_player  != null ){
+            video_player.updateFragmentStateStructure(selection);
+        }
+        if(!selection.equals("Tutorial")){
+            flashingAnimation.start();
+            btndif1.setText("Empezar a Practicar");
+        }
 
 
-        /*if(selection.equals("Tutorial")){
-            text_exp.setText("Seleccione una estructura para continuar con la practica");
-            lay_btn_empezar.setVisibility(View.GONE);
-            txt_exp_est.setVisibility(View.VISIBLE);
-        }else {
-            lay_btn_empezar.setVisibility(View.VISIBLE);
-            videoPlayer();
-
-        }*/
     }
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER 1
@@ -766,11 +815,136 @@ public class Estructura2023 extends AppCompatActivity {
         }
     }
 
+    private void hintPalabraclave(Generator gen1) {
+        String verbo = extraerVerbo(gen1.gene);
+        palabraclave.setVisibility(View.VISIBLE);
+        verboEs.setVisibility(View.VISIBLE);
+        palabraclave.setText(verbo);
+        palabraclave.setTextColor(Color.BLUE);
+        SpannableString content = new SpannableString(verbo);
+        content.setSpan(new UnderlineSpan(), 0, verbo.length(), 0);
+        palabraclave.setText(content);
+        palabraclave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if (i == TextToSpeech.SUCCESS) {
+
+                            ttr.setLanguage(Locale.ENGLISH);
+                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+
+
+
+                        }
+                    }
+                });
+
+            }
+        });
+    }
+    private String extraerVerbo(String oraciónCompleta) {
+        oraciónCompleta = oraciónCompleta.trim();
+        String[] palabras = oraciónCompleta.split(" ");
+        // Check if there are any words in the sentence
+        if (palabras.length > 0) {
+            // Return the last word
+            return palabras[palabras.length - 1];
+        } else {
+            // If the sentence is empty, return an empty string or handle the case as needed
+            return "";
+        }
+
+    }
+
+    private String[] extraerUltimasDosPalabras(String oraciónCompleta) {
+        oraciónCompleta = oraciónCompleta.trim();
+        String[] palabras = oraciónCompleta.split(" ");
+        int length = palabras.length;
+
+        if (length >= 2) {
+            // If there are at least two words, return the last two words as an array
+            return new String[]{palabras[length - 2], palabras[length - 1]};
+        } else if (length == 1) {
+            // If there's only one word, return it along with an empty string
+            return new String[]{palabras[0], ""};
+        } else {
+            // If the sentence is empty or contains no words, return two empty strings
+            return new String[]{"", ""};
+        }
+    }
+    private void hintPalabraclave2(Generator gen1) {
+        String[] verbo = extraerUltimasDosPalabras(gen1.gene);
+        palabraclave.setVisibility(View.VISIBLE);
+        verboEs.setVisibility(View.VISIBLE);
+
+        // Create a SpannableString with the underlined text
+        SpannableString content = new SpannableString(verbo[0] + " " + verbo[1]);
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+
+        // Set the SpannableString to the TextView
+        palabraclave.setText(content);
+        palabraclave.setTextColor(Color.BLUE);
+
+        // Set an OnClickListener on the TextView
+        palabraclave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if (i == TextToSpeech.SUCCESS) {
+                            ttr.setLanguage(Locale.ENGLISH);
+                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+
+                            // Speak the text when clicked
+                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+                        }
+                    }
+                });
+
+                Toast.makeText(Estructura2023.this, "Keyword clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
     //DIFICULTAD 1
     public void dificulty1() {
         limpans();
         checarischeck();
         mostrar_layout();
+        btndif1.setText("oración facil");
+
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -792,7 +966,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -803,8 +979,11 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
                                     answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                     
+                                      tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
                             }
@@ -825,7 +1004,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -836,8 +1017,10 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+
                                     answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(),
+                                     
+                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(),
                                             TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
@@ -859,7 +1042,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -870,8 +1055,10 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+
                                     answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                     
+                               tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
                             }
@@ -892,7 +1079,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -904,7 +1093,9 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+
+                                     
+                                         tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
                             }
@@ -924,7 +1115,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -935,6 +1128,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -960,7 +1155,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -972,6 +1169,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave2(gen1);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -994,7 +1192,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1006,6 +1206,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -1028,7 +1229,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1062,7 +1265,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1099,7 +1304,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1111,6 +1318,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -1136,7 +1345,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1148,6 +1359,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -1173,7 +1385,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1210,7 +1424,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1250,7 +1466,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1261,6 +1479,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -1287,7 +1506,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1324,7 +1545,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1361,7 +1584,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1402,7 +1627,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1413,6 +1640,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPastSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -1439,7 +1667,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1476,7 +1706,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1509,7 +1741,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1545,7 +1779,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1557,6 +1793,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -1583,7 +1820,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1620,7 +1859,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1654,7 +1895,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1691,7 +1934,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1703,6 +1948,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -1728,7 +1975,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1765,7 +2014,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1799,7 +2050,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1836,7 +2089,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1847,6 +2102,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPastPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -1873,7 +2129,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1910,7 +2168,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1943,7 +2203,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1980,7 +2242,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -1991,6 +2255,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenFutSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -2017,7 +2282,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2054,7 +2321,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2087,7 +2356,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2123,7 +2394,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2135,6 +2408,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -2161,7 +2435,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2198,7 +2474,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2232,7 +2510,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2269,7 +2549,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2281,6 +2563,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -2306,7 +2590,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2343,7 +2629,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2377,7 +2665,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2414,7 +2704,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2425,6 +2717,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenFutPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -2451,7 +2744,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2488,7 +2783,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2521,7 +2818,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2558,7 +2857,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2569,6 +2870,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -2595,7 +2897,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2632,7 +2936,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2665,7 +2971,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2701,7 +3009,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2713,6 +3023,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -2739,7 +3050,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2776,7 +3089,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2810,7 +3125,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2847,7 +3164,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2860,6 +3179,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
                                     answerinp.setText("");
+                                    hintPalabraclave(gen1);
+
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
 
@@ -2884,7 +3205,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2921,7 +3244,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2955,7 +3280,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -2992,7 +3319,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3003,6 +3332,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3029,7 +3359,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3066,7 +3398,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3099,7 +3433,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3136,7 +3472,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3147,6 +3485,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenCouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3173,7 +3512,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3210,7 +3551,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3243,7 +3586,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3279,7 +3624,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3291,6 +3638,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3317,7 +3665,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3354,7 +3704,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3388,7 +3740,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3425,7 +3779,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3437,6 +3793,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -3462,7 +3820,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3499,7 +3859,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3533,7 +3895,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3570,7 +3934,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3581,6 +3947,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenCouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3607,7 +3974,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3644,7 +4013,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3677,7 +4048,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3714,7 +4087,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3725,6 +4100,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenMightSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3751,7 +4127,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3788,7 +4166,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3821,7 +4201,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3857,7 +4239,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3869,6 +4253,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -3895,7 +4280,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3932,7 +4319,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -3966,7 +4355,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4003,7 +4394,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4015,6 +4408,9 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -4040,7 +4436,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4077,7 +4475,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4111,7 +4511,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4148,7 +4550,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4159,6 +4563,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenMightPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -4185,7 +4590,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4222,7 +4629,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4255,7 +4664,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4292,7 +4703,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4303,6 +4716,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenShouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -4329,7 +4743,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4366,7 +4782,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4399,7 +4817,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4435,7 +4855,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4447,6 +4869,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -4473,7 +4896,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4510,7 +4935,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4544,7 +4971,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4581,7 +5010,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4593,6 +5024,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -4618,7 +5051,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4655,7 +5090,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4689,7 +5126,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4726,7 +5165,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4737,6 +5178,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenShouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -4763,7 +5205,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4800,7 +5244,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4833,7 +5279,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4870,7 +5318,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4881,6 +5331,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenCanSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -4907,7 +5358,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4944,7 +5397,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -4977,7 +5432,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5013,7 +5470,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5025,6 +5484,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5051,7 +5511,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5088,7 +5550,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5122,7 +5586,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5160,7 +5626,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5171,6 +5639,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenMustSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5197,7 +5666,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5234,7 +5705,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5267,7 +5740,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5303,7 +5778,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5315,6 +5792,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5341,7 +5819,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5378,7 +5858,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5412,7 +5894,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5451,7 +5935,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5462,6 +5948,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWantYouTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5486,7 +5973,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5520,7 +6009,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5554,7 +6045,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5595,7 +6088,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5606,6 +6101,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenForTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5630,7 +6126,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5665,7 +6163,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5699,7 +6199,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5741,7 +6243,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5752,6 +6256,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenSupposedToPresente1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
@@ -5779,7 +6285,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5813,7 +6321,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5854,7 +6364,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5865,6 +6377,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenSupposedTopasado1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -5893,7 +6406,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5927,7 +6442,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5969,7 +6486,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -5980,6 +6499,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWishPastSimple1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
@@ -6007,7 +6528,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6042,7 +6565,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6084,7 +6609,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6095,6 +6622,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWishPastPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6123,7 +6651,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6157,7 +6687,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6198,7 +6730,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6209,6 +6743,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWishWould1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6237,7 +6772,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6271,7 +6808,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6313,7 +6852,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6324,6 +6865,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenUsedTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6352,7 +6894,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6387,7 +6931,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6429,7 +6975,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6440,6 +6988,8 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
+
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6485,7 +7035,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6496,6 +7048,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6541,7 +7094,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6552,6 +7107,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6597,7 +7153,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6608,6 +7166,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6653,7 +7212,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6664,6 +7225,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6709,7 +7271,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6720,6 +7284,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhatModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6766,7 +7331,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6777,6 +7344,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6822,7 +7390,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6833,6 +7403,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6878,7 +7449,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6889,6 +7462,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6934,7 +7508,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -6945,6 +7521,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -6990,7 +7567,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7001,6 +7580,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7046,7 +7626,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7057,6 +7639,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhenModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7103,7 +7686,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7114,6 +7699,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhereSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7159,7 +7745,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7170,6 +7758,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhereCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7215,7 +7804,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7226,6 +7817,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWherePerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7271,7 +7863,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7282,6 +7876,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhereModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7327,7 +7922,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7338,6 +7935,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhereModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7383,7 +7981,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7394,6 +7994,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhereModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7440,7 +8041,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7451,6 +8054,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhySimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7496,7 +8100,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7507,6 +8113,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhyCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7552,7 +8159,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7563,6 +8172,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhyPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7608,7 +8218,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7619,6 +8231,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhyModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7664,7 +8277,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7675,6 +8290,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhyModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7720,7 +8336,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7731,6 +8349,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhyModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7777,7 +8396,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7788,6 +8409,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7833,7 +8455,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7844,6 +8468,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7889,7 +8514,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7900,6 +8527,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -7945,7 +8573,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -7956,6 +8586,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8001,7 +8632,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8012,6 +8645,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8057,7 +8691,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8068,6 +8704,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenWhoModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8114,7 +8751,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8125,6 +8764,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8170,7 +8810,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8181,6 +8823,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8226,7 +8869,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8237,6 +8882,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8282,7 +8928,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8293,6 +8941,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8338,7 +8987,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8349,6 +9000,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8394,7 +9046,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8405,6 +9059,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8451,7 +9106,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8462,6 +9119,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8507,7 +9165,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8518,6 +9178,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8563,7 +9224,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8574,6 +9237,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8619,7 +9283,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8630,6 +9296,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8675,7 +9342,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8686,6 +9355,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8731,7 +9401,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8742,6 +9414,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowMuchModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8788,7 +9461,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8799,6 +9474,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManySimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8844,7 +9520,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8855,6 +9533,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManyCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8900,7 +9579,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8911,6 +9592,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManyPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -8956,7 +9638,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -8967,6 +9651,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManyModalsSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9012,7 +9697,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9023,6 +9710,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManyModalsCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9068,7 +9756,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9079,6 +9769,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenHowManyModalsPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9112,6 +9803,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Question Structure":
                 switch (selection2) {
                     case "0 a 100":
+                        palabraclave.setVisibility(View.INVISIBLE);
+                        verboEs.setVisibility(View.INVISIBLE);
                         GenQuestionStructure1();
                         break;
 
@@ -9135,6 +9828,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Question Structure Modals":
                 switch (selection2) {
                     case "0 a 100":
+                        palabraclave.setVisibility(View.INVISIBLE);
+                        verboEs.setVisibility(View.INVISIBLE);
                         GenQuestionStructureModals1();
                         break;
 
@@ -9172,7 +9867,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9183,6 +9880,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenBeUsedTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9211,7 +9909,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9246,7 +9946,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9289,7 +9991,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9300,6 +10004,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenReportedSpeech1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9344,7 +10049,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9355,6 +10062,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenIncrementoParalelo();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9399,7 +10107,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9410,6 +10120,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenVerbalAdjectives();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9454,7 +10165,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9465,6 +10178,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenRelativeClauses1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9509,7 +10223,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9521,6 +10237,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9545,7 +10262,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9581,7 +10300,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9617,7 +10338,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9661,7 +10384,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9673,7 +10398,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
-
+                                    hintPalabraclave(gen1);
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                                 }
@@ -9717,7 +10442,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9725,10 +10452,11 @@ public class Estructura2023 extends AppCompatActivity {
                                         }
                                     });
                                     Generator gen1 = new Generator();
-                                    gen1.GenTherebe1();
+                                    gen1.GenTherebe();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    hintPalabraclave(gen1);
 
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
@@ -9773,7 +10501,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9811,12 +10541,71 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
+            case "Feel Like Simple":
+                switch (selection2) {
+                    case "0 a 100":
+                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int i) {
+                                Locale spanish = new Locale("es", "MX");
+                                if (i == TextToSpeech.SUCCESS) {
+                                    int lang = tt1.setLanguage(spanish);
+                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                        @Override
+                                        public void onStart(String s) {
+                                        }
+
+                                        @Override
+                                        public void onDone(String utteranceId) {
+
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onError(String s) {
+                                        }
+                                    });
+                                    Generator gen1 = new Generator();
+                                    gen1.GenFeelLikeSimp1();
+                                    sptx.setText(gen1.gens);
+                                    txteng.setText(gen1.gene);
+
+
+                                    answerinp.setText("");
+                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                                }
+
+                            }
+                        });
+                        break;
+
+                    case "100 a 200":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "200 a 300":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case "300 a 400":
+                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    default:
+                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                break;
         }
     }
     public void dificulty2() {
         limpans();
         checarischeck();
         mostrar_layout();
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
 
         switch (selection) {
             case "Tutorial":
@@ -9838,7 +10627,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9849,6 +10640,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     gen1.GenPresSimp2();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
+
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -9871,7 +10663,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9904,7 +10698,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9937,7 +10733,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9973,7 +10771,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -9985,6 +10785,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
                                     txteng2.setText(gen1.gene2);
+                                    Toast.makeText(Estructura2023.this, gen1.gene2, Toast.LENGTH_SHORT).show();
                                     answerinp.setText("");
                                     tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -10007,7 +10808,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10041,7 +10844,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10075,7 +10880,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10112,7 +10919,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10149,7 +10958,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10186,7 +10997,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10223,7 +11036,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10263,7 +11078,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10300,7 +11117,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10337,7 +11156,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10374,7 +11195,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10415,7 +11238,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10452,7 +11277,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10489,7 +11316,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10522,7 +11351,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10558,7 +11389,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10596,7 +11429,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10633,7 +11468,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10667,7 +11504,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10704,7 +11543,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10741,7 +11582,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10778,7 +11621,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10812,7 +11657,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10849,7 +11696,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10886,7 +11735,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10923,7 +11774,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10956,7 +11809,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -10993,7 +11848,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11030,7 +11887,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11067,7 +11926,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11100,7 +11961,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11136,7 +11999,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11174,7 +12039,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11211,7 +12078,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11245,7 +12114,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11282,7 +12153,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11319,7 +12192,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11356,7 +12231,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11390,7 +12267,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11427,7 +12306,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11464,7 +12345,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11501,7 +12384,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11534,7 +12419,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11571,7 +12458,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11608,7 +12497,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11645,7 +12536,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11678,7 +12571,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11714,7 +12609,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11752,7 +12649,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11789,7 +12688,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11823,7 +12724,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11860,7 +12763,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11897,7 +12802,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11934,7 +12841,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -11968,7 +12877,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12005,7 +12916,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12042,7 +12955,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12079,7 +12994,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12112,7 +13029,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12149,7 +13068,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12186,7 +13107,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12223,7 +13146,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12256,7 +13181,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12292,7 +13219,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12330,7 +13259,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12367,7 +13298,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12401,7 +13334,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12438,7 +13373,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12475,7 +13412,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12512,7 +13451,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12546,7 +13487,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12584,7 +13527,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                                 @Override
                                                 public void onDone(String utteranceId) {
-                                                    // iniciarentradavoz();
+                                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                                 }
 
                                                 @Override
@@ -12621,7 +13566,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12658,7 +13605,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12691,7 +13640,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12728,7 +13679,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12765,7 +13718,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12802,7 +13757,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12835,7 +13792,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12871,7 +13830,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12909,7 +13870,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12946,7 +13909,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -12980,7 +13945,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13017,7 +13984,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13054,7 +14023,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13091,7 +14062,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13125,7 +14098,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13162,7 +14137,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13199,7 +14176,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13236,7 +14215,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13269,7 +14250,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13306,7 +14289,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13343,7 +14328,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13380,7 +14367,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13413,7 +14402,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13449,7 +14440,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13487,7 +14480,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13524,7 +14519,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13558,7 +14555,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13595,7 +14594,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13632,7 +14633,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13669,7 +14672,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13703,7 +14708,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13740,7 +14747,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13777,7 +14786,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13814,7 +14825,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13847,7 +14860,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13884,7 +14899,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13921,7 +14938,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13958,7 +14977,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -13991,7 +15012,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14027,7 +15050,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14065,7 +15090,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14102,7 +15129,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14136,7 +15165,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14174,7 +15205,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14211,7 +15244,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14248,7 +15283,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14281,7 +15318,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14317,7 +15356,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14355,7 +15396,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14392,7 +15435,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14426,7 +15471,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14465,7 +15512,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14500,7 +15549,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14534,7 +15585,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14568,7 +15621,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14609,7 +15664,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14644,7 +15701,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14679,7 +15738,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14713,7 +15774,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14755,7 +15818,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14793,7 +15858,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14827,7 +15894,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14868,7 +15937,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14907,7 +15978,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14941,7 +16014,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -14983,7 +16058,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15021,7 +16098,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15056,7 +16135,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15098,7 +16179,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15137,7 +16220,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15171,7 +16256,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15212,7 +16299,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15251,7 +16340,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15285,7 +16376,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15327,7 +16420,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15366,7 +16461,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15401,7 +16498,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15443,7 +16542,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15482,7 +16583,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15517,7 +16620,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15559,7 +16664,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15615,7 +16722,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15671,7 +16780,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15727,7 +16838,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15783,7 +16896,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15839,7 +16954,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15896,7 +17013,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -15952,7 +17071,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16008,7 +17129,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16064,7 +17187,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16120,7 +17245,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16176,7 +17303,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16233,7 +17362,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16289,7 +17420,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16345,7 +17478,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16401,7 +17536,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16457,7 +17594,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16513,7 +17652,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16570,7 +17711,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16626,7 +17769,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16682,7 +17827,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16738,7 +17885,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16794,7 +17943,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16850,7 +18001,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16907,7 +18060,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -16963,7 +18118,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17019,7 +18176,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17075,7 +18234,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17131,7 +18292,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17187,7 +18350,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17244,7 +18409,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17300,7 +18467,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17356,7 +18525,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17412,7 +18583,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17468,7 +18641,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17524,7 +18699,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17581,7 +18758,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17637,7 +18816,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17693,7 +18874,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17749,7 +18932,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17805,7 +18990,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17861,7 +19048,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17918,7 +19107,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -17974,7 +19165,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18030,7 +19223,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18086,7 +19281,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18142,7 +19339,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18198,7 +19397,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18303,7 +19504,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18358,7 +19561,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18413,7 +19618,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18468,7 +19675,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18523,7 +19732,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18559,7 +19770,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18595,7 +19808,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18631,7 +19846,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18675,7 +19892,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18720,7 +19939,8 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-
+        palabraclave.setVisibility(View.INVISIBLE);
+        verboEs.setVisibility(View.INVISIBLE);
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -18741,7 +19961,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18774,7 +19996,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18807,7 +20031,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18840,7 +20066,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18876,7 +20104,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18910,7 +20140,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18944,7 +20176,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -18978,7 +20212,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19015,7 +20251,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19052,7 +20290,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19089,7 +20329,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19126,7 +20368,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19166,7 +20410,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19203,7 +20449,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19240,7 +20488,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19277,7 +20527,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19318,7 +20570,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19355,7 +20609,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19392,7 +20648,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19425,7 +20683,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19461,7 +20721,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19499,7 +20761,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19536,7 +20800,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19570,7 +20836,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19607,7 +20875,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19644,7 +20914,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19681,7 +20953,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19715,7 +20989,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19752,7 +21028,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19789,7 +21067,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19826,7 +21106,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19859,7 +21141,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19896,7 +21180,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19933,7 +21219,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -19970,7 +21258,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20003,7 +21293,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20039,7 +21331,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20077,7 +21371,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20114,7 +21410,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20148,7 +21446,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20185,7 +21485,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20222,7 +21524,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20259,7 +21563,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20293,7 +21599,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20330,7 +21638,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20367,7 +21677,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20404,7 +21716,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20437,7 +21751,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20474,7 +21790,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20511,7 +21829,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20548,7 +21868,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20581,7 +21903,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20617,7 +21941,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20655,7 +21981,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20692,7 +22020,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20726,7 +22056,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20763,7 +22095,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20800,7 +22134,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20837,7 +22173,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20871,7 +22209,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20908,7 +22248,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20945,7 +22287,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -20982,7 +22326,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21015,7 +22361,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21052,7 +22400,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21089,7 +22439,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21126,7 +22478,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21159,7 +22513,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21195,7 +22551,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21233,7 +22591,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21270,7 +22630,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21304,7 +22666,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21341,7 +22705,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21378,7 +22744,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21415,7 +22783,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21449,7 +22819,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21486,7 +22858,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21523,7 +22897,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21560,7 +22936,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21593,7 +22971,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21630,7 +23010,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21667,7 +23049,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21704,7 +23088,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21737,7 +23123,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21773,7 +23161,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21811,7 +23201,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21848,7 +23240,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21882,7 +23276,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21919,7 +23315,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21956,7 +23354,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -21993,7 +23393,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22027,7 +23429,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22064,7 +23468,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22101,7 +23507,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22138,7 +23546,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22171,7 +23581,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22208,7 +23620,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22245,7 +23659,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22282,7 +23698,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22315,7 +23733,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22351,7 +23771,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22389,7 +23811,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22426,7 +23850,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22460,7 +23886,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22497,7 +23925,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22534,7 +23964,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22571,7 +24003,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22605,7 +24039,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22642,7 +24078,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22679,7 +24117,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22716,7 +24156,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22749,7 +24191,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22786,7 +24230,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22823,7 +24269,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22860,7 +24308,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22893,7 +24343,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22929,7 +24381,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -22967,7 +24421,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23004,7 +24460,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23038,7 +24496,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23076,7 +24536,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23113,7 +24575,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23150,7 +24614,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23183,7 +24649,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23219,7 +24687,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23257,7 +24727,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23294,7 +24766,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23328,7 +24802,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23367,7 +24843,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23402,7 +24880,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23436,7 +24916,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23470,7 +24952,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23511,7 +24995,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23546,7 +25032,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23581,7 +25069,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23615,7 +25105,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23657,7 +25149,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23695,7 +25189,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23729,7 +25225,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23770,7 +25268,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23809,7 +25309,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23843,7 +25345,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23885,7 +25389,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23923,7 +25429,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -23958,7 +25466,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24000,7 +25510,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24039,7 +25551,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24073,7 +25587,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24114,7 +25630,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24153,7 +25671,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24187,7 +25707,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24229,7 +25751,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24268,7 +25792,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24303,7 +25829,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24345,7 +25873,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24384,7 +25914,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24419,7 +25951,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24462,7 +25996,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24517,7 +26053,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24572,7 +26110,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24627,7 +26167,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24682,7 +26224,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24718,7 +26262,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24754,7 +26300,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24790,7 +26338,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24823,7 +26373,8 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-
+        palabraclave.setVisibility(View.INVISIBLE);
+        verboEs.setVisibility(View.INVISIBLE);
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -24844,7 +26395,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24877,7 +26430,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24910,7 +26465,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24943,7 +26500,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -24979,7 +26538,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25013,7 +26574,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25047,7 +26610,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25081,7 +26646,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25118,7 +26685,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25155,7 +26724,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25192,7 +26763,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25229,7 +26802,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25269,7 +26844,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25306,7 +26883,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25343,7 +26922,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25380,7 +26961,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25421,7 +27004,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25458,7 +27043,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25495,7 +27082,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25528,7 +27117,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25564,7 +27155,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25602,7 +27195,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25639,7 +27234,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25673,7 +27270,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25710,7 +27309,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25747,7 +27348,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25784,7 +27387,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25818,7 +27423,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25855,7 +27462,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25892,7 +27501,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25929,7 +27540,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25962,7 +27575,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -25999,7 +27614,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26036,7 +27653,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26073,7 +27692,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26106,7 +27727,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26142,7 +27765,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26180,7 +27805,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26217,7 +27844,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26251,7 +27880,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26288,7 +27919,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26325,7 +27958,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26362,7 +27997,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26396,7 +28033,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26433,7 +28072,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26470,7 +28111,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26507,7 +28150,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26540,7 +28185,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26577,7 +28224,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26614,7 +28263,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26651,7 +28302,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26684,7 +28337,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26720,7 +28375,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26758,7 +28415,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26795,7 +28454,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26829,7 +28490,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26866,7 +28529,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26903,7 +28568,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26940,7 +28607,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -26974,7 +28643,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27011,7 +28682,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27048,7 +28721,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27085,7 +28760,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27118,7 +28795,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27155,7 +28834,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27192,7 +28873,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27229,7 +28912,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27262,7 +28947,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27298,7 +28985,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27336,7 +29025,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27373,7 +29064,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27407,7 +29100,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27444,7 +29139,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27481,7 +29178,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27518,7 +29217,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27552,7 +29253,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27589,7 +29292,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27626,7 +29331,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27663,7 +29370,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27696,7 +29405,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27733,7 +29444,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27770,7 +29483,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27807,7 +29522,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27840,7 +29557,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27876,7 +29595,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27914,7 +29635,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27951,7 +29674,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -27985,7 +29710,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28022,7 +29749,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28059,7 +29788,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28096,7 +29827,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28130,7 +29863,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28167,7 +29902,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28204,7 +29941,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28241,7 +29980,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28274,7 +30015,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28311,7 +30054,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28348,7 +30093,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28385,7 +30132,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28418,7 +30167,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28454,7 +30205,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28492,7 +30245,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28529,7 +30284,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28563,7 +30320,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28600,7 +30359,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28637,7 +30398,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28674,7 +30437,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28708,7 +30473,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28745,7 +30512,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28782,7 +30551,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28819,7 +30590,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28852,7 +30625,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28889,7 +30664,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28926,7 +30703,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28963,7 +30742,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -28996,7 +30777,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29032,7 +30815,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29070,7 +30855,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29107,7 +30894,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29141,7 +30930,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29179,7 +30970,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29216,7 +31009,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29253,7 +31048,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29286,7 +31083,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29322,7 +31121,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29360,7 +31161,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29397,7 +31200,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29431,7 +31236,9 @@ public class Estructura2023 extends AppCompatActivity {
 
                                         @Override
                                         public void onDone(String utteranceId) {
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29470,7 +31277,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29505,7 +31314,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29539,7 +31350,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29573,7 +31386,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29614,7 +31429,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29649,7 +31466,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29684,7 +31503,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29718,7 +31539,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29760,7 +31583,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29798,7 +31623,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29832,7 +31659,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29873,7 +31702,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29912,7 +31743,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29946,7 +31779,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -29988,7 +31823,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30026,7 +31863,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30061,7 +31900,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30103,7 +31944,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30142,7 +31985,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30176,7 +32021,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30217,7 +32064,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30256,7 +32105,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30290,7 +32141,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30332,7 +32185,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30371,7 +32226,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30406,7 +32263,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30448,7 +32307,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30487,7 +32348,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30522,7 +32385,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30564,7 +32429,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30619,7 +32486,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30674,7 +32543,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30729,7 +32600,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30784,7 +32657,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30820,7 +32695,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30856,7 +32733,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30892,7 +32771,9 @@ public class Estructura2023 extends AppCompatActivity {
                                         @Override
                                         public void onDone(String utteranceId) {
 
-                                            // iniciarentradavoz();
+                                            if(timerTask == null){
+                                                startTimer();
+                                            }
                                         }
 
                                         @Override
@@ -30979,39 +32860,59 @@ public class Estructura2023 extends AppCompatActivity {
         if(!selection.equals("Tutorial")){
             texto_inicial.setVisibility(View.GONE);
             spanish_lay.setVisibility(View.VISIBLE);
+
             input_lay.setVisibility(View.VISIBLE);
             btn_lay.setVisibility(View.VISIBLE);
             btn_cont_lay.setVisibility(View.GONE);
+
         }
     }
 
     //VALIDACIONES DE TEXTO Y AUDIO
     public void checkanswer(View vista) {
+        flashingAnimation.start();
+        btndif2.setVisibility(View.VISIBLE);
+        if(prefs.getPremium()==1){
+            btndif3.setVisibility(View.VISIBLE);
+            btndif4.setVisibility(View.VISIBLE);
+            btndif3.setText("mas difícil todavía");
+            btndif4.setText("la mas difícil");
+        }
+
+
+        btndif1.setText("oración facil");
+        btndif2.setText(" mas difícil");
+
         String t = txteng.getText().toString().trim().toLowerCase();
         String te2 = txteng2.getText().toString().trim().toLowerCase(); // esta la usariamos para la segunda opcion
         String t2 = answerinp.getText().toString().trim().toLowerCase();
 
-        Toast.makeText(this, "Oracion 1"+ te2, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Oracion 2"+ t, Toast.LENGTH_SHORT).show();
         //RESPUESTA CORRECTA
-        if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2)) {
+        if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2))
+        {
             //ICONOS
             Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
-
             //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
-
             //LAYOUT QUE MUESTRA ICONOS
             resplay.setVisibility(View.VISIBLE);
             resplay.setBackground(correctIcon);
-
             //ESCONDER BOTON CHEQUEA TU RESPUESTA
             btn_lay.setVisibility(View.GONE);
 
+            prom = roundedMilliseconds ;
+            averageresponetimelayout.setVisibility(View.VISIBLE);
+            double secondsWithDecimal = prom / 1000; // Divide by 100 to get seconds with two decimal places
+            tiempopromedioderespuestatexto.setText(String.format(String.valueOf(secondsWithDecimal))+" Segundos");
+            timen = 0.0;
+
+            if (timerTask != null) {
+                timerTask.cancel();
+            }
+            timerTask = null;
             //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
-
             btncheck.setText("Chequea tu respuesta");
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
@@ -31033,17 +32934,60 @@ public class Estructura2023 extends AppCompatActivity {
                             }
                         });
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
-
+                        condicionparapasar++;
                         if(personalizedPlan ){
-                            SubtractSelectionAndSendinfoToDb();
-                            Toast.makeText(Estructura2023.this, "is in personalized", Toast.LENGTH_SHORT).show();
+                            if(condicionparapasar>5){
+                                SubtractSelectionAndSendinfoToDb();
+                                condicionparapasar=0;
+
+
+
+                            }else {
+                            }
 
                         }
 
                     }
                 }
             });
-            //RESPUESTA INCORRECTA
+
+
+
+            double sum;
+            switch (counter){
+                 case 0:
+                     one=secondsWithDecimal;
+                     break;
+
+                 case 1:
+                     two=secondsWithDecimal;
+
+                     break;
+
+                 case 2:
+                     three=secondsWithDecimal;
+
+                     break;
+
+                 case 3:
+                     four=secondsWithDecimal;
+
+                     break;
+                 case 4:
+                     five=secondsWithDecimal;
+
+                     break;
+
+             }
+             counter++;
+             sum = one+two+three+four+five;
+            if(counter == 5){
+                 turnTrue(selection,sum);
+                 counter=0;
+                // dialogueContainer("Felicidades ! has avanzado 1.3% del curso","ver mi progreso","quedarme",getApplicationContext());
+
+             }
+
         } else {
             //ICONOS
             Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
@@ -31061,7 +33005,6 @@ public class Estructura2023 extends AppCompatActivity {
 
             btncheck.setText("Checa Tu Respuesta ");
             //if you say stop it returns part of the flow control system
-            if (answerinp.getText().toString().trim().equals("stop")) return;
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int i) {
@@ -31093,9 +33036,23 @@ public class Estructura2023 extends AppCompatActivity {
                             }
                         });
 
+
                         ttr.speak("answer is incorrect   the answer is  " + txteng.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+                        txteng.setTextColor(Color.BLUE);
+                        txteng.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String textFromTxteng = txteng.getText().toString();
+                                answerinp.setText(textFromTxteng);
+                            }
+                        });
                         //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
                         //with this yet
+                        if(personalizedPlan){
+                            //reset counter?
+                            condicionparapasar=0;
+                        }
+
 
 
                     }
@@ -31136,18 +33093,10 @@ public class Estructura2023 extends AppCompatActivity {
 
         //OCULTA EL LAYOYUT INCORRECTO O CORRECTO
         resplay.setVisibility(View.GONE);
+        averageresponetimelayout.setVisibility(View.GONE);
 
         //LAYOUT DE RESPUESTA SE OCULTA
         answer_lay.setVisibility(View.GONE);
-    }
-    private void iniciarentradavoz() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        try {
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
-        } catch (ActivityNotFoundException e) {
-        }
     }
     //ESTRUCTURAS QUE DEBEN IR EN GENERADOR
     //RANDOM GEN
@@ -31169,7 +33118,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31203,7 +33154,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31237,7 +33190,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31271,7 +33226,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31305,7 +33262,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31339,7 +33298,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31373,7 +33334,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31407,7 +33370,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31441,7 +33406,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31475,7 +33442,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31509,7 +33478,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31543,7 +33514,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31577,7 +33550,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31611,7 +33586,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31645,7 +33622,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31684,7 +33663,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31717,7 +33698,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31750,7 +33733,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31783,7 +33768,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31816,7 +33803,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31849,7 +33838,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31882,7 +33873,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31915,7 +33908,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31948,7 +33943,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -31981,7 +33978,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32014,7 +34013,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32047,7 +34048,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32080,7 +34083,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32113,7 +34118,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32146,7 +34153,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32185,7 +34194,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32219,7 +34230,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32253,7 +34266,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32287,7 +34302,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32321,7 +34338,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32355,7 +34374,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32389,7 +34410,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32423,7 +34446,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32457,7 +34482,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32491,7 +34518,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32525,7 +34554,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32559,7 +34590,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32593,7 +34626,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32627,7 +34662,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32661,7 +34698,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32699,7 +34738,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32732,7 +34773,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32765,7 +34808,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32798,7 +34843,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32831,7 +34878,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32864,7 +34913,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32897,7 +34948,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32930,7 +34983,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32963,7 +35018,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -32996,7 +35053,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33029,7 +35088,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33062,7 +35123,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33095,7 +35158,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33128,7 +35193,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33161,7 +35228,9 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onDone(String utteranceId) {
 
-                                    // iniciarentradavoz();
+                                    if(timerTask == null){
+                                                startTimer();
+                                            }
                                 }
 
                                 @Override
@@ -33174,27 +35243,632 @@ public class Estructura2023 extends AppCompatActivity {
                             txteng.setText(gen1.gene);
 
                             answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                             
+                                         tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
                         }
                     }
                 });
                 break;
         }
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
+    private void startTimer() {
+        timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        timen++;
+                        tiempopromedioderespuestatexto.setText(getTimerTextWithMilliseconds());
 
-            case REC_CODE_SPEECH_INPUT:
-                if (resultCode == RESULT_OK && null != data) {
-                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    }
+                });
+            }
 
-                    answerinp.setText(result.get(0));
+        };
+        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
+    }
+    private String getTimerTextWithMilliseconds() {
+        double milliseconds = timen * 1000; // Convert seconds to milliseconds
 
-                }
-                break;
+        roundedMilliseconds = (int) Math.round(milliseconds);
+        int seconds = ((roundedMilliseconds % 86400000) % 3600000) % 60000 / 1000; // Extract seconds
+        int minutes = ((roundedMilliseconds % 86400000) % 3600000) / 60000; // Extract minutes
+        int hours = (roundedMilliseconds % 86400000) / 3600000; // Extract hours
+        int millisecondsValue = roundedMilliseconds % 1000; // Extract milliseconds
+
+        return formatTimeWithMilliseconds(seconds, minutes, hours, millisecondsValue);
+    }
+    private String formatTimeWithMilliseconds(int seconds, int minutes, int hours, int milliseconds) {
+        return String.format("%02d : %02d : %02d : %03d", hours, minutes, seconds, milliseconds);
+    }
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        speechRecognitionLauncher.launch(intent);
+        try {
+        } catch (ActivityNotFoundException e) {
         }
 
     }
+    private void escribirEnelInputTextResultadodeUtterance() {
+        speechRecognitionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        // Handle the result here
+                        Intent data = result.getData();
+                        if (data != null) {
+                            ArrayList<String> resultArray = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                            if (resultArray != null && !resultArray.isEmpty()) {
+                                // Get the recognized text (the first item in the list)
+                                String recognizedText = resultArray.get(0);
+
+
+                                // Set the recognized text to the EditText
+                                answerinp.setText(recognizedText);
+                            }
+                        }
+                    }
+                }
+        );
+    }
+    ModeloEstructura mso;
+    public void turnTrue(String CurrentStructure,double sum){
+        scoresStructureDBDocRef = db.collection(userid).document("Scores Structures");
+        scoresStructureDBDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(!documentSnapshot.exists()){
+
+                }else{
+                    mso = documentSnapshot.toObject(ModeloEstructura.class);
+                    switch (CurrentStructure){
+                        case "Present Simple":
+                            if(!mso.PresenteSimple){
+                                updateinfo("PresenteSimple");
+
+                            }
+                            break;
+                        case "Present Continuous":
+                            if(!mso.PresenteContinuo){
+
+                                updateinfo("PresenteContinuo");
+
+                            }
+                            break;
+                        case "Present Perfect":
+                            if (!mso.PresentePerfecto) {
+                                updateinfo("PresentePerfecto");
+
+
+                            }
+                            break;
+
+                        case "Present Perfect Continuous":
+                            if (!mso.PresentePerfecto) {
+                                updateinfo("PresentePerfecto");
+
+
+                            }
+                            break;
+                        case "Past Simple":
+                            if (!mso.PasadoSimple) {
+                                updateinfo("PasadoSimple");
+
+
+                            }
+                            break;
+                        case "Past Continuous":
+                            if (!mso.PasadoContinuo) {
+                                updateinfo("PasadoContinuo");
+
+
+                            }
+                            break;
+                        case "Past Perfect":
+                            if (!mso.PasadoPerfecto) {
+                                updateinfo("PasadoPerfecto");
+
+
+                            }
+                            break;
+                        case "Past Perfect Continuous":
+                            if (!mso.PasadoPerfectoContinuo) {
+                                updateinfo("PasadoPerfectoContinuo");
+
+
+                            }
+                            break;
+                            //futuros
+                        case "Future Simple":
+                            if (!mso.FuturoSimple) {
+                                updateinfo("FuturoSimple");
+
+
+                            }
+                            break;
+                        case "Future Continuous":
+                            if (!mso.FuturoContinuo) {
+                                updateinfo("FuturoContinuo");
+
+
+                            }
+                            break;
+                        case "Future Perfect":
+                            if (!mso.FuturoPerfecto) {
+                                updateinfo("FuturoPerfecto");
+
+
+                            }
+                            break;
+                        case "Future Perfect Continuous":
+                            if (!mso.FuturoPerfectoContinuo) {
+                                updateinfo("FuturoPerfectoContinuo");
+                            }
+                            break;
+                            // woulds
+                        case "Would Simple":
+                            if (!mso.WouldSimple) {
+                                updateinfo("WouldSimple");
+
+                            }
+                            break;
+                        case "Would Continuous":
+                            if (!mso.WouldContinuo) {
+                                updateinfo("WouldContinuo");
+
+                            }
+                            break;
+                        case "Would Perfect":
+                            if (!mso.WouldPerfecto) {
+                                updateinfo("WouldPerfecto");
+
+                            }
+                            break;
+                        case "Would Perfect Continuous":
+                            if (!mso.WouldPerfectoContinuo) {
+                                updateinfo("WouldPerfectoContinuo");
+                            }
+                            break;
+                            // coulds
+
+                        case "Could Simple":
+                            if (!mso.CouldSimple) {
+                                updateinfo("CouldSimple");
+
+                            }
+                            break;
+                        case "Could Continuous":
+                            if (!mso.CouldContinuo) {
+                                updateinfo("CouldContinuo");
+
+                            }
+                            break;
+                        case "Could Perfect":
+                            if (!mso.CouldPerfecto) {
+                                updateinfo("CouldPerfecto");
+
+                            }
+                            break;
+                        case "Could Perfect Continuous":
+                            if (!mso.CouldPerfectoContinuo) {
+                                updateinfo("CouldPerfectoContinuo");
+                            }
+                            break;
+                            //mights
+                        case "Might Simple":
+                            if (!mso.MightSimple) {
+                                updateinfo("MightSimple");
+
+                            }
+                            break;
+                        case "Might Continuous":
+                            if (!mso.MightContinuous) {
+                                updateinfo("MightContinuous");
+
+                            }
+                            break;
+                        case "Might Perfect":
+                            if (!mso.MightPerfect) {
+                                updateinfo("MightPerfect");
+
+                            }
+                            break;
+                        case "Might Perfect Continuous":
+                            if (!mso.MightPerfectContinuous) {
+                                updateinfo("MightPerfectContinuous");
+                            }
+                            break;
+                            //shoulds
+                        case "Should Simple":
+                            if (!mso.ShouldSimple) {
+                                updateinfo("ShouldSimple");
+
+                            }
+                            break;
+                        case "Should Continuous":
+                            if (!mso.ShouldContinuous) {
+                                updateinfo("ShouldContinuous");
+
+                            }
+                            break;
+                        case "Should Perfect":
+                            if (!mso.ShouldPerfect) {
+                                updateinfo("ShouldPerfect");
+
+                            }
+                            break;
+                        case "Should Perfect Continuous":
+                            if (!mso.ShouldPerfectContinuous) {
+                                updateinfo("ShouldPerfectContinuous");
+                            }
+                            break;
+                            //can y must
+                        case "Can Simple":
+                            if (!mso.CanSimple) {
+                                updateinfo("CanSimple");
+
+                            }
+                            break;
+                        case "Can Continuous":
+                            if (!mso.CanContinuous) {
+                                updateinfo("CanContinuous");
+
+                            }
+                            break;
+                        case "Must Simple":
+                            if (!mso.MustSimple) {
+                                updateinfo("MustSimple");
+
+                            }
+                            break;
+                        case "Must Continuous":
+                            if (!mso.MustContinuous) {
+                                updateinfo("MustContinuous");
+                            }
+                            break;
+
+                            //whats
+                        case "What Simple":
+                            if (!mso.WhatSimple) {
+                                updateinfo("WhatSimple");
+
+                            }
+                            break;
+                        case "What Continuous":
+                            if (!mso.WhatContinuous) {
+                                updateinfo("WhatContinuous");
+
+                            }
+                            break;
+                        case "What Perfect":
+                            if (!mso.WhatPerfect) {
+                                updateinfo("WhatPerfect");
+
+                            }
+                            break;
+                        case "What Modals Simple":
+                            if (!mso.WhatModalsSimple) {
+                                updateinfo("WhatModalsSimple");
+                            }
+                            break;
+                        case "What Modals Continuous":
+                            if (!mso.WhatModalsContinuous) {
+                                updateinfo("WhatModalsContinuous");
+
+                            }
+                            break;
+                        case "What Modals Perfect":
+                            if (!mso.WhatModalsPerfect) {
+                                updateinfo("WhatModalsPerfect");
+                            }
+                            break;
+                            // whens
+                        case "When Simple":
+                            if (!mso.WhenSimple) {
+                                updateinfo("WhenSimple");
+
+                            }
+                            break;
+                        case "When Continuous":
+                            if (!mso.WhenContinuous) {
+                                updateinfo("WhenContinuous");
+
+                            }
+                            break;
+                        case "When Perfect":
+                            if (!mso.WhenPerfect) {
+                                updateinfo("WhenPerfect");
+
+                            }
+                            break;
+                        case "When Modals Simple":
+                            if (!mso.WhenModalsSimple) {
+                                updateinfo("WhenModalsSimple");
+                            }
+                            break;
+                        case "When Modals Continuous":
+                            if (!mso.WhenModalsContinuous) {
+                                updateinfo("WhenModalsContinuous");
+
+                            }
+                            break;
+                        case "When Modals Perfect":
+                            if (!mso.WhenModalsPerfect) {
+                                updateinfo("WhenModalsPerfect");
+                            }
+                            break;
+                            // where
+                        case "Where Simple":
+                            if (!mso.WhenSimple) {
+                                updateinfo("WhenSimple");
+
+                            }
+                            break;
+                        case "Where Continuous":
+                            if (!mso.WhenContinuous) {
+                                updateinfo("WhenContinuous");
+
+                            }
+                            break;
+                        case "Where Perfect":
+                            if (!mso.WhenPerfect) {
+                                updateinfo("WhenPerfect");
+
+                            }
+                            break;
+                        case "Where Modals Simple":
+                            if (!mso.WhenModalsSimple) {
+                                updateinfo("WhenModalsSimple");
+                            }
+                            break;
+                        case "Where Modals Continuous":
+                            if (!mso.WhenModalsContinuous) {
+                                updateinfo("WhenModalsContinuous");
+
+                            }
+                            break;
+                        case "Where Modals Perfect":
+                            if (!mso.WhenModalsPerfect) {
+                                updateinfo("WhenModalsPerfect");
+                            }
+                            break;
+                            //why
+                        case "Why Simple":
+                            if (!mso.WhySimple) {
+                                updateinfo("WhySimple");
+
+                            }
+                            break;
+                        case "Why Continuous":
+                            if (!mso.WhyContinuous) {
+                                updateinfo("WhyContinuous");
+
+                            }
+                            break;
+                        case "Why Perfect":
+                            if (!mso.WhyPerfect) {
+                                updateinfo("WhyPerfect");
+
+                            }
+                            break;
+                        case "Why Modals Simple":
+                            if (!mso.WhyModalsSimple) {
+                                updateinfo("WhyModalsSimple");
+                            }
+                            break;
+                        case "Why Modals Continuous":
+                            if (!mso.WhyModalsContinuous) {
+                                updateinfo("WhyModalsContinuous");
+
+                            }
+                            break;
+                        case "Why Modals Perfect":
+                            if (!mso.WhyModalsPerfect) {
+                                updateinfo("WhyModalsPerfect");
+                            }
+                            break;
+                            //hows
+                        case "How Simple":
+                            if (!mso.HowSimple) {
+                                updateinfo("HowSimple");
+
+                            }
+                            break;
+                        case "How Continuous":
+                            if (!mso.HowContinuous) {
+                                updateinfo("HowContinuous");
+
+                            }
+                            break;
+                        case "How Perfect":
+                            if (!mso.HowPerfect) {
+                                updateinfo("HowPerfect");
+
+                            }
+                            break;
+                        case "How Modals Simple":
+                            if (!mso.HowModalsSimple) {
+                                updateinfo("HowModalsSimple");
+                            }
+                            break;
+                        case "How Modals Continuous":
+                            if (!mso.HowModalsContinuous) {
+                                updateinfo("HowModalsContinuous");
+
+                            }
+                            break;
+                        case "How Modals Perfect":
+                            if (!mso.HowModalsPerfect) {
+                                updateinfo("HowModalsPerfect");
+                            }
+                            break;
+                            //questions
+                        case "Question Structure":
+                            if (!mso.QuestionStructure) {
+                                updateinfo("QuestionStructure");
+
+                            }
+                            break;
+                        case "Question Structure Modals":
+                            if (!mso.QuestionStructureModals) {
+                                updateinfo("QuestionStructureModals");
+                            }
+                            break;
+                            // nonbasics
+
+                        case "Able To":
+                            if (!mso.AbleTo) {
+                                updateinfo("AbleTo");
+                            }
+                            break;
+                        case "Reported Speech":
+                            if (!mso.ReportedSpeech) {
+                                updateinfo("ReportedSpeech");
+                            }
+                            break;
+
+                        case "Incremento Paralelo":
+                            if (!mso.IncrementoParalelo) {
+                                updateinfo("IncrementoParalelo");
+                            }
+                            break;
+                        case "Verbal Adjectives":
+                            if (!mso.VerbalAdjectives) {
+                                updateinfo("VerbalAdjectives");
+                            }
+                            break;
+                        case "Relative Clause":
+                            if (!mso.RelativeClause) {
+                                updateinfo("RelativeClause");
+                            }
+                            break;
+                        case "Want To":
+                            if (!mso.WantTo) {
+                                updateinfo("WantTo");
+                            }
+                            break;
+                        case "For To":
+                            if (!mso.ForTo) {
+                                updateinfo("ForTo");
+                            }
+                            break;
+
+                        case "Supposed To Present":
+                            if (!mso.SupposedToPresent) {
+                                updateinfo("SupposedToPresent");
+                            }
+                            break;
+                        case "Wish Past Perfect":
+                            if (!mso.WishPastPerfect) {
+                                updateinfo("WishPastPerfect");
+                            }
+                            break;
+                        case "Used To":
+                            if (!mso.UsedTo) {
+                                updateinfo("UsedTo");
+                            }
+                            break;
+                        case "Be Used To":
+                            if (!mso.BeUsedTo) {
+                                updateinfo("BeUsedTo");
+                            }
+                            break;
+
+
+                    }
+
+                 if(prefs.getPremium()==0){
+                     if(mso.PresenteSimple||mso.PresenteContinuo){
+                        dialogueContainer("Quires Mas estructuras? decenas extra por solo 50 pesos al mes","Más info","No Ahora",Estructura2023.this);
+                     }
+                 }
+
+                }
+
+
+
+
+
+            }
+            public void updateinfo(String estructura){
+                double prom = sum / 5;
+                division = mso.StructureCounter / total;
+                result = division * 100;
+                mso.StructureCounter++; // sube el counter 1
+                userdb.put(estructura,true);// cambia valor a veradero
+                userdb.put("StructureCounter",mso.StructureCounter);
+                userdb.put("AvanceStructura",result);
+                userdb.put("tdrStructure",prom);
+                uid.document("Scores Structures").update(userdb);
+            }
+        });
+
+    }
+    public void dialogueContainer(String text, String buttonyes, String buttonno, Context contexto){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                gotoURl("https://adrianlealcaldera.com/premiumpromo.mp4");
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+
+    }
+    private void gotoURl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
+
+
+
 }

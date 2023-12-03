@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Availability2023"
+    tools:context=".Availability2023"
     android:background="@color/white"
     >
     <LinearLayout
@@ -27,7 +27,7 @@
             >
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView"
-                android:name="com.leal.cipm_testing.components.header"
+                android:name="com.leal.cipm_testing.header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,12 +44,13 @@
             android:paddingHorizontal="30dp">
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView4"
-                android:name="com.leal.cipm_testing.components.VideoPlayer"
+                android:id="@+id/fragmentContainerView5"
+                android:name="com.leal.cipm_testing.VideoPlayer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_video_player"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <!--Spinner-->
@@ -159,6 +160,7 @@
                 android:gravity="end"
                 android:onClick="PasarSiguienteEstructura"
                 >
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -295,19 +297,7 @@
                             android:layout_marginBottom="10dp"
                             android:paddingHorizontal="10dp"
                             >
-                            <Button
-                                android:id="@+id/finTest"
-                                android:layout_width="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:layout_height="40dp"
-                                android:background="@drawable/borde_azul"
-                                android:text="Finalizar Test"
-                                android:onClick="verResultado"
-                                android:textColor="@color/azul"
-                                android:textSize="14dp"
-                                android:layout_marginRight="5dp"
-                                />
+
                             <Button
                                 android:id="@+id/sigPreg"
                                 android:layout_width="match_parent"
@@ -432,7 +422,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

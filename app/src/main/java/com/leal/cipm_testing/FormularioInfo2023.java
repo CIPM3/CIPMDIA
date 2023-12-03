@@ -1,4 +1,4 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,8 +26,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.leal.cipm_testing.MainActivity;
-import com.leal.cipm_testing.R;
 
 public class FormularioInfo2023 extends AppCompatActivity {
 
@@ -282,7 +280,6 @@ public class FormularioInfo2023 extends AppCompatActivity {
 
             uploadImage(imagenUri);
 
-            //Toast.makeText(this, "imagenpath: "+imageUri, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -296,7 +293,6 @@ public class FormularioInfo2023 extends AppCompatActivity {
 
         uploadTask.addOnSuccessListener(taskSnapshot -> {
             // La imagen se subió exitosamente
-            Toast.makeText(FormularioInfo2023.this, "Imagen subida correctamente", Toast.LENGTH_SHORT).show();
             obtenerImage();
         }).addOnFailureListener(e -> {
             // Ocurrió un error al subir la imagen
@@ -321,7 +317,8 @@ public class FormularioInfo2023 extends AppCompatActivity {
         if(isValidated){
             agregarEstudiante(estudiante);
             limpiarFormulario();
-            Toast.makeText(this, "Informacion Enviada", Toast.LENGTH_SHORT).show();
+            Intent intento = new Intent(FormularioInfo2023.this,Profile2023.class);
+            startActivity(intento);
         }else{
             Toast.makeText(this, "Ocurrio un Error al enviar la informacion.", Toast.LENGTH_SHORT).show();
         }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomCalendarViewTheme" parent="@android:style/Widget.CalendarView">
+        <!-- Customize the text color for normal state -->
+        <item name="android:calendarTextColor">#FF0000</item>
+
+
+
+        <!-- Add any other customizations you need -->
+    </style>
+</resources>

@@ -5,359 +5,359 @@ public class Special {
 
     // objetos abstractos
     String nnobles[] = {"the history ", "the art ", "the information ",
-            "the system ", "the music ", "the method ", "the reading ",
-            "the data ", "the theory ", "the law ", "the literature ", "the problems ",
-            "the software ", "the ability ", "the economy ", "the love ", "the science ",
-            "nature ", "the idea ", "the temperature ", "the investment ", "the soceity "
+           "the system ", "the music ", "the method ", "the reading ",
+           "the data ", "the theory ", "the law ", "the literature ", "the problems ",
+           "the software ", "the ability ", "the economy ", "the love ", "the science ",
+           "nature ", "the idea ", "the temperature ", "the investment ", "the society "
             , "the story ", "the safety ", "the quality ", "the development ", "the language ",
-            "the variety ", "the organization ", "the physics ", "the policy ",
-            "the analysis ", "the policy ", "the series ", "the thought ",
-            "the technology ", "the freedom ", "the instance ", "the writing ",
-            "the article ", "the difference ",  "the news ", "the growth "
+           "the variety ", "the organization ", "the physics ", "the policy ",
+           "the analysis ", "the policy ", "the series ", "the thought ",
+           "the technology ", "the freedom ", "the instance ", "the writing ",
+           "the article ", "the difference ", "the news ", "the growth "
     };
     String nnoblesesp[] = {"la historia ", "el arte ", "la información ",
-            "el sistema ", "la música ", "el método ", "la lectura ",
-            "los datos ", "la teoría ", "la ley ", "la literatura ", "los problemas ",
-            "el software ", "la habilidad ", "la economia ", "el amor ", "la ciencia ",
-            "la naturaleza ", "la idea ", "la temperatura ", "la inversión ", "la sociedad "
+           "el sistema ", "la música ", "el método ", "la lectura ",
+           "los datos ", "la teoría ", "la ley ", "la literatura ", "los problemas ",
+           "el software ", "la habilidad ", "la economia ", "el amor ", "la ciencia ",
+           "la naturaleza ", "la idea ", "la temperatura ", "la inversión ", "la sociedad "
             , "el cuento ", "la seguridad ", "la calidad ", "el desarrollo ", "el idioma ",
-            "la variedad ", "la organización ", "la fisica ", "la politica ",
-            "el análisis ", "la politica ", "la serie ", "el pensamiento ",
-            "la tecnología ", "la libertad ", "la instancia ", "el escrito ",
-            "el artículo ", "la diferencia ", "las noticias ", "el crecimiento "
+           "la variedad ", "la organización ", "la fisica ", "la politica ",
+           "el análisis ", "la politica ", "la serie ", "el pensamiento ",
+           "la tecnología ", "la libertad ", "la instancia ", "el escrito ",
+           "el artículo ", "la diferencia ", "las noticias ", "el crecimiento "
     };
     
     String verbs[] = {
-            "determine ", "approach ", "grow ",
-            "improve ", "begin ",
-            "continue ", "write ", "achieve ",
-            "discuss ", "solve ",
-            "invest ", "reduce ", "speak ", "apply ",
-            "recommend ",
-            "vary ", "generate ", "obtain ", "enter ",
-            "appreciate ",
-            "manage ", "earn ", "reflect ", "install ",
-            "overcome ",
-            "adjust ", "relieve "
+           "determine ", "approach ", "grow ",
+           "improve ", "begin ",
+           "continue ", "write ", "achieve ",
+           "discuss ", "solve ",
+           "invest ", "reduce ", "speak ", "apply ",
+           "recommend ",
+           "vary ", "generate ", "obtain ", "enter ",
+           "appreciate ",
+           "manage ", "earn ", "reflect ", "install ",
+           "overcome ",
+           "adjust ", "relieve "
     };
 
     //verbo special base infinitivo esp
     String vsbc[] = {"determinar ", "acercar ", "crecer ", "mejorar ",
-            "comenzar ", "continuar ", "escribir ", "lograr ",
-            "discutir ", "resolver ", "invertir ", "reducir ", "hablar ",
-            "aplicar ", "recomendar ", "variar ", "generar ", "obtener ",
-            "entrar ", "apreciar ", "manejar ", "ganar ", "reflejar ",
-            "instalar ", "sobrepasar ", "ajustar ", "aliviar "
+           "comenzar ", "continuar ", "escribir ", "lograr ",
+           "discutir ", "resolver ", "invertir ", "reducir ", "hablar ",
+           "aplicar ", "recomendar ", "variar ", "generar ", "obtener ",
+           "entrar ", "apreciar ", "manejar ", "ganar ", "reflejar ",
+           "instalar ", "sobrepasar ", "ajustar ", "aliviar "
     };
 
 
     String vsp[] = {"determined ", "approached ", "grew ", "improved ", "begun ", "continued ", "wrote ",
-            "achieved ", "discussed ", "solved ", "invested ", "reduced ", "spoke ", "applied ", "recommended ", "varied ",
-            "generated ", "obtained ", "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
-            "overcame ", "adjusted ", "relieved "
+           "achieved ", "discussed ", "solved ", "invested ", "reduced ", "spoke ", "applied ", "recommended ", "varied ",
+           "generated ", "obtained ", "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
+           "overcame ", "adjusted ", "relieved "
     };
 
     String verbscont[] = {"determining ", "approaching ", "growing ", "improving ", "beginning ",
-            "continuing ", "writing ", "achieving ", "discussing ", "solving ", "investing ", "reducing ",
-            "speaking ", "applying ", "recommending ", "varying ", "generating ", "obtaining ", "entering ",
-            "appreciating ", "managing ", "earning ", "reflecting ", "installing ", "overcoming ", "adjusting ",
-            "relieving "
+           "continuing ", "writing ", "achieving ", "discussing ", "solving ", "investing ", "reducing ",
+           "speaking ", "applying ", "recommending ", "varying ", "generating ", "obtaining ", "entering ",
+           "appreciating ", "managing ", "earning ", "reflecting ", "installing ", "overcoming ", "adjusting ",
+           "relieving "
     };
 
     String verbconti[] = {"determinando ", "acercando ", "creciendo ", "mejorando ", "comenzando ", "continuando ",
-            "escribiendo ", "logrando ", "discutiendo ", "resolviendo ", "invirtiendo ", "reduciendo ", "hablando ", "aplicando ",
-            "recomendando ", "variando ", "generando ", "obteniendo ", "entrando ", "apreciando ", "manejando ", "ganando ", "reflejando ",
-            "instalando ", "sobrepasando ", "ajustando ", "aliviando "
+           "escribiendo ", "logrando ", "discutiendo ", "resolviendo ", "invirtiendo ", "reduciendo ", "hablando ", "aplicando ",
+           "recomendando ", "variando ", "generando ", "obteniendo ", "entrando ", "apreciando ", "manejando ", "ganando ", "reflejando ",
+           "instalando ", "sobrepasando ", "ajustando ", "aliviando "
     };
 
     // verbos participio esp
     String verbpartsp[] = {"determinado ", "acercado ", "crecido ",
-            "mejorado ", "comenzado ", "continuado ",
-            "escrito ", "logrado ", "discutido ",
-            "resuelto ", "invertido ", "reducido ",
-            "hablado ", "aplicado ",
-            "recomendado ", "variado ", "generado ",
-            "obtenido ", "entrado ", "apreciado ",
-            "manejado ", "ganado ", "reflejado ",
-            "instalado ", "sobrepasado ", "ajustado ",
-            "aliviado "
+           "mejorado ", "comenzado ", "continuado ",
+           "escrito ", "logrado ", "discutido ",
+           "resuelto ", "invertido ", "reducido ",
+           "hablado ", "aplicado ",
+           "recomendado ", "variado ", "generado ",
+           "obtenido ", "entrado ", "apreciado ",
+           "manejado ", "ganado ", "reflejado ",
+           "instalado ", "sobrepasado ", "ajustado ",
+           "aliviado "
     };
 
     // verbos participio esp Masculino
     String verbpartspM[]={
-            "determinado ", "acercado ", "crecido ",
-            "mejorado ", "comenzado ", "continuado ",
-            "escrito ", "logrado ", "discutido ",
-            "resuelto ", "invertido ", "reducido ",
-            "hablado ", "aplicado ",
-            "recomendado ", "variado ", "generado ",
-            "obtenido ", "entrado ", "apreciado ",
-            "manejado ", "ganado ", "reflejado ",
-            "instalado ", "sobrepasado ", "ajustado ",
-            "aliviado "
+           "determinado ", "acercado ", "crecido ",
+           "mejorado ", "comenzado ", "continuado ",
+           "escrito ", "logrado ", "discutido ",
+           "resuelto ", "invertido ", "reducido ",
+           "hablado ", "aplicado ",
+           "recomendado ", "variado ", "generado ",
+           "obtenido ", "entrado ", "apreciado ",
+           "manejado ", "ganado ", "reflejado ",
+           "instalado ", "sobrepasado ", "ajustado ",
+           "aliviado "
     };
 
     // verbos participio esp Femenino
     String verbpartspF[]={
-            "determinada ", "acercada ", "crecida ",
-            "mejorada ", "comenzada ", "continuada ",
-            "escrita ", "lograda ", "discutida ",
-            "resuelta ", "invertida ", "reducida ",
-            "hablada ", "aplicada ",
-            "recomendada ", "variada ", "generada ",
-            "obtenida ", "entrada ", "apreciada ",
-            "manejada ", "ganada ", "reflejada ",
-            "instalada ", "sobrepasada ", "ajustada ",
-            "aliviada "
+           "determinada ", "acercada ", "crecida ",
+           "mejorada ", "comenzada ", "continuada ",
+           "escrita ", "lograda ", "discutida ",
+           "resuelta ", "invertida ", "reducida ",
+           "hablada ", "aplicada ",
+           "recomendada ", "variada ", "generada ",
+           "obtenida ", "entrada ", "apreciada ",
+           "manejada ", "ganada ", "reflejada ",
+           "instalada ", "sobrepasada ", "ajustada ",
+           "aliviada "
     };
 
     //verbos participio english
     String verbsparteng[] = {"determined ", "approached ", "grown ", "improved ",
-            "begun ", "continued ", "written ", "achieved ", "discussed ",
-            "solved ", "invested ", "reduced ", "spoken ",
-            "applied ", "recommended ", "varied ", "generated ", "obtained ",
-            "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
-            "overcome ", "adjusted ", "relieved "
+           "begun ", "continued ", "written ", "achieved ", "discussed ",
+           "solved ", "invested ", "reduced ", "spoken ",
+           "applied ", "recommended ", "varied ", "generated ", "obtained ",
+           "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
+           "overcome ", "adjusted ", "relieved "
     };
 
     String vpspM[]={"determined ", "approached ", "grown ", "improved ",
-            "begun ", "continued ", "written ", "achieved ", "discussed ",
-            "solved ", "invested ", "reduced ", "spoken ",
-            "applied ", "recommended ", "varied ", "generated ", "obtained ",
-            "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
-            "overcame ", "adjusted ", "relieved "
+           "begun ", "continued ", "written ", "achieved ", "discussed ",
+           "solved ", "invested ", "reduced ", "spoken ",
+           "applied ", "recommended ", "varied ", "generated ", "obtained ",
+           "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
+           "overcame ", "adjusted ", "relieved "
     };
 
     String vpspF[]={"determined ", "approached ", "grown ", "improved ",
-            "begun ", "continued ", "written ", "achieved ", "discussed ",
-            "solved ", "invested ", "reduced ", "spoken ",
-            "applied ", "recommended ", "varied ", "generated ", "obtained ",
-            "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
-            "overcame ", "adjusted ", "relieved "
+           "begun ", "continued ", "written ", "achieved ", "discussed ",
+           "solved ", "invested ", "reduced ", "spoken ",
+           "applied ", "recommended ", "varied ", "generated ", "obtained ",
+           "entered ", "appreciated ", "managed ", "earned ", "reflected ", "installed ",
+           "overcame ", "adjusted ", "relieved "
     };
 
 
     //verbos esp primera persona
     String v1[] = {"determino ", "me acerco ", "crezco ", "mejoro ", "comienzo ", "continuo ", "escribo ", "logro ", "discuto ",
-            "resuelvo ", "invierto ", "reduzco ", "hablo ", "aplico ", "recomiendo ", "varío  ", "género ", "obtengo ", "entro ",
-            "aprecio ", "manejo ", "gano ", "reflejo ", "instalo ", "supero ", "ajusto ", "alivio "
+           "resuelvo ", "invierto ", "reduzco ", "hablo ", "aplico ", "recomiendo ", "varío ", "género ", "obtengo ", "entro ",
+           "aprecio ", "manejo ", "gano ", "reflejo ", "instalo ", "supero ", "ajusto ", "alivio "
     };
 
     //verbos esp segunda persona
     String v2[] = {"determinas ", "te acercas ", "creces ", "mejoras ", "comienzas ", "continuas ", "escribes ", "logras ", "discutes ",
-            "resuelves ", "inviertes ", "reduces ", "hablas ", "aplicas ", "recomiendas ", "varías ", "generas ", "obtienes ", "entras ",
-            "aprecias ", "manejas ", "ganas ", "reflejas ", "instalas ", "superas ", "ajustas ", "alivias "
+           "resuelves ", "inviertes ", "reduces ", "hablas ", "aplicas ", "recomiendas ", "varías ", "generas ", "obtienes ", "entras ",
+           "aprecias ", "manejas ", "ganas ", "reflejas ", "instalas ", "superas ", "ajustas ", "alivias "
     };
 
     // verbos inglés tercera
     String verbs3[] = {"determines ", "approaches ", "grows ", "improves ", "begins ", "continues ", "writes ", "achieves ", "discusses ",
-            "solves ", "invests ", "reduces ", "speaks ", "applies ", "recommends ", "varies ", "generates ", "obtains ", "enters ",
-            "appreciates ", "manages ", "earns ", "reflects ", "installs ", "overcomes ", "adjusts ", "relieves "
+           "solves ", "invests ", "reduces ", "speaks ", "applies ", "recommends ", "varies ", "generates ", "obtains ", "enters ",
+           "appreciates ", "manages ", "earns ", "reflects ", "installs ", "overcomes ", "adjusts ", "relieves "
     };
 
     //verbos esp tercera persona singular
     String v3[] = {"determina ", "se acerca ", "crece ", "mejora ", "comienza ", "continua ", "escribe ", "logra ", "discute ",
-            "resuelve ", "invierte ", "reduce ", "habla ", "aplica ", "recomienda ", "varía ", "genera ", "obtiene ", "entra ",
-            "aprecia ", "maneja ", "gana ", "refleja ", "instala ", "supera ", "ajusta ", "alivia "
+           "resuelve ", "invierte ", "reduce ", "habla ", "aplica ", "recomienda ", "varía ", "genera ", "obtiene ", "entra ",
+           "aprecia ", "maneja ", "gana ", "refleja ", "instala ", "supera ", "ajusta ", "alivia "
     };
 
     //verbos esp cuarta persona
     String v4[] = {"determinan ", "se acercan ", "crecen ", "mejoran ", "comienzan ", "continúan ", "escriben ", "logran ", "discuten ",
-            "resuelven ", "invierten ", "reducen ", "hablan ", "aplican ", "recomiendan ", "varían ", "generan ", "obtienen ", "entran ",
-            "aprecian ", "manejan ", "ganan ", "reflejan ", "instalan ", "superan ", "ajustan ", "alivian "
+           "resuelven ", "invierten ", "reducen ", "hablan ", "aplican ", "recomiendan ", "varían ", "generan ", "obtienen ", "entran ",
+           "aprecian ", "manejan ", "ganan ", "reflejan ", "instalan ", "superan ", "ajustan ", "alivian "
     };
 
     //verbos esp cuarta persona
     String v5nos[] = {"determinamos ", "nos acercamos ", "crecemos ", "mejoramos ", "comenzamos ", "continuamos ", "escribimos ", "logramos ", "discutimos ",
-            "resolvemos ", "invertimos ", "reducimos ", "hablamos ", "aplicamos ", "recomendamos ", "variamos ", "generamos ", "obtenemos ", "entramos ",
-            "apreciamos ", "manejamos ", "ganamos ","reflejamos ", "instalamos ", "superamos ", "ajustamos ", "aliviamos "
+           "resolvemos ", "invertimos ", "reducimos ", "hablamos ", "aplicamos ", "recomendamos ", "variamos ", "generamos ", "obtenemos ", "entramos ",
+           "apreciamos ", "manejamos ", "ganamos ","reflejamos ", "instalamos ", "superamos ", "ajustamos ", "aliviamos "
     };
 
 
     // verbos especiales primera persona futuro
     String vsf1[] = {"determinaré ", "me acercaré ", "creceré ", "mejoraré ",
-            "comenzaré ", "continuaré ", "escribiré ", "lograré ", "discutiré ",
-            "resolveré ", "invertiré ", "reduciré ", "hablaré ", "applicaré ",
-            "recomendaré ", "variaré ", "generaré ", "obtendré ", "entraré ",
-            "apreciaré ", "manejaré ", "ganaré ", "reflejaré ", "instalaré ",
-            "sobrepasaré ", "ajustaré ", "aliviaré "
+           "comenzaré ", "continuaré ", "escribiré ", "lograré ", "discutiré ",
+           "resolveré ", "invertiré ", "reduciré ", "hablaré ", "applicaré ",
+           "recomendaré ", "variaré ", "generaré ", "obtendré ", "entraré ",
+           "apreciaré ", "manejaré ", "ganaré ", "reflejaré ", "instalaré ",
+           "sobrepasaré ", "ajustaré ", "aliviaré "
     };
     // verbos especiales segunda persona futuro
     String vsf2[] = {"determinarás ", "te acercarás ", "crecerás ", "mejorarás ",
-            "comenzarás ", "continuarás ", "escribirás ", "lograrás ", "discutirás ",
-            "resolverás ", "invertirás ", "reducirás ", "hablarás ", "aplicarás ",
-            "recomendarás ", "variarás ", "generarás ", "obtendrás ", "entrarás ",
-            "apreciarás ", "manejarás ", "ganarás ", "reflejarás ", "instalarás ",
-            "sobrepasarás ", "ajustarás ", "aliviarás "
+           "comenzarás ", "continuarás ", "escribirás ", "lograrás ", "discutirás ",
+           "resolverás ", "invertirás ", "reducirás ", "hablarás ", "aplicarás ",
+           "recomendarás ", "variarás ", "generarás ", "obtendrás ", "entrarás ",
+           "apreciarás ", "manejarás ", "ganarás ", "reflejarás ", "instalarás ",
+           "sobrepasarás ", "ajustarás ", "aliviarás "
     };
 
     // verbos especiales tercera persona futuro
     String vsf3[] = {"determinará ", "se acercará ", "crecerá ", "mejorará ",
-            "comenzará ", "continuará ", "escribirá ", "logrará ", "discutirá ",
-            "resolverá ", "invertirá ", "reducirá ", "hablará ", "aplicará ",
-            "recomendará ", "variará ", "generará ", "obtendrá ", "entrará ",
-            "apreciará ", "manejará ", "ganará ", "reflejará ", "instalará ",
-            "sobrepasará ", "ajustará ", "aliviará "
+           "comenzará ", "continuará ", "escribirá ", "logrará ", "discutirá ",
+           "resolverá ", "invertirá ", "reducirá ", "hablará ", "aplicará ",
+           "recomendará ", "variará ", "generará ", "obtendrá ", "entrará ",
+           "apreciará ", "manejará ", "ganará ", "reflejará ", "instalará ",
+           "sobrepasará ", "ajustará ", "aliviará "
     };
 
     // verbos especiales cuarta persona futuro (nosotros)
     String vsf4[] = {"determinaremos ", "nos acercaremos ", "creceremos ", "mejoraremos ",
-            "comenzaremos ", "continuaremos ", "escribiremos ", "lograremos ", "discutiremos ",
-            "resolveremos ", "invertiremos ", "reduciremos ", "hablaremos ", "aplicaremos ",
-            "recomendaremos ", "variaremos ", "generaremos ", "obtendremos ", "entraremos ",
-            "apreciaremos ", "manejaremos ", "ganaremos ", "reflejaremos ", "instalaremos ",
-            "sobrepasaremos ", "ajustaremos ", "aliviaremos "
+           "comenzaremos ", "continuaremos ", "escribiremos ", "lograremos ", "discutiremos ",
+           "resolveremos ", "invertiremos ", "reduciremos ", "hablaremos ", "aplicaremos ",
+           "recomendaremos ", "variaremos ", "generaremos ", "obtendremos ", "entraremos ",
+           "apreciaremos ", "manejaremos ", "ganaremos ", "reflejaremos ", "instalaremos ",
+           "sobrepasaremos ", "ajustaremos ", "aliviaremos "
     };
     // verbos especiales quinta persona futuro (ustedes y ellos)
     String vsf5[] = {"determinarán ", "se acercarán ", "crecerán ", "mejorarán ",
-            "comenzarán ", "continuarán ", "escribirán ", "lograrán ", "discutirán ",
-            "resolverán ", "invertirán ", "reducirán ", "hablarán ", "aplicarán ",
-            "recomendarán ", "variarán ", "generarán ", "obtendrán ", "entrarán ",
-            "apreciarán ", "manejarán ", "ganarán ", "reflejarán ", "instalarán ",
-            "sobrepasarán ", "ajustarán ", "aliviarán "
+           "comenzarán ", "continuarán ", "escribirán ", "lograrán ", "discutirán ",
+           "resolverán ", "invertirán ", "reducirán ", "hablarán ", "aplicarán ",
+           "recomendarán ", "variarán ", "generarán ", "obtendrán ", "entrarán ",
+           "apreciarán ", "manejarán ", "ganarán ", "reflejarán ", "instalarán ",
+           "sobrepasarán ", "ajustarán ", "aliviarán "
     };
     //---WOULD
 
     //verbo especial base would primer persona
     String[] vsb1w = {"determinaría ", "acercaría ", "crecería ", "mejoraría ", "comenzaría ",
-            "continuaría ", "escribiría ", "lograría ", "discutiría ", "resolvería ",
-            "invertiría ", "reduciría ", "hablaría ", "aplicaría ", "recomendaría ",
-            "variaría ", "generaría ", "obtendría ", "entraría ", "apreciaría ", "manejaría ",
-            "ganaría ", "reflejaría ", "instalaría ", "sobrepasaría ", "ajustaría ",
-            "aliviaría "
+           "continuaría ", "escribiría ", "lograría ", "discutiría ", "resolvería ",
+           "invertiría ", "reduciría ", "hablaría ", "aplicaría ", "recomendaría ",
+           "variaría ", "generaría ", "obtendría ", "entraría ", "apreciaría ", "manejaría ",
+           "ganaría ", "reflejaría ", "instalaría ", "sobrepasaría ", "ajustaría ",
+           "aliviaría "
     };
 
     //verbo especial base would segunda persona
     String vsb2w[] = {"determinarías ", "acercarías ", "crecerías ", "mejorarías ", "comenzarías ",
-            "continuarías ", "escribirías ", "lograrías ", "discutirías ", "resolverías ",
-            "invertirías ", "reducirías ", "hablarías ", "aplicarías ", "recomendarías ",
-            "variarías ", "generarías ", "obtendrías ", "entrarías ", "apreciarías ",
-            "manejarías ", "ganarías ",
-            "reflejarías ", "instalarías ", "sobrepasarías ", "ajustarías ",
-            "aliviarías "
+           "continuarías ", "escribirías ", "lograrías ", "discutirías ", "resolverías ",
+           "invertirías ", "reducirías ", "hablarías ", "aplicarías ", "recomendarías ",
+           "variarías ", "generarías ", "obtendrías ", "entrarías ", "apreciarías ",
+           "manejarías ", "ganarías ",
+           "reflejarías ", "instalarías ", "sobrepasarías ", "ajustarías ",
+           "aliviarías "
     };
 
     //verbo especial base would tercera persona
     String vsb3w[] = {"determinaría ", "acercaría ", "crecería ", "mejoraría ", "comenzaría ",
-            "continuaría ", "escribiría ", "lograría ", "discutiría ", "resolvería ",
-            "invertiría ", "reduciría ", "hablaría ", "aplicaría ", "recomendaría ",
-            "variaría ", "generaría ", "obtendría ", "entraría ", "apreciaría ",
-            "manejaría ", "ganaría ",
-            "reflejaría ", "instalaría ", "sobrepasaría ", "ajustaría ",
-            "aliviaría "
+           "continuaría ", "escribiría ", "lograría ", "discutiría ", "resolvería ",
+           "invertiría ", "reduciría ", "hablaría ", "aplicaría ", "recomendaría ",
+           "variaría ", "generaría ", "obtendría ", "entraría ", "apreciaría ",
+           "manejaría ", "ganaría ",
+           "reflejaría ", "instalaría ", "sobrepasaría ", "ajustaría ",
+           "aliviaría "
     };
 
     //verbo especial base would cuarta persona (ustedes)
     String vsb4w[] = {"determinarían ", "acercarían ", "crecerían ", "mejorarían ", "comenzarían ",
-            "continuarían ", "escribirían ", "lograrían ", "discutirían ", "resolverían ",
-            "invertirían ", "reducirían ", "hablarían ", "aplicarían ", "recomendarían ",
-            "variarían ", "generarían ", "obtendrían ", "entrarían ", "apreciarían ",
-            "manejarían ", "ganarían ",
-            "reflejarían ", "instalarían ", "sobrepasarían ", "ajustarían ",
-            "aliviarían "
+           "continuarían ", "escribirían ", "lograrían ", "discutirían ", "resolverían ",
+           "invertirían ", "reducirían ", "hablarían ", "aplicarían ", "recomendarían ",
+           "variarían ", "generarían ", "obtendrían ", "entrarían ", "apreciarían ",
+           "manejarían ", "ganarían ",
+           "reflejarían ", "instalarían ", "sobrepasarían ", "ajustarían ",
+           "aliviarían "
     };
 
     //verbo especial base would quinta persona (nosotros)
     String vsb5w[] = {"determinaríamos ", "acercaríamos ", "creceríamos ", "mejoraríamos ",
-            "comenzaríamos ", "continuaríamos ", "escribiríamos ", "lograríamos ",
-            "discutiríamos ", "resolveríamos ", "invertiríamos ", "reduciríamos ", "hablaríamos ",
-            "aplicaríamos ", "recomendaríamos ", "variaríamos ", "generaríamos ", "obtendríamos ",
-            "entraríamos ", "apreciaríamos ", "manejaríamos ", "ganaríamos ", "reflejaríamos ",
-            "instalaríamos ", "sobrepasaríamos ", "ajustaríamos ", "aliviaríamos "
+           "comenzaríamos ", "continuaríamos ", "escribiríamos ", "lograríamos ",
+           "discutiríamos ", "resolveríamos ", "invertiríamos ", "reduciríamos ", "hablaríamos ",
+           "aplicaríamos ", "recomendaríamos ", "variaríamos ", "generaríamos ", "obtendríamos ",
+           "entraríamos ", "apreciaríamos ", "manejaríamos ", "ganaríamos ", "reflejaríamos ",
+           "instalaríamos ", "sobrepasaríamos ", "ajustaríamos ", "aliviaríamos "
     };
 
     // verbos especiales preterito
     String vsp1[] = {
-            "determiné ", "me acerqué ", "crecí ", "mejoré ", "comencé ", 
-            "continué ", "escribí ", "logré ", "discutí ", "resolví ", 
-            "invertí ", "reduje ", "hablé ", "apliqué ", "recomendé ",
-            "varié ", "generé ", "obtuve ", "entré ", "aprecié ", 
-            "manejé ", "gané ", "reflejé ", "instalé ", "sobrepasé ", 
-            "ajusté ", "alivié "
+           "determiné ", "me acerqué ", "crecí ", "mejoré ", "comencé ", 
+           "continué ", "escribí ", "logré ", "discutí ", "resolví ", 
+           "invertí ", "reduje ", "hablé ", "apliqué ", "recomendé ",
+           "varié ", "generé ", "obtuve ", "entré ", "aprecié ", 
+           "manejé ", "gané ", "reflejé ", "instalé ", "sobrepasé ", 
+           "ajusté ", "alivié "
     };
     String vsp2[] = {
-            "determinaste ", "te acercaste ", "creciste ", "mejoraste ", "comenzaste ", 
-            "continuaste ", "escribiste ", "lograste ", "discutiste ", "resolviste ", 
-            "invertiste ", "redujiste ", "hablaste ", "aplicaste ", "recomendaste ", 
-            "variaste ", "generaste ", "obtuviste ", "entraste ", "apreciaste ", 
-            "manejaste ", "ganaste ", "reflejaste ", "instalaste ", "sobrepasaste ", 
-            "ajustaste ", "aliviaste "
+           "determinaste ", "te acercaste ", "creciste ", "mejoraste ", "comenzaste ", 
+           "continuaste ", "escribiste ", "lograste ", "discutiste ", "resolviste ", 
+           "invertiste ", "redujiste ", "hablaste ", "aplicaste ", "recomendaste ", 
+           "variaste ", "generaste ", "obtuviste ", "entraste ", "apreciaste ", 
+           "manejaste ", "ganaste ", "reflejaste ", "instalaste ", "sobrepasaste ", 
+           "ajustaste ", "aliviaste "
     };
     String vsp3[] = {
-            "determina ", "se acercó ", "creció ", "mejoró ", "comenzó  ", 
-            "continuó ", "escribió ", "logró ", "discutió ", "resolvió ", 
-            "invirtió ", "redujo ", "habló ", "aplicó ", "recomendó ", 
-            "varió ", "generó ", "obtuvo ", "entró ", "apreció ",
-            "manejó ", "ganó ", "reflejó ", "instaló ", "sobrepasó ", 
-            "ajustó ", "alivió "
+           "determina ", "se acercó ", "creció ", "mejoró ", "comenzó ", 
+           "continuó ", "escribió ", "logró ", "discutió ", "resolvió ", 
+           "invirtió ", "redujo ", "habló ", "aplicó ", "recomendó ", 
+           "varió ", "generó ", "obtuvo ", "entró ", "apreció ",
+           "manejó ", "ganó ", "reflejó ", "instaló ", "sobrepasó ", 
+           "ajustó ", "alivió "
     };
-    String vsp4[] = {"determinaron ", "se acercaron ", "crecieron ", "mejoraron ", "comenzaron  ", "continuaron ",
-            "escribieron ", "lograron ", "discutieron ", "resolvieron ", "invirtieron ", "redujeron ", "hablaron ", "aplicaron ",
-            "recomendaron ", "variaron ", "generaron ", "obtuvieron ", "entraron ", "apreciaron ", "manejaron ", "ganaron ", "reflejaron ",
-            "instalaron ", "sobrepasaron ", "ajustaron ", "aliviaron  "
+    String vsp4[] = {"determinaron ", "se acercaron ", "crecieron ", "mejoraron ", "comenzaron ", "continuaron ",
+           "escribieron ", "lograron ", "discutieron ", "resolvieron ", "invirtieron ", "redujeron ", "hablaron ", "aplicaron ",
+           "recomendaron ", "variaron ", "generaron ", "obtuvieron ", "entraron ", "apreciaron ", "manejaron ", "ganaron ", "reflejaron ",
+           "instalaron ", "sobrepasaron ", "ajustaron ", "aliviaron "
     };
-    String vsp5[] = {"determinamos ", "nos acercamos ", "crecimos ", "mejoramos ", "comenzamos  ", "continuamos ",
-            "escribimos ", "logramos ", "discutimos ", "resolvimos ", "invertimos ", "redujimos ", "hablamos ", "aplicamos ",
-            "recomendamos ", "variamos ", "generamos ", "obtuvimos ", "entramos ", "apreciamos ", "manejamos ", "ganamos ", "reflejamos ",
-            "instalamos ", "sobrepasamos ", "ajustamos ", "aliviamos  "
+    String vsp5[] = {"determinamos ", "nos acercamos ", "crecimos ", "mejoramos ", "comenzamos ", "continuamos ",
+           "escribimos ", "logramos ", "discutimos ", "resolvimos ", "invertimos ", "redujimos ", "hablamos ", "aplicamos ",
+           "recomendamos ", "variamos ", "generamos ", "obtuvimos ", "entramos ", "apreciamos ", "manejamos ", "ganamos ", "reflejamos ",
+           "instalamos ", "sobrepasamos ", "ajustamos ", "aliviamos "
     };
 
     // aqui abajo van los imperfectos
     String vsp1i[] = {
-            "determinaba ", "me acercaba ", "crecía ", "mejoraba ", "comenzaba ", 
-            "continuaba ", "escribía ", "lograba ", "discutia ", "resolvía ", 
-            "invertía ", "reducía ", "hablaba ", "aplicaba ", "recomendaba ", 
-            "variaba ", "generaba ", "obtenía ", "entraba ", "apreciaba ", 
-            "manejaba ", "ganaba ", "reflejaba ", "instalaba ", "sobrepasaba ",
-            "ajustaba ", "aliviaba  "
+           "determinaba ", "me acercaba ", "crecía ", "mejoraba ", "comenzaba ", 
+           "continuaba ", "escribía ", "lograba ", "discutia ", "resolvía ", 
+           "invertía ", "reducía ", "hablaba ", "aplicaba ", "recomendaba ", 
+           "variaba ", "generaba ", "obtenía ", "entraba ", "apreciaba ", 
+           "manejaba ", "ganaba ", "reflejaba ", "instalaba ", "sobrepasaba ",
+           "ajustaba ", "aliviaba "
     };
-    String vsp2i[] = {"determinabas ", "te acercabas ", "crecías ", "mejorabas ", "comenzabas  ", "continuabas ",
-            "escribías ", "lograbas ", "discutias ", "resolvías ", "invertías ", "reducías ", "hablabas ", "aplicabas ",
-            "recomendabas ", "variabas ", "generabas ", "obtenías ", "entrabas ", "apreciabas ", "manejabas ", "ganabas ", "reflejabas ",
-            "instalabas ", "sobrepasabas ", "ajustabas ", "aliviabas "
+    String vsp2i[] = {"determinabas ", "te acercabas ", "crecías ", "mejorabas ", "comenzabas ", "continuabas ",
+           "escribías ", "lograbas ", "discutias ", "resolvías ", "invertías ", "reducías ", "hablabas ", "aplicabas ",
+           "recomendabas ", "variabas ", "generabas ", "obtenías ", "entrabas ", "apreciabas ", "manejabas ", "ganabas ", "reflejabas ",
+           "instalabas ", "sobrepasabas ", "ajustabas ", "aliviabas "
     };
-    String vsp3i[] = {"determinaba ", "se acercaba ", "crecía ", "mejoraba ", "comenzaba  ", "continuaba ",
-            "escribía ", "lograba ", "discutia ", "resolvía ", "invertía ", "reducía ", "hablaba ", "aplicaba ",
-            "recomendaba ", "variaba ", "generaba ", "obtenía ", "entraba ", "apreciaba ", "manejaba ", "ganaba ", "reflejaba ",
-            "instalaba ", "sobrepasaba ", "ajustaba ", "aliviaba "
+    String vsp3i[] = {"determinaba ", "se acercaba ", "crecía ", "mejoraba ", "comenzaba ", "continuaba ",
+           "escribía ", "lograba ", "discutia ", "resolvía ", "invertía ", "reducía ", "hablaba ", "aplicaba ",
+           "recomendaba ", "variaba ", "generaba ", "obtenía ", "entraba ", "apreciaba ", "manejaba ", "ganaba ", "reflejaba ",
+           "instalaba ", "sobrepasaba ", "ajustaba ", "aliviaba "
     };
-    String vsp4i[] = {"determinaban ", "se acercaban ", "crecían ", "mejoraban ", "comenzaban  ", "continuaban ",
-            "escribían ", "lograban ", "discutían ", "resolvían ", "invertían ", "reducían ", "hablaban ", "aplicaban ",
-            "recomendaban ", "variaban ", "generaban ", "obtenían ", "entraban ", "apreciaban ", "manejaban ", "ganaban ", "reflejaban ",
-            "instalaban ", "sobrepasaban ", "ajustaban ", "aliviaban "
+    String vsp4i[] = {"determinaban ", "se acercaban ", "crecían ", "mejoraban ", "comenzaban ", "continuaban ",
+           "escribían ", "lograban ", "discutían ", "resolvían ", "invertían ", "reducían ", "hablaban ", "aplicaban ",
+           "recomendaban ", "variaban ", "generaban ", "obtenían ", "entraban ", "apreciaban ", "manejaban ", "ganaban ", "reflejaban ",
+           "instalaban ", "sobrepasaban ", "ajustaban ", "aliviaban "
     };
-    String vsp5i[] = {"determinabamos ", "nos acercabamos ", "crecíamos ", "mejorabamos ", "comenzabamos  ", "continuabamos ",
-            "escribíamos ", "lograbamos ", "discutiamos ", "resolvíamos ", "invertíamos ", "reducíamos ", "hablabamos ", "aplicabamos ",
-            "recomendabamos ", "variabamos ", "generaba ", "obteníamos ", "entrabamos ", "apreciabamos ", "manejabamos ", "ganaban ", "reflejabamos ",
-            "instalabamos ", "sobrepasabamos ", "ajustabamos ", "aliviabamos "
+    String vsp5i[] = {"determinabamos ", "nos acercabamos ", "crecíamos ", "mejorabamos ", "comenzabamos ", "continuabamos ",
+           "escribíamos ", "lograbamos ", "discutiamos ", "resolvíamos ", "invertíamos ", "reducíamos ", "hablabamos ", "aplicabamos ",
+           "recomendabamos ", "variabamos ", "generaba ", "obteníamos ", "entrabamos ", "apreciabamos ", "manejabamos ", "ganaban ", "reflejabamos ",
+           "instalabamos ", "sobrepasabamos ", "ajustabamos ", "aliviabamos "
     };
 
 
     //verbos esp primera persona
     String v1s[] = {"determine ", "me acerque ", "crezca ", "mejore ", "comience ", "continúe ", "escriba ", "logre ", "discuta ",
-            "resuelva ", "invierta ", "reduzca ", "hable ", "aplique ", "recomiende ", "varíe ", "genere ", "obtenga ", "entre ",
-            "aprecie ", "maneje ", "gane ", "refleje ", "instale ", "supere ", "ajuste ", "alivie "
+           "resuelva ", "invierta ", "reduzca ", "hable ", "aplique ", "recomiende ", "varíe ", "genere ", "obtenga ", "entre ",
+           "aprecie ", "maneje ", "gane ", "refleje ", "instale ", "supere ", "ajuste ", "alivie "
     };
     //verbos esp segunda persona corregido
     String v2s[] = {"determines ", "te acerques ", "crezcas ", "mejores ", "comiences ", "continues ", "escribas ", "logres ", "discuta ",
-            "resuelvas ", "inviertas ", "reduzcas ", "hables ", "apliques ", "recomiendes ", "varíes  ", "generes ", "obtengas ", "entres ",
-            "aprecies ", "manejes ", "ganes ", "reflejes ", "instales ", "superes ", "ajustes ", "alivies "
+           "resuelvas ", "inviertas ", "reduzcas ", "hables ", "apliques ", "recomiendes ", "varíes ", "generes ", "obtengas ", "entres ",
+           "aprecies ", "manejes ", "ganes ", "reflejes ", "instales ", "superes ", "ajustes ", "alivies "
     };
 
     //verbos esp tercera persona singular
     String v3s[] = {"determine ", "se acerque ", "crezca ", "mejore ", "comience ", "continúe ", "escriba ", "logre ", "discuta ",
-            "resuelva ", "invierta ", "reduzca ", "hable ", "aplique ", "recomiende ", "varíe ", "genere ", "obtenga ", "entre ",
-            "aprecie ", "maneje ", "gane ", "refleje ", "instale ", "supere ", "ajuste ", "alivie "
+           "resuelva ", "invierta ", "reduzca ", "hable ", "aplique ", "recomiende ", "varíe ", "genere ", "obtenga ", "entre ",
+           "aprecie ", "maneje ", "gane ", "refleje ", "instale ", "supere ", "ajuste ", "alivie "
     };
     //verbos esp cuarta persona
     String v4s[] = {"determinen ", "se acerquen ", "crezcan ", "mejoren ", "comiencen ", "continúen ", "escriban ", "logren ", "discutan ",
-            "resuelvan ", "inviertan ", "reduzcan ", "hablen ", "apliquen ", "recomienden ", "varíen  ", "generen ", "obtengan ", "entren ",
-            "aprecien ", "manejen ", "ganen ", "reflejen ", "instalen ", "superen ", "ajusten ", "alivien "
+           "resuelvan ", "inviertan ", "reduzcan ", "hablen ", "apliquen ", "recomienden ", "varíen ", "generen ", "obtengan ", "entren ",
+           "aprecien ", "manejen ", "ganen ", "reflejen ", "instalen ", "superen ", "ajusten ", "alivien "
     };
     //verbos esp primera persona - verbos esp cuarta persona
     String v5s[] = {"determinemos ", "nos acerquemos ", "crezcamos ", "mejoremos ", "comencemos ", "continuemos ", "escribamos ", "logremos ",
-            "discutamos ", "resolvamos ", "invirtamos ", "reduzcamos ", "hablemos ", "apliquemos ", "recomendemos ", "variemos  ", "generemos ",
-            "obtengamos ", "entremos ", "apreciemos ", "manejemos ", "ganemos ", "reflejemos ", "instalemos ", "superemos ", "ajustemos ", "aliviemos "
+           "discutamos ", "resolvamos ", "invirtamos ", "reduzcamos ", "hablemos ", "apliquemos ", "recomendemos ", "variemos ", "generemos ",
+           "obtengamos ", "entremos ", "apreciemos ", "manejemos ", "ganemos ", "reflejemos ", "instalemos ", "superemos ", "ajustemos ", "aliviemos "
     };
 
 
@@ -419,100 +419,100 @@ public class Special {
 
     //Masculino
     String nnoblesespM[] = {
-            "el resultado ","el peso ", "el proceso ",
-            "el tema ","el deseo ","un proyecto ",
-            "cantar ","el proyecto ","el libro ",
-            "sobre la pared ","el éxito ",
-            "el problema ",  "el acertijo ",
-            "el dinero ", "el tiempo ",
-            "el ruido ", "el daño ","el idioma ",  "el amigo ",
-            "el restaurante ", "el doctor ","el color ",
-            "un divorcio ", "un nivel ","el divorcio ",
-            "el cerebro ","el gesto ","el privilegio ","el presupuesto ",
-            "dinero ", "el respeto ", "el derecho ","el circuito ",
-            "el reto ","el volumen ", "los ajustes ", "el color ",
-            "el dolor ", "el sufrimiento ", "el estrés "
+           "el resultado ","el peso ", "el proceso ",
+           "el tema ","el deseo ","un proyecto ",
+           "cantar ","el proyecto ","el libro ",
+           "sobre la pared ","el éxito ",
+           "el problema ", "el acertijo ",
+           "el dinero ", "el tiempo ",
+           "el ruido ", "el daño ","el idioma ", "el amigo ",
+           "el restaurante ", "el doctor ","el color ",
+           "un divorcio ", "un nivel ","el divorcio ",
+           "el cerebro ","el gesto ","el privilegio ","el presupuesto ",
+           "dinero ", "el respeto ", "el derecho ","el circuito ",
+           "el reto ","el volumen ", "los ajustes ", "el color ",
+           "el dolor ", "el sufrimiento ", "el estrés "
 
     };
 
 
     //Masculino esp
     String nnoblesM[]={
-            "the outcome ",  "the weight ", "the process ",
-            "the subject ","the desire ","a project ",
-            "sing ","the project ","the book ",
-            "on the wall ", "the success ",
-            "the problem ",  "the puzzle ",
-            "the money ", "the time ",
-            "the noise ", "the damage ", "the language ",  "the friend ",
-            "the restaurant ", "the doctor ", "the color ",
-            "a divorce ", "a level ","the divorce ",
-            "the brain ","the gesture ", "the privilege ","the budget ",
-            "the money ", "the respect ", "the right ","the circuit ",
-            "the challenge ","the volume ", "the settings ", "the color ",
-            "the pain ", "suffering ", "stress "
+           "the outcome ", "the weight ", "the process ",
+           "the subject ","the desire ","a project ",
+           "sing ","the project ","the book ",
+           "on the wall ", "the success ",
+           "the problem ", "the puzzle ",
+           "the money ", "the time ",
+           "the noise ", "the damage ", "the language ", "the friend ",
+           "the restaurant ", "the doctor ", "the color ",
+           "a divorce ", "a level ","the divorce ",
+           "the brain ","the gesture ", "the privilege ","the budget ",
+           "the money ", "the respect ", "the right ","the circuit ",
+           "the challenge ","the volume ", "the settings ", "the color ",
+           "the pain ", "suffering ", "stress "
     };
 
 
     //Femenino
     String nnoblesespF[] = {
-            "las características ", "la gente ", "la solución ",
-            "la audiencia ","la vida ", "la situación ",
-            "las condiciones ","la vida ","la carta ", "sobre la pared ",
-            "la meta ","la idea ", "la información ", "la situación ",
-            "la desigualdad ","la verdad ", "la presión ", "la solución ",
-            "la ley ","la comida ", "la intensidad ", "la rutina ",
-            "una foto ","la competencia ", "la fiesta ",
-            "la situación ", "la compañía ", "la silueta ",
-            "la superficie ", "la cara ", "las ventanas ", "la puerta ",
-            "la muerte ", "la depresión ",
+           "las características ", "la gente ", "la solución ",
+           "la audiencia ","la vida ", "la situación ",
+           "las condiciones ","la vida ","la carta ", "sobre la pared ",
+           "la meta ","la idea ", "la información ", "la situación ",
+           "la desigualdad ","la verdad ", "la presión ", "la solución ",
+           "la ley ","la comida ", "la intensidad ", "la rutina ",
+           "una foto ","la competencia ", "la fiesta ",
+           "la situación ", "la compañía ", "la silueta ",
+           "la superficie ", "la cara ", "las ventanas ", "la puerta ",
+           "la muerte ", "la depresión ",
     };
 
     //Femenino esp
     String nnoblesF[]={
-            "the characteristics ","the people ", "the solution ",
-            "my audience ", "my life ", "the situation ",
-            "the conditions ","the life ","the letter ","on the wall ",
-            "the goal ","the idea ", "the information ","the situation ",
-            "the inequality ","the truth ","the pressure ", "the solution ",
-            "the law ","the food ","the intensity ", "the routine ",
-            "a photo ","the competition ","the party ",
-            "the situation ", "the company ","the silhouette ",
-            "the surface ", "the face ","the windows ", "the door ",
-            "the death ", "the depression "
+           "the characteristics ","the people ", "the solution ",
+           "my audience ", "my life ", "the situation ",
+           "the conditions ","the life ","the letter ","on the wall ",
+           "the goal ","the idea ", "the information ","the situation ",
+           "the inequality ","the truth ","the pressure ", "the solution ",
+           "the law ","the food ","the intensity ", "the routine ",
+           "a photo ","the competition ","the party ",
+           "the situation ", "the company ","the silhouette ",
+           "the surface ", "the face ","the windows ", "the door ",
+           "the death ", "the depression "
     };
 
     String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
-            "generalmente ",
-            "normalmente ", "ocasionalmente ", "seguido ", "raramente ",
-            "regularmente ",
-            "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
-            "perfectamente ", "fácilmente ", "cuidadosamente ", "abiertamente ",
-            "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
-            "seguido ", "calmadamente "
+           "generalmente ",
+           "normalmente ", "ocasionalmente ", "seguido ", "raramente ",
+           "regularmente ",
+           "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
+           "perfectamente ", "fácilmente ", "cuidadosamente ", "abiertamente ",
+           "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
+           "seguido ", "calmadamente "
     };
     String frequadv[] = {
-            "always ", "constantly ", "frequently ", "generally ",
-            "normally ", "occasionally ", "often ", "rarely ", "regularly ",
-            "regularly ",
-            "usually ", "happily ", "early ", "late ", "daily ",
-            "perfectly ", "easily ", "carefully ",
-            "openly ", "finally ", "dangerouslly ", "desperately ",
-            "occasionally ", "often ", "calmly "
+           "always ", "constantly ", "frequently ", "generally ",
+           "normally ", "occasionally ", "often ", "rarely ", "regularly ",
+           "regularly ",
+           "usually ", "happily ", "early ", "late ", "daily ",
+           "perfectly ", "easily ", "carefully ",
+           "openly ", "finally ", "dangerouslly ", "desperately ",
+           "occasionally ", "often ", "calmly "
     };
 
     String determinespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -549,19 +549,19 @@ public class Special {
     };
     String determinarspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -598,16 +598,16 @@ public class Special {
 
     String approachspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -642,19 +642,19 @@ public class Special {
     };
     String acercarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -687,8 +687,8 @@ public class Special {
 
     String growspecial[][] = {
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -723,11 +723,11 @@ public class Special {
     };
     String crecerspecial[][]= {
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -762,16 +762,16 @@ public class Special {
 
     String improvepecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -801,19 +801,19 @@ public class Special {
 
     String mejorarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -842,16 +842,16 @@ public class Special {
 
     String beginspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -877,19 +877,19 @@ public class Special {
     };
     String comenzarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -916,16 +916,16 @@ public class Special {
 
     String continuespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -956,19 +956,19 @@ public class Special {
     };
     String continuarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -999,16 +999,16 @@ public class Special {
 
     String writespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1037,19 +1037,19 @@ public class Special {
     };
     String escribirspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1078,16 +1078,16 @@ public class Special {
 
     String achievespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1116,19 +1116,19 @@ public class Special {
     };
     String lograrspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1157,16 +1157,16 @@ public class Special {
 
     String discussspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1209,19 +1209,19 @@ public class Special {
     };
     String discutirspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1264,16 +1264,16 @@ public class Special {
 
     String solvespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1310,19 +1310,19 @@ public class Special {
     };
     String resolverspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1359,16 +1359,16 @@ public class Special {
 
     String investspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1401,19 +1401,19 @@ public class Special {
     };
     String invertirspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1446,16 +1446,16 @@ public class Special {
 
     String reducespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1492,19 +1492,19 @@ public class Special {
     };
     String reducirspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1541,16 +1541,16 @@ public class Special {
 
     String speakspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1583,19 +1583,19 @@ public class Special {
     };
     String hablarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1628,16 +1628,16 @@ public class Special {
 
     String applyspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1672,19 +1672,19 @@ public class Special {
     };
     String aplicarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1719,16 +1719,16 @@ public class Special {
 
     String recommendspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1758,19 +1758,19 @@ public class Special {
     };
     String recomendarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1801,16 +1801,16 @@ public class Special {
 
     String varyspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1837,19 +1837,19 @@ public class Special {
     };
     String variarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1876,16 +1876,16 @@ public class Special {
 
     String generatespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1916,19 +1916,19 @@ public class Special {
     };
     String generarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1959,16 +1959,16 @@ public class Special {
 
     String obtainspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1995,19 +1995,19 @@ public class Special {
     };
     String obtenerspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2034,16 +2034,16 @@ public class Special {
 
     String enterspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2061,19 +2061,19 @@ public class Special {
     };
     String entrarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2092,16 +2092,16 @@ public class Special {
 
     String appreciatespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2128,19 +2128,19 @@ public class Special {
     };
     String apreciarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2167,16 +2167,16 @@ public class Special {
 
     String managespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2205,19 +2205,19 @@ public class Special {
     };
     String manejarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2245,16 +2245,16 @@ public class Special {
     };
     String earnspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2281,19 +2281,19 @@ public class Special {
     };
     String ganarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2320,8 +2320,8 @@ public class Special {
 
     String reflectspecial[][] = {
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2350,11 +2350,11 @@ public class Special {
     };
     String reflerarspecial[][]= {
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2383,16 +2383,16 @@ public class Special {
 
     String installspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2414,19 +2414,19 @@ public class Special {
     };
     String instalarspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2449,8 +2449,8 @@ public class Special {
 
     String overcomespecial[][] = {
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2473,11 +2473,11 @@ public class Special {
     };
     String sobrepasarspecial[][]= {
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2500,16 +2500,16 @@ public class Special {
 
     String adjustspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2523,19 +2523,19 @@ public class Special {
     };
     String ajustarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -2550,16 +2550,16 @@ public class Special {
 
     String relievespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -2580,19 +2580,19 @@ public class Special {
     };
     String aliviarspecial[][]= {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -4536,7 +4536,7 @@ public class Special {
                         eng2 = "you " + "might not be " + verbscont[rand];
                         eng22 = "you " + "mightn't be " + verbscont[rand];
 
-                        sp3 = "él " + "quizá no esté  " + verbconti[rand];
+                        sp3 = "él " + "quizá no esté " + verbconti[rand];
                         eng3 = "he " + "might not be " + verbscont[rand];
                         eng32 = "he " + "mightn't be " + verbscont[rand];
 
@@ -5290,26 +5290,26 @@ public class Special {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (neg) {
@@ -5368,35 +5368,35 @@ public class Special {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj2[] = {"me to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj3[] = {"you to " + verbs[rand], "me to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj4[] = {"you to " + verbs[rand], "him to " + verbs[rand], "me to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj5[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj6[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj7[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj2s[] = {"que yo " + v1s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
         String wtobj3s[] = {"que tú " + v2s[rand], "que yo " + v1s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj4s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que yo " + v1s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj5s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj6s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que ellos " + v4s[rand]};
         String wtobj7s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
 
         switch (temp) {
             case "determine ":
@@ -6481,19 +6481,19 @@ public class Special {
                 break;
             case 1:
                 sp1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng1 = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng1 = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng2 = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng2 = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng3 = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng3 = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp4 = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng4 = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng4 = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp5 = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng5 = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng5 = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp6 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng6 = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng6 = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 sp7 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                eng7 = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + vsp[rand] + nnobles[n];
+                eng7 = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + verbs[rand] + nnobles[n];
                 break;
         }
     }//PD 30/11/2022
@@ -6621,7 +6621,7 @@ public class Special {
                         eng4 = "they're not " + verbscont[rand] + arraySodEng;
                         eng42 = "they " + "aren't " + verbscont[rand] + arraySodEng;
 
-                        sp5 = "nosotros " + "no están " + verbconti[rand] + arraySodEsp;
+                        sp5 = "nosotros " + "no estamos " + verbconti[rand] + arraySodEsp;
                         eng5 = "we're not " + verbscont[rand] + arraySodEng;
                         eng52 = "we " + "aren't " + verbscont[rand] + arraySodEng;
                         break;
@@ -7956,7 +7956,7 @@ public class Special {
                         eng2 = "you " + "might not be " + verbscont[rand] + arraySodEng;
                         eng22 = "you " + "mightn't be " + verbscont[rand] + arraySodEng;
 
-                        sp3 = "él " + "quizá no esté  " + verbconti[rand] + arraySodEsp;
+                        sp3 = "él " + "quizá no esté " + verbconti[rand] + arraySodEsp;
                         eng3 = "he " + "might not be " + verbscont[rand] + arraySodEng;
                         eng32 = "he " + "mightn't be " + verbscont[rand] + arraySodEng;
 
@@ -8721,26 +8721,26 @@ public class Special {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (temp) {
@@ -9797,35 +9797,35 @@ public class Special {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj2[] = {"me to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj3[] = {"you to " + verbs[rand], "me to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj4[] = {"you to " + verbs[rand], "him to " + verbs[rand], "me to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj5[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj6[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj7[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj2s[] = {"que yo " + v1s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
         String wtobj3s[] = {"que tú " + v2s[rand], "que yo " + v1s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj4s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que yo " + v1s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj5s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj6s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que ellos " + v4s[rand]};
         String wtobj7s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
 
         switch (temp) {
             case "determine ":
@@ -12346,7 +12346,7 @@ public class Special {
                         eng2 = "you " + "might not be " + verbscont[rand] + arraySodEng + frequadv[radv];
                         eng22 = "you " + "mightn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
-                        sp3 = "él " + "quizá no esté  " + verbconti[rand] + arraySodEsp + advfrequ[radv];
+                        sp3 = "él " + "quizá no esté " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng3 = "he " + "might not be " + verbscont[rand] + arraySodEng + frequadv[radv];
                         eng32 = "he " + "mightn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
@@ -13123,26 +13123,26 @@ public class Special {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (temp) {
@@ -14172,35 +14172,35 @@ public class Special {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj2[] = {"me to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj3[] = {"you to " + verbs[rand], "me to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj4[] = {"you to " + verbs[rand], "him to " + verbs[rand], "me to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj5[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj6[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj7[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj2s[] = {"que yo " + v1s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v3s[rand]};
         String wtobj3s[] = {"que tú " + v2s[rand], "que yo " + v1s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj4s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que yo " + v1s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj5s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj6s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que ellos " + v4s[rand]};
         String wtobj7s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
 
         switch (temp) {
             case "determine ":
@@ -16713,7 +16713,7 @@ public class Special {
                         eng2 = "you " + "might not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng22 = "you " + "mightn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
-                        sp3 = "él " + "quizá no esté  " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
+                        sp3 = "él " + "quizá no esté " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng3 = "he " + "might not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
                         eng32 = "he " + "mightn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
@@ -17501,26 +17501,26 @@ public class Special {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (temp) {
@@ -18548,38 +18548,38 @@ public class Special {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj2[] = {"me to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
 
         String wtobj3[] = {"you to " + verbs[rand], "me to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
 
 
         String wtobj4[] = {"you to " + verbs[rand], "him to " + verbs[rand], "me to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj5[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
+               "me to " + verbs[rand], "us to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj6[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "them to " + verbs[rand]};
+               "it to " + verbs[rand], "them to " + verbs[rand]};
         String wtobj7[] = {"you to " + verbs[rand], "him to " + verbs[rand], "her to " + verbs[rand],
-                "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
+               "it to " + verbs[rand], "us to " + verbs[rand], "me to " + verbs[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj2s[] = {"que yo " + v1s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v3s[rand], "que ellos " + v4s[rand]};
         String wtobj3s[] = {"que tú " + v2s[rand], "que yo " + v1s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj4s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que yo " + v1s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj5s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
+               "que yo " + v1s[rand], "que nosotros " + v5s[rand], "que ellos " + v4s[rand]};
         String wtobj6s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que ellos " + v4s[rand]};
+               "que eso " + v3s[rand], "que ellos " + v4s[rand]};
         String wtobj7s[] = {"que tú " + v2s[rand], "que él " + v3s[rand], "que ella " + v3s[rand],
-                "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
+               "que eso " + v3s[rand], "que nosotros " + v5s[rand], "que yo " + v1s[rand]};
 
         switch (temp) {
             case "determine ":

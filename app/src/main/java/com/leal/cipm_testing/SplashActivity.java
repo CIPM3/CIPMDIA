@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingResult;
-import com.leal.cipm_testing.screens.Login2023;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -18,7 +20,8 @@ public class SplashActivity extends AppCompatActivity {
     Handler handler;
     BillingClient billingClient;
     Prefs prefs;
-
+    FirebaseUser user;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +29,29 @@ public class SplashActivity extends AppCompatActivity {
 
         handler = new Handler();
         prefs = new Prefs(this);
-
+        mAuth= FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, Login2023.class));
-                finish();
+                if(user!=null){
+                    if(user.isAnonymous()){
+                        startActivity(new Intent(SplashActivity.this, Login2023.class));
+                        finish();
+                    }else{
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        finish();
+                    }
+                }else {
+                    startActivity(new Intent(SplashActivity.this, Login2023.class));
+                    finish();
+                }
+
+
+
             }
-        }, 500);
+        }, 100);
 
         checkSubscription();
 

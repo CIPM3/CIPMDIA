@@ -1,32 +1,44 @@
-package com.leal.cipm_testing.components;
+package com.leal.cipm_testing;
 
 import android.annotation.SuppressLint;
-import android.media.MediaPlayer;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.MediaController;
+import android.widget.Button;
 import android.widget.Toast;
-import android.widget.VideoView;
 
-import com.leal.cipm_testing.R;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.MediaItem;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Objects;
 
 public class VideoPlayer extends Fragment {
-    public LinearLayout video_lay,loadingVideo;
-    public VideoView video_player;
 
-    //URL DE PRUEBA ESPERANDO QUE FUNCIONEN LOS VIDEOS DEL SERVIDOR
-    String urlPrueba = "https://media.istockphoto.com/id/1350173565/es/v%C3%ADdeo/empresario-dando-un-paso-adelante.mp4?s=mp4-640x640-is&k=20&c=eIZb2xFLcb1k2yKzhOthbn3n09p70Faj_5UPkgKqdPA=";
-    private String selection,video,video1,video2;
+    public ExoPlayer player;
+
+    StyledPlayerView playerView;
+     String selection,video,video1,video2;
     boolean explanation,videoShow;
-
+    Cultura2023 cultura;
+    View view;
+    MediaItem mediaItem;
+    String test = "this is a string to see if i have acces to it";
+    private MediaSource mediaSource;
+    FirebaseUser user;
+    FirebaseAuth mAuth;
     public VideoPlayer() {
         // Required empty public constructor
     }
@@ -34,17 +46,16 @@ public class VideoPlayer extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Bundle args = getArguments();
         if (args != null) {
             selection = args.getString("tema");
-            explanation = args.getBoolean("explicacion");
             video = args.getString("video");
             video1 = args.getString("videouno");
             video2 = args.getString("videodos");
             videoShow = args.getBoolean("videoShow");
-
+            explanation = args.getBoolean("explicacion");
         }
+
     }
 
 
@@ -52,36 +63,41 @@ public class VideoPlayer extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_video_player, container, false);
-
-        video_lay = view.findViewById(R.id.video_lay);
-        video_player = view.findViewById(R.id.video_player);
-        loadingVideo = view.findViewById(R.id.loadingVideo);
-
-
-
-        video_lay.setOnClickListener(v -> {
-            SelectUrl();
-                }
-        );
-
+        view = inflater.inflate(R.layout.fragment_video_player, container, false);
         return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        mAuth= FirebaseAuth.getInstance();
+
+        user= mAuth.getCurrentUser();
+        playerView = view.findViewById(R.id.video_player);
+        player = new ExoPlayer.Builder(requireContext()).build();
+        playerView.setPlayer(player);
+
+
+    }
+
+
+
+
     public void SelectUrl() {
         String currenttxt = SaberDondeEstoy();
-        if (currenttxt.contains("screens.Cultura")) {
+       // Toast.makeText(getContext(), selection, Toast.LENGTH_SHORT).show();
+        if (currenttxt.contains("Cultura2023")) {
             // Cambiar el video
             switch (selection){
                 case "Tutorial":
-                    ShowVideo("http://adrianlealcaldera.com/culttut.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/culttut.mp4");
                     break;
                 case "Moonlight":
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/moonlightclip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/moonlightclip.mp4");
                     }
                     break;
 
@@ -89,7 +105,7 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/riackandmortyclip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/riackandmortyclip.mp4");
                     }
                     break;
 
@@ -97,14 +113,14 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/doyouwantpepsiClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/doyouwantpepsiClip.mp4");
                     }
                     break;
                 case "Sangre Por Sangre Foodline":
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrefoodlineClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/sangrexsangrefoodlineClip.mp4");
                     }
 
                     break;
@@ -112,14 +128,14 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/sangrexsangrewatchaelpaisajeClip.mp4");
                     }
                     break;
                 case "Training Day Rabbit Has The Gun":
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/trainingdayrabbithasthegunClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/trainingdayrabbithasthegunClip.mp4");
                     }
                     break;
 
@@ -127,7 +143,7 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/hancocktrainClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/hancocktrainClip.mp4");
                     }
                     break;
 
@@ -135,7 +151,7 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/malconinthemiddleteacherClip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/malconinthemiddleteacherClip.mp4");
                     }
                     break;
 
@@ -143,7 +159,7 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/sangrexsangre(comedor)Clip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/sangrexsangre(comedor)Clip.mp4");
                     }
                     break;
 
@@ -151,7 +167,7 @@ public class VideoPlayer extends Fragment {
                     if(explanation){
                         ShowVideo(video);
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/davechapelle(man%20rape)Clip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/davechapelle(man%20rape)Clip.mp4");
                     }
                     break;
 
@@ -190,142 +206,143 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("screens.Estructura")){
+        if(currenttxt.contains("Estructura2023")){
+
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/structurastut.mp4");
                     break;
                 case "Present Simple":
-                    ShowVideo("http://adrianlealcaldera.com/presentesimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/presentesimple.mp4");
                     break;
 
                 case "Present Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/presentecontinuo.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/presentecontinuo.mp4");
                     break;
 
                 case "Present Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/presenteperfecto.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/presenteperfecto.mp4");
                     break;
 
                 case "Present Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/presenteperfectoconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/presenteperfectoconti.mp4");
                     break;
 
                 case "Past Simple":
-                    ShowVideo("http://adrianlealcaldera.com/pasadosimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/pasadosimple.mp4");
                     break;
 
                 case "Past Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/pasadocont.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/pasadocont.mp4");
                     break;
 
                 case "Past Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/pasadoperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/pasadoperf.mp4");
                     break;
 
                 case "Past Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/pasadoperfcon.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/pasadoperfcon.mp4");
                     break;
 
                 case "Future Simple":
-                    ShowVideo("http://adrianlealcaldera.com/futurosimp1.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/futurosimp1.mp4");
                     break;
 
                 case "Future Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/futuroconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/futuroconti.mp4");
                     break;
 
                 case "Future Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/futuroperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/futuroperf.mp4");
                     break;
 
                 case "Future Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/futuroperfcon.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/futuroperfcon.mp4");
                     break;
 
                 case "Would Simple":
-                    ShowVideo("http://adrianlealcaldera.com/wouldsimp.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/wouldsimp.mp4");
                     break;
 
                 case "Would Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/wouldconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/wouldconti.mp4");
                     break;
 
                 case "Would Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/wouldperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/wouldperf.mp4");
                     break;
 
                 case "Could Simple":
-                    ShowVideo("http://adrianlealcaldera.com/couldsimp.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/couldsimp.mp4");
                     break;
 
                 case "Could Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/couldconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/couldconti.mp4");
                     Toast.makeText(getContext(), "El could continuous empieza en el minuto 5", Toast.LENGTH_SHORT).show();
                     break;
 
                 case "Could Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/couldperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/couldperf.mp4");
                     break;
 
                 case "Could Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/couldperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/couldperf.mp4");
                     Toast.makeText(getContext(), "El could perfect continuous empieza en el minuto 5:31", Toast.LENGTH_SHORT).show();
                     break;
 
                 case "Might Simple":
-                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
                     break;
 
                 case "Might Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
                     break;
 
                 case "Might Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
                     break;
 
                 case "Might Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
                     break;
 
                 case "Should Simple":
-                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
                     break;
 
                 case "Should Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
                     break;
                 case "Should Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
                     break;
 
                 case "Should Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
                     break;
 
                 case "Can Simple":
-                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
                     break;
 
                 case "Can Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
                     break;
 
                 case "Must Simple":
-                    ShowVideo("http://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
                     break;
 
                 case "Must Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
                     break;
 
                 case "Must Perfect":
-                    ShowVideo("http://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
                     break;
 
                 case "Must Perfect Continuous":
-                    ShowVideo("http://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
                     break;
 
                 case "Want To":
@@ -549,21 +566,36 @@ public class VideoPlayer extends Fragment {
                 case "How Many Modals Perfect":
                     ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
                     break;
+                case "Question Structure":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
+                case "Question Structure Modals":
+                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    break;
 
                 case "Feel Like Simple":
                     ShowVideo("https://adrianlealcaldera.com/Feel%20Like.mp4");
                     break;
+                case "Phrasal Verbs":
+                    ShowVideo("https://adrianlealcaldera.com/phrasalverbs.mp4");
+                    break;
+                case "Supposed To Present":
+                    ShowVideo("https://adrianlealcaldera.com/SupposedTo.mp4");
+                    break;
+                case "Able To":
+                    ShowVideo("https://adrianlealcaldera.com/ableto.mp4");
+                    break;
             }
         }
 
-        if(currenttxt.contains("screens.SpaInt")){
+        if(currenttxt.contains("SpaInt2023")){
             switch (selection) {
                 case "Tutorial":
-                    ShowVideo("http://adrianlealcaldera.com/intdeesptut.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/intdeesptut.mp4");
                     break;
 
                 case "Por Preposición":
-                    ShowVideo("http://adrianlealcaldera.com/intporprep.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/intporprep.mp4");
                     break;
 
                 case "Por Sujeto":
@@ -585,7 +617,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if(currenttxt.contains("screens.ConInt2023")){
+        if(currenttxt.contains("ConInt2023")){
             switch (selection) {
 
                 case "Tutorial":
@@ -597,6 +629,7 @@ public class VideoPlayer extends Fragment {
                     }
                     break;
                 case "Steve Jobs 1":
+
                     // video completo con los 5 diferentes temas
                     if(explanation){
                         if(videoShow){
@@ -605,7 +638,7 @@ public class VideoPlayer extends Fragment {
                             ShowVideo(video1);
                         }
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/billburrstevejobsclip1.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/billburrstevejobsclip1.mp4");
                     }
                     break;
 
@@ -619,7 +652,7 @@ public class VideoPlayer extends Fragment {
                             ShowVideo(video1);
                         }
                     }else{
-                        ShowVideo("http://adrianlealcaldera.com/kotfishing1Clip.mp4");
+                        ShowVideo("https://adrianlealcaldera.com/kotfishing1Clip.mp4");
                     }
                     break;
 
@@ -667,68 +700,84 @@ public class VideoPlayer extends Fragment {
 
         }
 
-        if(currenttxt.contains("screens.Vocabulary")){
+        if(currenttxt.contains("Vocabulary2023")){
             switch (selection) {
+                case "Nivel Basico":
+                    ShowVideo("https://adrianlealcaldera.com/basico.mp4");
+                    break;
+                case "Nivel No-Basicas":
+                    ShowVideo("https://adrianlealcaldera.com/no-basico.mp4");
+                    break;
+                case "Nivel Interferencias":
+                    ShowVideo("https://adrianlealcaldera.com/interferncia.mp4");
+                    break;
+                case "Test":
+                    ShowVideo("https://adrianlealcaldera.com/examenexpl.mp4");
+                    break;
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/vocabtut.mp4");
                     break;
                 case "0 to 50":
-                    ShowVideo("http://adrianlealcaldera.com/vocablowq.mp4");
+                    if(user.isAnonymous()){
+                        ShowVideo("https://adrianlealcaldera.com/presentesimple.mp4");
+                    }else {
+                        ShowVideo("https://adrianlealcaldera.com/vocablowq.mp4");
+                    }
+
                     break;
 
                 case "50 to 100":
-                    ShowVideo("http://adrianlealcaldera.com/51a100.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/51a100.mp4");
                     break;
 
                 case "100 to 150":
-                    ShowVideo("http://adrianlealcaldera.com/100a150.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/100a150.mp4");
                     break;
 
                 case "150 to 200":
-                    ShowVideo("http://adrianlealcaldera.com/151-200.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/151-200.mp4");
                     break;
 
                 case "200 to 250":
-                    ShowVideo("http://adrianlealcaldera.com/200a250.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/200a250.mp4");
                     break;
 
                 case "250 to 300":
-                    ShowVideo("http://adrianlealcaldera.com/250a300.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/250a300.mp4");
                     break;
 
                 case "300 to 350":
-                    ShowVideo("http://adrianlealcaldera.com/300-350.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/300-350.mp4");
                     break;
 
                 case "350 to 400":
-                    ShowVideo("http://adrianlealcaldera.com/350a400bq.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/350a400bq.mp4");
                     break;
 
                 case "400 to 500":
-                    ShowVideo("http://adrianlealcaldera.com/400a500lq.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/400a500lq.mp4");
                     break;
 
 
             }
         }
 
-        if(currenttxt.contains("screens.Availability")){
+        if(currenttxt.contains("Availability2023")){
             switch (selection) {
-
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/avtut.mp4");
                     break;
 
 
                 case "Black Fathers":
-                    ShowVideo("http://adrianlealcaldera.com/blackfathers.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/blackfathers.mp4");
                     break;
 
                 case "Is America Racist?":
-                    ShowVideo("http://adrianlealcaldera.com/isamericaracist.mp4");
+                    ShowVideo("https://adrianlealcaldera.com/isamericaracist.mp4");
                     break;
 
-                case "Dont Compare Yourself to Others":
+                case "Don't Compare Yourself to Others":
                     ShowVideo("https://adrianlealcaldera.com/DontCompareYourselftoOthersPrag.mp4");
                     break;
 
@@ -741,7 +790,7 @@ public class VideoPlayer extends Fragment {
                     ShowVideo("https://adrianlealcaldera.com/Are%20Men%20and%20Women%20Different.mp4");
                     break;
 
-                case "Dont Waste Your Time":
+                case "Don't Waste Your Time":
                     ShowVideo("https://adrianlealcaldera.com/Dating%20Dont%20Waste%20Your%20Time.mp4");
                     break;
 
@@ -759,7 +808,7 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if (currenttxt.contains("screens.Transicion")) {
+        if (currenttxt.contains("Transicion2023")) {
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/app%20transici%C3%B3n.mp4");
@@ -773,58 +822,88 @@ public class VideoPlayer extends Fragment {
             }
         }
 
-        if (currenttxt.contains("screens.Premium")) {
-            ShowVideo("https://adrianlealcaldera.com/premium.mp4");
+        if (currenttxt.contains("Premium2023")) {
+
+            switch (selection){
+                case "Premium":
+                    ShowVideo("https://adrianlealcaldera.com/premiumpromo.mp4");
+                    break;
+            }
+
         }
 
     }
+
     public void ShowVideo(String url){
-        video_lay.setVisibility(View.GONE);
-        video_player.setVisibility(View.VISIBLE);
-
-        Uri urit = Uri.parse(url);
-        video_player.setVideoURI(urit);
-        video_player.setMediaController(new MediaController(getContext()));
-        video_player.requestFocus();
-
-        //APLICAR AQUI UN LOADING
-        loadingVideo.setVisibility(View.VISIBLE);
-
-        video_player.setOnPreparedListener(mediaPlayer -> {
-            //VIDEO EMPIEZA
-            video_player.start();
-            if (video_player.isPlaying()) {
-                loadingVideo.setVisibility(View.GONE);
-            } else {
-                loadingVideo.setVisibility(View.VISIBLE);
-            }
-        });
-
-
-        video_player.setOnCompletionListener(mediaPlayer -> {
-            if(selection.contains("Tutorial")){
-                Toast.makeText(getContext(), "Selecciona un contenido para empezar", Toast.LENGTH_SHORT).show();
-                ResetVideo();
-            }else{
-                ResetVideo();
-            }
-        });
-
-
+        mediaItem = MediaItem.fromUri(url);
+        player.setMediaItem(mediaItem);
+        player.prepare();
+        player.setPlayWhenReady(true);
     }
-    public void ResetVideo(){
-        video_lay.setVisibility(View.VISIBLE);
-        video_player.setVisibility(View.INVISIBLE);
-    }
-
     public String SaberDondeEstoy(){
         String txtActivity = "";
         String cadenaEliminar = "com.leal.cipm_testing.";
         String txtActivitySinEliminar = getContext().toString();
-
         txtActivity = txtActivitySinEliminar.replace(cadenaEliminar,"");
+
         return txtActivity;
+    }
+    @Override
+    public void onStop() {
+
+        super.onStop();
+        if(player == null){
+            return;
+        }else {
+            player.setPlayWhenReady(false);
+            player.release();
+            player = null;
+        }
+
+    }
+    public void updateFragmentState(String newSelection, String newVideo, boolean newExplanation) {
+        selection = newSelection;
+        video = newVideo;
+        explanation = newExplanation;
+        SelectUrl();
+        // You can also update any other UI elements or logic here if needed.
+    }
+    public void updateFragmentStateStructure(String newSelection){
+        selection = newSelection;
+        SelectUrl();
+    }
+    public void updateFramentConInt(String tema,boolean newexplicacion,String newvideo,String videouno,String videodos,boolean newvideoshow){
+        selection = tema;
+        explanation = newexplicacion;
+        video = newvideo;
+        video1=videouno;
+        video2= videodos;
+        videoShow = newvideoshow;
+        SelectUrl();
+    }
+
+    public void goToPosition(int position){
+        if (player != null && player.getPlaybackState() == ExoPlayer.STATE_READY) {
+            // Seek to the desired position
+            player.seekTo(position);
+        }
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (player != null) {
+            player.release();
+        }
+    }
+
+    public void updateFragmentStateConint2(boolean newexplanation1) {
+        explanation = newexplanation1;
+    }
 }
+
+
+
+
+

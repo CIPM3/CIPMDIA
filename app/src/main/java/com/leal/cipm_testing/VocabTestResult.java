@@ -23,12 +23,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class VocabTestResult extends Fragment {
     ArrayAdapter<String> adapter;
-    FirebaseFirestore db;
+     FirebaseFirestore db;
     FirebaseAuth mAuth;
     ListView lv;
     String userid;
     View v;
-    StudentVocabRestultsModel  st= new StudentVocabRestultsModel();
+     StudentVocabRestultsModel  st= new StudentVocabRestultsModel();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class VocabTestResult extends Fragment {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
-                    Toast.makeText(getContext(), "espere un segundo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "espere un segundo vocb", Toast.LENGTH_SHORT).show();
                     st=  documentSnapshot.toObject(StudentVocabRestultsModel.class);
                     assert st != null;
                     //aparentemente ya funciona, solo llenar el array
@@ -583,6 +583,7 @@ public class VocabTestResult extends Fragment {
                             "to receive :" + st.toreceive,
                             "value :" + st.value,
                             "Aqui termina de 450 a 500",
+
 
                             // falta completar aqui para que lo muestre el listview en el fragmento
                     };

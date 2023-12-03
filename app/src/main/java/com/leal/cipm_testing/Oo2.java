@@ -28,12 +28,12 @@ public class Oo2 {
     };
 
     String vnb[] = {
-            "possess ", "retain ", "negociate ", "weigh ", "deserve ", "destroy ",
+            "possess ", "retain ", "negotiate ", "weigh ", "deserve ", "destroy ",
             "manufacture ", "expand ", "enable ", "distribute "
     };
 
     String vn3[] = {
-            "possesses ", "retains ", "negociates ", "weighs ", "deserves ", "destroys ",
+            "possesses ", "retains ", "negotiates ", "weighs ", "deserves ", "destroys ",
             "manufactures ", "expands ", "enables ", "distributes "
     };
 
@@ -91,21 +91,21 @@ public class Oo2 {
 
     // verbos participio inglés
     String vpeng[] = {
-            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "possessed ", "retained ", "negotiated ", "weighed ", "deserved ", "destroyed ",
             "manufactured ", "expanded ", "enabled ", "distributed "
     };
 
     String vpengM[]={
-            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "possessed ", "retained ", "negotiated ", "weighed ", "deserved ", "destroyed ",
             "manufactured ", "expanded ", "enabled ", "distributed "
     };
     String vpengF[]={
-            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "possessed ", "retained ", "negotiated ", "weighed ", "deserved ", "destroyed ",
             "manufactured ", "expanded ", "enabled ", "distributed "
     };
 
     String vnbp[] = {
-            "possessed ", "retained ", "negociated ", "weighed ", "deserved ", "destroyed ",
+            "possessed ", "retained ", "negotiated ", "weighed ", "deserved ", "destroyed ",
             "manufactured ", "expanded ", "enabled ", "distributed "
     };
 

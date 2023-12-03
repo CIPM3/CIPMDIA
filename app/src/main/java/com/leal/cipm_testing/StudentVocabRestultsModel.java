@@ -271,13 +271,7 @@ public class StudentVocabRestultsModel {
         this.it = it;
     }
 
-    public boolean isI() {
-        return I;
-    }
 
-    public void setI(boolean i) {
-        I = i;
-    }
 
     public boolean isThat1() {
         return that1;

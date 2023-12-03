@@ -4,61 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3949AB"
-    android:backgroundTint="#3949AB"
+    android:background="#FFFFFF"
+
     tools:context=".ChooseLevel">
 
-    <TextView
-        android:id="@+id/chooseleveltxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#C0CA33"
-        android:paddingTop="26dp"
-        android:text="Como te gustaría que identifiquemos tu nivel de inglés?"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
-        android:layout_width="352dp"
-        android:layout_height="405dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="152dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="662dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/chooseleveltxt">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/hablarxmaestrotxt"
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Como te gustaría determinar tu nivel de inglés"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/determinarEnApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:text="- Hablar con maestro   (un maestro te hace un diagnostico )"
-            android:textColor="#FDD835"
-            android:textSize="20sp" />
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
 
-        <TextView
-            android:id="@+id/en0txt"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_azul"
+                android:gravity="center"
+                android:onClick="deterimnarenapp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hacer examen en la app"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noDeterminar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:text="- Estoy en ceros (no es necesario examen, no se nada)"
-            android:textColor="#FDD835"
-            android:textSize="20sp"
-            android:visibility="gone" />
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
 
-        <TextView
-            android:id="@+id/porahoranotxt"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_azul"
+                android:gravity="center"
+                android:onClick="noDeterminar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Determinar nivel"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/habarConMaestro"
             android:layout_width="match_parent"
-            android:layout_height="228dp"
-            android:gravity="bottom"
-            android:paddingTop="50dp"
-            android:text="- Por ahora no quiero determinar mi nivel "
-            android:textColor="#E53935"
-            android:textColorHint="#E53935"
-            android:textSize="20sp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_azul"
+                android:gravity="center"
+                android:onClick="hablarconmaestro">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hablar con maestro"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Talk to Teacher Button -->
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

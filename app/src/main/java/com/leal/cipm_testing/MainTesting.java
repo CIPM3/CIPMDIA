@@ -85,7 +85,7 @@ public class MainTesting extends AppCompatActivity {
         setContentView(R.layout.activity_main_testing);
         timer = new Timer();
         timerText= (TextView) findViewById(R.id.timertextv);
-        timerText.setVisibility(View.INVISIBLE);
+        timerText.setVisibility(View.VISIBLE);
         timerText.setText(formatTime(0,0,0));
         audiorepeat = findViewById(R.id.audiorepeatbtn);
         audiorepeat.setVisibility(View.INVISIBLE);
@@ -6588,18 +6588,16 @@ public class MainTesting extends AppCompatActivity {
         String t2 = Answerinput.getText().toString().trim();
         if (t.equalsIgnoreCase(t2)) {
             cp = cp + 1;
-            Toast.makeText(this, "inside good" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
             prom = rounded / 4;
 
         } else {
             cn = cn + 1;
-            Toast.makeText(this, String.valueOf(cn) + " inside bad " + txteng, Toast.LENGTH_SHORT).show();
         }
         if (cp == 4) {
             Toast.makeText(this, selection + "pasaste-Pasa a otra estructura" + String.valueOf(cp), Toast.LENGTH_SHORT).show();
             cp = 0;
             cn = 0;
-            timerText.setText("your Average Response time: "  +String.valueOf(prom)+" seconds");
+            timerText.setText("your Average Response time: "  +String.valueOf(prom)+" segundos");
             timerText.setVisibility(View.VISIBLE);
             turnTrueTime(selection, String.valueOf(prom));
             timen = 0.0;
@@ -6625,9 +6623,6 @@ public class MainTesting extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 studentObject = documentSnapshot.toObject(Student.class);
                 assert studentObject != null;
-
-
-
                 if(studentObject.presentesimple){
                     ps=true;
                 }
@@ -7950,11 +7945,14 @@ public class MainTesting extends AppCompatActivity {
                 }
                 if(vocabDbChecker.kid){
                     kid=true;
-                }if(vocabDbChecker.body){
+                }
+                if(vocabDbChecker.body){
                     body=true;
-                }if(vocabDbChecker.information){
+                }
+                if(vocabDbChecker.information){
                     information=true;
-                }if(vocabDbChecker.nothing){
+                }
+                if(vocabDbChecker.nothing){
                     nothing=true;
                 }if(vocabDbChecker.ago){
                     ago=true;
@@ -9131,6 +9129,7 @@ public class MainTesting extends AppCompatActivity {
         vv.start();
 
     }
+
     private void startTimer() {
         timerTask = new TimerTask()
         {
@@ -9646,6 +9645,7 @@ public class MainTesting extends AppCompatActivity {
     String mssec ,mcsec ,mpsec ,mpcsec ,cssec ,ccsec ,mussec ,mucsec,
             sssec ,scsec ,spsec ,spcsec ,wtsec ,ftsec ,stpsec ,wppsec ,
             utsec ,butsec;
+
     String feellssec, reportedssec, incrementopsec, verbalasec, relativecsec;
     String whatssec, whatcsec, whatpsec, whatmssec, whatmcsec, whatmpsec;
     String whenssec, whencsec, whenpsec, whenmssec, whenmcsec, whenmpsec;

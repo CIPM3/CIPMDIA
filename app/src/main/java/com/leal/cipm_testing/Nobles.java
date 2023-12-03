@@ -5,187 +5,187 @@ public class Nobles {
 
     //vnb verbos nobles top 100
     String vnb[] = {"have ", "get ", "see ", "need ", "know ", "find ", "take ", "want ", "include ",
-            "thank ", "add ", "choose ", "develop ", "remember ", "bring ", "protect ",
-            "avoid ", "describe ", "prefer ", "discover ", "expect ", "lose ", "hear ", "represent ",
-            "forget ", "accept ", "share ", "imagine ", "recognize ", "replace ", "borrow ", "examine ",
-            "owe ", "incorporate ", "organize "
+           "thank ", "add ", "choose ", "develop ", "remember ", "bring ", "protect ",
+           "avoid ", "describe ", "prefer ", "discover ", "expect ", "lose ", "hear ", "represent ",
+           "forget ", "accept ", "share ", "imagine ", "recognize ", "replace ", "borrow ", "examine ",
+           "owe ", "incorporate ", "organize "
     };
 
     // verbos nobles base spanish
     String vnbs[] = {"tener ", "obtener ", "ver ", "necesitar ", "saber ", "encontrar ", "tomar ", "querer ", "incluir ",
-            "agradecer ", "agregar ", "elegir ", "desarrollar ", "recordar ", "traer ", "protejer ",
-            "evitar ", "describir ", "preferir ", "descubrir ", "esperar ", "perder ", "oir ", "representar ",
-            "olvidar ", "aceptar ", "compartir ", "imaginar ", "reconocer ", "reemplazar ", "pedir prestado ", "examinar ",
-            "deber ", "incorporar ", "organizar "
+           "agradecer ", "agregar ", "elegir ", "desarrollar ", "recordar ", "traer ", "protejer ",
+           "evitar ", "describir ", "preferir ", "descubrir ", "esperar ", "perder ", "oir ", "representar ",
+           "olvidar ", "aceptar ", "compartir ", "imaginar ", "reconocer ", "reemplazar ", "pedir prestado ", "examinar ",
+           "deber ", "incorporar ", "organizar "
     };
     //vnb verbos nobles top 100  tercera persona inglés
     String vnb3[] = {"has ", "gets ", "sees ", "needs ", "knows ", "finds ", "takes ", "wants ", "includes ",
-            "thanks ", "adds ", "chooses ", "develops ", "remembers ", "brings ", "protects ",
-            "avoids ", "describes ", "prefers ", "discovers ", "expects ", "loses ", "hears ", "represents ",
-            "forgets ", "accepts ", "shares ", "imagines ", "recognizes ", "replaces ", "borrows ", "examines ",
-            "owes ", "incorporates ", "organizes "
+           "thanks ", "adds ", "chooses ", "develops ", "remembers ", "brings ", "protects ",
+           "avoids ", "describes ", "prefers ", "discovers ", "expects ", "loses ", "hears ", "represents ",
+           "forgets ", "accepts ", "shares ", "imagines ", "recognizes ", "replaces ", "borrows ", "examines ",
+           "owes ", "incorporates ", "organizes "
     };
 
     //vnb verbos nobles top 100  primera persona esp
     String vn1[] = {"tengo ", "obtengo ", "veo ", "necesito ", "se ", "encuentro ", "tomo ", "quiero ", "incluyo ",
-            "agradezco ", "agrego ", "eligo ", "desarrollo ", "recuerdo ", "traigo ", "protejo ",
-            "evito ", "describo ", "prefiero ", "descubro ", "espero ", "pierdo ", "oigo ", "represento ",
-            "olvido ", "acepto ", "comparo ", "imagino ", "reconozco ", "reemplazo ", "pido prestado ", "examino ",
-            "debo ", "incorporo ", "organizo "
+           "agradezco ", "agrego ", "eligo ", "desarrollo ", "recuerdo ", "traigo ", "protejo ",
+           "evito ", "describo ", "prefiero ", "descubro ", "espero ", "pierdo ", "oigo ", "represento ",
+           "olvido ", "acepto ", "comparto ", "imagino ", "reconozco ", "reemplazo ", "pido prestado ", "examino ",
+           "debo ", "incorporo ", "organizo "
     };
 
     //vnb verbos nobles top 100  segunda persona esp
     String vn2[] = {"tienes ", "obtienes ", "ves ", "necesitas ", "sabes ", "encuentras ", "tomas ", "quieres ", "incluyes ",
-            "agradeces ", "agregas ", "eliges ", "desarrollas ", "recuerdas ", "traes ", "proteges ",
-            "evitas ", "describes ", "prefieres ", "descubres ", "esperas ", "pierdes ", "oyes ", "representas ",
-            "olvidas ", "aceptas ", "comparas ", "imaginas ", "reconoces ", "reemplazas ", "pides prestado ", "examinas ",
-            "debes ", "incorporas ", "organizas "
+           "agradeces ", "agregas ", "eliges ", "desarrollas ", "recuerdas ", "traes ", "proteges ",
+           "evitas ", "describes ", "prefieres ", "descubres ", "esperas ", "pierdes ", "oyes ", "representas ",
+           "olvidas ", "aceptas ", "comparas ", "imaginas ", "reconoces ", "reemplazas ", "pides prestado ", "examinas ",
+           "debes ", "incorporas ", "organizas "
     };
 
     //vnb verbos nobles top 100  tercera persona esp
     String vn3[] = {"tiene ", "obtiene ", "ve ", "necesita ", "sabe ", "encuentra ", "toma ", "quiere ", "incluye ",
-            "agradece ", "agrega ", "elige ", "desarrolla ", "recuerda ", "trae ", "protege ",
-            "evita ", "describe ", "prefiere ", "descubre ", "espera ", "pierde ", "oye ", "representa ",
-            "olvida ", "acepta ", "compara ", "imagina ", "reconoce ", "reemplaza ", "pide prestado ", "examina ",
-            "debe ", "incorpora ", "organiza "
+           "agradece ", "agrega ", "elige ", "desarrolla ", "recuerda ", "trae ", "protege ",
+           "evita ", "describe ", "prefiere ", "descubre ", "espera ", "pierde ", "oye ", "representa ",
+           "olvida ", "acepta ", "comparte ", "imagina ", "reconoce ", "reemplaza ", "pide prestado ", "examina ",
+           "debe ", "incorpora ", "organiza "
     };
 
     //vnb verbos nobles top 100  cuarta persona esp ellos
     String vn4[] = {"tienen ", "obtienen ", "ven ", "necesitan ", "saben ", "encuentran ", "toman ", "quieren ", "incluyen ",
-            "agradecen ", "agregan ", "eligen ", "desarrollan ", "recuerdan ", "traen ", "protegen ",
-            "evitan ", "describen ", "prefieren ", "descubren ", "esperan ", "pierden ", "oyen ", "representan ",
-            "olvidan ", "aceptan ", "comparan ", "imaginan ", "reconocen ", "reemplazan ", "piden prestado ", "examinan ",
-            "deben ", "incorporan ", "organizan "
+           "agradecen ", "agregan ", "eligen ", "desarrollan ", "recuerdan ", "traen ", "protegen ",
+           "evitan ", "describen ", "prefieren ", "descubren ", "esperan ", "pierden ", "oyen ", "representan ",
+           "olvidan ", "aceptan ", "comparten ", "imaginan ", "reconocen ", "reemplazan ", "piden prestado ", "examinan ",
+           "deben ", "incorporan ", "organizan "
     };
 
 
     //vnb verbos nobles top 100  quinta persona esp nosotros
     String vn5[] = {"tenemos ", "obtenemos ", "vemos ", "necesitamos ", "sabemos ", "encontramos ",
-            "tomamos ", "queremos ", "incluimos ", "agradecemos ", "agregamos ", "elegimos ",
-            "desarrollamos ", "recordamos ", "traemos ", "protegemos ", "evitamos ", "describimos ",
-            "preferimos ", "descubrimos ", "esperamos ", "perdemos ", "oimos ", "representamos ",
-            "olvidamos ", "aceptamos ", "compramos ", "imaginamos ", "reconocemos ", "reemplazamos ",
-            "pedimos prestado ", "examinamos ", "debemos ", "incorporamos ", "organizamos "
+           "tomamos ", "queremos ", "incluimos ", "agradecemos ", "agregamos ", "elegimos ",
+           "desarrollamos ", "recordamos ", "traemos ", "protegemos ", "evitamos ", "describimos ",
+           "preferimos ", "descubrimos ", "esperamos ", "perdemos ", "oimos ", "representamos ",
+           "olvidamos ", "aceptamos ", "compartimos ", "imaginamos ", "reconocemos ", "reemplazamos ",
+           "pedimos prestado ", "examinamos ", "debemos ", "incorporamos ", "organizamos "
     };
 
     //pasados (agregado wish SV 060422)
     String ps1wish[] = {"tuviera ", "obtuviera ", "viera ", "necesitara ", "supiera ", "encontrara ",
-            "tomara ", "quisiera ", "incluyera ", "agradeciera ", "agregara ", "eligiera ",
-            "desarrollara ", "recordara ", "trajera ", "protegiera ", "evitara ", "describiera ",
-            "prefiriera ", "descubriera ", "esperara ", "perdiera ", "oyera ", "representara ",
-            "olvidara ", "aceptara ", "comprara ", "imaginara ", "reconociera ", "reemplazara ",
-            "pidiera prestado ", "examinara ", "debiera ", "incorporara ", "organizara "
+           "tomara ", "quisiera ", "incluyera ", "agradeciera ", "agregara ", "eligiera ",
+           "desarrollara ", "recordara ", "trajera ", "protegiera ", "evitara ", "describiera ",
+           "prefiriera ", "descubriera ", "esperara ", "perdiera ", "oyera ", "representara ",
+           "olvidara ", "aceptara ", "compartiera ", "imaginara ", "reconociera ", "reemplazara ",
+           "pidiera prestado ", "examinara ", "debiera ", "incorporara ", "organizara "
     };
     String ps2wish[] = {"tuvieras ", "obtuvieras ", "vieras ", "necesitaras ", "supieras ", "encontraras ",
-            "tomaras ", "quisieras ", "incluyeras ", "agradecieras ", "agregaras ", "eligieras ",
-            "desarrollaras ", "recordaras ", "trajeras ", "protegieras ", "evitaras ", "describieras ",
-            "prefirieras ", "descubrieras ", "esperaras ", "perdieras ", "oyeras ", "representaras ",
-            "olvidaras ", "aceptaras ", "compraras ", "imaginaras ", "reconocieras ", "reemplazaras ",
-            "pidieras prestado ", "examinaras ", "debieras ", "incorporaras ", "organizaras "
+           "tomaras ", "quisieras ", "incluyeras ", "agradecieras ", "agregaras ", "eligieras ",
+           "desarrollaras ", "recordaras ", "trajeras ", "protegieras ", "evitaras ", "describieras ",
+           "prefirieras ", "descubrieras ", "esperaras ", "perdieras ", "oyeras ", "representaras ",
+           "olvidaras ", "aceptaras ", "compartieras ", "imaginaras ", "reconocieras ", "reemplazaras ",
+           "pidieras prestado ", "examinaras ", "debieras ", "incorporaras ", "organizaras "
     };
     String ps3wish[] = {"tuviera ", "obtuviera ", "viera ", "necesitara ", "supiera ", "encontrara ",
-            "tomara ", "quisiera ", "incluyera ", "agradeciera ", "agregara ", "eligiera ",
-            "desarrollara ", "recordara ", "trajera ", "protegiera ", "evitara ", "describiera ",
-            "prefiriera ", "descubriera ", "esperara ", "perdiera ", "oyera ", "representara ",
-            "olvidara ", "aceptara ", "comprara ", "imaginara ", "reconociera ", "reemplazara ",
-            "pidiera prestado ", "examinara ", "debiera ", "incorporara ", "organizara "
+           "tomara ", "quisiera ", "incluyera ", "agradeciera ", "agregara ", "eligiera ",
+           "desarrollara ", "recordara ", "trajera ", "protegiera ", "evitara ", "describiera ",
+           "prefiriera ", "descubriera ", "esperara ", "perdiera ", "oyera ", "representara ",
+           "olvidara ", "aceptara ", "compartiera ", "imaginara ", "reconociera ", "reemplazara ",
+           "pidiera prestado ", "examinara ", "debiera ", "incorporara ", "organizara "
     };
     String ps4wish[] = {"tuvieran ", "obtuvieran ", "vieran ", "necesitaran ", "supieran ", "encontraran ",
-            "tomaran ", "quisieran ", "incluyeran ", "agradecieran ", "agregaran ", "eligieran ",
-            "desarrollaran ", "recordaran ", "trajeran ", "protegieran ", "evitaran ", "describieran ",
-            "prefirieran ", "descubrieran ", "esperaran ", "perdieran ", "oyeran ", "representaran ",
-            "olvidaran ", "aceptaran ", "compraran ", "imaginaran ", "reconocieran ", "reemplazaran ",
-            "pidieran prestado ", "examinaran ", "debieran ", "incorporaran ", "organizaran "
+           "tomaran ", "quisieran ", "incluyeran ", "agradecieran ", "agregaran ", "eligieran ",
+           "desarrollaran ", "recordaran ", "trajeran ", "protegieran ", "evitaran ", "describieran ",
+           "prefirieran ", "descubrieran ", "esperaran ", "perdieran ", "oyeran ", "representaran ",
+           "olvidaran ", "aceptaran ", "compartieran ", "imaginaran ", "reconocieran ", "reemplazaran ",
+           "pidieran prestado ", "examinaran ", "debieran ", "incorporaran ", "organizaran "
     };
     String ps5wish[] = {"tuvieramos ", "obtuvieramos ", "vieramos ", "necesitaramos ", "supieramos ", "encontraramos ",
-            "tomaramos ", "quisieramos ", "incluyeramos ", "agradecieramos ", "agregaramos ", "eligieramos ",
-            "desarrollaramos ", "recordaramos ", "trajeramos ", "protegieramos ", "evitaramos ", "describieramos ",
-            "prefirieramos ", "descubrieramos ", "esperaramos ", "perdieramos ", "oyeramos ", "representaramos ",
-            "olvidaramos ", "aceptaramos ", "compraramos ", "imaginaramos ", "reconocieramos ", "reemplazaramos ",
-            "pidieramos prestado ", "examinaramos ", "debieramos ", "incorporaramos ", "organizaramos "
+           "tomaramos ", "quisieramos ", "incluyeramos ", "agradecieramos ", "agregaramos ", "eligieramos ",
+           "desarrollaramos ", "recordaramos ", "trajeramos ", "protegieramos ", "evitaramos ", "describieramos ",
+           "prefirieramos ", "descubrieramos ", "esperaramos ", "perdieramos ", "oyeramos ", "representaramos ",
+           "olvidaramos ", "aceptaramos ", "compartieramos ", "imaginaramos ", "reconocieramos ", "reemplazaramos ",
+           "pidieramos prestado ", "examinaramos ", "debieramos ", "incorporaramos ", "organizaramos "
     };
 
     // nouns nobles top 100
     String nnobles[] = {
-            "the people ", "the history ", "the art ", "the money ", "the world ", "the worlds ", "the information ",
-            "the map ", "the maps ", "the family ", "the government ", "the governments ", "the health ", "the system ",
+           "the people ", "the history ", "the art ", "the money ", "the world ", "the worlds ", "the information ",
+           "the map ", "the maps ", "the family ", "the government ", "the governments ", "the health ", "the system ",
 
-            "the systems ", "the computer ", "the computers ", "the meat ", "the year ", " the years ", "the thanks ",
-            "the music ", "the person ", "the reading ", "the method ", "the methods ",
+           "the systems ", "the computer ", "the computers ", "the meat ", "the year ", " the years ", "the thanks ",
+           "the music ", "the person ", "the reading ", "the method ", "the methods ",
 
-            "the data ", "the food ", "the understanding ", "the theory ", "the law ", "the bird ", "the birds ",
-            "the literature ", "the problem ", "the problems ", "the software ", "the control ", "the knowledge ",
-            "the power ", "the ability ", "the love ",
+           "the data ", "the food ", "the understanding ", "the theory ", "the law ", "the bird ", "the birds ",
+           "the literature ", "the problem ", "the problems ", "the software ", "the control ", "the knowledge ",
+           "the power ", "the ability ", "the love ",
 
-            "the internet ", "the television ", "the televisions ", "the science ", "the library ","the nature ",
-            "the fact ", "the facts ", "the product ", "the products ", "the idea ", "the ideas ", "the temperature ",
-            "the investment ", "the area ", "the areas ", "the society ", "the activity ", "the story ", "the industry ",
-            "the media ", "the thing ", "the things ", "the oven ", "the ovens ", "the community ", "the communities ",
-            "the safety ", "the quality ", "the development ", "the language ",
+           "the internet ", "the television ", "the televisions ", "the science ", "the library ","the nature ",
+           "the fact ", "the facts ", "the product ", "the products ", "the idea ", "the ideas ", "the temperature ",
+           "the investment ", "the area ", "the areas ", "the society ", "the activity ", "the story ", "the industry ",
+           "the media ", "the thing ", "the things ", "the oven ", "the ovens ", "the community ", "the communities ",
+           "the safety ", "the quality ", "the development ", "the language ",
 
-            "the management ", "the player ", "the variety ", "the video ", "the videos ", "the week ", "the country ",
-            "the exam ", "the movie ", "the organization ", "the equipment ", "the phisics ", "the analysis ",
-            "the policy ", "the series ", "the thought ", "the basis ", "the boyfriend ", "the direction ", "the strategy ",
-            "the technology ", "the army ", "the armies ", "the camera ", "the cameras ", "the freedom ",
+           "the management ", "the player ", "the variety ", "the video ", "the videos ", "the week ", "the country ",
+           "the exam ", "the movie ", "the organization ", "the equipment ", "the phisics ", "the analysis ",
+           "the policy ", "the series ", "the thought ", "the basis ", "the boyfriend ", "the direction ", "the strategy ",
+           "the technology ", "the army ", "the armies ", "the camera ", "the cameras ", "the freedom ",
 
-            "the paper ",  "the environment ", "the child ", "the children ", "the instance ", "the month ", "the months ",
-            "the truth ", "the marketing ", "the university ", "the writing ", "the article ", "the department ",
-            "the difference ", "the goal ", "the news ", "the audience ","the growth ", "a block of cheese "
+           "the paper ", "the environment ", "the child ", "the children ", "the instance ", "the month ", "the months ",
+           "the truth ", "the marketing ", "the university ", "the writing ", "the article ", "the department ",
+           "the difference ", "the goal ", "the news ", "the audience ","the growth ", "a block of cheese "
     };
 
     // nouns nobles espa;ol top 100
     String nnoblesesp[] = {
-            "la gente ", "la historia ", "el arte ", "el dinero ", "el mundo ", "los mundos ", "la información ",
-            "el mapa ", "los mapas ", "la familia ", "el gobierno ", "los gobiernos ", "la salud ", "el sistema ",
+           "la gente ", "la historia ", "el arte ", "el dinero ", "el mundo ", "los mundos ", "la información ",
+           "el mapa ", "los mapas ", "la familia ", "el gobierno ", "los gobiernos ", "la salud ", "el sistema ",
 
-            "los sistemas ", "la computadora ", "las computadoras ", "la carne ", "el año ", "los años ",
-            "el agradecimiento ", "la música ", "la persona ", "la lectura ", "el método ", "los métodos ",
+           "los sistemas ", "la computadora ", "las computadoras ", "la carne ", "el año ", "los años ",
+           "el agradecimiento ", "la música ", "la persona ", "la lectura ", "el método ", "los métodos ",
 
-            "los datos ", "la comida ", "el entendimiento ", "la teoría ", "la ley ",  "el pájaro ", "a los pájaros ",
-            "la literatura ", "el problema ", "los problemas ", "el software ", "el control ", "el conocimiento ",
-            "el poder ", "la habilidad ", "el amor ",
+           "los datos ", "la comida ", "el entendimiento ", "la teoría ", "la ley ", "el pájaro ", "a los pájaros ",
+           "la literatura ", "el problema ", "los problemas ", "el software ", "el control ", "el conocimiento ",
+           "el poder ", "la habilidad ", "el amor ",
 
-            "el internet ", "la televisión ", "las televisiones ", "la ciencia ", "la biblioteca ",
-            "la naturaleza ", "el hecho ", "los hechos ", "el producto ", "los productos ", "la idea ", "las ideas ",
-            "la temperatura ", "la inversión ", "el área ", "las áreas ", "la sociedad ", "la actividad ", "el cuento ",
-            "la industria ", "la media ", "la cosa ", "las cosas ", "el horno ", "los hornos ", "la comunidad ",
-            "las comunidades ", "la seguridad ", "la calidad ", "el desarrollo ", "el idioma ",
+           "el internet ", "la televisión ", "las televisiones ", "la ciencia ", "la biblioteca ",
+           "la naturaleza ", "el hecho ", "los hechos ", "el producto ", "los productos ", "la idea ", "las ideas ",
+           "la temperatura ", "la inversión ", "el área ", "las áreas ", "la sociedad ", "la actividad ", "el cuento ",
+           "la industria ", "la media ", "la cosa ", "las cosas ", "el horno ", "los hornos ", "la comunidad ",
+           "las comunidades ", "la seguridad ", "la calidad ", "el desarrollo ", "el idioma ",
 
-            "la administración ", "el jugador ", "la variedad ", "el video ", "los videos ", "la semana ", "el país ",
-            "el examen ", "la pelicula ", "la organización ", "el equipo ", "la física ", "el análisis ", "la política ",
-            "la serie ", "el pensamiento ", "la base ", "el novio ", "la dirección ", "la estrategia ", "la tecnología ",
-            "el ejército ", "los ejércitos ", "la cámara ", "las cámaras ", "la libertad ",
+           "la administración ", "el jugador ", "la variedad ", "el video ", "los videos ", "la semana ", "el país ",
+           "el examen ", "la pelicula ", "la organización ", "el equipo ", "la física ", "el análisis ", "la política ",
+           "la serie ", "el pensamiento ", "la base ", "el novio ", "la dirección ", "la estrategia ", "la tecnología ",
+           "el ejército ", "los ejércitos ", "la cámara ", "las cámaras ", "la libertad ",
 
-            "el papel ", "el medio ambiente ", "el niño ", "los niños ", "la instancia ", "el mes ", "los meses ",
-            "la verdad ", "el marketing ", "la universidad ", "la escritura ", "el artículo ", "el departamento ",
-            "la diferencia ", "la meta ", "las noticias ", "a la audiencia ", "el crecimiento ", "un bloque de queso "
+           "el papel ", "el medio ambiente ", "el niño ", "los niños ", "la instancia ", "el mes ", "los meses ",
+           "la verdad ", "el marketing ", "la universidad ", "la escritura ", "el artículo ", "el departamento ",
+           "la diferencia ", "la meta ", "las noticias ", "a la audiencia ", "el crecimiento ", "un bloque de queso "
     };
 
     String nnoblesW[] = {
-            "people ", "history ", "art ", "money ", "world ", "worlds ", "information ",
-            "map ", "maps ", "family ", "government ", "governments ", "health ", "system ",
+           "people ", "history ", "art ", "money ", "world ", "worlds ", "information ",
+           "map ", "maps ", "family ", "government ", "governments ", "health ", "system ",
 
-            "systems ", "computer ", "computers ", "meat ", "year ", " years ", "thanks ",
-            "music ", "person ", "reading ", "method ", "methods ",
+           "systems ", "computer ", "computers ", "meat ", "year ", " years ", "thanks ",
+           "music ", "person ", "reading ", "method ", "methods ",
 
-            "data ", "food ", "understanding ", "theory ", "law ", "bird ", "birds ",
-            "literature ", "problem ", "problems ", "software ", "control ", "knowledge ",
-            "power ", "ability ", "love ",
+           "data ", "food ", "understanding ", "theory ", "law ", "bird ", "birds ",
+           "literature ", "problem ", "problems ", "software ", "control ", "knowledge ",
+           "power ", "ability ", "love ",
 
-            "internet ", "television ", "televisions ", "science ", "library ","nature ",
-            "fact ", "facts ", "product ", "products ", "idea ", "ideas ", "temperature ",
-            "investment ", "area ", "areas ", "society ", "activity ", "story ", "industry ",
-            "media ", "thing ", "things ", "oven ", "ovens ", "community ", "communities ",
-            "safety ", "quality ", "development ", "language ",
+           "internet ", "television ", "televisions ", "science ", "library ","nature ",
+           "fact ", "facts ", "product ", "products ", "idea ", "ideas ", "temperature ",
+           "investment ", "area ", "areas ", "society ", "activity ", "story ", "industry ",
+           "media ", "thing ", "things ", "oven ", "ovens ", "community ", "communities ",
+           "safety ", "quality ", "development ", "language ",
 
-            "management ", "player ", "variety ", "video ", "videos ", "week ", "country ",
-            "exam ", "movie ", "organization ", "equipment ", "phisics ", "analysis ",
-            "policy ", "series ", "thought ", "basis ", "boyfriend ", "direction ", "strategy ",
-            "technology ", "army ", "armies ", "camera ", "cameras ", "freedom ",
+           "management ", "player ", "variety ", "video ", "videos ", "week ", "country ",
+           "exam ", "movie ", "organization ", "equipment ", "phisics ", "analysis ",
+           "policy ", "series ", "thought ", "basis ", "boyfriend ", "direction ", "strategy ",
+           "technology ", "army ", "armies ", "camera ", "cameras ", "freedom ",
 
-            "paper ",  "environment ", "child ", "children ", "instance ", "month ", "months ",
-            "truth ", "marketing ", "university ", "writing ", "article ", "department ",
-            "difference ", "goal ", "news ", "audience ","growth ", "a block of cheese "
+           "paper ", "environment ", "child ", "children ", "instance ", "month ", "months ",
+           "truth ", "marketing ", "university ", "writing ", "article ", "department ",
+           "difference ", "goal ", "news ", "audience ","growth ", "a block of cheese "
     };
 
     //Continuo
@@ -335,24 +335,24 @@ public class Nobles {
 
 
     String objetsingular[] ={"a house ", "a bicycle ", "a motorcycle ", "a computer ", "a apple ",
-            "a car ", "a clock ", "a phone ", "a TV "};
+           "a car ", "a clock ", "a phone ", "a TV "};
     String objetosingular[] ={"una casa ", "una bicicleta ", "una moto ", "una computadora ", "una manzana ",
-            "un carro ", "un reloj ", "un teléfono ", "un televisor "};
+           "un carro ", "un reloj ", "un teléfono ", "un televisor "};
 
     String objetsingulardon[] ={"house ", "bicycle ", "motorcycle ", "computer ", "apple ",
-            "car ", "clock ", "phone ", "TV "};
+           "car ", "clock ", "phone ", "TV "};
     String objetosingularno[] ={"casa ", "bicicleta ", "moto ", "computadora ", "manzana ",
-            "carro ", "reloj ", "teléfono ", "televisor "};
+           "carro ", "reloj ", "teléfono ", "televisor "};
 
     String objetploral[] ={"houses ", "bicycles ", "motorcycles ", "computers ", "apples ",
-            "cars ", "clocks ", "phones ", "TVs "};
+           "cars ", "clocks ", "phones ", "TVs "};
     String objetoploral[] ={"casas ", "bicicletas ", "motos ", "computadoras ", "manzanas ",
-            "carros ", "relojes ", "teléfonos ", "televisores "};
+           "carros ", "relojes ", "teléfonos ", "televisores "};
 
     String numbertherebe[] ={"two ", "three ", "four ", "five ",
-            "six ", "seven ", "eight ", "nine ", "ten "};
+           "six ", "seven ", "eight ", "nine ", "ten "};
     String numerostherebe[] ={"dos ", "tres ", "cuatro ", "cinco ",
-            "seis ", "siete ", "ocho ", "nueve ", "diez "};
+           "seis ", "siete ", "ocho ", "nueve ", "diez "};
 
     String ps1; // esta la uso para primera persona esp
     String ps1eng;
@@ -390,91 +390,91 @@ public class Nobles {
 
     //vnb verbos nobles top 100 in past
     String vnbp[] = {"had ", "got ", "saw ", "needed ", "knew ", "found ", "took ", "wanted ", "included ",
-            "thanked ", "added ", "chose ", "developed ", "remembered ", "brought ", "protected ",
-            "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgot ", "accepted ", "shared ", "imagined ", "recognized ", "replaced ", "borrowed ", "examined ",
-            "owed ", "incorporated ", "organized "
+           "thanked ", "added ", "chose ", "developed ", "remembered ", "brought ", "protected ",
+           "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
+           "forgot ", "accepted ", "shared ", "imagined ", "recognized ", "replaced ", "borrowed ", "examined ",
+           "owed ", "incorporated ", "organized "
     };
 
     //pasado simple primera persona uno (preterito)
     String ps1pre[] = {"tuve ", "obtuve ", "ví ", "necesité ", "supe ", "encontré ", "tomé ", "quice ", "incluí ",
-            "agradecí ", "agregué ", "elegí ", "desarrollé ", "recordé ", "trajé ", "protegí ",
-            "evité ", "describí ", "preferí ", "descubrí ", "esperé ", "perdí ", "oí ", "representé ",
-            "olvidé ", "acepté ", "comparé ", "imaginé ", "reconocí ", "reemplacé ", "pedí prestado ", "examiné ",
-            "debía ", "incorporé ", "organicé "
+           "agradecí ", "agregué ", "elegí ", "desarrollé ", "recordé ", "trajé ", "protegí ",
+           "evité ", "describí ", "preferí ", "descubrí ", "esperé ", "perdí ", "oí ", "representé ",
+           "olvidé ", "acepté ", "comparé ", "imaginé ", "reconocí ", "reemplacé ", "pedí prestado ", "examiné ",
+           "debía ", "incorporé ", "organicé "
     };
 
     //pasado simple primera persona 2 (imperfecto)
     String ps1imp[] = {"tenía ", "obtenía ", "veía ", "necesitaba ", "sabia ", "encontraba ", "tomaba ", "quería ", "incluía ",
-            "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "trajaba ", "protegía ",
-            "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
-            "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplacaba ", "pedía prestado ", "examinaba ",
-            "debía ", "incorporaba ", "organizaba "
+           "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "trajaba ", "protegía ",
+           "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
+           "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplacaba ", "pedía prestado ", "examinaba ",
+           "debía ", "incorporaba ", "organizaba "
     };
 
     //pasado simple segunda persona preterito
     String ps2pre[] = {"tuviste ", "obtuviste ", "viste ", "necesitaste ", "supiste ", "encontraste ", "tomaste ", "quiciste ", "incluiste ",
-            "agradeciste ", "agregaste ", "elegiste ", "desarrollaste ", "recordaste ", "trajiste ", "protegiste ",
-            "evitaste ", "describiste ", "preferiste ", "descubriste ", "esperaste ", "perdiste ", "oiste ", "representaste ",
-            "olvidaste ", "aceptaste ", "comparaste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
-            "debiste ", "incorporaste ", "organizaste "
+           "agradeciste ", "agregaste ", "elegiste ", "desarrollaste ", "recordaste ", "trajiste ", "protegiste ",
+           "evitaste ", "describiste ", "preferiste ", "descubriste ", "esperaste ", "perdiste ", "oiste ", "representaste ",
+           "olvidaste ", "aceptaste ", "comparaste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
+           "debiste ", "incorporaste ", "organizaste "
     };
 
     //pasado simple segunda persona imperfecto
     String ps2imp[] = {"tenías ", "obtenías ", "veías ", "necesitabas ", "sabías ", "encontrabas ", "tomabas ", "querías ", "incluías ",
-            "agradecías ", "agregabas ", "elegías ", "desarrollabas ", "recordabas ", "traías ", "protegías ",
-            "evitabas ", "describías ", "preferías ", "descubrías ", "esperabas ", "perdías ", "oías ", "representabas ",
-            "olvidabas ", "aceptabas ", "comparabas ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
-            "debías ", "incorporabas ", "organizabas "
+           "agradecías ", "agregabas ", "elegías ", "desarrollabas ", "recordabas ", "traías ", "protegías ",
+           "evitabas ", "describías ", "preferías ", "descubrías ", "esperabas ", "perdías ", "oías ", "representabas ",
+           "olvidabas ", "aceptabas ", "comparabas ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
+           "debías ", "incorporabas ", "organizabas "
     };
 
     //pasado simple tercera persona preterito
     String ps3p[] = {"tuvo ", "obtuvo ", "vio ", "necesitó ", "supo ", "encontró ", "tomó ", "quiso ", "incluyó ",
-            "agradeció ", "agregó ", "eligió ", "desarrolló ", "recordó ", "trajo ", "protegió ",
-            "evitó ", "describió ", "prefirió ", "descubrió ", "esperó ", "perdió ", "oyó ", "representó ",
-            "olvidó ", "aceptó ", "comparó ", "imaginó ", "reconoció ", "reemplazó ", "pidió prestado ", "examinó ",
-            "debió ", "incorporó ", "organizó "
+           "agradeció ", "agregó ", "eligió ", "desarrolló ", "recordó ", "trajo ", "protegió ",
+           "evitó ", "describió ", "prefirió ", "descubrió ", "esperó ", "perdió ", "oyó ", "representó ",
+           "olvidó ", "aceptó ", "comparó ", "imaginó ", "reconoció ", "reemplazó ", "pidió prestado ", "examinó ",
+           "debió ", "incorporó ", "organizó "
     };
 
     //pasado simple tercera persona imperfecto
     String ps3imp[] = {"tenía ", "obtenía ", "veía ", "necesitaba ", "sabía ", "encontraba ", "tomaba ", "quería ", "incluía ",
-            "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "traía ", "protegía ",
-            "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
-            "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplazaba ", "pedía prestado ", "examinaba ",
-            "debía ", "incorporaba ", "organziaba "
+           "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "traía ", "protegía ",
+           "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
+           "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplazaba ", "pedía prestado ", "examinaba ",
+           "debía ", "incorporaba ", "organziaba "
     };
 
     //verbos nobles cuarta persona (ellos) pasado preterito
     String vn4p[] = {"tuvieron ", "obtuvieron ", "vieron ", "necesitaron ", "supieron ", "encontraron ", "tomaron ", "quicieron ", "incluyeron ",
-            "agradecieron ", "agregaron ", "eligieron ", "desarrollaron ", "recordaron ", "trajeron ", "protegieron ",
-            "evitaron ", "describieron ", "prefirieron ", "descubrieron ", "esperaron ", "perdieron ", "oyeron ", "representaron ",
-            "olvidaron ", "aceptaron ", "compartieron ", "imaginaron ", "reconocieron ", "reemplazaron ", "pidieron prestado ", "examinaron ",
-            "debían ", "incorporaron ", "organizaron "
+           "agradecieron ", "agregaron ", "eligieron ", "desarrollaron ", "recordaron ", "trajeron ", "protegieron ",
+           "evitaron ", "describieron ", "prefirieron ", "descubrieron ", "esperaron ", "perdieron ", "oyeron ", "representaron ",
+           "olvidaron ", "aceptaron ", "compartieron ", "imaginaron ", "reconocieron ", "reemplazaron ", "pidieron prestado ", "examinaron ",
+           "debían ", "incorporaron ", "organizaron "
     };
 
 
     //verbos nobles cuarta persona (ellos) pasado imperfecto
     String vn4imp[] = {"tenían ", "obtenían ", "veían ", "necesitaban ", "sabían ", "encontraban ", "tomaban ", "querían ", "incluían ",
-            "agradecían ", "agregaban ", "elegían ", "desarrollaban ", "recordaban ", "traían ", "protegían ",
-            "evitaban ", "describían ", "preferían ", "descubrían ", "esperaban ", "perdían ", "oían ", "representaban ",
-            "olvidaban ", "aceptaban ", "comparaban ", "imaginaban ", "reconocían ", "reemplazaban ", "pedían prestado ", "examinaban ",
-            "debían ", "incorporaban ", "organizaban "
+           "agradecían ", "agregaban ", "elegían ", "desarrollaban ", "recordaban ", "traían ", "protegían ",
+           "evitaban ", "describían ", "preferían ", "descubrían ", "esperaban ", "perdían ", "oían ", "representaban ",
+           "olvidaban ", "aceptaban ", "comparaban ", "imaginaban ", "reconocían ", "reemplazaban ", "pedían prestado ", "examinaban ",
+           "debían ", "incorporaban ", "organizaban "
     };
 
     // verbos nosotros pasado preterito
     String vn5p[] = {"tuvimos ", "obtuvimos ", "vimos ", "necesitamos ", "supimos ", "encontramos ", "tomamos ", "quicimos ", "incluimos ",
-            "agradecimos ", "agregamos ", "eligimos ", "desarrollamos ", "recordamos ", "trajimos ", "protegimos ",
-            "evitamos ", "describimos ", "preferimos ", "descubrimos ", "esperamos ", "perdimos ", "oimos ", "representamos ",
-            "olvidamos ", "aceptamos ", "comparamos ", "imaginamos ", "reconocimos ", "reemplazamos ", "pedimos prestado ", "examinamos ",
-            "debimos ", "incorporamos ", "organizamos "
+           "agradecimos ", "agregamos ", "eligimos ", "desarrollamos ", "recordamos ", "trajimos ", "protegimos ",
+           "evitamos ", "describimos ", "preferimos ", "descubrimos ", "esperamos ", "perdimos ", "oimos ", "representamos ",
+           "olvidamos ", "aceptamos ", "comparamos ", "imaginamos ", "reconocimos ", "reemplazamos ", "pedimos prestado ", "examinamos ",
+           "debimos ", "incorporamos ", "organizamos "
     };
 
     // verbos nosotros pasado imperfecto
     String vn5imp[] = {"teníamos ", "obteníamos ", "veíamos ", "necesitabamos ", "sabíamos ", "encontrábamos ", "tomábamos ", "queríamos ", "incluíamos ",
-            "agradecíamos ", "agregábamos ", "elegíamos ", "desarrollábamos ", "recordábamos ", "traíamos ", "protegíamos ",
-            "evitábamos ", "describíamos ", "preferíamos ", "descubríamos ", "esperábamos ", "perdíamos ", "oímos ", "representábamos ",
-            "olvidábamos ", "aceptábamos ", "comparábamos ", "imaginábamos ", "reconocíamos ", "reemplazábamos ", "pedíamos prestado ", "examiábamos ",
-            "debíamos ", "incorporábamos ", "organiábamos "
+           "agradecíamos ", "agregábamos ", "elegíamos ", "desarrollábamos ", "recordábamos ", "traíamos ", "protegíamos ",
+           "evitábamos ", "describíamos ", "preferíamos ", "descubríamos ", "esperábamos ", "perdíamos ", "oímos ", "representábamos ",
+           "olvidábamos ", "aceptábamos ", "comparábamos ", "imaginábamos ", "reconocíamos ", "reemplazábamos ", "pedíamos prestado ", "examiábamos ",
+           "debíamos ", "incorporábamos ", "organiábamos "
     };
 
     // pasado simple preterito e imperfecto, aparentemente ya la hice negativo
@@ -483,17 +483,17 @@ public class Nobles {
 
     //vnb verbos nobles top 100 continuo
     String vnbc[] = {"having ", "getting ", "seeing ", "needing ", "knowing ", "finding ", "taking ", "wanting ", "including ",
-            "thanking ", "adding ", "choosing ", "developing ", "remembering ", "bringing ", "protecting ",
-            "avoiding ", "describing ", "prefering ", "discovering ", "expecting ", "losing ", "hearing ", "representing ",
-            "forgetting ", "accepting ", "sharing ", "imagining ", "recognizing ", "replacing ", "borrowing ", "examining ",
-            "owing ", "incorporating ", "organizing "};
+           "thanking ", "adding ", "choosing ", "developing ", "remembering ", "bringing ", "protecting ",
+           "avoiding ", "describing ", "prefering ", "discovering ", "expecting ", "losing ", "hearing ", "representing ",
+           "forgetting ", "accepting ", "sharing ", "imagining ", "recognizing ", "replacing ", "borrowing ", "examining ",
+           "owing ", "incorporating ", "organizing "};
 
     //vnb verbos nobles top 100 continuo spanish
     String vnbcs[] = {"teniendo ", "obteniendo ", "viendo ", "necesitando ", "sabiendo ", "encontrando ", "tomando ", "queriendo ", "incluyendo ",
-            "agradeciendo ", "agregando ", "eligiendo ", "desarrollando ", "recordando ", "trayendo ", "protegiendo ",
-            "evadiendo ", "describiendo ", "prefiriendo ", "descubriendo ", "esperando ", "perdiendo ", "escuchando ", "representando ",
-            "olvidando ", "aceptando ", "comparando ", "imaginando ", "reconociendo ", "reemplazando ", "pidiendo prestado ", "examinando ",
-            "debiendo ", "incorporando ", "organizando "};
+           "agradeciendo ", "agregando ", "eligiendo ", "desarrollando ", "recordando ", "trayendo ", "protegiendo ",
+           "evadiendo ", "describiendo ", "prefiriendo ", "descubriendo ", "esperando ", "perdiendo ", "escuchando ", "representando ",
+           "olvidando ", "aceptando ", "comparando ", "imaginando ", "reconociendo ", "reemplazando ", "pidiendo prestado ", "examinando ",
+           "debiendo ", "incorporando ", "organizando "};
 
 
     //ya estaá en pasado
@@ -502,38 +502,38 @@ public class Nobles {
 
     //verbos participios inglés
     String vpeng[] = {"had ", "gotten ", "seen ", "needed ", "known ", "found ", "taken ", "wanted ", "included ",
-            "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
-            "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
-            "owed ", "incorporated ", "organized "};
+           "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
+           "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
+           "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
+           "owed ", "incorporated ", "organized "};
 
     //verbos participios inglés Femenino
     String vpengF[] = {"had ", "gotten ", "seen ", "needed ", "found ", "taken ", "wanted ", "included ",
-            "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
-            "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
-            "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
-            "owed ", "incorporated ", "organized "};
+           "thanked ", "added ", "chosen ", "developed ", "remembered ", "brought ", "protected ",
+           "avoided ", "described ", "preferred ", "discovered ", "expected ", "lost ", "heard ", "represented ",
+           "forgotten ", "accepted ", "shared ", "imagined ", "recongnized ", "replaced ", "borrowed ", "examined ",
+           "owed ", "incorporated ", "organized "};
 
     //vnb verbos participios  spanish Masculino
     String vpsp[] = {"tenido ", "obtenido ", "visto ", "necesitado ", "sabido ", "encontrado ", "tomado ", "querido ", "incluido ",
-            "agradecido ", "agregado ", "elegido ", "desarrollado ", "recordado ", "traído ", "protegido ",
-            "evadido ", "descrito ", "preferido ", "descubierto ", "esperado ", "perdido ", "escuchado ", "representado ",
-            "olvidado ", "aceptado ", "comparado ", "imaginado ", "reconocido ", "reemplazdo ", "pedido prestado ", "examinado ",
-            "debido ", "incorporado ", "organizado "};
+           "agradecido ", "agregado ", "elegido ", "desarrollado ", "recordado ", "traído ", "protegido ",
+           "evadido ", "descrito ", "preferido ", "descubierto ", "esperado ", "perdido ", "escuchado ", "representado ",
+           "olvidado ", "aceptado ", "comparado ", "imaginado ", "reconocido ", "reemplazdo ", "pedido prestado ", "examinado ",
+           "debido ", "incorporado ", "organizado "};
 
     //vnb verbos participios  spanish Masculino
     String vpspM[] = {"tenido ", "obtenido ", "visto ", "necesitado ", "sabido ", "encontrado ", "tomado ", "querido ", "incluido ",
-            "agradecido ", "agregado ", "elegido ", "desarrollado ", "recordado ", "traído ", "protegido ",
-            "evadido ", "descrito ", "preferido ", "descubierto ", "esperado ", "perdido ", "escuchado ", "representado ",
-            "olvidado ", "aceptado ", "comparado ", "imaginado ", "reconocido ", "reemplazdo ", "pedido prestado ", "examinado ",
-            "debido ", "incorporado ", "organizado "};
+           "agradecido ", "agregado ", "elegido ", "desarrollado ", "recordado ", "traído ", "protegido ",
+           "evadido ", "descrito ", "preferido ", "descubierto ", "esperado ", "perdido ", "escuchado ", "representado ",
+           "olvidado ", "aceptado ", "comparado ", "imaginado ", "reconocido ", "reemplazdo ", "pedido prestado ", "examinado ",
+           "debido ", "incorporado ", "organizado "};
 
     //vnb verbos participios  spanish Femenino
     String vpspF[]= {
-            "tenida ","obtenida ","vista ","necesitada ","encontrada ","tomada ", "querida ", "incluida ",
-            "agradecida ", "agregada ", "elegida ", "desarrollada ", "recordada ", "traída ", "protegida ",
-            "evadida ", "descrita ", "preferida ", "descubierta ", "esperada ", "perdida ", "escuchada ", "representada ",
-            "olvidada ", "aceptada ", "comparada ", "imaginada ", "reconocida ", "reemplazada ", "pedido prestada ", "examinada ",
+           "tenida ","obtenida ","vista ","necesitada ","encontrada ","tomada ", "querida ", "incluida ",
+           "agradecida ", "agregada ", "elegida ", "desarrollada ", "recordada ", "traída ", "protegida ",
+           "evadida ", "descrita ", "preferida ", "descubierta ", "esperada ", "perdida ", "escuchada ", "representada ",
+           "olvidada ", "aceptada ", "comparada ", "imaginada ", "reconocida ", "reemplazada ", "pedido prestada ", "examinada ",
     };
 
 
@@ -543,45 +543,45 @@ public class Nobles {
 
     // verbos nobles primera persona futuro
     String vn1f[] = {"tendré ", "obtendré ", "veré ", "necesitaré ", "sabré ", "encontraré ", "tomaré ", "querré ", "incluiré ",
-            "agradeceré ", "agregaré ", "elegiré ", "desarrollaré ", "recordaré ", "traeré ", "protegeré ",
-            "evitaré ", "describiré ", "preferiré ", "descubriré ", "esperaré ", "perderé ", "oiré ", "representaré ",
-            "olvidaré ", "aceptaré ", "compartiré ", "imaginaré ", "reconoceré ", "reemplazaré ", "pediré prestado ", "examinaré ",
-            "deberé ", "incorporaré ", "organizaré "
+           "agradeceré ", "agregaré ", "elegiré ", "desarrollaré ", "recordaré ", "traeré ", "protegeré ",
+           "evitaré ", "describiré ", "preferiré ", "descubriré ", "esperaré ", "perderé ", "oiré ", "representaré ",
+           "olvidaré ", "aceptaré ", "compartiré ", "imaginaré ", "reconoceré ", "reemplazaré ", "pediré prestado ", "examinaré ",
+           "deberé ", "incorporaré ", "organizaré "
     };
 
     // verbos nobles segunda persona futuro
     String vn2f[] = {"tendrás ", "obtendrás ", "verás ", "necesitarás ", "sabrás ", "encontrarás ", "tomarás ", "querrás ", "incluirás ",
-            "agradecerás ", "agregarás ", "elegirás ", "desarrollarás ", "recordarás ", "traerás ", "protegerás ",
-            "evitarás ", "describirás ", "preferirás ", "descubrirás ", "esperarás ", "perderás ", "oirás ", "representarás ",
-            "olvidarás ", "aceptarás ", "compartirás ", "imaginarás ", "reconocerás ", "reemplazarás ", "pedirás prestado ", "examinarás ",
-            "deberás ", "incorporarás ", "organizarás "
+           "agradecerás ", "agregarás ", "elegirás ", "desarrollarás ", "recordarás ", "traerás ", "protegerás ",
+           "evitarás ", "describirás ", "preferirás ", "descubrirás ", "esperarás ", "perderás ", "oirás ", "representarás ",
+           "olvidarás ", "aceptarás ", "compartirás ", "imaginarás ", "reconocerás ", "reemplazarás ", "pedirás prestado ", "examinarás ",
+           "deberás ", "incorporarás ", "organizarás "
     };
 
 
     // verbos nobles tercera persona futuro
     String vn3f[] = {"tendrá ", "obtendrá ", "verá ", "necesitará ", "sabrá ", "encontrará ", "tomará ", "querrá ", "incluirá ",
-            "agradecerá ", "agregará ", "elegirá ", "desarrollará ", "recordará ", "traerá ", "protegerá ",
-            "evitará ", "describirá ", "preferirá ", "descubrirá ", "esperará ", "perderá ", "oirá ", "representará ",
-            "olvidará ", "aceptará ", "compartirá ", "imaginará ", "reconocerá ", "reemplazará ", "pedirá prestado ", "examinará ",
-            "deberá ", "incorporará ", "organizará "
+           "agradecerá ", "agregará ", "elegirá ", "desarrollará ", "recordará ", "traerá ", "protegerá ",
+           "evitará ", "describirá ", "preferirá ", "descubrirá ", "esperará ", "perderá ", "oirá ", "representará ",
+           "olvidará ", "aceptará ", "compartirá ", "imaginará ", "reconocerá ", "reemplazará ", "pedirá prestado ", "examinará ",
+           "deberá ", "incorporará ", "organizará "
     };
 
 
     // verbos nobles cuarta persona futuro
     String vn4f[] = {"tendrán ", "obtendrán ", "verán ", "necesitarán ", "sabrán ", "encontrarán ", "tomarán ", "querrán ", "incluirán ",
-            "agradecerán ", "agregarán ", "elegirán ", "desarrollarán ", "recordarán ", "traerán ", "protegerán ",
-            "evitarán ", "describirán ", "preferirán ", "descubrirán ", "esperarán ", "perderán ", "oirán ", "representarán ",
-            "olvidarán ", "aceptarán ", "compartirán ", "imaginarán ", "reconocerán ", "reemplazarán ", "pedirán prestado ", "examinarán ",
-            "deberán ", "incorporarán ", "organizarán "
+           "agradecerán ", "agregarán ", "elegirán ", "desarrollarán ", "recordarán ", "traerán ", "protegerán ",
+           "evitarán ", "describirán ", "preferirán ", "descubrirán ", "esperarán ", "perderán ", "oirán ", "representarán ",
+           "olvidarán ", "aceptarán ", "compartirán ", "imaginarán ", "reconocerán ", "reemplazarán ", "pedirán prestado ", "examinarán ",
+           "deberán ", "incorporarán ", "organizarán "
     };
 
 
     // verbos nobles quinta persona futuro
     String vn5f[] = {"tendremos ", "obtendremos ", "veremos ", "necesitaremos ", "sabremos ", "encontraremos ", "tomaras ", "querremos ", "incluiremos ",
-            "agradeceremos ", "agregaremos ", "elegiremos ", "desrrollaremos ", "recordaremos ", "traeremos ", "protegeremos ",
-            "evitaremos ", "describiremos ", "preferiremos ", "descubriremos ", "esperaremos ", "perderemos ", "oiremos ", "representaremos ",
-            "olvidaremos ", "aceptaremos ", "compartiremos ", "imaginaremos ", "reconoceremos ", "reemplazaremos ", "pediremos prestado ", "examinaremos ",
-            "deberemos ", "incorporaremos ", "organizaremos "
+           "agradeceremos ", "agregaremos ", "elegiremos ", "desrrollaremos ", "recordaremos ", "traeremos ", "protegeremos ",
+           "evitaremos ", "describiremos ", "preferiremos ", "descubriremos ", "esperaremos ", "perderemos ", "oiremos ", "representaremos ",
+           "olvidaremos ", "aceptaremos ", "compartiremos ", "imaginaremos ", "reconoceremos ", "reemplazaremos ", "pediremos prestado ", "examinaremos ",
+           "deberemos ", "incorporaremos ", "organizaremos "
     };
 
 
@@ -589,38 +589,38 @@ public class Nobles {
     // aqui abajo van los modales
     // verbos nobles primera persona would
     String vn1w[] = {"tendría ", "obtendría ", "vería ", "necesitaría ", "sabría ", "encontraría ", "tomaría ", "querría ", "incluiría ",
-            "agradecería ", "agregaría ", "elegiría ", "desarrollaría ", "recordaría ", "traería ", "protegería ",
-            "evitaría ", "descubriría ", "preferiría ", "descubriría ", "esperaría ", "perdería ", "oiría ", "representaría ",
-            "olvidaría ", "aceptaría ", "compartiría ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
-            "debería ", "incorporaría ", "organizaría "
+           "agradecería ", "agregaría ", "elegiría ", "desarrollaría ", "recordaría ", "traería ", "protegería ",
+           "evitaría ", "descubriría ", "preferiría ", "descubriría ", "esperaría ", "perdería ", "oiría ", "representaría ",
+           "olvidaría ", "aceptaría ", "compartiría ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
+           "debería ", "incorporaría ", "organizaría "
     };
     // verbos nobles segunda persona would
     String vn2w[] = {"tendrías ", "obtendrías ", "verías ", "necesitarías ", "sabrías ", "encontrarías ", "tomarías ", "querrías ", "incluiría ",
-            "agradecerías ", "agregarías ", "elegirías ", "desarrollarías ", "recordarías ", "traerías ", "protegerías ",
-            "evitarías ", "descubrirías ", "preferirías ", "descubrirías ", "esperarías ", "perderías ", "oirías ", "representarías ",
-            "olvidarías ", "aceptarías ", "compartirías ", "imaginarías ", "reconocerías ", "reemplazarías ", "pedirías prestado ", "examinarías ",
-            "deberías ", "incorporarías ", "organizarías "
+           "agradecerías ", "agregarías ", "elegirías ", "desarrollarías ", "recordarías ", "traerías ", "protegerías ",
+           "evitarías ", "descubrirías ", "preferirías ", "descubrirías ", "esperarías ", "perderías ", "oirías ", "representarías ",
+           "olvidarías ", "aceptarías ", "compartirías ", "imaginarías ", "reconocerías ", "reemplazarías ", "pedirías prestado ", "examinarías ",
+           "deberías ", "incorporarías ", "organizarías "
     };
     // verbos nobles tercera persona would
     String vn3w[] = {"tendría ", "obtendría ", "vería ", "necesitaría ", "sabría ", "encontraría ", "tomaría ", "querría ", "incluiría ",
-            "agradecería ", "agregaría ", "elegiría ", "desarrollaría ", "recordaría ", "traería ", "protegería ",
-            "evitaría ", "descubriría ", "preferiría ", "descubriría ", "esperaría ", "perdería ", "oiría ", "representaría ",
-            "olvidaría ", "aceptaría ", "compartiría ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
-            "debería ", "incorporaría ", "organizaría "
+           "agradecería ", "agregaría ", "elegiría ", "desarrollaría ", "recordaría ", "traería ", "protegería ",
+           "evitaría ", "descubriría ", "preferiría ", "descubriría ", "esperaría ", "perdería ", "oiría ", "representaría ",
+           "olvidaría ", "aceptaría ", "compartiría ", "imaginaría ", "reconocería ", "reemplazaría ", "pediría prestado ", "examinaría ",
+           "debería ", "incorporaría ", "organizaría "
     };
     // verbos nobles cuarta persona would
     String vn4w[] = {"tendrían ", "obtendrían ", "verían ", "necesitarían ", "sabrían ", "encontrarían ", "tomarían ", "querrían ", "incluirían ",
-            "agradecerían ", "agregarían ", "elegirían ", "desarrollarían ", "recordarían ", "traerían ", "protegerían ",
-            "evitarían ", "descubrirían ", "preferirían ", "descubrirían ", "esperarían ", "perderían ", "oirían ", "representarían ",
-            "olvidarían ", "aceptarían ", "compartirían ", "imaginarían ", "reconocerían ", "reemplazarían ", "pedirían prestado ", "examinarían ",
-            "deberían ", "incorporarían ", "organizarían "
+           "agradecerían ", "agregarían ", "elegirían ", "desarrollarían ", "recordarían ", "traerían ", "protegerían ",
+           "evitarían ", "descubrirían ", "preferirían ", "descubrirían ", "esperarían ", "perderían ", "oirían ", "representarían ",
+           "olvidarían ", "aceptarían ", "compartirían ", "imaginarían ", "reconocerían ", "reemplazarían ", "pedirían prestado ", "examinarían ",
+           "deberían ", "incorporarían ", "organizarían "
     };
     // verbos nobles quinta persona would
     String vn5w[] = {"tendríamos ", "obtendríamos ", "veríamos ", "necesitaríamos ", "sabríamos ", "encontraríamos ", "tomaríamos ", "querrían ", "incluiríamos ",
-            "agradeceríamos ", "agregaríamos ", "elegiríamos ", "desarrollaríamos ", "recordaríamos ", "traeríamos ", "protegeríamos ",
-            "evitaríamos ", "descubriríamos ", "preferiríamos ", "descubriríamos ", "esperaríamos ", "perderíamos ", "oiríamos ", "representaríamos ",
-            "olvidaríamos ", "aceptaríamos ", "compartiríamos ", "imaginaríamos ", "reconoceríamos ", "reemplazaríamos ", "pediríamos prestado ", "examinaríamos ",
-            "deberíamos ", "incorporaríamos ", "organizaríamos "
+           "agradeceríamos ", "agregaríamos ", "elegiríamos ", "desarrollaríamos ", "recordaríamos ", "traeríamos ", "protegeríamos ",
+           "evitaríamos ", "descubriríamos ", "preferiríamos ", "descubriríamos ", "esperaríamos ", "perderíamos ", "oiríamos ", "representaríamos ",
+           "olvidaríamos ", "aceptaríamos ", "compartiríamos ", "imaginaríamos ", "reconoceríamos ", "reemplazaríamos ", "pediríamos prestado ", "examinaríamos ",
+           "deberíamos ", "incorporaríamos ", "organizaríamos "
     };
 
 
@@ -631,31 +631,31 @@ public class Nobles {
 
     //vnb verbos nobles top 100  primera persona  y tercera, esp subjuntivos
     String vn1y3subj[] = {"tenga ", "obtenga ", "vea ", "necesite ", "sepa ", "encuentre ", "tome ", "quiera ", "incluya ",
-            "agradezca ", "agregue ", "elija ", "desarrolle ", "recuerde ", "traiga ", "proteja ",
-            "evite ", "describa ", "prefiera ", "descubra ", "espere ", "pierda ", "oiga ", "represente ",
-            "olvide ", "acepte ", "comparta ", "imagine ", "reconozca ", "reemplace ", "pida prestado ", "examine ",
-            "deba ", "incorpore ", "organice "
+           "agradezca ", "agregue ", "elija ", "desarrolle ", "recuerde ", "traiga ", "proteja ",
+           "evite ", "describa ", "prefiera ", "descubra ", "espere ", "pierda ", "oiga ", "represente ",
+           "olvide ", "acepte ", "comparta ", "imagine ", "reconozca ", "reemplace ", "pida prestado ", "examine ",
+           "deba ", "incorpore ", "organice "
     };
     // verbos nobles segunda persona subjuntivo
     String vn2subj[] = {"tengas ", "obtengas ", "veas ", "necesites ", "sepas ", "encuentres ", "tomes ", "quieras ", "incluyas ",
-            "agradezcas ", "agregues ", "elijas ", "desarrolles ", "recuerdes ", "traigas ", "protejas ",
-            "evites ", "describas ", "prefieras ", "descubras ", "esperes ", "pierdas ", "oigas ", "representes ",
-            "olvides ", "aceptes ", "compartas ", "imagines ", "reconozcas ", "reemplaces ", "pidas prestado ", "examines ",
-            "debas ", "incorpores ", "organices "
+           "agradezcas ", "agregues ", "elijas ", "desarrolles ", "recuerdes ", "traigas ", "protejas ",
+           "evites ", "describas ", "prefieras ", "descubras ", "esperes ", "pierdas ", "oigas ", "representes ",
+           "olvides ", "aceptes ", "compartas ", "imagines ", "reconozcas ", "reemplaces ", "pidas prestado ", "examines ",
+           "debas ", "incorpores ", "organices "
     };
     //vnb verbos nobles top 100  cuarta persona esp subjuntivos
     String vn4subj[] = {"tengan ", "obtengan ", "vean ", "necesiten ", "sepan ", "encuentren ", "tomen ", "quieran ", "incluyan ",
-            "agradezcan ", "agreguen ", "elijan ", "desarrollen ", "recuerden ", "traigan ", "protejan ",
-            "eviten ", "describan ", "prefieran ", "descubran ", "esperen ", "pierdan ", "oigan ", "representen ",
-            "olviden ", "acepten ", "compartan ", "imaginen ", "reconozcan ", "reemplacen ", "pidan prestado ", "examinen ",
-            "deban ", "incorporen ", "organicen "
+           "agradezcan ", "agreguen ", "elijan ", "desarrollen ", "recuerden ", "traigan ", "protejan ",
+           "eviten ", "describan ", "prefieran ", "descubran ", "esperen ", "pierdan ", "oigan ", "representen ",
+           "olviden ", "acepten ", "compartan ", "imaginen ", "reconozcan ", "reemplacen ", "pidan prestado ", "examinen ",
+           "deban ", "incorporen ", "organicen "
     };
     //vnb verbos nobles nosotros subjuntivo
     String vn5subj[] = {"tengamos ", "obtengamos ", "veamos ", "necesitemos ", "sepamos ", "encontremos ", "tomemos ", "queramos ", "incluyamos ",
-            "agradezcamos ", "agreguemos ", "elijamos ", "desarrollemos ", "recordemos ", "traigamos ", "protejamos ",
-            "evitemos ", "describamos ", "prefiramos ", "descubramos ", "esperemos ", "perdamos ", "oigamos ", "representemos ",
-            "olvidemos ", "aceptemos ", "compartamos ", "imaginemos ", "reconozcamos ", "reemplacemos ", "pidamos prestado ", "examinemos ",
-            "debamos ", "incorporemos ", "organicemos "
+           "agradezcamos ", "agreguemos ", "elijamos ", "desarrollemos ", "recordemos ", "traigamos ", "protejamos ",
+           "evitemos ", "describamos ", "prefiramos ", "descubramos ", "esperemos ", "perdamos ", "oigamos ", "representemos ",
+           "olvidemos ", "aceptemos ", "compartamos ", "imaginemos ", "reconozcamos ", "reemplacemos ", "pidamos prestado ", "examinemos ",
+           "debamos ", "incorporemos ", "organicemos "
     };
 
 
@@ -677,22 +677,22 @@ public class Nobles {
     //preposicionales , incluso tal vez para dif 4
 //these should go right after the subject
     String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
-            "generalmente ",
-            "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
-            "regularmente ",
-            "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
-            "perfectamente ", "facilmente ", "cuidadosamente ", "abiertamente ",
-            "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
-            "seguido ", "calmadamente "
+           "generalmente ",
+           "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
+           "regularmente ",
+           "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
+           "perfectamente ", "facilmente ", "cuidadosamente ", "abiertamente ",
+           "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
+           "seguido ", "calmadamente "
     };
     String frequadv[] = {
-            "always ", "constantly ", "frequently ", "generally ",
-            "normally ", "occasionally ", "often ", "rarely ", "regularly ",
-            "regularly ",
-            "usually ", "happily ", "early ", "late ", "daily ",
-            "perfectly ", "easily ", "carefully ",
-            "openly ", "finally ", "dangerouslly ", "desperately ",
-            "occasionally ", "often ", "calmly "
+           "always ", "constantly ", "frequently ", "generally ",
+           "normally ", "occasionally ", "often ", "rarely ", "regularly ",
+           "regularly ",
+           "usually ", "happily ", "early ", "late ", "daily ",
+           "perfectly ", "easily ", "carefully ",
+           "openly ", "finally ", "dangerouslly ", "desperately ",
+           "occasionally ", "often ", "calmly "
     };
 // eliminated seldom , better, sometimes, infrequentemente
 
@@ -756,7 +756,7 @@ public class Nobles {
             case 0:
                 ps1 = "yo " + "estoy " + vnbcs[v] + nnoblesesp[n];
                 ps1eng = "I " + "am " + vnbc[v] + nnobles[n];
-                ps1eng2 = "I´m " + vnbc[v] + nnobles[n];
+                ps1eng2 = "I'm " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú " + "estás " + vnbcs[v] + nnoblesesp[n];
                 ps2eng = "you " + "are " + vnbc[v] + nnobles[n];
@@ -811,6 +811,7 @@ public class Nobles {
                 ps5 = "nosotros no " + "estamos " + vnbcs[v] + nnoblesesp[n];
                 ps5eng = "we're " + "not " + vnbc[v] + nnobles[n];
                 ps5eng2 = "we " + "aren't " + vnbc[v] + nnobles[n];
+
                 break;
         }
     }
@@ -2379,7 +2380,7 @@ public class Nobles {
                 ps4eng = "they " + "can't " + vnb[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "podemos " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we " + "can't  " + vnb[v] + nnobles[n];
+                ps5eng = "we " + "can't " + vnb[v] + nnobles[n];
                 break;
         }
 
@@ -2475,25 +2476,25 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v] + nnoblesesp[n];
-                ps1eng = "I " + "mustn't " + vnb[v] + nnobles[n];
+                ps1eng = "I " + "must not " + vnb[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes " + vnbs[v] + nnoblesesp[n];
-                ps2eng = "you " + "mustn't " + vnb[v] + nnobles[n];
+                ps2eng = "you " + "must not " + vnb[v] + nnobles[n];
 
                 ps3 = "él no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3eng = "he " + "mustn't " + vnb[v] + nnobles[n];
+                ps3eng = "he " + "must not " + vnb[v] + nnobles[n];
 
                 ps3ella = "ella no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3she = "she " + "mustn't " + vnb[v] + nnobles[n];
+                ps3she = "she " + "must not " + vnb[v] + nnobles[n];
 
                 ps3eso = "eso no " + "debe " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it " + "mustn't " + vnb[v] + nnobles[n];
+                ps3it = "it " + "must not " + vnb[v] + nnobles[n];
 
                 ps4 = "ellos no " + "deben " + vnbs[v] + nnoblesesp[n];
-                ps4eng = "they " + "mustn't " + vnb[v] + nnobles[n];
+                ps4eng = "they " + "must not " + vnb[v] + nnobles[n];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v] + nnoblesesp[n];
-                ps5eng = "we " + "mustn't " + vnb[v] + nnobles[n];
+                ps5eng = "we " + "must not " + vnb[v] + nnobles[n];
 
                 break;
         }
@@ -2532,31 +2533,31 @@ public class Nobles {
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v] + nnoblesesp[n];
                 ps1eng = "I " + "must not " + "be " + vnbc[v] + nnobles[n];
-                ps1eng2 = "I " + "mustn't " + "be " + vnbc[v] + nnobles[n];
+                ps1eng2 = "I " + "must not " + "be " + vnbc[v] + nnobles[n];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v] + nnoblesesp[n];
                 ps2eng = "you " + "must not " + "be " + vnbc[v] + nnobles[n];
-                ps2eng2 = "you " + "mustn't " + "be " + vnbc[v] + nnobles[n];
+                ps2eng2 = "you " + "must not " + "be " + vnbc[v] + nnobles[n];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v] + nnoblesesp[n];
                 ps3eng = "he " + "must not be " + vnbc[v] + nnobles[n];
-                ps3eng2 = "he " + "mustn't be " + vnbc[v] + nnobles[n];
+                ps3eng2 = "he " + "must not be " + vnbc[v] + nnobles[n];
 
                 ps3ella = "ella no debe estar " + vnbcs[v] + nnoblesesp[n];
                 ps3she = "she " + "must not be " + vnbc[v] + nnobles[n];
-                ps3she2 = "she " + "mustn't be " + vnbc[v] + nnobles[n];
+                ps3she2 = "she " + "must not be " + vnbc[v] + nnobles[n];
 
                 ps3eso = "eso no debe estar " + vnbcs[v] + nnoblesesp[n];
                 ps3it = "it " + "must not be " + vnbc[v] + nnobles[n];
-                ps3it2 = "it " + "mustn't be " + vnbc[v] + nnobles[n];
+                ps3it2 = "it " + "must not be " + vnbc[v] + nnobles[n];
 
                 ps4 = "ellos no deben estar " + vnbcs[v] + nnoblesesp[n];
                 ps4eng = "they " + "must not be " + vnbc[v] + nnobles[n];
-                ps4eng2 = "they " + "mustn't be " + vnbc[v] + nnobles[n];
+                ps4eng2 = "they " + "must not be " + vnbc[v] + nnobles[n];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v] + nnoblesesp[n];
                 ps5eng = "we " + "must not be " + vnbc[v] + nnobles[n];
-                ps5eng2 = "we " + "mustn't be " + vnbc[v] + nnobles[n];
+                ps5eng2 = "we " + "must not be " + vnbc[v] + nnobles[n];
 
                 break;
         }
@@ -2715,26 +2716,26 @@ public class Nobles {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+              "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (neg) {
@@ -2827,7 +2828,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no " + vn3[v] + nnoblesesp[n];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
@@ -2850,7 +2851,7 @@ public class Nobles {
                 ps3she = "she is supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it is supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "they are supposed to " + vnb[v] + nnobles[n];
@@ -2866,14 +2867,14 @@ public class Nobles {
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n];
                 ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n];
 
-                ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n];
+                ps3 = "se supone que él no tiene que " + vnbs[v] + nnoblesesp[n];
                 ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n];
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
@@ -2896,7 +2897,7 @@ public class Nobles {
     ps3she = "she is supposed to " + vnb[v] + nnobles[n];
 
     ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n];
-    ps3it = "it is supposed to  " + vnb[v] + nnobles[n];
+    ps3it = "it is supposed to " + vnb[v] + nnobles[n];
 
     ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n];
     ps4eng = "they are supposed to " + vnb[v] + nnobles[n];
@@ -2919,7 +2920,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n];
@@ -3269,7 +3270,7 @@ public class Nobles {
                 ps3she = "she didn't use to " + vnb[v] + nnobles[n];
 
                 ps3eso = "Eso no solía " + vnbs[v] + nnoblesesp[n];
-                ps3it = "It didn't use to  " + vnb[v] + nnobles[n];
+                ps3it = "It didn't use to " + vnb[v] + nnobles[n];
 
                 ps4 = "Ellos no solían " + vnbs[v] + nnoblesesp[n];
                 ps4eng = "They didn't use to " + vnb[v] + nnobles[n];
@@ -3294,7 +3295,7 @@ public class Nobles {
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n];
                 ps3eng = "He is used to " + vnbc[v] + nnobles[n];
 
-                ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n];
+                ps3ella = "Ella está acostumbrada a " + vnbs[v] + nnoblesesp[n];
                 ps3she = "She is used to " + vnbc[v] + nnobles[n];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n];
@@ -3317,7 +3318,7 @@ public class Nobles {
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n];
                 ps3eng = "He isn't used to " + vnbc[v] + nnobles[n];
 
-                ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n];
+                ps3ella = "Ella no está acostumbrada a " + vnbs[v] + nnoblesesp[n];
                 ps3she = "She isn't used to " + vnbc[v] + nnobles[n];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n];
@@ -6850,7 +6851,7 @@ public class Nobles {
 
                 ps2 = "tú no " + "estás " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps2eng = "you're not "  + vnbc[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you aren´t " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you aren't " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 ps3 = "él no " + "está " + vnbcs[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he's not " + vnbc[v] + nnobles[n] + frequadv[r];
@@ -8108,37 +8109,37 @@ public class Nobles {
     public void GenCouldPerf3() {
         switch (negg) {
             case 0:
-                ps1 = "yo pude " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps1 = "yo pude " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps1eng = "I could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps1eng2 = "I could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps2 = "tú pudiste " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps2 = "tú pudiste " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps2eng = "you could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps2eng2 = "you could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3 = "él pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3 = "él pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3eng = "he could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3eng2 = "he could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3ella = "ella pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3ella = "ella pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3she = "she could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3she2 = "she could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps3eso = "eso pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps3eso = "eso pudo " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps3it = "it could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps3it2 = "it could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps4 = "ellos pudieron " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps4 = "ellos pudieron " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps4eng = "they could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps4eng2 = "they could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros pudimos  " +  "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
+                ps5 = "nosotros pudimos " + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r] ;
                 ps5eng = "we could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we could " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -8430,7 +8431,7 @@ public class Nobles {
                 ps4eng2 = "they'd " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros debimos  "  + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
+                ps5 = "nosotros debimos "  + "haber " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we should "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we'd " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
@@ -8734,7 +8735,7 @@ public class Nobles {
                 ps4eng2 = "they might " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
 
 
-                ps5 = "nosotros quizá  "  + "hayamos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
+                ps5 = "nosotros quizá "  + "hayamos " + vpsp[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we might "  + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 ps5eng2 = "we might " + "have " + vpeng[v] + nnobles[n] + frequadv[r];
                 break;
@@ -9046,38 +9047,38 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps1eng = "I " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng = "I " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps2eng = "you " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng = "you " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3eng = "he " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng = "he " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3she = "she " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she = "she " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps3it = "it " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps3it2 = "it " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it = "it " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps3it2 = "it " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps4eng = "they " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng = "they " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + advfrequ[r];
-                ps5eng = "we " + "mustn't "  + vnb[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we " + "mustn't " + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng = "we " + "must not "  + vnb[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we " + "must not " + vnb[v] + nnobles[n] + frequadv[r];
                 break;
         }
     }// nuevo
@@ -9122,37 +9123,37 @@ public class Nobles {
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps1eng = "I must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps1eng2 = "I mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps1eng2 = "I must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps2eng = "you must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps2eng2 = "you mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps2eng2 = "you must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3eng = "he must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3eng2 = "he mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3eng2 = "he must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3she = "she must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3she2 = "she mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3she2 = "she must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps3it = "it must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps3it2 = "it mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps3it2 = "it must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps4eng = "they must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps4eng2 = "they mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps4eng2 = "they must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + advfrequ[r];
                 ps5eng = "we must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
-                ps5eng2 = "we mustn't " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
+                ps5eng2 = "we must not " + "be " + vnbc[v] + nnobles[n] + frequadv[r];
 
                 break;
         }
@@ -9225,141 +9226,141 @@ public class Nobles {
 
     String objyo[]= {"te ","lo ", "la ","lo ", "los ", "nos "};
     String objtu[]= {"me ","lo ", "la ","lo ", "los ", "nos "};
-    String objel[]= {"me ","te ", "la ","lo ", "los ", "nos "};
-    String objella[]= {"me ","lo ", "te ","lo ", "los ", "nos "};
-    String objeso[]= {"me ","lo ", "te ","la ", "los ", "nos "};
+    String objel[]= {"me ","te ", "la ","lo ", "los ", "nos ","lo "};
+    String objella[]= {"me ","te ", "la ","lo ", "los ", "nos ","lo "};
+    String objeso[]= {"me ","te ", "la ","lo ", "los ", "nos ","lo "};
     String objellos[]= {"me ","lo ", "te ","lo ", "la ", "nos "};
     String objnos[]= {"lo ", "te ","lo ", "los ", "la "};
 
     String obji[]= {"you ","him ", "her ","it ", "them ", "us "};
     String objyou[]= {"me ","him ", "her ","it ", "them ", "us "};
-    String objhe[]= {"me ","you ", "her ","it ", "them ", "us "};
-    String objshe[]= {"me ","him ", "you ","it ", "them ", "us "};
-    String objit[]= {"me ","him ", "you ","her ", "them ", "us "};
+    String objhe[]= {"me ","you ", "her ","it ", "them ", "us ","him "};
+    String objshe[]= {"me ","you ", "her ","it ", "them ", "us ","him "};
+    String objit[]= {"me ","you ", "her ","it ", "them ", "us ","him "};
     String objthem[]= {"me ","him ", "you ","it ", "her ", "us "};
     String objus[]= {"him ", "you ","it ", "them ", "her "};
 
     String vp1 []={
-            "acuesto ", "afieto ", "divierto ",
-            "olvido ", "duermo ",  "pongo ",
-            "baño ", "escondo ","como ",
-            "comporto ", "quedo ", "levanto ",
-            "quejo ", "marcho ", "meto a ",
-            "muero ", "niego ", "dirigo a ",
-            "acuerdo "
+           "acuesto ", "afieto ", "divierto ",
+           "olvido ", "duermo ", "pongo ",
+           "baño ", "escondo ","como ",
+           "comporto ", "quedo ", "levanto ",
+           "quejo ", "marcho ", "meto a ",
+           "muero ", "niego ", "dirigo a ",
+           "acuerdo "
     };
 
     String vp2 []={
-            "acuestas ", "afeitas ", "diviertes ",
-            "olvidas ", "duermes ", "pones ",
-            "bañas ", "escondes ","comes ",
-            "comportas ", "quedas ", "levantas ",
-            "quejas ", "marchas ", "metes a ",
-            "mueres ", "niegas ", "diriges a ",
-            "acuerdas "
+           "acuestas ", "afeitas ", "diviertes ",
+           "olvidas ", "duermes ", "pones ",
+           "bañas ", "escondes ","comes ",
+           "comportas ", "quedas ", "levantas ",
+           "quejas ", "marchas ", "metes a ",
+           "mueres ", "niegas ", "diriges a ",
+           "acuerdas "
     };
     String vp3 []={
-            "acuesta ", "afeita ", "divierte ",
-            "olvida ", "duerme ",  "pone ",
-            "baña ", "esconde ","come ",
-            "comporta ","queda ", "levanta ",
-            "queja ", "marcha ", "mete a ",
-            "muere ", "niega ", "dirige a ",
-            "acuerda "
+           "acuesta ", "afeita ", "divierte ",
+           "olvida ", "duerme ", "pone ",
+           "baña ", "esconde ","come ",
+           "comporta ","queda ", "levanta ",
+           "queja ", "marcha ", "mete a ",
+           "muere ", "niega ", "dirige a ",
+           "acuerda "
     };
     String vp4 []={
-            "acuestan ", "afeitan ", "divierten ",
-            "olvidan ", "duermen ",  "ponen ",
-            "bañan ", "esconden ","comen ",
-            "comportan ", "quedan ", "levantan ",
-            "quejan ", "marchan ", "meten a ",
-            "mueren ", "niegan ", "dirigen a ",
-            "acuerdan "
+           "acuestan ", "afeitan ", "divierten ",
+           "olvidan ", "duermen ", "ponen ",
+           "bañan ", "esconden ","comen ",
+           "comportan ", "quedan ", "levantan ",
+           "quejan ", "marchan ", "meten a ",
+           "mueren ", "niegan ", "dirigen a ",
+           "acuerdan "
     };
 
     String vp5 []={
-            "acostamos ", "afeitamos ", "divertimos ",
-            "olvidamos ", "dormimos ","ponemos ",
-            "bañamos ", "escondemos ","comemos ",
-            "comportamos ","quedamos ", "levantamos ",
-            "quejamos ", "marchamos ", "metemos a ",
-            "morimos ", "negamos ", "dirigimos a ",
-            "acordamos "
+           "acostamos ", "afeitamos ", "divertimos ",
+           "olvidamos ", "dormimos ","ponemos ",
+           "bañamos ", "escondemos ","comemos ",
+           "comportamos ","quedamos ", "levantamos ",
+           "quejamos ", "marchamos ", "metemos a ",
+           "morimos ", "negamos ", "dirigimos a ",
+           "acordamos "
     };
 
     // verbos pronominativos ingl[es
     String vpe1[]={
-            "lay down ", "shave ", "have fun " ,
-            "forget ","sleep ", "wear ",
-            "shower ", "hide ", "eat ",
-            "behave ", "stay ", "get up ",
-            "complain ","leave ", "get in ",
-            "die ", "refuse ", "head to ",
-            "remember "
+           "lay down ", "shave ", "have fun " ,
+           "forget ","sleep ", "wear ",
+           "shower ", "hide ", "eat ",
+           "behave ", "stay ", "get up ",
+           "complain ","leave ", "get in ",
+           "die ", "refuse ", "head to ",
+           "remember "
     };
     String vpe2[]={
-            "lay down ", "shave ", "have fun " ,
-            "forget ","sleep ","wear ",
-            "shower ", "hide ", "eat ",
-            "behave ", "stay ", "get up ",
-            "complain ","leave ", "get in ",
-            "die ", "refuse ", "head to ",
-            "remember "
+           "lay down ", "shave ", "have fun " ,
+           "forget ","sleep ","wear ",
+           "shower ", "hide ", "eat ",
+           "behave ", "stay ", "get up ",
+           "complain ","leave ", "get in ",
+           "die ", "refuse ", "head to ",
+           "remember "
     };
     String vpe3[]={
-            "lays down ", "shaves ", "has fun " ,
-            "forget ","sleeps ","wears ",
-            "showers ", "hides ", "eats ",
-            "behaves ", "stays ", "gets up ",
-            "complains ","leaves ", "gets in ",
-            "dies ", "refuses ", "heads to ",
-            "remembers "
+           "lays down ", "shaves ", "has fun " ,
+           "forget ","sleeps ","wears ",
+           "showers ", "hides ", "eats ",
+           "behaves ", "stays ", "gets up ",
+           "complains ","leaves ", "gets in ",
+           "dies ", "refuses ", "heads to ",
+           "remembers "
     };
     String vpe4[]={
-            "lay down ", "shave ", "have fun " ,
-            "forget ","sleep ", "wear ",
-            "shower ", "hide ", "eat ",
-            "behave ", "stay ", "get up ",
-            "complain ", "leave ", "get in ",
-            "die ", "refuse ", "head to ",
-            "remember "
+           "lay down ", "shave ", "have fun " ,
+           "forget ","sleep ", "wear ",
+           "shower ", "hide ", "eat ",
+           "behave ", "stay ", "get up ",
+           "complain ", "leave ", "get in ",
+           "die ", "refuse ", "head to ",
+           "remember "
     };
 
     String vpe5[]={
-            "lay down ", "shave ", "have fun " ,
-            "forget ","sleep ", "wear ",
-            "shower ", "hide ", "eat ",
-            "behave ", "stay ", "get up ",
-            "complain ","leave ", "get in ",
-            "die ", "refuse ", "head to ",
-            "remember "
+           "lay down ", "shave ", "have fun " ,
+           "forget ","sleep ", "wear ",
+           "shower ", "hide ", "eat ",
+           "behave ", "stay ", "get up ",
+           "complain ","leave ", "get in ",
+           "die ", "refuse ", "head to ",
+           "remember "
     };
 
     String vg1[]={"enojo ", "aburro ", "confundo ", "canso ", "alegro ",
-            "pierdo ", "impresiono ", "asusto ", "lleno ", "drogo ", "agito ",
-            "emociono ", "averguenzo ", "deprimo ", "caso ", "embarazo "
+           "pierdo ", "impresiono ", "asusto ", "lleno ", "drogo ", "agito ",
+           "emociono ", "averguenzo ", "deprimo ", "caso ", "embarazo "
     };
     String vg2[]={"enojas ", "aburres ", "confundes ", "cansas ", "alegras ",
-            "pierdes ", "impresionas ", "asustas ", "llenas ", "drogas ", "agitas ",
-            "emocionas ", "averguenzas ", "deprimes ", "casas ", "embarazas "
+           "pierdes ", "impresionas ", "asustas ", "llenas ", "drogas ", "agitas ",
+           "emocionas ", "averguenzas ", "deprimes ", "casas ", "embarazas "
     };
     String vg3[]={"enoja ", "aburre ", "confunde ", "cansa ", "alegra ",
-            "pierde ", "impresiona ", "asusta ", "llena ", "droga ", "agita ",
-            "emociona ", "averguenza ", "deprime ", "casa ", "embaraza "
+           "pierde ", "impresiona ", "asusta ", "llena ", "droga ", "agita ",
+           "emociona ", "averguenza ", "deprime ", "casa ", "embaraza "
     };
     String vg4[]={"enojan ", "aburren ", "confunden ", "cansan ", "alegran ",
-            "pierden ", "impresionan ", "asustan ", "llenan ", "drogan ", "agitan ",
-            "emocionan ", "averguenzan ", "deprimen ", "casan ", "embarazan "
+           "pierden ", "impresionan ", "asustan ", "llenan ", "drogan ", "agitan ",
+           "emocionan ", "averguenzan ", "deprimen ", "casan ", "embarazan "
     };
 
     String vg5[]={"enojamos ", "aburrimos ", "confundimos ", "cansamos ", "alegramos ",
-            "perdemos ", "impresionamos ", "asustamos ", "llenamos ", "drogamos ", "agitamos ",
-            "emocionamos ", "avergonzamos ", "deprimimos ", "casamos ", "embarazamos "
+           "perdemos ", "impresionamos ", "asustamos ", "llenamos ", "drogamos ", "agitamos ",
+           "emocionamos ", "avergonzamos ", "deprimimos ", "casamos ", "embarazamos "
     };
 
     String vgeng[]={"angry ", "bored ", "confused ", "tired ", "happy ",
-            "lost ", "impressed ", "scared ", "filled ", "high ", "agitated ",
-            "excited ", "embarrassed ", "depressed ", "married ", "pregnant "
+           "lost ", "impressed ", "scared ", "filled ", "high ", "agitated ",
+           "excited ", "embarrassed ", "depressed ", "married ", "pregnant "
     };
     //dificultad 3
     public void WantYouTo3() {
@@ -9451,26 +9452,26 @@ public class Nobles {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (neg) {
@@ -9561,7 +9562,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no " + vn3[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -9584,7 +9585,7 @@ public class Nobles {
                 ps3she = "she is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -9600,14 +9601,14 @@ public class Nobles {
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps2eng = "you aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
-                ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
+                ps3 = "se supone que él no tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3eng = "he isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -9630,7 +9631,7 @@ public class Nobles {
                 ps3she = "she is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -9653,7 +9654,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -10004,7 +10005,7 @@ public class Nobles {
                 ps3she = "she didn't use to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Eso no solía " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
-                ps3it = "It didn't use to  " + vnb[v] + nnobles[n] + frequadv[radv];
+                ps3it = "It didn't use to " + vnb[v] + nnobles[n] + frequadv[radv];
 
                 ps4 = "Ellos no solían " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps4eng = "They didn't use to " + vnb[v] + nnobles[n] + frequadv[radv];
@@ -10030,7 +10031,7 @@ public class Nobles {
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3eng = "He is used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
-                ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
+                ps3ella = "Ella está acostumbrada a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3she = "She is used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
@@ -10053,7 +10054,7 @@ public class Nobles {
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3eng = "He isn't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
-                ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
+                ps3ella = "Ella no está acostumbrada a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
                 ps3she = "She isn't used to " + vnbc[v] + nnobles[n] + frequadv[radv];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + advfrequ[radv];
@@ -11503,37 +11504,37 @@ public class Nobles {
         int p2=(int)(Math.random()*prep.noblesspecial[p].length);
         switch (negg) {
             case 0:
-                ps1 = "yo pude " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps1 = "yo pude " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps1eng = "I could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps1eng2 = "I could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps2 = "tú pudiste " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps2 = "tú pudiste " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps2eng = "you could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps2eng2 = "you could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3 = "él pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "él pudo " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3eng2 = "he could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3ella = "ella pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3ella = "ella pudo " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "she could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3she2 = "she could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps3eso = "eso pudo " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3eso = "eso pudo " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3it = "it could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps3it2 = "it could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps4 = "ellos pudieron " +  "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps4 = "ellos pudieron " + "haber " + vpsp[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps4eng2 = "they could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros pudimos  " +  "haber " + vpsp[v] + nnoblesesp[n]  + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps5 = "nosotros pudimos " + "haber " + vpsp[v] + nnoblesesp[n]  + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps5eng = "we could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we could " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -11841,7 +11842,7 @@ public class Nobles {
                 ps4eng2 = "they'd " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros debimos  "  + "haber " + vpsp[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps5 = "nosotros debimos "  + "haber " + vpsp[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps5eng = "we should "  + "have " + vpeng[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng2 = "we'd " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
@@ -12161,7 +12162,7 @@ public class Nobles {
                 ps4eng = "they might " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
-                ps5 = "nosotros quizá  "  + "hayamos " + vpsp[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps5 = "nosotros quizá "  + "hayamos " + vpsp[v] + nnoblesesp[n]+ prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps5eng = "we might "  + "have " + vpeng[v] + nnobles[n]+ prep.noblesspecialeng[p][p2] + frequadv[radv];
                 ps5eng = "we might " + "have " + vpeng[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 break;
@@ -12497,38 +12498,38 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "yo " + "no debo "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps1eng = "I " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps1eng = "I " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú " + "no debes "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps2eng = "you " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps2eng = "you " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3eng = "he " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3eng = "he " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3she = "she " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3she = "she " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso " + "no debe "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3it2 = "it " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it2 = "it " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos " + "no deben "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps4eng = "they " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps4eng = "they " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros " + "no debemos "  + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps5eng = "we " + "mustn't "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we " + "mustn't " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps5eng = "we " + "must not "  + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we " + "must not " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
                 break;
         }
     }// nuevo
@@ -12577,37 +12578,37 @@ public class Nobles {
             case 1:
                 ps1 = "yo no debo "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps1eng = "I must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps1eng2 = "I mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps1eng2 = "I must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps2 = "tú no debes "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps2eng = "you must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps2eng2 = "you mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps2eng2 = "you must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3 = "él no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3eng2 = "he mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3eng2 = "he must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3ella = "ella no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "she must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3she2 = "she mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3she2 = "she must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps3eso = "eso no debe "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3it = "it must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps3it2 = "it mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it2 = "it must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps4 = "ellos no deben "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps4eng2 = "they mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps4eng2 = "they must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
 
                 ps5 = "nosotros no debemos "  + "estar " + vnbcs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps5eng = "we must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
-                ps5eng2 = "we mustn't " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps5eng2 = "we must not " + "be " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 break;
         }
@@ -12779,26 +12780,26 @@ public class Nobles {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (neg) {
@@ -12893,7 +12894,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no " + vn3[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no " + vn4[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -12916,7 +12917,7 @@ public class Nobles {
                 ps3she = "she is supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que tienen que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -12932,14 +12933,14 @@ public class Nobles {
                 ps2 = "se supone que no tienes que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps2eng = "you are supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps3 = "se supone que él no tiene que  " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3 = "se supone que él no tiene que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "he is supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "she is supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it is supposed to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it is supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no tienen que " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they are supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -12962,7 +12963,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso va a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que van a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -12985,7 +12986,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "it isn't supposed to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "it isn't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "se supone que no van a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "they aren't supposed to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -13351,7 +13352,7 @@ public class Nobles {
                 ps3she = "she didn't use to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Eso no solía " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
-                ps3it = "It didn't use to  " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
+                ps3it = "It didn't use to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps4 = "Ellos no solían " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps4eng = "They didn't use to " + vnb[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
@@ -13380,7 +13381,7 @@ public class Nobles {
                 ps3 = "Él está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "He is used to " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps3ella = "Ella está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3ella = "Ella está acostumbrada a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "She is used to " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
@@ -13403,7 +13404,7 @@ public class Nobles {
                 ps3 = "Él no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3eng = "He isn't used to " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
-                ps3ella = "Ella no está acostumbrada a  " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
+                ps3ella = "Ella no está acostumbrada a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
                 ps3she = "She isn't used to " + vnbc[v] + nnobles[n] + prep.noblesspecialeng[p][p2] + frequadv[radv];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v] + nnoblesesp[n] + prep.noblesspecial[p][p2] + advfrequ[radv];
@@ -13447,25 +13448,25 @@ public class Nobles {
                 ps5eng = "we " + vnb[v] + nnobles[n];
                 break;
             case 1 :
-                ps1 =  "no "+ vn1[v] + nnoblesesp[n];
+                ps1 = "no "+ vn1[v] + nnoblesesp[n];
                 ps1eng = "I " + "don't "+ vnb[v] + nnobles[n];
 
                 ps2 = "no "+vn2[v] + nnoblesesp[n];
-                ps2eng = "you " +   "don't "+ vnb[v] + nnobles[n];
+                ps2eng = "you " +  "don't "+ vnb[v] + nnobles[n];
 
-                ps3 =   "no "+   vn3[v] + nnoblesesp[n];
-                ps3eng = "he " +  "doesn't "+ vnb[v] + nnobles[n];
+                ps3 =  "no "+   vn3[v] + nnoblesesp[n];
+                ps3eng = "he " + "doesn't "+ vnb[v] + nnobles[n];
 
-                ps3ella =   "no "+ vn3[v] + nnoblesesp[n];
+                ps3ella =  "no "+ vn3[v] + nnoblesesp[n];
                 ps3she = "she " + "doesn't " + vnb[v] + nnobles[n];
 
-                ps3eso =  "no "+ vn3[v] + nnoblesesp[n];
+                ps3eso = "no "+ vn3[v] + nnoblesesp[n];
                 ps3it = "it " + "doesn't "+ vnb[v] + nnobles[n];
 
-                ps4 =  "no "+ vn4[v] + nnoblesesp[n];
+                ps4 = "no "+ vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + "don't " +vnb[v] + nnobles[n];
 
-                ps5 =   "no "+  vn5[v] + nnoblesesp[n];
+                ps5 =  "no "+  vn5[v] + nnoblesesp[n];
                 ps5eng = "we " + "don't "+ vnb[v] + nnobles[n];
                 break;
 
@@ -13502,10 +13503,10 @@ public class Nobles {
                 ps1eng = "I " + "don't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps2 = prep.noblesspecial[p][p2] +"no "+vn2[v] + nnoblesesp[n];
-                ps2eng = "you " +   "don't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
+                ps2eng = "you " +  "don't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
-                ps3 = prep.noblesspecial[p][p2] +  "no "+   vn3[v] + nnoblesesp[n];
-                ps3eng = "he " +  "doesn't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
+                ps3 = prep.noblesspecial[p][p2] + "no "+   vn3[v] + nnoblesesp[n];
+                ps3eng = "he " + "doesn't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
                 ps3ella =  prep.noblesspecial[p][p2] + "no "+ vn3[v] + nnoblesesp[n];
                 ps3she = "she " + "doesn't " + vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
@@ -13513,10 +13514,10 @@ public class Nobles {
                 ps3eso = prep.noblesspecial[p][p2] + "no "+ vn3[v] + nnoblesesp[n];
                 ps3it = "it " + "doesn't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
-                ps4 =prep.noblesspecial[p][p2] +  "no "+ vn4[v] + nnoblesesp[n];
+                ps4 =prep.noblesspecial[p][p2] + "no "+ vn4[v] + nnoblesesp[n];
                 ps4eng = "they " + "don't " +vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
 
-                ps5 = prep.noblesspecial[p][p2] +  "no "+  vn5[v] + nnoblesesp[n];
+                ps5 = prep.noblesspecial[p][p2] + "no "+  vn5[v] + nnoblesesp[n];
                 ps5eng = "we " + "don't "+ vnb[v] + nnobles[n]+prep.noblesspecialeng[p][p2];
                 break;
 
@@ -13538,14 +13539,14 @@ public class Nobles {
                 ps2 = objtu[y] + vn2[v] ;
                 ps2eng = "you "+ vnb[v] + objyou[y];
 
-                ps3 = "él " + objel[e] + vn3[v] ;
+                ps3 =  objel[e] + vn3[v] ;
                 ps3eng = "he " + vnb3[v] + objhe[e];
 
-                ps3ella = "ella " +objella[ell] + vn3[v];
-                ps3she = "she " + vnb3[v] + objshe[ell];
+                ps3ella = objella[e] + vn3[v];
+                ps3she = "she " + vnb3[v] + objshe[e];
 
-                ps3eso = "eso " + objeso[it] +vn3[v] ;
-                ps3it = "it " + vnb3[v] + objit[it];
+                ps3eso = objeso[e] +vn3[v] ;
+                ps3it = "it " + vnb3[v] + objit[e];
 
                 ps4 =objellos[th] + vn4[v] ;
                 ps4eng = "they " + vnb[v] + objthem[th];
@@ -13554,25 +13555,25 @@ public class Nobles {
                 ps5eng = "we " + vnb[v] + objus[us];
                 break;
             case 1 :
-                ps1 =  "no "+ objyo[i] +   vn1[v] ;
+                ps1 = "no "+ objyo[i] +   vn1[v] ;
                 ps1eng = "I " +"don't "+ vnb[v] + obji[i];
 
                 ps2 = "no "+objtu[y] + vn2[v] ;
                 ps2eng = "you " +"don't "+ vnb[v] + objyou[y];
 
-                ps3 = "él " +"no "+ objel[e] + vn3[v] ;
+                ps3 = "no "+ objel[e] + vn3[v] ;
                 ps3eng = "he " +"doesn't "+ vnb[v] + objhe[e];
 
-                ps3ella = "ella " +"no "+objella[ell] + vn3[v];
-                ps3she = "she " + "doesn't "+vnb[v] + objshe[ell];
+                ps3ella = "no "+objella[e] + vn3[v];
+                ps3she = "she " + "doesn't "+vnb[v] + objshe[e];
 
-                ps3eso = "eso " + "no "+objeso[it] +vn3[v] ;
-                ps3it = "it " + "doesn't "+vnb[v] + objit[it];
+                ps3eso =  "no "+objeso[e] +vn3[v] ;
+                ps3it = "it " + "doesn't "+vnb[v] + objit[e];
 
                 ps4 = "no "+objellos[th] + vn4[v] ;
                 ps4eng = "they " + "don't "+vnb[v] + objthem[th];
 
-                ps5 =  "no "+   objnos[us] + vn5[v] ;
+                ps5 = "no "+   objnos[us] + vn5[v] ;
                 ps5eng = "we " + "don't "+vnb[v] + objus[us];
                 break;
 
@@ -15407,7 +15408,7 @@ public class Nobles {
                 ps4eng = "they " + "can't " + vnb[v];
 
                 ps5 = "nosotros no " + "podemos " + vnbs[v];
-                ps5eng = "we " + "can't  " + vnb[v];
+                ps5eng = "we " + "can't " + vnb[v];
                 break;
         }
     }//PD 13/06/2022
@@ -15501,25 +15502,25 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = "yo no " + "debo " + vnbs[v];
-                ps1eng = "I " + "mustn't " + vnb[v];
+                ps1eng = "I " + "must not " + vnb[v];
 
                 ps2 = "tú no " + "debes " + vnbs[v];
-                ps2eng = "you " + "mustn't " + vnb[v];
+                ps2eng = "you " + "must not " + vnb[v];
 
                 ps3 = "él no " + "debe " + vnbs[v];
-                ps3eng = "he " + "mustn't " + vnb[v];
+                ps3eng = "he " + "must not " + vnb[v];
 
                 ps3ella = "ella no " + "debe " + vnbs[v];
-                ps3she = "she " + "mustn't " + vnb[v];
+                ps3she = "she " + "must not " + vnb[v];
 
                 ps3eso = "eso no " + "debe " + vnbs[v];
-                ps3it = "it " + "mustn't " + vnb[v];
+                ps3it = "it " + "must not " + vnb[v];
 
                 ps4 = "ellos no " + "deben " + vnbs[v];
-                ps4eng = "they " + "mustn't " + vnb[v];
+                ps4eng = "they " + "must not " + vnb[v];
 
                 ps5 = "nosotros no " + "debemos " + vnbs[v];
-                ps5eng = "we " + "mustn't " + vnb[v];
+                ps5eng = "we " + "must not " + vnb[v];
 
                 break;
         }
@@ -15558,31 +15559,31 @@ public class Nobles {
             case 1:
                 ps1 = "yo no " + "debo estar " + vnbcs[v];
                 ps1eng = "I " + "must not " + "be " + vnbc[v];
-                ps1eng2 = "I " + "mustn't " + "be " + vnbc[v];
+                ps1eng2 = "I " + "must not " + "be " + vnbc[v];
 
                 ps2 = "tú no " + "debes estar " + vnbcs[v];
                 ps2eng = "you " + "must not " + "be " + vnbc[v];
-                ps2eng2 = "you " + "mustn't " + "be " + vnbc[v];
+                ps2eng2 = "you " + "must not " + "be " + vnbc[v];
 
                 ps3 = "él no " + "debe estar " + vnbcs[v];
                 ps3eng = "he " + "must not be " + vnbc[v];
-                ps3eng2 = "he " + "mustn't be " + vnbc[v];
+                ps3eng2 = "he " + "must not be " + vnbc[v];
 
                 ps3ella = "ella no debe estar " + vnbcs[v];
                 ps3she = "she " + "must not be " + vnbc[v];
-                ps3she2 = "she " + "mustn't be " + vnbc[v];
+                ps3she2 = "she " + "must not be " + vnbc[v];
 
                 ps3eso = "eso no debe estar " + vnbcs[v];
                 ps3it = "it " + "must not be " + vnbc[v];
-                ps3it2 = "it " + "mustn't be " + vnbc[v];
+                ps3it2 = "it " + "must not be " + vnbc[v];
 
                 ps4 = "ellos no deben estar " + vnbcs[v];
                 ps4eng = "they " + "must not be " + vnbc[v];
-                ps4eng2 = "they " + "mustn't be " + vnbc[v];
+                ps4eng2 = "they " + "must not be " + vnbc[v];
 
                 ps5 = "nosotros no debemos estar " + vnbcs[v];
                 ps5eng = "we " + "must not be " + vnbc[v];
-                ps5eng2 = "we " + "mustn't be " + vnbc[v];
+                ps5eng2 = "we " + "must not be " + vnbc[v];
                 break;
         }
     }//nuevo
@@ -15650,7 +15651,32 @@ public class Nobles {
 
         }
     }//PD 2023
+    public void GenTherebe(){
+        Intrans prep = new Intrans();
+        int p= (int)(Math.random()*prep.noblesspecial.length );
+        int p2=(int)(Math.random()*prep.noblesspecial[p].length);
+        switch (neg) {
+            case 0:
+                ps1 = "Hay " + objetosingular[oj] ;
+                ps1eng = "There is " + objetsingular[oj] ;
+                ps1eng2 = "There is " + objetsingular[oj] ;
 
+                ps2 = "Hay " + numerostherebe[num] + objetoploral[oj] ;
+                ps2eng = "There are " + numbertherebe[num] + objetploral[oj] ;
+                ps2eng2 = "There are " + numbertherebe[num] + objetploral[oj] ;
+                break;
+            case 1:
+                ps1 = "No hay " + objetosingularno[oj] ;
+                ps1eng = "There is no " + objetsingulardon[oj] ;
+                ps1eng2 = "There isn't " + objetsingulardon[oj] ;
+
+                ps2 = "No hay " + numerostherebe[num] + objetoploral[oj];
+                ps2eng = "There are no " + numbertherebe[num] + objetploral[oj] ;
+                ps2eng2 = "There aren't " + numbertherebe[num] + objetploral[oj] ;
+                break;
+
+        }
+    }//PD 2023
     public void GenTherebe1(){
         Intrans prep = new Intrans();
         int p= (int)(Math.random()*prep.noblesspecial.length );
@@ -15795,26 +15821,26 @@ public class Nobles {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         switch (neg) {
@@ -15906,7 +15932,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no " + vnbs[v];
-                ps3it = "it isn't supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to " + vnb[v];
 
                 ps4 = "se supone que no " + vn4[v];
                 ps4eng = "they aren't supposed to " + vnb[v];
@@ -15929,7 +15955,7 @@ public class Nobles {
                 ps3she = "she is supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso tiene que " + vnbs[v];
-                ps3it = "it is supposed to  " + vnb[v];
+                ps3it = "it is supposed to " + vnb[v];
 
                 ps4 = "se supone que tienen que " + vnbs[v];
                 ps4eng = "they are supposed to " + vnb[v];
@@ -15945,14 +15971,14 @@ public class Nobles {
                 ps2 = "se supone que no tienes que " + vnbs[v];
                 ps2eng = "you aren't supposed to " + vnb[v];
 
-                ps3 = "se supone que él no tiene que  " + vnbs[v];
+                ps3 = "se supone que él no tiene que " + vnbs[v];
                 ps3eng = "he isn't supposed to " + vnb[v];
 
                 ps3ella = "se supone que ella no tiene que " + vnbs[v];
                 ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no tiene que " + vnbs[v];
-                ps3it = "it isn't supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to " + vnb[v];
 
                 ps4 = "se supone que no tienen que " + vnbs[v];
                 ps4eng = "they aren't supposed to " + vnb[v];
@@ -15999,7 +16025,7 @@ public class Nobles {
                 ps3she = "she isn't supposed to " + vnb[v];
 
                 ps3eso = "se supone que eso no va a " + vnbs[v];
-                ps3it = "it isn't supposed to  " + vnb[v];
+                ps3it = "it isn't supposed to " + vnb[v];
 
                 ps4 = "se supone que no van a " + vnbs[v];
                 ps4eng = "they aren't supposed to " + vnb[v];
@@ -16348,7 +16374,7 @@ public class Nobles {
                 ps3she = "she didn't use to " + vnb[v];
 
                 ps3eso = "Eso no solía " + vnbs[v];
-                ps3it = "It didn't use to  " + vnb[v];
+                ps3it = "It didn't use to " + vnb[v];
 
                 ps4 = "Ellos no solían " + vnbs[v];
                 ps4eng = "They didn't use to " + vnb[v];
@@ -16373,7 +16399,7 @@ public class Nobles {
                 ps3 = "Él está acostumbrado a " + vnbs[v];
                 ps3eng = "He is used to " + vnbc[v];
 
-                ps3ella = "Ella está acostumbrada a  " + vnbs[v];
+                ps3ella = "Ella está acostumbrada a " + vnbs[v];
                 ps3she = "She is used to " + vnbc[v];
 
                 ps3eso = "Eso está acostumbrado a " + vnbs[v];
@@ -16396,7 +16422,7 @@ public class Nobles {
                 ps3 = "Él no está acostumbrado a " + vnbs[v];
                 ps3eng = "He isn't used to " + vnbc[v];
 
-                ps3ella = "Ella no está acostumbrada a  " + vnbs[v];
+                ps3ella = "Ella no está acostumbrada a " + vnbs[v];
                 ps3she = "She isn't used to " + vnbc[v];
 
                 ps3eso = "Eso no está acostumbrado a " + vnbs[v];
@@ -16459,25 +16485,25 @@ public class Nobles {
                 break;
             case 1:
                 ps1 = RsSjesp[0] + "dije que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps1eng = RsSj[0] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps2 = RsSjesp[1] + "dijiste que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps2eng = RsSj[1] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps3 = RsSjesp[2] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps3eng = RsSj[2] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps3ella = RsSjesp[3] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps3she = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps3she = RsSj[3] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps3eso = RsSjesp[4] + "dijo que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps3it = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps3it = RsSj[4] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps4 = RsSjesp[5] + "dijeron que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps4eng = RsSj[5] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
 
                 ps5 = RsSjesp[6] + "dijimos que " + RsS2jesp[sc] + "no " + PreRand[sc] + nnoblesesp[n];
-                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + vnbp[v] + nnobles[n];
+                ps5eng = RsSj[6] + "said that " + RsS2j[sc] + "didn't " + vnb[v] + nnobles[n];
                 break;
         }
     }//PD 29/11/2022
@@ -19981,13 +20007,13 @@ public class Nobles {
                 ps2eng = "You don't feel like " + vnbc[v];
 
                 ps3 = "Él no tiene ganas de " + vnbs[v];
-                ps3eng = "He doesn't feels like " + vnbc[v];
+                ps3eng = "He doesn't feel like " + vnbc[v];
 
                 ps3ella = "Ella no tiene ganas de " + vnbs[v];
-                ps3she = "She doesn't feels like " + vnbc[v];
+                ps3she = "She doesn't feel like " + vnbc[v];
 
                 ps3eso = "Eso no tiene ganas de " + vnbs[v];
-                ps3it = "It doesn't feels like " + vnbc[v];
+                ps3it = "It doesn't feel like " + vnbc[v];
 
                 ps4 = "No tienen ganas de " + vnbs[v];
                 ps4eng = "They don't feel like " + vnbc[v];
@@ -20009,7 +20035,7 @@ public class Nobles {
     }//PD 29/12/2022
 
     String smsc[] = {"the man ", "the boy ", "the the doctor "};
-    String smscesp[] = {"el hombre ", "el chico ", "el doctoro "};
+    String smscesp[] = {"el hombre ", "el chico ", "el doctor "};
 
     String sfsc[] = {"the woman ", "the girl ", "the teacher "};
     String sfscesp[] = {"la mujer ", "la chica ", "la maestra "};
@@ -20023,19 +20049,19 @@ public class Nobles {
         int ob= (int)(Math.random()*o.vnb3.length );
         switch (neg) {
             case 0:
-                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + ", " + o.vnb3[ob] + nnoblesesp[n];
-                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + ", " + o.vn3[ob] + nnobles[n];
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v]  + o.vnb3[ob] + nnoblesesp[n];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v]  + o.vn3[ob] + nnobles[n];
 
-                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + ", " + o.vnb3[ob] + nnoblesesp[n];
-                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + ", " + o.vn3[ob] + nnobles[n];
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v]  + o.vnb3[ob] + nnoblesesp[n];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v]  + o.vn3[ob] + nnobles[n];
                 break;
 
             case 1:
-                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + ", no " + o.vnb3[ob] + nnoblesesp[n];
-                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + ", doesn't " + o.vn3[ob] + nnobles[n];
+                ps1 = smscesp[l] + "que " + "está " + vnbcs[v] + "no " + o.vnb3[ob] + nnoblesesp[n];
+                ps1eng = smsc[l] + "that " + "is " + vnbc[v] + "doesn't " + o.vnb[ob] + nnobles[n];
 
-                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + ", no " + o.vnb3[ob] + nnoblesesp[n];
-                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + ", doesn't " + o.vn3[ob] + nnobles[n];
+                ps2 = sfscesp[l] + "que " + "está " + vnbcs[v] + "no " + o.vnb3[ob] + nnoblesesp[n];
+                ps2eng = sfsc[l] + "that " + "is " + vnbc[v] + "doesn't " + o.vnb[ob] + nnobles[n];
                 break;
         }
     }//prueba

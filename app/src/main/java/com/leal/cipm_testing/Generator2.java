@@ -1,5 +1,7 @@
 package com.leal.cipm_testing;
 
+import android.widget.Toast;
+
 public class Generator2 {
     public Generator2() {
     }

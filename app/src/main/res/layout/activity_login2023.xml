@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul"
-    tools:context=".screens.Login2023">
+    tools:context=".Login2023">
 
     <!--LOGIN VIEW-->
     <ScrollView
@@ -94,6 +94,7 @@
 
             <!--BTN FORGOT PASS-->
             <LinearLayout
+                android:id="@+id/recuperarcontras"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -109,6 +110,7 @@
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="15dp"
+
                     ></TextView>
             </LinearLayout>
 
@@ -127,11 +129,32 @@
                     android:layout_height="45dp"
                     android:background="@drawable/ic_btn_red"
                     android:gravity="center"
+
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Iniciar Sesion"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/visitantebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_btn_yellow"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Entrar como visitante"
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:textStyle="bold">
@@ -156,16 +179,7 @@
                     >
 
                 </LinearLayout>
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="O continuar con"
-                    android:textSize="14dp"
-                    android:paddingHorizontal="15dp"
-                    android:background="@color/azul"
-                    >
 
-                </EditText>
                 <LinearLayout
                     android:layout_width="150dp"
                     android:layout_height="1dp"

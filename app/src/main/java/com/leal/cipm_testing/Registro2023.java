@@ -1,4 +1,4 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.leal.cipm_testing.R;
 
 public class Registro2023 extends AppCompatActivity {
     private EditText etname,etRegEmail,etRegPassword,etpassword2;

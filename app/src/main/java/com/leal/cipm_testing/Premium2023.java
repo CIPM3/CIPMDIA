@@ -1,10 +1,11 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +15,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.AcknowledgePurchaseResponseListener;
@@ -28,8 +28,6 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
-import com.leal.cipm_testing.Prefs;
-import com.leal.cipm_testing.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,16 +36,20 @@ public class Premium2023 extends AppCompatActivity {
     BillingClient billingClient;
     Prefs prefs;
     Button btn_sub_monthly_price;
-    VideoView vv;
+
     LinearLayout b;
     TextView cancelPolicy ;
     String cancelationPolicy;
     Button cancelSuscriptionBtn;
-
+    VideoPlayer video_player = new VideoPlayer();
+    String selection = "Premium";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium2023);
+
+
+
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
         cancelPolicy = findViewById(R.id.cancelPolicyTv);
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
@@ -69,7 +71,7 @@ public class Premium2023 extends AppCompatActivity {
 
         //start the connection after initializing the billing client
         establishConnection();
-    cancelationPolicy= "con la suscripción acedes a: \n1. mas estructuras del lenguaje\n " +
+      cancelationPolicy= "con la suscripción acedes a: \n1. mas estructuras del lenguaje\n " +
             "2. mas rango de palabras (practicas las mismas estructuras con palabras menos comunes)\n" +
             "3. se cobra una vez al mes - 50 pesos mexicanos \n" +
             "4. no es necesario estar suscrito para usar el app, pero si es necesaria para acesear a todas sus funciones\n " +
@@ -82,8 +84,23 @@ public class Premium2023 extends AppCompatActivity {
 
             }
         });
-    }
 
+
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
+
+
+
+
+
+    }
     void establishConnection() {
 
         billingClient.startConnection(new BillingClientStateListener() {
@@ -103,7 +120,6 @@ public class Premium2023 extends AppCompatActivity {
             }
         });
     }
-
     void showProducts() {
         List<String> skuList = new ArrayList<>();
         skuList.add("monthly_suscription");
@@ -130,7 +146,6 @@ public class Premium2023 extends AppCompatActivity {
                     }
                 });
     }
-
     void launchPurchaseFlow(SkuDetails skuDetails) {
 
         BillingFlowParams billingFlowParams = BillingFlowParams.newBuilder()
@@ -139,7 +154,6 @@ public class Premium2023 extends AppCompatActivity {
 
         billingClient.launchBillingFlow(Premium2023.this, billingFlowParams);
     }
-
     void verifySubPurchase(Purchase purchases) {
 
         AcknowledgePurchaseParams acknowledgePurchaseParams = AcknowledgePurchaseParams
@@ -178,7 +192,7 @@ public class Premium2023 extends AppCompatActivity {
     }
     protected void onResume() {
         super.onResume();
-
+        video_player.updateFragmentStateStructure(selection);
         billingClient.queryPurchasesAsync(
                 BillingClient.SkuType.SUBS,
                 new PurchasesResponseListener() {
@@ -188,6 +202,7 @@ public class Premium2023 extends AppCompatActivity {
                             for (Purchase purchase : list) {
                                 if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED && !purchase.isAcknowledged()) {
                                     verifySubPurchase(purchase);
+                                    Toast.makeText(Premium2023.this, "cierra la app y vuelvela a abrir", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }

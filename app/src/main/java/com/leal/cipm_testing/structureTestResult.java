@@ -53,7 +53,7 @@ public class structureTestResult extends Fragment {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
-                    Toast.makeText(getContext(), "espere un segundo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "espere un segundo estr", Toast.LENGTH_SHORT).show();
                       st=  documentSnapshot.toObject(Student.class);
                     assert st != null;
                     //aparentemente ya funciona, solo llenar el array

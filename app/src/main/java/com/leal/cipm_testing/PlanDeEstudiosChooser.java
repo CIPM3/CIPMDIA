@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -16,13 +18,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.screens.Availability2023;
-import com.leal.cipm_testing.screens.ConInt2023;
-import com.leal.cipm_testing.screens.Cultura2023;
-import com.leal.cipm_testing.screens.Estructura2023;
-import com.leal.cipm_testing.screens.SpaInt2023;
-import com.leal.cipm_testing.screens.Transicion2023;
-import com.leal.cipm_testing.screens.Vocabulary2023;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +25,7 @@ import java.util.List;
 
 
 public class PlanDeEstudiosChooser extends AppCompatActivity {
-    Button basicPlanRecommendedBtn;
+    Button basicPlanRecommendedBtn,gotomyplan;
     boolean isOnPersonalizedPlan=true;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
@@ -38,12 +33,12 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     DocumentReference docref,docrefStructure,docrefVocab, docrefSpanishInt,docrefAvailability,docrefConsiousInt
             ,docrefCulture
             ;
-    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     StudentVocabRestultsModel svrm = new StudentVocabRestultsModel();
     Student studentObject = new Student();
     boolean isCustom,nonbasics;
-    boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
-    boolean isPlanIntermedioStandard,isPlanBasicRecommended, isCustomPlan100,isListeningPlan,isAdvancedPlan
+     boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
+     boolean isPlanIntermedioStandard,isPlanBasicRecommended, isCustomPlan100,isListeningPlan,isAdvancedPlan
             ,BasicListeningPlan
             ;
 
@@ -70,16 +65,19 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         mAuth= FirebaseAuth.getInstance();
         userid= mAuth.getCurrentUser().getUid();
+        gotomyplan = findViewById(R.id.go2myplanbtn);
         isOnPersonalizedPlan = true;
         basicPlanRecommendedBtn= findViewById(R.id.basicplanbtn);
-        docref=db.collection(userid).document("WhereisStudent");
+        docref= db.collection(userid).document("WhereisStudent");
         docrefStructure = db.collection(userid).document("structures");
         docrefVocab= db.collection(userid).document("vocabulary"    );
         docrefSpanishInt=db.collection(userid).document("Interferencias");
         docrefConsiousInt=db.collection(userid).document("Interferencias"  );
-        CreatesCustomStructureArrayAfterTesting();
+
+      /*  CreatesCustomStructureArrayAfterTesting();
         CreatesCustomVocabArrayAfterTesting();
-        CreatesCustomerSpanishIntArrayAfterTesting();
+        CreatesCustomerSpanishIntArrayAfterTesting();*/
+        //getDBState();
 
 
     /*SendCustomStructuresToDb(structureArray,vocabArray,
@@ -127,10 +125,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 assert svrm!=null;
                 if(svrm.passed0to50){
                     vocabArray[0]="";
-                    Toast.makeText(PlanDeEstudiosChooser.this, "true 0to50", Toast.LENGTH_SHORT).show();
                 }else {
                     vocabArray[0]="0 to 50";
-                    Toast.makeText(PlanDeEstudiosChooser.this, "false 0to50", Toast.LENGTH_SHORT).show();
 
                 }
                 if(svrm.passed50to100){
@@ -315,21 +311,23 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     //------------------------------
 
     public void BasicRecomendedPlan(View vista ){
+
+
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
                 .setIcon(android.R.drawable.ic_dialog_alert)
 //set title
                 .setTitle("Definición: ")
 //set message
-                .setMessage("Plan Basico Recomendado, Continuar?")
+                .setMessage("Ir a plan basico recomendado ")
 //set positive button
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        isPlanBasicRecommended= true;
-                        Intent intent = new Intent(PlanDeEstudiosChooser.this, Vocabulary2023.class);
+                        //no hemos decidido a donde mandarlo todavia despues del examen
+                        isPlanBasicRecommended =true;
+                        Intent intent = new Intent(PlanDeEstudiosChooser.this,Vocabulary2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
-                        intent.putExtra("BasicRecomendedPlan",isPlanBasicRecommended);
                         startActivity(intent);
 
                     }
@@ -338,8 +336,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
+
                     }
                 })
                 .show();
@@ -374,6 +371,11 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                 .show();
     }
     public void Custom100Plan(View view){
+
+
+      /*  AlertDialog dialog = builder.create();
+        dialog.show();
+
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
 //set icon
                 .setIcon(android.R.drawable.ic_dialog_alert)
@@ -401,7 +403,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
                     }
                 })
-                .show();
+                .show();*/
     }
     public void IntermedioStandardPlan(View vista){
         AlertDialog alertDialog = new AlertDialog.Builder(PlanDeEstudiosChooser.this)
@@ -491,15 +493,17 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             })
             .show();}
     public void continueMyPlan(View view){
+        getDBState();
+       gotomyplan.setText("Presioname otravez por favor");
         isCustom=true;
         Intent intent;
-        getDBState();
         if(isInVocab){
             intent = new Intent(PlanDeEstudiosChooser.this,Vocabulary2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             startActivity(intent);
-        }else if(isInStructure){
+        }
+        if(isInStructure) {
             intent = new Intent(PlanDeEstudiosChooser.this,Estructura2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
@@ -507,7 +511,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
 
             startActivity(intent);
-        }else if(isInSpanishInt){
+        }
+        if(isInSpanishInt){
             intent = new Intent(PlanDeEstudiosChooser.this, SpaInt2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
@@ -517,7 +522,8 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
 
             startActivity(intent);
         }
-        else if(isInTransition){
+
+         if(isInTransition){
             intent = new Intent(PlanDeEstudiosChooser.this, Transicion2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
@@ -525,21 +531,25 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             intent.putExtra("isFromIntermedioStandarPlan",isPlanIntermedioStandard);
             startActivity(intent);
 
-        }else if(isInPrager){
+        }
+        if(isInPrager){
+
             intent = new Intent(PlanDeEstudiosChooser.this, Availability2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("FromListeningDb",isListeningPlan);
 
             startActivity(intent);
-        }else if(isInCulture){
+        }
+        if(isInCulture){
             intent = new Intent(PlanDeEstudiosChooser.this,Cultura2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
             intent.putExtra("isCustom",isCustom);
             intent.putExtra("FromBasicRecomended",isPlanBasicRecommended);
             intent.putExtra("FromListening",isListeningPlan);
             startActivity(intent);
-        }else if(isInintCons ){
+        }
+        if(isInintCons ){
             //esta no esta en la base de datos
             intent = new Intent(PlanDeEstudiosChooser.this,ConInt2023.class);
             intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);

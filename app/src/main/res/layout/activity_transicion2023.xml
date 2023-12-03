@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Transicion2023"
+    tools:context=".Transicion2023"
     android:background="@color/white"
     >
     <LinearLayout
@@ -38,7 +38,7 @@
                     >
                     <androidx.fragment.app.FragmentContainerView
                         android:id="@+id/fragmentContainerView"
-                        android:name="com.leal.cipm_testing.components.header"
+                        android:name="com.leal.cipm_testing.header"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -123,8 +123,8 @@
                         />-->
 
                     <androidx.fragment.app.FragmentContainerView
-                        android:id="@+id/fragmentContainerView4"
-                        android:name="com.leal.cipm_testing.components.VideoPlayer"
+                        android:id="@+id/fragmentContainerView5"
+                        android:name="com.leal.cipm_testing.VideoPlayer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:layout="@layout/fragment_video_player"
@@ -378,7 +378,36 @@
                             android:textSize="18dp"/>
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="35dp">
 
+                    <!-- First TextView -->
+                    <TextView
+                        android:id="@+id/TRPsp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiempo de respuesta: "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:layout_weight="1"
+                        />
+
+                    <!-- Second TextView -->
+                    <TextView
+                        android:id="@+id/TRPNumbersp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xxx segundos"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
                 <!-- Boton Check -->
                 <LinearLayout
                     android:id="@+id/btn_check_lay"
@@ -453,7 +482,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

@@ -1,5 +1,6 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
@@ -26,25 +27,28 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
-import com.leal.cipm_testing.Generator;
-import com.leal.cipm_testing.Generator2;
-import com.leal.cipm_testing.Prefs;
-import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.VocabModeloPersistencia;
-import com.leal.cipm_testing.components.VideoPlayer;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 public class SpaInt2023 extends AppCompatActivity {
     String t0, t1, t2, t3, t4, t5, t6;
+    private ActivityResultLauncher<Intent> speechRecognitionLauncher;
 
     LinearLayout vf;
     VideoView vv;
+    Map<String, Object> userhas = new HashMap<>();
 
     LinearLayout spanish_lay;
     LinearLayout input_lay;
@@ -88,7 +92,7 @@ public class SpaInt2023 extends AppCompatActivity {
     String selection;
     String selection2;
     String selection3;
-    TextToSpeech tts;
+
     TextToSpeech ttr;
     TextToSpeech tt1;
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isinIntcon;
@@ -109,10 +113,31 @@ public class SpaInt2023 extends AppCompatActivity {
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
     boolean explanation;
-
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
+    int condicionparapasar;
     public static final int REC_CODE_SPEECH_INPUT = 100;
-
+    VideoPlayer video_player = new VideoPlayer();
+    DocumentReference scoresSpintDocRef;
+    Timer timer;
+    TimerTask timerTask;
+    Double timen = 0.0;
+    TextView tdr,tdrnumero;
+    double prom;
+    int roundedMilliseconds;
+    CollectionReference uid;
+    boolean porSujeto = true;
+    boolean porPreposicion = false;
+    boolean porObjeto = true;
+    boolean interferenciaReflexiva = false;
+    boolean interferenciaPasiva = true;
+    double division,result;
+    double one;
+    double two;
+    double three;
+    double four ;
+    double five;
+    double secondsWithDecimal;
+    int counterDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,9 +157,15 @@ public class SpaInt2023 extends AppCompatActivity {
         btn_check_lay = (LinearLayout) findViewById(R.id.btn_check_lay);
         btn_intent_lay = (LinearLayout) findViewById(R.id.btn_intent_lay);
         answer_pos = (LinearLayout) findViewById(R.id.answer_pos);
-
+        condicionparapasar=0;
         txt_exp_est = findViewById(R.id.txt_exp_estt);
         text_exp = findViewById(R.id.text_expp);
+
+        tdr = findViewById(R.id.TRPsp);
+        tdr.setVisibility(View.GONE);
+        tdrnumero = findViewById(R.id.TRPNumbersp);
+        tdrnumero.setVisibility(View.GONE);
+        timer = new Timer();
 
         sptx=findViewById(R.id.spanishsentence);
         engtx=findViewById(R.id.txteng);
@@ -163,18 +194,34 @@ public class SpaInt2023 extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
+
         //vv = (VideoView) findViewById(R.id.videoView1);
         //vf = (LinearLayout) findViewById(R.id.vf);
         prefs = new Prefs(this);
+        one= 0;
+        two =0;
+        three=0;
+        four=0;
+        five=0;
+        counterDB=0;
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView6, video_player)
+                .commit();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
+        uid = db.collection(userid);
+        escribirEnelInputTextResultadodeUtterance();
         PremiumAndArrayControler();
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        /*tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 if(i==tts.SUCCESS){
                     int lang = tts.setLanguage(Locale.ENGLISH);
                 }
             }
-        });
+        });*/
 
 
     }
@@ -393,8 +440,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
                             ocultarlay();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
+
                         }
 
                         @Override
@@ -558,7 +604,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.InterferenceGratis, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -613,17 +659,20 @@ public class SpaInt2023 extends AppCompatActivity {
     public void spinnerSelected1(){
         selection = spin.getSelectedItem().toString();
         txt1.setText(selection);
-
+/*
         VideoPlayer video_player = new VideoPlayer();
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView6, video_player)
-                .commit();
+                .commit();*/
 
+        if(video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
+
+        }
 
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura y rango para continuar con la practica");
@@ -658,6 +707,9 @@ public class SpaInt2023 extends AppCompatActivity {
     }
 
     public void practice(View vista) {
+        tdr.setVisibility(View.GONE);
+        tdrnumero.setVisibility(View.GONE   );
+
         answer_lay.setVisibility(View.GONE);
         answer_pos.setVisibility(View.GONE);
         EditText text = (EditText)findViewById(R.id.answerinput);
@@ -676,6 +728,20 @@ public class SpaInt2023 extends AppCompatActivity {
                         case "Present Simple":
                             switch (selection3){
                                 case "0 a 100":
+                                    Generator n = new Generator();
+                                    n.generatepsporprep();
+                                    sptx.setText(n.gens);
+                                    engtx.setText(n.gene);// he
+                                    t0= n.gene;
+                                    txteng1.setText(t0);
+                                    t1=n.gene2;
+                                    txteng2.setText(t1);
+                                    t2= n.gene3;
+                                    txteng3.setText(t2);
+                                    t3= "null";
+                                    t4= "null";
+                                    t5= "null";
+                                    t6= "null";
                                     tt1= new TextToSpeech(getApplicationContext(),
                                             new TextToSpeech.OnInitListener() {
                                                 @Override
@@ -687,34 +753,26 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             @Override
                                                             public void onStart(String s) {
                                                             }
+
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+
+
+                                                                if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                                             }
+
                                                             @Override
                                                             public void onError(String s) {
                                                             }
                                                         });
-                                                        Generator n = new Generator();
-                                                        n.generatepsporprep();
-                                                        sptx.setText(n.gens);
-                                                        engtx.setText(n.gene);// he
-                                                        t0= n.gene;
-                                                        txteng1.setText(t0);
-                                                        t1=n.gene2;
-                                                        txteng2.setText(t1);
-                                                        t2= n.gene3;
-                                                        txteng3.setText(t2);
-                                                        t3= "null";
-                                                        t4= "null";
-                                                        t5= "null";
-                                                        t6= "null";
+                                                        tt1.speak("como dirías    "+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
 
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -736,7 +794,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -761,7 +821,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -794,7 +854,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -818,7 +880,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
                                                         // en caso de int de sujeto tercer persona
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -840,7 +902,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -864,7 +928,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
                                                         // en caso de int de sujeto tercer persona
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -897,7 +961,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                              startTimer();
+                                                        }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -922,7 +988,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -944,7 +1010,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -969,7 +1037,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -1002,7 +1070,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -1027,7 +1097,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -1049,7 +1119,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -1074,7 +1146,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -1107,7 +1179,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -1136,7 +1210,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -1157,7 +1231,9 @@ public class SpaInt2023 extends AppCompatActivity {
                                                             }
                                                             @Override
                                                             public void onDone(String utteranceId) {
-                                                                //iniciarentradavoz();
+                                                                 if(timerTask == null){
+                                                startTimer();
+                                            }
                                                             }
                                                             @Override
                                                             public void onError(String s) {
@@ -1185,7 +1261,7 @@ public class SpaInt2023 extends AppCompatActivity {
                                                         // en caso de int de sujeto tercer persona
                                                         //engtx.setTextColor(Color.WHITE);
 
-                                                        tt1.speak("como dirías..."+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
+                                                        tt1.speak("como dirías"+sptx.getText().toString().trim(),TextToSpeech.QUEUE_ADD, null, "one");
 
                                                     }
 
@@ -1229,16 +1305,7 @@ public class SpaInt2023 extends AppCompatActivity {
         btn_emp_lay.setVisibility(View.GONE);
         btn_check_lay.setVisibility(View.VISIBLE);
     }
-    private void iniciarentradavoz() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        try {
 
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
-        } catch (ActivityNotFoundException e) {
-        }
-    }
     public void speakdecir(View vista){
         iniciarentradavoz();
     }
@@ -1275,6 +1342,7 @@ public class SpaInt2023 extends AppCompatActivity {
                         engtx.getText().toString().trim().equalsIgnoreCase(text.getText().toString().trim()))
         {
             //correcto
+            setTimeonScreen();
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int i) {
@@ -1294,9 +1362,18 @@ public class SpaInt2023 extends AppCompatActivity {
                         });
                         ttr.speak("answer is correct",TextToSpeech.QUEUE_ADD,null, "one");
 
+                        condicionparapasar++;
                         if(personalizedPlan ){
-                            SubtractSelectionAndSendinfoToDb();
+                            if(condicionparapasar>5){
+                                SubtractSelectionAndSendinfoToDb();
+                                condicionparapasar=0;
+
+                            }else {
+                                Toast.makeText(SpaInt2023.this, "otras " +String.valueOf(6-condicionparapasar)+" correctas para pasar a siguiente estructura", Toast.LENGTH_SHORT).show();
+                            }
+
                         }
+
 
 
                     }
@@ -1316,6 +1393,44 @@ public class SpaInt2023 extends AppCompatActivity {
 
             respinc.setVisibility(View.GONE);
             answer_lay.setVisibility(View.GONE);
+
+            double sum;
+            switch (counterDB){
+                case 0:
+                    one=secondsWithDecimal;
+                    Toast.makeText(this, "one", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case 1:
+                    two=secondsWithDecimal;
+                    Toast.makeText(this, "two", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+                case 2:
+                    three=secondsWithDecimal;
+                    Toast.makeText(this, "three", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+                case 3:
+                    four=secondsWithDecimal;
+                    Toast.makeText(this, "four", Toast.LENGTH_SHORT).show();
+
+                    break;
+                case 4:
+                    five=secondsWithDecimal;
+                    Toast.makeText(this, "five", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+            }
+            counterDB++;
+            sum = one+two+three+four+five;
+            if(counterDB == 5){
+                turnTrue(selection,sum);
+                counterDB=0;
+            }
 
         }else{
             //incorrecto
@@ -1344,12 +1459,22 @@ public class SpaInt2023 extends AppCompatActivity {
                                     }
                                 });
 
-                                ttr.speak("answer is incorrect....the answer is..."+engtx.getText().toString().trim(),TextToSpeech.QUEUE_ADD,null,"string");
+                                ttr.speak("answer is incorrect  the answer is    "+engtx.getText().toString().trim(),TextToSpeech.QUEUE_ADD,null,"string");
                                 //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
                                 //with this yet
 
-
-
+                                engtx.setTextColor(Color.BLUE);
+                                engtx.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        String textFromTxteng = engtx.getText().toString();
+                                        answerinput.setText(textFromTxteng);
+                                    }
+                                });
+                                if(personalizedPlan){
+                                    //reset counter?
+                                    condicionparapasar=0;
+                                }
 
                             }
                         }
@@ -1370,6 +1495,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
 
     }
+
     public void possibleanswers(View view){
         answer_lay.setVisibility(View.GONE);
         answer_pos.setVisibility(View.VISIBLE);
@@ -1392,17 +1518,157 @@ public class SpaInt2023 extends AppCompatActivity {
         }*/
 
     }
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-
-            case REC_CODE_SPEECH_INPUT:
-                if (resultCode == RESULT_OK && null != data) {
-                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    answerinput.setText(result.get(0));
-                }
-                break;
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        speechRecognitionLauncher.launch(intent);
+        try {
+        } catch (ActivityNotFoundException e) {
         }
 
     }
+    private void escribirEnelInputTextResultadodeUtterance() {
+        speechRecognitionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        // Handle the result here
+                        Intent data = result.getData();
+                        if (data != null) {
+                            ArrayList<String> resultArray = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                            if (resultArray != null && !resultArray.isEmpty()) {
+                                // Get the recognized text (the first item in the list)
+                                String recognizedText = resultArray.get(0);
+
+
+                                // Set the recognized text to the EditText
+                                answerinput.setText(recognizedText);
+                            }
+                        }
+                    }
+                }
+        );
+    }
+    
+    private void startTimer() {
+        timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        timen++;
+                        tdrnumero.setText(getTimerTextWithMilliseconds());
+
+                    }
+                });
+            }
+
+        };
+        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
+    }
+    private String getTimerTextWithMilliseconds() {
+        double milliseconds = timen * 1000; // Convert seconds to milliseconds
+
+        roundedMilliseconds = (int) Math.round(milliseconds);
+        int seconds = ((roundedMilliseconds % 86400000) % 3600000) % 60000 / 1000; // Extract seconds
+        int minutes = ((roundedMilliseconds % 86400000) % 3600000) / 60000; // Extract minutes
+        int hours = (roundedMilliseconds % 86400000) / 3600000; // Extract hours
+        int millisecondsValue = roundedMilliseconds % 1000; // Extract milliseconds
+
+        return formatTimeWithMilliseconds(seconds, minutes, hours, millisecondsValue);
+    }
+    private String formatTimeWithMilliseconds(int seconds, int minutes, int hours, int milliseconds) {
+        return String.format("%02d : %02d : %02d : %03d", hours, minutes, seconds, milliseconds);
+    }
+    private void setTimeonScreen() {
+        prom = roundedMilliseconds ;
+        tdr.setVisibility(View.VISIBLE);
+        tdrnumero.setVisibility(View.VISIBLE);
+         secondsWithDecimal = prom / 1000; // Divide by 100 to get seconds with two decimal places
+        tdrnumero.setText(String.format(String.valueOf(secondsWithDecimal))+" Segundos");
+        timen = 0.0;
+        if (timerTask != null) {
+            timerTask.cancel();
+        }
+        timerTask = null;
+    }
+    ModeloSpInt mso;
+    public void turnTrue(String CurrentStructure,double sum){
+        scoresSpintDocRef = db.collection(userid).document("Scores Spint");
+        scoresSpintDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(!documentSnapshot.exists()){
+
+                }else{
+                    mso = documentSnapshot.toObject(ModeloSpInt.class);
+                    assert mso != null;
+
+                    switch (CurrentStructure){
+
+                        case "Por Sujeto":
+                        if(!mso.PorSujeto){
+                            updateinfo("PorSujeto");
+                        }
+                            break;
+
+                        case "Por Preposición":
+                            if(!mso.PorPreposición){
+                                updateinfo("PorPreposición");
+                            }
+
+                            break;
+
+                        case "Por Objeto":
+                            if(!mso.PorObjeto){
+                                updateinfo("PorObjeto");
+                            }
+                            break;
+
+                        case "Interferencia Reflexiva":
+                            if(!mso.InterferenciaReflexiva){
+                                updateinfo("InterferenciaReflexiva");
+                            }
+
+                            break;
+
+                        case "Interferencia Pasiva":
+                            if(!mso.InterferenciaPasiva){
+                                updateinfo("InterferenciaPasiva");
+                            }
+
+                            break;
+
+
+                    }
+                }
+
+
+
+
+
+            }
+            public void updateinfo(String estructura){
+                double prom = sum / 5;
+                division = mso.SpintCounter / 5.0;
+                result = division * 100;
+                mso.SpintCounter++; // sube el counter 1
+                userdb.put(estructura,true);// cambia valor a veradero
+                userdb.put("SpintCounter",mso.SpintCounter);
+                userdb.put("AvanceSpint",result);
+                userdb.put("tdrSpint",prom);
+                uid.document("Scores Spint").update(userdb);
+            }
+        });
+
+    }
+    Map<String, Object> userdb = new HashMap<>();
+
+
+
 }

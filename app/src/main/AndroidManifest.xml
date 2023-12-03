@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.leal.cipm_testing" >
+    package="com.leal.cipm_testing">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
 
     <application
         android:allowBackup="true"
@@ -13,64 +18,77 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="n" >
-        <!-- CARPETA SCREENS -->
+        tools:targetApi="n">
         <activity
-            android:name=".screens.FormularioInfo2023"
+            android:name=".Forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".chooseActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".chatgptidea"
+            android:exported="false" />
+        <activity
+            android:name=".FormularioInfo2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Estructura2023"
+            android:name=".Estructura2023"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".Premium2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Premium2023"
+            android:name=".Availability2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Availability2023"
+            android:name=".Cultura2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Cultura2023"
+            android:name=".Registro2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Registro2023"
+            android:name=".Login2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Login2023"
+            android:name=".Transicion2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Transicion2023"
+            android:name=".ConInt2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.ConInt2023"
+            android:name=".Vocabulary2023"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan " />
+        <activity
+            android:name=".SpaInt2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.Vocabulary2023"
+            android:name=".ChatMaestro2023"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screens.SpaInt2023"
+            android:name=".Profile2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".screens.ChatMaestro2023"
+        <!--
+<activity
+            android:name=".TestStudent2023"
             android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".screens.Profile2023"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".screens.TestStudent2023"
-            android:exported="false"
-            android:screenOrientation="portrait" /> <!-- FIN CARPETA SCREENS -->
+            android:screenOrientation="portrait" />  FIN CARPETA SCREENS
+        -->
         <activity
             android:name=".MyPlan"
             android:exported="false" />
@@ -91,7 +109,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -104,7 +122,7 @@
 
         <service
             android:name=".PushNotificationService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

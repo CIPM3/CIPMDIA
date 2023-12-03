@@ -7,13 +7,19 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".screens.Cultura2023">
+    tools:context=".Cultura2023">
+
+    <!--BTNS OPC-->
 
     <ScrollView
         android:id="@+id/scrollView5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="80dp">
+        android:layout_width="414dp"
+        android:layout_height="592dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_opc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,19 +30,18 @@
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:elevation="5dp"
                 android:background="@color/graybg"
-                >
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView"
-                    android:name="com.leal.cipm_testing.components.header"
+                    android:name="com.leal.cipm_testing.header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:layout="@layout/fragment_header"
-                    />
+                    tools:layout="@layout/fragment_header" />
             </LinearLayout>
 
             <!--Video View-->
@@ -46,7 +51,6 @@
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
-
 
 
                 <!--<LinearLayout
@@ -70,12 +74,12 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView5"
-                    android:name="com.leal.cipm_testing.components.VideoPlayer"
+                    android:name="com.leal.cipm_testing.VideoPlayer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:layout="@layout/fragment_video_player"
-                    />
+                    tools:layout="@layout/fragment_video_player" />
+
             </LinearLayout>
 
             <!--Spinner-->
@@ -83,10 +87,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
                 android:onClick="activaSpinner"
-                >
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
 
 
                 <!--Spinner-->
@@ -96,58 +99,35 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="start"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
                     <!--text-->
                     <TextView
                         android:id="@+id/textspin1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre del video"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:textSize="22dp"
-                        android:textStyle="bold"
                         android:layout_weight="1"
-                        />
+                        android:text="Nombre del video"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/spinuno"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:spinnerMode="dialog"
-                        android:theme="@style/MySpinnerStyle"
-                        />
+                        android:theme="@style/MySpinnerStyle" />
+
                     <LinearLayout
-                        android:layout_gravity="end|center"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/ic_grupo_select"
-                        />
+                        android:layout_gravity="end|center"
+                        android:background="@drawable/ic_grupo_select" />
                 </LinearLayout>
 
                 <!--FRASES CULTURALES-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/boton_redondeado"
-                    android:backgroundTint="@color/azul"
-                    android:layout_weight="3"
-                    android:gravity="end|center"
-                    android:onClick="cultura_new"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:textSize="14dp"
-                        android:textAlignment="center"
-                        android:text="Frases Culturales"
-                        />
-                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -245,17 +225,16 @@
                 android:id="@+id/lay_btn_get"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone"
+                android:layout_marginTop="5dp"
                 android:onClick="getpos"
-                >
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/btnget"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="60dp"
                     android:background="@drawable/ic_rect_ngulo_btncheck"
                     android:gravity="center">
 
@@ -268,10 +247,33 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/horizontal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/my_textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, World!"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+
     </ScrollView>
 
-    <!--BTNS OPC-->
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
@@ -284,7 +286,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

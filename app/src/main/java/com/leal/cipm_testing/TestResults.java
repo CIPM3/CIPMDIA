@@ -38,7 +38,10 @@ public class TestResults extends AppCompatActivity {
 
                         return true;
                     case R.id.vocabitem:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,vtr).commit();
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.container,vtr)
+                                .commit();
                         return true;
                     case R.id.interfspitem:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,sitr).commit();

@@ -1,5 +1,6 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,16 +28,20 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
-import com.leal.cipm_testing.Generator;
-import com.leal.cipm_testing.Prefs;
-import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.VocabModeloPersistencia;
-import com.leal.cipm_testing.components.VideoPlayer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+
 
 public class Transicion2023 extends AppCompatActivity {
 
@@ -83,6 +89,27 @@ public class Transicion2023 extends AppCompatActivity {
             isCustomPlan,isListeningPlan,isAdvancedPlan;
     boolean isFromListeningPlanDb,isPlanIntermedioFromDb,isFromListeningPlan;
     Prefs prefs;
+    VideoPlayer video_player = new VideoPlayer();
+    int condicionparapasar;
+    private ActivityResultLauncher<Intent> speechRecognitionLauncher;
+    DocumentReference scoresTransDocRef;
+    ModeloTrans mso ;
+    Map<String, Object> userdb = new HashMap<>();
+    Timer timer;
+    TimerTask timerTask;
+    Double timen = 0.0;
+    TextView tdr,tdrnumero;
+    double prom;
+    int roundedMilliseconds;
+    CollectionReference uid;
+    int counterDB;
+    double total;
+    double one;
+    double two;
+    double three;
+    double four ;
+    double five;
+    Map<String, Object> userhas = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,9 +136,39 @@ public class Transicion2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref = db.collection(userid).document("WhereisStudent");
         prefs = new Prefs(Transicion2023.this);
+        condicionparapasar=0;
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
+
+
+        tdr = findViewById(R.id.TRPsp);
+        tdr.setVisibility(View.GONE);
+        tdrnumero = findViewById(R.id.TRPNumbersp);
+        tdrnumero.setVisibility(View.GONE);
+        timer = new Timer();
+        counterDB=0;
+        total=22;
+        one= 0;
+        two =0;
+        three=0;
+        four=0;
+        five=0;
+        uid = db.collection(userid);
+
+// Define an ActivityResultLauncher for the speech recognition contract
+
+
+// Initialize the launcher in your onCreate or onStart method
+        escribirEnelInputTextResultadodeUtterance();
 
         PremiumAndArrayControler();
     }
+
 
     //DB FUNC
     private void PremiumAndArrayControler() {
@@ -145,7 +202,7 @@ public class Transicion2023 extends AppCompatActivity {
                         selection = spin.getSelectedItem().toString();
                         textspin1.setText(selection);
 
-                        vf.setVisibility(View.VISIBLE);
+                      /*  vf.setVisibility(View.VISIBLE);
                         vv.setVisibility(View.GONE);
 
                         txt_exp.setVisibility(View.VISIBLE);
@@ -162,7 +219,7 @@ public class Transicion2023 extends AppCompatActivity {
 
 
                         answerinp.setBackgroundColor(Color.WHITE);
-                        opclay.setBackgroundColor(Color.WHITE);
+                        opclay.setBackgroundColor(Color.WHITE);*/
                     }
 
                     @Override
@@ -193,7 +250,7 @@ public class Transicion2023 extends AppCompatActivity {
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     selection = spin.getSelectedItem().toString();
                                     textspin1.setText(selection);
-                                    vf.setVisibility(View.VISIBLE);
+                                  /*  vf.setVisibility(View.VISIBLE);
                                     vv.setVisibility(View.GONE);
                                     txt_exp.setVisibility(View.VISIBLE);
                                     btn_emp_lay.setVisibility(View.VISIBLE);
@@ -208,7 +265,7 @@ public class Transicion2023 extends AppCompatActivity {
 
 
                                     answerinp.setBackgroundColor(Color.WHITE);
-                                    opclay.setBackgroundColor(Color.WHITE);
+                                    opclay.setBackgroundColor(Color.WHITE);*/
                                 }
 
                                 @Override
@@ -230,22 +287,7 @@ public class Transicion2023 extends AppCompatActivity {
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             selection = spin.getSelectedItem().toString();
                             textspin1.setText(selection);
-                            vf.setVisibility(View.VISIBLE);
-                            vv.setVisibility(View.GONE);
-                            txt_exp.setVisibility(View.VISIBLE);
-                            btn_emp_lay.setVisibility(View.VISIBLE);
-                            spanish_lay.setVisibility(View.GONE);
-                            input_lay.setVisibility(View.GONE);
 
-                            btn_check_lay.setVisibility(View.GONE);
-                            btn_cont_lay.setVisibility(View.GONE);
-
-                            resplay.setVisibility(View.GONE);
-
-
-
-                            answerinp.setBackgroundColor(Color.WHITE);
-                            opclay.setBackgroundColor(Color.WHITE);
                         }
 
                         @Override
@@ -373,7 +415,7 @@ public class Transicion2023 extends AppCompatActivity {
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
 
-        VideoPlayer video_player = new VideoPlayer();
+       /* VideoPlayer video_player = new VideoPlayer();
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
@@ -381,8 +423,11 @@ public class Transicion2023 extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView4, video_player)
-                .commit();
+                .commit();*/
+        if(video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
 
+        }
 
         if(selection.equals("Tutorial")){
             spa_sent.setText("Seleccione una estructura para continuar con la practica");
@@ -417,7 +462,8 @@ public class Transicion2023 extends AppCompatActivity {
     //EMPIEZA LA PRACTICA TRANSICION
     public void practice(View v){
 
-
+        tdr.setVisibility(View.GONE);
+        tdrnumero.setVisibility(View.GONE   );
         switch (selection){
             case "Random":
                 activarInputs();
@@ -445,14 +491,17 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
                                         public void onError(String s) {
                                         }
                                     });
-                                    tts.speak("como dirías..." + sptx.getText().toString().trim(),
+                                    tts.setSpeechRate(0.90f);
+                                    tts.speak("  como dirías..." + sptx.getText().toString().trim(),
                                             0, null, "zero");
                                 }
 
@@ -481,7 +530,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -516,7 +567,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -551,7 +604,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -586,7 +641,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -621,7 +678,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -656,7 +715,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -691,7 +752,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -726,7 +789,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -761,7 +826,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -796,7 +863,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -831,7 +900,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -866,7 +937,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -901,7 +974,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -936,7 +1011,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -971,7 +1048,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1006,7 +1085,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1041,7 +1122,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1076,7 +1159,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1111,7 +1196,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1146,7 +1233,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1181,7 +1270,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1216,7 +1307,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1277,7 +1370,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1310,7 +1405,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1343,7 +1440,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1376,7 +1475,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1409,7 +1510,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1442,7 +1545,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1475,7 +1580,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1508,7 +1615,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1541,7 +1650,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1574,7 +1685,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1607,7 +1720,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1640,7 +1755,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1673,7 +1790,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1706,7 +1825,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1739,7 +1860,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1772,7 +1895,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1805,7 +1930,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1838,7 +1965,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1871,7 +2000,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1904,7 +2035,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1937,7 +2070,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -1970,7 +2105,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -2003,7 +2140,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -2036,7 +2175,9 @@ public class Transicion2023 extends AppCompatActivity {
                                         public void onDone(String utteranceId) {
 
 
-                                            // iniciarentradavoz();
+                                             if(timerTask == null){
+                                                                    startTimer();
+                                                                }
                                         }
 
                                         @Override
@@ -2062,7 +2203,7 @@ public class Transicion2023 extends AppCompatActivity {
         if (t.equalsIgnoreCase(t2)) {
             //ICONOS
             Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
-
+            setTimeonScreen();
             //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
             answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
             opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
@@ -2073,9 +2214,49 @@ public class Transicion2023 extends AppCompatActivity {
 
             //LAYOUT DE RESPUESTA
             answer_lay.setVisibility(View.GONE);
+            btn_cont_lay.setVisibility(View.VISIBLE);
 
             //ESCONDER CHEQUEAR RESPUESTA
             btn_check_lay.setVisibility(View.GONE);
+
+            double sum;
+            switch (counterDB){
+                case 0:
+                    one=secondsWithDecimal;
+                    Toast.makeText(this, "one", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case 1:
+                    two=secondsWithDecimal;
+                    Toast.makeText(this, "two", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+                case 2:
+                    three=secondsWithDecimal;
+                    Toast.makeText(this, "three", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+                case 3:
+                    four=secondsWithDecimal;
+                    Toast.makeText(this, "four", Toast.LENGTH_SHORT).show();
+
+                    break;
+                case 4:
+                    five=secondsWithDecimal;
+                    Toast.makeText(this, "five", Toast.LENGTH_SHORT).show();
+
+                    break;
+
+            }
+            counterDB++;
+            sum = one+two+three+four+five;
+            if(counterDB == 5){
+
+                turnTrue(selection,sum);
+                counterDB=0;
+            }
 
             ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
                 @Override
@@ -2097,14 +2278,20 @@ public class Transicion2023 extends AppCompatActivity {
                             }
                         });
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
-                        // aqui debemos modificar el array, quitarle lo que se le tenga que quitar
-                        // volvemos a llamar premium controler y re/setea el array
-                        // no hemos hecho la condicion para realmente saber que el alumno haya pasado la estructura
 
-                        /*if(true){
-                            Toast.makeText(Transicion_nuevo.this, "before subtract", Toast.LENGTH_SHORT).show();
-                            SubtractSelectionAndSendinfoToDb();
-                        }*/
+
+                        condicionparapasar++;
+                        if(personalizedPlan ){
+                            if(condicionparapasar>5){
+
+                                SubtractSelectionAndSendinfoToDb();
+                                condicionparapasar=0;
+
+                            }else {
+                                Toast.makeText(Transicion2023.this, "otras " +String.valueOf(6-condicionparapasar)+" correctas para pasar a siguiente estructura", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
                     }
                 }
             });
@@ -2149,7 +2336,19 @@ public class Transicion2023 extends AppCompatActivity {
                         ttr.speak("answer is incorrect....the answer is..." + engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
                         //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
                         //with this yet
+                        engtx.setTextColor(Color.BLUE);
+                        engtx.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String textFromTxteng = engtx.getText().toString();
+                                answerinp.setText(textFromTxteng);
+                            }
+                        });
 
+                        if(personalizedPlan){
+                            //reset counter?
+                            condicionparapasar=0;
+                        }
                     }
                 }
             });
@@ -2206,27 +2405,234 @@ public class Transicion2023 extends AppCompatActivity {
     //Plugins
     private void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        speechRecognitionLauncher.launch(intent);
         try {
-            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException e) {
         }
+
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
+    private void escribirEnelInputTextResultadodeUtterance() {
+        speechRecognitionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        // Handle the result here
+                        Intent data = result.getData();
+                        if (data != null) {
+                            ArrayList<String> resultArray = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                            if (resultArray != null && !resultArray.isEmpty()) {
+                                // Get the recognized text (the first item in the list)
+                                String recognizedText = resultArray.get(0);
 
-            case REC_CODE_SPEECH_INPUT:
-                if (resultCode == RESULT_OK && null != data) {
-                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-                    answerinp.setText(result.get(0));
-
+                                // Set the recognized text to the EditText
+                                answerinp.setText(recognizedText);
+                            }
+                        }
+                    }
                 }
-                break;
+        );
+    }
+    double secondsWithDecimal;
+    private void startTimer() {
+        timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        timen++;
+                        tdrnumero.setText(getTimerTextWithMilliseconds());
+
+                    }
+                });
+            }
+
+        };
+        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
+    }
+    private String getTimerTextWithMilliseconds() {
+        double milliseconds = timen * 1000; // Convert seconds to milliseconds
+
+        roundedMilliseconds = (int) Math.round(milliseconds);
+        int seconds = ((roundedMilliseconds % 86400000) % 3600000) % 60000 / 1000; // Extract seconds
+        int minutes = ((roundedMilliseconds % 86400000) % 3600000) / 60000; // Extract minutes
+        int hours = (roundedMilliseconds % 86400000) / 3600000; // Extract hours
+        int millisecondsValue = roundedMilliseconds % 1000; // Extract milliseconds
+
+        return formatTimeWithMilliseconds(seconds, minutes, hours, millisecondsValue);
+    }
+    private String formatTimeWithMilliseconds(int seconds, int minutes, int hours, int milliseconds) {
+        return String.format("%02d : %02d : %02d : %03d", hours, minutes, seconds, milliseconds);
+    }
+    private void setTimeonScreen() {
+        prom = roundedMilliseconds ;
+        tdr.setVisibility(View.VISIBLE);
+        tdrnumero.setVisibility(View.VISIBLE);
+         secondsWithDecimal = prom / 1000; // Divide by 100 to get seconds with two decimal places
+        tdrnumero.setText(String.format(String.valueOf(secondsWithDecimal))+" Segundos");
+        timen = 0.0;
+        if (timerTask != null) {
+            timerTask.cancel();
         }
+        timerTask = null;
+    }
+
+
+    public void turnTrue(String CurrentStructure,double sum){
+        scoresTransDocRef= db.collection(userid).document("Scores Trans"    );
+        scoresTransDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(!documentSnapshot.exists()){
+
+                }else{
+                    mso = documentSnapshot.toObject(ModeloTrans.class);
+                    assert  mso!=null;
+
+                    switch (CurrentStructure){
+                        case "Conectores Standar Presente Simple":
+                            if(!mso.ConectoresStandarPresenteSimple){
+                                updateInfo("ConectoresStandarPresenteSimple");
+                            }
+                            break;
+                        case "Conectores Standar Presente Continuo":
+                            if(!mso.ConectoresStandarPresenteContinuo){
+                                updateInfo("ConectoresStandarPresenteContinuo");
+                            }
+                            break;
+                        case "Conectores Standar Presente Perfecto":
+                            if(!mso.ConectoresStandarPresentePerfecto){
+                                updateInfo("ConectoresStandarPresentePerfecto");
+                            }
+                            break;
+                        case "Conectores Standar Presente Perfecto Continuo":
+                            if(!mso.ConectoresStandarPresentePerfectoContinuo){
+                                updateInfo("ConectoresStandarPresentePerfectoContinuo");
+                            }
+
+                            break;
+                        case "Conectores Standar Futuro Simple":
+                            if(!mso.ConectoresStandarFuturoSimple){
+                                updateInfo("ConectoresStandarFuturoSimple");
+                            }
+                            break;
+                        case "Conectores Standar Reported Speech":
+                            if(!mso.ConectoresStandarReportedSpeech){
+                                updateInfo("ConectoresStandarReportedSpeech");
+                            }
+                            break;
+                        case "Conectores Standar Must Simple":
+                            if(!mso.ConectoresStandarMustSimple){
+                                updateInfo("ConectoresStandarMustSimple");
+                            }
+                            break;
+                        case "Conectores Standar Can Simple":
+                            if(!mso.ConectoresStandarCanSimple){
+                                updateInfo("ConectoresStandarCanSimple");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Want To":
+                            if(!mso.ConectoresStandarPresenteSimpleXWantTo){
+                                updateInfo("ConectoresStandarPresenteSimpleXWantTo");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Supposed To":
+                            if(!mso.ConectoresStandarPresenteSimpleXSupposedTo){
+                                updateInfo("ConectoresStandarPresenteSimpleXSupposedTo");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Be Used To":
+                            if(!mso.ConectoresStandarPresenteSimpleXBeUsedTo){
+                                updateInfo("ConectoresStandarPresenteSimpleXBeUsedTo");
+                            }
+                            break;
+                        case "Conectores Standar Can Simple X Can Simple":
+                            if(!mso.ConectoresStandarCanSimpleXCanSimple){
+                                updateInfo("ConectoresStandarCanSimpleXCanSimple");
+                            }
+                            break;
+                        case "Conectores Standar Should Simple X Prensente Simple":
+                            if(!mso.ConectoresStandarShouldSimpleXPrensenteSimple){
+                                updateInfo("ConectoresStandarShouldSimpleXPrensenteSimple");
+                            }
+                            break;
+                        case "Conectores Standar Should Simple X Prensente Continuo":
+                            if(!mso.ConectoresStandarShouldSimpleXPrensenteContinuo){
+                                updateInfo("ConectoresStandarShouldSimpleXPrensenteContinuo");
+                            }
+                            break;
+                        case "Conectores Standar Can Simple X Presente Simple":
+                            if(!mso.ConectoresStandarCanSimpleXPresenteSimple){
+                                updateInfo("ConectoresStandarCanSimpleXPresenteSimple");
+                            }
+                            break;
+                        case "Conectores Standar Can Simple X Presente Continuo":
+                            if(!mso.ConectoresStandarCanSimpleXPresenteContinuo){
+                                updateInfo("ConectoresStandarCanSimpleXPresenteContinuo");
+                            }
+                            break;
+                        case "Conectores Standar Can Simple X Presente Perfecto":
+                            if(!mso.ConectoresStandarCanSimpleXPresentePerfecto){
+                                updateInfo("ConectoresStandarCanSimpleXPresentePerfecto");
+                            }
+                            break;
+                        case "Conectores Standar Could Simple X Presente Simple":
+                            if(!mso.ConectoresStandarCouldSimpleXPresenteSimple){
+                                updateInfo("ConectoresStandarCouldSimpleXPresenteSimple");
+                            }
+                            break;
+                        case "Conectores Standar Could Simple X Presente Continuo":
+                            if(!mso.ConectoresStandarCouldSimpleXPresenteContinuo){
+                                updateInfo("ConectoresStandarCouldSimpleXPresenteContinuo");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Por Sujeto":
+                            if(!mso.ConectoresStandarPresenteSimpleXPorSujeto){
+                                updateInfo("ConectoresStandarPresenteSimpleXPorSujeto");
+                            }
+                            break;
+
+                        case "Conectores Standar Presente Simple X Por Objeto":
+                            if(!mso.ConectoresStandarPresenteSimpleXPorObjeto){
+                                updateInfo("ConectoresStandarPresenteSimpleXPorObjeto");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Por Preposicion":
+                            if(!mso.ConectoresStandarPresenteSimpleXPorPreposicion){
+                                updateInfo("ConectoresStandarPresenteSimpleXPorPreposicion");
+                            }
+                            break;
+                        case "Conectores Standar Presente Simple X Interferencia Reflexiva":
+                            if(!mso.ConectoresStandarPresenteSimpleXInterferenciaReflexiva){
+                                updateInfo("ConectoresStandarPresenteSimpleXInterferenciaReflexiva");
+                            }
+                            break;
+
+
+
+                    }
+                }
+            }
+
+            private void updateInfo(String estructura) {
+                double prom = sum / 5;
+                division = mso.TransCounter / total;
+                result = division * 100;
+                mso.TransCounter++; // sube el counter 1
+                userdb.put(estructura,true);// cambia valor a veradero
+                userdb.put("TransCounter",mso.TransCounter);
+                userdb.put("AvanceTrans",result);
+                userdb.put("tdrTrans",prom);
+                uid.document("Scores Trans").update(userdb);
+            }
+        });
 
     }
+    double division,result;
 }

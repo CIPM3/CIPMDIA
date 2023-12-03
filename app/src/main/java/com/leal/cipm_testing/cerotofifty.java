@@ -49,7 +49,7 @@ public class cerotofifty {
     String vib2[] = {"tienes ", "dices ", "vas ", "obtienes ", "haces ", "sabes "};
     String vib3esp[] = {"tiene ", "dice ", "va ", "obtiene ", "hace ", "sabe "};
     String vib3p[] = {"tienen ", "dicen ", "van ", "obtienen ", "hacen ", "saben "};
-    String vibnos[] = {"tenemos ", "dicen ", "vamos ", "obtenemos ", "hacemos ", "sabemos "};
+    String vibnos[] = {"tenemos ", "decimos ", "vamos ", "obtenemos ", "hacemos ", "sabemos "};
 
     // hipotetico
     String verbo1hip[] = {"tendría ", "diría ", "iría ", "obtendría ", "haría ", "sabría "};
@@ -104,7 +104,6 @@ public class cerotofifty {
             ob=allsp[j];
             eng=alleng[j];
         j++;
-
     }
     public void prepartob() {
         int i = (int) (Math.random() * articles.length);
@@ -210,7 +209,7 @@ public class cerotofifty {
                         gene = pronoun[3] + vib3[iv];
                         break;
 
-                    case 2:
+                    case 1:
                         gens = pronombres[3] + "no " + vib3esp[iv];
                         gene = pronoun[3] + "doesn't " + vib[iv];
                         break;
@@ -223,7 +222,7 @@ public class cerotofifty {
                         gens = pronombres[4] + vib3esp[iv];
                         gene = pronoun[4] + vib3[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[4] + "no " + vib3esp[iv];
                         gene = pronoun[4] + "doesn't " + vib[iv];
                         break;
@@ -235,7 +234,7 @@ public class cerotofifty {
                         gens = pronombres[5] + vib3p[iv];
                         gene = pronoun[5] + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[5] + "no " + vib3p[iv];
                         gene = pronoun[5] + "don't " + vib[iv];
                         break;
@@ -248,7 +247,7 @@ public class cerotofifty {
                         gens = pronombres[6] + vibnos[iv];
                         gene = pronoun[6] + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[6] + "no " + vibnos[iv];
                         gene = pronoun[6] + "don't " + vib[iv];
                         break;
@@ -344,7 +343,7 @@ public class cerotofifty {
                         gene = adv[ii] +  pronoun[3] + vib3[iv];
                         break;
 
-                    case 2:
+                    case 1:
                         gens = adver[ii] + pronombres[3] + "no " + vib3esp[iv];
                         gene = adv[ii] +  pronoun[3] + "doesn't " + vib[iv];
                         break;
@@ -357,7 +356,7 @@ public class cerotofifty {
                         gens = adver[ii] + pronombres[4] + vib3esp[iv];
                         gene = adv[ii] + pronoun[4] + vib3[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = adver[ii] + pronombres[4] + "no " + vib3esp[iv];
                         gene = adv[ii] + pronoun[4] + "doesn't " + vib[iv];
                         break;
@@ -366,12 +365,12 @@ public class cerotofifty {
             case "ellos ":
                 switch (iii) {
                     case 0:
-                        gens = adver[ii] + pronombres[6] + vib3p[iv];
-                        gene = adv[ii] + pronoun[6] + vib[iv];
+                        gens = adver[ii] + pronombres[5] + vib3p[iv];
+                        gene = adv[ii] + pronoun[5] + vib[iv];
                         break;
-                    case 2:
-                        gens = adver[ii] + pronombres[6] + "no " + vib3p[iv];
-                        gene = adv[ii] + pronoun[6] + "don't " + vib[iv];
+                    case 1:
+                        gens = adver[ii] + pronombres[5] + "no " + vib3p[iv];
+                        gene = adv[ii] + pronoun[5] + "don't " + vib[iv];
                         break;
 
                 }
@@ -379,12 +378,12 @@ public class cerotofifty {
             case "nosotros ":
                 switch (iii) {
                     case 0:
-                        gens = adver[ii] + pronombres[5] + vibnos[iv];
-                        gene = adv[ii] + pronoun[5] + vib[iv];
+                        gens = adver[ii] + pronombres[6] + vibnos[iv];
+                        gene = adv[ii] + pronoun[6] + vib[iv];
                         break;
-                    case 2:
-                        gens = adver[ii] + pronombres[5] + "no " + vibnos[iv];
-                        gene = adv[ii] + pronoun[5] + "don't " + vib[iv];
+                    case 1:
+                        gens = adver[ii] + pronombres[6] + "no " + vibnos[iv];
+                        gene = adv[ii] + pronoun[6] + "don't " + vib[iv];
                         break;
                 }
                 break;
@@ -544,7 +543,7 @@ public class cerotofifty {
                         gene = pronoun[3] + "would " + vib[iv];
                         break;
 
-                    case 2:
+                    case 1:
                         gens = pronombres[3] + "no " + verbo3hip[iv];
                         gene = pronoun[3] + "wouldn't " + vib[iv];
                         break;
@@ -557,7 +556,7 @@ public class cerotofifty {
                         gens = pronombres[4] + verbo3hip[iv];
                         gene = pronoun[4] + "would " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[4] + "no " + verbo3hip[iv];
                         gene = pronoun[4] + "wouldn't " + vib[iv];
                         break;
@@ -569,7 +568,7 @@ public class cerotofifty {
                         gens = pronombres[5] + verbos4hip[iv];
                         gene = pronoun[5] + "would " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[5] + "no " + verbos4hip[iv];
                         gene = pronoun[5] + "wouldn't " + vib[iv];
                         break;
@@ -582,7 +581,7 @@ public class cerotofifty {
                         gens = pronombres[6] + verbos5hip[iv];
                         gene = pronoun[6] + "would " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[6] + "no " + verbos5hip[iv];
                         gene = pronoun[6] + "wouldn't " + vib[iv];
                         break;
@@ -644,7 +643,7 @@ public class cerotofifty {
                         gene = pronoun[3] + "can " + vib[iv];
                         break;
 
-                    case 2:
+                    case 1:
                         gens = pronombres[3] + "no puede " + verbos[iv];
                         gene = pronoun[3] + "can't " + vib[iv];
                         break;
@@ -657,7 +656,7 @@ public class cerotofifty {
                         gens = pronombres[4] + "puede " + verbos[iv];
                         gene = pronoun[4] + "can " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[4] + "no puede " + verbos[iv];
                         gene = pronoun[4] + "can't " + vib[iv];
                         break;
@@ -669,7 +668,7 @@ public class cerotofifty {
                         gens = pronombres[5] + "pueden " + verbos[iv];
                         gene = pronoun[5] + "can " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[5] + "no pueden " + verbos[iv];
                         gene = pronoun[5] + "can't " + vib[iv];
                         break;
@@ -682,7 +681,7 @@ public class cerotofifty {
                         gens = pronombres[6] + "podemos " + verbos[iv];
                         gene = pronoun[6] + "can " + vib[iv];
                         break;
-                    case 2:
+                    case 1:
                         gens = pronombres[6] + "no podemos " + verbos[iv];
                         gene = pronoun[6] + "can't " + vib[iv];
                         break;

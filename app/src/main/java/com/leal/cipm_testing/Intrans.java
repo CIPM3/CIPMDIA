@@ -55,131 +55,131 @@ public class Intrans {
 
     //verbos generador 1 completos base
     String vcb[] = {
-            "have ", "do ", "say ", "get ", "make ", "know ", "take ", "see ",
-            "want ", "use ", "find ", "give ", "tell ", "call ", "try ", "ask ", "need ", "feel ",
-            "leave ", "put ", "keep ", "begin ", "help ", "turn ", "start ", "show ", "hear ",
-            "play ", "move ", "believe ", "hold ", "bring ", "write ", "provide ", "lose ", "pay ",
-            "meet ", "include ", "continue ", "set ", "learn ", "change ", "lead ", "watch ",
-            "follow ", "stop ", "create ", "speak ", "read ", "add ", "spend ", "open ", "win ",
-            "offer ", "remember ", "love ", "consider ", "buy ", "serve ", "send ", "expect ",
-            "build ", "cut ", "kill ", "go ", "think ", "come ", "look ",
-            "work ", "play ", "talk ",
-            "run ", "move ", "live ",
-            "sit ", "stand ", "understand ",
-            "walk ", "grow ", "wait ", "die ",
-            "stay ", "fall ",
+           "have ", "do ", "say ", "get ", "make ", "know ", "take ", "see ",
+           "want ", "use ", "find ", "give ", "tell ", "call ", "try ", "ask ", "need ", "feel ",
+           "leave ", "put ", "keep ", "begin ", "help ", "turn ", "start ", "show ", "hear ",
+           "play ", "move ", "believe ", "hold ", "bring ", "write ", "provide ", "lose ", "pay ",
+           "meet ", "include ", "continue ", "set ", "learn ", "change ", "lead ", "watch ",
+           "follow ", "stop ", "create ", "speak ", "read ", "add ", "spend ", "open ", "win ",
+           "offer ", "remember ", "love ", "consider ", "buy ", "serve ", "send ", "expect ",
+           "build ", "cut ", "kill ", "go ", "think ", "come ", "look ",
+           "work ", "play ", "talk ",
+           "run ", "move ", "live ",
+           "sit ", "stand ", "understand ",
+           "walk ", "grow ", "wait ", "die ",
+           "stay ", "fall ",
     };
     //verbos completos subjuntivos primera persona
     String vcb1s[] = {
-            "tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
-            "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
-            "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
-            "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
-            "conozca ", "incluya ", "continue ", "establezca (set) ", "aprenda ", "cambie ", "diriga ", "observe ",
-            "siga ", "detenga ", "cree ", "hable ", "lea ", "agregue ", "gaste ", "abra ", "gane ",
-            "ofrezca ", "recuerde ", "ame ", "considere ", "compre ", "sirva ", "envie ", "espere (expectativa) ",
-            "construya ", "corte ", "mate ", "vaya ", "piense ", "venga ", "mire ", "trabaje ", "juege ", "platique ", "corra ", "mueva ", "viva ",
-            "me siente ", "me pare ", "entienda ", "camine ", "crezca ", "espere ", "muera ", "me quede ", "me caiga "
+           "tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
+           "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
+           "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
+           "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
+           "conozca ", "incluya ", "continue ", "establezca (set) ", "aprenda ", "cambie ", "diriga ", "observe ",
+           "siga ", "detenga ", "cree ", "hable ", "lea ", "agregue ", "gaste ", "abra ", "gane ",
+           "ofrezca ", "recuerde ", "ame ", "considere ", "compre ", "sirva ", "envie ", "espere (expectativa) ",
+           "construya ", "corte ", "mate ", "vaya ", "piense ", "venga ", "mire ", "trabaje ", "juege ", "platique ", "corra ", "mueva ", "viva ",
+           "me siente ", "me pare ", "entienda ", "camine ", "crezca ", "espere ", "muera ", "me quede ", "me caiga "
     };
     //verbos completos subjuntivos segunda persona
     String vcb2s[] = {
-            "tengas ", "hagas ", "digas ", "obtengas ", "hagas (make) ", "sepas ", "tomes ", "veas ",
-            "quieras ", "uses ", "encuentres ", "des ", "comentes ", "llames ", "intentes ", "preguntes ", "necesites ", "sientas ",
-            "dejes (abandonar) ", "pongas ", "mantengas ", "comiences ", "ayudes ", "voltees ", "empieces ", "muestres ", "oigas ",
-            "jueges ", "muevas ", "creas ", "sostengas ", "traigas ", "escribas ", "proveas ", "pierdas ", "pagues ",
-            "conozcas ", "incluyas ", "continues ", "establezcas (set) ", "aprendas ", "cambies ", "dirigas ", "observes ",
-            "sigas ", "detengas ", "crees ", "hables ", "leas ", "agregues ", "gastes ", "abras ", "ganes ",
-            "ofrezcas ", "recuerdes ", "ames ", "consideres ", "compres ", "sirvas ", "envies ", "esperes (expectativa) ",
-            "construyas ", "cortes ", "mates ", "vayas ", "pienses ", "vengas ", "mires ", "trabajes ", "jueges ", "platiques ", "corras ", "muevas ", "vivas ",
-            "te sientes ", "te pares ", "entiendas ", "camines ", "crezcas ", "esperes ", "te mueras ", "te quedes ", "te caigas "
+           "tengas ", "hagas ", "digas ", "obtengas ", "hagas (make) ", "sepas ", "tomes ", "veas ",
+           "quieras ", "uses ", "encuentres ", "des ", "comentes ", "llames ", "intentes ", "preguntes ", "necesites ", "sientas ",
+           "dejes (abandonar) ", "pongas ", "mantengas ", "comiences ", "ayudes ", "voltees ", "empieces ", "muestres ", "oigas ",
+           "jueges ", "muevas ", "creas ", "sostengas ", "traigas ", "escribas ", "proveas ", "pierdas ", "pagues ",
+           "conozcas ", "incluyas ", "continues ", "establezcas (set) ", "aprendas ", "cambies ", "dirigas ", "observes ",
+           "sigas ", "detengas ", "crees ", "hables ", "leas ", "agregues ", "gastes ", "abras ", "ganes ",
+           "ofrezcas ", "recuerdes ", "ames ", "consideres ", "compres ", "sirvas ", "envies ", "esperes (expectativa) ",
+           "construyas ", "cortes ", "mates ", "vayas ", "pienses ", "vengas ", "mires ", "trabajes ", "jueges ", "platiques ", "corras ", "muevas ", "vivas ",
+           "te sientes ", "te pares ", "entiendas ", "camines ", "crezcas ", "esperes ", "te mueras ", "te quedes ", "te caigas "
     };
     //verbos completos subjuntivos tercera persona
     String vcb3s[] = {
-            "tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
-            "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
-            "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
-            "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
-            "conozca ", "incluya ", "continue ", "establezca (set) ", "aprenda ", "cambie ", "diriga ", "observe ",
-            "siga ", "detenga ", "cree ", "hable ", "lea ", "agregue ", "gaste ", "abra ", "gane ",
-            "ofrezca ", "recuerde ", "ame ", "considere ", "compre ", "sirva ", "envie ", "espere (expectativa) ",
-            "construya ", "corte ", "mate ", "vaya ", "piense ", "venga ", "mire ", "trabaje ", "juege ", "platique ", "corra ", "mueva ", "viva ",
-            "se siente ", "se pare ", "entienda ", "camine ", "crezca ", "espere ", "se muera ", "se quede ", "se caiga "
+           "tenga ", "haga ", "diga ", "obtenga ", "haga (make) ", "sepa ", "tome ", "vea ",
+           "quiera ", "use ", "encuentre ", "de ", "comente ", "llame ", "intente ", "pregunte ", "necesite ", "sienta ",
+           "deje (abandonar) ", "ponga ", "mantenga ", "comience ", "ayude ", "voltee ", "empiece ", "muestre ", "oiga ",
+           "juege ", "mueva ", "crea ", "sostenga ", "traiga ", "escriba ", "provea ", "pierda ", "pague ",
+           "conozca ", "incluya ", "continue ", "establezca (set) ", "aprenda ", "cambie ", "diriga ", "observe ",
+           "siga ", "detenga ", "cree ", "hable ", "lea ", "agregue ", "gaste ", "abra ", "gane ",
+           "ofrezca ", "recuerde ", "ame ", "considere ", "compre ", "sirva ", "envie ", "espere (expectativa) ",
+           "construya ", "corte ", "mate ", "vaya ", "piense ", "venga ", "mire ", "trabaje ", "juege ", "platique ", "corra ", "mueva ", "viva ",
+           "se siente ", "se pare ", "entienda ", "camine ", "crezca ", "espere ", "se muera ", "se quede ", "se caiga "
     };
     //verbos completos subjuntivos cuarta persona
     String vcb4s[] = {
-            "tengan ", "hagan ", "digan ", "obtengan ", "hagan (make) ", "sepan ", "tomen ", "vean ",
-            "quieran ", "usen ", "encuentren ", "den ", "comenten ", "llamen ", "intenten ", "pregunten ", "necesiten ", "sientan ",
-            "dejen (abandonar) ", "pongan ", "mantengan ", "comiencen ", "ayuden ", "volteen ", "empiecen ", "muestren ", "oigan ",
-            "juegen ", "muevan ", "crean ", "sostengan ", "traigan ", "escriban ", "provean ", "pierdan ", "paguen ",
-            "conozcan ", "incluyan ", "continuen ", "establezcan (set) ", "aprendan ", "cambien ", "dirigan ", "observen ",
-            "sigan ", "detengan ", "creen ", "hablen ", "lean ", "agreguen ", "gasten ", "abran ", "ganen ",
-            "ofrezcan ", "recuerden ", "amen ", "consideren ", "compren ", "sirvan ", "envien ", "esperen (expectativa) ",
-            "construyan ", "corten ", "maten ", "vayan ", "piensen ", "vengan ", "miren ", "trabajen ", "juegen ", "platiquen ", "corran ", "muevan ", "vivan ",
-            "se sienten ", "se paren ", "entiendan ", "caminen ", "crezcan ", "esperen ", "se mueran ", "se queden ", "se caigan "
+           "tengan ", "hagan ", "digan ", "obtengan ", "hagan (make) ", "sepan ", "tomen ", "vean ",
+           "quieran ", "usen ", "encuentren ", "den ", "comenten ", "llamen ", "intenten ", "pregunten ", "necesiten ", "sientan ",
+           "dejen (abandonar) ", "pongan ", "mantengan ", "comiencen ", "ayuden ", "volteen ", "empiecen ", "muestren ", "oigan ",
+           "juegen ", "muevan ", "crean ", "sostengan ", "traigan ", "escriban ", "provean ", "pierdan ", "paguen ",
+           "conozcan ", "incluyan ", "continuen ", "establezcan (set) ", "aprendan ", "cambien ", "dirigan ", "observen ",
+           "sigan ", "detengan ", "creen ", "hablen ", "lean ", "agreguen ", "gasten ", "abran ", "ganen ",
+           "ofrezcan ", "recuerden ", "amen ", "consideren ", "compren ", "sirvan ", "envien ", "esperen (expectativa) ",
+           "construyan ", "corten ", "maten ", "vayan ", "piensen ", "vengan ", "miren ", "trabajen ", "juegen ", "platiquen ", "corran ", "muevan ", "vivan ",
+           "se sienten ", "se paren ", "entiendan ", "caminen ", "crezcan ", "esperen ", "se mueran ", "se queden ", "se caigan "
     };
     //verbos completos subjuntivos quinta persona
     String vcb5s[] = {
-            "tengamos ", "hagamos ", "digamos ", "obtengamos ", "hagamos (make) ", "sepamos ", "tomemos ", "veamos ",
-            "quieramos ", "usemos ", "encontremos ", "demos ", "comentemos ", "llamemos ", "intentemos ", "preguntemos ", "necesitemos ", "sintamos ",
-            "dejemos (abandonar) ", "pongamos ", "mantengamos ", "comiencemos ", "ayudemos ", "volteemos ", "empecemos ", "mostremos ", "oigamos ",
-            "jugemos ", "movamos ", "creemos ", "sostengamos ", "traigamos ", "escribamos ", "proveamos ", "perdamos ", "paguemos ",
-            "conozcamos ", "incluyamos ", "continuemos ", "establezcamos (set) ", "aprendamos ", "cambiemos ", "dirigamos ", "observemos ",
-            "sigamos ", "detengamos ", "creemos ", "hablemos ", "leamos ", "agreguemos ", "gastemos ", "abramos ", "ganemos ",
-            "ofrezcamos ", "recordemos ", "amemos ", "consideremos ", "compremos ", "sirvamos ", "enviemos ", "esperemos (expectativa) ",
-            "construyamos ", "cortemos ", "matemos ", "vayamos ", "pensemos ", "vengamos ", "miremos ", "trabajemos ", "juguemos ", "platiquemos ", "corramos ", "movamos ", "vivamos ",
-            "nos sentemos ", "nos paremos ", "entendamos ", "caminemos ", "crezcamos ", "esperemos ", "nos muramos ", "nos quedemos ", "nos caigamos "
+           "tengamos ", "hagamos ", "digamos ", "obtengamos ", "hagamos (make) ", "sepamos ", "tomemos ", "veamos ",
+           "quieramos ", "usemos ", "encontremos ", "demos ", "comentemos ", "llamemos ", "intentemos ", "preguntemos ", "necesitemos ", "sintamos ",
+           "dejemos (abandonar) ", "pongamos ", "mantengamos ", "comiencemos ", "ayudemos ", "volteemos ", "empecemos ", "mostremos ", "oigamos ",
+           "jugemos ", "movamos ", "creemos ", "sostengamos ", "traigamos ", "escribamos ", "proveamos ", "perdamos ", "paguemos ",
+           "conozcamos ", "incluyamos ", "continuemos ", "establezcamos (set) ", "aprendamos ", "cambiemos ", "dirigamos ", "observemos ",
+           "sigamos ", "detengamos ", "creemos ", "hablemos ", "leamos ", "agreguemos ", "gastemos ", "abramos ", "ganemos ",
+           "ofrezcamos ", "recordemos ", "amemos ", "consideremos ", "compremos ", "sirvamos ", "enviemos ", "esperemos (expectativa) ",
+           "construyamos ", "cortemos ", "matemos ", "vayamos ", "pensemos ", "vengamos ", "miremos ", "trabajemos ", "juguemos ", "platiquemos ", "corramos ", "movamos ", "vivamos ",
+           "nos sentemos ", "nos paremos ", "entendamos ", "caminemos ", "crezcamos ", "esperemos ", "nos muramos ", "nos quedemos ", "nos caigamos "
     };
 
     String some[] = {
-            "time ", "year ", "day ", "man ", "child ", "world ", "state ",
-            "student ", "group ", "country ", "problem ", "place ", "case ",
-            "system ", "program ", "work ", "government ", "number ", "point ",
-            "home ", "water ", "room ", "area ", "money ", "fact ", "month ", "lot ",
-            "right ", "study ", "book ", "eye ", "job ", "business ", "side ", "kind ",
-            "service ", "friend ", "father ", "power ", "game ", "end ", "member ", "car ",
-            "name ", "president ", "team ", "minute ", "kid ", "body ", "parent ", "level ",
-            "art ", "result ", "change ", "guy ", "moment ", "air ", "teacher "};
+           "time ", "year ", "day ", "man ", "child ", "world ", "state ",
+           "student ", "group ", "country ", "problem ", "place ", "case ",
+           "system ", "program ", "work ", "government ", "number ", "point ",
+           "home ", "water ", "room ", "area ", "money ", "fact ", "month ", "lot ",
+           "right ", "study ", "book ", "eye ", "job ", "business ", "side ", "kind ",
+           "service ", "friend ", "father ", "power ", "game ", "end ", "member ", "car ",
+           "name ", "president ", "team ", "minute ", "kid ", "body ", "parent ", "level ",
+           "art ", "result ", "change ", "guy ", "moment ", "air ", "teacher "};
 
     //singular objects masculine spanish / these only have to match the ones above
     String soms[] = {"tiempo ", "año ", "dia ", "hombre ", "niño ", "mundo ", "estado ",
-            "estudiante ", "grupo ", "país ", "problema ", "lugar ", "caso ", "sistema ",
-            "programa ", "trabajo ", "gobierno ", "número ", "punto ", "hogar ", "agua ",
-            "cuarto ", "área ", "dinero ", "hecho ", "mes ", "lote ", "derecho ", "estudio ",
-            "libro ", "ojo ", "empleo ", "negocio ", "lado ", "tipo ", "servicio ",
-            "amigo ", "padre ", "poder ", "juego ", "fin ", "miembro ", "carro ", "nombre ",
-            "presidente ", "equipo ", "minuto ", "niño ", "cuerpo ", "padre ", "nivel ", "arte ",
-            "resultado ", "cambio ", "tipo ", "momento ", "aire ", "maestro "
+           "estudiante ", "grupo ", "país ", "problema ", "lugar ", "caso ", "sistema ",
+           "programa ", "trabajo ", "gobierno ", "número ", "punto ", "hogar ", "agua ",
+           "cuarto ", "área ", "dinero ", "hecho ", "mes ", "lote ", "derecho ", "estudio ",
+           "libro ", "ojo ", "empleo ", "negocio ", "lado ", "tipo ", "servicio ",
+           "amigo ", "padre ", "poder ", "juego ", "fin ", "miembro ", "carro ", "nombre ",
+           "presidente ", "equipo ", "minuto ", "niño ", "cuerpo ", "padre ", "nivel ", "arte ",
+           "resultado ", "cambio ", "tipo ", "momento ", "aire ", "maestro "
     };
 
 
 
     String with[] = {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-            "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-            "with the woman ",
-            "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-            "with the people ", "with a nurse ",
-            "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-            "with my friend ", "with my cousin ", "with the father ", "with the mother "
+           "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+           "with the woman ",
+           "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+           "with the people ", "with a nurse ",
+           "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+           "with my friend ", "with my cousin ", "with the father ", "with the mother "
     };
     String con[] = {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-            "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-            "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-            "con gente ", "con la gente ",
-            "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-            "con el maestro ", "con mi amigo ",
-            "con mi primo ", "con el papá ", "con la mamá "
+           "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+           "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+           "con gente ", "con la gente ",
+           "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+           "con el maestro ", "con mi amigo ",
+           "con mi primo ", "con el papá ", "con la mamá "
     };
 
     String at[] = {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-            "at the store ", "at church ", "at the hospital ",
-            "at the office ", "at the station "
+           "at the store ", "at church ", "at the hospital ",
+           "at the office ", "at the station "
     };
     String aten[] = {"en el restaurante (pero no dentro) ",
-            "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-            "en el concierto (pero no dentro) ",
-            "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-            "en el hospital (pero no dentro) ",
-            "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+           "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+           "en el concierto (pero no dentro) ",
+           "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+           "en el hospital (pero no dentro) ",
+           "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
     };
 
     String from[] = {"from the house ", "from the office ", "from the hospital "
@@ -301,32 +301,32 @@ public class Intrans {
 
 
     String advfrequ[] = {"siempre ", "constantemente ", "frecuentemente ",
-            "generalmente ",
-            "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
-            "regularmente ",
-            "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
-            "perfectamente ", "facilmente ", "cuidadosamente ", "abiertamente ",
-            "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
-            "seguido ", "calmadamente "
+           "generalmente ",
+           "normalmente ", "ocacionalmente ", "seguido ", "raramente ",
+           "regularmente ",
+           "regularmente ", "usualmente ", "felizmente ", "temprano ", "tarde ", "diariamente ",
+           "perfectamente ", "facilmente ", "cuidadosamente ", "abiertamente ",
+           "finalmente ", "peligrosamente ", "desesperadamente ", "ocasionalmente ",
+           "seguido ", "calmadamente "
     };
     String frequadv[] = {
-            "always ", "constantly ", "frequently ", "generally ",
-            "normally ", "occasionally ", "often ", "rarely ", "regularly ",
-            "regularly ",
-            "usually ", "happily ", "early ", "late ", "daily ",
-            "perfectly ", "easily ", "carefully ",
-            "openly ", "finally ", "dangerouslly ", "desperately ",
-            "occasionally ", "often ", "calmly "
+           "always ", "constantly ", "frequently ", "generally ",
+           "normally ", "occasionally ", "often ", "rarely ", "regularly ",
+           "regularly ",
+           "usually ", "happily ", "early ", "late ", "daily ",
+           "perfectly ", "easily ", "carefully ",
+           "openly ", "finally ", "dangerouslly ", "desperately ",
+           "occasionally ", "often ", "calmly "
     };
 
     // the single dimention arrays are on top, now to make the special 2 dimentional arrays
     //randy = (int) (Math.random() * with.length);
     String gospecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ", "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ", "with the nurse ", "with the manager ", "with the boss ",
-                    "with the teacher ", "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ", "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ", "with the nurse ", "with the manager ", "with the boss ",
+                   "with the teacher ", "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -354,10 +354,10 @@ public class Intrans {
     };
     String irspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ", "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ", "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ", "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ", "con mi primo ", "con el papá ", "con la mamá "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -386,16 +386,16 @@ public class Intrans {
 
     String thinkspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -434,19 +434,19 @@ public class Intrans {
     };
     String penspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -486,12 +486,12 @@ public class Intrans {
 
     String comespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"from the house ", "from the office ", "from the hospital "
             },
@@ -509,12 +509,12 @@ public class Intrans {
     };
     String venspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"de la casa ", "de la oficina ", "de el hospital "
             },
@@ -532,8 +532,8 @@ public class Intrans {
 
     String lookspecial[][] = {
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"from the house ", "from the office ", "from the hospital "
             },
@@ -564,11 +564,11 @@ public class Intrans {
     };
     String miraspecial[][] = {
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"desde la casa ", "desde la oficina ", "desde el hospital "
             },
@@ -599,16 +599,16 @@ public class Intrans {
     };
     String workspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"from the house ", "from the office ", "from the hospital "
             },
@@ -641,19 +641,19 @@ public class Intrans {
     };
     String trabspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"desde la casa ", "desde la oficina ", "desde el hospital "
             },
@@ -688,12 +688,12 @@ public class Intrans {
 
     String playspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -728,12 +728,12 @@ public class Intrans {
     };
     String jugspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -768,16 +768,16 @@ public class Intrans {
     };
     String talkspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -814,19 +814,19 @@ public class Intrans {
     };
     String platspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -864,12 +864,12 @@ public class Intrans {
 
     String runspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -912,12 +912,12 @@ public class Intrans {
     };
     String correrspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -960,12 +960,12 @@ public class Intrans {
     };
     String movespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -996,12 +996,12 @@ public class Intrans {
     };
     String moverspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1033,12 +1033,12 @@ public class Intrans {
 
     String livespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"in the house ", "in the fridge ", "in the year ", "in the bus ", "in the car ", "in the club "
             },
@@ -1061,12 +1061,12 @@ public class Intrans {
     };
     String vivspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en la casa ", "en el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
             },
@@ -1089,16 +1089,16 @@ public class Intrans {
     };
     String sitspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1120,19 +1120,19 @@ public class Intrans {
     };
     String sentspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1154,16 +1154,16 @@ public class Intrans {
 
     String standspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1191,19 +1191,19 @@ public class Intrans {
     };
     String parspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1231,12 +1231,12 @@ public class Intrans {
 
     String undspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"in the house ", "in the fridge ", "in the year ", "in the bus ", "in the car ", "in the club "
             },
@@ -1245,12 +1245,12 @@ public class Intrans {
     };
     String entspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en la casa ", "en el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
             },
@@ -1260,12 +1260,12 @@ public class Intrans {
 
     String walkspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"from the house ", "from the office ", "from the hospital "
             },
@@ -1307,12 +1307,12 @@ public class Intrans {
     };
     String camspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"desde la casa ", "desde la oficina ", "desde el hospital "
             },
@@ -1354,12 +1354,12 @@ public class Intrans {
 
     String growspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1393,12 +1393,12 @@ public class Intrans {
     };
     String crecspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1432,16 +1432,16 @@ public class Intrans {
 
     String waitspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1470,19 +1470,19 @@ public class Intrans {
     };
     String espspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1512,16 +1512,16 @@ public class Intrans {
 
     String diespecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1550,19 +1550,19 @@ public class Intrans {
     };
     String morirspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1592,16 +1592,16 @@ public class Intrans {
 
     String stayspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"during the year ", "during the day ", "during the hour ", " during the school year ", "during the riots "
             },
@@ -1630,19 +1630,19 @@ public class Intrans {
     };
     String quedspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1671,16 +1671,16 @@ public class Intrans {
 
     String fallspecial[][] = {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"from the house ", "from the office ", "from the hospital "
             },
@@ -1711,19 +1711,19 @@ public class Intrans {
     };
     String caerspecial[][] = {
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"de la casa ", "de la oficina ", "de el hospital "
             },
@@ -1756,35 +1756,35 @@ public class Intrans {
     };
     //with, at, during, until,among,in,by,since,under,around,near- verbos nobles preps
     String noblesspecial[][]={ {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-            "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-            "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-            "con gente ", "con la gente ",
-            "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-            "con el maestro ", "con mi amigo ",
-            "con mi primo ", "con el papá ", "con la mamá "
+           "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+           "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+           "con gente ", "con la gente ",
+           "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+           "con el maestro ", "con mi amigo ",
+           "con mi primo ", "con el papá ", "con la mamá "
     },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
             {"en la casa ", "en el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
             }
 
     };
     String noblesspecialeng[][]= {   {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-            "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-            "with the woman ",
-            "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-            "with the people ", "with a nurse ",
-            "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-            "with my friend ", "with my cousin ", "with the father ", "with the mother "
+           "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+           "with the woman ",
+           "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+           "with the people ", "with a nurse ",
+           "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+           "with my friend ", "with my cousin ", "with the father ", "with the mother "
     },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
             {"in the house ", "in the fridge ", "in the year ", "in the bus ", "in the car ", "in the club "
             }
@@ -1795,289 +1795,289 @@ public class Intrans {
             {"en la casa ", "en el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
             },
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
     };
     String absspecialeng[][]= {
             {"in the house ", "in the fridge ", "in the year ", "in the bus ", "in the car ", "in the club "
             },
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
     };
 
     //verbos people preps
     String peoplespecial[][]={
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
     };
     String peoplespecialeng[][]= {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
     };
 
     //Verbos Oo preps
     String Oospecial[][]={
             {"con la familia ", "con la esposa ", "con los niños ", "con niños ", "con hombres ", "con un hombre ",
-                    "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
-                    "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
-                    "con gente ", "con la gente ",
-                    "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
-                    "con el maestro ", "con mi amigo ",
-                    "con mi primo ", "con el papá ", "con la mamá "
+                   "con el doctor ", "con un bebé ", "con el bebé ", "con la bibliotecaria ", "con una mujer ",
+                   "con la mujer ", "con el dentista ", "con el cartero ", "con el bombero ",
+                   "con gente ", "con la gente ",
+                   "con una enfermera ", "con la enfermera ", "con el manager ", "con el jefe ",
+                   "con el maestro ", "con mi amigo ",
+                   "con mi primo ", "con el papá ", "con la mamá "
             },
             {"en el restaurante (pero no dentro) ",
-                    "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                    "en el concierto (pero no dentro) ",
-                    "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                    "en el hospital (pero no dentro) ",
-                    "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
+                   "en el concierto (pero no dentro) ",
+                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
+                   "en el hospital (pero no dentro) ",
+                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
             },
     };
     String Oospecialeng[][]= {
             {"with the family ", "with the wife ", "with the children ", "with children ", "with men ", "with a man ",
-                    "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
-                    "with the woman ",
-                    "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
-                    "with the people ", "with a nurse ",
-                    "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
-                    "with my friend ", "with my cousin ", "with the father ", "with the mother "
+                   "with the doctor ", "with a baby ", "with the baby ", "with the librarian ", "with a woman ",
+                   "with the woman ",
+                   "with the dentist ", "with the mailman ", "with the fireman ", "with people ",
+                   "with the people ", "with a nurse ",
+                   "with the nurse ", "with the manager ", "with the boss ", "with the teacher ",
+                   "with my friend ", "with my cousin ", "with the father ", "with the mother "
             },
             {"at the restaurant ", "at school ", "at the house ", "at the concert ",
-                    "at the store ", "at church ", "at the hospital ",
-                    "at the office ", "at the station "
+                   "at the store ", "at church ", "at the hospital ",
+                   "at the office ", "at the station "
             },
     };
 
     String PhrasalVerb[]={
-            "break ","bring ","call ","come ","cut ","do ","fall ",
-            "get ","give ","go ","have ","keep ","let ","look ",
-            "make ","pull ","put ","run ","see ","stand ","take ",
-            "throw ","turn "
+           "break ","bring ","call ","come ","cut ","do ","fall ",
+           "get ","give ","go ","have ","keep ","let ","look ",
+           "make ","pull ","put ","run ","see ","stand ","take ",
+           "throw ","turn "
     };
 
     String PhrasalVerbEng[][]={
             {
-                 "away ","down ","for ","in ","into ",
-                    "off ","out ","through ","up "
+                "away ","down ","for ","in ","into ",
+                   "off ","out ","through ","up "
             },
             {
-                "about ","along ","around ","back ","down ",
-                    "forth ","forward ","in ","into ","off ",
-                    "on ","out ","over to ","round ","to ",
-                    "together ","up "
+               "about ","along ","around ","back ","down ",
+                   "forth ","forward ","in ","into ","off ",
+                   "on ","out ","over to ","round ","to ",
+                   "together ","up "
             },
             {
-                "around ","at ","away ","down ","for ",
-                    "forth ","in ","off ","on ","out ",
-                    "over ","up ","upon "
+               "around ","at ","away ","down ","for ",
+                   "forth ","in ","off ","on ","out ",
+                   "over ","up ","upon "
             },
             {
-                "about ","across ","along ","apart ","at ",
-                    "away ","back ","before ","between ",
-                    "by ","down ","forth ","forward ",
-                    "in for ","into ","loose ","of ",
-                    "off ","out ","over ","round ",
-                    "through ","to ","up ","upon "
+               "about ","across ","along ","apart ","at ",
+                   "away ","back ","before ","between ",
+                   "by ","down ","forth ","forward ",
+                   "in for ","into ","loose ","of ",
+                   "off ","out ","over ","round ",
+                   "through ","to ","up ","upon "
             },
             {
-                "across ","back on ","down ","in ",
-                    "off ","out ","through ","up "
+               "across ","back on ","down ","in ",
+                   "off ","out ","through ","up "
             },
             {
-                "away with ","down ","for ","in ",
-                    "out ","over ","up ","with ",
-                    "without "
+               "away with ","down ","for ","in ",
+                   "out ","over ","up ","with ",
+                   "without "
             },
             {
-                "about ","apart ","away ","back ",
-                    "behind ","down ","for ","in ",
-                    "into ","off ","upon ","out ",
-                    "over ","through ","to ","under "
+               "about ","apart ","away ","back ",
+                   "behind ","down ","for ","in ",
+                   "into ","off ","upon ","out ",
+                   "over ","through ","to ","under "
             },
             {
-                "about ","above ","across ","after ",
-                    "ahead ","along with ","around ",
-                    "at ","away ","back ","behind ",
-                    "by ","down ","in ","into ",
-                    "off ","off ","on ","out ","over ",
-                    "rid of ","round ","through ","to ",
-                    "together ","up "
+               "about ","above ","across ","after ",
+                   "ahead ","along with ","around ",
+                   "at ","away ","back ","behind ",
+                   "by ","down ","in ","into ",
+                   "off ","off ","on ","out ","over ",
+                   "rid of ","round ","through ","to ",
+                   "together ","up "
             },
             {
-                "away ","back ","in ","off ","onto ",
-                    "out ","over to ","up "
+               "away ","back ","in ","off ","onto ",
+                   "out ","over to ","up "
             },
             {
-                "about ","across ","along ","at ","back ",
-                    "before ","by ","down ","for ","forward ",
-                    "in ","into ","off ","on ","out ","round ",
-                    "through ","to ","together ","towards ",
-                    "under ","up against ","with ","without "
+               "about ","across ","along ","at ","back ",
+                   "before ","by ","down ","for ","forward ",
+                   "in ","into ","off ","on ","out ","round ",
+                   "through ","to ","together ","towards ",
+                   "under ","up against ","with ","without "
             },
             {
-                "against ","around ","down as ","in ","off ",
-                    "on ","out with ","over ","up "
+               "against ","around ","down as ","in ","off ",
+                   "on ","out with ","over ","up "
             },
             {
-                "ahead ","at ","away ","back ","down ","from ",
-                    "in ","off ","on ","out ","to ","up "
+               "ahead ","at ","away ","back ","down ","from ",
+                   "in ","off ","on ","out ","to ","up "
             },
             {
-                "down ","in ","into ","off ","on ","out ",
-                    "up "
+               "down ","in ","into ","off ","on ","out ",
+                   "up "
             },
             {
-                "after ","away ","back on ","down on ",
-                    "for ","forward to ","in on ","into ",
-                    "on ","over ","round ","through ","to ",
-                    "up "
+               "after ","away ","back on ","down on ",
+                   "for ","forward to ","in on ","into ",
+                   "on ","over ","round ","through ","to ",
+                   "up "
             },
             {
-                "after ","away with ","for ","of ","out ",
-                    "over ","up "
+               "after ","away with ","for ","of ","out ",
+                   "over ","up "
             },
             {
-                "ahead ","apart ","at ","away ","back ","down ",
-                    "for ","in ","off ","on ","out of ","over ",
-                    "through ","to ","together ","up "
+               "ahead ","apart ","at ","away ","back ","down ",
+                   "for ","in ","off ","on ","out of ","over ",
+                   "through ","to ","together ","up "
             },
             {
-                "across ","aside ","at ","away ","back ","before ",
-                    "behind ","by ","down ","forth ","forward ",
-                    "in ","off ","on ","out ","through ","to ",
-                    "together ","towards ","under ","up "
+               "across ","aside ","at ","away ","back ","before ",
+                   "behind ","by ","down ","forth ","forward ",
+                   "in ","off ","on ","out ","through ","to ",
+                   "together ","towards ","under ","up "
             },
             {
-                "across ","after ","around ","away ","by ",
-                    "down ","for ","in ","into ","off ","on ",
-                    "out ","over ","through ","to ","up "
+               "across ","after ","around ","away ","by ",
+                   "down ","for ","in ","into ","off ","on ",
+                   "out ","over ","through ","to ","up "
             },
             {
-                "about ","in ","into ","off ","out ","over ",
-                    "through ","to "
+               "about ","in ","into ","off ","out ","over ",
+                   "through ","to "
             },
             {
-                "about ","against ","apart ","aside ","back ",
-                    "down ","forth ","in ","off ","on ",
-                    "out ","to ","up "
+               "about ","against ","apart ","aside ","back ",
+                   "down ","forth ","in ","off ","on ",
+                   "out ","to ","up "
             },
             {
-                "about ","down ","for ","in for ","off ","out ",
-                "over ","to ","up "
+               "about ","down ","for ","in for ","off ","out ",
+               "over ","to ","up "
             },
             {
-                "aback ","after ","along ","apart ","around ",
-                    "aside ","away ","back ","care of ","down ",
-                    "for ","in ","off ","on ","out ","over ",
-                    "through ","to ","up ","upon "
+               "aback ","after ","along ","apart ","around ",
+                   "aside ","away ","back ","care of ","down ",
+                   "for ","in ","off ","on ","out ","over ",
+                   "through ","to ","up ","upon "
             },
             {
-                "away ","down ","in ","off ","on ","over ","together ",
-                    "up "
+               "away ","down ","in ","off ","on ","over ","together ",
+                   "up "
             },
             {
-                "against ","around ","away ","back ","down ","in ",
-                "inside out ","into ","off ","on ","out ","over ","to ",
-                    "up ","upside down "
+               "against ","around ","away ","back ","down ","in ",
+               "inside out ","into ","off ","on ","out ","over ","to ",
+                   "up ","upside down "
             }
     };
 
     String PhrasalVerbEsp1[][]={
             {
-                "me separo ","me rompo ","corro hacia ","fuerzo ","irrumpo ",
-                    "termino ","me escapo ","me abro paso ","me deshice "
+               "me separo ","me rompo ","corro hacia ","fuerzo ","irrumpo ",
+                   "termino ","me escapo ","me abro paso ","me deshice "
             },
             {
-                "provoco ","traigo ","persuado ","devuelvo ","derribo ",
-                    "doy a luz ","presento ","traigo ","hablo sobre ",
-                    "logro ","causo ","publicar ","persuado a ",
-                    "convenzo ","reanimo ","reconcilio ","menciono "
+               "provoco ","traigo ","persuado ","devuelvo ","derribo ",
+                   "doy a luz ","presento ","traigo ","hablo sobre ",
+                   "logro ","causo ","publicar ","persuado a ",
+                   "convenzo ","reanimo ","reconcilio ","menciono "
             }
     };
 
     String PhrasalVerbEsp2[][]={
             {
-                    "te separas ","te rompes ","corres hacia ","fuerzas ","irrumpes ",
-                    "terminas ","te escapas ","te abres paso ","te deshaces "
+                   "te separas ","te rompes ","corres hacia ","fuerzas ","irrumpes ",
+                   "terminas ","te escapas ","te abres paso ","te deshaces "
             },
             {
-                    "provocas ","traigas ","persuades ","devuelves ","derribas ",
-                    "das a luz ","presentas ","traes ","hablas sobre ",
-                    "logras ","causas ","publicas ","persuades a ",
-                    "convences ","reanimas ","reconcilias ","mencionas "
+                   "provocas ","traigas ","persuades ","devuelves ","derribas ",
+                   "das a luz ","presentas ","traes ","hablas sobre ",
+                   "logras ","causas ","publicas ","persuades a ",
+                   "convences ","reanimas ","reconcilias ","mencionas "
             }
     };
 
     String PhrasalVerbEsp3[][]={
             {
-                    "se separa ","se rompe ","corre hacia ","fuerza ","irrumpe ",
-                    "termina ","se escapa ","se abre paso ","se deshace "
+                   "se separa ","se rompe ","corre hacia ","fuerza ","irrumpe ",
+                   "termina ","se escapa ","se abre paso ","se deshace "
             },
             {
-                    "provoca ","trae ","persuade ","devuelve ","derriba ",
-                    "da a luz ","presenta ","trae ","habla sobre ",
-                    "logra ","causa ","publica ","persuade a ",
-                    "convence ","reanima ","reconcilia ","menciona "
+                   "provoca ","trae ","persuade ","devuelve ","derriba ",
+                   "da a luz ","presenta ","trae ","habla sobre ",
+                   "logra ","causa ","publica ","persuade a ",
+                   "convence ","reanima ","reconcilia ","menciona "
             }
     };
 
     String PhrasalVerbEsp4[][]={
             {
-                    "se separan ","se rompen ","corren hacia ","fuerzan ","irrumpen ",
-                    "terminan ","se escapan ","se abren paso ","se deshacen "
+                   "se separan ","se rompen ","corren hacia ","fuerzan ","irrumpen ",
+                   "terminan ","se escapan ","se abren paso ","se deshacen "
             },
             {
-                    "provocan ","traen ","persuaden ","devuelven ","derriban ",
-                    "dan a luz ","presentan ","traen ","hablan sobre ",
-                    "logran ","causan ","publican ","persuaden a ",
-                    "convencen ","reaniman ","reconcilian ","mencionan "
+                   "provocan ","traen ","persuaden ","devuelven ","derriban ",
+                   "dan a luz ","presentan ","traen ","hablan sobre ",
+                   "logran ","causan ","publican ","persuaden a ",
+                   "convencen ","reaniman ","reconcilian ","mencionan "
             }
     };
 
     String PhrasalVerbEsp5[][]={
             {
-                    "nos separaremos ","nos romperemos ","correremos hacia ","forzaremos ","irrumpiremos ",
-                    "terminaremos ","nos escaparemos ","nos abriremos paso ","nos deshacemos "
+                   "nos separaremos ","nos romperemos ","correremos hacia ","forzaremos ","irrumpiremos ",
+                   "terminaremos ","nos escaparemos ","nos abriremos paso ","nos deshacemos "
             },
             {
-                    "provocamos ","traemos ","persuadimos ","devuelvemos ","derribamos ",
-                    "damos a luz ","presentamos ","traemos ","hablamos sobre ",
-                    "logramos ","causamos ","publicamos ","persuadimos a ",
-                    "convencemos ","reanimamos ","reconciliamos ","mencionamos "
+                   "provocamos ","traemos ","persuadimos ","devuelvemos ","derribamos ",
+                   "damos a luz ","presentamos ","traemos ","hablamos sobre ",
+                   "logramos ","causamos ","publicamos ","persuadimos a ",
+                   "convencemos ","reanimamos ","reconciliamos ","mencionamos "
             }
     };
 
@@ -2257,14 +2257,14 @@ public class Intrans {
                         eng2 = "you " + gen.vib[rand];
                         eng22 = "you " + gen.vib[rand];
                         sp3 = "él " + gen.vib3esp[rand];
-                        eng3 = "he " + gen.vib[rand];
-                        eng32 = "he " + gen.vib[rand];
+                        eng3 = "he " + gen.vib3[rand];
+                        eng32 = "he " + gen.vib3[rand];
                         sp4 = "ella " + gen.vib3esp[rand];
-                        eng4 = "she " + gen.vib[rand];
+                        eng4 = "she " + gen.vib3[rand];
                         eng42 = "she " + gen.vib[rand];
                         sp5 = "eso " + gen.vib3esp[rand];
-                        eng5 = "it " + gen.vib[rand];
-                        eng52 = "it " + gen.vib[rand];
+                        eng5 = "it " + gen.vib3[rand];
+                        eng52 = "it " + gen.vib3[rand];
                         sp6 = "ellos " + gen.vib3p[rand];
                         eng6 = "they " + gen.vib[rand];
                         eng62 = "they " + gen.vib[rand];
@@ -2274,25 +2274,25 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no " + gen.vib1[rand];
-                        eng1 = "I do not " + gen.vib[rand];
+                        eng1 = "I don't " + gen.vib[rand];
                         eng12 = "I don't " + gen.vib[rand];
                         sp2 = "tú " + "no " + gen.vib2[rand];
-                        eng2 = "you do not " + gen.vib[rand];
+                        eng2 = "you don't " + gen.vib[rand];
                         eng22 = "you don't " + gen.vib[rand];
                         sp3 = "él no " + gen.vib3esp[rand];
-                        eng3 = "he does not " + gen.vib[rand];
+                        eng3 = "he doesn't " + gen.vib[rand];
                         eng32 = "he doesn't " + gen.vib[rand];
                         sp4 = "ella no " + gen.vib3esp[rand];
-                        eng4 = "she does not " + gen.vib[rand];
+                        eng4 = "she doesn't " + gen.vib[rand];
                         eng42 = "she doesn't " + gen.vib[rand];
                         sp5 = "eso no " + gen.vib3esp[rand];
-                        eng5 = "it does not " + gen.vib[rand];
+                        eng5 = "it doesn't " + gen.vib[rand];
                         eng52 = "it doesn't " + gen.vib[rand];
                         sp6 = "ellos " + "no " + gen.vib3p[rand];
-                        eng6 = "they do not " + gen.vib[rand];
+                        eng6 = "they don't " + gen.vib[rand];
                         eng62 = "they don't " + gen.vib[rand];
                         sp7 = "nosotros " + "no " + gen.vibnos[rand];
-                        eng7 = "we do not " + gen.vib[rand];
+                        eng7 = "we don't " + gen.vib[rand];
                         eng72 = "we don't " + gen.vib[rand];
                         break;
                 }
@@ -2350,11 +2350,11 @@ public class Intrans {
                         eng5 = "it is not " + gen.vib3cont[rand];
                         eng52 = "it isn't " + gen.vib3cont[rand];
                         sp6 = "ellos no están " + gen.vib3contesp[rand];
-                        eng6 = "they are not  " + gen.vib3cont[rand];
-                        eng62 = "they aren't  " + gen.vib3cont[rand];
+                        eng6 = "they are not " + gen.vib3cont[rand];
+                        eng62 = "they aren't " + gen.vib3cont[rand];
                         sp7 = "nosotros no estamos " + gen.vib3contesp[rand];
-                        eng7 = "we are not  " + gen.vib3cont[rand];
-                        eng72 = "we aren't  " + gen.vib3cont[rand];
+                        eng7 = "we are not " + gen.vib3cont[rand];
+                        eng72 = "we aren't " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -2412,11 +2412,11 @@ public class Intrans {
                         eng5 = "it has not " + gen.viparticiple[rand];
                         eng52 = "it hasn't " + gen.viparticiple[rand];
                         sp6 = "ellos no han " + gen.vibparticipiosp[rand];
-                        eng6 = "they have not  " + gen.viparticiple[rand];
-                        eng62 = "they haven't  " + gen.viparticiple[rand];
+                        eng6 = "they have not " + gen.viparticiple[rand];
+                        eng62 = "they haven't " + gen.viparticiple[rand];
                         sp7 = "nosotros no hemos " + gen.vibparticipiosp[rand];
-                        eng7 = "we have not  " + gen.viparticiple[rand];
-                        eng72 = "we haven't  " + gen.viparticiple[rand];
+                        eng7 = "we have not " + gen.viparticiple[rand];
+                        eng72 = "we haven't " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -2605,11 +2605,11 @@ public class Intrans {
                         eng5 = "it was not " + gen.vib3cont[rand];
                         eng52 = "it wasn't " + gen.vib3cont[rand];
                         sp6 = "ellos no estaban " + gen.vib3contesp[rand];
-                        eng6 = "they were not  " + gen.vib3cont[rand];
-                        eng62 = "they weren't  " + gen.vib3cont[rand];
+                        eng6 = "they were not " + gen.vib3cont[rand];
+                        eng62 = "they weren't " + gen.vib3cont[rand];
                         sp7 = "nosotros no estabamos " + gen.vib3contesp[rand];
-                        eng7 = "we were not  " + gen.vib3cont[rand];
-                        eng72 = "we weren't  " + gen.vib3cont[rand];
+                        eng7 = "we were not " + gen.vib3cont[rand];
+                        eng72 = "we weren't " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -2667,11 +2667,11 @@ public class Intrans {
                         eng5 = "it had not " + gen.viparticiple[rand];
                         eng52 = "it hadn't " + gen.viparticiple[rand];
                         sp6 = "ellos no habian " + gen.vibparticipiosp[rand];
-                        eng6 = "they had not  " + gen.viparticiple[rand];
-                        eng62 = "they hadn't  " + gen.viparticiple[rand];
+                        eng6 = "they had not " + gen.viparticiple[rand];
+                        eng62 = "they hadn't " + gen.viparticiple[rand];
                         sp7 = "nosotros no habiamos " + gen.vibparticipiosp[rand];
-                        eng7 = "we had not  " + gen.viparticiple[rand];
-                        eng72 = "we hadn't  " + gen.viparticiple[rand];
+                        eng7 = "we had not " + gen.viparticiple[rand];
+                        eng72 = "we hadn't " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -2708,7 +2708,7 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no había estado " + gen.vib3contesp[rand];
                         eng1 = "I hadn't been " + gen.vib3cont[rand];
-                        sp2 = "tú no habías estado  " + gen.vib3contesp[rand];
+                        sp2 = "tú no habías estado " + gen.vib3contesp[rand];
                         eng2 = "you hadn't been " + gen.vib3cont[rand];
                         sp3 = "él no había estado " + gen.vib3contesp[rand];
                         eng3 = "he hadn't been " + gen.vib3cont[rand];
@@ -2857,13 +2857,13 @@ public class Intrans {
                         eng22 = "you'll have " + gen.viparticiple[rand];
                         sp3 = "él habrá " + gen.vibparticipiosp[rand];
                         eng3 = "he will have " + gen.viparticiple[rand];
-                        eng32 = "he'll have  " + gen.viparticiple[rand];
+                        eng32 = "he'll have " + gen.viparticiple[rand];
                         sp4 = "ella habrá " + gen.vibparticipiosp[rand];
                         eng4 = "she will have " + gen.viparticiple[rand];
-                        eng42 = "she'll have  " + gen.viparticiple[rand];
+                        eng42 = "she'll have " + gen.viparticiple[rand];
                         sp5 = "eso habrá " + gen.vibparticipiosp[rand];
                         eng5 = "it will have " + gen.viparticiple[rand];
-                        eng52 = "it'll have  " + gen.viparticiple[rand];
+                        eng52 = "it'll have " + gen.viparticiple[rand];
                         sp6 = "ellos habrán " + gen.vibparticipiosp[rand];
                         eng6 = "they will have " + gen.viparticiple[rand];
                         eng62 = "they'll have " + gen.viparticiple[rand];
@@ -2888,11 +2888,11 @@ public class Intrans {
                         eng5 = "it will not have " + gen.viparticiple[rand];
                         eng52 = "it won't have " + gen.viparticiple[rand];
                         sp6 = "ellos no habrán " + gen.vibparticipiosp[rand];
-                        eng6 = "they will not have  " + gen.viparticiple[rand];
-                        eng62 = "they won't have  " + gen.viparticiple[rand];
+                        eng6 = "they will not have " + gen.viparticiple[rand];
+                        eng62 = "they won't have " + gen.viparticiple[rand];
                         sp7 = "nosotros no habremos "  + gen.vibparticipiosp[rand];
-                        eng7 = "we will not have  " + gen.viparticiple[rand];
-                        eng72 = "we won't have  " + gen.viparticiple[rand];
+                        eng7 = "we will not have " + gen.viparticiple[rand];
+                        eng72 = "we won't have " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -2928,13 +2928,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no habré estado " + gen.vib3contesp[rand];
                         eng1 = "I won't have been " + gen.vib3cont[rand];
-                        sp2 = "tú no habrás estado  " + gen.vib3contesp[rand];
+                        sp2 = "tú no habrás estado " + gen.vib3contesp[rand];
                         eng2 = "you won't have been " + gen.vib3cont[rand];
-                        sp3 = "él no habrá estado   " + gen.vib3contesp[rand];
+                        sp3 = "él no habrá estado  " + gen.vib3contesp[rand];
                         eng3 = "he won't have been " + gen.vib3cont[rand];
-                        sp4 = "ella no habrá estado   " + gen.vib3contesp[rand];
+                        sp4 = "ella no habrá estado  " + gen.vib3contesp[rand];
                         eng4 = "she won't have been " + gen.vib3cont[rand];
-                        sp5 = "eso no habrá estado   " + gen.vib3contesp[rand];
+                        sp5 = "eso no habrá estado  " + gen.vib3contesp[rand];
                         eng5 = "it won't have been " + gen.vib3cont[rand];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand];
                         eng6 = "they won't have been " + gen.vib3cont[rand];
@@ -3047,11 +3047,11 @@ public class Intrans {
                         eng5 = "it would not be " + gen.vib3cont[rand];
                         eng52 = "it wouldn't be " + gen.vib3cont[rand];
                         sp6 = "ellos no estarían " + gen.vib3contesp[rand];
-                        eng6 = "they would not be  " + gen.vib3cont[rand];
-                        eng62 = "they wouldn't be  " + gen.vib3cont[rand];
+                        eng6 = "they would not be " + gen.vib3cont[rand];
+                        eng62 = "they wouldn't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no estaríamos " + gen.vib3contesp[rand];
-                        eng7 = "we would not be  " + gen.vib3cont[rand];
-                        eng72 = "we wouldn't be  " + gen.vib3cont[rand];
+                        eng7 = "we would not be " + gen.vib3cont[rand];
+                        eng72 = "we wouldn't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -3077,13 +3077,13 @@ public class Intrans {
                         eng22 = "you'd have " + gen.viparticiple[rand];
                         sp3 = "él hubiera " + gen.vibparticipiosp[rand];
                         eng3 = "he would have " + gen.viparticiple[rand];
-                        eng32 = "he'd have  " + gen.viparticiple[rand];
+                        eng32 = "he'd have " + gen.viparticiple[rand];
                         sp4 = "ella hubiera " + gen.vibparticipiosp[rand];
                         eng4 = "she would have " + gen.viparticiple[rand];
-                        eng42 = "she'd have  " + gen.viparticiple[rand];
+                        eng42 = "she'd have " + gen.viparticiple[rand];
                         sp5 = "eso hubiera " + gen.vibparticipiosp[rand];
                         eng5 = "it would have " + gen.viparticiple[rand];
-                        eng52 = "it'd have  " + gen.viparticiple[rand];
+                        eng52 = "it'd have " + gen.viparticiple[rand];
                         sp6 = "ellos hubieran " + gen.vibparticipiosp[rand];
                         eng6 = "they would have " + gen.viparticiple[rand];
                         eng62 = "they'd have " + gen.viparticiple[rand];
@@ -3108,11 +3108,11 @@ public class Intrans {
                         eng5 = "it would not have " + gen.viparticiple[rand];
                         eng52 = "it wouldn't have " + gen.viparticiple[rand];
                         sp6 = "ellos no hubieran " + gen.vibparticipiosp[rand];
-                        eng6 = "they would not have  " + gen.viparticiple[rand];
-                        eng62 = "they wouldn't have  " + gen.viparticiple[rand];
+                        eng6 = "they would not have " + gen.viparticiple[rand];
+                        eng62 = "they wouldn't have " + gen.viparticiple[rand];
                         sp7 = "nosotros no habríamos "  + gen.vibparticipiosp[rand];
-                        eng7 = "we would not have  " + gen.viparticiple[rand];
-                        eng72 = "we wouldn't have  " + gen.viparticiple[rand];
+                        eng7 = "we would not have " + gen.viparticiple[rand];
+                        eng72 = "we wouldn't have " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -3148,13 +3148,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no hubiera estado " + gen.vib3contesp[rand];
                         eng1 = "I wouldn't have been " + gen.vib3cont[rand];
-                        sp2 = "tú no hubieras estado  " + gen.vib3contesp[rand];
+                        sp2 = "tú no hubieras estado " + gen.vib3contesp[rand];
                         eng2 = "you wouldn't have been " + gen.vib3cont[rand];
-                        sp3 = "él no hubiera estado   " + gen.vib3contesp[rand];
+                        sp3 = "él no hubiera estado  " + gen.vib3contesp[rand];
                         eng3 = "he wouldn't have been " + gen.vib3cont[rand];
-                        sp4 = "ella no hubiera estado   " + gen.vib3contesp[rand];
+                        sp4 = "ella no hubiera estado  " + gen.vib3contesp[rand];
                         eng4 = "she wouldn't have been " + gen.vib3cont[rand];
-                        sp5 = "eso no hubiera estado   " + gen.vib3contesp[rand];
+                        sp5 = "eso no hubiera estado  " + gen.vib3contesp[rand];
                         eng5 = "it wouldn't have been " + gen.vib3cont[rand];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand];
                         eng6 = "they wouldn't have been " + gen.vib3cont[rand];
@@ -3266,11 +3266,11 @@ public class Intrans {
                         eng5 = "it could not be " + gen.vib3cont[rand];
                         eng52 = "it couldn't be " + gen.vib3cont[rand];
                         sp6 = "ellos no podrían estar " + gen.vib3contesp[rand];
-                        eng6 = "they could not be  " + gen.vib3cont[rand];
-                        eng62 = "they couldn't be  " + gen.vib3cont[rand];
+                        eng6 = "they could not be " + gen.vib3cont[rand];
+                        eng62 = "they couldn't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no podríamos estar " + gen.vib3contesp[rand];
-                        eng7 = "we could not be  " + gen.vib3cont[rand];
-                        eng72 = "we couldn't be  " + gen.vib3cont[rand];
+                        eng7 = "we could not be " + gen.vib3cont[rand];
+                        eng72 = "we couldn't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -3296,13 +3296,13 @@ public class Intrans {
                         eng22 = "you could have " + gen.viparticiple[rand];
                         sp3 = "él pudiese haber " + gen.vibparticipiosp[rand];
                         eng3 = "he could have " + gen.viparticiple[rand];
-                        eng32 = "he could have  " + gen.viparticiple[rand];
+                        eng32 = "he could have " + gen.viparticiple[rand];
                         sp4 = "ella pudiese haber " + gen.vibparticipiosp[rand];
                         eng4 = "she could have " + gen.viparticiple[rand];
-                        eng42 = "she could have  " + gen.viparticiple[rand];
+                        eng42 = "she could have " + gen.viparticiple[rand];
                         sp5 = "eso pudiese haber " + gen.vibparticipiosp[rand];
                         eng5 = "it could have " + gen.viparticiple[rand];
-                        eng52 = "it could have  " + gen.viparticiple[rand];
+                        eng52 = "it could have " + gen.viparticiple[rand];
                         sp6 = "ellos pudiesen haber " + gen.vibparticipiosp[rand];
                         eng6 = "they could have " + gen.viparticiple[rand];
                         eng62 = "they could have " + gen.viparticiple[rand];
@@ -3327,11 +3327,11 @@ public class Intrans {
                         eng5 = "it could not have " + gen.viparticiple[rand];
                         eng52 = "it couldn't have " + gen.viparticiple[rand];
                         sp6 = "ellos no pudiesen haber " + gen.vibparticipiosp[rand];
-                        eng6 = "they could not have  " + gen.viparticiple[rand];
-                        eng62 = "they couldn't have  " + gen.viparticiple[rand];
+                        eng6 = "they could not have " + gen.viparticiple[rand];
+                        eng62 = "they couldn't have " + gen.viparticiple[rand];
                         sp7 = "nosotros no pudiesemos haber "  + gen.vibparticipiosp[rand];
-                        eng7 = "we could not have  " + gen.viparticiple[rand];
-                        eng72 = "we couldn't have  " + gen.viparticiple[rand];
+                        eng7 = "we could not have " + gen.viparticiple[rand];
+                        eng72 = "we couldn't have " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -3367,13 +3367,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no podría haber estado " + gen.vib3contesp[rand];
                         eng1 = "I couldn't have been " + gen.vib3cont[rand];
-                        sp2 = "tú no podrías haber estado  " + gen.vib3contesp[rand];
+                        sp2 = "tú no podrías haber estado " + gen.vib3contesp[rand];
                         eng2 = "you couldn't have been " + gen.vib3cont[rand];
-                        sp3 = "él no podría haber estado   " + gen.vib3contesp[rand];
+                        sp3 = "él no podría haber estado  " + gen.vib3contesp[rand];
                         eng3 = "he couldn't have been " + gen.vib3cont[rand];
-                        sp4 = "ella no podría haber estado   " + gen.vib3contesp[rand];
+                        sp4 = "ella no podría haber estado  " + gen.vib3contesp[rand];
                         eng4 = "she couldn't have been " + gen.vib3cont[rand];
-                        sp5 = "eso no podría haber estado   " + gen.vib3contesp[rand];
+                        sp5 = "eso no podría haber estado  " + gen.vib3contesp[rand];
                         eng5 = "it couldn't have been " + gen.vib3cont[rand];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand];
                         eng6 = "they couldn't have been " + gen.vib3cont[rand];
@@ -3416,19 +3416,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "quizá no " + gen.vib1s[rand];
-                        eng1 = "I " + "might not  " + gen.vib[rand];
+                        eng1 = "I " + "might not " + gen.vib[rand];
                         sp2 = "tú " + "quizá no " + gen.vib2s[rand];
-                        eng2 = "you " + "might not  " + gen.vib[rand];
+                        eng2 = "you " + "might not " + gen.vib[rand];
                         sp3 = "él " + "quizá no " + gen.vib3s[rand];
-                        eng3 = "he " + "might not  " + gen.vib[rand];
+                        eng3 = "he " + "might not " + gen.vib[rand];
                         sp4 = "ella " + "quizá no " + gen.vib3s[rand];
-                        eng4 = "she " + "might not  " + gen.vib[rand];
+                        eng4 = "she " + "might not " + gen.vib[rand];
                         sp5 = "eso " + "quizá no " + gen.vib3s[rand];
-                        eng5 = "it " + "might not  " + gen.vib[rand];
+                        eng5 = "it " + "might not " + gen.vib[rand];
                         sp6 = "ellos " + "quizá no " + gen.vib4s[rand];
-                        eng6 = "they " + "might not  " + gen.vib[rand];
+                        eng6 = "they " + "might not " + gen.vib[rand];
                         sp7 = "nosotros " + "quizá no " + gen.vib5s[rand];
-                        eng7 = "we " + "might not  " + gen.vib[rand];
+                        eng7 = "we " + "might not " + gen.vib[rand];
                         break;
                 }
             }
@@ -3486,11 +3486,11 @@ public class Intrans {
                         eng5 = "it might not be " + gen.vib3cont[rand];
                         eng52 = "it mightn't be " + gen.vib3cont[rand];
                         sp6 = "ellos no quizá estén " + gen.vib3contesp[rand];
-                        eng6 = "they might not be  " + gen.vib3cont[rand];
-                        eng62 = "they mightn't be  " + gen.vib3cont[rand];
+                        eng6 = "they might not be " + gen.vib3cont[rand];
+                        eng62 = "they mightn't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no quizá estémos " + gen.vib3contesp[rand];
-                        eng7 = "we might not be  " + gen.vib3cont[rand];
-                        eng72 = "we mightn't be  " + gen.vib3cont[rand];
+                        eng7 = "we might not be " + gen.vib3cont[rand];
+                        eng72 = "we mightn't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -3516,13 +3516,13 @@ public class Intrans {
                         eng22 = "you might have " + gen.viparticiple[rand];
                         sp3 = "él quizá haya " + gen.vibparticipiosp[rand];
                         eng3 = "he might have " + gen.viparticiple[rand];
-                        eng32 = "he might have  " + gen.viparticiple[rand];
+                        eng32 = "he might have " + gen.viparticiple[rand];
                         sp4 = "ella quizá haya " + gen.vibparticipiosp[rand];
                         eng4 = "she might have " + gen.viparticiple[rand];
-                        eng42 = "she might have  " + gen.viparticiple[rand];
+                        eng42 = "she might have " + gen.viparticiple[rand];
                         sp5 = "eso quizá haya " + gen.vibparticipiosp[rand];
                         eng5 = "it might have " + gen.viparticiple[rand];
-                        eng52 = "it might have  " + gen.viparticiple[rand];
+                        eng52 = "it might have " + gen.viparticiple[rand];
                         sp6 = "ellos quizá hayan " + gen.vibparticipiosp[rand];
                         eng6 = "they might have " + gen.viparticiple[rand];
                         eng62 = "they might have " + gen.viparticiple[rand];
@@ -3547,11 +3547,11 @@ public class Intrans {
                         eng5 = "it might not have " + gen.viparticiple[rand];
                         eng52 = "it mightn't have " + gen.viparticiple[rand];
                         sp6 = "ellos no quizá hayan " + gen.vibparticipiosp[rand];
-                        eng6 = "they might not have  " + gen.viparticiple[rand];
-                        eng62 = "they mightn't have  " + gen.viparticiple[rand];
+                        eng6 = "they might not have " + gen.viparticiple[rand];
+                        eng62 = "they mightn't have " + gen.viparticiple[rand];
                         sp7 = "nosotros no quizá hayamos "  + gen.vibparticipiosp[rand];
-                        eng7 = "we might not have  " + gen.viparticiple[rand];
-                        eng72 = "we mightn't have  " + gen.viparticiple[rand];
+                        eng7 = "we might not have " + gen.viparticiple[rand];
+                        eng72 = "we mightn't have " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -3587,13 +3587,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo quizá no haya estado " + gen.vib3contesp[rand];
                         eng1 = "I might not have been " + gen.vib3cont[rand];
-                        sp2 = "tú quizá no hayas estado  " + gen.vib3contesp[rand];
+                        sp2 = "tú quizá no hayas estado " + gen.vib3contesp[rand];
                         eng2 = "you might not have been " + gen.vib3cont[rand];
-                        sp3 = "él quizá no haya estado   " + gen.vib3contesp[rand];
+                        sp3 = "él quizá no haya estado  " + gen.vib3contesp[rand];
                         eng3 = "he might not have been " + gen.vib3cont[rand];
-                        sp4 = "ella quizá no haya estado   " + gen.vib3contesp[rand];
+                        sp4 = "ella quizá no haya estado  " + gen.vib3contesp[rand];
                         eng4 = "she might not have been " + gen.vib3cont[rand];
-                        sp5 = "eso quizá no haya estado   " + gen.vib3contesp[rand];
+                        sp5 = "eso quizá no haya estado  " + gen.vib3contesp[rand];
                         eng5 = "it might not have been " + gen.vib3cont[rand];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand];
                         eng6 = "they might not have been " + gen.vib3cont[rand];
@@ -3705,11 +3705,11 @@ public class Intrans {
                         eng5 = "it should not be " + gen.vib3cont[rand];
                         eng52 = "it shouldn't be " + gen.vib3cont[rand];
                         sp6 = "ellos no deberían estar " + gen.vib3contesp[rand];
-                        eng6 = "they should not be  " + gen.vib3cont[rand];
-                        eng62 = "they shouldn't be  " + gen.vib3cont[rand];
+                        eng6 = "they should not be " + gen.vib3cont[rand];
+                        eng62 = "they shouldn't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no deberíamos estar " + gen.vib3contesp[rand];
-                        eng7 = "we should not be  " + gen.vib3cont[rand];
-                        eng72 = "we shouldn't be  " + gen.vib3cont[rand];
+                        eng7 = "we should not be " + gen.vib3cont[rand];
+                        eng72 = "we shouldn't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -3735,13 +3735,13 @@ public class Intrans {
                         eng22 = "you should have " + gen.viparticiple[rand];
                         sp3 = "él debería haber " + gen.vibparticipiosp[rand];
                         eng3 = "he should have " + gen.viparticiple[rand];
-                        eng32 = "he should have  " + gen.viparticiple[rand];
+                        eng32 = "he should have " + gen.viparticiple[rand];
                         sp4 = "ella debería haber " + gen.vibparticipiosp[rand];
                         eng4 = "she should have " + gen.viparticiple[rand];
-                        eng42 = "she should have  " + gen.viparticiple[rand];
+                        eng42 = "she should have " + gen.viparticiple[rand];
                         sp5 = "eso debería haber " + gen.vibparticipiosp[rand];
                         eng5 = "it should have " + gen.viparticiple[rand];
-                        eng52 = "it should have  " + gen.viparticiple[rand];
+                        eng52 = "it should have " + gen.viparticiple[rand];
                         sp6 = "ellos deberían haber " + gen.vibparticipiosp[rand];
                         eng6 = "they should have " + gen.viparticiple[rand];
                         eng62 = "they should have " + gen.viparticiple[rand];
@@ -3766,11 +3766,11 @@ public class Intrans {
                         eng5 = "it should not have " + gen.viparticiple[rand];
                         eng52 = "it shouldn't have " + gen.viparticiple[rand];
                         sp6 = "ellos no deberían haber " + gen.vibparticipiosp[rand];
-                        eng6 = "they should not have  " + gen.viparticiple[rand];
-                        eng62 = "they shouldn't have  " + gen.viparticiple[rand];
+                        eng6 = "they should not have " + gen.viparticiple[rand];
+                        eng62 = "they shouldn't have " + gen.viparticiple[rand];
                         sp7 = "nosotros no deberíamos haber "  + gen.vibparticipiosp[rand];
-                        eng7 = "we should not have  " + gen.viparticiple[rand];
-                        eng72 = "we shouldn't have  " + gen.viparticiple[rand];
+                        eng7 = "we should not have " + gen.viparticiple[rand];
+                        eng72 = "we shouldn't have " + gen.viparticiple[rand];
                         break;
                 }
             }
@@ -3924,11 +3924,11 @@ public class Intrans {
                         eng5 = "it can not be " + gen.vib3cont[rand];
                         eng52 = "it can't be " + gen.vib3cont[rand];
                         sp6 = "ellos no pueden estar " + gen.vib3contesp[rand];
-                        eng6 = "they can not be  " + gen.vib3cont[rand];
-                        eng62 = "they can't be  " + gen.vib3cont[rand];
+                        eng6 = "they can not be " + gen.vib3cont[rand];
+                        eng62 = "they can't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no podemos estar " + gen.vib3contesp[rand];
-                        eng7 = "we can not be  " + gen.vib3cont[rand];
-                        eng72 = "we can't be  " + gen.vib3cont[rand];
+                        eng7 = "we can not be " + gen.vib3cont[rand];
+                        eng72 = "we can't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -4033,11 +4033,11 @@ public class Intrans {
                         eng5 = "it must not be " + gen.vib3cont[rand];
                         eng52 = "it mustn't be " + gen.vib3cont[rand];
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand];
-                        eng6 = "they must not be  " + gen.vib3cont[rand];
-                        eng62 = "they mustn't be  " + gen.vib3cont[rand];
+                        eng6 = "they must not be " + gen.vib3cont[rand];
+                        eng62 = "they mustn't be " + gen.vib3cont[rand];
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand];
-                        eng7 = "we must not be  " + gen.vib3cont[rand];
-                        eng72 = "we mustn't be  " + gen.vib3cont[rand];
+                        eng7 = "we must not be " + gen.vib3cont[rand];
+                        eng72 = "we mustn't be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -4124,7 +4124,6 @@ public class Intrans {
         String temp = PhrasalVerb[randPV];
         int neg = (int) (Math.random() * 2);
 
-
         for (String verbs : PhrasalVerb) {
             if (verbs.equals(temp)) {
                 switch (neg){
@@ -4153,25 +4152,25 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no " + PhrasalVerbEsp1[0][rPv1];
-                        eng1 = "I do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng1 = "I don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng12 = "I don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp2 = "tú " + "no " + PhrasalVerbEsp2[0][rPv1];
-                        eng2 = "you do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng2 = "you don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng22 = "you don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp3 = "él no " + PhrasalVerbEsp3[0][rPv1];
-                        eng3 = "he does not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng3 = "he doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng32 = "he doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp4 = "ella no " + PhrasalVerbEsp3[0][rPv1];
-                        eng4 = "she does not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng4 = "she doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng42 = "she doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp5 = "eso no " + PhrasalVerbEsp3[0][rPv1];
-                        eng5 = "it does not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng5 = "it doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng52 = "it doesn't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp6 = "ellos " + "no " + PhrasalVerbEsp4[0][rPv1];
-                        eng6 = "they do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng6 = "they don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng62 = "they don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp7 = "nosotros " + "no " + PhrasalVerbEsp5[0][rPv1];
-                        eng7 = "we do not " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng7 = "we don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng72 = "we don't " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         break;
                 }
@@ -4192,26 +4191,26 @@ public class Intrans {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         for (String verbs : gen.vib) {
@@ -4267,7 +4266,7 @@ public class Intrans {
 
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he wants ", "she wants ",
-                "it wants ", "we want ", "they want "};
+               "it wants ", "we want ", "they want "};
         //want to subject negative
         String wtsjn[] = {"I don't want ", "you don't want " , "he doesn't want ", "she doesn't want ", "it doesn't want "
                 , "we don't want ", "they don't want " };
@@ -4277,36 +4276,36 @@ public class Intrans {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj2[] = {"me to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj3[] = {"you to " + gen.vib[rand], "me to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj4[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "me to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj5[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj6[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj7[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj2s[] = {"que yo " + pas.vis1[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
 
         String wtobj3s[] = {"que tú " + pas.vis2[rand], "que yo " + pas.vis1[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj4s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que yo " + pas.vis1[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj5s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj6s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
         String wtobj7s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
 
         for (String verbs : gen.vib) {
             if (verbs.equals(temp)) {
@@ -4371,14 +4370,14 @@ public class Intrans {
                         eng2 = "you " + gen.vib[rand] + arrayEng;
                         eng22 = "you " + gen.vib[rand] + arrayEng;
                         sp3 = "él " + gen.vib3esp[rand] + arrayEsp;
-                        eng3 = "he " + gen.vib[rand] + arrayEng;
-                        eng32 = "he " + gen.vib[rand] + arrayEng;
+                        eng3 = "he " + gen.vib3[rand] + arrayEng;
+                        eng32 = "he " + gen.vib3[rand] + arrayEng;
                         sp4 = "ella " + gen.vib3esp[rand] + arrayEsp;
-                        eng4 = "she " + gen.vib[rand] + arrayEng;
-                        eng42 = "she " + gen.vib[rand] + arrayEng;
+                        eng4 = "she " + gen.vib3[rand] + arrayEng;
+                        eng42 = "she " + gen.vib3[rand] + arrayEng;
                         sp5 = "eso " + gen.vib3esp[rand] + arrayEsp;
-                        eng5 = "it " + gen.vib[rand] + arrayEng;
-                        eng52 = "it " + gen.vib[rand] + arrayEng;
+                        eng5 = "it " + gen.vib3[rand] + arrayEng;
+                        eng52 = "it " + gen.vib3[rand] + arrayEng;
                         sp6 = "ellos " + gen.vib3p[rand] + arrayEsp;
                         eng6 = "they " + gen.vib[rand] + arrayEng;
                         eng62 = "they " + gen.vib[rand] + arrayEng;
@@ -4388,25 +4387,25 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no " + gen.vib1[rand] + arrayEsp;
-                        eng1 = "I do not " + gen.vib[rand] + arrayEng;
+                        eng1 = "I don't " + gen.vib[rand] + arrayEng;
                         eng12 = "I don't " + gen.vib[rand] + arrayEng;
                         sp2 = "tú " + "no " + gen.vib2[rand] + arrayEsp;
-                        eng2 = "you do not " + gen.vib[rand] + arrayEng;
+                        eng2 = "you don't " + gen.vib[rand] + arrayEng;
                         eng22 = "you don't " + gen.vib[rand] + arrayEng;
                         sp3 = "él no " + gen.vib3esp[rand] + arrayEsp;
-                        eng3 = "he does not " + gen.vib[rand] + arrayEng;
+                        eng3 = "he doesn't " + gen.vib[rand] + arrayEng;
                         eng32 = "he doesn't " + gen.vib[rand] + arrayEng;
                         sp4 = "ella no " + gen.vib3esp[rand] + arrayEsp;
-                        eng4 = "she does not " + gen.vib[rand] + arrayEng;
+                        eng4 = "she doesn't " + gen.vib[rand] + arrayEng;
                         eng42 = "she doesn't " + gen.vib[rand] + arrayEng;
                         sp5 = "eso no " + gen.vib3esp[rand] + arrayEsp;
-                        eng5 = "it does not " + gen.vib[rand] + arrayEng;
+                        eng5 = "it doesn't " + gen.vib[rand] + arrayEng;
                         eng52 = "it doesn't " + gen.vib[rand] + arrayEng;
                         sp6 = "ellos " + "no " + gen.vib3p[rand] + arrayEsp;
-                        eng6 = "they do not " + gen.vib[rand] + arrayEng;
+                        eng6 = "they don't " + gen.vib[rand] + arrayEng;
                         eng62 = "they don't " + gen.vib[rand] + arrayEng;
                         sp7 = "nosotros " + "no " + gen.vibnos[rand] + arrayEsp;
-                        eng7 = "we do not " + gen.vib[rand] + arrayEng;
+                        eng7 = "we don't " + gen.vib[rand] + arrayEng;
                         eng72 = "we don't " + gen.vib[rand] + arrayEng;
                         break;
                 }
@@ -4453,22 +4452,22 @@ public class Intrans {
                         eng12 = "I'm not " + gen.vib3cont[rand] + arrayEng;
                         sp2 = "tú no estás " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you are not " + gen.vib3cont[rand] + arrayEng;
-                        eng22 = "you aren't " + gen.vib3cont[rand] + arrayEng;
+                        eng22 = "you're not " + gen.vib3cont[rand] + arrayEng;
                         sp3 = "él no está " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he is not " + gen.vib3cont[rand] + arrayEng;
-                        eng32 = "he isn't " + gen.vib3cont[rand] + arrayEng;
+                        eng32 = "he's not " + gen.vib3cont[rand] + arrayEng;
                         sp4 = "ella no está " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she is not " + gen.vib3cont[rand] + arrayEng;
-                        eng42 = "she isn't " + gen.vib3cont[rand] + arrayEng;
+                        eng42 = "she's not " + gen.vib3cont[rand] + arrayEng;
                         sp5 = "eso no está " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it is not " + gen.vib3cont[rand] + arrayEng;
-                        eng52 = "it isn't " + gen.vib3cont[rand] + arrayEng;
+                        eng52 = "it's not " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no están " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they are not  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they aren't  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they are not " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they're not " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no estamos " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we are not  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we aren't  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we are not " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we´re not " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -4526,11 +4525,11 @@ public class Intrans {
                         eng5 = "it has not " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it hasn't " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no han " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they have not  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they haven't  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they have not " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they haven't " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no hemos " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we have not  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we haven't  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we have not " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we haven't " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -4719,11 +4718,11 @@ public class Intrans {
                         eng5 = "it was not " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it wasn't " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no estaban " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they were not  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they weren't  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they were not " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they weren't " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no estabamos " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we were not  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we weren't  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we were not " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we weren't " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -4781,11 +4780,11 @@ public class Intrans {
                         eng5 = "it had not " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it hadn't " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no habian " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they had not  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they hadn't  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they had not " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they hadn't " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no habiamos " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we had not  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we hadn't  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we had not " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we hadn't " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -4822,7 +4821,7 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no había estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I hadn't been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no habías estado  " + gen.vib3contesp[rand] + arrayEsp;
+                        sp2 = "tú no habías estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you hadn't been " + gen.vib3cont[rand] + arrayEng;
                         sp3 = "él no había estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he hadn't been " + gen.vib3cont[rand] + arrayEng;
@@ -4971,13 +4970,13 @@ public class Intrans {
                         eng22 = "you'll have " + gen.viparticiple[rand] + arrayEng;
                         sp3 = "él habrá " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng3 = "he will have " + gen.viparticiple[rand] + arrayEng;
-                        eng32 = "he'll have  " + gen.viparticiple[rand] + arrayEng;
+                        eng32 = "he'll have " + gen.viparticiple[rand] + arrayEng;
                         sp4 = "ella habrá " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng4 = "she will have " + gen.viparticiple[rand] + arrayEng;
-                        eng42 = "she'll have  " + gen.viparticiple[rand] + arrayEng;
+                        eng42 = "she'll have " + gen.viparticiple[rand] + arrayEng;
                         sp5 = "eso habrá " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng5 = "it will have " + gen.viparticiple[rand] + arrayEng;
-                        eng52 = "it'll have  " + gen.viparticiple[rand] + arrayEng;
+                        eng52 = "it'll have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos habrán " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng6 = "they will have " + gen.viparticiple[rand] + arrayEng;
                         eng62 = "they'll have " + gen.viparticiple[rand] + arrayEng;
@@ -5002,11 +5001,11 @@ public class Intrans {
                         eng5 = "it will not have " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it won't have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no habrán " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they will not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they won't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they will not have " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they won't have " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no habremos "  + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we will not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we won't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we will not have " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we won't have " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -5042,13 +5041,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no habré estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no habrás estado  " + gen.vib3contesp[rand] + arrayEsp;
+                        sp2 = "tú no habrás estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él no habrá estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp3 = "él no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella no habrá estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp4 = "ella no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso no habrá estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp5 = "eso no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it won't have been " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng6 = "they won't have been " + gen.vib3cont[rand] + arrayEng;
@@ -5161,11 +5160,11 @@ public class Intrans {
                         eng5 = "it would not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it wouldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no estarían " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they would not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they wouldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they would not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they wouldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no estaríamos " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we would not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we wouldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we would not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we wouldn't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -5191,13 +5190,13 @@ public class Intrans {
                         eng22 = "you'd have " + gen.viparticiple[rand] + arrayEng;
                         sp3 = "él hubiera " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng3 = "he would have " + gen.viparticiple[rand] + arrayEng;
-                        eng32 = "he'd have  " + gen.viparticiple[rand] + arrayEng;
+                        eng32 = "he'd have " + gen.viparticiple[rand] + arrayEng;
                         sp4 = "ella hubiera " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng4 = "she would have " + gen.viparticiple[rand] + arrayEng;
-                        eng42 = "she'd have  " + gen.viparticiple[rand] + arrayEng;
+                        eng42 = "she'd have " + gen.viparticiple[rand] + arrayEng;
                         sp5 = "eso hubiera " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng5 = "it would have " + gen.viparticiple[rand] + arrayEng;
-                        eng52 = "it'd have  " + gen.viparticiple[rand] + arrayEng;
+                        eng52 = "it'd have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos hubieran " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng6 = "they would have " + gen.viparticiple[rand] + arrayEng;
                         eng62 = "they'd have " + gen.viparticiple[rand] + arrayEng;
@@ -5222,11 +5221,11 @@ public class Intrans {
                         eng5 = "it would not have " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it wouldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no hubieran " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they would not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they wouldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they would not have " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they wouldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no habríamos "  + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we would not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we wouldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we would not have " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we wouldn't have " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -5262,13 +5261,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no hubiera estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I wouldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no hubieras estado  " + gen.vib3contesp[rand] + arrayEsp;
+                        sp2 = "tú no hubieras estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you wouldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp3 = "él no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he wouldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp4 = "ella no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she wouldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp5 = "eso no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it wouldn't have been " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng6 = "they wouldn't have been " + gen.vib3cont[rand] + arrayEng;
@@ -5380,11 +5379,11 @@ public class Intrans {
                         eng5 = "it could not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it couldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no podrían estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they could not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they couldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they could not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they couldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no podríamos estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we could not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we couldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we could not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we couldn't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -5410,13 +5409,13 @@ public class Intrans {
                         eng22 = "you could have " + gen.viparticiple[rand] + arrayEng;
                         sp3 = "él pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng3 = "he could have " + gen.viparticiple[rand] + arrayEng;
-                        eng32 = "he could have  " + gen.viparticiple[rand] + arrayEng;
+                        eng32 = "he could have " + gen.viparticiple[rand] + arrayEng;
                         sp4 = "ella pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng4 = "she could have " + gen.viparticiple[rand] + arrayEng;
-                        eng42 = "she could have  " + gen.viparticiple[rand] + arrayEng;
+                        eng42 = "she could have " + gen.viparticiple[rand] + arrayEng;
                         sp5 = "eso pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng5 = "it could have " + gen.viparticiple[rand] + arrayEng;
-                        eng52 = "it could have  " + gen.viparticiple[rand] + arrayEng;
+                        eng52 = "it could have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos pudiesen haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng6 = "they could have " + gen.viparticiple[rand] + arrayEng;
                         eng62 = "they could have " + gen.viparticiple[rand] + arrayEng;
@@ -5441,11 +5440,11 @@ public class Intrans {
                         eng5 = "it could not have " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it couldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no pudiesen haber " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they could not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they couldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they could not have " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they couldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no pudiesemos haber "  + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we could not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we couldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we could not have " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we couldn't have " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -5481,13 +5480,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no podría haber estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I couldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no podrías haber estado  " + gen.vib3contesp[rand] + arrayEsp;
+                        sp2 = "tú no podrías haber estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you couldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp3 = "él no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he couldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp4 = "ella no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she couldn't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp5 = "eso no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it couldn't have been " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng6 = "they couldn't have been " + gen.vib3cont[rand] + arrayEng;
@@ -5530,19 +5529,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "quizá no " + gen.vib1s[rand] + arrayEsp;
-                        eng1 = "I " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng1 = "I " + "might not " + gen.vib[rand] + arrayEng;
                         sp2 = "tú " + "quizá no " + gen.vib2s[rand] + arrayEsp;
-                        eng2 = "you " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng2 = "you " + "might not " + gen.vib[rand] + arrayEng;
                         sp3 = "él " + "quizá no " + gen.vib3s[rand] + arrayEsp;
-                        eng3 = "he " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng3 = "he " + "might not " + gen.vib[rand] + arrayEng;
                         sp4 = "ella " + "quizá no " + gen.vib3s[rand] + arrayEsp;
-                        eng4 = "she " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng4 = "she " + "might not " + gen.vib[rand] + arrayEng;
                         sp5 = "eso " + "quizá no " + gen.vib3s[rand] + arrayEsp;
-                        eng5 = "it " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng5 = "it " + "might not " + gen.vib[rand] + arrayEng;
                         sp6 = "ellos " + "quizá no " + gen.vib4s[rand] + arrayEsp;
-                        eng6 = "they " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng6 = "they " + "might not " + gen.vib[rand] + arrayEng;
                         sp7 = "nosotros " + "quizá no " + gen.vib5s[rand] + arrayEsp;
-                        eng7 = "we " + "might not  " + gen.vib[rand] + arrayEng;
+                        eng7 = "we " + "might not " + gen.vib[rand] + arrayEng;
                         break;
                 }
             }
@@ -5600,11 +5599,11 @@ public class Intrans {
                         eng5 = "it might not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it mightn't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no quizá estén " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they might not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they mightn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they might not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they mightn't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no quizá estémos " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we might not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we mightn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we might not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we mightn't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -5630,13 +5629,13 @@ public class Intrans {
                         eng22 = "you might have " + gen.viparticiple[rand] + arrayEng;
                         sp3 = "él quizá haya " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng3 = "he might have " + gen.viparticiple[rand] + arrayEng;
-                        eng32 = "he might have  " + gen.viparticiple[rand] + arrayEng;
+                        eng32 = "he might have " + gen.viparticiple[rand] + arrayEng;
                         sp4 = "ella quizá haya " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng4 = "she might have " + gen.viparticiple[rand] + arrayEng;
-                        eng42 = "she might have  " + gen.viparticiple[rand] + arrayEng;
+                        eng42 = "she might have " + gen.viparticiple[rand] + arrayEng;
                         sp5 = "eso quizá haya " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng5 = "it might have " + gen.viparticiple[rand] + arrayEng;
-                        eng52 = "it might have  " + gen.viparticiple[rand] + arrayEng;
+                        eng52 = "it might have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos quizá hayan " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng6 = "they might have " + gen.viparticiple[rand] + arrayEng;
                         eng62 = "they might have " + gen.viparticiple[rand] + arrayEng;
@@ -5661,11 +5660,11 @@ public class Intrans {
                         eng5 = "it might not have " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it mightn't have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no quizá hayan " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they might not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they mightn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they might not have " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they mightn't have " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no quizá hayamos "  + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we might not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we mightn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we might not have " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we mightn't have " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -5701,13 +5700,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo quizá no haya estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I might not have been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú quizá no hayas estado  " + gen.vib3contesp[rand] + arrayEsp;
+                        sp2 = "tú quizá no hayas estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you might not have been " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp3 = "él quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he might not have been " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp4 = "ella quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she might not have been " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp;
+                        sp5 = "eso quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it might not have been " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng6 = "they might not have been " + gen.vib3cont[rand] + arrayEng;
@@ -5819,11 +5818,11 @@ public class Intrans {
                         eng5 = "it should not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it shouldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no deberían estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they should not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they shouldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they should not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they shouldn't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no deberíamos estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we should not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we shouldn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we should not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we shouldn't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -5849,13 +5848,13 @@ public class Intrans {
                         eng22 = "you should have " + gen.viparticiple[rand] + arrayEng;
                         sp3 = "él debería haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng3 = "he should have " + gen.viparticiple[rand] + arrayEng;
-                        eng32 = "he should have  " + gen.viparticiple[rand] + arrayEng;
+                        eng32 = "he should have " + gen.viparticiple[rand] + arrayEng;
                         sp4 = "ella debería haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng4 = "she should have " + gen.viparticiple[rand] + arrayEng;
-                        eng42 = "she should have  " + gen.viparticiple[rand] + arrayEng;
+                        eng42 = "she should have " + gen.viparticiple[rand] + arrayEng;
                         sp5 = "eso debería haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng5 = "it should have " + gen.viparticiple[rand] + arrayEng;
-                        eng52 = "it should have  " + gen.viparticiple[rand] + arrayEng;
+                        eng52 = "it should have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos deberían haber " + gen.vibparticipiosp[rand] + arrayEsp;
                         eng6 = "they should have " + gen.viparticiple[rand] + arrayEng;
                         eng62 = "they should have " + gen.viparticiple[rand] + arrayEng;
@@ -5880,11 +5879,11 @@ public class Intrans {
                         eng5 = "it should not have " + gen.viparticiple[rand] + arrayEng;
                         eng52 = "it shouldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp6 = "ellos no deberían haber " + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng6 = "they should not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng62 = "they shouldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng6 = "they should not have " + gen.viparticiple[rand] + arrayEng;
+                        eng62 = "they shouldn't have " + gen.viparticiple[rand] + arrayEng;
                         sp7 = "nosotros no deberíamos haber "  + gen.vibparticipiosp[rand] + arrayEsp;
-                        eng7 = "we should not have  " + gen.viparticiple[rand] + arrayEng;
-                        eng72 = "we shouldn't have  " + gen.viparticiple[rand] + arrayEng;
+                        eng7 = "we should not have " + gen.viparticiple[rand] + arrayEng;
+                        eng72 = "we shouldn't have " + gen.viparticiple[rand] + arrayEng;
                         break;
                 }
             }
@@ -6038,11 +6037,11 @@ public class Intrans {
                         eng5 = "it can not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it can't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no pueden estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they can not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they can't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they can not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they can't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no podemos estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we can not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we can't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we can not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we can't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -6147,11 +6146,11 @@ public class Intrans {
                         eng5 = "it must not be " + gen.vib3cont[rand] + arrayEng;
                         eng52 = "it mustn't be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they must not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they mustn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng6 = "they must not be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they mustn't be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we must not be  " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we mustn't be  " + gen.vib3cont[rand] + arrayEng;
+                        eng7 = "we must not be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we mustn't be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -6245,26 +6244,26 @@ public class Intrans {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         for (String verbs : gen.vib) {
@@ -6320,7 +6319,7 @@ public class Intrans {
 
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he wants ", "she wants ",
-                "it wants ", "we want ", "they want "};
+               "it wants ", "we want ", "they want "};
         //want to subject negative
         String wtsjn[] = {"I don't want ", "you don't want " , "he doesn't want ", "she doesn't want ", "it doesn't want "
                 , "we don't want ", "they don't want " };
@@ -6330,36 +6329,36 @@ public class Intrans {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj2[] = {"me to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj3[] = {"you to " + gen.vib[rand], "me to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj4[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "me to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj5[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj6[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj7[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj2s[] = {"que yo " + pas.vis1[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
 
         String wtobj3s[] = {"que tú " + pas.vis2[rand], "que yo " + pas.vis1[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj4s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que yo " + pas.vis1[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj5s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj6s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
         String wtobj7s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
 
         for (String verbs : gen.vib) {
             if (verbs.equals(temp)) {
@@ -6444,25 +6443,25 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no " + gen.vib1[rand] + arrayEsp + advfrequ[radv];
-                        eng1 = "I do not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng1 = "I don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng12 = "I don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp2 = "tú " + "no " + gen.vib2[rand] + arrayEsp + advfrequ[radv];
-                        eng2 = "you do not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng2 = "you don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng22 = "you don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp3 = "él no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng3 = "he does not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng3 = "he doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng32 = "he doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng4 = "she does not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng4 = "she doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng42 = "she doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso no " + gen.vib3esp[rand] + arrayEsp + advfrequ[radv];
-                        eng5 = "it does not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng5 = "it doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng52 = "it doesn't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos " + "no " + gen.vib3p[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they do not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng62 = "they don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros " + "no " + gen.vibnos[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we do not " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         eng72 = "we don't " + gen.vib[rand] + arrayEng + frequadv[radv];
                         break;
                 }
@@ -6520,11 +6519,11 @@ public class Intrans {
                         eng5 = "it is not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it isn't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no están " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they are not  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they aren't  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they are not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they aren't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no estamos " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we are not  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we aren't  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we are not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we aren't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -6582,11 +6581,11 @@ public class Intrans {
                         eng5 = "it has not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it hasn't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no han " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they have not  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they haven't  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they have not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they haven't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no hemos " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we have not  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we haven't  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we have not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we haven't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -6775,11 +6774,11 @@ public class Intrans {
                         eng5 = "it was not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it wasn't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no estaban " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they were not  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they weren't  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they were not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they weren't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no estabamos " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we were not  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we weren't  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we were not " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we weren't " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -6837,11 +6836,11 @@ public class Intrans {
                         eng5 = "it had not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it hadn't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habian " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they had not  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they hadn't  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they had not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they hadn't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no habiamos " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we had not  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we hadn't  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we had not " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we hadn't " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -6878,7 +6877,7 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no había estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I hadn't been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú no habías estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp2 = "tú no habías estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you hadn't been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp3 = "él no había estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he hadn't been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
@@ -7027,13 +7026,13 @@ public class Intrans {
                         eng22 = "you'll have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp3 = "él habrá " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he will have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he'll have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he'll have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella habrá " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she will have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she'll have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she'll have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso habrá " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it will have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it'll have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it'll have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos habrán " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they will have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng62 = "they'll have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
@@ -7058,11 +7057,11 @@ public class Intrans {
                         eng5 = "it will not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it won't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habrán " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they will not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they won't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they will not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they won't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no habremos "  + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we will not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we won't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we will not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we won't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7098,13 +7097,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no habré estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú no habrás estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp2 = "tú no habrás estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él no habrá estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp3 = "él no habrá estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella no habrá estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp4 = "ella no habrá estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso no habrá estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp5 = "eso no habrá estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they won't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
@@ -7217,11 +7216,11 @@ public class Intrans {
                         eng5 = "it would not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it wouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no estarían " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they would not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they wouldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they would not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they wouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no estaríamos " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we would not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we wouldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we would not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we wouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7247,13 +7246,13 @@ public class Intrans {
                         eng22 = "you'd have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp3 = "él hubiera " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he would have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he'd have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he'd have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella hubiera " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she would have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she'd have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she'd have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso hubiera " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it would have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it'd have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it'd have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos hubieran " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they would have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng62 = "they'd have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
@@ -7278,11 +7277,11 @@ public class Intrans {
                         eng5 = "it would not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it wouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no hubieran " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they would not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they wouldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they would not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they wouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no habríamos "  + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we would not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we wouldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we would not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we wouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7318,13 +7317,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no hubiera estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú no hubieras estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp2 = "tú no hubieras estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp3 = "él no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp4 = "ella no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso no hubiera estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp5 = "eso no hubiera estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they wouldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
@@ -7436,11 +7435,11 @@ public class Intrans {
                         eng5 = "it could not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it couldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no podrían estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they could not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they couldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they could not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they couldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no podríamos estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we could not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we couldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we could not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we couldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7466,13 +7465,13 @@ public class Intrans {
                         eng22 = "you could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp3 = "él pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he could have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she could have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso pudiese haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it could have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos pudiesen haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng62 = "they could have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
@@ -7497,11 +7496,11 @@ public class Intrans {
                         eng5 = "it could not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it couldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no pudiesen haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they could not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they couldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they could not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they couldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no pudiesemos haber "  + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we could not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we couldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we could not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we couldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7537,13 +7536,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no podría haber estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú no podrías haber estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp2 = "tú no podrías haber estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp3 = "él no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp4 = "ella no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso no podría haber estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp5 = "eso no podría haber estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they couldn't have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
@@ -7586,19 +7585,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "quizá no " + gen.vib1s[rand] + arrayEsp + advfrequ[radv];
-                        eng1 = "I " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng1 = "I " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp2 = "tú " + "quizá no " + gen.vib2s[rand] + arrayEsp + advfrequ[radv];
-                        eng2 = "you " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng2 = "you " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp3 = "él " + "quizá no " + gen.vib3s[rand] + arrayEsp + advfrequ[radv];
-                        eng3 = "he " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng3 = "he " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella " + "quizá no " + gen.vib3s[rand] + arrayEsp + advfrequ[radv];
-                        eng4 = "she " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng4 = "she " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso " + "quizá no " + gen.vib3s[rand] + arrayEsp + advfrequ[radv];
-                        eng5 = "it " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng5 = "it " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos " + "quizá no " + gen.vib4s[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros " + "quizá no " + gen.vib5s[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we " + "might not  " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we " + "might not " + gen.vib[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7656,11 +7655,11 @@ public class Intrans {
                         eng5 = "it might not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it mightn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no quizá estén " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they might not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they mightn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they might not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they mightn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no quizá estémos " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we might not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we mightn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we might not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we mightn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7686,13 +7685,13 @@ public class Intrans {
                         eng22 = "you might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp3 = "él quizá haya " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he might have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella quizá haya " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she might have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso quizá haya " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it might have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos quizá hayan " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng62 = "they might have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
@@ -7717,11 +7716,11 @@ public class Intrans {
                         eng5 = "it might not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it mightn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no quizá hayan " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they might not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they mightn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they might not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they mightn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no quizá hayamos "  + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we might not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we mightn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we might not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we mightn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7757,13 +7756,13 @@ public class Intrans {
                     case 1:
                         sp1 = "yo quizá no haya estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp2 = "tú quizá no hayas estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp2 = "tú quizá no hayas estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp3 = "él quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp3 = "él quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp4 = "ella quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp4 = "ella quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        sp5 = "eso quizá no haya estado   " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
+                        sp5 = "eso quizá no haya estado  " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they might not have been " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
@@ -7875,11 +7874,11 @@ public class Intrans {
                         eng5 = "it should not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it shouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no deberían estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they should not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they shouldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they should not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they shouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no deberíamos estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we should not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we shouldn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we should not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we shouldn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -7905,13 +7904,13 @@ public class Intrans {
                         eng22 = "you should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp3 = "él debería haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he should have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella debería haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she should have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso debería haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it should have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos deberían haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng62 = "they should have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
@@ -7936,11 +7935,11 @@ public class Intrans {
                         eng5 = "it should not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         eng52 = "it shouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no deberían haber " + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they should not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they shouldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they should not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they shouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no deberíamos haber "  + gen.vibparticipiosp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we should not have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we shouldn't have  " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we should not have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we shouldn't have " + gen.viparticiple[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -8094,11 +8093,11 @@ public class Intrans {
                         eng5 = "it can not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it can't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no pueden estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they can not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they can't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they can not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they can't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no podemos estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we can not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we can't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we can not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we can't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -8203,11 +8202,11 @@ public class Intrans {
                         eng5 = "it must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         eng52 = "it mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they must not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they mustn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we must not be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we mustn't be  " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -8302,26 +8301,26 @@ public class Intrans {
 
         //subject in eng
         String ftsj[] = {
-                "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
-                "for them to ", "for us to "
+               "for me to ", "for you to ", "for him to ", "for her to ", "for it to ",
+               "for them to ", "for us to "
         };
 
         //subject in spanish
         String ftsjs[] = {
-                "para que yo ", "para que tú ", "para que él ", "para que ella ",
-                "para que eso ", "para que ellos ", "para que nosotros "
+               "para que yo ", "para que tú ", "para que él ", "para que ella ",
+               "para que eso ", "para que ellos ", "para que nosotros "
         };
 
         //subject in eng negative
         String ftsjn[] = {
-                "for me not to ", "for you not to ", "for him not to ", "for her not to ",
-                "for it not to ", "for them not to ", "for us not to "
+               "for me not to ", "for you not to ", "for him not to ", "for her not to ",
+               "for it not to ", "for them not to ", "for us not to "
         };
 
         //subject in spanish negative
         String ftsjsn[] = {
-                "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
-                "para que eso no ", "para que ellos no ", "para que nosotros no "
+               "para que yo no ", "para que tú no ", "para que él no ", "para que ella no ",
+               "para que eso no ", "para que ellos no ", "para que nosotros no "
         };
 
         for (String verbs : gen.vib) {
@@ -8377,7 +8376,7 @@ public class Intrans {
 
         //want to subject
         String wtsj[] = {"I want ", "you want ", "he wants ", "she wants ",
-                "it wants ", "we want ", "they want "};
+               "it wants ", "we want ", "they want "};
         //want to subject negative
         String wtsjn[] = {"I don't want ", "you don't want " , "he doesn't want ", "she doesn't want ", "it doesn't want "
                 , "we don't want ", "they don't want " };
@@ -8387,36 +8386,36 @@ public class Intrans {
         String wtsjsn[] = {"yo no quiero ", "tú no quieres ", "él no quiere ", "ella no quiere ", "eso no quiere ", "nosotros no queremos ", "ellos no quieren "};
 
         String wtobj1[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj2[] = {"me to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj3[] = {"you to " + gen.vib[rand], "me to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj4[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "me to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj5[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "me to " + gen.vib[rand], "us to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj6[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "them to " + gen.vib[rand]};
         String wtobj7[] = {"you to " + gen.vib[rand], "him to " + gen.vib[rand], "her to " + gen.vib[rand],
-                "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
+               "it to " + gen.vib[rand], "us to " + gen.vib[rand], "me to " + gen.vib[rand]};
 
         // objetos wt en sp
         String wtobj1s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj2s[] = {"que yo " + pas.vis1[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
 
         String wtobj3s[] = {"que tú " + pas.vis2[rand], "que yo " + pas.vis1[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj4s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que yo " + pas.vis1[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj5s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
+               "que yo " + pas.vis1[rand], "que nosotros " + pas.vis5[rand], "que ellos " + pas.vis4[rand]};
         String wtobj6s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
+               "que eso " + pas.vis3[rand], "que ellos " + pas.vis4[rand]};
         String wtobj7s[] = {"que tú " + pas.vis2[rand], "que él " + pas.vis3[rand], "que ella " + pas.vis3[rand],
-                "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
+               "que eso " + pas.vis3[rand], "que nosotros " + pas.vis5[rand], "que yo " + pas.vis1[rand]};
 
         for (String verbs : gen.vib) {
             if (verbs.equals(temp)) {

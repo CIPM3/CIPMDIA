@@ -4,16 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".components.VideoPlayer">
+    tools:context=".VideoPlayer">
 
-    <LinearLayout
-        android:id="@+id/video_lay"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/ic_grupo_videobox"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        />
+
 
 
 
@@ -22,29 +15,15 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         >
-        <VideoView
+        <com.google.android.exoplayer2.ui.StyledPlayerView
             android:id="@+id/video_player"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:foregroundGravity="center_horizontal"
             />
+
     </LinearLayout>
 
-
-    <LinearLayout
-        android:id="@+id/loadingVideo"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:visibility="gone"
-        >
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progressTint="@color/white"
-            />
-    </LinearLayout>
 
 </FrameLayout>

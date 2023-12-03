@@ -1,4 +1,4 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,32 +1,14 @@
 <resources>
     <string name="app_name">CIPM3</string>
     <string-array name="structuresGratis">
-        <item>Tutorial</item>
-        <item>Present Simple</item>
-        <item>Present Perfect</item>
-        <item>Past Simple</item>
-        <item>Future Simple</item>
-        <item>Future Continuous</item>
-        <item>Would Simple</item>
-        <item>Could Simple</item>
-        <item>Might Simple</item>
-        <item>Can Simple</item>
-        <item>Reported Speech</item>
-        <item>Incremento Paralelo</item>
-        <item>Verbal Adjectives</item>
 
-        <item>What Simple</item>
-        <item>What Continuous</item>
-        <item>What Modals Simple</item>
-        <item>Relative Clause</item>
-        <item>Question Structure</item>
-        <item>Question Structure Modals</item>
-        <item>There Be</item>
+        <item>Present Simple</item>
+        <item>Present Continuous</item>
+
 
     </string-array>
     <string-array name="structures">
-        <item>Tutorial</item>
-        <!--        <item>Prueba</item>-->
+
 
         <item>Present Simple</item>
         <item>Present Continuous</item>
@@ -105,10 +87,9 @@
 
         <item>Question Structure</item>
         <item>Question Structure Modals</item>
-
-        <!--        <item>Feel Like Simple</item>-->
+        <!--  <item>Phrasal Verbs</item>-->
+        <!--  <item>Feel Like Simple</item>-->
         <item>Able To</item>
-        <item>Phrasal Verbs</item>
         <item>Reported Speech</item>
         <item>Incremento Paralelo</item>
         <item>Verbal Adjectives</item>
@@ -124,7 +105,7 @@
     </string-array>
 
     <string-array name="structurestext">
-        <item>Tutorial</item>
+
 
         <item>Present Simple</item>
         <item>Present Continuous</item>
@@ -185,13 +166,14 @@
     </string-array>
 
     <string-array name="vocab">
-        <item>Tutorial</item>
+
+
         <item>0 to 50</item>
-        <item>50 to 100</item>
-        <item>100 to 150</item>
+
+
     </string-array>
     <string-array name="vocabPremium">
-        <item>Tutorial</item>
+
         <item>0 to 50</item>
         <item>50 to 100</item>
         <item>100 to 150</item>
@@ -200,25 +182,27 @@
         <item>250 to 300</item>
         <item>300 to 350</item>
         <item>350 to 400</item>
-        <item>400 to 450</item>
-        <item>450 to 500</item>
+        <item>400 to 500</item>
+
     </string-array>
 
     <string-array name="prager">
-        <item>Tutorial</item>
+
         <item>Black Fathers</item>
         <item>Is America Racist?</item>
     </string-array>
     <string-array name="Transition">
-        <item>Tutorial</item>
-        <item>Transiciones</item>
+
+
         <item>Random</item>
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
         <item>Conectores Standar Presente Perfecto</item>
+
         <item>Conectores Standar Presente Perfecto Continuo</item>
         <item>Conectores Standar Futuro Simple</item>
         <item>Conectores Standar Reported Speech</item>
+
         <item>Conectores Standar Must Simple</item>
         <item>Conectores Standar Can Simple</item>
         <item>Conectores Standar Presente Simple X Want To</item>
@@ -238,18 +222,15 @@
         <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
     </string-array>
     <string-array name="TransitionGratis">
-        <item>Tutorial</item>
-        <item>Transiciones</item>
-        <item>Random</item>
+
+
         <item>Conectores Standar Presente Simple</item>
         <item>Conectores Standar Presente Continuo</item>
-        <item>Conectores Standar Presente Perfecto</item>
-        <item>Conectores Standar Presente Perfecto Continuo</item>
-        <item>Conectores Standar Futuro Simple</item>
+
 
     </string-array>
     <string-array name="pragerPremium">
-        <item>Tutorial</item>
+
         <item>Black Fathers</item>
         <item>Is America Racist?</item>
         <item>Dont Compare Yourself to Others</item>
@@ -259,70 +240,21 @@
         <item>How to Make Our Cities Safer</item>
         <item>How to End Systemic Racism</item>
         <item>Should Government Bail Out Big Banks?</item>
-    </string-array>
-
-    <string-array name="cultura">
-        <item>Tutorial</item>
-        <item>Moonlight Explanation 1</item>
-        <item>Moonlight Clip 1</item>
-        <item>Rick and Morty Explanation 2</item>
-        <item>Rick and Morty Clip 2</item>
-        <item>Do You Want Pepsi Explanation 3</item>
-        <item>Do You Want Pepsi Clip 3</item>
-        <item>Sangre Por Sangre Foodline Explanation 4</item>
-        <item>Sangre Por Sangre Foodline Clip 4</item>
-        <item>Sangre Por Sangre Watch El Paisaje Explanation 5</item>
-        <item>Sangre Por Sangre Watch El Paisaje Clip 5</item>
-
-        // vamos a quitar estos dos, las frases estan muy pegadas y no funcoina bien el get position
-        <!--  <item>Kings of the Hills Drugs Explanation 14</item>
-        <item>Kings of the Hills Drugs Clip 14</item>-->
-    </string-array>
-    <string-array name="culturaPremium">
-        <item>Tutorial</item>
-        <item>Moonlight Explanation 1</item>
-        <item>Moonlight Clip 1</item>
-        <item>Rick and Morty Explanation 2</item>
-        <item>Rick and Morty Clip 2</item>
-        <item>Do You Want Pepsi Explanation 3</item>
-        <item>Do You Want Pepsi Clip 3</item>
-        <item>Sangre Por Sangre Foodline Explanation 4</item>
-        <item>Sangre Por Sangre Foodline Clip 4</item>
-        <item>Sangre Por Sangre Watch El Paisaje Explanation 5</item>
-        <item>Sangre Por Sangre Watch El Paisaje Clip 5</item>
-        <item>Training Day Rabbit Has The Gun Explanation 6</item>
-        <item>Training Day Rabbit Has The Gun Clip 6</item>
-        <item>Hancock Train Explanation 7</item>
-        <item>Hancock Train Clip 7</item>
-        <item>Malcom in the Middle Teacher Explanation 8</item>
-        <item>Malcom in the Middle Teacher Clip 8</item>
-        <item>Sangre Por Sangre Comedor Explanation 9</item>
-        <item>Sangre Por Sangre Comedor Clip 9</item>
-        <item>Dave Chapelle Man Rape Explanation 10</item>
-        <item>Dave Chapelle Man Rape Clip 10</item>
-        <item>Análisis de cultura Gringa y Frases Coloquiales 2 Explanation 11</item>
-        <item>Análisis de cultura Gringa y Frases Coloquiales 2 Clip 11</item>
-        <item>Boys in the Hood Explanation 12</item>
-        <item>Boys in the Hood Clip 12</item>
-        <item>Cultura y Fonética Explanation 13</item>
-        <item>Cultura y Fonética Clip 13</item>
-        <item>Kings of the Hills Drugs Explanation 14</item>
-        <item>Kings of the Hills Drugs Clip 14</item>
 
     </string-array>
+
 
     <!--CULTURA BASIC-->
     <string-array name="cultura2023">
-        <item>Tutorial</item>
+
         <item>Moonlight</item>
         <item>Rick and Morty</item>
-        <item>Do You Want Pepsi</item>
         <item>Sangre Por Sangre Foodline</item>
-        <item>Sangre Por Sangre Watch El Paisaje</item>
+
     </string-array>
     <!--CULTURA PREMIUM-->
     <string-array name="culturaPremium2023">
-        <item>Tutorial</item>
+
         <item>Moonlight</item>
         <item>Rick and Morty</item>
         <item>Do You Want Pepsi</item>
@@ -352,13 +284,19 @@
     </string-array>
 
     <string-array name="rachel">
-        <item>Tutorial</item>
+
         <item>Steve Jobs 1</item>
         <!--        <item>Steve Jobs 2</item>-->
         <item>Kot Fishing 1</item>
         <item>Kot Fishing 2</item>
         <item>Helicoptero 1</item>
         <item>Helicoptero 2</item>
+    </string-array>
+    <string-array name="rachelGratis">
+
+        <item>Steve Jobs 1</item>
+        <!--        <item>Steve Jobs 2</item>-->
+
     </string-array>
 
     <string-array name="LevelofAbstraction">
@@ -372,12 +310,19 @@
 
 
     <string-array name="Interference">
-        <item>Tutorial</item>
+
         <item>Por Sujeto</item>
         <item>Por Preposición</item>
         <item>Por Objeto</item>
         <item>Interferencia Reflexiva</item>
         <item>Interferencia Pasiva</item>
+    </string-array>
+    <string-array name="InterferenceGratis">
+
+
+        <item>Por Preposición</item>
+        <item>Por Objeto</item>
+
     </string-array>
 
     <string-array name="InterfrangoPremium">

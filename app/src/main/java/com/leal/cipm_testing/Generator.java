@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class Generator<vib> {
+public class Generator  {
     public Generator() {
     }
 
@@ -52,7 +52,7 @@ public class Generator<vib> {
 
 
     // verbos intransitivos tercera persona eng
-    String vib3[] = {"goes ", "thinks ", "comes", "looks ", "works ", "plays ", "talks ", "runs ", "moves ", "lives ",
+    String vib3[] = {"goes ", "thinks ", "comes ", "looks ", "works ", "plays ", "talks ", "runs ", "moves ", "lives ",
             "sits ", "stands ", "understands ", "walks ", "grows ", "waits ", "dies ", "stays ", "falls ",
 
     };
@@ -241,6 +241,9 @@ public class Generator<vib> {
                     "la enfermera", "el gerente", "el jefe", "el maestro",
                     "el padre", "la madre"}
     };
+
+
+
 
     public String gens;
     public String gene;
@@ -2895,6 +2898,7 @@ public class Generator<vib> {
     }
 
     public void GenFutSimp1() {
+
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
         String verb = verbDif1[verbRand];
@@ -11865,7 +11869,35 @@ gene2 = o.ps5eng2;
                 break;
         }
     }
-
+    public void GenTherebe() {
+        int rand = (int) (Math.random() * primerysegun.length);
+        int verb = (int) (Math.random() * 1);
+        String temp = primerysegun[rand];
+        switch (temp) {
+            case "yo ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe();
+                        gens = n.ps1;
+                        gene = n.ps1eng;
+                        gene2 = n.ps1eng2;
+                        break;
+                }
+                break;
+            case "tú ":
+                switch (verb) {
+                    case 0:
+                        Nobles n = new Nobles();
+                        n.GenTherebe();
+                        gens = n.ps2;
+                        gene = n.ps2eng;
+                        gene2 = n.ps2eng2;
+                        break;
+                }
+                break;
+        }
+    }
     public void GenTherebe1() {
         int rand = (int) (Math.random() * primerysegun.length);
         int verb = (int) (Math.random() * 1);
@@ -14049,6 +14081,9 @@ gene2 = o.ps5eng2;
                 break;
         }
     }
+
+
+
 
     // presentes
     public void GenPresSimp2() {

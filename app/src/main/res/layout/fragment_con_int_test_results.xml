@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Con_int_test_results">
+    tools:context=".Con_int_test_results"
+    android:background="@android:color/white">
 
     <TextView
         android:id="@+id/scoretext"
-        android:layout_width="319dp"
-        android:layout_height="141dp"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="TextView"
-        android:textSize="34sp" />
+        android:text="Your Score"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="match_parent"
-        android:layout_height="69dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scoretext"
+        android:layout_marginTop="-212dp"
+        android:gravity="center"
         android:text="Your Conscious Interference Score is:"
-        android:textSize="24sp"
-        />
-</FrameLayout>
+        android:textColor="@android:color/black"
+        android:textSize="33sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>

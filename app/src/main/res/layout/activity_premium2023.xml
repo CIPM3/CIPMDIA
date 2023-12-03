@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Premium2023"
+    tools:context=".Premium2023"
     android:background="@color/white"
     >
 
@@ -25,7 +25,7 @@
             >
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView"
-                android:name="com.leal.cipm_testing.components.header"
+                android:name="com.leal.cipm_testing.header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -100,8 +100,8 @@
                 />-->
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView4"
-                android:name="com.leal.cipm_testing.components.VideoPlayer"
+                android:id="@+id/fragmentContainerView5"
+                android:name="com.leal.cipm_testing.VideoPlayer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_video_player"
@@ -139,7 +139,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav" />

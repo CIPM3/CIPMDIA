@@ -1,4 +1,4 @@
-package com.leal.cipm_testing.screens;
+package com.leal.cipm_testing;
 
 import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 
@@ -21,30 +21,24 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.leal.cipm_testing.ArraysdeLosPlanesPersonalizados;
-import com.leal.cipm_testing.Defs;
-import com.leal.cipm_testing.Dialog;
-import com.leal.cipm_testing.Prefs;
-import com.leal.cipm_testing.R;
-import com.leal.cipm_testing.VocabModeloPersistencia;
-import com.leal.cipm_testing.components.VideoPlayer;
-import com.leal.cipm_testing.texts;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Availability2023 extends AppCompatActivity {
 
     TextView tv;
     TextView textspin1;
     Spinner spin;
-    VideoView vv;
     LinearLayout vf;
     Button preg1,preg2,preg3,preg4;
     TextView pregtxt,btn_test,scoreText;
@@ -59,7 +53,7 @@ public class Availability2023 extends AppCompatActivity {
     FirebaseAuth mAuth=FirebaseAuth.getInstance();
     String userid;
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
-    String[] temp = objetoArrays.pragerGratis;
+    String[] temp = objetoArrays.pragerCompleto;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     int PositionOfSelection;
     int CounterToSubtractSelection=0;
@@ -74,6 +68,12 @@ public class Availability2023 extends AppCompatActivity {
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan;
     boolean BasicListeningPlanFromDb;
+    VideoPlayer video_player = new VideoPlayer();
+    boolean isInActividadDeComprension;
+    DocumentReference scoresAvailDocRef;
+    ModeloAvailability mso ;
+    CollectionReference uid;
+    int counterDb;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,11 +90,20 @@ public class Availability2023 extends AppCompatActivity {
         textspin1 = findViewById(R.id.textspin1);
         scoreText = findViewById(R.id.scoreText);
         pasarSigNivel = findViewById(R.id.pasarSigNivel);
+        pasarSigNivel.setVisibility(View.INVISIBLE );
         btn_test = findViewById(R.id.btn_test);
         spin = findViewById(R.id.spinuno);
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
-
+        counterDb=0;
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView5, video_player)
+                .commit();
+        Bundle args = new Bundle();
+        args.putString("tema", selection);
+        video_player.setArguments(args);
+        uid= db.collection(userid);
         PremiumAndArrayControler();
         sendInfotoDb();
     }
@@ -107,29 +116,26 @@ public class Availability2023 extends AppCompatActivity {
         isCustom = reciver.getBooleanExtra("isCustom",false);
         BasicListeningPlan= reciver.getBooleanExtra("BasicListeningPlan",false);
         BasicListeningPlanFromDb=reciver.getBooleanExtra("FromListeningDb",false);
-
-
         if(personalizedPlan){
-            pasarSigNivel.setVisibility(View.VISIBLE);
+          //  pasarSigNivel.setVisibility(View.VISIBLE);
             if(isCustom){
+                //aqui viene de continue my plan
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features
                     //hide ads if you are showing ads
-                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
-                            android.R.layout.simple_spinner_item);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            textspin1.setText(selection);
+                          /*  selection = spin.getSelectedItem().toString();
+                            textspin1.setText(selection);*/
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-
-                            tv.setText("");
-                            btnFinalizarTest();
+                           spinnerSelected1();
+                          /*  tv.setText("");
+                            btnFinalizarTest();*/
 
                         }
 
@@ -142,21 +148,20 @@ public class Availability2023 extends AppCompatActivity {
                 } else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
-                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager,
-                            android.R.layout.simple_spinner_item);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
+                         /*   selection = spin.getSelectedItem().toString();
                             textspin1.setText(selection);
+*/
+                            spinnerSelected1();
 
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-
-                            tv.setText("");
-                            btnFinalizarTest();
+                           /* tv.setText("");
+                            btnFinalizarTest();*/
 
                         }
 
@@ -167,24 +172,18 @@ public class Availability2023 extends AppCompatActivity {
                     });
                 }
             }else {
+                //aqui viene de la actividad anterior
                 if (prefs.getPremium()==1){
                     //Give the user all the premium features
                     //hide ads if you are showing ads
-                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium,
-                            android.R.layout.simple_spinner_item);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            textspin1.setText(selection);
-
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-
-                            tv.setText("");
-                            btnFinalizarTest();
+                         spinnerSelected1();
 
                         }
 
@@ -197,21 +196,14 @@ public class Availability2023 extends AppCompatActivity {
                 } else if (prefs.getPremium()==0){
                     //remove user all the premium features
                     //show ads to the user
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                            android.R.layout.simple_spinner_item,temp);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin.setAdapter(adapter);
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection = spin.getSelectedItem().toString();
-                            textspin1.setText(selection);
-
-                            vv.setVisibility(View.GONE);
-                            vf.setVisibility(View.VISIBLE);
-
-                            tv.setText("");
-                            btnFinalizarTest();
+                          spinnerSelected1();
 
                         }
 
@@ -265,12 +257,12 @@ public class Availability2023 extends AppCompatActivity {
 
     }
     public void SubtractSelectionAndSendinfoToDb(){
-        if(temp.length==1){
+        if(temp.length==2){
             // si queda nada de arrays cambia de vocab a estructura
             isBasicStructures=true;
-            Intent intent = new Intent(Availability2023.this, Estructura2023.class);
+            Intent intent = new Intent(Availability2023.this, Cultura2023.class);
             intent.putExtra("isThePlanPersonalized",personalizedPlan);
-            intent.putExtra("basicSctructures",isBasicStructures );
+            intent.putExtra("FromBasicRecomended",isBasicStructures );
             intent.putExtra("isCustom",false);
             startActivity(intent);
         }else{
@@ -279,6 +271,8 @@ public class Availability2023 extends AppCompatActivity {
             //premiumControler updatea el array del spinner
             PremiumAndArrayControler();
             sendInfotoDb();
+           selectPraggerText();
+
         }
     }
     public void PasarSiguienteEstructura(View v){
@@ -315,7 +309,6 @@ public class Availability2023 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //set what should happen when negative button is clicked
-                        Toast.makeText(getApplicationContext(),"Nothing Happened",Toast.LENGTH_LONG).show();
                     }
                 })
                 .show();
@@ -331,7 +324,6 @@ public class Availability2023 extends AppCompatActivity {
     String Respuestas [][]={};
     String RespuestasCorrectas [][] = {};
     String RespCorrecta;
-
     //EMPIEZA ESTRUCTURA
 
     //EVALUA SI EL USUARIO ES PREMIUM O NO
@@ -355,46 +347,58 @@ public class Availability2023 extends AppCompatActivity {
 
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    spinnerSelected1();
 
-                }
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+/*
+                    Toast.makeText(Availability2023.this, "inside check premium " + String.valueOf(isInActividadDeComprension), Toast.LENGTH_SHORT).show();
+*/
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                        spinnerSelected1();
+                    }
 
-                }
-            });
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
         }
     }
 
     //EVALUA QUE FUE SELECCIONADO
     public void spinnerSelected1(){
-        selection = spin.getSelectedItem().toString();
-        textspin1.setText(selection);
+        if(isInActividadDeComprension){
+            Toast.makeText(this, "termina actividad de comprensión", Toast.LENGTH_SHORT).show();
+        }else {
+            selection = spin.getSelectedItem().toString();
+            textspin1.setText(selection);
 
-        selectPraggerText();
+            selectPraggerText();
+            video_player.updateFragmentStateStructure(selection);
+        }
 
-        VideoPlayer video_player = new VideoPlayer();
-        Bundle args = new Bundle();
-        args.putString("tema", selection);
-        video_player.setArguments(args);
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragmentContainerView4, video_player)
-                .commit();
     }
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER 1
     public void activaSpinner1(View v){
-        Spinner mySpinner = findViewById(R.id.spinuno);
-        mySpinner.performClick();
+
+
+
+        if(isInActividadDeComprension){
+            Toast.makeText(this, "termina primero la actividad de comprension antes de pasar a otra clase", Toast.LENGTH_SHORT).show();
+        }else{
+            Spinner mySpinner = findViewById(R.id.spinuno);
+
+            mySpinner.performClick();
+        }
+
     }
 
     //SELECCIONA EL PRAGGER Y LE COLOCA EL TEXTO
@@ -412,7 +416,7 @@ public class Availability2023 extends AppCompatActivity {
                 setClickPragger(text1);
                 break;
 
-            case "Dont Compare Yourself to Others":
+            case "Don't Compare Yourself to Others":
                 texts t2 = new texts();
                 String text2 = t2.DontCompareYourselftoOthers;
                 setClickPragger(text2);
@@ -432,7 +436,7 @@ public class Availability2023 extends AppCompatActivity {
 
                 break;
 
-            case "Dont Waste Your Time":
+            case "Don't Waste Your Time":
                 texts t5 = new texts();
                 String text5 = t5.dontWasteYourTime;
                 setClickPragger(text5);
@@ -2491,7 +2495,7 @@ public class Availability2023 extends AppCompatActivity {
 
                 break;
 
-            case "Dont Compare Yourself to Others":
+            case "Don't Compare Yourself to Others":
 
 
                 ClickableSpan Doyoueverlook = new ClickableSpan() {
@@ -5122,7 +5126,7 @@ public class Availability2023 extends AppCompatActivity {
 
                 break;
 
-            case "Dont Waste Your Time":
+            case "Don't Waste Your Time":
 
 
                 ClickableSpan Date = new ClickableSpan() {
@@ -7261,7 +7265,7 @@ public class Availability2023 extends AppCompatActivity {
         String RespuestasCorrectasSele [][];
         switch (selection) {
             case "Tutorial":
-                Toast.makeText(this, "Por favor seleccione una actividad.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Por favor seleccione una actividad", Toast.LENGTH_SHORT).show();
                 break;
             case "Black Fathers":
                 pregSele = new String[]{
@@ -7285,151 +7289,151 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Martin Luther King Jr.",
+                                "Martin Luther King Jr",
                                 "Al Sharpton",
-                                "Kweisi Mfume, the president of the NAACP.",
+                                "Kweisi Mfume, the president of the NAACP",
                                 "Jesse Jackson"
                         },
                         {
-                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison.",
-                                "They are three times more likely to live in poverty and commit crime; six times more likely to drop out of school and 15 times more likely to end up in prison.",
-                                "They are four times more likely to live in poverty and commit crime; eight times more likely to drop out of school and 18 times more likely to end up in prison.",
-                                "They are six times more likely to live in poverty and commit crime; 10 times more likely to drop out of school and 25 times more likely to end up in prison.",
+                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison",
+                                "They are three times more likely to live in poverty and commit crime; six times more likely to drop out of school and 15 times more likely to end up in prison",
+                                "They are four times more likely to live in poverty and commit crime; eight times more likely to drop out of school and 18 times more likely to end up in prison",
+                                "They are six times more likely to live in poverty and commit crime; 10 times more likely to drop out of school and 25 times more likely to end up in prison",
                         },
                         {
-                                "They are less likely to engage in risky behavior.",
-                                "They are more likely to graduate from college.",
-                                "They are more likely to have stable relationships.",
-                                "They are more likely to end up in jail."
+                                "They are less likely to engage in risky behavior",
+                                "They are more likely to graduate from college",
+                                "They are more likely to have stable relationships",
+                                "They are more likely to end up in jail"
                         },
                         {
-                                "50 percent.",
-                                "60 percent.",
-                                "41 percent.",
-                                "70 percent."
+                                "50 percent",
+                                "60 percent",
+                                "41 percent",
+                                "70 percent"
                         },
                         {
-                                "No, they were less likely.",
-                                "Yes, but only slightly.",
-                                "Yes, significantly more likely.",
-                                "Yes, according to economist Walter Williams."
+                                "No, they were less likely",
+                                "Yes, but only slightly",
+                                "Yes, significantly more likely",
+                                "Yes, according to economist Walter Williams"
                         },
                         {
-                                "53 percent.",
-                                "73 percent.",
-                                "63 percent.",
-                                "83 percent."
+                                "53 percent",
+                                "73 percent",
+                                "63 percent",
+                                "83 percent"
                         },
                         {
-                                "The rise of feminism.",
-                                "The decrease in religious values.",
-                                "The welfare system that allows women to marry the government.",
-                                "The welfare system that allows women to marry the government.",
+                                "The rise of feminism",
+                                "The decrease in religious values",
+                                "The welfare system that allows women to marry the government",
+                                "The welfare system that allows women to marry the government",
                         },
                         {
-                                "Lil Wayne.",
-                                "Tupac Shakur.",
-                                "Drake.",
-                                "Asap Rocky.",
+                                "Lil Wayne",
+                                "Tupac Shakur",
+                                "Drake",
+                                "Asap Rocky",
                         },
                         {
-                                "Learned helplessness.",
-                                "Enabling behavior.",
-                                "Codependency.",
-                                "Social welfare syndrome."
+                                "Learned helplessness",
+                                "Enabling behavior",
+                                "Codependency",
+                                "Social welfare syndrome"
                         },
                         {
-                                "Most of the non-poor respondents said yes.",
-                                "50 percent of poor respondents said yes.",
-                                "64 percent of poor respondents said yes.",
-                                "75 percent of poor respondents said yes."
+                                "Most of the non-poor respondents said yes",
+                                "50 percent of poor respondents said yes",
+                                "64 percent of poor respondents said yes",
+                                "75 percent of poor respondents said yes"
                         },
                         {
-                                "Material possessions.",
-                                "A mother's love.",
-                                "A Grandma's love.",
-                                "Discipline and confidence."
+                                "Material possessions",
+                                "A mother's love",
+                                "A Grandma's love",
+                                "Discipline and confidence"
                         },
                         {
-                                "The ability to calm a child down and teach them how to be a man.",
-                                "The ability to teach a child how to fight.",
-                                "The ability to teach a child how to be a gentleman.",
-                                "The ability to teach a child how to be a man."
+                                "The ability to calm a child down and teach them how to be a man",
+                                "The ability to teach a child how to fight",
+                                "The ability to teach a child how to be a gentleman",
+                                "The ability to teach a child how to be a man"
                         },
                         {
-                                "Lawyer.",
-                                "Teacher.",
+                                "Lawyer",
+                                "Teacher",
                                 "Fireman",
-                                "Janitor.",
+                                "Janitor",
                         },
                         {
-                                "That hard work doesn't pay off.",
+                                "That hard work doesn't pay off",
                                 "all of the above",
-                                "That success is all about who you know.",
-                                "That hard work wins, and you get out of life what you put into it."
+                                "That success is all about who you know",
+                                "That hard work wins, and you get out of life what you put into it"
                         },
                         {
-                                "A government policy that prioritizes the importance of fathers.",
-                                "Increased government welfare benefits.",
-                                "More government-funded job training programs.",
+                                "A government policy that prioritizes the importance of fathers",
+                                "Increased government welfare benefits",
+                                "More government-funded job training programs",
                                 "leave everything as is",
                         },
                         {
-                                "Cornel West.",
-                                "Michael Eric Dyson.",
-                                "Larry Elder.",
+                                "Cornel West",
+                                "Michael Eric Dyson",
+                                "Larry Elder",
                                 "Barack Obama"
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                                "Kweisi Mfume, the president of the NAACP."
+                                "Kweisi Mfume, the president of the NAACP"
                         },
                         {
-                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison."
+                                "They are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison"
                         },
                         {
-                                "They are more likely to end up in jail."
+                                "They are more likely to end up in jail"
                         },
                         {
-                                "41 percent."
+                                "41 percent"
                         },
                         {
-                                "Yes, according to economist Walter Williams."
+                                "Yes, according to economist Walter Williams"
                         },
                         {
-                                "73 percent."
+                                "73 percent"
                         },
                         {
-                                "The welfare system that allows women to marry the government."
+                                "The welfare system that allows women to marry the government"
                         },
                         {
-                                "Tupac Shaku."
+                                "Tupac Shakur"
                         },
                         {
-                                "Learned helplessness."
+                                "Learned helplessness"
                         },
                         {
-                                "64 percent of poor respondents said yes."
+                                "64 percent of poor respondents said yes"
                         },
                         {
-                                "Discipline and confidence."
+                                "Discipline and confidence"
                         },
                         {
-                                "The ability to calm a child down and teach them how to be a man."
+                                "The ability to calm a child down and teach them how to be a man"
                         },
                         {
-                                "Janitor."
+                                "Janitor"
                         },
                         {
-                                "Hard work wins, and you get out of life what you put into it."
+                                "Hard work wins, and you get out of life what you put into it"
                         },
                         {
-                                "A government policy that prioritizes the importance of fathers."
+                                "A government policy that prioritizes the importance of fathers"
                         },
                         {
-                                "Larry Elder."
+                                "Larry Elder"
                         }
                 };
 
@@ -7611,7 +7615,7 @@ public class Availability2023 extends AppCompatActivity {
                 Respuestas = RespSele;
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
-            case "Dont Compare Yourself to Others":
+            case "Don't Compare Yourself to Others":
                 pregSele = new String[]{
                         "What is the main message of this speech?",
                         "Who did the speaker want to be as big as when starting their career?",
@@ -7648,7 +7652,7 @@ public class Availability2023 extends AppCompatActivity {
                                 "Jerry Seinfeld",
                                 "Tom Shillue",
                                 "Jimmy Fallon",
-                                "Louis C.K."
+                                "Louis C.K"
                         },
                         {
                                 "5 years",
@@ -7807,16 +7811,16 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Make people change to live better.",
-                                "Blaming people makes you the problem.",
-                                "Divorcing a partner takes courage.",
-                                "Being miserable makes us blame people.",
+                                "Make people change to live better",
+                                "Blaming people makes you the problem",
+                                "Divorcing a partner takes courage",
+                                "Being miserable makes us blame people",
                         },
                         {
-                                "Encourage their anger and alteration of reason or senses.",
-                                "Happiness and calm.",
-                                "Loss of person.",
-                                "All of the above.",
+                                "Encourage their anger and alteration of reason or senses",
+                                "Happiness and calm",
+                                "Loss of person",
+                                "All of the above",
 
                         },
                         {
@@ -7826,134 +7830,134 @@ public class Availability2023 extends AppCompatActivity {
                                 "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
                         },
                         {
-                                "Blaming people and not accepting their mistakes.",
-                                "The search for answers and why everything goes wrong.",
-                                "The first attitude blame the world. The second ask what they could do differently.",
-                                "Crying and not accepting mistakes."
+                                "Blaming people and not accepting their mistakes",
+                                "The search for answers and why everything goes wrong",
+                                "The first attitude blame the world. The second ask what they could do differently",
+                                "Crying and not accepting mistakes"
                         },
                         {
-                                "All the bad things he's done.",
-                                "Try to forgive the things your wife did.",
-                                "Not accepting help and feeling like you did nothing wrong.",
-                                "The memory of the terrible things his wife has done and why he can't live with her anymore."
+                                "All the bad things he's done",
+                                "Try to forgive the things your wife did",
+                                "Not accepting help and feeling like you did nothing wrong",
+                                "The memory of the terrible things his wife has done and why he can't live with her anymore"
                         },
                         {
-                                "Think of all the ways her husband let her down.",
-                                "In all the mistakes you've had.",
-                                "In the problems that her husband has.",
-                                "How will your life be."
+                                "Think of all the ways her husband let her down",
+                                "In all the mistakes you've had",
+                                "In the problems that her husband has",
+                                "How will your life be"
                         },
                         {
-                                "Because no one seeks to improve personally.",
+                                "Because no one seeks to improve personally",
 
-                                "Due to the fact that they want to change the other person instead of changing themselves.",
-                                "By the opinions of outsiders.",
-                                "For the problems caused by the two."
+                                "Due to the fact that they want to change the other person instead of changing themselves",
+                                "By the opinions of outsiders",
+                                "For the problems caused by the two"
                         },
                         {
-                                "Blame someone else for your misery.",
-                                "Accept the situation.",
-                                "Blame yourself.",
-                                "Ignore the situation."
+                                "Blame someone else for your misery",
+                                "Accept the situation",
+                                "Blame yourself",
+                                "Ignore the situation"
                         },
                         {
-                                "The odyssey.",
-                                "The Cocktail Party.",
-                                "Romeo and Juliet.",
-                                "Romance of the Three Kingdoms."
+                                "The odyssey",
+                                "The Cocktail Party",
+                                "Romeo and Juliet",
+                                "Romance of the Three Kingdoms"
                         },
                         {
-                                "Who feels that everything is family fault.",
-                                "Who needs help to improve.",
-                                "She hopes that her suffering is her fault. because you can do something about it.",
-                                "She hates everyone around her."
+                                "Who feels that everything is family fault",
+                                "Who needs help to improve",
+                                "She hopes that her suffering is her fault. because you can do something about it",
+                                "She hates everyone around her"
                         },
                         {
-                                "Never looking for ways to improve.",
-                                "They always look for a way to excuse themselves to others.",
-                                "But there are ways to improve.",
-                                "Most of us have the opportunity to improve our lives."
+                                "Never looking for ways to improve",
+                                "They always look for a way to excuse themselves to others",
+                                "But there are ways to improve",
+                                "Most of us have the opportunity to improve our lives"
                         },
                         {
-                                "Change people.",
-                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing.",
-                                "Improving the political party.",
-                                "Taking care of the environment."
+                                "Change people",
+                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing",
+                                "Improving the political party",
+                                "Taking care of the environment"
                         },
                         {
-                                "You have to know what you are doing.",
-                                "You don't always know what you're doing.",
-                                "You can know that something is right or wrong without knowing why.",
-                                "It's always good to ask."
+                                "You have to know what you are doing",
+                                "You don't always know what you're doing",
+                                "You can know that something is right or wrong without knowing why",
+                                "It's always good to ask"
                         },
                         {
-                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable.",
-                                "It would be better than before.",
-                                "I wouldn't change a thing, I'm fine like that.",
-                                "He would love me more."
+                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable",
+                                "It would be better than before",
+                                "I wouldn't change a thing, I'm fine like that",
+                                "He would love me more"
                         },
                         {
-                                "Nothing is achieved if you don't feel.",
-                                "The mind will become clearer, life will become less tragic and more confident.",
-                                "Problems accumulate and you explode.",
-                                "Sores to a peace of mind."
+                                "Nothing is achieved if you don't feel",
+                                "The mind will become clearer, life will become less tragic and more confident",
+                                "Problems accumulate and you explode",
+                                "Sores to a peace of mind"
                         },
                         {
-                                "Toronto.",
-                                "California.",
-                                "Texas.",
-                                "Los Angeles."
+                                "Toronto",
+                                "California",
+                                "Texas",
+                                "Los Angeles"
                         },
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "Blaming people makes you the problem."
+                                "Blaming people makes you the problem"
                         },
                         {
-                                "Encourage their anger and alteration of reason or the senses."
+                                "Encourage their anger and alteration of reason or the senses"
                         },
                         {
                                 "What are you doing that is wrong, from your own perspective? What could you fix, right now?"
                         },
                         {
-                                "The first attitude blame the world. The second ask what they could do differently."
+                                "The first attitude blame the world. The second ask what they could do differently"
                         },
                         {
-                                "The memory of the terrible things his wife has done and why he can't live with her anymore."
+                                "The memory of the terrible things his wife has done and why he can't live with her anymore"
                         },
                         {
-                                "Think of all the ways her husband let her down."
+                                "Think of all the ways her husband let her down"
                         },
                         {
-                                "Due to the fact that they want to change the other person instead of changing themselves."
+                                "Due to the fact that they want to change the other person instead of changing themselves"
                         },
                         {
-                                "Blame someone else for your misery."
+                                "Blame someone else for your misery"
                         },
                         {
-                                "The Cocktail Party."
+                                "The Cocktail Party"
                         },
                         {
-                                "She hopes that her suffering is her fault. because you can do something about it."
+                                "She hopes that her suffering is her fault. because you can do something about it"
                         },
                         {
-                                "Most of us have the opportunity to improve our lives."
+                                "Most of us have the opportunity to improve our lives"
                         },
                         {
-                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing."
+                                "Don't fix the world, there's no reason to. But you can fix yourself. You will not do by doing"
                         },
                         {
-                                "You can know that something is right or wrong without knowing why."
+                                "You can know that something is right or wrong without knowing why"
                         },
                         {
-                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable."
+                                "If you do those things, your life will improve. You will become more peaceful, productive and desirable"
                         },
                         {
-                                "The mind will become clearer, life will become less tragic and more confident."
+                                "The mind will become clearer, life will become less tragic and more confident"
                         },
                         {
-                                "Toronto."
+                                "Toronto"
                         },
                 };
 
@@ -7984,16 +7988,16 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "To describe the differences between men and women.",
-                                "To illustrate the difficulty of learning a new skill.",
-                                "To show the importance of having fun at the beach.",
-                                "To explain the physics of buoyancy."
+                                "To describe the differences between men and women",
+                                "To illustrate the difficulty of learning a new skill",
+                                "To show the importance of having fun at the beach",
+                                "To explain the physics of buoyancy"
                         },
                         {
-                                "They are basically the same.",
-                                "They are completely different.",
-                                "They are determined by socialization.",
-                                "They are interchangeable."
+                                "They are basically the same",
+                                "They are completely different",
+                                "They are determined by socialization",
+                                "They are interchangeable"
                         },
                         {
                                 "Great-grandmother",
@@ -8002,133 +8006,133 @@ public class Availability2023 extends AppCompatActivity {
                                 "Neither"
                         },
                         {
-                                "Believing men and women are different.",
-                                "Believing men and women are the same.",
-                                "Believing gender roles are natural.",
-                                "Believing gender roles are socially constructed."
+                                "Believing men and women are different",
+                                "Believing men and women are the same",
+                                "Believing gender roles are natural",
+                                "Believing gender roles are socially constructed"
                         },
                         {
-                                "A story about a girl who turned her toy trucks into weapons.",
-                                "A story about a girl who pretended her toy trucks were sleeping.",
-                                "A story about a boy who turned his toy trucks into weapons.",
-                                "A story about a boy who pretended his toy trucks were sleeping."
+                                "A story about a girl who turned her toy trucks into weapons",
+                                "A story about a girl who pretended her toy trucks were sleeping",
+                                "A story about a boy who turned his toy trucks into weapons",
+                                "A story about a boy who pretended his toy trucks were sleeping"
                         },
                         {
-                                "Yes, always.",
-                                "No, never.",
-                                "Sometimes, depending on the individual.",
-                                "It is impossible to know."
+                                "Yes, always",
+                                "No, never",
+                                "Sometimes, depending on the individual",
+                                "It is impossible to know"
                         },
                         {
-                                "As a sacred act between committed partners.",
-                                "As a casual form of entertainment.",
-                                "As a strictly regulated activity.",
-                                "As a dangerous and risky behavior."
+                                "As a sacred act between committed partners",
+                                "As a casual form of entertainment",
+                                "As a strictly regulated activity",
+                                "As a dangerous and risky behavior"
                         },
                         {
-                                "She feels empowered.",
-                                "She feels indifferent.",
-                                "She feels vulnerable.",
-                                "She feels excited."
+                                "She feels empowered",
+                                "She feels indifferent",
+                                "She feels vulnerable",
+                                "She feels excited"
                         },
                         {
-                                "It is less satisfying in all aspects.",
-                                "It is equally satisfying.",
-                                "It is more satisfying emotionally, psychologically, physically, and spiritually.",
-                                "It depends on the individual's personal beliefs."
+                                "It is less satisfying in all aspects",
+                                "It is equally satisfying",
+                                "It is more satisfying emotionally, psychologically, physically, and spiritually",
+                                "It depends on the individual's personal beliefs"
                         },
                         {
-                                "The media and entertainment industry.",
-                                "The religious institutions.",
-                                "The government and politicians.",
-                                "The academic and intellectual community."
+                                "The media and entertainment industry",
+                                "The religious institutions",
+                                "The government and politicians",
+                                "The academic and intellectual community"
                         },
                         {
-                                "A Hollywood actor.",
-                                "A gender studies PhD.",
-                                "An Associate Professor of Theology and Philosophy at Biola University.",
-                                "A New York pediatrician."
+                                "A Hollywood actor",
+                                "A gender studies PhD",
+                                "An Associate Professor of Theology and Philosophy at Biola University",
+                                "A New York pediatrician"
                         },
                         {
-                                "To embrace modern ideas about gender and sexuality.",
-                                "To trust common sense and recognize the differences between men and women.",
-                                "To argue that gender roles should be abolished.",
-                                "To promote a more casual attitude towards sex."
+                                "To embrace modern ideas about gender and sexuality",
+                                "To trust common sense and recognize the differences between men and women",
+                                "To argue that gender roles should be abolished",
+                                "To promote a more casual attitude towards sex"
                         },
                         {
-                                "Because it's physically painful.",
-                                "Because it has no meaning.",
-                                "Because sex and intimacy have deeper meaning for women.",
-                                "Because men and women are basically the same."
+                                "Because it's physically painful",
+                                "Because it has no meaning",
+                                "Because sex and intimacy have deeper meaning for women",
+                                "Because men and women are basically the same"
                         },
                         {
-                                "Because she asked for them.",
-                                "To avoid conforming to gender stereotypes.",
-                                "Because they were on sale.",
-                                "To encourage her interest in mechanics."
+                                "Because she asked for them",
+                                "To avoid conforming to gender stereotypes",
+                                "Because they were on sale",
+                                "To encourage her interest in mechanics"
                         },
                         {
-                                "A story about a boy turning a toy truck into a weapon.",
-                                "A story about a boy using a stick as a weapon.",
-                                "A story about a boy turning a stuffed animal into a weapon.",
-                                "A story about a boy using a pillow as a weapon."
+                                "A story about a boy turning a toy truck into a weapon",
+                                "A story about a boy using a stick as a weapon",
+                                "A story about a boy turning a stuffed animal into a weapon",
+                                "A story about a boy using a pillow as a weapon"
                         },
                         {
-                                "Because it is a big deal with deep emotional, psychological, and physical implications.",
-                                "Because society wanted to control women's sexuality.",
-                                "Because it was more convenient for inheritance purposes.",
-                                "Because of religious dogma."
+                                "Because it is a big deal with deep emotional, psychological, and physical implications",
+                                "Because society wanted to control women's sexuality",
+                                "Because it was more convenient for inheritance purposes",
+                                "Because of religious dogma"
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][]{
                         {
-                                "To describe the differences between men and women."
+                                "To describe the differences between men and women"
                         },
                         {
-                                "They are completely different."
+                                "They are completely different"
                         },
                         {
                                 "Great-grandmother"
                         },
                         {
-                                "Believing men and women are the same."
+                                "Believing men and women are the same"
                         },
                         {
-                                "A story about a girl who pretended her toy trucks were sleeping."
+                                "A story about a girl who pretended her toy trucks were sleeping"
                         },
                         {
-                                "No, never."
+                                "No, never"
                         },
                         {
-                                "As a casual form of entertainment."
+                                "As a casual form of entertainment"
                         },
                         {
-                                "She feels vulnerable."
+                                "She feels vulnerable"
                         },
                         {
-                                "It is more satisfying emotionally, psychologically, physically, and spiritually."
+                                "It is more satisfying emotionally, psychologically, physically, and spiritually"
                         },
                         {
-                                "The academic and intellectual community."
+                                "The academic and intellectual community"
                         },
                         {
-                                "An Associate Professor of Theology and Philosophy at Biola University."
+                                "An Associate Professor of Theology and Philosophy at Biola University"
                         },
                         {
-                                "To trust common sense and recognize the differences between men and women."
+                                "To trust common sense and recognize the differences between men and women"
                         },
                         {
-                                "Because sex and intimacy have deeper meaning for women."
+                                "Because sex and intimacy have deeper meaning for women"
                         },
                         {
-                                "To avoid conforming to gender stereotypes."
+                                "To avoid conforming to gender stereotypes"
                         },
                         {
-                                "A story about a boy turning a toy truck into a weapon."
+                                "A story about a boy turning a toy truck into a weapon"
                         },
                         {
-                                "Because it is a big deal with deep emotional, psychological, and physical implications."
+                                "Because it is a big deal with deep emotional, psychological, and physical implications"
                         }
                 };
 
@@ -8137,7 +8141,7 @@ public class Availability2023 extends AppCompatActivity {
                 RespuestasCorrectas = RespuestasCorrectasSele;
                 break;
 
-            case "Dont Waste Your Time":
+            case "Don't Waste Your Time":
                 pregSele = new String[]{
                         "According to the text, what is the purpose of dating for women?",
                         "What is the problem with assuming that relationships progress like levels in a video game?",
@@ -8159,151 +8163,151 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "To have fun and enjoy casual flings.",
-                                "To find someone to marry.",
-                                "To meet new people.",
+                                "To have fun and enjoy casual flings",
+                                "To find someone to marry",
+                                "To meet new people",
                                 "To explore common interests",
                         },
                         {
-                                "It leads to unrealistic expectations.",
-                                "It is too predictable.",
-                                "It does not take into account the importance of shared values.",
-                                "It can lead to miscommunication about the ideal outcome of the relationship.",
+                                "It leads to unrealistic expectations",
+                                "It is too predictable",
+                                "It does not take into account the importance of shared values",
+                                "It can lead to miscommunication about the ideal outcome of the relationship",
                         },
                         {
-                                "Real love and a tryout for marriage.",
-                                "Desire for a roommate or lack of other opportunities.",
-                                "Inability to afford a single apartment.",
-                                "All of the above.",
+                                "Real love and a tryout for marriage",
+                                "Desire for a roommate or lack of other opportunities",
+                                "Inability to afford a single apartment",
+                                "All of the above",
                         },
                         {
-                                "Someone who wants to build a shared life.",
-                                "Someone who shares their values and beliefs.",
-                                "Someone who views them as a partner.",
-                                "All of the above.",
+                                "Someone who wants to build a shared life",
+                                "Someone who shares their values and beliefs",
+                                "Someone who views them as a partner",
+                                "All of the above",
                         },
                         {
-                                "It can lead to misunderstandings about the long-term future of the relationship.",
-                                "It is not a valid basis for a serious relationship.",
-                                "It can lead to boredom and a lack of excitement in the relationship.",
-                                "All of the above.",
+                                "It can lead to misunderstandings about the long-term future of the relationship",
+                                "It is not a valid basis for a serious relationship",
+                                "It can lead to boredom and a lack of excitement in the relationship",
+                                "All of the above",
                         },
                         {
-                                "Wait and see if things improve.",
-                                "End it.",
-                                "Try harder to make it work.",
-                                "Take a break from each other.",
+                                "Wait and see if things improve",
+                                "End it",
+                                "Try harder to make it work",
+                                "Take a break from each other",
                         },
                         {
-                                "They do not articulate what they really want.",
-                                "They are too picky.",
-                                "They are afraid of commitment.",
-                                "They do not know what they want.",
+                                "They do not articulate what they really want",
+                                "They are too picky",
+                                "They are afraid of commitment",
+                                "They do not know what they want",
                         },
                         {
-                                "Protection, commitment, and love.",
-                                "Financial security, companionship, and emotional stability.",
-                                "Adventure, excitement, and passion.",
-                                "None of the above.",
+                                "Protection, commitment, and love",
+                                "Financial security, companionship, and emotional stability",
+                                "Adventure, excitement, and passion",
+                                "None of the above",
                         },
                         {
-                                "There is no difference.",
-                                "Marriage involves more commitment, obligations, and expectations.",
-                                "Living together is more romantic.",
-                                "Marriage is more about having fun.",
+                                "There is no difference",
+                                "Marriage involves more commitment, obligations, and expectations",
+                                "Living together is more romantic",
+                                "Marriage is more about having fun",
                         },
                         {
-                                "Agree with them.",
-                                "Ask them why they are so reluctant to sign it.",
-                                "Tell them they are wrong.",
-                                "None of the above.",
+                                "Agree with them",
+                                "Ask them why they are so reluctant to sign it",
+                                "Tell them they are wrong",
+                                "None of the above",
                         },
                         {
-                                "As much as you think about what kind of career you want.",
-                                "More than what kind of career you want.",
-                                "More than what kind of career you want.",
-                                "Not at all.",
+                                "As much as you think about what kind of career you want",
+                                "More than what kind of career you want",
+                                "More than what kind of career you want",
+                                "Not at all",
                         },
                         {
-                                "Living together is more fun.",
-                                "Living together is a tryout for marriage.",
-                                "Dating is a tryout for marriage.",
-                                "There is no difference.",
+                                "Living together is more fun",
+                                "Living together is a tryout for marriage",
+                                "Dating is a tryout for marriage",
+                                "There is no difference",
                         },
                         {
-                                "Discuss their values and beliefs.",
-                                "Talk about marriage.",
-                                "Wait until the pizza is served to discuss marriage.",
-                                "Have fun.",
+                                "Discuss their values and beliefs",
+                                "Talk about marriage",
+                                "Wait until the pizza is served to discuss marriage",
+                                "Have fun",
                         },
                         {
-                                "To think about them as much as you think about your career.",
-                                "To prioritize relationships over your career.",
-                                "To only focus on your career.",
-                                "To think about relationships less than your career.",
+                                "To think about them as much as you think about your career",
+                                "To prioritize relationships over your career",
+                                "To only focus on your career",
+                                "To think about relationships less than your career",
                         },
                         {
-                                "Hate.",
-                                "Money.",
-                                "Love.",
-                                "Nothing.",
+                                "Hate",
+                                "Money",
+                                "Love",
+                                "Nothing",
                         },
                         {
-                                "Adolfo Peñaloza.",
-                                "Alejandro Berry.",
-                                "Lauren Chen.",
-                                "Adriana Monsalve.",
+                                "Adolfo Peñaloza",
+                                "Alejandro Berry",
+                                "Lauren Chen",
+                                "Adriana Monsalve",
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "To find someone to marry."
+                                "To find someone to marry"
                         },
                         {
-                                "It can lead to miscommunication about the ideal outcome of the relationship."
+                                "It can lead to miscommunication about the ideal outcome of the relationship"
                         },
                         {
-                                "All of the above."
+                                "All of the above"
                         },
                         {
-                                "All of the above."
+                                "All of the above"
                         },
                         {
-                                "It can lead to misunderstandings about the long-term future of the relationship."
+                                "It can lead to misunderstandings about the long-term future of the relationship"
                         },
                         {
-                                "End it."
+                                "End it"
                         },
                         {
-                                "They do not articulate what they really want."
+                                "They do not articulate what they really want"
                         },
                         {
-                                "Protection, commitment, and love."
+                                "Protection, commitment, and love"
                         },
                         {
-                                "Marriage involves more commitment, obligations, and expectations."
+                                "Marriage involves more commitment, obligations, and expectations"
                         },
                         {
-                                "Ask them why they are so reluctant to sign it."
+                                "Ask them why they are so reluctant to sign it"
                         },
                         {
-                                "As much as you."
+                                "As much as you"
                         },
                         {
-                                "Living together is a tryout for marriage."
+                                "Living together is a tryout for marriage"
                         },
                         {
-                                "Have fun."
+                                "Have fun"
                         },
                         {
-                                "To think about them as much as you think about your career."
+                                "To think about them as much as you think about your career"
                         },
                         {
-                                "Love."
+                                "Love"
                         },
                         {
-                                "Lauren Chen."
+                                "Lauren Chen"
                         }
                 };
 
@@ -8334,154 +8338,154 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][]{
                         {
-                                "Systemic racism is a thing of the past in America.",
-                                "There is no racism against people of color in America.",
-                                "The woke left is responsible for systemic racism in America.",
-                                "Racism in America is solely perpetuated by the right."
+                                "Systemic racism is a thing of the past in America",
+                                "There is no racism against people of color in America",
+                                "The woke left is responsible for systemic racism in America",
+                                "Racism in America is solely perpetuated by the right"
                         },
                         {
-                                "Without truth, there can be no justice or equality.",
-                                "Without truth, there can be no progress or improvement.",
-                                "Without truth, there can be no understanding or unity.",
-                                "Without truth, there can be no peace or harmony."
+                                "Without truth, there can be no justice or equality",
+                                "Without truth, there can be no progress or improvement",
+                                "Without truth, there can be no understanding or unity",
+                                "Without truth, there can be no peace or harmony"
                         },
                         {
-                                "State governments put regulations in place that make it harder for minorities to start businesses.",
-                                "Black students are told that math is a white construct in Oregon.",
+                                "State governments put regulations in place that make it harder for minorities to start businesses",
+                                "Black students are told that math is a white construct in Oregon",
                                 "City councils demonize their own police departments, then vote to cut police budgets",
-                                "All of the above."
+                                "All of the above"
 
                         },
                         {
-                                "The policies and attitudes of the right.",
-                                "Small-minded individuals.",
-                                "The ideology of the left.",
-                                "The demand for racism exceeds the supply."
+                                "The policies and attitudes of the right",
+                                "Small-minded individuals",
+                                "The ideology of the left",
+                                "The demand for racism exceeds the supply"
 
                         },
                         {
-                                "An epidemic of racism against people of color in America.",
-                                "An epidemic of fake claims of racism against people of color.",
-                                "An epidemic of racism hoaxes perpetuated by the right.",
-                                "An epidemic of microaggressions against people of color."
+                                "An epidemic of racism against people of color in America",
+                                "An epidemic of fake claims of racism against people of color",
+                                "An epidemic of racism hoaxes perpetuated by the right",
+                                "An epidemic of microaggressions against people of color"
 
                         },
                         {
-                                "The incident had nothing to do with Floyd being black.",
-                                "The incident was entirely racially motivated.",
-                                "The incident was a hoax.",
-                                "The incident was the result of systemic racism."
+                                "The incident had nothing to do with Floyd being black",
+                                "The incident was entirely racially motivated",
+                                "The incident was a hoax",
+                                "The incident was the result of systemic racism"
                         },
                         {
-                                "They are the same as for other students.",
-                                "They are higher than for other students.",
-                                "They are lower than for other students.",
-                                "They are irrelevant to the issue of systemic racism."
+                                "They are the same as for other students",
+                                "They are higher than for other students",
+                                "They are lower than for other students",
+                                "They are irrelevant to the issue of systemic racism"
                         },
                         {
-                                "Government programs.",
-                                "Judging each person on their merits, not their skin color.",
-                                "Affirmative action.",
-                                "Separating people by race."
+                                "Government programs",
+                                "Judging each person on their merits, not their skin color",
+                                "Affirmative action",
+                                "Separating people by race"
                         },
                         {
-                                "To create a more just society.",
-                                "To hold people of color back.",
-                                "To promote equality and unity.",
-                                "To eliminate racism altogether."
+                                "To create a more just society",
+                                "To hold people of color back",
+                                "To promote equality and unity",
+                                "To eliminate racism altogether"
                         },
                         {
-                                "It is a beacon of tolerance and progress.",
-                                "It is responsible for systemic racism in America.",
-                                "It is irrelevant to the issue of racism.",
-                                "It is the only solution to racism."
+                                "It is a beacon of tolerance and progress",
+                                "It is responsible for systemic racism in America",
+                                "It is irrelevant to the issue of racism",
+                                "It is the only solution to racism"
                         },
                         {
-                                "The speaker agrees with the ideology of the left.",
-                                "The speaker thinks the ideology of the left is well-intentioned but misguided.",
-                                "The speaker believes the ideology of the left is responsible for systemic racism.",
-                                "The speaker has never heard of the ideology of the left.",
+                                "The speaker agrees with the ideology of the left",
+                                "The speaker thinks the ideology of the left is well-intentioned but misguided",
+                                "The speaker believes the ideology of the left is responsible for systemic racism",
+                                "The speaker has never heard of the ideology of the left",
                         },
                         {
-                                "The prevalence of small-minded people.",
-                                "b) The creation of false race hoaxes by the left.",
-                                "c) The success of anti-racism movements.",
-                                "d) The lack of systemic racism in America."
+                                "The prevalence of small-minded people",
+                                "b) The creation of false race hoaxes by the left",
+                                "c) The success of anti-racism movements",
+                                "d) The lack of systemic racism in America"
                         },
                         {
-                                "They are real and should be addressed.",
-                                "They are a figment of people's imaginations.",
-                                "They are intentional acts of racism.",
-                                "They are exaggerated by the right to discredit the left."
+                                "They are real and should be addressed",
+                                "They are a figment of people's imaginations",
+                                "They are intentional acts of racism",
+                                "They are exaggerated by the right to discredit the left"
                         },
                         {
-                                "Judging each person on their merits, not their skin color.",
-                                "Implementing a hundred government programs.",
-                                "Encouraging people to embrace unconscious racism and microaggressions.",
-                                "Expecting less from people based on their race.",
+                                "Judging each person on their merits, not their skin color",
+                                "Implementing a hundred government programs",
+                                "Encouraging people to embrace unconscious racism and microaggressions",
+                                "Expecting less from people based on their race",
                         },
                         {
-                                "The right.",
-                                "The left.",
-                                "Both the right and the left.",
-                                "The speaker does not believe in systemic racism."
+                                "The right",
+                                "The left",
+                                "Both the right and the left",
+                                "The speaker does not believe in systemic racism"
                         },
                         {
-                                "By avoiding any questioning of their beliefs.",
-                                "By dismissing the possibility of systemic racism.",
-                                "By questioning whether certain beliefs are helping or hurting Black people.",
+                                "By avoiding any questioning of their beliefs",
+                                "By dismissing the possibility of systemic racism",
+                                "By questioning whether certain beliefs are helping or hurting Black people",
                                 "By doubling down on their beliefs and pushing for more extreme policies",
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "The woke left is responsible for systemic racism in America."
+                                "The woke left is responsible for systemic racism in America"
                         },
                         {
-                                "Without truth, there can be no peace or harmony."
+                                "Without truth, there can be no peace or harmony"
                         },
                         {
-                                "All of the above."
+                                "All of the above"
                         },
                         {
-                                "The ideology of the left."
+                                "The ideology of the left"
                         },
                         {
-                                "An epidemic of fake claims of racism against people of color."
+                                "An epidemic of fake claims of racism against people of color"
                         },
                         {
-                                "The incident had nothing to do with Floyd being black."
+                                "The incident had nothing to do with Floyd being black"
                         },
                         {
-                                "They are lower than for other students."
+                                "They are lower than for other students"
                         },
                         {
-                                "Judging each person on their merits, not their skin color."
+                                "Judging each person on their merits, not their skin color"
                         },
                         {
-                                "To hold people of color back."
+                                "To hold people of color back"
                         },
                         {
-                                "It is responsible for systemic racism in America."
+                                "It is responsible for systemic racism in America"
                         },
                         {
-                                "The speaker believes the ideology of the left is responsible for systemic racism."
+                                "The speaker believes the ideology of the left is responsible for systemic racism"
                         },
                         {
-                                "The creation of false race hoaxes by the left."
+                                "The creation of false race hoaxes by the left"
                         },
                         {
-                                "They are real and should be addressed."
+                                "They are real and should be addressed"
                         },
                         {
-                                "Judging each person on their merits, not their skin color."
+                                "Judging each person on their merits, not their skin color"
                         },
                         {
-                                "The left."
+                                "The left"
                         },
                         {
-                                "By questioning whether certain beliefs are helping or hurting Black people."
+                                "By questioning whether certain beliefs are helping or hurting Black people"
                         },
                 };
 
@@ -8611,52 +8615,52 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "The speech does not mention a specific cause."
+                                "The speech does not mention a specific cause"
                         },
                         {
-                                "30 percent."
+                                "30 percent"
                         },
                         {
-                                "The Power Few."
+                                "The Power Few"
                         },
                         {
-                                "It helps law enforcement gather information about other crimes."
+                                "It helps law enforcement gather information about other crimes"
                         },
                         {
-                                "A concept where police and prosecutors collaborate from the beginning of an investigation."
+                                "A concept where police and prosecutors collaborate from the beginning of an investigation"
                         },
                         {
-                                "The longer the prison sentence, the less likely the criminal will commit another crime."
+                                "The longer the prison sentence, the less likely the criminal will commit another crime"
                         },
                         {
-                                "A graph that shows the relationship between age and crime rates."
+                                "A graph that shows the relationship between age and crime rates"
                         },
                         {
-                                "Target high-frequency offenders and keep them in jail."
+                                "Target high-frequency offenders and keep them in jail"
                         },
                         {
-                                "It minimizes legal errors and ensures justice is done."
+                                "It minimizes legal errors and ensures justice is done"
                         },
                         {
-                                "To reduce crime rates in cities."
+                                "To reduce crime rates in cities"
                         },
                         {
-                                "The Power Few."
+                                "The Power Few"
                         },
                         {
-                                "It substantially reduces violent crime rates throughout an entire city."
+                                "It substantially reduces violent crime rates throughout an entire city"
                         },
                         {
-                                "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities."
+                                "Targeting high-frequency offenders and keeping them in jail can substantially reduce crime rates in cities"
                         },
                         {
-                                "A federal agency that analyzes the impact of prison sentences on reducing crime rates."
+                                "A federal agency that analyzes the impact of prison sentences on reducing crime rates"
                         },
                         {
-                                "Because they believe that punishment is an effective deterrent to crime."
+                                "Because they believe that punishment is an effective deterrent to crime"
                         },
                         {
-                                "It reduces the number of potential victims on the street."
+                                "It reduces the number of potential victims on the street"
                         }
                 };
 
@@ -8687,151 +8691,151 @@ public class Availability2023 extends AppCompatActivity {
 
                 RespSele = new String[][] {
                         {
-                                "It was caused by three decades of bank de-regulation.",
-                                "It was caused by too much government involvement in the financial industry.",
-                                "It was caused by the banks becoming too large and powerful.",
-                                "It was caused by a lack of oversight and regulation of the financial industry."
+                                "It was caused by three decades of bank de-regulation",
+                                "It was caused by too much government involvement in the financial industry",
+                                "It was caused by the banks becoming too large and powerful",
+                                "It was caused by a lack of oversight and regulation of the financial industry"
                         },
                         {
-                                "Banks stopped lending money to other banks.",
-                                "The stock market crashed, causing a chain reaction throughout the financial industry.",
-                                "General Electric was unable to pay its workers.",
-                                "The government refused to bail out Lehman Brothers."
+                                "Banks stopped lending money to other banks",
+                                "The stock market crashed, causing a chain reaction throughout the financial industry",
+                                "General Electric was unable to pay its workers",
+                                "The government refused to bail out Lehman Brothers"
                         },
                         {
-                                "To bail out Lehman Brothers.",
-                                "To pump taxpayer cash into America's banks and financial institutions.",
-                                "To provide short-term credit to struggling companies.",
-                                "To regulate the financial industry more closely."
+                                "To bail out Lehman Brothers",
+                                "To pump taxpayer cash into America's banks and financial institutions",
+                                "To provide short-term credit to struggling companies",
+                                "To regulate the financial industry more closely"
                         },
                         {
-                                "The bank had too much debt to be saved.",
-                                "The bank was too large and powerful to be allowed to fail.",
-                                "The bank was too risky to be bailed out.",
-                                "The bank was too small to have a significant impact on the financial industry."
+                                "The bank had too much debt to be saved",
+                                "The bank was too large and powerful to be allowed to fail",
+                                "The bank was too risky to be bailed out",
+                                "The bank was too small to have a significant impact on the financial industry"
                         },
                         {
-                                "It led to a short-term panic in the financial markets.",
-                                "It created a long-term expectation that the government would always bail out big banks.",
-                                "It resulted in a decline in the number of investors willing to lend money to American banks.",
-                                "It had no direct impact on the 2008 financial crisis."
+                                "It led to a short-term panic in the financial markets",
+                                "It created a long-term expectation that the government would always bail out big banks",
+                                "It resulted in a decline in the number of investors willing to lend money to American banks",
+                                "It had no direct impact on the 2008 financial crisis"
                         },
                         {
-                                "It allowed the hedge fund to fail, sending shockwaves through the financial industry.",
-                                "It bailed out the hedge fund and several big banks that were at risk of failing.",
-                                "It implemented new regulations to prevent future hedge fund failures.",
-                                "It did not take any action."
+                                "It allowed the hedge fund to fail, sending shockwaves through the financial industry",
+                                "It bailed out the hedge fund and several big banks that were at risk of failing",
+                                "It implemented new regulations to prevent future hedge fund failures",
+                                "It did not take any action"
                         },
                         {
-                                "It led to an increase in regulation and oversight of the financial industry.",
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
-                                "It resulted in a decrease in investor confidence in the financial industry.",
-                                "It had no direct impact on the 2008 financial crisis."
+                                "It led to an increase in regulation and oversight of the financial industry",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out",
+                                "It resulted in a decrease in investor confidence in the financial industry",
+                                "It had no direct impact on the 2008 financial crisis"
                         },
                         {
-                                "The government did not have the funds to do so.",
-                                "The government believed that Lehman Brothers was too risky to be saved.",
-                                "The government wanted to send a message to the financial industry that it could not always rely ongovernment bailouts.",
-                                "The government believed that saving Lehman Brothers would have set a dangerous precedent."
+                                "The government did not have the funds to do so",
+                                "The government believed that Lehman Brothers was too risky to be saved",
+                                "The government wanted to send a message to the financial industry that it could not always rely ongovernment bailouts",
+                                "The government believed that saving Lehman Brothers would have set a dangerous precedent"
                         },
                         {
-                                "It caused a short-term panic in the financial markets.",
-                                "It led to a credit-market freeze.",
-                                "It resulted in the failure of several other large financial institutions.",
-                                "It had no direct impact on the financial industry."
+                                "It caused a short-term panic in the financial markets",
+                                "It led to a credit-market freeze",
+                                "It resulted in the failure of several other large financial institutions",
+                                "It had no direct impact on the financial industry"
                         },
                         {
-                                "Passing thousands of new regulations.",
-                                "Allowing the big banks to fail.",
-                                "Increasing government control over the financial industry.",
-                                "The government must stop guaranteeing the big banks' losses."
+                                "Passing thousands of new regulations",
+                                "Allowing the big banks to fail",
+                                "Increasing government control over the financial industry",
+                                "The government must stop guaranteeing the big banks' losses"
                         },
                         {
-                                "The government believed that Continental Illinois was too risky to be saved.",
-                                "The government wanted to send a message to the financial industry that it would always bail out big banks.",
-                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets.",
-                                "The media coined the phrase to describe the government's response to the crisis."
+                                "The government believed that Continental Illinois was too risky to be saved",
+                                "The government wanted to send a message to the financial industry that it would always bail out big banks",
+                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets",
+                                "The media coined the phrase to describe the government's response to the crisis"
                         },
                         {
-                                "It led to an increase in regulation and oversight of the financial industry.",
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
-                                "It resulted in a decrease in investor confidence in the financial industry.",
-                                "It had no direct impact on the financial industry."
+                                "It led to an increase in regulation and oversight of the financial industry",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out",
+                                "It resulted in a decrease in investor confidence in the financial industry",
+                                "It had no direct impact on the financial industry"
                         },
                         {
-                                "Banks should be more cautious and avoid taking big risks.",
-                                "Banks should expect government bailouts in times of crisis.",
-                                "The government is unable to save all financial institutions that are in trouble.",
-                                "The financial industry should be more self-reliant and less dependent on government support."
+                                "Banks should be more cautious and avoid taking big risks",
+                                "Banks should expect government bailouts in times of crisis",
+                                "The government is unable to save all financial institutions that are in trouble",
+                                "The financial industry should be more self-reliant and less dependent on government support"
                         },
                         {
-                                "It led to an increase in regulation and oversight of the financial industry.",
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out.",
-                                "It resulted in a decrease in investor confidence in the financial industry.",
-                                "It had no direct impact on the financial industry."
+                                "It led to an increase in regulation and oversight of the financial industry",
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out",
+                                "It resulted in a decrease in investor confidence in the financial industry",
+                                "It had no direct impact on the financial industry"
                         },
                         {
-                                "Because he believed in government intervention in the financial industry.",
-                                "Because he wanted to send a message to the financial industry that the government would always bail out big banks.",
-                                "Because he believed that the global financial system was in danger of collapsing.",
+                                "Because he believed in government intervention in the financial industry",
+                                "Because he wanted to send a message to the financial industry that the government would always bail out big banks",
+                                "Because he believed that the global financial system was in danger of collapsing",
                                 "Because he wanted to gain political support from the financial industry"
                         },
                         {
-                                "Increase government regulation of the financial industry.",
-                                "Allow the big banks to fail.",
-                                "Decrease government involvement in the financial industry.",
-                                "Increase government support for the financial industry."
+                                "Increase government regulation of the financial industry",
+                                "Allow the big banks to fail",
+                                "Decrease government involvement in the financial industry",
+                                "Increase government support for the financial industry"
                         }
                 };
 
                 RespuestasCorrectasSele = new String[][] {
                         {
-                                "It was caused by three decades of bank de-regulation."
+                                "It was caused by three decades of bank de-regulation"
                         },
                         {
-                                "Banks stopped lending money to other banks."
+                                "Banks stopped lending money to other banks"
                         },
                         {
-                                "To pump taxpayer cash into America's banks and financial institutions."
+                                "To pump taxpayer cash into America's banks and financial institutions"
                         },
                         {
-                                "The bank was too large and powerful to be allowed to fail."
+                                "The bank was too large and powerful to be allowed to fail"
                         },
                         {
-                                "It created a long-term expectation that the government would always bail out big banks."
+                                "It created a long-term expectation that the government would always bail out big banks"
                         },
                         {
-                                "It bailed out the hedge fund and several big banks that were at risk of failing."
+                                "It bailed out the hedge fund and several big banks that were at risk of failing"
                         },
                         {
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out"
                         },
                         {
-                                "The government wanted to send a message to the financial industry that it could not always rely on government bailouts."
+                                "The government wanted to send a message to the financial industry that it could not always rely on government bailouts"
                         },
                         {
-                                "It led to a credit-market freeze."
+                                "It led to a credit-market freeze"
                         },
                         {
-                                "The government must stop guaranteeing the big banks' losses."
+                                "The government must stop guaranteeing the big banks' losses"
                         },
                         {
-                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets."
+                                "The government feared that if Continental Illinois failed, it would cause a panic in the financial markets"
                         },
                         {
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out"
                         },
                         {
-                                "Banks should expect government bailouts in times of crisis."
+                                "Banks should expect government bailouts in times of crisis"
                         },
                         {
-                                "It sent a message to banks that they could take bigger risks because the government would bail them out."
+                                "It sent a message to banks that they could take bigger risks because the government would bail them out"
                         },
                         {
-                                "Because he believed that the global financial system was in danger of collapsing."
+                                "Because he believed that the global financial system was in danger of collapsing"
                         },
                         {
-                                "Decrease government involvement in the financial industry."
+                                "Decrease government involvement in the financial industry"
                         }
                 };
 
@@ -8844,34 +8848,47 @@ public class Availability2023 extends AppCompatActivity {
 
     //ACTIVA EL TEST DE AVAILABILITY
     public void availabilityTest(View v){
+
         activarBtns();
         if (pregIndex == 16) {
             verResultado();
             pregIndex = 0;
         } else {
-            switch (selection){
-                case "Tutorial":
-                    Toast.makeText(this, "Selecciona un pragger", Toast.LENGTH_SHORT).show();
-                    break;
-                default:
-                    tv.setVisibility(View.GONE);
-                    test_view.setVisibility(View.VISIBLE);
-                    startTest();
-                    limpBtns();
-                    break;
+            if ("Tutorial".equals(selection)) {
+                Toast.makeText(this, "Selecciona un prager", Toast.LENGTH_SHORT).show();
+            } else {
+                isInActividadDeComprension = true;
+
+                tv.setVisibility(View.GONE);
+                test_view.setVisibility(View.VISIBLE);
+                startTest();
+                limpBtns();
             }
         }
     }
 
     //AMBAS FUNCIONES LIMPIAN EL RESULTADO
     public void btnFinalizarTest(View v){
+      /*  tv.setVisibility(View.VISIBLE);
+        test_view.setVisibility(View.GONE);
+        result_view.setVisibility(View.GONE);
+        LimpiarResultado();*/
+
+        double parameter = pregResult;
+     if(parameter > 10){
+
+            SubtractSelectionAndSendinfoToDb();
+        }
         tv.setVisibility(View.VISIBLE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.GONE);
+        pregIndex = 0;
         LimpiarResultado();
+        isInActividadDeComprension=false;
     }
 
     public void btnFinalizarTest(){
+        isInActividadDeComprension=false;
         tv.setVisibility(View.VISIBLE);
         test_view.setVisibility(View.GONE);
         result_view.setVisibility(View.GONE);
@@ -8880,21 +8897,7 @@ public class Availability2023 extends AppCompatActivity {
     }
 
     //AMBAS EL LAYOUT DEL RESULTADO
-
-    public void verResultado(View v){
-        tv.setVisibility(View.GONE);
-        test_view.setVisibility(View.GONE);
-        result_view.setVisibility(View.VISIBLE);
-        int pregL = preguntas.length + 1;
-        double result = calcularPorcentaje(100,pregCorrect,16);
-
-        DecimalFormat df = new DecimalFormat("#.##");
-        double pregResult = Double.parseDouble(df.format(result));
-
-        String numeroEnString = Double.toString(pregResult);
-        scoreText.setText(numeroEnString);
-    }
-
+    double pregResult;
     public void verResultado(){
         tv.setVisibility(View.GONE);
         test_view.setVisibility(View.GONE);
@@ -8903,15 +8906,56 @@ public class Availability2023 extends AppCompatActivity {
         double result = calcularPorcentaje(100,pregCorrect,16);
 
         DecimalFormat df = new DecimalFormat("#.##");
-        double pregResult = Double.parseDouble(df.format(result));
-
+         pregResult = Double.parseDouble(df.format(result));
         String numeroEnString = Double.toString(pregResult);
         scoreText.setText(numeroEnString);
+        isInActividadDeComprension=false;
+        Toast.makeText(this, "corre en ver resultado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, String.valueOf(counterDb), Toast.LENGTH_SHORT).show();
+        if(counterDb<=9 ){
+            sendInfoOfRegularUseToDb();
+            counterDb++;
+            Toast.makeText(this, "corre en el if", Toast.LENGTH_SHORT).show();
+
+        }
+        
+
     }
+
+    private void sendInfoOfRegularUseToDb() {
+        scoresAvailDocRef=db.collection(userid).document("Scores Availability");
+        scoresAvailDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(!documentSnapshot.exists()){
+
+                }else {
+                    mso= documentSnapshot.toObject(ModeloAvailability.class);
+                    assert mso!=null;
+                    updateinfo();
+                }
+
+            }
+
+            private void updateinfo() {
+                double division,result;
+                Map<String, Object> userdb = new HashMap<>();
+                division = mso.availabilityCounter / 9.0;
+                result = division * 100;
+                mso.availabilityCounter++; // sube el counter 1
+
+                userdb.put("AvanceAvail",result);
+                userdb.put("availabilityCounter",mso.availabilityCounter);
+
+                uid.document("Scores Availability").update(userdb);
+            }
+        });
+    }
+
 
     public void LimpiarResultado(){
         pregCorrect = 0;
-    };
+    }
 
 
     //FUNCION DE EMPEZAR EL TEST
@@ -8945,7 +8989,6 @@ public class Availability2023 extends AppCompatActivity {
     public void btn1(View v){
 
         String Resp1 = preg1.getText().toString();
-
         if(Resp1.equals(RespCorrecta)){
             preg1.setBackgroundColor(getResources().getColor(R.color.success));
             pregCorrect ++;

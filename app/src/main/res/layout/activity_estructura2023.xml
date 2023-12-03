@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Estructura2023"
+    tools:context=".Estructura2023"
     android:background="@color/white"
     >
 
@@ -22,26 +22,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="1dp"
             android:orientation="vertical">
             <!--Header-->
             <LinearLayout
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:elevation="5dp"
                 android:background="@color/graybg"
-                >
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView"
-                    android:name="com.leal.cipm_testing.components.header"
+                    android:name="com.leal.cipm_testing.header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:layout="@layout/fragment_header"
-                    />
+                    tools:layout="@layout/fragment_header" />
             </LinearLayout>
 
             <!--Spinner-->
@@ -94,39 +92,31 @@
             <!--Video View-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="198dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
 
-                <!--<LinearLayout
+                <LinearLayout
                     android:id="@+id/vf"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/ic_grupo_videobox"
                     android:onClick="showV"
-                    android:visibility="gone"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                 </LinearLayout>
 
-                <VideoView
-                    android:id="@+id/videoView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
-                    android:visibility="gone"
-                    />-->
-
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainerView4"
-                    android:name="com.leal.cipm_testing.components.VideoPlayer"
-                    android:layout_width="wrap_content"
+                android:id="@+id/fragmentContainerView5"
+                    android:name="com.leal.cipm_testing.VideoPlayer"
+                    android:layout_width="81dp"
                     android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_video_player"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_video_player" />
+
             </LinearLayout>
 
             <!--Texto Spinner2-->
@@ -137,28 +127,6 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
                 <!--Texto-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Elige dificultad"
-                        android:textColor="@color/azul"
-                        android:textSize="19dp"
-                        android:textStyle="normal" />
-
-                    <LinearLayout
-                        android:layout_width="85dp"
-                        android:layout_height="3dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/ic_rect_ngulo_selecline">
-
-                    </LinearLayout>
-                </LinearLayout>
 
                 <!--Spinner 2-->
                 <LinearLayout
@@ -166,13 +134,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="3"
+                    android:layout_weight="10"
                     android:gravity="center_vertical">
                     <!--texto-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_weight="10">
 
                         <TextView
                             android:id="@+id/textspin2"
@@ -181,7 +149,7 @@
                             android:text="0-100"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:textSize="16dp" />
                     </LinearLayout>
 
                     <!--Spinner 2-->
@@ -194,7 +162,7 @@
                         <Spinner
                             android:id="@+id/spinrango"
                             android:layout_width="18dp"
-                            android:layout_height="18dp"
+                            android:layout_height="20dp"
                             android:background="@drawable/ic_grupo_select"
                             android:spinnerMode="dialog"
                             android:theme="@style/MySpinnerStyle"
@@ -210,83 +178,48 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingHorizontal="30dp"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Selecciona una dificultad"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    />
-            </LinearLayout>
+                />
 
             <!--Btns Dificultades-->
-            <HorizontalScrollView
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="19dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="30dp">
+                <TextView
+                    android:id="@+id/textextra2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Palabra clave: "
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="35dp"
+                     android:layout_marginStart="35dp"
+                />
 
-                    <Button
-                        android:id="@+id/dif1"
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/borde_azul"
-                        android:text="Basico"
-                        android:layout_marginRight="15dp"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        android:onClick="dificulty1Activation"
-                        />
+                <TextView
+                    android:id="@+id/textextra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Palabra Clave"
+                    android:layout_marginTop="35dp"
+                     android:textColor="@color/black"
+                    android:textSize="15dp"
 
-                    <Button
-                        android:id="@+id/dif2"
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/borde_azul"
-                        android:onClick="dificulty2Activation"
-                        android:text="Normal"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
+                />
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/dif3"
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/borde_azul"
-                        android:onClick="dificulty3Activation"
-                        android:text="Intermedio"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
 
-                    <Button
-                        android:id="@+id/dif4"
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/borde_azul"
-                        android:text="Avanzado"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        android:onClick="dificulty4Activation"
-                        />
-
-                </LinearLayout>
-            </HorizontalScrollView>
 
             <!--Spanish Sentences-->
             <LinearLayout
                 android:id="@+id/spanish_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:paddingHorizontal="30dp"
                 android:visibility="gone"
                 >
@@ -450,9 +383,37 @@
                         >
                     </LinearLayout>
                 </LinearLayout>
-
-
             </LinearLayout>
+
+            <LinearLayout
+                android:id= "@+id/averageresponsetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- First TextView -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tiempo de respuesta: "
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="39dp" />
+
+                <!-- Second TextView -->
+                <TextView
+                    android:id= "@+id/actualtimetext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="39dp" />
+            </LinearLayout>
+
+
 
             <!--btn check o intentar-->
             <LinearLayout
@@ -481,6 +442,66 @@
                         android:textSize="18dp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="30dp">
+
+                    <Button
+                        android:id="@+id/dif1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_flash_animation"
+                        android:onClick="dificulty1Activation"
+                        android:text="Basico"
+                        android:textColor="@color/azul"
+                        android:textSize="14dp"
+                        android:padding="2dp"
+                        />
+
+                    <Button
+                        android:id="@+id/dif2"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/borde_azul"
+                        android:onClick="dificulty2Activation"
+                        android:text="Normal"
+                        android:textColor="@color/azul"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:id="@+id/dif3"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/borde_azul"
+                        android:onClick="dificulty3Activation"
+                        android:text="Intermedio"
+                        android:textColor="@color/azul"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:id="@+id/dif4"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/borde_azul"
+                        android:text="Avanzado"
+                        android:textColor="@color/azul"
+                        android:textSize="14dp"
+                        android:onClick="dificulty4Activation"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
             <LinearLayout
                 android:id="@+id/btn_lay"
                 android:layout_width="match_parent"
@@ -526,7 +547,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

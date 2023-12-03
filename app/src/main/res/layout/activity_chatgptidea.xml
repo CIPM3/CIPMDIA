@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Word Display -->
+    <TextView
+        android:id="@+id/wordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="Word"
+        android:textSize="55sp" />
+
+    <!-- Input Field -->
+    <EditText
+        android:id="@+id/definitionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordTextView"
+        android:layout_marginTop="16dp"
+        android:hint="Enter definition or synonym"
+        android:inputType="text" />
+
+    <!-- Buttons (Next and Skip) -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/definitionEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:onClick="onNextButtonClick"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/definitionEditText"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/nextButton"
+        android:onClick="onSkipButtonClick"
+        android:text="Skip" />
+
+    <!-- Progress Indicator -->
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nextButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Progress: 1/50" />
+
+</RelativeLayout>

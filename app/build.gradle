@@ -15,14 +15,14 @@ task wrapper(type: Wrapper){
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.leal.cipm_testing"
         minSdk 21
-        targetSdk 32
-        versionCode 26
-        versionName "7.6"
+        targetSdk 33
+        versionCode 51
+        versionName "10.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,7 +70,7 @@ dependencies {
     implementation 'im.crisp:crisp-sdk:1.0.9'
     implementation 'androidx.multidex:multidex:2.0.1'
     dependencies {
-        def billing_version = "4.1.0"
+        def billing_version = "5.0.0"
 
         implementation "com.android.billingclient:billing:$billing_version"
     }
@@ -81,12 +81,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     def fragment_version = "1.5.2"
 
-    // Java language implementation
-    implementation "androidx.fragment:fragment:$fragment_version"
+
 
     implementation 'com.google.firebase:firebase-inappmessaging-display'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-
+    implementation'com.google.android.exoplayer:exoplayer:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
 }

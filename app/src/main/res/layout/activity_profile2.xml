@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Profile2023"
+    tools:context=".Profile2023"
     android:background="@color/white"
     >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,10 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             >
 
             <!--body-->
@@ -59,7 +63,9 @@
                             android:id="@+id/Imgdeluser"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:background="@drawable/ic_grupo_user">
+                            android:background="@drawable/ic_grupo_user"
+                            android:onClick ="formulario"
+                            >
                         </ImageView>
                     </LinearLayout>
                 </LinearLayout>
@@ -139,6 +145,7 @@
 
                     <!--text progreso-->
                     <TextView
+                        android:id="@+id/testdb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Progreso del curso"
@@ -168,7 +175,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToStructure"
+                        >
 
                         <LinearLayout
                             android:layout_width="95dp"
@@ -187,6 +196,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/scoreStrtProfile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -194,6 +204,19 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/TDRtvestructuras"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Tiempo de respuesta promedio: 2.4 segundos"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+
+
                     </LinearLayout>
 
                     <!--Vocabulary-->
@@ -201,7 +224,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToVocab"
+                        >
 
                         <LinearLayout
                             android:layout_width="100dp"
@@ -220,6 +245,7 @@
                             android:layout_gravity="center"/>
 
                         <TextView
+                            android:id="@+id/vocabScoreprofile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -227,6 +253,16 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/TDRtvocab"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Tiempo de respuesta promedio: 2.4 segundos"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
                     </LinearLayout>
 
                     <!--Culture-->
@@ -234,7 +270,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToCulture"
+                        >
 
                         <LinearLayout
                             android:layout_width="95dp"
@@ -252,6 +290,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/cultAvance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -259,6 +298,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+
                     </LinearLayout>
                 </LinearLayout>
 
@@ -266,7 +306,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
                     <!--Spa Int-->
@@ -274,7 +314,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToSpint"
+                        >
 
                         <LinearLayout
                             android:layout_width="95dp"
@@ -292,6 +334,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/spintavance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -299,6 +342,16 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/spintdr"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Tiempo de respuesta promedio: 2.4 segundos"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
                     </LinearLayout>
 
                     <!--Cons Int-->
@@ -306,7 +359,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="13dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToConint"
+                        >
 
                         <LinearLayout
                             android:layout_width="104dp"
@@ -326,6 +381,7 @@
                             android:layout_gravity="center"/>
 
                         <TextView
+                            android:id="@+id/conintavance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -333,6 +389,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+
                     </LinearLayout>
 
                     <!--Availability-->
@@ -340,7 +397,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToAvail"
+                        >
 
                         <LinearLayout
                             android:layout_width="95dp"
@@ -358,6 +417,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/availAvance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -371,33 +431,37 @@
                 <!--btns line 3-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
                     <!--Structures-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="202dp"
                         android:layout_marginHorizontal="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:onClick="goToTrans"
+                        >
 
                         <LinearLayout
                             android:layout_width="95dp"
-                            android:layout_height="90dp"
-                            android:background="@drawable/ic_grupo_testshort" />
+                            android:layout_height="84dp"
+                            android:background="@drawable/ic_grupo_chatconmaestro" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Test"
+                            android:text="Transiciones"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18dp"
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/transavance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -405,6 +469,18 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/transtdr"
+                            android:layout_width="106dp"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Tiempo de respuesta promedio: 2.4 segundos"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -498,7 +574,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.components.BottomNav"
+            android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"

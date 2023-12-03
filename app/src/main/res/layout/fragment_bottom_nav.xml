@@ -8,6 +8,7 @@
     android:background="@color/white"
     android:orientation="horizontal"
     android:paddingHorizontal="10dp"
+
     >
 
     <LinearLayout
