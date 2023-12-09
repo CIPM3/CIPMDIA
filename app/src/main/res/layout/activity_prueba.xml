@@ -5,199 +5,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Availability2023"
+    tools:context=".Prueba"
     android:background="@color/white"
     >
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <!--Header-->
+        app:layout_constraintTop_toTopOf="parent"
+        >
         <LinearLayout
-            android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:elevation="5dp"
-            android:background="@color/graybg"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView"
-                android:name="com.leal.cipm_testing.header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:layout="@layout/fragment_header"
-                />
-        </LinearLayout>
-        <!--Video View-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="30dp">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView5"
-                android:name="com.leal.cipm_testing.VideoPlayer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_video_player"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <!--Spinner-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:onClick="activaSpinner1"
-            android:paddingHorizontal="30dp">
-            <!--text-->
+            <!--Header-->
             <LinearLayout
+                android:id="@+id/header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="70dp"
+                android:background="@color/graybg"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textspin1"
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView4"
+                    android:name="com.leal.cipm_testing.header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Present Simple"
-                    android:textColor="@color/black"
-                    android:textSize="22dp"
-                    android:textStyle="bold"
+                    tools:layout="@layout/fragment_header" />
 
-                    />
             </LinearLayout>
 
             <!--Spinner-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="4"
-                android:gravity="end|center">
-
-                <Spinner
-                    android:id="@+id/spinuno"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background="@drawable/ic_grupo_select"
-                    android:gravity="end"
-                    android:spinnerMode="dialog"
-                    android:theme="@style/MySpinnerStyle"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--texto-->
-        <LinearLayout
-            android:id="@+id/linearLayout20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:paddingHorizontal="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout19">
-
-            <!--texto-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Transcript"
-                    android:textColor="@color/azul"
-                    android:textSize="18dp"
-                    android:textStyle="normal" />
-
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+                <!--text-->
                 <LinearLayout
-                    android:layout_width="85dp"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_rect_ngulo_selecline">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
+                    <TextView
+                        android:id="@+id/textspin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Present Simple"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+
+                        />
                 </LinearLayout>
+
+                <!--Spinner-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:gravity="end|center">
+
+                    <Spinner
+                        android:id="@+id/spinuno"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_grupo_select"
+                        android:gravity="end"
+                        android:spinnerMode="dialog"
+                        android:theme="@style/MySpinnerStyle"
+                        />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="end"
-                android:onClick="availabilityTest"
-                >
-                <TextView
-                    android:id="@+id/btn_test"
+                android:layout_height="198dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Actividad de Comprehension"
-                    android:textAlignment="center"
-                    android:textColor="@color/azul"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/imagenprueba1" />
+
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/pasarSigNivel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="end"
-                android:onClick="PasarSiguienteEstructura"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Pasar a siguiente Nivel"
-                    android:textAlignment="center"
-                    android:textColor="@color/azul"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!--textview-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="80dp"
-            android:paddingHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/txt_view"
-                android:visibility="visible"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp"
-                android:textColor="@color/black"
-                />
 
             <!--TEST LAYOUT-->
             <LinearLayout
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/test_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -216,54 +127,52 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             >
+                            <!-- Button to start playing the audio -->
+                            <Button
+                                android:id="@+id/play_audio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/boton_redondeado"
+                                android:backgroundTint="@color/azul"
+                                android:drawableStart="@android:drawable/ic_media_play"
+                                android:padding="10dp"
+                                android:text="Preciona para escuchar el audio!" />
 
-                            <TextView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:text="Pregunta:"
-                                android:paddingLeft="20dp"
-                                android:textColor="@color/black"
-                                android:textSize="15dp" />
-                            <TextView
-                                android:id="@+id/pregtxt"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text=""
-                                android:textColor="@color/black"
-                                android:textSize="15dp" />
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             >
+
                             <Button
-                                android:id="@+id/preg1"
+                                android:id="@+id/btn_1"
                                 android:layout_width="match_parent"
-                                android:layout_gravity="center"
                                 android:layout_height="45dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
                                 android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
                                 android:background="@drawable/borde_azul"
-                                android:text="Pregunta 1"
-                                android:onClick="btn1"
+                                android:text="Respuesta 1"
                                 android:textColor="@color/azul"
-                                android:textSize="10dp"
-                                />
+                                android:textSize="10dp" />
+
                             <Button
-                                android:id="@+id/preg2"
+                                android:id="@+id/btn_2"
                                 android:layout_width="match_parent"
-                                android:layout_gravity="center"
                                 android:layout_height="45dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
                                 android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
                                 android:background="@drawable/borde_azul"
-                                android:onClick="btn2"
-                                android:text="Pregunta 2"
+                                android:text="Respuesta 2"
                                 android:textColor="@color/azul"
-                                android:textSize="10dp"
-                                />
+                                android:textSize="10dp" />
+
                             <Button
                                 android:id="@+id/preg3"
                                 android:layout_width="match_parent"
@@ -272,26 +181,13 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginHorizontal="10dp"
                                 android:background="@drawable/borde_azul"
-                                android:onClick="btn3"
-                                android:text="Pregunta 3"
+                                android:text="Respuesta 3"
                                 android:textColor="@color/azul"
                                 android:textSize="10dp"
                                 />
 
-                            <Button
-                                android:id="@+id/preg4"
-                                android:layout_width="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_height="45dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginHorizontal="10dp"
-                                android:background="@drawable/borde_azul"
-                                android:onClick="btn4"
-                                android:text="Pregunta 4"
-                                android:textColor="@color/azul"
-                                android:textSize="10dp"
-                                />
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -303,17 +199,15 @@
                             >
 
                             <Button
-                                android:id="@+id/sigPreg"
+                                android:id="@+id/button"
                                 android:layout_width="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:layout_height="40dp"
-                                android:background="@drawable/borde_azul"
+                                android:layout_height="45dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:background="@drawable/boton_redondeado"
+                                android:backgroundTint="@color/azul"
+                                android:padding="10dp"
                                 android:text="Siguiente"
-                                android:onClick="availabilityTest"
-                                android:textColor="@color/azul"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="14dp"
+                                android:textSize="18dp"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -401,7 +295,6 @@
                                 android:layout_height="40dp"
                                 android:text="Continuar"
                                 android:background="@drawable/borde_azul"
-                                android:onClick="btnFinalizarTest"
                                 android:textColor="@color/azul"
                                 />
                         </LinearLayout>
@@ -411,9 +304,8 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-    <!--BTNS OPC-->
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
@@ -425,11 +317,12 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView2"
+            android:id="@+id/fragmentContainerView7"
             android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav"
             />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

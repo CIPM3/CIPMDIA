@@ -151,7 +151,7 @@
                     >
 
                 </LinearLayout>
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="O continuar con"
@@ -160,7 +160,7 @@
                     android:background="@color/azul"
                     >
 
-                </EditText>
+                </TextView>
                 <LinearLayout
                     android:layout_width="150dp"
                     android:layout_height="1dp"

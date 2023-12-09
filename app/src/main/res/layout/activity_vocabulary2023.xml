@@ -499,7 +499,7 @@
             android:id="@+id/fragmentContainerView2"
             android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav" />
 
     </LinearLayout>

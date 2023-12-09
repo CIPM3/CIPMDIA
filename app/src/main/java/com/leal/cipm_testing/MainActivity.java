@@ -268,6 +268,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void Prueba(View vista) {
+        Intent intento = new Intent(MainActivity.this, Prueba.class);
+        startActivity(intento);
+      /*  if(prefs.getPremium()==1){
+            Intent intento = new Intent(MainActivity.this, Cultura2023.class);
+            startActivity(intento);
+        }else if(prefs.getPremium()==0){
+            Toast.makeText(this, "Función solo disponible para Alumno Premium", Toast.LENGTH_SHORT).show();
+        }*/
+    }
+
     //billing
 
 

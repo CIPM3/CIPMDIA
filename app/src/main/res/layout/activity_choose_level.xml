@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="hacer examen en la app"
+                    android:text="Hacer examen en la app"
                     android:textAlignment="center"
                     android:textColor="@color/azul"
                     android:textSize="18dp" />
@@ -75,7 +75,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="No Determinar nivel"
+                    android:text="No determinar nivel"
                     android:textAlignment="center"
                     android:textColor="@color/azul"
                     android:textSize="18dp" />

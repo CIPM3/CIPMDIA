@@ -446,8 +446,9 @@
                         >
 
                         <LinearLayout
-                            android:layout_width="95dp"
+                            android:layout_width="match_parent"
                             android:layout_height="84dp"
+                            android:layout_gravity="center"
                             android:background="@drawable/ic_grupo_chatconmaestro" />
 
                         <TextView

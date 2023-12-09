@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Forgotpassword extends AppCompatActivity {
-    Button recuperar;
+    LinearLayout recuperar;
     EditText email;
     FirebaseAuth mAuth;
     String stEmail;

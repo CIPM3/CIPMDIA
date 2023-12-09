@@ -71,11 +71,12 @@ public class Premium2023 extends AppCompatActivity {
 
         //start the connection after initializing the billing client
         establishConnection();
-      cancelationPolicy= "con la suscripción acedes a: \n1. mas estructuras del lenguaje\n " +
-            "2. mas rango de palabras (practicas las mismas estructuras con palabras menos comunes)\n" +
-            "3. se cobra una vez al mes - 50 pesos mexicanos \n" +
-            "4. no es necesario estar suscrito para usar el app, pero si es necesaria para acesear a todas sus funciones\n " +
-            "5. para cancelar presiona el boton de abajo y te llevara a Google Play Suscription Center \n";
+      cancelationPolicy= "Con la suscripción acedes a:" +
+            " \n1. Mas estructuras del lenguaje\n " +
+            "2. Mas rango de palabras (practicas las mismas estructuras con palabras menos comunes)\n" +
+            "3. Se cobra una vez al mes - 50 pesos mexicanos \n" +
+            "4. No es necesario estar suscrito para usar el app, pero si es necesaria para acesear a todas sus funciones\n " +
+            "5. Para cancelar presiona el boton de abajo y te llevara a Google Play Suscription Center \n";
         cancelPolicy.setText(cancelationPolicy);
         cancelSuscriptionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
