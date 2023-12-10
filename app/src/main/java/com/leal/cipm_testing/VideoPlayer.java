@@ -835,11 +835,16 @@ public class VideoPlayer extends Fragment {
     }
 
     public void ShowVideo(String url){
-        mediaItem = MediaItem.fromUri(url);
-        player.setMediaItem(mediaItem);
-        player.prepare();
-        player.setPlayWhenReady(true);
+        if (player != null) {
+            mediaItem = MediaItem.fromUri(url);
+            player.setMediaItem(mediaItem);
+            player.prepare();
+            player.setPlayWhenReady(true);
+        } else {
+            Toast.makeText(getContext(), "video error", Toast.LENGTH_SHORT).show();
+        }
     }
+
     public String SaberDondeEstoy(){
         String txtActivity = "";
         String cadenaEliminar = "com.leal.cipm_testing.";
@@ -861,6 +866,16 @@ public class VideoPlayer extends Fragment {
         }
 
     }
+    /*@Override
+    public void onStart() {
+        super.onStart();
+        if (player == null) {
+            player = new ExoPlayer.Builder(requireContext()).build();
+            playerView.setPlayer(player);
+            // If needed, reload the video or set the player to the previous state
+        }
+    }*/
+
     public void updateFragmentState(String newSelection, String newVideo, boolean newExplanation) {
         selection = newSelection;
         video = newVideo;
