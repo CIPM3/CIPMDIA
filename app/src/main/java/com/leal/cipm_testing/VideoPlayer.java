@@ -213,11 +213,11 @@ public class VideoPlayer extends Fragment {
                     ShowVideo("https://adrianlealcaldera.com/structurastut.mp4");
                     break;
                 case "Present Simple":
-                    ShowVideo("https://adrianlealcaldera.com/presentesimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F4.%20Presente%20simple.mp4?alt=media&token=0e482b5a-9c5b-42bc-928f-0ace6cf5fb16");
                     break;
 
                 case "Present Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/presentecontinuo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F5.%20Presente%20continuo.mp4?alt=media&token=833c19a7-b7a6-490a-878b-3268c35bfaa1");
                     break;
 
                 case "Present Perfect":
