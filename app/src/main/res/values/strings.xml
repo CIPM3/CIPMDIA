@@ -247,6 +247,7 @@
 
     <string-array name="practica">
 
+        <item>Trabajos</item>
         <item>Deportes</item>
         <item>Paisajes</item>
     </string-array>

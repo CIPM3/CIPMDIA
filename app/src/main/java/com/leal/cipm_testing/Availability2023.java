@@ -1,5 +1,7 @@
 package com.leal.cipm_testing;
 
+import static com.leal.cipm_testing.R.drawable.ic_btn_green;
+import static com.leal.cipm_testing.R.drawable.ic_btn_red;
 import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 
 import androidx.annotation.NonNull;
@@ -395,7 +397,6 @@ public class Availability2023 extends AppCompatActivity {
             Toast.makeText(this, "termina primero la actividad de comprension antes de pasar a otra clase", Toast.LENGTH_SHORT).show();
         }else{
             Spinner mySpinner = findViewById(R.id.spinuno);
-
             mySpinner.performClick();
         }
 
@@ -8990,11 +8991,11 @@ public class Availability2023 extends AppCompatActivity {
 
         String Resp1 = preg1.getText().toString();
         if(Resp1.equals(RespCorrecta)){
-            preg1.setBackgroundColor(getResources().getColor(R.color.success));
+            preg1.setBackground(getDrawable(ic_btn_green));
             pregCorrect ++;
             pregIndex ++;
         }else{
-            preg1.setBackgroundColor(getResources().getColor(R.color.rojo));
+            preg1.setBackground(getDrawable(ic_btn_red));
             pregIndex ++;
         }
 
@@ -9009,12 +9010,12 @@ public class Availability2023 extends AppCompatActivity {
         String Resp2 = preg2.getText().toString();
 
         if(Resp2.equals(RespCorrecta)){
-            preg2.setBackgroundColor(getResources().getColor(R.color.success));
+            preg2.setBackground(getDrawable(ic_btn_green));
             pregCorrect ++;
             pregIndex ++;
 
         }else{
-            preg2.setBackgroundColor(getResources().getColor(R.color.rojo));
+            preg2.setBackground(getDrawable(ic_btn_red));
             pregIndex ++;
 
         }
@@ -9031,12 +9032,12 @@ public class Availability2023 extends AppCompatActivity {
         String Resp3 = preg3.getText().toString();
 
         if(Resp3.equals(RespCorrecta)){
-            preg3.setBackgroundColor(getResources().getColor(R.color.success));
+            preg3.setBackground(getDrawable(ic_btn_green));
             pregCorrect ++;
             pregIndex ++;
 
         }else{
-            preg3.setBackgroundColor(getResources().getColor(R.color.rojo));
+            preg3.setBackground(getDrawable(ic_btn_red));
             pregIndex ++;
 
         }
@@ -9052,12 +9053,12 @@ public class Availability2023 extends AppCompatActivity {
         String Resp4 = preg4.getText().toString();
 
         if(Resp4.equals(RespCorrecta)){
-            preg4.setBackgroundColor(getResources().getColor(R.color.success));
+            preg4.setBackground(getDrawable(ic_btn_green));
             pregCorrect ++;
             pregIndex ++;
 
         }else{
-            preg4.setBackgroundColor(getResources().getColor(R.color.rojo));
+            preg4.setBackground(getDrawable(ic_btn_red));
             pregIndex ++;
 
         }

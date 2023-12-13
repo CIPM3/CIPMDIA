@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,14 +32,16 @@
                 android:background="@color/graybg"
                 android:elevation="5dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainerView4"
                     android:name="com.leal.cipm_testing.header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_header" />
+                    tools:layout="@layout/fragment_header"
+                    />
 
             </LinearLayout>
 
@@ -46,74 +49,112 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal"
-                android:paddingHorizontal="30dp">
-                <!--text-->
+                android:paddingHorizontal="30dp"
+                >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:onClick="activaSpinner1"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textspin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tutorial"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
 
                 <!--Spinner-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:gravity="end|center">
+
+                    <Spinner
+                        android:id="@+id/spinuno"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_grupo_select"
+                        android:gravity="end"
+                        android:spinnerMode="dialog"
+                        android:theme="@style/MySpinnerStyle"
+                        />
+                </LinearLayout>
 
             </LinearLayout>
 
+            <!--Imagen-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="198dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingHorizontal="30dp">
+                android:paddingHorizontal="30dp"
+                >
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/logo"
+                    />
 
             </LinearLayout>
 
+            <!--Audio-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                >
+                <!-- Button to start playing the audio -->
+                <Button
+                    android:id="@+id/play_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton_redondeado"
+                    android:backgroundTint="@color/azul"
+                    android:drawableStart="@android:drawable/ic_media_play"
+                    android:padding="10dp"
+                    android:text="Preciona para escuchar el audio!"
+                    />
+            </LinearLayout>
 
-            <!--TEST LAYOUT-->
+            <!--Test Layout-->
             <LinearLayout
                 android:visibility="visible"
                 android:id="@+id/test_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         >
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:gravity="center"
-                            >
-                            <!-- Button to start playing the audio -->
-                            <Button
-                                android:id="@+id/play_audio"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/boton_redondeado"
-                                android:backgroundTint="@color/azul"
-                                android:drawableStart="@android:drawable/ic_media_play"
-                                android:padding="10dp"
-                                android:text="Preciona para escuchar el audio!" />
 
-                        </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -129,8 +170,10 @@
                                 android:layout_marginTop="10dp"
                                 android:background="@drawable/borde_azul"
                                 android:text="Respuesta 1"
+                                android:onClick="btn1"
                                 android:textColor="@color/azul"
-                                android:textSize="10dp" />
+                                android:textSize="10dp"
+                                />
 
                             <Button
                                 android:id="@+id/btn_2"
@@ -141,31 +184,34 @@
                                 android:layout_marginTop="10dp"
                                 android:background="@drawable/borde_azul"
                                 android:text="Respuesta 2"
-                                android:textColor="@color/azul"
-                                android:textSize="10dp" />
-
-                            <Button
-                                android:id="@+id/preg3"
-                                android:layout_width="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_height="45dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginHorizontal="10dp"
-                                android:background="@drawable/borde_azul"
-                                android:text="Respuesta 3"
+                                android:onClick="btn2"
                                 android:textColor="@color/azul"
                                 android:textSize="10dp"
                                 />
 
                             <Button
-                                android:id="@+id/preg4"
+                                android:id="@+id/btn_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/borde_azul"
+                                android:onClick="btn3"
+                                android:text="Respuesta 3"
+                                android:textColor="@color/azul"
+                                android:textSize="10dp" />
+
+                            <Button
+                                android:id="@+id/btn_4"
                                 android:layout_width="match_parent"
                                 android:layout_gravity="center"
                                 android:layout_height="45dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginHorizontal="10dp"
                                 android:background="@drawable/borde_azul"
-                                android:text="Respuesta 3"
+                                android:text="Respuesta 4"
+                                android:onClick="btn4"
                                 android:textColor="@color/azul"
                                 android:textSize="10dp"
                                 />
@@ -190,6 +236,7 @@
                                 android:backgroundTint="@color/azul"
                                 android:padding="10dp"
                                 android:text="Siguiente"
+                                android:onClick="availabilityTest"
                                 android:textSize="18dp"
                                 />
                         </LinearLayout>
@@ -197,7 +244,7 @@
                 </ScrollView>
             </LinearLayout>
 
-            <!--RESULT LAYOUT-->
+            <!--Result Layout-->
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/result_view"
@@ -205,13 +252,15 @@
                 android:layout_height="match_parent"
                 android:paddingTop="10dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -221,6 +270,7 @@
                         android:textStyle="bold"
                         android:textAlignment="center"
                         />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -239,6 +289,7 @@
                         android:gravity="center"
                         android:layout_marginTop="15dp"
                         >
+
                         <TextView
                             android:id="@+id/scoreText"
                             android:layout_width="wrap_content"
@@ -249,6 +300,7 @@
                             android:textSize="40dp"
                             android:textStyle="bold"
                             />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -267,12 +319,14 @@
                         android:gravity="bottom"
                         android:layout_marginVertical="20dp"
                         >
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:gravity="center"
                             >
+
                             <Button
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
@@ -284,9 +338,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout
@@ -297,7 +349,8 @@
         android:orientation="vertical"
         android:elevation="5dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView7"
