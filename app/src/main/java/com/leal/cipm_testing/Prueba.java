@@ -19,6 +19,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.squareup.picasso.Picasso;
+
+import org.checkerframework.checker.units.qual.C;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -161,7 +164,14 @@ public class Prueba extends AppCompatActivity {
     String preguntas []={};
     String Respuestas [][]={};
     String RespuestasCorrectas [][] = {};
+
+
+    //ALL
+    String Contenido[][];
     String RespCorrecta;
+    String ImageUrl;
+    String AudioUrl;
+
 
     //TOMA TODO EL ESPACIO PARA EL SPINNER
     public void activaSpinner1(View v){
@@ -173,12 +183,27 @@ public class Prueba extends AppCompatActivity {
     public void startTest(){
         preguntasSeleccionada();
 
-        RespCorrecta = RespuestasCorrectas[pregIndex][0];
+//        RespCorrecta = RespuestasCorrectas[pregIndex][0];
+//
+//        btn_1.setText(Respuestas[pregIndex][0]);
+//        btn_1.setText(Respuestas[pregIndex][1]);
+//        btn_1.setText(Respuestas[pregIndex][2]);
+//        btn_1.setText(Respuestas[pregIndex][3]);
 
-        btn_1.setText(Respuestas[pregIndex][0]);
-        btn_1.setText(Respuestas[pregIndex][1]);
-        btn_1.setText(Respuestas[pregIndex][2]);
-        btn_1.setText(Respuestas[pregIndex][3]);
+        //Imagen
+        ImageUrl = Contenido[pregIndex][0];
+
+        //Audio
+        AudioUrl = Contenido[pregIndex][1];
+
+        //RESPUESTA CORRECTA
+        RespCorrecta = Contenido[pregIndex][2];
+
+        //OPCIONES
+        btn_1.setText(Contenido[pregIndex][3]);
+        btn_1.setText(Contenido[pregIndex][4]);
+        btn_1.setText(Contenido[pregIndex][5]);
+        btn_1.setText(Contenido[pregIndex][6]);
     }
 
     //SELECCIONA LAS PREGUNTAS
@@ -186,7 +211,22 @@ public class Prueba extends AppCompatActivity {
         String pregSele[];
         String RespSele [][];
         String RespuestasCorrectasSele [][];
+
         switch (selection) {
+            case "Extra":
+                Contenido = new String[][]{
+                        {
+                                "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                                "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                                "respuesta 3",
+                                "respuesta 1",
+                                "respuesta 2",
+                                "respuesta 3",
+                                "respuesta 4",
+                        }
+                };
+
+                break;
             case "Tutorial":
                 Toast.makeText(this, "Por favor seleccione una actividad", Toast.LENGTH_SHORT).show();
                 break;
@@ -377,6 +417,7 @@ public class Prueba extends AppCompatActivity {
     public void btn1(View v){
 
         String Resp1 = btn_1.getText().toString();
+
         if(Resp1.equals(RespCorrecta)){
             btn_1.setBackground(getDrawable(ic_btn_green));
             pregIndex ++;
