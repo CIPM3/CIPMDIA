@@ -8,6 +8,7 @@
     tools:context=".SpaInt2023"
     android:background="@color/white"
     >
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
@@ -745,9 +746,8 @@
                     />
             </LinearLayout>
         </LinearLayout>
-
-
     </ScrollView>
+
     <!--BTNS OPC-->
     <LinearLayout
         android:id="@+id/btn_opc"

@@ -6,6 +6,7 @@ import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -31,10 +32,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Prueba extends AppCompatActivity {
 
-    private ImageView imageView;
-    private Button button, btn_1, btn_2, btn_3, btn_4, soundBtn;
+    ImageView imageView;
+    Button button, btn_1, btn_2, btn_3, btn_4;
     private boolean isImage1 = true;
     String selection;
+    Button play_audio;
     TextView textspin1;
     Spinner spin;
     Prefs prefs;
@@ -48,7 +50,7 @@ public class Prueba extends AppCompatActivity {
 
         Button button = findViewById(R.id.button);
         ImageView imageView = findViewById(R.id.imageView);
-        soundBtn= findViewById(R.id.play_audio);
+        play_audio= findViewById(R.id.play_audio);
         mediaPlayer = new MediaPlayer();
 
         btn_1 = findViewById(R.id.btn_1);
@@ -80,7 +82,7 @@ public class Prueba extends AppCompatActivity {
         audioUrls.add("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestAudio%2Fsentence3picture1true.mp3?alt=media&token=02ab8dde-39e2-4548-9b88-05db42688d28");
         audioUrls.add("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestAudio%2Fsentence2picture1false.mp3?alt=media&token=5bd849d6-4cbe-45e0-87e3-1b3be16d3167");
 
-        soundBtn.setOnClickListener(new View.OnClickListener() {
+        play_audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 playAudio(audioUrls);
@@ -183,13 +185,6 @@ public class Prueba extends AppCompatActivity {
     public void startTest(){
         preguntasSeleccionada();
 
-//        RespCorrecta = RespuestasCorrectas[pregIndex][0];
-//
-//        btn_1.setText(Respuestas[pregIndex][0]);
-//        btn_1.setText(Respuestas[pregIndex][1]);
-//        btn_1.setText(Respuestas[pregIndex][2]);
-//        btn_1.setText(Respuestas[pregIndex][3]);
-
         //Imagen
         ImageUrl = Contenido[pregIndex][0];
 
@@ -211,8 +206,11 @@ public class Prueba extends AppCompatActivity {
         String pregSele[];
         String RespSele [][];
         String RespuestasCorrectasSele [][];
-
         switch (selection) {
+            case "Tutorial":
+                Toast.makeText(this, "Por favor seleccione una actividad", Toast.LENGTH_SHORT).show();
+                break;
+
             case "Extra":
                 Contenido = new String[][]{
                         {
@@ -225,10 +223,6 @@ public class Prueba extends AppCompatActivity {
                                 "respuesta 4",
                         }
                 };
-
-                break;
-            case "Tutorial":
-                Toast.makeText(this, "Por favor seleccione una actividad", Toast.LENGTH_SHORT).show();
                 break;
 
             case "Trabajos":
@@ -420,9 +414,11 @@ public class Prueba extends AppCompatActivity {
 
         if(Resp1.equals(RespCorrecta)){
             btn_1.setBackground(getDrawable(ic_btn_green));
+            btn_1.setTextColor(Color.parseColor("#0000"));
             pregIndex ++;
         }else{
             btn_1.setBackground(getDrawable(ic_btn_red));
+            btn_1.setTextColor(Color.parseColor("#0000"));
             pregIndex ++;
         }
 
@@ -491,6 +487,16 @@ public class Prueba extends AppCompatActivity {
         btn_3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
 
         bloquearBtns();
+    }
+
+    //OCULTAR TODA LA ACTIVIDAD
+    public void ocultartodo(){
+        play_audio.setVisibility(View.GONE);
+        btn_1.setVisibility(View.GONE);
+        btn_2.setVisibility(View.GONE);
+        btn_3.setVisibility(View.GONE);
+        btn_4.setVisibility(View.GONE);
+        button.setVisibility(View.GONE);
     }
 
     public void limpBtns(){

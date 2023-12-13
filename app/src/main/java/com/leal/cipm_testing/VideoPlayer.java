@@ -832,6 +832,15 @@ public class VideoPlayer extends Fragment {
 
         }
 
+        if (currenttxt.contains("Prueba")) {
+            switch (selection){
+                case "Tutorial":
+                    ShowVideo("https://adrianlealcaldera.com/premiumpromo.mp4");
+                    break;
+            }
+
+        }
+
     }
 
     public void ShowVideo(String url){
