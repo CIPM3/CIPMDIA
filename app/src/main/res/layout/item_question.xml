@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white">
+    >
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/tvQuestionItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sample Question"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Checkmark Image -->
+    <ImageView
+        android:id="@+id/imgCheckmark"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_grupo_check"
+        android:visibility="gone"/>
+
+    <!-- Horizontal Layout for Record Button and Timer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Record Button -->
+        <Button
+            android:id="@+id/btnRecord"
+            android:drawableLeft="@drawable/ic_microfono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:onClick="startRecording"
+            android:background="@drawable/boton_redondeado_azul"
+            android:layout_marginRight="16dp"/>
+
+        <!-- Recording Timer -->
+        <TextView
+            android:id="@+id/tvRecordingTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="feedback"
+        android:textColor="#2196F3"
+        android:textSize="16sp" />
+
+</LinearLayout>

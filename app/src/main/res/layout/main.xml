@@ -439,7 +439,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:background="@color/azul"
-                android:layout_marginBottom="80dp"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
@@ -475,14 +475,45 @@
                             />
                     </LinearLayout>
                 </LinearLayout>
-
-
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/azul"
+                android:layout_marginBottom="80dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="25dp"
+                >
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/amarillo"
+                        android:gravity="center"
+                        android:onClick="Voice"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Curso en Video"
+                            android:textSize="19dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 
     <!--btn menu-->

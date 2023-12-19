@@ -444,4 +444,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void Voice(View vista){
+        Intent intento = new Intent(this,ToeflSpeaking.class);
+        startActivity(intento);
+    }
+
 }

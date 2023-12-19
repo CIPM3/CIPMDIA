@@ -925,6 +925,8 @@ public class VideoPlayer extends Fragment {
     public void updateFragmentStateConint2(boolean newexplanation1) {
         explanation = newexplanation1;
     }
+
+
 }
 
 
