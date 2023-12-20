@@ -49,8 +49,16 @@ public class ToeflSpeaking extends AppCompatActivity {
     String audioFilePath;
     private void loadAudioItems() {
         // Example items, replace with real data
-        audioItemList.add(new AudioItem("Question 1", false, "00:00", "Feedback 1",audioFilePath));
-        audioItemList.add(new AudioItem("Question 2", false, "00:00", "Feedback 2",audioFilePath));
+        audioItemList.add(new AudioItem("Describe a book you have recently read. What was it about, and why did you find it interesting?", false, "00:00", "Feedback 1",audioFilePath));
+        audioItemList.add(new AudioItem("Describe your favorite movie or TV show and explain why you recommend it to others.", false, "00:00", "", audioFilePath));audioItemList.add(new AudioItem("Describe a teacher who has influenced you and explain why their influence was important.", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("If you could visit any country in the world, where would you go and why?", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("Explain a hobby or activity you enjoy and why it is important to you.", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("Discuss a challenge you have faced and how you overcame it.", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("Describe your favorite movie or TV show and explain why you recommend it to others.", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("If you could change one aspect of your hometown, what would it be and why?", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("Talk about a memorable event from your childhood and explain why it stands out to you.", false, "00:00", "", audioFilePath));
+        audioItemList.add(new AudioItem("Describe an achievement you are proud of and explain why it is significant to you.", false, "00:00", "", audioFilePath));
+
 
         // Add as many items as needed
     }
