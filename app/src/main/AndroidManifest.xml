@@ -23,6 +23,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
         <activity
+            android:name=".AudioTest"
+            android:exported="false" />
+        <activity
             android:name=".ToeflSpeaking"
             android:exported="false" />
         <activity

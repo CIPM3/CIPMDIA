@@ -4,18 +4,14 @@ import static com.leal.cipm_testing.R.drawable.ic_btn_green;
 import static com.leal.cipm_testing.R.drawable.ic_btn_red;
 import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.widget.ImageView;
+import com.bumptech.glide.Glide;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.os.Bundle;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,16 +26,13 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+
 public class Prueba extends AppCompatActivity {
 
-    ImageView imageView;
-    Button button, btn_1, btn_2, btn_3, btn_4;
-    private boolean isImage1 = true;
+
     String selection;
     Button play_audio;
-    TextView textspin1;
-    Spinner spin;
-    Prefs prefs;
     MediaPlayer mediaPlayer;
     List<String> audioUrls = new ArrayList<>();
 
@@ -48,34 +41,10 @@ public class Prueba extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba);
 
-        Button button = findViewById(R.id.button);
-        ImageView imageView = findViewById(R.id.imageView);
-        play_audio= findViewById(R.id.play_audio);
-        mediaPlayer = new MediaPlayer();
 
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-        textspin1 = (TextView) findViewById(R.id.textspin1);
-        spin = (Spinner) findViewById(R.id.spinuno);
 
         Bundle args = new Bundle();
         args.putString("tema", selection);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Aquí puedes cargar una nueva imagen aleatoria desde una URL y establecerla en el ImageView
-                String[] imageUrls = {
-                        "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b"
-                };
-                Random random = new Random();
-                int index = random.nextInt(imageUrls.length);
-                String imageUrl = imageUrls[index];
-                Picasso.get().load(imageUrl).into(imageView);
-            }
-        });
 
         audioUrls.add("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestAudio%2Fsentence4picture1true.mp3?alt=media&token=2250bf7b-e078-4c99-b1d7-dbeb981102bc");
         audioUrls.add("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestAudio%2Fsentence1picture1true.mp3?alt=media&token=11595ece-2dca-4367-a15a-74182ab68735");
@@ -182,11 +151,39 @@ public class Prueba extends AppCompatActivity {
     }
 
     //FUNCION DE EMPEZAR EL TEST
-    public void startTest(){
+    public void EmpezarAudios(){
         preguntasSeleccionada();
 
+        Contenido = new String[][]{
+                {
+                        "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                        "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                        "respuesta 3",
+                        "respuesta 1",
+                        "respuesta 2",
+                        "respuesta 3",
+                        "respuesta 4",
+                },
+                {
+                        "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                        "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeicTestImages%2Fofficefoodmeeting.png?alt=media&token=4978382d-c732-4a89-a1cb-181690a1384b",
+                        "respuesta 1",
+                        "respuesta 1",
+                        "respuesta 2",
+                        "respuesta 3",
+                        "respuesta 4",
+                }
+        };
+
         //Imagen
-        ImageUrl = Contenido[pregIndex][0];
+        // Obtén la URL de la imagen
+        String imageUrl = Contenido[pregIndex][0];
+
+        // Encuentra la referencia al ImageView
+        ImageView imageView = findViewById(R.id.imageView);
+
+        // Carga la imagen desde la URL utilizando Glide
+        Picasso.get().load(imageUrl).into(imageView);
 
         //Audio
         AudioUrl = Contenido[pregIndex][1];
@@ -195,14 +192,14 @@ public class Prueba extends AppCompatActivity {
         RespCorrecta = Contenido[pregIndex][2];
 
         //OPCIONES
-        btn_1.setText(Contenido[pregIndex][3]);
-        btn_1.setText(Contenido[pregIndex][4]);
-        btn_1.setText(Contenido[pregIndex][5]);
-        btn_1.setText(Contenido[pregIndex][6]);
+//        btn_1.setText(Contenido[pregIndex][3]);
+//        btn_1.setText(Contenido[pregIndex][4]);
+//        btn_1.setText(Contenido[pregIndex][5]);
+//        btn_1.setText(Contenido[pregIndex][6]);
     }
 
     //SELECCIONA LAS PREGUNTAS
-    public void preguntasSeleccionada(){
+    public void preguntasSeleccionadaOld(){
         String pregSele[];
         String RespSele [][];
         String RespuestasCorrectasSele [][];
@@ -393,116 +390,8 @@ public class Prueba extends AppCompatActivity {
         }
     }
 
-    //ACCIONES DE BOTONES
-    public void bloquearBtns(){
-        btn_1.setEnabled(false);
-        btn_2.setEnabled(false);
-        btn_3.setEnabled(false);
-        btn_4.setEnabled(false);
+    public void preguntasSeleccionada(){
+
     }
 
-    public void activarBtns(){
-        btn_1.setEnabled(true);
-        btn_2.setEnabled(true);
-        btn_3.setEnabled(true);
-        btn_4.setEnabled(true);
-    }
-
-    public void btn1(View v){
-
-        String Resp1 = btn_1.getText().toString();
-
-        if(Resp1.equals(RespCorrecta)){
-            btn_1.setBackground(getDrawable(ic_btn_green));
-            btn_1.setTextColor(Color.parseColor("#0000"));
-            pregIndex ++;
-        }else{
-            btn_1.setBackground(getDrawable(ic_btn_red));
-            btn_1.setTextColor(Color.parseColor("#0000"));
-            pregIndex ++;
-        }
-
-        btn_2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        bloquearBtns();
-    };
-
-    public void btn2(View v){
-
-        String Resp2 = btn_2.getText().toString();
-
-        if(Resp2.equals(RespCorrecta)){
-            btn_2.setBackground(getDrawable(ic_btn_green));
-            pregIndex ++;
-
-        }else{
-            btn_2.setBackground(getDrawable(ic_btn_red));
-            pregIndex ++;
-
-        }
-
-        btn_1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-
-        bloquearBtns();
-    }
-
-    public void btn3(View v){
-
-        String Resp3 = btn_3.getText().toString();
-
-        if(Resp3.equals(RespCorrecta)){
-            btn_3.setBackground(getDrawable(ic_btn_green));
-            pregIndex ++;
-
-        }else{
-            btn_3.setBackground(getDrawable(ic_btn_red));
-            pregIndex ++;
-
-        }
-        btn_1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_4.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-
-        bloquearBtns();
-    }
-
-    public void btn4(View v){
-
-        String Resp4 = btn_4.getText().toString();
-
-        if(Resp4.equals(RespCorrecta)){
-            btn_4.setBackground(getDrawable(ic_btn_green));
-            pregIndex ++;
-
-        }else{
-            btn_4.setBackground(getDrawable(ic_btn_red));
-            pregIndex ++;
-
-        }
-        btn_1.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_2.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-        btn_3.setBackground(getDrawable(ic_rect_ngulo_btncheck));
-
-        bloquearBtns();
-    }
-
-    //OCULTAR TODA LA ACTIVIDAD
-    public void ocultartodo(){
-        play_audio.setVisibility(View.GONE);
-        btn_1.setVisibility(View.GONE);
-        btn_2.setVisibility(View.GONE);
-        btn_3.setVisibility(View.GONE);
-        btn_4.setVisibility(View.GONE);
-        button.setVisibility(View.GONE);
-    }
-
-    public void limpBtns(){
-        btn_1.setBackgroundResource(ic_rect_ngulo_btncheck);
-        btn_2.setBackgroundResource(ic_rect_ngulo_btncheck);
-        btn_3.setBackgroundResource(ic_rect_ngulo_btncheck);
-        btn_4.setBackgroundResource(ic_rect_ngulo_btncheck);
-    }
 }
