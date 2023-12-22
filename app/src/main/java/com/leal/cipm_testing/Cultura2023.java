@@ -59,7 +59,6 @@ public class Cultura2023 extends AppCompatActivity{
     ArraysdeLosPlanesPersonalizados objetoArrays = new ArraysdeLosPlanesPersonalizados();
     String[] temp =objetoArrays.culturaGratis;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    TextView textview2;
     boolean getposActivated;
     int intentos = 0;
     public String selection;
@@ -86,7 +85,6 @@ public class Cultura2023 extends AppCompatActivity{
         setContentView(R.layout.activity_cultura2023);
         spin = findViewById(R.id.spinuno);
         textspin1 = findViewById(R.id.textspin1);
-        textview2 = findViewById(R.id.my_textview2);
         txt_exp_est = findViewById(R.id.txt_exp_est);
         lay_btn_empezar = findViewById(R.id.lay_btn_empezar);
         lay_btn_empezar.setVisibility(View.INVISIBLE);

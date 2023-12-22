@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     android:background="@color/white"
     >
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -35,14 +36,14 @@
                 android:paddingTop="30dp"
                 android:paddingBottom="20dp"
                 android:onClick="test"
-
                 >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|start"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
 
                     <Button
                         android:layout_width="match_parent"
@@ -53,14 +54,16 @@
                         android:text="Saber mi nivel"
                         android:textSize="15dp"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                     <!--<Button
                         android:id="@+id/Testnew"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        android:text="Button" />-->
+                        android:text="Button"
+                        />-->
                 </LinearLayout>
             </LinearLayout>
 
@@ -93,13 +96,11 @@
                     android:layout_height="50dp"
                     android:background="@drawable/boton_redondeado"
                     android:backgroundTint="@color/azul"
-                    android:onClick="Prueba"
+                    android:onClick="myPlan"
                     android:text="My Plan"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     />
-
-
             </LinearLayout>
 
             <!--HACER EL TEST
@@ -150,7 +151,6 @@
                     android:layout_height="1dp"
                     android:background="@color/azul"
                     >
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -170,7 +170,8 @@
                     android:background="@drawable/ic_grupo_146"
                     android:gravity="bottom"
                     android:onClick="estructura"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
@@ -193,7 +194,8 @@
                         android:max="100"
                         android:minWidth="100dp"
                         android:minHeight="50dp"
-                        android:progress="1" />
+                        android:progress="1"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -227,7 +229,8 @@
                         android:max="100"
                         android:minWidth="100dp"
                         android:minHeight="50dp"
-                        android:progress="1" />
+                        android:progress="1"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -397,7 +400,6 @@
             </LinearLayout>
 
             <!--Chatear con un Maestro-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -406,6 +408,7 @@
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="25dp"
                 >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -414,6 +417,7 @@
                     android:gravity="end|center"
                     android:onClick="chat_maestro"
                     >
+
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
@@ -431,31 +435,26 @@
                         android:textColor="@color/black"
                         android:text="Aclara todas tus dudas, desde la comodidad de tu casa"
                         />
-
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="@color/azul"
-                android:layout_marginBottom="30dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="25dp"
                 >
-                <LinearLayout
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:background="@mipmap/logo"
-                    />
+
+                <!--BTN CURSO VIDEO-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <LinearLayout
                         android:layout_width="160dp"
@@ -463,12 +462,42 @@
                         android:background="@drawable/boton_redondeado"
                         android:backgroundTint="@color/amarillo"
                         android:gravity="center"
-                        android:onClick="masinfo"
+                        android:onClick="Voice"
                         >
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Clases en linea"
+                            android:text="Curso en Video"
+                            android:textSize="19dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--BTN PRUEBA-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/boton_redondeado"
+                        android:backgroundTint="@color/amarillo"
+                        android:gravity="center"
+                        android:onClick="AudioTest"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prueba de audio"
                             android:textSize="19dp"
                             android:textColor="@color/black"
                             android:textStyle="bold"
@@ -476,6 +505,8 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <!--Clases en Linea-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
@@ -488,11 +519,18 @@
                 >
 
                 <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@mipmap/logo"
+                    />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <LinearLayout
                         android:layout_width="160dp"
@@ -500,12 +538,13 @@
                         android:background="@drawable/boton_redondeado"
                         android:backgroundTint="@color/amarillo"
                         android:gravity="center"
-                        android:onClick="Voice"
+                        android:onClick="masinfo"
                         >
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Curso en Video"
+                            android:text="Clases en linea"
                             android:textSize="19dp"
                             android:textColor="@color/black"
                             android:textStyle="bold"

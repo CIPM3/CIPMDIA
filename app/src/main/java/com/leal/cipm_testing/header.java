@@ -126,6 +126,12 @@ public class header extends Fragment {
             Screen = "Frases Culturales";
         }
 
+        if (currenttxt.contains("AudioTest")) {
+            // Cambiar el texto del EditText
+            editText.setText("Audio Test");
+            Screen = "Audio Test";
+        }
+
         if (currenttxt.contains("Premium")) {
             // Cambiar el texto del EditText
             editText.setText("Hazte Premium");

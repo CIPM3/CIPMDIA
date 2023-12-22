@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void Prueba(View vista) {
+    public void AudioTest(View vista) {
         Intent intento = new Intent(MainActivity.this, AudioTest.class);
         startActivity(intento);
       /*  if(prefs.getPremium()==1){
