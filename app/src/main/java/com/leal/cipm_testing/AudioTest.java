@@ -28,7 +28,7 @@ public class AudioTest extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
 
-    String [][] Contenido = new String[][]{
+    String[][] Contenido = new String[][]{
             //Architect
             {
                     //URL IMG
@@ -151,6 +151,8 @@ public class AudioTest extends AppCompatActivity {
     };
 
     int pregIndex = 0;
+
+    String audioUrls;
     String ImageUrl = "";
 
     String RespuestaCorrecta = "";
@@ -185,12 +187,12 @@ public class AudioTest extends AppCompatActivity {
         });
     }
 
-    public void StartTest(){
+    public void StartTest() {
         activarBtns();
         AudioTest();
     }
 
-    public void activarBtns(){
+    public void activarBtns() {
         //BTN EMPEZAR CERRADO
         lay_btn_empezar.setVisibility(View.GONE);
 
@@ -209,7 +211,7 @@ public class AudioTest extends AppCompatActivity {
     }
 
     @SuppressLint("NotConstructor")
-    public void AudioTest(){
+    public void AudioTest() {
         //Imagen
         // Obtén la URL de la imagen
         String imageUrl = Contenido[pregIndex][0];
@@ -218,8 +220,7 @@ public class AudioTest extends AppCompatActivity {
         Picasso.get().load(imageUrl).into(imageView);
 
         //Audio
-        String audioUrl = Contenido[pregIndex][1];
-
+        audioUrls = Contenido[pregIndex][1];
 
         //RESPUESTA CORRECTA
         RespuestaCorrecta = Contenido[pregIndex][2];
@@ -231,6 +232,22 @@ public class AudioTest extends AppCompatActivity {
         btn_4.setText(Contenido[pregIndex][6]);
     }
 
+    //REPRODUCIR AUDIO
+    public void playbtnAudio(View v){
+        reproducirAudio();
+    }
+    private void reproducirAudio() {
+        mediaPlayer = new MediaPlayer();
+        try {
+            mediaPlayer.setDataSource(audioUrls);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //BOTONES DE OPCIONES
     public void btn1(View v){
         compararYCambiarColor(btn_1,"success","error",RespuestaCorrecta);
     }

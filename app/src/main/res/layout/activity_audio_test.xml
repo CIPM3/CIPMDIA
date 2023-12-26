@@ -164,6 +164,7 @@
                     android:backgroundTint="@color/azul"
                     android:drawableStart="@android:drawable/ic_media_play"
                     android:padding="10dp"
+                    android:onClick="playbtnAudio"
                     android:text="Preciona para escuchar el audio!"
                     />
             </LinearLayout>

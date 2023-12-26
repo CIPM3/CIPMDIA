@@ -29,15 +29,6 @@
             android:name=".ToeflSpeaking"
             android:exported="false" />
         <activity
-            android:name=".QuestionsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DummyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Prueba"
-            android:exported="false" />
-        <activity
             android:name=".Forgotpassword"
             android:exported="false" />
         <activity
