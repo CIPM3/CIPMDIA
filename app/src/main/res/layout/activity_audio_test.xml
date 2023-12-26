@@ -260,7 +260,7 @@
                     android:layout_marginHorizontal="25dp"
                     android:background="@drawable/boton_redondeado"
                     android:backgroundTint="@color/azul"
-                    android:onClick="limpBtns"
+                    android:onClick="sigActvbtn"
                     android:text="Siguiente"
                     android:textSize="18dp" />
             </LinearLayout>

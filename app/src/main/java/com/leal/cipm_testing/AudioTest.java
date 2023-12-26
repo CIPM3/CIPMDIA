@@ -232,6 +232,13 @@ public class AudioTest extends AppCompatActivity {
         btn_4.setText(Contenido[pregIndex][6]);
     }
 
+    //CAMBIAR ACTIVIDAD
+    public void sigActvbtn(View v){
+        pregIndex ++;
+        StartTest();
+        limpBtns();
+    }
+
     //REPRODUCIR AUDIO
     public void playbtnAudio(View v){
         reproducirAudio();
@@ -291,7 +298,7 @@ public class AudioTest extends AppCompatActivity {
         button.setBackgroundResource(nuevoDrawable);
     }
 
-    public void limpBtns(View v){
+    public void limpBtns(){
         cambiarDrawableBoton(btn_1,R.drawable.ic_rect_ngulo_btncheck);
         cambiarDrawableBoton(btn_2,R.drawable.ic_rect_ngulo_btncheck);
         cambiarDrawableBoton(btn_3,R.drawable.ic_rect_ngulo_btncheck);
