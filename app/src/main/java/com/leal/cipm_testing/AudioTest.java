@@ -28,6 +28,178 @@ public class AudioTest extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
 
+    int pregIndex = 0;
+
+    String audioUrls;
+
+    String ImageUrl = "";
+
+    String RespuestaCorrecta = "";
+    boolean isPlaying = false;
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_audio_test);
+
+        //DECLARACIONES
+        imageView = findViewById(R.id.imageView);
+        lay_btn_empezar = findViewById(R.id.lay_btn_empezar);
+        btn_empezar = findViewById(R.id.btn_empezar);
+        lay_btns = findViewById(R.id.lay_btns);
+        lay_btn_sig = findViewById(R.id.lay_btn_sig);
+        lay_audiobtn = findViewById(R.id.lay_audiobtn);
+        play_audio = findViewById(R.id.play_audio);
+        lay_txt_rec = findViewById(R.id.lay_txt_rec);
+        lay_txt_exp = findViewById(R.id.lay_txt_exp);
+
+        //BOTONES
+        btn_sig = findViewById(R.id.btn_sig);
+        btn_1 = findViewById(R.id.btn_1);
+        btn_2 = findViewById(R.id.btn_2);
+        btn_3 = findViewById(R.id.btn_3);
+        btn_4 = findViewById(R.id.btn_4);
+
+
+        btn_empezar.setOnClickListener(view -> {
+            StartTest();
+        });
+    }
+
+    public void StartTest() {
+        activarBtns();
+        AudioTest();
+    }
+
+    public void activarBtns() {
+        //BTN EMPEZAR CERRADO
+        lay_btn_empezar.setVisibility(View.GONE);
+
+        //TXT & REC CERRADO
+        lay_txt_rec.setVisibility(View.GONE);
+
+        //TXT EXPLICACIÓN CERRADO
+        lay_txt_exp.setVisibility(View.GONE);
+
+        //BTN SIGUIENTE VISIBLE
+        lay_btn_sig.setVisibility(View.VISIBLE);
+        //LAY BTNS VISIBLE
+        lay_btns.setVisibility(View.VISIBLE);
+        //LAY AUDIO BTN VISIBLE
+        lay_audiobtn.setVisibility(View.VISIBLE);
+    }
+
+    @SuppressLint("NotConstructor")
+    public void AudioTest() {
+        //Imagen
+        // Obtén la URL de la imagen
+        String imageUrl = Contenido[pregIndex][0];
+
+        // Carga la imagen desde la URL utilizando Glide
+        Picasso.get().load(imageUrl).into(imageView);
+
+        //Audio
+        audioUrls = Contenido[pregIndex][1];
+
+        //RESPUESTA CORRECTA
+        RespuestaCorrecta = Contenido[pregIndex][2];
+
+        //OPCIONES
+        btn_1.setText(Contenido[pregIndex][3]);
+        btn_2.setText(Contenido[pregIndex][4]);
+        btn_3.setText(Contenido[pregIndex][5]);
+        btn_4.setText(Contenido[pregIndex][6]);
+    }
+
+    //CAMBIAR ACTIVIDAD
+    public void sigActvbtn(View v){
+        pregIndex ++;
+        StartTest();
+        limpBtns();
+    }
+
+    //REPRODUCIR AUDIO
+    public void playbtnAudio(View v){
+        reproducirAudio();
+    }
+    private void reproducirAudio() {
+        mediaPlayer = new MediaPlayer();
+        if (isPlaying) {
+            mediaPlayer.pause();
+            play_audio.setText("Play");
+        } else {
+        try {
+            mediaPlayer.setDataSource(audioUrls);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+            play_audio.setText("Pause");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+        isPlaying = !isPlaying;
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    //BOTONES DE OPCIONES
+    public void btn1(View v){
+        compararYCambiarColor(btn_1,"success","error",RespuestaCorrecta);
+    }
+
+    public void btn2(View v){
+        compararYCambiarColor(btn_2,"success","error",RespuestaCorrecta);
+    }
+
+    public void btn3(View v){
+        compararYCambiarColor(btn_3,"success","error",RespuestaCorrecta);
+    }
+
+    public void btn4(View v){
+        compararYCambiarColor(btn_4,"success","error",RespuestaCorrecta);
+    }
+
+    private void compararYCambiarColor(Button button, String colorCorrecto, String colorIncorrecto, String respuestaCorrecta) {
+        // Obtiene el texto actual del botón
+        String textoBoton = button.getText().toString();
+
+        // Obtiene los recursos de color por nombre
+        int colorCorrectoInt = getResources().getColor(getResources().getIdentifier(colorCorrecto, "color", getPackageName()));
+        int colorIncorrectoInt = getResources().getColor(getResources().getIdentifier(colorIncorrecto, "color", getPackageName()));
+
+        // Compara el texto con la respuesta correcta
+        if (textoBoton.equals(respuestaCorrecta)) {
+            // Si es correcto, cambia el color de fondo al colorCorrecto
+            button.setBackgroundColor(colorCorrectoInt);
+            // Puedes agregar más lógica aquí si es necesario
+            Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
+        } else {
+            // Si no es correcto, cambia el color de fondo al colorIncorrecto
+            button.setBackgroundColor(colorIncorrectoInt);
+            // Puedes agregar más lógica aquí si es necesario
+            Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void cambiarDrawableBoton(Button button, int nuevoDrawable) {
+        // Cambia el drawable del botón
+        button.setBackgroundResource(nuevoDrawable);
+    }
+
+    public void limpBtns(){
+        cambiarDrawableBoton(btn_1,R.drawable.ic_rect_ngulo_btncheck);
+        cambiarDrawableBoton(btn_2,R.drawable.ic_rect_ngulo_btncheck);
+        cambiarDrawableBoton(btn_3,R.drawable.ic_rect_ngulo_btncheck);
+        cambiarDrawableBoton(btn_4,R.drawable.ic_rect_ngulo_btncheck);
+    }
+
     String[][] Contenido = new String[][]{
             //Architect
             {
@@ -149,162 +321,6 @@ public class AudioTest extends AppCompatActivity {
                     "respuesta 4",
             },
     };
-
-    int pregIndex = 0;
-
-    String audioUrls;
-    String ImageUrl = "";
-
-    String RespuestaCorrecta = "";
-
-    @SuppressLint("MissingInflatedId")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_audio_test);
-
-        //DECLARACIONES
-        imageView = findViewById(R.id.imageView);
-        lay_btn_empezar = findViewById(R.id.lay_btn_empezar);
-        btn_empezar = findViewById(R.id.btn_empezar);
-        lay_btns = findViewById(R.id.lay_btns);
-        lay_btn_sig = findViewById(R.id.lay_btn_sig);
-        lay_audiobtn = findViewById(R.id.lay_audiobtn);
-        play_audio = findViewById(R.id.play_audio);
-        lay_txt_rec = findViewById(R.id.lay_txt_rec);
-        lay_txt_exp = findViewById(R.id.lay_txt_exp);
-
-        //BOTONES
-        btn_sig = findViewById(R.id.btn_sig);
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-
-
-        btn_empezar.setOnClickListener(view -> {
-            StartTest();
-        });
-    }
-
-    public void StartTest() {
-        activarBtns();
-        AudioTest();
-    }
-
-    public void activarBtns() {
-        //BTN EMPEZAR CERRADO
-        lay_btn_empezar.setVisibility(View.GONE);
-
-        //TXT & REC CERRADO
-        lay_txt_rec.setVisibility(View.GONE);
-
-        //TXT EXPLICACIÓN CERRADO
-        lay_txt_exp.setVisibility(View.GONE);
-
-        //BTN SIGUIENTE VISIBLE
-        lay_btn_sig.setVisibility(View.VISIBLE);
-        //LAY BTNS VISIBLE
-        lay_btns.setVisibility(View.VISIBLE);
-        //LAY AUDIO BTN VISIBLE
-        lay_audiobtn.setVisibility(View.VISIBLE);
-    }
-
-    @SuppressLint("NotConstructor")
-    public void AudioTest() {
-        //Imagen
-        // Obtén la URL de la imagen
-        String imageUrl = Contenido[pregIndex][0];
-
-        // Carga la imagen desde la URL utilizando Glide
-        Picasso.get().load(imageUrl).into(imageView);
-
-        //Audio
-        audioUrls = Contenido[pregIndex][1];
-
-        //RESPUESTA CORRECTA
-        RespuestaCorrecta = Contenido[pregIndex][2];
-
-        //OPCIONES
-        btn_1.setText(Contenido[pregIndex][3]);
-        btn_2.setText(Contenido[pregIndex][4]);
-        btn_3.setText(Contenido[pregIndex][5]);
-        btn_4.setText(Contenido[pregIndex][6]);
-    }
-
-    //CAMBIAR ACTIVIDAD
-    public void sigActvbtn(View v){
-        pregIndex ++;
-        StartTest();
-        limpBtns();
-    }
-
-    //REPRODUCIR AUDIO
-    public void playbtnAudio(View v){
-        reproducirAudio();
-    }
-    private void reproducirAudio() {
-        mediaPlayer = new MediaPlayer();
-        try {
-            mediaPlayer.setDataSource(audioUrls);
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    //BOTONES DE OPCIONES
-    public void btn1(View v){
-        compararYCambiarColor(btn_1,"success","error",RespuestaCorrecta);
-    }
-
-    public void btn2(View v){
-        compararYCambiarColor(btn_2,"success","error",RespuestaCorrecta);
-    }
-
-    public void btn3(View v){
-        compararYCambiarColor(btn_3,"success","error",RespuestaCorrecta);
-    }
-
-    public void btn4(View v){
-        compararYCambiarColor(btn_4,"success","error",RespuestaCorrecta);
-    }
-
-    private void compararYCambiarColor(Button button, String colorCorrecto, String colorIncorrecto, String respuestaCorrecta) {
-        // Obtiene el texto actual del botón
-        String textoBoton = button.getText().toString();
-
-        // Obtiene los recursos de color por nombre
-        int colorCorrectoInt = getResources().getColor(getResources().getIdentifier(colorCorrecto, "color", getPackageName()));
-        int colorIncorrectoInt = getResources().getColor(getResources().getIdentifier(colorIncorrecto, "color", getPackageName()));
-
-        // Compara el texto con la respuesta correcta
-        if (textoBoton.equals(respuestaCorrecta)) {
-            // Si es correcto, cambia el color de fondo al colorCorrecto
-            button.setBackgroundColor(colorCorrectoInt);
-            // Puedes agregar más lógica aquí si es necesario
-            Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
-        } else {
-            // Si no es correcto, cambia el color de fondo al colorIncorrecto
-            button.setBackgroundColor(colorIncorrectoInt);
-            // Puedes agregar más lógica aquí si es necesario
-            Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void cambiarDrawableBoton(Button button, int nuevoDrawable) {
-        // Cambia el drawable del botón
-        button.setBackgroundResource(nuevoDrawable);
-    }
-
-    public void limpBtns(){
-        cambiarDrawableBoton(btn_1,R.drawable.ic_rect_ngulo_btncheck);
-        cambiarDrawableBoton(btn_2,R.drawable.ic_rect_ngulo_btncheck);
-        cambiarDrawableBoton(btn_3,R.drawable.ic_rect_ngulo_btncheck);
-        cambiarDrawableBoton(btn_4,R.drawable.ic_rect_ngulo_btncheck);
-    }
-
 }
 
 

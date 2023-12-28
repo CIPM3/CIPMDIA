@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -86,8 +87,6 @@ public class Premium2023 extends AppCompatActivity {
             }
         });
 
-
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
@@ -96,10 +95,6 @@ public class Premium2023 extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
-
-
-
-
 
     }
     void establishConnection() {

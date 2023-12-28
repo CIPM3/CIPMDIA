@@ -98,6 +98,7 @@ public class Availability2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
         counterDb=0;
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)

@@ -47,7 +47,7 @@
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="45dp"
                         android:background="@drawable/boton_redondeado"
                         android:backgroundTint="@color/amarillo"
                         android:onClick="test"
@@ -70,7 +70,7 @@
             <!--TOPBAR-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="80dp"
                 android:paddingHorizontal="15dp"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -93,7 +93,7 @@
                 <Button
                     android:id="@+id/myPlanBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/boton_redondeado"
                     android:backgroundTint="@color/azul"
                     android:onClick="myPlan"
@@ -444,8 +444,6 @@
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="25dp"
                 >
 
                 <!--BTN CURSO VIDEO-->
@@ -460,7 +458,7 @@
                         android:layout_width="160dp"
                         android:layout_height="40dp"
                         android:background="@drawable/boton_redondeado"
-                        android:backgroundTint="@color/amarillo"
+                        android:backgroundTint="@color/azul"
                         android:gravity="center"
                         android:onClick="Voice"
                         >
@@ -468,9 +466,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Curso en Video"
+                            android:text="Curso en video"
                             android:textSize="19dp"
-                            android:textColor="@color/black"
                             android:textStyle="bold"
                             />
                     </LinearLayout>
@@ -489,7 +486,7 @@
                         android:layout_width="160dp"
                         android:layout_height="40dp"
                         android:background="@drawable/boton_redondeado"
-                        android:backgroundTint="@color/amarillo"
+                        android:backgroundTint="@color/azul"
                         android:gravity="center"
                         android:onClick="AudioTest"
                         >
@@ -499,7 +496,6 @@
                             android:layout_height="wrap_content"
                             android:text="Prueba de audio"
                             android:textSize="19dp"
-                            android:textColor="@color/black"
                             android:textStyle="bold"
                             />
                     </LinearLayout>
