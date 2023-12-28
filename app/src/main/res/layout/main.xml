@@ -285,7 +285,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
-                        android:background="@drawable/ic_grupo_spaint"></LinearLayout>
+                        android:background="@drawable/ic_grupo_spaint"
+                        >
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -296,7 +298,6 @@
                         android:textColor="@color/black"
                         android:textSize="12dp"
                         android:textStyle="bold"
-
                         />
                 </LinearLayout>
 
@@ -466,8 +467,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Curso en video"
+                            android:text="Toefl Speaking"
                             android:textSize="19dp"
+                            android:textColor="@color/white"
                             android:textStyle="bold"
                             />
                     </LinearLayout>
@@ -496,6 +498,7 @@
                             android:layout_height="wrap_content"
                             android:text="Prueba de audio"
                             android:textSize="19dp"
+                            android:textColor="@color/white"
                             android:textStyle="bold"
                             />
                     </LinearLayout>

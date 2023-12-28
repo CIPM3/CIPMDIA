@@ -126,26 +126,22 @@ public class AudioTest extends AppCompatActivity {
     private void reproducirAudio() {
         mediaPlayer = new MediaPlayer();
         if (isPlaying) {
-            mediaPlayer.pause();
-            play_audio.setText("Play");
+            pause();
         } else {
         try {
             mediaPlayer.setDataSource(audioUrls);
             mediaPlayer.prepare();
             mediaPlayer.start();
-            play_audio.setText("Pause");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
         isPlaying = !isPlaying;
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+
+    public void pause() {
         if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
+            mediaPlayer.pause();
         }
     }
 
