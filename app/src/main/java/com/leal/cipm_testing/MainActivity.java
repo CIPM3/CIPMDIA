@@ -95,13 +95,15 @@ public class MainActivity extends AppCompatActivity {
             //Give the user all the premium features
             //hide ads if you are showing ads
             txt.setText("Your Subscription is Active");
-            Log.d("tag","inside yes active suscription");
+            sendIsPremiumToDB(true);
+
 
         } else if (prefs.getPremium()==0){
             //remove user all the premium features
             //show ads to the user
             txt.setText("No active Subscription");
             Log.d("tag","inside no active suscription");
+            sendIsPremiumToDB(false);
         }
 
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -448,5 +450,20 @@ public class MainActivity extends AppCompatActivity {
         Intent intento = new Intent(this,ToeflSpeaking.class);
         startActivity(intento);
     }
-
+    DocumentReference isUserPremiumDocRef;
+    private void sendIsPremiumToDB(boolean isPremium) {
+        userid = mAuth.getCurrentUser().getUid();
+        CollectionReference uid = db.collection(userid);
+        Map<String, Object> user = new HashMap<>();
+        user.put("Premium",isPremium);
+        isUserPremiumDocRef= db.collection(userid).document("isUserPremium");
+        isUserPremiumDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(!documentSnapshot.exists()){
+                    uid.document("isPremium").set(user);
+                }
+            }
+        });
+    }
 }

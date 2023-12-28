@@ -11,12 +11,23 @@ import android.widget.Toast;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingResult;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class SplashActivity extends AppCompatActivity {
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    String userid;
+    DocumentReference isUserPremiumDocRef;
     Handler handler;
     BillingClient billingClient;
     Prefs prefs;
@@ -78,9 +89,14 @@ public class SplashActivity extends AppCompatActivity {
                         if (billingResult1.getResponseCode() == BillingClient.BillingResponseCode.OK && list.size() > 0) {
                             //list is more than 0 meaning there is an active subscription available
                             prefs.setPremium(1);
+
+
+
+
                         } else if (list.size() == 0) {
                             //When the list returns zero, it means there are no active subscription
                             prefs.setPremium(0);
+
                         }
                     });
 
@@ -88,5 +104,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 }

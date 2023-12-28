@@ -57,18 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Antes de comprar mira el video"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                />
-        </LinearLayout>
+            />
 
         <!--Video View-->
         <LinearLayout
@@ -111,7 +100,7 @@
         <TextView
             android:id="@+id/cancelPolicyTv"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="141dp"
             android:layout_margin="10dp"
             android:text="cancelpolicytv"
             android:textColor="#E53935"
