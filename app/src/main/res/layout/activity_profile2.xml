@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,12 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         >
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-
             >
 
             <!--body-->
@@ -31,24 +30,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="105dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <!--blue box and prof pic-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|bottom"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
+
                     <!--blue box-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:background="@color/azul"
                         android:elevation="9dp"
-                        android:gravity="bottom|center">
-
-
+                        android:gravity="bottom|center"
+                        >
                     </LinearLayout>
+
                     <!--PROFILE PIC-->
                     <LinearLayout
                         android:layout_width="90dp"
@@ -57,7 +59,8 @@
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/roundedlayout"
                         android:elevation="10dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        >
 
                         <ImageView
                             android:id="@+id/Imgdeluser"
@@ -76,7 +79,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
 
                     <TextView
                         android:id="@+id/nombredeluser"
@@ -87,7 +91,8 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                     <!--btn menu-->
                     <LinearLayout
@@ -95,7 +100,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:elevation="20dp"
-                        android:visibility="visible">
+                        android:visibility="visible"
+                        >
+
                         <LinearLayout
                             android:layout_width="22dp"
                             android:layout_height="22dp"
@@ -110,7 +117,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <!--BTNS RECOMENDS-->
                     <TextView
@@ -122,8 +130,8 @@
                         android:text="Correo Elelctronico."
                         android:textColor="@color/black"
                         android:textSize="16dp"
-                        android:textStyle="bold"/>
-
+                        android:textStyle="bold"
+                        />
                 </LinearLayout>
 
                 <!--SEPARADOR AND TEXT PROGRESO-->
@@ -135,12 +143,12 @@
                     android:orientation="horizontal"
                     android:gravity="center"
                     >
+
                     <LinearLayout
                         android:layout_width="200dp"
                         android:layout_height="1dp"
                         android:background="@color/azul"
                         >
-
                     </LinearLayout>
 
                     <!--text progreso-->
@@ -151,14 +159,14 @@
                         android:text="Progreso del curso"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        />
 
                     <LinearLayout
                         android:layout_width="200dp"
                         android:layout_height="1dp"
                         android:background="@color/azul"
                         >
-
                     </LinearLayout>
                 </LinearLayout>
 
@@ -168,7 +176,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
 
                     <!--Structures-->
                     <LinearLayout
@@ -193,7 +202,8 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/scoreStrtProfile"
@@ -203,7 +213,8 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            />
 
                         <TextView
                             android:id="@+id/TDRtvestructuras"
@@ -213,10 +224,8 @@
                             android:text="Tiempo de respuesta promedio: 2.4 segundos"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="10dp" />
-
-
-
+                            android:textSize="10dp"
+                            />
                     </LinearLayout>
 
                     <!--Vocabulary-->
@@ -231,7 +240,8 @@
                         <LinearLayout
                             android:layout_width="100dp"
                             android:layout_height="90dp"
-                            android:background="@drawable/ic_grupo_vocabshort" />
+                            android:background="@drawable/ic_grupo_vocabshort"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -242,7 +252,8 @@
                             android:textColor="@color/black"
                             android:textSize="18dp"
                             android:textStyle="bold"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            />
 
                         <TextView
                             android:id="@+id/vocabScoreprofile"
@@ -252,7 +263,9 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            />
+
                         <TextView
                             android:id="@+id/TDRtvocab"
                             android:layout_width="match_parent"
@@ -261,8 +274,8 @@
                             android:text="Tiempo de respuesta promedio: 2.4 segundos"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="10dp" />
-
+                            android:textSize="10dp"
+                            />
                     </LinearLayout>
 
                     <!--Culture-->
@@ -277,7 +290,8 @@
                         <LinearLayout
                             android:layout_width="95dp"
                             android:layout_height="90dp"
-                            android:background="@drawable/ic_grupo_81" />
+                            android:background="@drawable/ic_grupo_81"
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -287,7 +301,8 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/cultAvance"
@@ -297,8 +312,8 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
-
+                            android:textSize="12dp"
+                            />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -308,7 +323,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
+
                     <!--Spa Int-->
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -321,7 +338,8 @@
                         <LinearLayout
                             android:layout_width="95dp"
                             android:layout_height="90dp"
-                            android:background="@drawable/ic_grupo_spaint" />
+                            android:background="@drawable/ic_grupo_spaint"
+                            />
 
                         <TextView
                             android:layout_width="90dp"
@@ -331,7 +349,8 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="16dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/spintavance"
@@ -341,7 +360,9 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            />
+
                         <TextView
                             android:id="@+id/spintdr"
                             android:layout_width="match_parent"
@@ -350,8 +371,8 @@
                             android:text="Tiempo de respuesta promedio: 2.4 segundos"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="10dp" />
-
+                            android:textSize="10dp"
+                            />
                     </LinearLayout>
 
                     <!--Cons Int-->
@@ -367,7 +388,8 @@
                             android:layout_width="104dp"
                             android:layout_height="90dp"
                             android:background="@drawable/ic_grupo_conint"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            />
 
                         <TextView
                             android:layout_width="90dp"
@@ -378,7 +400,8 @@
                             android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            />
 
                         <TextView
                             android:id="@+id/conintavance"
@@ -388,8 +411,8 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
-
+                            android:textSize="12dp"
+                            />
                     </LinearLayout>
 
                     <!--Availability-->
@@ -404,7 +427,8 @@
                         <LinearLayout
                             android:layout_width="95dp"
                             android:layout_height="90dp"
-                            android:background="@drawable/ic_grupo_availa" />
+                            android:background="@drawable/ic_grupo_availa"
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -414,7 +438,8 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/availAvance"
@@ -424,7 +449,8 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -434,9 +460,10 @@
                     android:layout_height="220dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
-                    <!--Structures-->
+                    android:orientation="horizontal"
+                    >
 
+                    <!--Structures-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="202dp"
@@ -447,9 +474,10 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="84dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/ic_grupo_chatconmaestro" />
+                            android:background="@drawable/ic_grupo_chatconmaestro"
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -459,7 +487,8 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/transavance"
@@ -469,7 +498,8 @@
                             android:text="Score: 00"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            />
 
                         <TextView
                             android:id="@+id/transtdr"
@@ -479,16 +509,11 @@
                             android:text="Tiempo de respuesta promedio: 2.4 segundos"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="10dp" />
-
-
+                            android:textSize="10dp"
+                            />
                     </LinearLayout>
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 
@@ -502,7 +527,8 @@
         android:layout_marginTop="10dp"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <LinearLayout
             android:layout_width="40dp"
@@ -521,7 +547,9 @@
         android:background="@color/white"
         android:orientation="vertical"
         android:visibility="gone"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -529,6 +557,7 @@
             android:orientation="vertical"
             android:paddingVertical="20dp"
             >
+
             <!--Otros Temas-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -536,6 +565,7 @@
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal"
                 >
+
                 <TextView
                     android:id="@+id/itemName"
                     android:layout_width="match_parent"
@@ -557,8 +587,8 @@
                 android:backgroundTint="#E53935"
                 android:background="@drawable/boton_redondeado"
                 android:onClick="logout"
-                android:text="Logout" />
-
+                android:text="Logout"
+                />
         </LinearLayout>
     </LinearLayout>
 
@@ -571,7 +601,8 @@
         android:orientation="vertical"
         android:elevation="5dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"

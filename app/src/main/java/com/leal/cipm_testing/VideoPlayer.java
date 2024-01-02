@@ -207,170 +207,158 @@ public class VideoPlayer extends Fragment {
         }
 
         if(currenttxt.contains("Estructura2023")){
-
             switch (selection) {
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/structurastut.mp4");
                     break;
+
+                    //PRESENT
                 case "Present Simple":
                     ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F4.%20Presente%20simple.mp4?alt=media&token=0e482b5a-9c5b-42bc-928f-0ace6cf5fb16");
                     break;
-
                 case "Present Continuous":
                     ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F5.%20Presente%20continuo.mp4?alt=media&token=833c19a7-b7a6-490a-878b-3268c35bfaa1");
                     break;
-
                 case "Present Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/presenteperfecto.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F6.%20Presente%20Perfecto.mp4?alt=media&token=b4165290-0432-4c5f-88ec-d67010502d0b");
                     break;
-
                 case "Present Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/presenteperfectoconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F7.%20Presente%20Perfecto%20Continuo.mp4?alt=media&token=2c3142b8-4446-40b4-82c7-1e9a3cea7ad9");
                     break;
 
+                //PAST
                 case "Past Simple":
-                    ShowVideo("https://adrianlealcaldera.com/pasadosimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F9.%20Pasado%20simple.mp4?alt=media&token=a1f5c158-5c9e-4733-9d72-08903454c41c");
                     break;
-
                 case "Past Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/pasadocont.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F10.%20Pasado%20continuo.mp4?alt=media&token=7eb20736-5434-4184-bc4f-e94ac0427570");
                     break;
-
                 case "Past Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/pasadoperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F11.%20Pasado%20perfecto.mp4?alt=media&token=370783d1-b71b-40a2-91e4-e83b244cb358");
                     break;
-
                 case "Past Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/pasadoperfcon.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F12.%20Pasado%20perfecto%20continuo.mp4?alt=media&token=7be7b5b3-6c07-4631-9d05-fb678fa3e8f3");
                     break;
 
+                //FUTURE
                 case "Future Simple":
-                    ShowVideo("https://adrianlealcaldera.com/futurosimp1.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Future Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/futuroconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
-
                 case "Future Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/futuroperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
                     break;
-
                 case "Future Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/futuroperfcon.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //MODAL WOILD
                 case "Would Simple":
-                    ShowVideo("https://adrianlealcaldera.com/wouldsimp.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Would Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/wouldconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
-
                 case "Would Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/wouldperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
+                    break;
+                case "Would Perfect Continuous":
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //MODAL COULD
                 case "Could Simple":
-                    ShowVideo("https://adrianlealcaldera.com/couldsimp.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Could Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/couldconti.mp4");
-                    Toast.makeText(getContext(), "El could continuous empieza en el minuto 5", Toast.LENGTH_SHORT).show();
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
-
                 case "Could Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/couldperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
                     break;
-
                 case "Could Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/couldperf.mp4");
-                    Toast.makeText(getContext(), "El could perfect continuous empieza en el minuto 5:31", Toast.LENGTH_SHORT).show();
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //MODAL MIGHT
                 case "Might Simple":
-                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Might Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
-
                 case "Might Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
                     break;
-
                 case "Might Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //MODAL SHOULD
                 case "Should Simple":
-                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Should Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
                 case "Should Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
                     break;
-
                 case "Should Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //MODAL CAN
                 case "Can Simple":
-                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Can Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
 
+                //MODAL MUST
                 case "Must Simple":
-                    ShowVideo("https://adrianlealcaldera.com/modalsimple.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F13.%20Modal%20simple.mp4?alt=media&token=a18ea82e-7f10-45a2-abdf-e97f98a07181");
                     break;
-
                 case "Must Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalconti.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F14.%20Modal%20continuo.mp4?alt=media&token=9a111eac-b885-4e11-8b93-32e6ead8d78b");
                     break;
-
                 case "Must Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/modalperf.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F15.%20Modal%20perfecto.mp4?alt=media&token=5d6c8a67-afe1-421b-8658-7b21ca8b7bce");
                     break;
-
                 case "Must Perfect Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/modalperfcont.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F16.%20Modal%20perfecto%20continuo.mp4?alt=media&token=131d9da0-14c4-419c-a21a-772022cc82e6");
                     break;
 
+                //WANT TO
                 case "Want To":
-                    ShowVideo("https://adrianlealcaldera.com/WantTo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F29.%20Want%20you%20to.mp4?alt=media&token=2e655d45-22ac-4074-b4f2-9a9c26922f0d");
                     break;
 
+                //FOR TO
                 case "For To":
-                    ShowVideo("https://adrianlealcaldera.com/ForTo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F31.%20For%20me%20to.mp4?alt=media&token=cac7511a-b8be-4f20-aad3-2d6fb16a57d9");
                     break;
 
+                //WISH
                 case "Wish Past Simple":
-                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F30.%20Wish.mp4?alt=media&token=6ad3331d-505f-424a-ad0c-bb6025f5b780");
                     break;
-
                 case "Wish Past Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F30.%20Wish.mp4?alt=media&token=6ad3331d-505f-424a-ad0c-bb6025f5b780");
                     break;
-
                 case "Wish Would":
-                    ShowVideo("https://adrianlealcaldera.com/WishPast.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F30.%20Wish.mp4?alt=media&token=6ad3331d-505f-424a-ad0c-bb6025f5b780");
                     break;
 
+                //USED TO
                 case "Used To":
-                    ShowVideo("https://adrianlealcaldera.com/UsedTo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F26.%20Used%20to.mp4?alt=media&token=a07713a0-1ed4-4904-bf85-9b48eb830b37");
                     break;
-
                 case "Be Used To":
-                    ShowVideo("https://adrianlealcaldera.com/UsedTo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F26.%20Used%20to.mp4?alt=media&token=a07713a0-1ed4-4904-bf85-9b48eb830b37");
                     break;
 
                 case "Incremento Paralelo":
@@ -385,192 +373,172 @@ public class VideoPlayer extends Fragment {
                     ShowVideo("https://adrianlealcaldera.com/reportedspeech.mp4");
                     break;
 
+                //QUESTIONS WITH WHAT
                 case "What Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "What Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "What Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "What Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "What Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "What Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH WHEN
                 case "When Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "When Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "When Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "When Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "When Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "When Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH WHERE
                 case "Where Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Where Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Where Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Where Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Where Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Where Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH WHY
                 case "Why Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Why Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Why Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Why Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Why Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Why Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH WHO
                 case "Who Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Who Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Who Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Who Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Who Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "Who Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH HOW
                 case "How Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH HOW MUCH
                 case "How Much Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Much Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Much Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Much Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Much Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Much Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
+                //QUESTIONS WITH HOW MANY
                 case "How Many Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Many Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Many Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Many Modals Simple":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
-
                 case "How Many Modals Continuous":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
+                    break;
+                case "How Many Modals Perfect":
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
-                case "How Many Modals Perfect":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
-                    break;
+                //QUESTIONS STRUCTURE RANDOM
                 case "Question Structure":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
                 case "Question Structure Modals":
-                    ShowVideo("https://adrianlealcaldera.com/EstructuraPregunta.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F34.%20Estructura%20de%20preguntas.mp4?alt=media&token=4fe8ca31-280c-4e69-bb47-901b7c54996d");
                     break;
 
                 case "Feel Like Simple":
@@ -580,7 +548,7 @@ public class VideoPlayer extends Fragment {
                     ShowVideo("https://adrianlealcaldera.com/phrasalverbs.mp4");
                     break;
                 case "Supposed To Present":
-                    ShowVideo("https://adrianlealcaldera.com/SupposedTo.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F28.%20Supposed%20to.mp4?alt=media&token=ad82d175-3583-4efa-9a09-316f40b56208");
                     break;
                 case "Able To":
                     ShowVideo("https://adrianlealcaldera.com/ableto.mp4");
@@ -595,23 +563,23 @@ public class VideoPlayer extends Fragment {
                     break;
 
                 case "Por Preposición":
-                    ShowVideo("https://adrianlealcaldera.com/intporprep.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F36.%20Interferencia%20por%20preposici%C3%B3n.mp4?alt=media&token=163ff6e6-b737-4fb8-8cde-c33e0bba07a8");
                     break;
 
                 case "Por Sujeto":
-                    ShowVideo("https://adrianlealcaldera.com/porsujetoreducidotamano.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F37.%20Interferencia%20por%20verbo.mp4?alt=media&token=372612cc-668c-410e-90e3-2ae06a44dd1f");
                     break;
 
                 case "Por Objeto":
-                    ShowVideo("https://adrianlealcaldera.com/porobjreducida.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F38.%20Interferencia%20de%20objeto.mp4?alt=media&token=21bab41d-eb20-4c67-bffd-128484c4630c");
                     break;
 
                 case "Interferencia Reflexiva":
-                    ShowVideo("https://adrianlealcaldera.com/reflx.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F39.%20Interferencias%20reflexivas.mp4?alt=media&token=2d50912f-a232-4ca5-b89a-3aafc678e418");
                     break;
 
                 case "Interferencia Pasiva":
-                    ShowVideo("https://adrianlealcaldera.com/pasiva.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F40.%20Interferencias%20pasivas.mp4?alt=media&token=890f35ff-c3e7-4a29-9d14-eedc500c999e");
                     break;
 
             }
@@ -705,18 +673,23 @@ public class VideoPlayer extends Fragment {
                 case "Nivel Basico":
                     ShowVideo("https://adrianlealcaldera.com/basico.mp4");
                     break;
+
                 case "Nivel No-Basicas":
                     ShowVideo("https://adrianlealcaldera.com/no-basico.mp4");
                     break;
+
                 case "Nivel Interferencias":
                     ShowVideo("https://adrianlealcaldera.com/interferncia.mp4");
                     break;
+
                 case "Test":
                     ShowVideo("https://adrianlealcaldera.com/examenexpl.mp4");
                     break;
+
                 case "Tutorial":
                     ShowVideo("https://adrianlealcaldera.com/vocabtut.mp4");
                     break;
+
                 case "0 to 50":
                     if(user.isAnonymous()){
                         ShowVideo("https://adrianlealcaldera.com/presentesimple.mp4");
@@ -725,37 +698,29 @@ public class VideoPlayer extends Fragment {
                     }
 
                     break;
-
                 case "50 to 100":
-                    ShowVideo("https://adrianlealcaldera.com/51a100.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F42.%20Vocabulario%2051%20-%20100.mp4?alt=media&token=4ecf44db-09a1-4341-b3e6-7a26c4e3ff8c");
                     break;
-
                 case "100 to 150":
-                    ShowVideo("https://adrianlealcaldera.com/100a150.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F43.%20Vocabulario%20101%20-%20200.mp4?alt=media&token=532b6e14-6ef5-41d7-822f-d6765c9526f7");
                     break;
-
                 case "150 to 200":
-                    ShowVideo("https://adrianlealcaldera.com/151-200.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F43.%20Vocabulario%20101%20-%20200.mp4?alt=media&token=532b6e14-6ef5-41d7-822f-d6765c9526f7");
                     break;
-
                 case "200 to 250":
-                    ShowVideo("https://adrianlealcaldera.com/200a250.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F44.%20Vocabulario%20201%20-%20250.mp4?alt=media&token=1ffddef4-eb31-4b3b-8c99-68e72822e09b");
                     break;
-
                 case "250 to 300":
-                    ShowVideo("https://adrianlealcaldera.com/250a300.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F45.%20Vocabulario%20251%20-%20300.mp4?alt=media&token=a88a2564-86d7-4267-86dd-c53e3118ce48");
                     break;
-
                 case "300 to 350":
-                    ShowVideo("https://adrianlealcaldera.com/300-350.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F46.%20Vocabulario%20301%20-%20350.mp4?alt=media&token=6cc9bc56-9c83-4530-973d-cd5239012a05");
                     break;
-
                 case "350 to 400":
-                    ShowVideo("https://adrianlealcaldera.com/350a400bq.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F47.%20Vocabulario%20351%20-%20400.mp4?alt=media&token=e54e1d01-8b40-452a-bdef-2ea834430dd2");
                     break;
-
                 case "400 to 500":
-                    ShowVideo("https://adrianlealcaldera.com/400a500lq.mp4");
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F48.%20Vocabulario%20401%20-%20500.mp4?alt=media&token=94715e42-f0a4-411b-ab3e-b181dd0104f4");
                     break;
 
 
