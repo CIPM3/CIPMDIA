@@ -10,6 +10,26 @@ public class AudioItem {
     // Constructor, getters and setters
     private Runnable timerRunnable;
 
+    private int type;
+    private String listeningUrl;
+
+
+    public String getListeningUrl() {
+        return listeningUrl;
+    }
+
+    public void setListeningUrl(String listeningUrl) {
+        this.listeningUrl = listeningUrl;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     public Runnable getTimerRunnable() {
         return timerRunnable;
     }
@@ -37,12 +57,22 @@ public class AudioItem {
     public AudioItem() {
     }
 
-    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath) {
+    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type) {
         this.question = question;
         this.isRecorded = isRecorded;
         this.recordingTimer = recordingTimer;
         this.feedback = feedback;
         this.audioFilePath= audioFilePath;
+        this.type= type;
+    }
+    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type,String listeningUrl) {
+        this.question = question;
+        this.isRecorded = isRecorded;
+        this.recordingTimer = recordingTimer;
+        this.feedback = feedback;
+        this.audioFilePath= audioFilePath;
+        this.type= type;
+        this.listeningUrl= listeningUrl;
     }
     public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback) {
         this.question = question;

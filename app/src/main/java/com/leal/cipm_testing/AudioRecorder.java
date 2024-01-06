@@ -16,7 +16,6 @@ public class AudioRecorder {
     public void startRecording() {
         if (mediaRecorder == null) {
             mediaRecorder = new MediaRecorder();
-
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
             mediaRecorder.setOutputFile(audioFilePath);

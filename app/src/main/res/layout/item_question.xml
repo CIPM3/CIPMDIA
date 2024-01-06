@@ -18,19 +18,24 @@
         android:layout_marginBottom="8dp"/>
 
     <!-- Checkmark Image -->
-    <ImageView
-        android:id="@+id/imgCheckmark"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_grupo_check"
-        android:visibility="gone"/>
-
+    <Button
+        android:id="@+id/btnplaytoefl"
+        android:drawableLeft="@drawable/baseline_hearing_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listen"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:onClick="startRecording"
+        android:background="@drawable/boton_redondeado_azul"
+        android:layout_marginRight="16dp"/>
     <!-- Horizontal Layout for Record Button and Timer -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
+
 
         <!-- Record Button -->
         <Button

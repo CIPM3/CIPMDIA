@@ -23,6 +23,8 @@ import java.util.Locale;
 
 public class AudioItemAdapter extends RecyclerView.Adapter<AudioItemAdapter.AudioItemViewHolder> {
     private List<AudioItem> audioItems;
+    AudioRecorder audioRecorder;
+    ToeflSpeaking toeflspk = new ToeflSpeaking() ;
     private Handler timerHandler = new Handler();
     FirebaseUploader firebaseUploader = new FirebaseUploader();
     FirebaseAuth mAuth= FirebaseAuth.getInstance();
@@ -39,34 +41,68 @@ public class AudioItemAdapter extends RecyclerView.Adapter<AudioItemAdapter.Audi
     public AudioItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_question, parent, false);
         return new AudioItemViewHolder(view);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull AudioItemViewHolder holder, int position) {
         AudioItem item = audioItems.get(position);
-        holder.tvQuestion.setText(item.getQuestion());
-        holder.imgCheckmark.setVisibility(item.isRecorded() ? View.VISIBLE : View.GONE);
-        holder.tvRecordingTimer.setText(item.getRecordingTimer());
-        holder.tvFeedback.setText(item.getFeedback());
-        audioRecorder=  new AudioRecorder(item.getAudioFilePath());
-        holder.btnRecord.setOnClickListener(v -> {
-            if (!item.isRecording()) {
-                // Start recording
-                startRecording(item, holder.tvRecordingTimer, audioRecorder);
 
-                holder.btnRecord.setText("Stop Recording");
+       if(item.getType() == 1){
+           holder.btnlisten.setVisibility(View.VISIBLE);
 
-            } else {
-                // Stop recording
-                stopRecording(item, holder.tvRecordingTimer, audioRecorder);
-                holder.btnRecord.setText("Record");
-            }
-        });
-        holder.playback.setOnClickListener(v -> {
-            playAudio(item.getAudioFilePath());
-        });
+           holder.tvQuestion.setText(item.getQuestion());
+           holder.tvRecordingTimer.setText(item.getRecordingTimer());
+           holder.tvFeedback.setText(item.getFeedback());
+           audioRecorder=  new AudioRecorder(item.getAudioFilePath());
+           holder.btnRecord.setOnClickListener(v -> {
+               if (!item.isRecording()) {
+                   // Start recording
+                   startRecording(item, holder.tvRecordingTimer, audioRecorder);
+                   holder.btnRecord.setText("Stop Recording");
+
+               } else {
+                   // Stop recording
+                   stopRecording(item, holder.tvRecordingTimer, audioRecorder);
+                   holder.btnRecord.setText("Record");
+
+               }
+           });
+           holder.playback.setOnClickListener(v -> {
+               toeflspk.playAudio(item.getAudioFilePath());
+           });
+           holder.btnlisten.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   toeflspk.playAudio(item.getListeningUrl());
+               }
+           });
+       }else {
+           holder.btnlisten.setVisibility(View.GONE);
+           holder.tvQuestion.setText(item.getQuestion());
+           holder.tvRecordingTimer.setText(item.getRecordingTimer());
+           holder.tvFeedback.setText(item.getFeedback());
+           audioRecorder=  new AudioRecorder(item.getAudioFilePath());
+           holder.btnRecord.setOnClickListener(v -> {
+               if (!item.isRecording()) {
+                   // Start recording
+                   startRecording(item, holder.tvRecordingTimer, audioRecorder);
+
+                   holder.btnRecord.setText("Stop Recording");
+
+               } else {
+                   // Stop recording
+                   stopRecording(item, holder.tvRecordingTimer, audioRecorder);
+                   holder.btnRecord.setText("Record");
+               }
+           });
+           holder.playback.setOnClickListener(v -> {
+              toeflspk.playAudio(item.getAudioFilePath());
+           });
+       }
+
     }
-    AudioRecorder audioRecorder;
+
     private void startRecording(AudioItem item ,TextView tvRecordingTimer, AudioRecorder audioRecorder) {
 
         audioRecorder.startRecording();
@@ -133,21 +169,7 @@ public class AudioItemAdapter extends RecyclerView.Adapter<AudioItemAdapter.Audi
                     });
         }
     }
-    private void playAudio(String audioFilePath) {
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        try {
-            mediaPlayer.setDataSource(audioFilePath);
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle exceptions
-        }
 
-        mediaPlayer.setOnCompletionListener(mp -> {
-            mediaPlayer.release();
-        });
-    }
 
     @Override
     public int getItemCount() {
@@ -156,19 +178,30 @@ public class AudioItemAdapter extends RecyclerView.Adapter<AudioItemAdapter.Audi
 
     public static class AudioItemViewHolder extends RecyclerView.ViewHolder {
         TextView tvQuestion;
-        ImageView imgCheckmark;
-        Button btnRecord,playback;
+
+        Button btnRecord,playback,btnlisten;
         TextView tvRecordingTimer;
         TextView tvFeedback;
 
         public AudioItemViewHolder(@NonNull View itemView) {
             super(itemView);
             tvQuestion = itemView.findViewById(R.id.tvQuestionItem);
-            imgCheckmark = itemView.findViewById(R.id.imgCheckmark);
+            btnlisten = itemView.findViewById(R.id.btnplaytoefl);
             btnRecord = itemView.findViewById(R.id.btnRecord);
             tvRecordingTimer = itemView.findViewById(R.id.tvRecordingTimer);
             tvFeedback = itemView.findViewById(R.id.tvFeedback);
             playback = itemView.findViewById(R.id.btnplayback);
+
+
+        }
+    }
+
+    public void stopAllAudioPlayback() {
+
+        // Logic to stop MediaPlayer
+        if (toeflspk.mediaPlayer != null && toeflspk.mediaPlayer.isPlaying()) {
+            toeflspk.mediaPlayer.stop();
+            toeflspk.mediaPlayer.release();
         }
     }
 
