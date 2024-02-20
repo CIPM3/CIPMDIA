@@ -32,6 +32,44 @@ public class Generator  {
     String primerysegun[] = {"yo ", "tú "};
     String pronombresineso[] = {"yo ", "tú ", "él ", "ella ", "ellos ", "nosotros "};
 
+    String[] infinitives = {
+            "to be ", "to have ", "to do ", "to say ", "to go ",
+            "to get ", "to make ", "to know ", "to think ", "to take ",
+            "to see ", "to come ", "to want ", "to look ", "to use ",
+            "to find ", "to give ", "to tell", "to work ", "to call",
+            "to try ", "to ask ", "to need ", "to feel", "to become ",
+            "to leave ", "to put ", "to mean ", "to keep ", "to let ",
+            "to begin ", "to seem ", "to help ", "to talk ", "to turn ",
+            "to start ", "to show ", "to hear ", "to play ", "to run ",
+            "to move ", "to like ", "to live ", "to believe ", "to hold ",
+            "to bring ", "to happen ", "to write ", "to provide ", "to sit "
+    };
+
+    String[] equivalentesEnEspañol = {
+            "ser/estar ", "tener ", "hacer ", "decir ", "ir ",
+            "conseguir ", "hacer ", "saber/conocer ", "pensar ", "tomar ",
+            "ver ", "venir ", "querer ", "mirar ", "usar ",
+            "encontrar ", "dar ", "decir ", "trabajar ", "llamar ",
+            "intentar ", "preguntar ", "necesitar ", "sentir ", "convertirse ",
+            "dejar ", "poner ", "significar ", "mantener ", "dejar ",
+            "empezar ", "parecer ", "ayudar ", "hablar ", "girar ",
+            "empezar ", "mostrar ", "oír ", "jugar ", "correr ",
+            "mover ", "gustar ", "vivir ", "creer ", "sostener ",
+            "traer ", "suceder ", "escribir ", "proporcionar ", "sentarse "
+    };
+
+
+    String eng,ob;
+    public void GenInfinitives() {
+        Random random = new Random();
+        int index = random.nextInt(infinitives.length); // Generates a random index within the bounds of the array
+
+        // Assigning the infinitive verb in Spanish and its English equivalent
+         eng = infinitives[index];
+         ob = equivalentesEnEspañol[index];
+
+        // Here you can use 'ob' and 'eng' as needed
+    }
 
     // verbos intransitivos base top 100, verbos que pueden ser usados como intrans
     // we just want to stick a prepositional phrase next to them
@@ -235,11 +273,11 @@ public class Generator  {
                     "un carro ", "un reloj ", "un teléfono ", "un televisor ","una mujer ","un bebé "
             },
             {
-                    "la familia", "la esposa",
-                    "el niño ", "el doctor", "el bebé", "el bibliotecario",
-                    "la mujer", "el dentista", "el cartero", "el bombero",
-                    "la enfermera", "el gerente", "el jefe", "el maestro",
-                    "el padre", "la madre"}
+                    "la familia ", "la esposa ",
+                    "el niño ", "el doctor ", "el bebé", "el bibliotecario ",
+                    "la mujer ", "el dentista ", "el cartero ", "el bombero ",
+                    "la enfermera ", "el gerente ", "el jefe ", "el maestro ",
+                    "el padre ", "la madre "}
     };
 
 
@@ -257,7 +295,7 @@ public class Generator  {
     public void GenPresSimp1() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif1.length);
-        String verb = verbDif1[verbRand];
+        String verb = "Nobles ";
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -14089,7 +14127,7 @@ gene2 = o.ps5eng2;
     public void GenPresSimp2() {
         int rand = (int) (Math.random() * pronombres.length);
         int verbRand = (int) (Math.random() * verbDif2.length);
-        String verb = verbDif2[verbRand];
+        String verb = "Nobles ";
         String temp = pronombres[rand];
         switch (temp) {
             case "yo ":
@@ -77804,4 +77842,6 @@ gene2 = o.ps1eng2;
                 break;
         }
 }
+
+
 }

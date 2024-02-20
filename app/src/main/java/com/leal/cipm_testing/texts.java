@@ -2,6 +2,109 @@ package com.leal.cipm_testing;
 
 public class texts {
 
+    public String toBeDef = "El verbo \"to be\" es uno de los verbos más básicos y versátiles en inglés, funcionando como verbo principal para expresar existencia, identidad, características y estado. Se conjuga de forma única según el sujeto y el tiempo verbal. En presente, las formas son \"am\", \"is\", y \"are\"; en pasado, \"was\" y \"were\". No tiene un equivalente directo único en español, ya que se traduce como \"ser\" o \"estar\", dependiendo del contexto.";
+    public String theDef= "El artículo \"the\" en inglés es definido y se usa para referirse a algo específico conocido por el hablante y el oyente. No tiene género ni número, a diferencia del español, que ajusta el artículo al género y número del sustantivo. En inglés, \"the\" se usa con sustantivos singulares y plurales de ambos géneros, pero no se usa para conceptos generales, a diferencia de español. Por ejemplo, decimos \"I go to school\" para hablar de ir a la escuela en general, sin \"the\". \"The\" simplifica el uso pero no distingue género ni número.";
+
+    public String andDef = "La conjunción \"and\" en inglés se utiliza para conectar palabras, frases o cláusulas que están al mismo nivel gramatical, indicando adición, relación o secuencia. Es equivalente al \"y\" en español y se usa para unir elementos similares, como en listas, o para añadir información complementaria. Su uso es fundamental en la construcción de oraciones complejas, permitiendo combinar ideas de manera coherente y fluida sin repetir estructuras gramaticales innecesariamente.";
+    public String ofDef = "La preposición \"of\" en inglés se usa para indicar pertenencia, origen, composición, relación o referencia. Es una de las preposiciones más comunes y versátiles, empleada para conectar nombres y mostrar una variedad de relaciones semánticas entre ellos. Por ejemplo, se utiliza en expresiones como \"the color of the sky\" para hablar del color asociado con el cielo, o \"a piece of cake\" para referirse a una parte de un pastel. No tiene un equivalente único en español, ya que su traducción depende del contexto específico.";
+    public String aDef = "El artículo \"a\" en inglés es un artículo indefinido utilizado antes de sustantivos contables en singular cuando no se refieren a un objeto específico. Se usa \"a\" en lugar de \"an\" cuando la palabra siguiente comienza con un sonido consonántico. Sirve para introducir un nuevo elemento a la conversación que no es conocido por el oyente. Por ejemplo, en \"I saw a cat in the street\", el uso de \"a\" indica que se trata de un gato no específico. No tiene género ni número y su uso es fundamental para la construcción de oraciones en inglés.";
+    public String inDef = "La preposición \"in\" en inglés indica ubicación o estado dentro de algo, ya sea físico o conceptual. Se utiliza para referirse a lugares ('in the room'), momentos dentro de periodos de tiempo ('in December'), y para indicar inclusión dentro de un grupo o categoría ('in the list'). Es fundamental para expresar contextos de tiempo, lugar y pertenencia, mostrando la relación de algo con su entorno o periodo.";
+
+    public String toInfinitiveDef = "\"To\" es una parte esencial de los infinitivos en inglés, utilizada para expresar propósito, intención, o destino. Precede al verbo base y forma el infinitivo, como en 'to run', 'to eat', o 'to sleep'. Los infinitivos pueden funcionar como sustantivos, adjetivos, o adverbios en la oración, y el uso de \"to\" ayuda a identificar el verbo en su forma infinitiva, indicando propósito o intención.";
+
+    public String haveDef = "\"Have\" es un verbo auxiliar y principal en inglés que indica posesión, experiencia, necesidad o acciones relacionadas. Como auxiliar, es parte de los tiempos perfectos, por ejemplo, 'I have seen it'. Como verbo principal, expresa posesión o necesidad, como en 'I have a car' o 'I have to go'. Su uso es variado y esencial en la estructura de muchos tiempos verbales y expresiones en inglés.";
+    public String herDef = "\"Her\" es un pronombre personal y posesivo en inglés que se refiere a una persona del género femenino. Como pronombre personal, funciona como objeto de un verbo o preposición ('I saw her'). Como posesivo ('her book'), indica que algo pertenece a una mujer o niña previamente mencionada. 'Her' enfatiza la relación de pertenencia o la identidad de la persona en contexto femenino.";
+    public String makeDef = "\"Make\" es un verbo en inglés que implica la creación, construcción o producción de algo ('make a cake'), causar que algo suceda ('make someone happy'), o forzar una acción ('make him do it'). 'Make' es extremadamente versátil, utilizado en una amplia gama de expresiones idiomáticas y frases verbales ('make up', 'make out', 'make of'). Es fundamental para hablar sobre procesos creativos, causación y obligación.";
+    public String asPrepositionDef = "\"As\" como preposición en inglés se usa para indicar roles, funciones o estados ('He works as a teacher'), comparaciones de igualdad ('Serve it as is'), o en expresiones de tiempo ('As a child, I loved to read'). 'As' establece una relación específica entre dos elementos, describiendo la función, condición, o manera en que se considera a una persona o cosa en un contexto particular.";
+    public String aboutDef = "\"About\" es una preposición en inglés que se utiliza para hablar de temas ('talk about the weather'), aproximaciones ('about 5 o’clock'), localizaciones generales ('around/about here'), y preocupaciones ('worried about you'). 'About' es versátil, indicando relación con un tema, aproximación numérica o temporal, y dirección de atención o interés.";
+
+    public String myDef = "\"My\" es un pronombre posesivo en inglés que indica propiedad o relación de pertenencia con el hablante ('my book', 'my idea'). Se usa para hablar de algo que está relacionado directamente con el hablante, enfatizando la conexión personal y la posesión. 'My' es fundamental para expresar pertenencia personal en una variedad de contextos.";
+
+    public String knowDef = "\"Know\" es un verbo en inglés que se refiere a estar informado o ser consciente de algo a través de la experiencia, el aprendizaje o la percepción ('know the truth', 'know how to swim'). Puede implicar comprensión profunda o familiaridad con personas, hechos, o información. 'Know' es clave para expresar conocimiento, entendimiento, y conciencia.";
+
+    public String toPrepositionDef = "La preposición \"to\" en inglés indica dirección hacia un lugar, punto en el tiempo o relación con algo. Se usa en expresiones de movimiento, dirección ('go to the store'), finalidad ('close to finishing'), y como parte de expresiones verbales ('listen to music'). Diferente del \"to\" de los infinitivos, esta preposición conecta ideas mostrando destino, dirección o relación.";
+    public String howDef = "\"How\" es un adverbio interrogativo en inglés que se utiliza para preguntar sobre la manera o condición en la que ocurre algo o la calidad de algo. Puede iniciar preguntas directas como 'How are you?' o indirectas como 'Can you tell me how it works?'. También se usa en exclamaciones para expresar sorpresa o admiración, por ejemplo, 'How beautiful!'. Su uso es esencial para formular preguntas sobre métodos, maneras, condiciones o grados.";
+
+    public String itDef = "\"It\" es un pronombre personal en inglés que se utiliza para referirse a un objeto, situación, fenómeno o animal cuando el género no es humano o es desconocido. Funciona como sujeto ('It is raining'), objeto ('I saw it') o complemento. 'It' también se usa en expresiones impersonales que no se refieren a un objeto específico, como 'it is important to note'. Es uno de los pronombres más comunes en inglés.";
+
+    public String iDef = "\"I\" es el pronombre personal en inglés que se utiliza para referirse al hablante. Siempre se escribe en mayúscula, independientemente de su posición en la oración. Es un pronombre de sujeto, usado para indicar quién realiza la acción del verbo, por ejemplo, 'I think', 'I go', 'I am'. Representa la primera persona del singular y es fundamental para expresar opiniones, acciones o estados del hablante.";
+
+    public String thatConnectorDef = "\"That\" como conector en inglés se utiliza para introducir cláusulas subordinadas que funcionan como complemento de objeto o sujeto, y en algunos casos, como complemento de adjetivo. Ejemplos incluyen 'I said that I would go', 'The idea that you proposed is interesting'. También puede funcionar para especificar o enfatizar en frases como 'That book over there'. Su uso es clave para unir ideas y clarificar relaciones entre oraciones.";
+
+    public String forDef = "La preposición \"for\" en inglés se usa para indicar propósito, beneficiario, duración o motivo. Ejemplos incluyen 'for you', 'for a walk', 'for two hours', 'for being late'. Es versátil, conectando acciones, objetos y personas con sus propósitos o razones, y es fundamental en expresiones de tiempo, motivo, y destinatario.";
+
+    public String youDef = "\"You\" es el pronombre personal en inglés que se refiere al oyente o lectores. Puede ser singular o plural, dependiendo del contexto, pero la forma es la misma. Se usa tanto como sujeto ('You are') como objeto ('I see you'). 'You' es universal para dirigirse a cualquier persona o grupo de personas, haciéndolo uno de los pronombres más usados en inglés.";
+    public String heDef = "\"He\" es un pronombre personal en inglés que se refiere a un sujeto masculino previamente mencionado o conocido. Se usa para evitar la repetición del nombre del sujeto y puede funcionar como sujeto de una oración ('He is talking') o como objeto de un verbo o preposición ('I saw him'). Es específico de género y se utiliza únicamente para referirse a hombres o varones.";
+
+    public String withDef = "La preposición \"with\" en inglés indica acompañamiento, posesión, uso, o relación. Se usa para expresar que algo o alguien está en compañía de otro ('with her friend'), posee una característica ('the man with blue eyes'), o se utiliza para realizar una acción ('write with a pen'). 'With' es fundamental para describir conexiones y relaciones entre personas, objetos y acciones.";
+
+    public String onDef = "\"On\" es una preposición en inglés que se usa para indicar la posición de algo sobre una superficie ('on the table'), la proximidad y posición sobre algo ('on the wall'), o el uso de dispositivos o máquinas ('on the computer'). También se utiliza para indicar días y fechas en los que ocurren eventos ('on Monday'). 'On' es esencial para especificar ubicaciones, momentos en el tiempo y estados de operación.";
+
+    public String doDef = "\"Do\" es un verbo auxiliar y principal en inglés. Como verbo principal, significa realizar una acción ('I do my homework'). Como auxiliar, se usa para formar preguntas ('Do you know?'), negaciones ('I do not understand'), y énfasis ('I do want to go'). 'Do' es crucial en la estructura gramatical inglesa para formar diferentes tiempos verbales y modos interrogativos o negativos.";
+
+    public String possessiveSDef = "El apóstrofo seguido de 's' ('s) en inglés se utiliza para indicar posesión. Se agrega al final del nombre del poseedor, seguido de la 's', para mostrar que algo pertenece a alguien o algo ('John's book', 'the dog's bone'). En el caso de nombres propios que terminan en 's', la posesión todavía se puede formar añadiendo 's ('James's car') o solo el apóstrofo ('James' car'), dependiendo del estilo de escritura.";
+    public String sayDef = "\"Say\" es un verbo en inglés que significa expresar en palabras, mencionar o declarar. Se utiliza tanto en discurso directo ('say \"hello\"') como indirecto ('say that you are sorry'). Es fundamental para reportar conversaciones y transmitir información o pensamientos.";
+
+    public String theyDef = "\"They\" es un pronombre personal en inglés que se refiere a dos o más personas, animales o cosas. Se usa para hablar de un grupo sin especificar el género y puede funcionar como sujeto ('They are here') o como objeto ('I saw them'). 'They' también se utiliza como pronombre singular neutro para referirse a una persona cuyo género no se conoce o no se quiere especificar.";
+
+    public String thisDef = "\"This\" es un demostrativo en inglés que se refiere a una persona, lugar, objeto o idea que está cerca del hablante en términos de distancia o tiempo. Se utiliza en singular ('this book') para identificar de manera específica y cercana. 'This' ayuda a señalar y especificar algo en un contexto inmediato.";
+
+    public String butDef = "\"But\" es una conjunción en inglés que introduce una idea contraria o una excepción a lo que se ha mencionado anteriormente. Se usa para conectar frases o cláusulas que muestran contraste ('I wanted to go, but it was raining'). 'But' es esencial para expresar oposición o limitación en argumentos o narrativas.";
+
+    public String atDef = "\"At\" es una preposición en inglés que indica ubicación o punto específico en el tiempo. Se utiliza para referirse a lugares concretos ('at the station'), momentos específicos ('at 5 o'clock'), y actividades ('at a concert'). 'At' es clave para señalar precisiones en contextos espaciales o temporales.";
+
+    public String weDef = "\"We\" es un pronombre personal en inglés que se refiere al hablante más otra u otras personas. Es la forma de primera persona del plural y se utiliza para hablar de un grupo que incluye al hablante ('We are ready'). 'We' expresa inclusión y participación colectiva.";
+
+    public String hisDef = "\"His\" es un pronombre posesivo en inglés que indica que algo pertenece a un hombre o varón previamente mencionado. Se utiliza sin el artículo ('His book is on the table'). 'His' especifica posesión y asociación con un sujeto masculino.";
+
+    public String fromDef = "\"From\" es una preposición en inglés que indica el punto de inicio de un movimiento, origen, o diferencia. Se usa para expresar el comienzo de un rango de tiempo o lugar ('from Monday to Friday'), el origen ('from Spain'), o la distinción ('different from'). 'From' marca el inicio o la separación.";
+
+    public String thatDeterminerDef = "\"That\" como determinante en inglés se utiliza para señalar a una persona, lugar, objeto o idea específicos que están lejos del hablante, en contraste con 'this'. Se usa en singular o plural ('that book', 'those books') para especificar de manera distante. 'That' ayuda a enfocar la atención en algo mencionado previamente o conocido.";
+
+    public String notDef = "\"Not\" es un adverbio en inglés utilizado para formar negaciones. Se coloca delante del verbo principal para negar la acción o estado ('I am not going'). 'Not' es fundamental para cambiar afirmaciones a negaciones, expresando la ausencia de una acción, estado o cualidad.";
+
+    public String nTDef = "\"n't\" es una contracción del adverbio 'not' que se añade al final de auxiliares o modales para formar negaciones ('can't', 'don't', 'isn't'). Simplifica la expresión de negación en oraciones, haciéndolas más concisas y naturales en el habla cotidiana.";
+
+    public String byDef = "\"By\" es una preposición en inglés que indica agencia (con verbos pasivos, 'written by'), medio o método ('by car'), proximidad ('by the river'), autoría y causa. 'By' es versátil, usado para expresar cómo se realiza una acción, quién la realiza, o la cercan";
+    public String orDef = "\"Or\" es una conjunción en inglés que se utiliza para conectar opciones o alternativas. Indica una elección entre palabras, frases o cláusulas ('coffee or tea'). 'Or' es fundamental para expresar posibilidades o para presentar opciones mutuamente excluyentes.";
+
+    public String sheDef = "\"She\" es un pronombre personal en inglés que se refiere a una persona del género femenino. Se utiliza para hablar sobre una mujer o niña previamente mencionada o conocida, y puede funcionar como sujeto ('She is happy') o como objeto ('I saw her').";
+
+    public String asConjunctionDef = "\"As\" como conjunción en inglés introduce cláusulas que expresan tiempo ('as I arrived'), comparación ('as smart as him'), causa ('as you were late'), o condición ('as long as'). 'As' es versátil y une ideas relacionando acciones, tiempos, y condiciones.";
+
+    public String whatDeterminerDef = "\"What\" como determinante se utiliza en preguntas para pedir información específica sobre un sustantivo ('What book are you reading?'). Indica interés en identificar algo dentro de una categoría o grupo. 'What' es esencial en la formulación de preguntas detalladas.";
+
+    public String goDef = "\"Go\" es un verbo en inglés que expresa movimiento de un lugar a otro ('go home'), participar en actividades ('go shopping'), o funcionar ('the plan went well'). 'Go' es uno de los verbos más comunes y se utiliza en una amplia variedad de expresiones y frases verbales.";
+
+    public String theirDef = "\"Their\" es un pronombre posesivo en inglés que indica que algo pertenece a un grupo de personas, animales, o cosas. Se utiliza para hablar de posesión o relación de algo con un grupo conocido ('Their house is big'). 'Their' es inclusivo y no específico de género.";
+
+    public String willDef = "\"Will\" es un modal en inglés que se utiliza para formar el futuro, expresar voluntad o determinación ('I will go'), hacer promesas ('I will help you'), o para hacer solicitudes ('Will you pass the salt?'). 'Will' es fundamental para hablar de acciones futuras o intenciones.";
+
+    public String whoDef = "\"Who\" es un pronombre interrogativo en inglés que se utiliza para hacer preguntas sobre personas ('Who are you?'). Sirve para pedir información específica sobre la identidad o cualidades de una persona. 'Who' es esencial en la formulación de preguntas relacionadas con personas.";
+
+    public String canDef = "\"Can\" es un modal en inglés que expresa habilidad ('I can swim'), permiso ('Can I leave?'), o posibilidad ('It can happen'). 'Can' es fundamental para hablar sobre capacidades, solicitar permiso o evaluar posibilidades.";
+
+    public String getDef = "\"Get\" es un verbo en inglés con múltiples significados, incluyendo recibir ('get a gift'), llegar ('get home'), obtener ('get information'), o entender ('get the joke'). 'Get' es uno de los verbos más versátiles y se usa en una gran variedad de contextos.";
+
+    public String ifDef = "\"If\" es una conjunción en inglés que introduce condiciones o posibilidades ('If it rains, we will stay home'). Se utiliza para formular hipótesis, condiciones o para expresar una condición necesaria para que algo suceda. 'If' es clave en la construcción de oraciones condicionales.";
+
+    public String allDef = "\"All\" es un determinante o pronombre en inglés que se refiere a la totalidad de personas, objetos o conceptos mencionados o implicados ('All people', 'All of it'). Expresa inclusión completa y es usado frecuentemente para generalizar o indicar totalidad.";
+
+    public String wouldDef = "\"Would\" es un modal en inglés que se utiliza para expresar condicionales ('I would go if...'), voluntad en el pasado ('I would always listen'), solicitudes corteses ('Would you help me?'), o futuros en el pasado ('He said he would come'). 'Would' es esencial para expres";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public String BlackFathers = "Years ago, I interviewed Kweisi Mfume, then the president of the NAACP. “As between the presence of white racism and the absence of black fathers,” I asked, “Which poses the bigger threat to the black community?” Without missing a beat, he said, “The absence of black fathers.”\n" +
             "\n" +
             "It was President Barack Obama who said, \"We all know the statistics. That children who grow up without a father are five times more likely to live in poverty and commit crime; nine times more likely to drop out of school and 20 times more likely to end up in prison.”\n" +
@@ -466,4 +569,618 @@ public class texts {
             "It's that simple.\n" +
             "\n" +
             "I'm Nicole Gelinas, a senior fellow at the Manhattan Institute, for Prager University.";
+
+        public String hotBreakfastEliminated = "Beginning next month, dining servicies will no longer serve hot breakfast foods at university dining halls. instead,students will be offered a wide assortment of cold breakfast items in the morning.these cold breakfast foods, such as breads,fruit,and yogurt,are healthier than many of the hot breakfast items that we will stop serving, so healt-conscious students should welcome this change.students will benefit in another way as well, because limiting the breakfast selection to cold food items will save money and allow us to keep our meal plans affordable";
+        public String getHotBreakfastEliminatedUrl= "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/audio%2FTest_3_066.mp3?alt=media&token=cc210e46-498d-4338-93f6-09a4de3927a7";
+        public String socialLoafingUrl = "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_1_023.mp3?alt=media&token=e83272f9-75df-48b7-9a37-a4057414ddc7";
+        public String testOneSpeakingQuestion4= "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_1_024.mp3?alt=media&token=bcbccdfb-02b1-4d52-ad8d-a32f7a136ff7";
+        public String happy ="You know, everybody wants to be happy, so why isn’t everybody happy? The obvious answer is, it’s not easy. And one of the single biggest obstacles to being happy is that people naturally compare themselves to other people and assume nearly all of them are happier than they are. This is a big problem. So, how would like an equation to determine the exact amount of unhappiness in your life?";
+        public String happyListening = "https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflListening%2FPractice_001.mp3?alt=media&token=a0503417-07eb-4335-9026-1cab828cfa2e";
+
+        public String writingIntegradoPracticeTest1 = "Altruism is a type of behavior in which an animal sacrifices its own interest for that of another animal or group of animals. Altruism is the opposite of selfishness; individuals performing altruistic acts gain nothing for themselves.\n" +
+                "Examples of altruism abound, both among humans and among other mammals. Unselfish acts among humans range from the sharing of food with strangers to the donation of body organs to family members, and even to strangers. Such acts are altruistic in that they benefit another, yet provide little reward to the one performing the act.\n" +
+                "In fact, many species of animals appear willing to sacrifice food, or even their life, to assist other members of their group. The meerkat, which is a mammal that dwells in burrows in grassland areas of Africa, is often cited as an example. In groups of meerkats, an individual acts as a sentinel, standing guard and looking out for predators while the others hunt for food or eat food they have obtained. If the sentinel meerkat sees a predator such as a hawk approaching the group. it gives an alarm cry alerting the other meerkats to run and seek shelter. By standing guard, the sentinel meerkat gains nothing-it goes without food while the others eat, and it places itself in grave danger. After it issues an alarm, it has to flee alone, which might make it more at risk to a predator, since animals in groups are often able to work together to fend off a predator. So the altruistic sentinel behavior helps ensure the survival of other members of the meerkat's group.";
+
+        public String speakingOpenQuestionPracticeTest1="Some people who unexpectedly receive a large amount of money spend it on practical things, while others spend it for pleasure only.which do you think is better and why";
+        public String speakngintegratedquestion2test1 = "The situation at the health center is unacceptable: you sit in a crowded waiting room for hours waiting to get treatment for minor ailments. Then when it's your turn, you get about three minutes with an overworked doctor. I have two suggestions: first, the health center needs to hire more doctors so that each patient receives quality treatment. And as far as the wait time issue is concerned, the health center is currently open only Monday through Fridays, which means that people who get sick over the weekend wait until the following week to get treatment. So, opening the health center on weekends should solve that problem too.\n" +
+                "Sincerely,\n" +
+                "Megan Finch\n";
+
+        public String socialLoafingtxt= "When people work in groups to perform a task, individual group members may feel less motivated to contribute, since no one person is held directly responsible for completing the task. The result is that people may not work as hard, or accomplish as much, as they would if they were working alone and their individual output were being measured. This decrease in personal effort, especially on a simple group task, is known as social loafing. While it is not a deliberate behavior, the consequence of social loafing is less personal efficiency when working in groups than when working on one's own.";
+        public String speakingOpenQuestionPracticeTest2 = "Some students would prefer to live with roommates.Others would prefer to live alone. Which option would you prefer and why_";
+        public String speakingQuestion2Test2 = "The Department of Student Housing is considering whether to build new student housing\n" +
+                " off campus in a residential area of town. Two of the major factors influencing the decision \n" +
+                "will be parking and space. Those who support building off campus argue that building new \n" +
+                "housing on campus would further increase the number of cars on and around campus and consume space that could be better used for future projects that the entire university community could benefit from. Supporters also say that students might even have a richer college experience by being connected to the local community and patronizing stores and other businesses in town.\n";
+        public String speakingQuestion2url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_2_045.mp3?alt=media&token=9a6633ff-3ed4-4dcd-a682-3ebd77edc455";
+        public String speakingQuestion3test2url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_2_046.mp3?alt=media&token=0929c26c-7b14-4922-9bb2-5be328aa6a87";
+        public String speakingQuestion3test2Txt="People account for their own behavior differently from how they account for the behavior of others. When observing the behavior of others, we tend to attribute their actions to their character or their personality rather than to external factors. In contrast, we tend to explain our own behavior in terms of situational factors beyond our own control rather than attributing it to our own character. One explanation for this difference is that people are aware of the situational forces affecting them but not of situational forces affecting other people. Thus, when evaluating someone else's behavior, we focus on the person rather than the situation.";
+
+        public String speakingQuestion4test2url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_2_047.mp3?alt=media&token=08bef876-8d9c-412e-a82d-9779827e1150";
+
+        public String speakingQuestion1Test3 = "Some students prefer to work on class assignments by themselves.Others believe it is better to work in a group. Which do you prefer? Explain why.";
+
+        public String healthservicestxt= "The situation at the health center is unacceptable: you sit in a crowded waiting room for hours waiting to get treatment for minor ailments. Then when it's your turn, you get about three minutes with an overworked doctor. I have two suggestions: first, the health center needs to hire more doctors so that each patient receives quality treatment. And as far as the wait time issue is concerned, the health center is currently open only Monday through Fridays, which means that people who get sick over the weekend wait until the following week to get treatment. So, opening the health center on weekends should solve that problem too.\n" +
+                "Sincerely,\n" +
+                "Megan Finch\n";
+
+        public String healthservicesurl="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_1_022.mp3?alt=media&token=edcd3b17-def2-409d-8110-9e15831974a6";
+
+        public String cognitiveDisonanceTxt= "Individuals sometimes experience a contradiction between their actions and their beliefs-between what they are doing and what they believe they should be doing. These contradictions can cause a kind of mental discomfort known as cognitive dissonance. People experiencing cognitive dissonance often do not want to change the way they are acting, so they resolve the contradictory situation in another way: they change their interpretation of the situation in a way that minimizes the contradiction between what they are doing and what they believe they should be doing.";
+        public String cognitiveDisonanceurl="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_3_067.mp3?alt=media&token=3fd8fe11-750c-4495-94c1-ab840530fa27";
+
+        public String speakingquestion4test3url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_3_068.mp3?alt=media&token=3ea2ead5-0837-4593-9559-80f398526340";
+
+        public String speakingquestion1test4="Do you agree or disagree with the following statement: it is important to learn about other cultures. use details and examples to explain your opinion.";
+
+        public String question2test4txt="Currently, the university choir gives singing concerts only on campus. Next year, however, the choir will add competitive events at other locations to its schedule. The choir's new director feels that entering singing competitions will make the quality of the choir's performance even better than it is now. \"Competitions will motivate students in the choir to pursue a higher standard of excellence in singing,\" he said. In addition, it is hoped that getting the choir off campus and out in the public will strengthen the reputation of the university's music program. This in turn will help the program grow.";
+        public String question2test4url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_4_089.mp3?alt=media&token=47b93149-16c8-47cb-91bc-21fdcbe285eb";
+
+        public String question3test4txt="In general, animals act in ways that help them to survive within their specific habitats. However, sometimes an animal species may display a behavior that no longer serves a clear purpose. The original purpose for the behavior may have disappeared long ago, even thousands of years before. These behaviors, known as relict behaviors, were useful to the animal when the species' habitat was different; but now, because of changed conditions, the behavior no longer serves its original purpose. Left over from an earlier time, the behavior remains as a relict, or remnant, long after the environmental circumstance that influenced its evolution has vanished.";
+
+        public String question3test4url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_4_090.mp3?alt=media&token=defc2aad-c0fd-4c50-927a-8e72ca169194";
+
+        public String question4test4url="https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/ToeflSpeakingAudios%2FTest_4_091.mp3?alt=media&token=1a8a9195-7a6f-4d6c-86ff-790862f64d37";
+
+
+        // defs of words
+        String thereDef = "Indica que algo existe o se encuentra presente, como señalando hacia una realidad o hecho. " +
+                "Se usa para dar pie a la introducción de un tema o asunto, marcando el inicio de una explicación o discusión. " +
+                "Sugiere la presencia de algo en un lugar o situación específica, dando a entender que no está aquí, sino allá o en ese contexto.";
+
+    String oneDef = "Cuando 'uno' se añade a un adjetivo, convierte el adjetivo en un sustantivo, refiriéndose a alguien o algo que ejemplifica la cualidad descrita. " +
+            "Esta forma se usa para destacar una instancia específica o ejemplo que personifica la característica expresada por el adjetivo. " +
+            "Permite hablar de conceptos de manera abstracta sin especificar un sujeto concreto, enfocándose en la cualidad en sí.";
+
+    String upDef = "Describe el movimiento hacia una posición o lugar más alto, sugiriendo elevación o ascenso. " +
+            "Indica que una acción se ha completado, como terminar o finalizar una tarea. " +
+            "Señala un aumento en intensidad, volumen o cantidad, a menudo utilizado para denotar escalada o amplificación.";
+
+    String timeDef = "Medida de la duración de los eventos y el intervalo entre ellos, fundamental para organizar actividades diarias. " +
+            "Experiencia percibida de la duración, que varía según los eventos, momentos y la conciencia individual. " +
+            "Recuso invaluable que se gestiona, se ahorra o se pierde, enfatizando su importancia en la vida y el trabajo.";
+    String yearDef = "Un período de tiempo que dura 12 meses, usado para medir cuánto tiempo pasa. "
+            + "Lo usamos para saber cuánto tiempo ha pasado desde un evento importante, como un cumpleaños. "
+            + "Una vuelta completa de la Tierra alrededor del Sol, marcando el cambio de estaciones.";
+
+    String soDef = "Usado para decir que algo es muy extremo en una cualidad, como 'tan' en español. " +
+            "Para mostrar el resultado de algo, similar a 'así que' en algunas situaciones. " +
+            "Hace énfasis en la intensidad o nivel de algo, a menudo antes de adjetivos o adverbios.";
+
+    String thinkDef = "Usar la mente para considerar algo, reflexionar o crear ideas. " +
+            "Creer o tener una opinión sobre algo, similar a 'creer' en español. " +
+            "Tener en mente a alguien o algo, como recordar o imaginar.";
+    String seeDef = "Usar los ojos para percibir lo que está alrededor. " +
+            "Entender o darse cuenta de algo, como en 'ya veo'. " +
+            "Visitar o reunirse con alguien, como en 'ver a amigos'.";
+    String whichDef = "Se usa para especificar de qué cosa o grupo se habla, como en '¿Cuál prefieres?'. " +
+            "Introduce una cláusula que da más información sobre algo mencionado antes, como en 'el libro, el cual leíste'.";
+    String whenDef = "Se utiliza para indicar el momento en que sucede algo, como en 'cuando llegué'. " +
+            "Introduce una condición o situación específica, como en 'cuando llueve, uso paraguas'.";
+    String someDef = "Se usa para referirse a una cantidad indeterminada o a algunos elementos de un grupo, por ejemplo, 'Quiero algunas manzanas (I want some apples)'. " +
+            "Puede indicar una cantidad o número no especificado, ejemplo: 'He leído algunos de esos libros (I have read some of those books)'.";
+    String themDef = "Se usa para referirse a un grupo de personas o cosas ya mencionadas, por ejemplo, 'Veo a los niños y juego con ellos (I see the children and play with them)'. " +
+            "Indica a quiénes se dirige una acción o sentimiento, ejemplo: 'Les compré regalos (I bought gifts for them)'.";
+    String peopleDef = "Se refiere a seres humanos en general o a un grupo de individuos, por ejemplo, 'La gente espera en fila (People are waiting in line)'. " +
+            "También se usa para hablar de la población de un lugar, ejemplo: 'Las personas de esta ciudad son amigables (The people in this city are friendly)'.";
+    String takeDef = "Se usa para indicar la acción de agarrar o llevar algo de un lugar a otro, por ejemplo, 'Toma el libro de la mesa (Take the book from the table)'. " +
+            "También significa aceptar o recibir algo que se ofrece, ejemplo: 'Tomé el consejo que me diste (I took the advice you gave me)'.";
+    String meDef = "Se usa para referirse al hablante o escritor mismo, ejemplo: 'Dame el libro (Give me the book)'. " +
+            "Indica el objeto de una acción dirigida hacia el hablante, ejemplo: 'Escríbeme una carta (Write me a letter)'.";
+    String outDef = "Indica movimiento desde el interior hacia el exterior de un lugar, por ejemplo, 'Salí de la casa (I went out of the house)'. " +
+            "También se usa para expresar que algo no está en su lugar habitual o disponible, ejemplo: 'La luz está apagada (The light is out)'.";
+    String intoDef = "Se usa para expresar movimiento hacia el interior de un lugar o cosa, por ejemplo, 'Entré en la habitación (I went into the room)'. " +
+            "Indica la transformación o cambio de estado, ejemplo: 'Se convirtió en mariposa (It turned into a butterfly)'.";
+    String justDef = "Se usa para indicar que algo sucede en este momento o muy recientemente, por ejemplo, 'Acabo de llegar (I just arrived)'. " +
+            "También significa solamente o nada más, ejemplo: 'Solo quiero descansar (I just want to rest)'.";
+    String himDef = "Se usa para referirse a un hombre o niño previamente mencionado, ejemplo: 'Lo vi y le hablé (I saw him and talked to him)'. " +
+            "Funciona como el objeto de un verbo o preposición, ejemplo: 'Dale el libro a él (Give the book to him)'.";
+    String comeDef = "Se usa para indicar movimiento hacia el hablante o hacia un lugar específico, por ejemplo, 'Ven aquí (Come here)'. " +
+            "También significa llegar o participar en un evento, ejemplo: 'Vino a la fiesta (He came to the party)'.";
+    String yourDef = "Se usa para indicar posesión o relación con la persona a quien se habla, por ejemplo, 'Tu libro es interesante (Your book is interesting)'. " +
+            "Implica que algo pertenece o está relacionado con el oyente, ejemplo: 'Es tu oportunidad (It's your chance)'.";
+
+    String nowDef = "Se utiliza para referirse al momento actual o presente. "
+            + "Indica el tiempo en curso, enfatizando la inmediatez de una acción o situación. "
+            + "Por ejemplo, 'Ahora estoy aprendiendo inglés' subraya que la acción de aprender está ocurriendo en este preciso instante.";
+
+    String couldDef = "Se usa para indicar habilidad o capacidad en el pasado, por ejemplo, 'Podía correr muy rápido (I could run very fast)'. " +
+            "También expresa posibilidad o permiso, ejemplo: '¿Podría pasarme la sal? (Could you pass me the salt?)'.";
+    String thanDef = "Se usa para hacer comparaciones entre personas, lugares, cosas o ideas, ejemplo: 'Más alto que (Taller than)'.";
+    String likeDef = "Indica similitud o manera de ser, ejemplo: 'Como un hermano (Like a brother)'.";
+    String otherDef = "Refiere a algo o alguien diferente o adicional, ejemplo: 'Otro día (Another day)'.";
+    String thenDef = "Indica secuencia en el tiempo o resultado, ejemplo: 'Entonces, fuimos a casa (Then, we went home)'.";
+    String how2Def = "Pregunta por el modo, manera o estado, ejemplo: '¿Cómo estás? (How are you?)'.";
+    String itsDef = "Indica posesión relacionada con 'it', ejemplo: 'Su color es único (Its color is unique)'.";
+    String twoDef = "El número después de uno y antes de tres, ejemplo: 'Dos manzanas (Two apples)'.";
+    String ourDef = "Indica posesión o pertenencia a un grupo incluido el hablante, ejemplo: 'Nuestra casa (Our house)'.";
+    String moreDef = "Indica una cantidad mayor o adicional, ejemplo: 'Más libros (More books)'.";
+    String theseDef = "Refiere a varios objetos o personas cercanas, ejemplo: 'Estos días (These days)'.";
+    String wantDef = "Expresa deseo o necesidad, ejemplo: 'Quiero agua (I want water)'.";
+    String wayDef = "Método o dirección, ejemplo: 'El camino a seguir (The way to go)'.";
+    String noDef = "Indica negación o ausencia, ejemplo: 'No azúcar (No sugar)'.";
+    String lookDef = "Observar o parecer, ejemplo: 'Mira el cielo (Look at the sky)'.";
+    String firstDef = "Indica el inicio o lo que viene antes de todo, ejemplo: 'Primero en la línea (First in line)'.";
+    String alsoDef = "Significa además o igualmente, ejemplo: 'También quiero ir (I also want to go)'.";
+    String newDef = "Algo reciente o no usado, ejemplo: 'Nuevo libro (New book)'.";
+    String becauseDef = "Explica la razón o causa, ejemplo: 'Porque llueve, me quedo en casa (Because it's raining, I stay home)'.";
+    String dayDef = "Período de 24 horas, ejemplo: 'Un día soleado (A sunny day)'.";
+    String more2Def = "Mayor cantidad o grado, ejemplo: 'Necesito más tiempo (I need more time)'.";
+    String useDef = "Emplear o aprovechar algo, ejemplo: 'Usar una herramienta (Use a tool)'.";
+    String manDef = "Un adulto masculino, ejemplo: 'Un hombre caminando (A man walking)'.";
+    String hereDef = "En este lugar, ejemplo: 'Estoy aquí (I am here)'.";
+    String findDef = "Descubrir o localizar, ejemplo: 'Encontrar una solución (Find a solution)'.";
+    String giveDef = "Entregar o proporcionar, ejemplo: 'Dar un regalo (Give a gift)'.";
+    String thingDef = "Objeto, entidad o idea, ejemplo: 'Una cosa interesante (An interesting thing)'.";
+    String wellDef = "En buena forma o adecuadamente, ejemplo: 'Bien hecho (Well done)'.";
+    String manyDef = "Gran cantidad, ejemplo: 'Muchas personas (Many people)'.";
+    String onlyDef = "Solo o exclusivamente, ejemplo: 'Solo quiero café (I only want coffee)'.";
+    String thoseDef = "Refiere a objetos o personas lejanas, ejemplo: 'Esos libros (Those books)'.";
+    String tellDef = "Informar o narrar, ejemplo: 'Contar una historia (Tell a story)'.";
+    String veryDef = "Enfatiza el grado, ejemplo: 'Muy importante (Very important)'.";
+    String onePronounDef = "Número o persona única, ejemplo: 'Uno de ellos (One of them)'.";
+    String evenDef = "Indica sorpresa o igualdad, ejemplo: 'Incluso mejor (Even better)'.";
+    String askDef = "Formular una pregunta o solicitar información. Se utiliza cuando alguien desea obtener datos, "
+            + "claridad o realizar una petición formal a otra persona. Por ejemplo, 'Preguntar la hora (Ask for the time)'.";
+
+    String herPosDef = "A ella o de ella, ejemplo: 'Su libro (Her book)'.";
+    String backDef = "Regresar a un lugar, ejemplo: 'Volver a casa (Back home)'.";
+    String anyDef = "Cualquiera o alguno, sin especificar, ejemplo: 'Cualquier momento (Any moment)'.";
+    String goodDef = "De calidad positiva, ejemplo: 'Buena idea (Good idea)'.";
+    String usDef = "A nosotros o de nosotros, ejemplo: 'Dánoslo a nosotros (Give it to us)'.";
+    String throughDef = "De un lado a otro, ejemplo: 'A través del parque (Through the park)'.";
+    String womanDef = "Una adulta femenina, ejemplo: 'Una mujer inteligente (A smart woman)'.";
+    String lifeDef = "Existencia o manera de vivir, ejemplo: 'Vida feliz (Happy life)'.";
+    String childDef = "Un niño o niña, ejemplo: 'Un niño jugando (A child playing)'.";
+    String there2Def = "En ese lugar, ejemplo: 'Está allí (It is there)'.";
+    String downDef = "Hacia abajo, ejemplo: 'Bajar las escaleras (Go down the stairs)'.";
+    String workDef = "Realizar una actividad laboral, ejemplo: 'Trabajar en un proyecto (Work on a project)'.";
+    String afterDef = "Posteriormente, ejemplo: 'Después de la escuela (After school)'.";
+    String callDef = "Nombrar o contactar por teléfono, ejemplo: 'Llamar a un amigo (Call a friend)'.";
+    String mayDef = "Expresa posibilidad, ejemplo: 'Puede que llueva (It may rain)'.";
+    String worldDef = "El planeta Tierra o el entorno global, ejemplo: 'El mundo es grande (The world is big)'.";
+    String overDef = "Por encima de algo, ejemplo: 'Saltar sobre un charco (Jump over a puddle)'.";
+    String shouldDef = "Indica deber o recomendación, ejemplo: 'Deberías descansar (You should rest)'.";
+    String stillDef = "Continúa en el estado actual, ejemplo: 'Todavía aquí (Still here)'.";
+    String tryDef = "Intentar realizar una acción, ejemplo: 'Probar un nuevo deporte (Try a new sport)'.";
+    String inadvDef = "Indica estar dentro o en un lugar, ejemplo: 'Entrar (Come in)'. También se usa para indicar participación, ejemplo: 'Estoy en el equipo (I'm in the team)'.";
+    String schoolDef = "Institución educativa, ejemplo: 'Ir a la escuela (Go to school)'.";
+    String lastDef = "Final o más reciente, ejemplo: 'Último día (Last day)'.";
+    String asadvDef = "Indica igualdad o manera, ejemplo: 'Actuar tan rápido como (Act as quickly as)'.";
+    String tooDef = "También o más de lo necesario, ejemplo: 'Demasiado alto (Too high)'.";
+    String needDef = "Requerir algo, ejemplo: 'Necesitar ayuda (Need help)'.";
+    String threeDef = "Número después de dos, ejemplo: 'Tres libros (Three books)'.";
+    String feelDef = "Experimentar una sensación, ejemplo: 'Sentir frío (Feel cold)'.";
+    String whenAdvDef = "Indica en qué momento, ejemplo: 'Cuándo llegarás (When will you arrive)?'";
+    String becomeDef = "Convertirse en algo, ejemplo: 'Volverse profesional (Become a professional)'.";
+    String stateDef = "Condición o situación, ejemplo: 'Estado de ánimo (State of mind)'.";
+    String neverDef = "En ningún momento, ejemplo: 'Nunca rendirse (Never give up)'.";
+    String betweenDef = "Indica posición o relación de algo en medio de dos puntos, ejemplo: 'Entre dos árboles (Between two trees)'.";
+    String highDef = "De gran altura o nivel, ejemplo: 'Un edificio alto (A high building)'.";
+    String somethingDef = "Refiere a un objeto o asunto no especificado, ejemplo: 'Algo interesante (Something interesting)'.";
+    String reallyDef = "Verdaderamente o en serio, ejemplo: 'Realmente feliz (Really happy)'.";
+    String mostDef = "En el grado máximo o la mayor parte, ejemplo: 'Lo más rápido posible (As fast as possible)'.";
+    String anotherDef = "Un adicional o diferente, ejemplo: 'Otro intento (Another try)'.";
+    String muchDef = "Gran cantidad, ejemplo: 'Mucho tiempo (Much time)'.";
+    String ownDef = "Perteneciente a uno mismo, ejemplo: 'Su propia casa (His own house)'.";
+    String familyDef = "Grupo de personas emparentadas, ejemplo: 'Familia unida (Close-knit family)'.";
+    String outPrepositionDef = "Desde dentro hacia fuera, ejemplo: 'Salir de la casa (Out of the house)'.";
+    String houseDef = "Edificio para vivir, ejemplo: 'Casa grande (Big house)'.";
+    String leaveDef = "Partir o abandonar un lugar, ejemplo: 'Dejar la ciudad (Leave the city)'.";
+    String putDef = "Colocar en un lugar, ejemplo: 'Poner los libros en la mesa (Put the books on the table)'.";
+    String oldDef = "De edad avanzada o antiguo, ejemplo: 'Libro viejo (Old book)'.";
+    String onAdverbDef = "Indica que algo está en funcionamiento o en acción, ejemplo: 'La luz está encendida (The light is on)'.";
+    String whileConnectorDef = "Durante el tiempo que, ejemplo: 'Mientras estudias, yo leo (While you study, I read)'.";
+    String meanDef = "Expresar o indicar algo, utilizarse para definir el significado de palabras o acciones. Ejemplo: 'Eso significa amor (It means love)'.";
+
+    String letDef = "Permitir o dar permiso a alguien para hacer algo. Se usa para expresar la autorización o posibilidad. Ejemplo: 'Dejar entrar a alguien (Let someone in)'.";
+
+    String whyDef = "Utilizado para hacer preguntas referentes a la razón o el motivo de algo. Indica búsqueda de explicación o justificación. Ejemplo: '¿Por qué llueve? (Why does it rain?)'.";
+
+    String presidentDef = "Título del jefe de estado en una república o el director de una organización, empresa, etc. Se refiere a la persona en el cargo más alto. Ejemplo: 'Presidente de un país (President of a country)'.";
+    String keepDef = "Conservar algo en el mismo estado o continuar haciendo una acción sin interrupción. Ejemplo: 'Mantener la calma (Keep calm)'.";
+
+    String sameDef = "Idéntico, no diferente; similar en todos los aspectos a algo mencionado anteriormente. Ejemplo: 'El mismo libro (The same book)'.";
+
+    String greatDef = "De excelente calidad, magnitud o intensidad considerable. Ejemplo: 'Gran idea (Great idea)'.";
+
+    String beginDef = "Iniciar algo o empezar a suceder. Ejemplo: 'Comenzar una clase (Begin a class)'.";
+
+    String bigDef = "De tamaño, volumen o importancia mayor que otros de su tipo. Ejemplo: 'Grande ciudad (Big city)'.";
+
+    String seemDef = "Dar la impresión de ser algo o tener una cualidad particular. Ejemplo: 'Parecer feliz (Seem happy)'.";
+
+    String groupDef = "Conjunto de personas, objetos o ideas que se consideran o se clasifican juntos. Ejemplo: 'Grupo de amigos (Group of friends)'.";
+
+    String countryDef = "Nación con su propio gobierno, ocupando un territorio determinado. Ejemplo: 'País natal (Home country)'.";
+
+    String talkDef = "Comunicarse verbalmente con otros; expresar ideas o sentimientos mediante palabras. Ejemplo: 'Hablar claro (Talk clearly)'.";
+
+    String problemDef = "Cuestión que es difícil de entender, resolver o tratar. Ejemplo: 'Resolver un problema (Solve a problem)'.";
+    String whereDef = "Indica el lugar o posición en el que se encuentra algo o alguien. Ejemplo: '¿Dónde está mi libro?'";
+    String turnDef = "Cambiar de dirección o posición. Ejemplo: 'Girar a la izquierda en la esquina.'";
+    String studentDef = "Persona que estudia en una institución educativa. Ejemplo: 'Estudiante de universidad.'";
+    String everyDef = "Usado para referirse a todos los elementos individuales de un grupo, sin excepción. Ejemplo: 'Cada día es una nueva oportunidad.'";
+    String handDef = "Parte del cuerpo humano al final del brazo. Ejemplo: 'Levantar la mano para preguntar.'";
+    String helpDef = "Ofrecer asistencia o facilitar a alguien hacer algo. Ejemplo: 'Ayudar a un amigo en necesidad.'";
+    String againstDef = "En oposición a algo o alguien. Ejemplo: 'Competir contra el equipo rival.'";
+    String startDef = "Comenzar una actividad o proceso. Ejemplo: 'Empezar a correr por la mañana.'";
+    String americanDef = "Relativo a los Estados Unidos o sus habitantes. Ejemplo: 'Ciudadano americano.'";
+    String partDef = "Porción o segmento de algo que se considera separadamente del todo. Ejemplo: 'Parte de un todo.'";
+    String showVerb = "Mostrar: En inglés, 'show' como verbo significa presentar o enseñar algo a alguien para que lo vea. Es común en contextos donde se quiere revelar información o elementos visuales, como en una presentación.";
+
+    String aboutAdverb = "Acerca de: En inglés, 'about' como adverbio se usa para hablar de un tema o asunto. Indica que la conversación o texto se refiere a un tema específico, similar a 'sobre' en español.";
+
+    String overAdverb = "Sobre: 'Over' como adverbio se usa para indicar movimiento por encima de algo o alguien, o para hablar sobre la superación de una situación. También puede indicar una posición elevada o un estado de exceso.";
+
+    String might = "Podría: 'Might' es un verbo modal que se usa para indicar posibilidad o capacidad en el pasado, pero con menos certeza que 'may'. Por ejemplo, 'He might come' significa 'Él podría venir', expresando una posibilidad no segura.";
+
+    String suchDeterminer = "Tal: 'Such' como determinante se usa para enfatizar la calidad o el grado de algo. Por ejemplo, 'such a beautiful place' se traduce como 'un lugar tan hermoso', destacando la belleza del lugar.";
+
+    String placeNoun = "Lugar: 'Place' como sustantivo se refiere a cualquier espacio, área o posición específica. Puede ser tan amplio como un país o tan específico como un asiento en una habitación.";
+
+    String againAdverb = "Otra vez: 'Again' como adverbio se usa para indicar la repetición de una acción o evento. Significa que algo sucede una vez más, después de haber ocurrido previamente.";
+
+    String city = "Ciudad: 'City' se refiere a una gran área urbana, generalmente con una densa población y muchas estructuras construidas. Es más grande que un pueblo y tiene su propio gobierno y servicios municipales.";
+
+    String casedef = "Caso: 'Case' puede referirse a una situación específica o a un ejemplo de algo. En contextos legales, se usa para hablar de un proceso judicial. También puede significar 'estuche' dependiendo del contexto.";
+
+    String mostDeterminer = "La mayoría: 'Most' como determinante se usa para referirse a la mayor parte de algo. Indica una cantidad mayor en comparación con otras partes, como en 'most people' que significa 'la mayoría de las personas'.";
+
+    String fewDeterminer = "Pocos: 'Few' como determinante indica una pequeña cantidad de algo. Se usa para hablar de algo que no es abundante, resaltando que la cantidad es limitada.";
+
+    String system = "Sistema: 'System' se refiere a un conjunto de partes o componentes que interactúan entre sí para funcionar como un todo. Puede ser aplicado a sistemas informáticos, biológicos, mecánicos, entre otros.";
+
+    String week = "Semana: 'Week' se refiere al período de siete días, utilizado como unidad de tiempo para organizar días en la mayoría de las culturas. Comienza el lunes y termina el domingo.";
+
+    String whereAdverb = "Dónde: 'Where' como adverbio se usa para preguntar o hablar sobre la ubicación o lugar de algo o alguien. Es equivalente a 'dónde' en español.";
+
+    String company = "Empresa: 'Company' se refiere a un negocio o asociación creada para realizar actividades comerciales. Puede variar en tamaño desde pequeñas startups hasta grandes corporaciones internacionales.";
+
+    String eachDeterminer = "Cada: 'Each' como determinante se usa para referirse a los miembros de un grupo de forma individual. Indica que algo se aplica por separado a cada miembro de un conjunto.";
+
+    String percent = "Porcentaje: 'Percent' se refiere a una parte de cien en matemáticas y estadísticas, utilizado para describir proporciones relativas. Por ejemplo, '50 percent' significa '50 por ciento', indicando la mitad de algo.";
+
+    String hear = "Oír: 'Hear' como verbo se refiere a la capacidad de percibir sonidos mediante el oído. No implica un esfuerzo intencional, a diferencia de 'listen' (escuchar), que sí lo hace.";
+
+    String soConnector = "Así que: 'So' como conector se usa para introducir una consecuencia o resultado. Equivale a 'así que' en español, y se utiliza para conectar ideas mostrando causa y efecto.";
+
+    String duringPreposition = "Durante: 'During' como preposición se usa para indicar que algo ocurre en el transcurso de un período de tiempo. Señala que un evento sucede al mismo tiempo que otro.";
+    String questionNounDef = "Pregunta: 'Question' como sustantivo se refiere a una oración formulada para solicitar información. Es una expresión de inquietud o duda sobre algo, buscando una respuesta o aclaración.";
+
+    String rightAdverbDef = "Correctamente: 'Right' como adverbio se usa para indicar que algo se ha hecho de manera correcta o adecuada. Puede referirse a la exactitud en la ejecución de una acción.";
+
+    String programNounDef = "Programa: 'Program' como sustantivo se refiere a una serie de instrucciones o códigos escritos para ser ejecutados por una computadora. También puede usarse para referirse a un plan o agenda de eventos.";
+
+    String workNounDef = "Trabajo: 'Work' como sustantivo se refiere a la actividad realizada para alcanzar un objetivo, puede ser física o mental. También se utiliza para hablar del lugar donde se realiza esta actividad o del resultado de la misma.";
+
+    String runVerbDef = "Correr/Ejecutar: 'Run' como verbo tiene varios significados. Puede referirse al acto de moverse rápidamente a pie o al proceso de ejecutar un programa o máquina. La definición exacta depende del contexto.";
+
+    String numberDef = "Número: 'Number' se refiere a una palabra o símbolo que representa una cantidad. Se utiliza en matemáticas para contar, medir, y ordenar.";
+
+    String smallDef = "Pequeño: 'Small' se usa para describir el tamaño de algo que es menor de lo normal o comparativamente menor que otros objetos similares.";
+
+    String governmentDef = "Gobierno: 'Government' se refiere a la organización o sistema a través del cual una comunidad o nación es gobernada. Incluye las instituciones y personas que toman decisiones políticas y administran las leyes del estado.";
+    String playVerbDef = "Jugar/Reproducir: 'Play' como verbo puede significar participar en un juego o actividad para entretenimiento, o reproducir contenido multimedia como música o video.";
+
+    String offAdverbDef = "Apagado/Fuera: 'Off' como adverbio indica que algo está apagado, desconectado, o alejado de una posición inicial. También puede indicar la cancelación de un evento o acción.";
+
+    String moveVerbDef = "Mover: 'Move' como verbo se refiere a cambiar la posición o lugar de algo o alguien. Incluye cualquier tipo de desplazamiento físico.";
+
+    String likeVerbDef = "Gustar: 'Like' como verbo se usa para expresar disfrute o preferencia hacia algo o alguien.";
+
+    String alwaysAdverbDef = "Siempre: 'Always' indica una acción o estado que ocurre en todo momento, sin excepción. Se usa para hablar de consistencia temporal indefinida.";
+
+    String nightDef = "Noche: 'Night' se refiere al período de oscuridad entre el atardecer y el amanecer, cuando el sol está por debajo del horizonte.";
+
+    String believeDef = "Creer: 'Believe' indica la aceptación de algo como verdadero o real, generalmente sin evidencia completa para demostrarlo.";
+
+    String todayDef = "Hoy: 'Today' se refiere al día actual, el período de 24 horas en el que uno se encuentra.";
+
+    String holdDef = "Sostener: 'Hold' implica mantener algo en posición fija con las manos o brazos, o retener una posición o condición.";
+
+    String pointNounDef = "Punto: 'Point' como sustantivo puede referirse a una ubicación específica en el espacio, un momento en el tiempo, o a una idea dentro de una argumentación.";
+
+    String liveDef = "Vivir: 'Live' como verbo se refiere a la existencia en vida, habitar un lugar, o transmitir en tiempo real.";
+
+    String happenDef = "Ocurrir: 'Happen' indica que algo tiene lugar o sucede, generalmente sin ser planeado previamente.";
+
+    String bringDef = "Traer: 'Bring' se usa para indicar el movimiento de algo hacia el hablante o hacia un punto específico.";
+
+    String nextAsANumberDef = "Siguiente: 'Next' como número indica la posición inmediatamente después en una secuencia o serie.";
+
+    String withoutDef = "Sin: 'Without' es una preposición que indica la ausencia de algo o alguien.";
+
+    String beforePrepositionDef = "Antes de: 'Before' como preposición se usa para indicar precedencia en tiempo o lugar.";
+
+    String largeDef = "Grande: 'Large' describe algo de gran tamaño o extensión, mayor de lo común o esperado.";
+
+    String mustDef = "Debe: 'Must' es un verbo modal que indica obligación, necesidad o recomendación fuerte.";
+
+    String allAdverbDef = "Todo: 'All' como adverbio se refiere a la totalidad o cada parte de algo.";
+
+    String warNounDef = "Guerra: 'War' es un conflicto armado entre dos o más grupos, generalmente naciones, donde se usan fuerzas militares.";
+
+    String homeDef = "Hogar: 'Home' se refiere al lugar donde una persona vive, siente pertenencia o seguridad.";
+
+    String underPrepositionDef = "Debajo de: 'Under' como preposición indica que algo está en una posición inferior a otra cosa, con o sin contacto directo.";
+    String roomDef = "Espacio destinado a un propósito específico, ejemplo: 'Habitación para dormir (Room to sleep)'.";
+    String factDef = "Información comprobada como verdadera, ejemplo: 'Hecho científico (Scientific fact)'.";
+    String areaDef = "Zona o región específica, ejemplo: 'Área metropolitana (Metropolitan area)'.";
+    String nationalDef = "Relativo a una nación o país, ejemplo: 'Día nacional (National day)'.";
+    String writeDef = "Plasmar ideas en papel o digitalmente, ejemplo: 'Escribir un libro (Write a book)'.";
+    String moneyDef = "Medio de cambio en forma de monedas o billetes, ejemplo: 'Dinero para comprar (Money to buy)'.";
+    String rightNounDef = "Justicia o privilegio, ejemplo: 'Derecho a votar (Right to vote)'.";
+    String storyDef = "Narración o cuento, ejemplo: 'Historia de aventuras (Adventure story)'.";
+    String waterDef = "Líquido transparente e incoloro, esencial para la vida, ejemplo: 'Agua para beber (Water to drink)'.";
+    String motherDef = "Mujer en relación a sus hijos, ejemplo: 'Madre amorosa (Loving mother)'.";
+    String differentDef = "No igual o distinto a otros, ejemplo: 'Diferente opinión (Different opinion)'.";
+    String youngDef = "De poca edad o juvenil, ejemplo: 'Joven estudiante (Young student)'.";
+    String monthDef = "Una de las doce divisiones del año, ejemplo: 'Mes de enero (Month of January)'.";
+    String lotDef = "Gran cantidad o número, ejemplo: 'Mucho trabajo (A lot of work)'.";
+    String bookDef = "Conjunto de hojas escritas, ejemplo: 'Libro de ciencia (Science book)'.";
+    String eyeDef = "Órgano de la visión, ejemplo: 'Ojo humano (Human eye)'.";
+    String studyDef = "Aprender o investigar sobre algo, ejemplo: 'Estudiar para el examen (Study for the exam)'.";
+    String jobDef = "Ocupación remunerada, ejemplo: 'Trabajo de oficina (Office job)'.";
+    String kindDef = "Tipo o clase de algo, ejemplo: 'Amable persona (Kind person)'.";
+    String wordDef = "Unidad de lenguaje con significado, ejemplo: 'Palabra clave (Key word)'.";
+    String issueDef = "Problema o asunto que necesita ser discutido, ejemplo: 'Cuestión importante (Important issue)'.";
+    String sideDef = "Parte o superficie lateral, ejemplo: 'Lado de un edificio (Side of a building)'.";
+    String fourDef = "Número después de tres, ejemplo: 'Cuatro estaciones (Four seasons)'.";
+    String businessDef = "Actividad comercial o empresarial, ejemplo: 'Negocio familiar (Family business)'.";
+    String thoughDef = "A pesar de, indica contraste, ejemplo: 'Aunque llueve, salgo (Though it rains, I go out)'.";
+    String headNounDef = "Parte superior del cuerpo o líder, ejemplo: 'Cabeza de la organización (Head of the organization)'.";
+    String farDef = "A gran distancia, ejemplo: 'Lejos de casa (Far from home)'.";
+    String longAdjectiveDef = "De gran longitud o duración, ejemplo: 'Largo viaje (Long journey)'.";
+    String blackDef = "Color ausente de luz, ejemplo: 'Negro como la noche (Black as night)'.";
+    String millionDef = "Un millón de unidades, ejemplo: 'Millón de estrellas (Million stars)'.";
+    String bothDef = "Los dos, ejemplo: 'Ambos lados (Both sides)'.";
+    String littleDef = "Pequeña cantidad o tamaño, ejemplo: 'Poco tiempo (Little time)'.";
+    String yesDef = "Afirmación, ejemplo: 'Sí, quiero (Yes, I do)'.";
+    String afterConnectorDef = "Después de, indica secuencia, ejemplo: 'Después de comer, leo (After eating, I read)'.";
+    String sinceDef = "Desde, indica inicio de período, ejemplo: 'Desde 1990 (Since 1990)'.";
+    String aroundPrepositionDef = "Cerca o en la cercanía de, ejemplo: 'Alrededor del parque (Around the park)'.";
+    String longAdverbDef = "Por mucho tiempo, ejemplo: 'Esperar largo tiempo (Wait a long time)'.";
+    String provideDef = "Ofrecer o suministrar, ejemplo: 'Proveer ayuda (Provide help)'.";
+    String serviceNounDef = "Servicio o asistencia, ejemplo: 'Servicio al cliente (Customer service)'.";
+    String importantDef = "De gran significado o valor, ejemplo: 'Importante decisión (Important decision)'.";
+    String sitDef = "Ocupar un asiento, ejemplo: 'Sentarse en una silla (Sit in a chair)'.";
+    String awayDef = "A distancia de un lugar o posición, ejemplo: 'Lejos de casa (Away from home)'.";
+    String friendDef = "Persona con quien se tiene una relación de afecto y confianza, ejemplo: 'Amigo cercano (Close friend)'.";
+    String howeverAdverbDef = "Sin embargo, muestra contraste, ejemplo: 'Sin embargo, decidió quedarse (However, he decided to stay)'.";
+    String powerNounDef = "Capacidad de hacer o actuar, ejemplo: 'Poder de decisión (Power of decision)'.";
+    String noInterjectionDef = "Negación o rechazo, ejemplo: 'No, gracias (No, thank you)'.";
+    String yetDef = "Hasta ahora o todavía, ejemplo: 'Aún no llega (He hasn't arrived yet)'.";
+    String fatherDef = "Padre o progenitor masculino, ejemplo: 'Mi padre trabaja (My father works)'.";
+    String hourDef = "Unidad de tiempo equivalente a 60 minutos, ejemplo: 'Una hora de juego (An hour of play)'.";
+    String suchDef = "Se utiliza para referir a algo con una cualidad específica, en contextos que implican ejemplos o tipos similares. Por ejemplo, 'Tal como' o 'como por ejemplo' para introducir ejemplos concretos.";
+    String althoughDef = "Se usa para introducir una oración subordinada que indica una contraposición o contraste con la idea principal. Ejemplo: 'Aunque llovía, salimos a caminar.'";
+    String ohDef = "Expresa sorpresa, realización, o una reacción emocional ante una situación. Ejemplo: 'Oh, ahora entiendo lo que quieres decir.'";
+
+    String oftenDef = "Frecuentemente o muchas veces, ejemplo: 'A menudo leo (I often read)'.";
+    String untilDef = "Hasta que algo suceda, ejemplo: 'Hasta el amanecer (Until dawn)'.";
+    String politicalDef = "Relativo a la política o gobierno, ejemplo: 'Campaña política (Political campaign)'.";
+    String lineDef = "Secuencia de texto o gente, ejemplo: 'Fila para entradas (Line for tickets)'.";
+    String endDef = "Final o conclusión, ejemplo: 'Fin de la película (End of the movie)'.";
+    String standVerbDef = "Permanecer erguido o resistir, ejemplo: 'Pararse firme (Stand firm)'.";
+    String amongDef = "En medio de o con, ejemplo: 'Entre amigos (Among friends)'.";
+    String gameDef = "Actividad lúdica o deportiva, ejemplo: 'Juego de mesa (Board game)'.";
+    String everDef = "En cualquier momento, ejemplo: 'Mejor que nunca (Better than ever)'.";
+    String loseDef = "No ganar o extraviar, ejemplo: 'Perder las llaves (Lose the keys)'.";
+    String badDef = "De mala calidad o incorrecto, ejemplo: 'Mala idea (Bad idea)'.";
+    String memberDef = "Parte de un grupo o conjunto, ejemplo: 'Miembro del club (Member of the club)'.";
+    String meetDef = "Encontrarse o conocer, ejemplo: 'Reunirse con amigos (Meet with friends)'.";
+    String payDef = "Dar dinero por un servicio o producto, ejemplo: 'Pagar la cuenta (Pay the bill)'.";
+    String lawDef = "Regla o conjunto de reglas, ejemplo: 'Ley federal (Federal law)'.";
+    String almostDef = "Casi pero no completamente, ejemplo: 'Casi terminado (Almost finished)'.";
+    String carDef = "Vehículo motorizado para transporte, ejemplo: 'Carro nuevo (New car)'.";
+    String laterDef = "Después de un período de tiempo, ejemplo: 'Más tarde (Later)'.";
+    String muchAdverbDef = "En gran medida, ejemplo: 'Mucho mejor (Much better)'.";
+    String nameNounDef = "Denominación o título, ejemplo: 'Nombre del libro (Name of the book)'.";
+    String includeDef = "Contener o abarcar, ejemplo: 'Incluir en la lista (Include in the list)'.";
+    String fiveDef = "Número después de cuatro, ejemplo: 'Cinco manzanas (Five apples)'.";
+    String centerDef = "Punto medio o lugar principal, ejemplo: 'Centro de la ciudad (City center)'.";
+    String onceDef = "Una vez o en un momento dado, ejemplo: 'Una vez al año (Once a year)'.";
+    String universityDef = "Institución de educación superior, ejemplo: 'Universidad Nacional (National University)'.";
+    String continueDef = "Seguir haciendo algo, ejemplo: 'Continuar estudiando (Continue studying)'.";
+    String leastDef = "En el grado más bajo o mínimo, ejemplo: 'Al menos intentarlo (At least try it)'.";
+    String realDef = "Auténtico o verdadero, ejemplo: 'Historia real (Real story)'.";
+    String whiteDef = "Color producido por la mezcla de todos los colores de luz, ejemplo: 'Papel blanco (White paper)'.";
+    String changeDef = "Hacer diferente, modificar, ejemplo: 'Cambiar de opinión (Change mind)'.";
+    String setDef = "Colocar en posición, ejemplo: 'Configurar el reloj (Set the clock)'.";
+    String severalDef = "Más de dos pero no muchos, ejemplo: 'Varios días (Several days)'.";
+    String agoDef = "Hace un tiempo desde el presente, ejemplo: 'Hace años (Years ago)'.";
+    String informationDef = "Datos o conocimiento comunicado, ejemplo: 'Información útil (Useful information)'.";
+    String nothingDef = "Ninguna cosa, ejemplo: 'Nada que hacer (Nothing to do)'.";
+    String communityDef = "Grupo de personas con intereses comunes, ejemplo: 'Comunidad local (Local community)'.";
+    String bestDef = "De la más alta calidad, superlativo de bueno, ejemplo: 'Mejor amigo (Best friend)'.";
+    String rightAdjectiveDef = "Correcto o justo, ejemplo: 'Respuesta correcta (Right answer)'.";
+    String ideaDef = "Pensamiento o concepto, ejemplo: 'Buena idea (Good idea)'.";
+    String leadVerbDef = "Guiar o dirigir, ejemplo: 'Liderar un equipo (Lead a team)'.";
+    String bodyDef = "Estructura física de un ser, ejemplo: 'Cuerpo humano (Human body)'.";
+    String learnDef = "Adquirir conocimiento, ejemplo: 'Aprender un idioma (Learn a language)'.";
+    String kidDef = "Niño o joven, ejemplo: 'Jugar con niños (Play with kids)'.";
+    String minuteDef = "Unidad de tiempo, 60 segundos, ejemplo: 'Un minuto de silencio (A minute of silence)'.";
+    String tableDef = "Mueble con superficie plana y patas, ejemplo: 'Mesa de comedor (Dining table)'.";
+    String whetherDef = "Si una cosa u otra, ejemplo: 'No sé si ir o quedarme (I don't know whether to go or stay)'.";
+    String understandDef = "Comprender o captar el significado, ejemplo: 'Entender la lección (Understand the lesson)'.";
+    String teamDef = "Grupo de personas trabajando juntas, ejemplo: 'Equipo deportivo (Sports team)'.";
+    String backNounDef = "Parte posterior del cuerpo, ejemplo: 'Dolor de espalda (Back pain)'.";
+    String watchVerbDef = "Observar con atención, ejemplo: 'Ver la televisión (Watch TV)'.";
+    String togetherDef = "En compañía de otros, ejemplo: 'Juntos a la fiesta (Together to the party)'.";
+    String followDef = "Ir detrás o después de, ejemplo: 'Seguir instrucciones (Follow instructions)'.";
+    String aroundAdverbDef = "En la cercanía o alrededor, ejemplo: 'Caminar por ahí (Walk around)'.";
+    String onlyAdjectiveDef = "Único o exclusivo, ejemplo: 'La única opción (The only option)'.";
+    String stopVerbDef = "Cesar de hacer algo, ejemplo: 'Detenerse a descansar (Stop to rest)'.";
+    String faceNounDef = "Parte frontal de la cabeza, ejemplo: 'Cara sonriente (Smiling face)'.";
+    String anythingDef = "Cualquier cosa, ejemplo: 'Puedo hacer cualquier cosa (I can do anything)'.";
+    String publicAdjectiveDef = "Relativo a la gente en general, ejemplo: 'Transporte público (Public transport)'.";
+    String socialDef = "Relativo a la sociedad o interacción entre personas, ejemplo: 'Red social (Social network)'.";
+    String alreadyDef = "Antes o ahora, indicando que algo ha sucedido, ejemplo: 'Ya terminado (Already finished)'.";
+    String parentDef = "Madre o padre, ejemplo: 'Padres preocupados (Concerned parents)'.";
+    String speakDef = "Expresar palabras verbalmente, ejemplo: 'Hablar inglés (Speak English)'.";
+    String createDef = "Producir algo nuevo, ejemplo: 'Crear arte (Create art)'.";
+    String officeDef = "Lugar de trabajo, especialmente para tareas administrativas, ejemplo: 'Oficina central (Head office)'.";
+    String allowDef = "Dar permiso, ejemplo: 'Permitir salir (Allow to leave)'.";
+    String levelDef = "Grado o etapa, ejemplo: 'Nivel de dificultad (Level of difficulty)'.";
+    String readDef = "Interpretar texto escrito, ejemplo: 'Leer un libro (Read a book)'.";
+    String spendDef = "Utilizar dinero o tiempo, ejemplo: 'Gastar dinero (Spend money)'.";
+    String personDef = "Individuo humano, ejemplo: 'Persona interesante (Interesting person)'.";
+    String doorDef = "Acceso o entrada, ejemplo: 'Puerta principal (Front door)'.";
+    String sureDef = "Ciertamente o sin duda, ejemplo: 'Seguro de sí mismo (Sure of oneself)'.";
+    String addDef = "Incorporar o sumar, ejemplo: 'Añadir ingredientes (Add ingredients)'.";
+    String streetDef = "Vía pública en una ciudad, ejemplo: 'Calle principal (Main street)'.";
+    String suchAdjectiveDef = "De este tipo, ejemplo: 'Tal importancia (Such importance)'.";
+    String historyDef = "Estudio de eventos pasados, ejemplo: 'Historia mundial (World history)'.";
+    String partyDef = "Grupo político o reunión social, ejemplo: 'Fiesta de cumpleaños (Birthday party)'.";
+    String growDef = "Aumentar de tamaño o madurar, ejemplo: 'Crecer plantas (Grow plants)'.";
+    String reasonDef = "Causa o explicación, ejemplo: 'Razón para ir (Reason to go)'.";
+    String morningDef = "Primera parte del día, ejemplo: 'Mañana soleada (Sunny morning)'.";
+    String openDef = "No cerrado o accesible, ejemplo: 'Abrir puerta (Open door)'.";
+    String withinDef = "En el interior o no más allá de, ejemplo: 'Dentro de límites (Within limits)'.";
+    String changeNounDef = "Modificación o transformación, ejemplo: 'Cambio de clima (Change of weather)'.";
+    String alroughDef = "A pesar de, ejemplo: 'Aunque difícil, posible (Although hard, possible)'.";
+    String walkVerbDef = "Desplazarse a pie, ejemplo: 'Caminar por el parque (Walk in the park)'.";
+    String newsDef = "Información sobre eventos recientes, ejemplo: 'Noticias del día (News of the day)'.";
+    String healthDef = "Estado físico o mental, ejemplo: 'Salud corporal (Body health)'.";
+    String courtNounDef = "Institución para administrar justicia, ejemplo: 'Tribunal de justicia (Court of justice)'.";
+    String forceNounDef = "Potencia o vigor, ejemplo: 'Fuerza de voluntad (Force of will)'.";
+    String earlyDef = "Pronto o cerca del inicio, ejemplo: 'Temprano en la mañana (Early in the morning)'.";
+    String himselfDef = "Él mismo, ejemplo: 'Se dijo a sí mismo (He said to himself)'.";
+    String airDef = "Mezcla de gases que forma la atmósfera terrestre, ejemplo: 'Aire fresco (Fresh air)'.";
+    String lowDef = "De poca altura o cantidad, ejemplo: 'Bajo interés (Low interest)'.";
+    String beforeDef = "Anteriormente o delante de, ejemplo: 'Antes de salir (Before leaving)'.";
+    String artDef = "Actividades creativas humanas, ejemplo: 'Arte moderno (Modern art)'.";
+    String resultDef = "Consecuencia o efecto, ejemplo: 'Resultado final (Final result)'.";
+    String momentDef = "Instante o periodo breve, ejemplo: 'Momento adecuado (Right moment)'.";
+    String offerDef = "Propuesta o presentación, ejemplo: 'Ofrecer ayuda (Offer help)'.";
+    String bothAdverbDef = "Igualmente, aplicable a dos, ejemplo: 'Ambos juntos (Both together)'.";
+    String rememberDef = "Recobrar la memoria o tener en mente, ejemplo: 'Recordar un nombre (Remember a name)'.";
+    String researchDef = "Investigación o estudio detallado, ejemplo: 'Investigación científica (Scientific research)'.";
+    String enoughDef = "Suficiente o bastante, ejemplo: 'Suficiente comida (Enough food)'.";
+    String girlDef = "Niña o joven femenina, ejemplo: 'Chica estudiante (Girl student)'.";
+    String boyDef = "Niño o joven masculino, ejemplo: 'Chico jugando (Boy playing)'.";
+    String winDef = "Triunfar o obtener la victoria, ejemplo: 'Ganar el juego (Win the game)'.";
+    String foodDef = "Sustancias consumidas para nutrición, ejemplo: 'Comida saludable (Healthy food)'.";
+    String acrossDef = "De un lado a otro, ejemplo: 'A través del río (Across the river)'.";
+    String guyDef = "Hombre o joven, informalmente, ejemplo: 'Tipo amigable (Friendly guy)'.";
+    String secondDef = "Número después de primero, ejemplo: 'Segundo lugar (Second place)'.";
+    String ableDef = "Capaz o competente, ejemplo: 'Capaz de hacer (Able to do)'.";
+    String towardDef = "En dirección a, ejemplo: 'Hacia el futuro (Toward the future)'.";
+    String maybeDef = "Posiblemente o quizás, ejemplo: 'Tal vez llueva (Maybe it will rain)'.";
+    String processDef = "Procedimiento o serie de pasos, ejemplo: 'Proceso de aprendizaje (Learning process)'.";
+    String offPrepositionDef = "Lejos o separado, ejemplo: 'Apagar el interruptor (Turn off the switch)'.";
+    String everythingDef = "Todas las cosas, ejemplo: 'Todo está bien (Everything is fine)'.";
+    String appearDef = "Hacerse visible o evidente, ejemplo: 'Aparecer de repente (Appear suddenly)'.";
+    String ageDef = "Período de tiempo o etapa de la vida, ejemplo: 'Edad de jubilación (Retirement age)'.";
+    String policyDef = "Regla o estrategia, ejemplo: 'Política de empresa (Company policy)'.";
+    String considerDef = "Pensar detenidamente, ejemplo: 'Considerar una oferta (Consider an offer)'.";
+    String includingDef = "Conteniendo o abarcando, ejemplo: 'Incluyendo gastos (Including expenses)'.";
+    String probablyDef = "Con alta probabilidad, ejemplo: 'Probablemente venga (Probably will come)'.";
+    String educationDef = "Proceso de enseñanza y aprendizaje, ejemplo: 'Educación superior (Higher education)'.";
+    String loveDef = "Sentir afecto o cariño, ejemplo: 'Amar profundamente (Love deeply)'.";
+    String actuallyDef = "En realidad o de hecho, ejemplo: 'Actualmente es así (It is actually so)'.";
+    String buyDef = "Adquirir algo a cambio de dinero, ejemplo: 'Comprar comida (Buy food)'.";
+    String waitDef = "Permanecer en un lugar hasta que ocurra algo, ejemplo: 'Esperar el autobús (Wait for the bus)'.";
+    String dieDef = "Cesar de vivir, ejemplo: 'Morir de vejez (Die of old age)'.";
+    String humanDef = "Relativo al ser humano, ejemplo: 'Derechos humanos (Human rights)'.";
+    String sendDef = "Hacer que algo o alguien vaya a un lugar, ejemplo: 'Enviar un mensaje (Send a message)'.";
+    String feeDef = "Pago por un servicio, ejemplo: 'Cuota de inscripción (Registration fee)'.";
+    String expectDef = "Considerar probable o esperar que ocurra algo, ejemplo: 'Esperar resultados (Expect results)'.";
+    String serveDef = "Prestar un servicio o cumplir una función, ejemplo: 'Servir la cena (Serve dinner)'.";
+    String senseNounDef = "Percepción o sensación, ejemplo: 'Sentido común (Common sense)'.";
+    String teacherDef = "Persona que enseña, especialmente en una escuela, ejemplo: 'Maestro de escuela (School teacher)'.";
+    String homeAdverbDef = "Hacia el lugar donde uno vive, ejemplo: 'Ir a casa (Go home)'.";
+    String marketDef = "Lugar donde se compran y venden bienes, ejemplo: 'Mercado local (Local market)'.";
+    String stayDef = "Permanecer en un lugar, ejemplo: 'Quedarse en casa (Stay at home)'.";
+    String buildVerbDef = "Construir o crear estructuralmente, ejemplo: 'Construir un edificio (Build a building)'.";
+    String nationDef = "Comunidad de personas con territorio y gobierno, ejemplo: 'Nación soberana (Sovereign nation)'.";
+    String fallVerbDef = "Descender bajo la acción de la gravedad, ejemplo: 'Caer de un árbol (Fall from a tree)'.";
+    String deathDef = "El fin de la vida, ejemplo: 'Muerte natural (Natural death)'.";
+    String planNounDef = "Esquema o estrategia para hacer algo, ejemplo: 'Plan de estudios (Study plan)'.";
+    String interestDef = "Atención especial o beneficio, ejemplo: 'Interés personal (Personal interest)'.";
+    String someoneDef = "Una persona indeterminada, ejemplo: 'Alguien especial (Someone special)'.";
+    String experienceNounDef = "Conocimiento obtenido a través de la vivencia, ejemplo: 'Experiencia laboral (Work experience)'.";
+    String cutDef = "Dividir o separar con un instrumento afilado, ejemplo: 'Cortar el pan (Cut the bread)'.";
+    String killVerbDef = "Causar la muerte, ejemplo: 'Matar un mosquito (Kill a mosquito)'.";
+    String behindDef = "En la parte posterior, ejemplo: 'Detrás de la puerta (Behind the door)'.";
+    String reachVerbDef = "Llegar a un lugar o conseguir algo, ejemplo: 'Alcanzar una meta (Reach a goal)'.";
+    String sixDef = "Número después de cinco, ejemplo: 'Seis manzanas (Six apples)'.";
+    String localDef = "Relativo a un área específica o cercana, ejemplo: 'Negocio local (Local business)'.";
+    String remainDef = "Continuar en el mismo estado, ejemplo: 'Permanecer tranquilo (Remain calm)'.";
+    String effectDef = "Resultado de una causa, ejemplo: 'Efecto secundario (Side effect)'.";
+    String suggestDef = "Proponer o dar a entender, ejemplo: 'Sugerir una idea (Suggest an idea)'.";
+    String useNounDef = "Aplicación o manera de utilizar algo, ejemplo: 'Uso del tiempo (Use of time)'.";
+    String controlNounDef = "Dominio o regulación, ejemplo: 'Control de calidad (Quality control)'.";
+    String perhapsDef = "Posiblemente o tal vez, ejemplo: 'Quizás llueva (Perhaps it will rain)'.";
+    String raiseVerbDef = "Aumentar o levantar, ejemplo: 'Subir el volumen (Raise the volume)'.";
+    String classNounDef = "Grupo de estudiantes o categoría, ejemplo: 'Clase de matemáticas (Math class)'.";
+    String lateDef = "Después de la hora esperada, ejemplo: 'Tarde para la reunión (Late for the meeting)'.";
+    String littleAdverbDef = "En pequeña cantidad, ejemplo: 'Poco a poco (Little by little)'.";
+    String majorDef = "Principal o más importante, ejemplo: 'Mayor problema (Major problem)'.";
+    String yeahDef = "Sí, informalmente, ejemplo: 'Sí, claro (Yeah, sure)'.";
+    String elseAdverbDef = "Además o de otra manera, ejemplo: 'Nada más (Nothing else)'.";
+    String passVerbDef = "Moverse más allá o aprobar, ejemplo: 'Pasar un examen (Pass an exam)'.";
+    String photoDef = "Imagen capturada por una cámara, ejemplo: 'Foto de familia (Family photo)'.";
+    String sellVerbDef = "Transferir propiedad a cambio de dinero, ejemplo: 'Vender un coche (Sell a car)'.";
+    String themselvesPronounDef = "Ellos mismos, reflexivo, ejemplo: 'Se lavan ellos mismos (They wash themselves)'.";
+    String fieldNounDef = "Área de estudio o terreno, ejemplo: 'Campo de fútbol (Football field)'.";
+    String collegeDef = "Institución de educación superior, ejemplo: 'Colegio universitario (College)'.";
+    String sometimesDef = "Ocasionalmente o de vez en cuando, ejemplo: 'A veces llueve (Sometimes it rains)'.";
+    String formerDef = "Anterior o previo, ejemplo: 'Ex presidente (Former president)'.";
+    String developmentDef = "Proceso de crecimiento o mejora, ejemplo: 'Desarrollo urbano (Urban development)'.";
+    String requireDef = "Necesitar como necesario, ejemplo: 'Requerir aprobación (Require approval)'.";
+    String alongPrepositionDef = "Por o a lo largo de, ejemplo: 'Caminar junto al río (Walk along the river)'.";
+    String decideDef = "Elegir entre opciones, ejemplo: 'Decidir qué comer (Decide what to eat)'.";
+    String securityDef = "Protección o seguridad, ejemplo: 'Seguridad nacional (National security)'.";
+    String upPronounDef = "Hacia una posición más alta, ejemplo: 'Subir la escalera (Go up the stairs)'.";
+    String possibleDef = "Que puede ser o hacerse, ejemplo: 'Posible solución (Possible solution)'.";
+    String effortDef = "Uso de energía para lograr algo, ejemplo: 'Esfuerzo físico (Physical effort)'.";
+    String roleDef = "Función o parte desempeñada, ejemplo: 'Rol en la película (Role in the movie)'.";
+    String betterAdjectiveDef = "Superior en calidad, ejemplo: 'Mejor opción (Better option)'.";
+    String rateDef = "Medida, cantidad o frecuencia, ejemplo: 'Tasa de interés (Interest rate)'.";
+    String strongDef = "Con fuerza o resistencia, ejemplo: 'Fuerte argumento (Strong argument)'.";
+    String musicDef = "Arte de combinar sonidos, ejemplo: 'Música clásica (Classical music)'.";
+    String reportVerbDef = "Informar o describir, ejemplo: 'Reportar resultados (Report results)'.";
+    String leaderDef = "Persona que guía o dirige, ejemplo: 'Líder del equipo (Team leader)'.";
+    String lightDef = "Iluminación o liviano, ejemplo: 'Luz natural (Natural light)'.";
+    String wholeDef = "Todo o completo, ejemplo: 'Todo el día (The whole day)'.";
+    String voiceDef = "Sonido producido al hablar, ejemplo: 'Voz clara (Clear voice)'.";
+    String colorDef = "Característica visual, ejemplo: 'Color favorito (Favorite color)'.";
+    String heartDef = "Órgano que bombea sangre, ejemplo: 'Corazón saludable (Healthy heart)'.";
+    String careNounDef = "Atención o preocupación, ejemplo: 'Cuidado médico (Medical care)'.";
+    String policeDef = "Fuerza encargada de mantener el orden, ejemplo: 'Policía local (Local police)'.";
+    String economicDef = "Relativo a la economía, ejemplo: 'Crisis económica (Economic crisis)'.";
+    String wifeNounDef = "Esposa o compañera matrimonial, ejemplo: 'Mi esposa (My wife)'.";
+    String showNounDef = "Espectáculo o exhibición, ejemplo: 'Programa de televisión (TV show)'.";
+    String mindNounDef = "Mente o pensamiento, ejemplo: 'Mente abierta (Open mind)'.";
+    String reportNounDef = "Documento que presenta información, ejemplo: 'Informe anual (Annual report)'.";
+    String finallyDef = "Al final o después de todo, ejemplo: 'Finalmente llegó (He finally arrived)'.";
+    String drugNounDef = "Medicamento o sustancia ilegal, ejemplo: 'Medicamentos recetados (Prescription drugs)'.";
+    String lessDef = "Menor en cantidad o grado, ejemplo: 'Menos importante (Less important)'.";
+    String returnDef = "Volver al punto de partida, ejemplo: 'Regresar a casa (Return home)'.";
+    String accordingDef = "Conforme o basado en, ejemplo: 'Según el plan (According to the plan)'.";
+    String pullDef = "Tirar de algo hacia uno, ejemplo: 'Jalar la cuerda (Pull the rope)'.";
+    String decisionDef = "Elección o resolución, ejemplo: 'Tomar una decisión (Make a decision)'.";
+    String explainDef = "Hacer entender, aclarar, ejemplo: 'Explicar un problema (Explain a problem)'.";
+    String carryDef = "Transportar o llevar, ejemplo: 'Llevar una carga (Carry a load)'.";
+    String developDef = "Crecer o avanzar, ejemplo: 'Desarrollar habilidades (Develop skills)'.";
+    String viewNounDef = "Opinión o modo de ver, ejemplo: 'Punto de vista (Point of view)'.";
+    String freeAdjectiveDef = "Sin costo o restricción, ejemplo: 'Entrada gratis (Free admission)'.";
+    String hopeVerbDef = "Desear con expectativa, ejemplo: 'Esperar lo mejor (Hope for the best)'.";
+    String even2Def = "Incluso o igual, ejemplo: 'Incluso números (Even numbers)'.";
+    String driveDef = "Conducir o impulsar, ejemplo: 'Manejar un carro (Drive a car)'.";
+    String sonDef = "Hijo masculino, ejemplo: 'Mi hijo (My son)'.";
+    String armDef = "Extremidad superior del cuerpo, ejemplo: 'Brazo fuerte (Strong arm)'.";
+    String departmentDef = "División o sección, ejemplo: 'Departamento de ventas (Sales department)'.";
+    String trueDef = "Verdadero o exacto, ejemplo: 'Cierto hecho (True fact)'.";
+    String priceDef = "Valor monetario, ejemplo: 'Precio de venta (Sale price)'.";
+    String militaryDef = "Relativo a las fuerzas armadas, ejemplo: 'Servicio militar (Military service)'.";
+    String federalDef = "Perteneciente al gobierno central, ejemplo: 'Gobierno federal (Federal government)'.";
+    String simplePresentDefinition = "El presente simple en inglés es un tiempo verbal usado para describir acciones habituales, "
+            + "hechos generales, verdades universales, y situaciones permanentes. Se forma con la base del verbo para todas las personas, "
+            + "excepto en la tercera persona singular donde se añade -s o -es. Ejemplos incluyen 'I walk' (Yo camino), 'She reads' (Ella lee), "
+            + "y 'It rains' (Llueve). También se usa para expresar horarios o eventos futuros programados.";
+
+
 }

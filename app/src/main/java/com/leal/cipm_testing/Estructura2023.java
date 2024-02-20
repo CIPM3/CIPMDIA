@@ -9803,8 +9803,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Question Structure":
                 switch (selection2) {
                     case "0 a 100":
-                        palabraclave.setVisibility(View.INVISIBLE);
-                        verboEs.setVisibility(View.INVISIBLE);
+                        palabraclave.setVisibility(View.GONE);
+                        verboEs.setVisibility(View.GONE);
                         GenQuestionStructure1();
                         break;
 
@@ -19939,8 +19939,8 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-        palabraclave.setVisibility(View.INVISIBLE);
-        verboEs.setVisibility(View.INVISIBLE);
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -26373,8 +26373,8 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-        palabraclave.setVisibility(View.INVISIBLE);
-        verboEs.setVisibility(View.INVISIBLE);
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
         switch (selection) {
             case "Tutorial":
                 Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
@@ -35317,6 +35317,8 @@ public class Estructura2023 extends AppCompatActivity {
                 }
         );
     }
+
+
     ModeloEstructura mso;
     public void turnTrue(String CurrentStructure,double sum){
         scoresStructureDBDocRef = db.collection(userid).document("Scores Structures");

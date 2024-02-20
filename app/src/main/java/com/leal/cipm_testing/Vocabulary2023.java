@@ -1346,10 +1346,10 @@ if(isfromtest){
             case 4:
 
             case 5:
-                gen.GenPresCont2();
+                gen.GenPresSimp2();
                 genstest = gen.gens;
                 genetest = gen.gene;
-                gene2test = gen.gene2;
+                gene2test ="placeholder";
 
                 break;
             case 6:

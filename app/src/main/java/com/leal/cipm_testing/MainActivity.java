@@ -198,7 +198,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void estructura(View vist) {
-        Intent intent = new Intent(this, Estructura2023.class);
+        Intent intent = new Intent(this, NewVocabRecyclerView.class);
+        intent.putExtra("fromStructures",true);
         startActivity(intent);
     }
 
@@ -234,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void vocabulary(View vista) {
-        Intent intento = new Intent(this, Vocabulary2023.class);
+        Intent intento = new Intent(this, NewVocabRecyclerView.class);
         startActivity(intento);
 
 

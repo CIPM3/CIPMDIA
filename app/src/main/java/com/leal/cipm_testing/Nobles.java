@@ -132,7 +132,38 @@ public class Nobles {
            "the truth ", "the marketing ", "the university ", "the writing ", "the article ", "the department ",
            "the difference ", "the goal ", "the news ", "the audience ","the growth ", "a block of cheese "
     };
+    String nnoblesposesiones[] = {
+            "people ", "history ", "art ", "money ", "world ", "worlds ", "information ",
+            "map ", "maps ", "family ", "government ", "governments ", "health ", "system ",
+            "systems ", "computer ", "computers ", "meat ", "year ", "years ", "thanks ",
+            "music ", "person ", "reading ", "method ", "methods ",
+            "data ", "food ", "understanding ", "theory ", "law ", "bird ", "birds ",
+            "literature ", "problem ", "problems ", "software ", "control ", "knowledge ",
+            "power ", "ability ", "love ",
+            "internet ", "television ", "televisions ", "science ", "library ", "nature ",
+            "fact ", "facts ", "product ", "products ", "idea ", "ideas ", "temperature ",
+            "investment ", "area ", "areas ", "society ", "activity ", "story ", "industry ",
+            "media ", "thing ", "things ", "oven ", "ovens ", "community ", "communities ",
+            "safety ", "quality ", "development ", "language ",
+            "management ", "player ", "variety ", "video ", "videos ", "week ", "country ",
+            "exam ", "movie ", "organization ", "equipment ", "phisics ", "analysis ",
+            "policy ", "series ", "thought ", "basis ", "boyfriend ", "direction ", "strategy ",
+            "technology ", "army ", "armies ", "camera ", "cameras ", "freedom ",
+            "paper ", "environment ", "child ", "children ", "instance ", "month ", "months ",
+            "truth ", "marketing ", "university ", "writing ", "article ", "department ",
+            "difference ", "goal ", "news ", "audience ", "growth ", "block of cheese "
+    };
 
+
+    String[] commonEnglishNames = {"James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Thomas", "Charles"};
+
+
+    public void apostropheS() {
+        int r = (int)(Math.random()*commonEnglishNames.length);
+        int object = (int)(Math.random()*nnoblesposesiones.length);
+        gens = nnoblesesp[object] + "de "+ commonEnglishNames[r];
+        gene = commonEnglishNames[r]+"'s " + nnoblesposesiones[object];
+    }
     // nouns nobles espa;ol top 100
     String nnoblesesp[] = {
            "la gente ", "la historia ", "el arte ", "el dinero ", "el mundo ", "los mundos ", "la información ",
@@ -13805,6 +13836,103 @@ public class Nobles {
 
         }
     }//PD 10/06/2022
+    String gens = ""; // Spanish sentence
+    String gene = ""; // English sentence
+    public void GenPresSimp(int subject, int verbPos) {
+
+        switch (subject) {
+            case 0: // I
+                gens = "yo " + vn1[verbPos];
+                gene = "I " + vnb[verbPos];
+                break;
+            case 1: // You (singular informal)
+                gens = "tú " + vn2[verbPos];
+                gene = "you " + vnb[verbPos];
+                break;
+            case 2: // He
+                gens = "él " + vn3[verbPos];
+                gene = "he " + vnb3[verbPos];
+                break;
+            case 3: // She
+                gens = "ella " + vn3[verbPos];
+                gene = "she " + vnb3[verbPos];
+                break;
+            case 4: // They
+                gens = "ellos " + vn4[verbPos];
+                gene = "they " + vnb[verbPos];
+                break;
+            case 5: // We
+                gens = "nosotros " + vn5[verbPos];
+                gene = "we " + vnb[verbPos];
+                break;
+        }
+
+        // Outputs the generated sentences
+
+    }
+    public void GenPresSimpAs(int subject) {
+
+            int verbPos= (int)(Math.random()*vn1.length);
+        switch (subject) {
+            case 0: // I
+                gens = "en lo que yo " + vn1[verbPos];
+                gene = "as I " + vnb[verbPos];
+                break;
+            case 1: // You (singular informal)
+                gens = "en lo que tú " + vn2[verbPos];
+                gene = "as you " + vnb[verbPos];
+                break;
+            case 2: // He
+                gens = "en lo que él " + vn3[verbPos];
+                gene = "as he " + vnb3[verbPos];
+                break;
+            case 3: // She
+                gens = "en lo que ella " + vn3[verbPos];
+                gene = "as she " + vnb3[verbPos];
+                break;
+            case 4: // They
+                gens = "en lo que ellos " + vn4[verbPos];
+                gene = "as they " + vnb[verbPos];
+                break;
+            case 5: // We
+                gens = "en lo que nosotros " + vn5[verbPos];
+                gene = "as we " + vnb[verbPos];
+                break;
+        }
+
+
+    }
+    public void GenPresSimpWhat(int subject) {
+        int verbPos = (int)(Math.random() * vn1.length);
+        switch (subject) {
+            case 0: // I
+                gens = "lo que yo " + vn1[verbPos];
+                gene = "what I " + vnb[verbPos];
+                break;
+            case 1: // You (singular informal)
+                gens = "lo que tú " + vn2[verbPos];
+                gene = "what you " + vnb[verbPos];
+                break;
+            case 2: // He
+                gens = "lo que él " + vn3[verbPos];
+                gene = "what he " + vnb3[verbPos];
+                break;
+            case 3: // She
+                gens = "lo que ella " + vn3[verbPos];
+                gene = "what she " + vnb3[verbPos];
+                break;
+            case 4: // They
+                gens = "lo que ellos " + vn4[verbPos];
+                gene = "what they " + vnb[verbPos];
+                break;
+            case 5: // We
+                gens = "lo que nosotros " + vn5[verbPos];
+                gene = "what we " + vnb[verbPos];
+                break;
+        }
+    }
+
+
     public void GenPresCont1() {
         switch (neg) {
             case 0:
@@ -20065,5 +20193,24 @@ public class Nobles {
                 break;
         }
     }//prueba
+    public void GenRelativeClauses1(int neg) {
+        Oo o = new Oo();
+
+
+
+        // Assuming neg, l, v, n are predefined and accessible
+        switch (neg) {
+            case 0:
+                gens = smscesp[l] + " que está " + vnbcs[v] ;
+                gene = smsc[l] + " that is " + vnbc[v] ;
+                break;
+            case 1:
+                gens = smscesp[l] + " que no está " + vnbcs[v] ;
+                gene = smsc[l] + " that is not " + vnbc[v] ;
+                break;
+            // Add more cases as needed, each setting gens and gene appropriately
+        }
+    }
+
 }
 
