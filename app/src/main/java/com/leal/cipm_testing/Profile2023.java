@@ -5,7 +5,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -14,6 +16,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +28,12 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,6 +45,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -81,13 +91,13 @@ public class Profile2023 extends AppCompatActivity {
 
 
 
-
+    Prefs prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
         Crisp.configure(getApplicationContext(), "9793b001-eb11-4714-bfde-c26c83361406");
-
+        prefs = new Prefs(this);
         tvnameuser = findViewById(R.id.UserNameTv);
         mAuth= FirebaseAuth.getInstance();
         logoutbtn=findViewById(R.id.btnlogout);
@@ -120,6 +130,8 @@ public class Profile2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docRef  = db.collection(userid).document("EstudentsInfo");
 
+
+
         sendInfoOfRegularUseToDB();
         sendInfoOfVocabUseToDB();
         sendInfoOfSpintUseToDb();
@@ -136,9 +148,22 @@ public class Profile2023 extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null) {
+            // User is not signed in, or there is no current user
+            tvnameuser.setText("Not Premium User");
+        } else {
+            // User is signed in
+            String displayName = user.getDisplayName();
+            if (displayName != null) {
+                tvnameuser.setText(displayName);
+            } else {
+                // The user is signed in but doesn't have a display name set
+                tvnameuser.setText("Not Premium User");
+            }
+        }
 
-        user = mAuth.getCurrentUser();
-        tvnameuser.setText(user.getDisplayName());
+
         docRef.get().addOnCompleteListener(taskUser -> {
             if (taskUser.isSuccessful()) {
                 DocumentSnapshot document = taskUser.getResult();
@@ -147,6 +172,13 @@ public class Profile2023 extends AppCompatActivity {
                     String nombreUser = estudiante.get("nombre")+" "+estudiante.get("apellido");
                     String imageUrl = (String) estudiante.get("urlImage");
                     nombredeluser.setText(nombreUser);
+                    if(prefs.getPremium()==0){
+                        tvnameuser.setText("Not Premium User");
+                    }else if(prefs.getPremium()==1){
+                        tvnameuser.setText("Premium User");
+                    }
+
+
                     //coloca la imagen en el xml
                     Glide.with(getApplicationContext())
                             .load(imageUrl)
@@ -172,20 +204,23 @@ public class Profile2023 extends AppCompatActivity {
     }
 
     public void logout(View v){
-        FirebaseAuth.getInstance().signOut();
-        mAuth.signOut();
+        FirebaseAuth.getInstance().signOut();  // Asynchronous sign out
+        mAuth.signOut();  // If this is necessary, keep it, otherwise FirebaseAuth sign out might be sufficient
 
-        if(user!=null){
-            if(user.isAnonymous()){
-
-                startActivity(new Intent(this, Login2023.class));
-            }else{
-
-                startActivity(new Intent(this, Login2023.class));
+        // Add a listener to react to the change in authentication state
+        FirebaseAuth.getInstance().addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (firebaseAuth.getCurrentUser() == null) {
+                    // User is signed out
+                    Toast.makeText(Profile2023.this, "Logged out", Toast.LENGTH_SHORT).show();
+                    Intent intento = new Intent(Profile2023.this, Login2023.class);
+                    startActivity(intento);
+                    // Remove the listener after its job is done
+                    FirebaseAuth.getInstance().removeAuthStateListener(this);
+                }
             }
-        }
-
-
+        });
     }
     public void Open_menu(View vista){
         //Toast.makeText(this, "Menu abierto", Toast.LENGTH_SHORT).show();
@@ -515,34 +550,7 @@ public class Profile2023 extends AppCompatActivity {
         });
     }
 
-    public void goToStructure(View vista){
-        Intent intento = new Intent(Profile2023.this,Estructura2023.class);
-        startActivity(intento);
-    }
-    public void goToVocab(View vista){
-        Intent intento = new Intent(Profile2023.this,Vocabulary2023.class);
-        startActivity(intento);
-    }
-    public void goToSpint(View vista){
-        Intent intento = new Intent(Profile2023.this,SpaInt2023.class);
-        startActivity(intento);
-    }
-    public void goToTrans(View vista){
-        Intent intento = new Intent(Profile2023.this,Transicion2023.class);
-        startActivity(intento);
-    }
-    public void goToCulture(View vista){
-        Intent intento = new Intent(Profile2023.this,Cultura2023.class);
-        startActivity(intento);
-    }
-    public void goToConint(View vista){
-        Intent intento = new Intent(Profile2023.this,ConInt2023.class);
-        startActivity(intento);
-    }
-    public void goToAvail(View vista){
-        Intent intento = new Intent(Profile2023.this,Availability2023.class);
-        startActivity(intento);
-    }
+
 
     public void getValuesFromDb(){
         scoresVocabDocRef = db.collection(userid).document("Scores Vocab");
@@ -696,6 +704,45 @@ public class Profile2023 extends AppCompatActivity {
         dialog.show();
 
     }
+
+    public void deleteDataAndAccount(View v){
+        deleteAllUserDocuments(userid);
+        Toast.makeText(this,"Tu informacion ha sido borrada exitosamente",Toast.LENGTH_SHORT).show();
+        Intent intento = new Intent(this, Registro2023.class);
+        startActivity(intento);
+
+    }
+
+    public void deleteAllUserDocuments(String userId) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection(userId)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        QuerySnapshot querySnapshot = task.getResult();
+                        if (querySnapshot != null) {
+                            for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                                db.collection(userId).document(document.getId()).delete();
+                            }
+                            deleteUserAccount();  // Proceed to delete user account
+                        }
+                    } else {
+                    }
+                });
+    }
+
+    public void deleteUserAccount() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            auth.getCurrentUser().delete()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                        } else {
+                        }
+                    });
+        }
+    }
+
 
 
 }

@@ -9,7 +9,24 @@
     android:orientation="vertical"
     tools:context=".Cultura2023">
 
-    <!--BTNS OPC-->
+    <LinearLayout
+        android:id="@+id/btn_opc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView7"
+            android:name="com.leal.cipm_testing.TopNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_top_navigation" />
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView5"
@@ -254,7 +271,7 @@
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:background="@color/graybg"
         android:orientation="vertical"
         android:elevation="5dp"

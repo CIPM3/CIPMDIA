@@ -8,6 +8,24 @@
     tools:context=".Estructura2023"
     android:background="@color/white"
     >
+    <LinearLayout
+        android:id="@+id/btn_opc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView7"
+            android:name="com.leal.cipm_testing.TopNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_top_navigation" />
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -292,8 +310,8 @@
                     >
                     <LinearLayout
                         android:id="@+id/respdecir"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="@drawable/ic_microfono"
                         android:visibility="visible"
                         android:onClick="speakdecir"

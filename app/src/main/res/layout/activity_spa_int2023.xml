@@ -8,16 +8,34 @@
     tools:context=".SpaInt2023"
     android:background="@color/white"
     >
+    <LinearLayout
+        android:id="@+id/btn_opc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView7"
+            android:name="com.leal.cipm_testing.TopNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_top_navigation" />
+
+    </LinearLayout>
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/btn_opc2"
+        app:layout_constraintBottom_toTopOf="@id/btn_opc"
+        android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="85dp"
+        app:layout_constraintStart_toStartOf="parent">
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,24 +44,7 @@
             android:orientation="vertical">
 
             <!--Header-->
-            <LinearLayout
-                android:id="@+id/header"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:elevation="5dp"
-                android:background="@color/graybg"
-                >
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainerView"
-                    android:name="com.leal.cipm_testing.header"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:layout="@layout/fragment_header"
-                    />
-            </LinearLayout>
+
 
             <!--Spinner-->
             <LinearLayout
@@ -381,8 +382,8 @@
                     >
                     <LinearLayout
                         android:id="@+id/respdecir"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:background="@drawable/ic_microfono"
                         android:layout_marginLeft="5dp"
@@ -752,7 +753,7 @@
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:background="@color/graybg"
         android:orientation="vertical"
         android:elevation="5dp"

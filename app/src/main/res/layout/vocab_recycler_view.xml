@@ -17,7 +17,7 @@
         android:text="1. The "
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <LinearLayout
         android:id="@+id/translationsLinearLayout"
@@ -27,8 +27,8 @@
         app:layout_constraintTop_toBottomOf="@id/textViewWord"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:id="@+id/textViewTranslation"
@@ -54,6 +54,7 @@
             android:textColor="@color/black"
             android:text="en tehoría aqui debería de ir la descripción de la palabra en cuestion supongo que se va a wrappear al rededo rcuando escriba estas mamadas y en codigo se tendrá que dar el actual text "/>
 
+
         <TextView
             android:id="@+id/comodiriasbla"
             android:layout_width="wrap_content"
@@ -71,8 +72,8 @@
         app:layout_constraintTop_toBottomOf="@id/translationsLinearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <EditText
             android:id="@+id/editTextInput"
@@ -106,8 +107,10 @@
         app:layout_constraintTop_toBottomOf="@id/inputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        >
 
         <TextView
             android:id="@+id/resultadotext"
@@ -115,7 +118,9 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="@color/black"
-            android:text="la respuesta correcta es: "/>
+            android:text="la respuesta correcta es: "
+
+            />
         <Button
             android:id="@+id/buttonCheckAnswer"
             android:layout_width="match_parent"
@@ -144,9 +149,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomDivider"
-
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <Button
             android:id="@+id/buttonExamples"
@@ -172,8 +176,10 @@
             android:layout_height="60dp"
             android:background="@drawable/borde_azul"
             android:textColor="@color/azul"
-            android:text="Más Info"
-            android:layout_weight="1"/>
+            android:text="Explicación"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+            />
     </LinearLayout>
 
     <View
@@ -182,5 +188,6 @@
         android:layout_height="10dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="28dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

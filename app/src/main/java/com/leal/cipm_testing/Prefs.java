@@ -32,6 +32,17 @@ public class Prefs {
         editor.apply();
     }
 
+    public void setTypeOfRecycler(int value){
+
+        editor.putInt("typeOfRecycler", value);
+        editor.apply();
+
+    }
+
+    public int getTypeOfRecycler(){
+        return sharedPreferences.getInt("typeOfRecycler", 0);
+
+    }
 
     public void setBoolean(String key, boolean value) {
         editor.putBoolean(key, value);
@@ -54,5 +65,14 @@ public class Prefs {
     public int getPremium() {
         return sharedPreferences.getInt("Premium", 0);
     }
+    public void setHasSeenAd(boolean value) {
+        editor.putBoolean("hasSeenAd", value);
+        editor.apply();
+    }
+
+    public boolean getHasSeenAd() {
+        return sharedPreferences.getBoolean("hasSeenAd", false); // Default to false if not set
+    }
+
 
 }

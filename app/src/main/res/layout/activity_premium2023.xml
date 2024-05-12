@@ -26,14 +26,7 @@
             android:background="@color/graybg"
             >
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView"
-                android:name="com.leal.cipm_testing.header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:layout="@layout/fragment_header"
-                />
+
         </LinearLayout>
 
         <!--Boton-->
@@ -63,7 +56,7 @@
             android:gravity="center"
             />
 
-        <!--Video View-->
+       <!-- &lt;!&ndash;Video View&ndash;&gt;
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,9 +64,9 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingHorizontal="30dp"
-            >
+            android:visibility="visible">
 
-            <!--<LinearLayout
+            &lt;!&ndash;<LinearLayout
                 android:id="@+id/vf"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -91,26 +84,27 @@
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
                 android:visibility="gone"
-                />-->
+                />&ndash;&gt;
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView5"
                 android:name="com.leal.cipm_testing.VideoPlayer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout="@layout/fragment_video_player"
                 android:layout_weight="1"
-                />
-        </LinearLayout>
+                tools:layout="@layout/fragment_video_player"
+                tools:visibility="visible" />
+        </LinearLayout>-->
 
         <TextView
             android:id="@+id/cancelPolicyTv"
             android:layout_width="match_parent"
-            android:layout_height="141dp"
+            android:layout_height="379dp"
             android:layout_margin="10dp"
             android:text="cancelpolicytv"
-            android:textColor="#E53935"
+            android:textColor="#000000"
             android:textSize="14sp"
+            android:scrollbars="vertical"
             />
 
     <LinearLayout

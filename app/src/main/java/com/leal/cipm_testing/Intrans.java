@@ -174,12 +174,12 @@ public class Intrans {
            "at the store ", "at church ", "at the hospital ",
            "at the office ", "at the station "
     };
-    String aten[] = {"en el restaurante (pero no dentro) ",
-           "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-           "en el concierto (pero no dentro) ",
-           "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-           "en el hospital (pero no dentro) ",
-           "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+    String aten[] = {"en el restaurante ",
+           "en la escuela ", "en la casa ",
+           "en el concierto ",
+           "en la tienda ", "en la iglesia ",
+           "en el hospital ",
+           "en la oficina ", "en la estación "
     };
 
     String from[] = {"from the house ", "from the office ", "from the hospital "
@@ -251,7 +251,7 @@ public class Intrans {
 
     String between[] = {"between the car and the house ", "between you and me ", "between two places "
     };
-    String betweensp[] = {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+    String betweensp[] = {"entre el carro y la casa ", "entre tu y yo. ", "entre dos lugares "
     };
 
     String since[] = {"since five ", "since this morning ", "since last year "
@@ -370,7 +370,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"sin ti ", "sin dinero ", "sin permiso "
             },
@@ -441,12 +441,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -468,7 +468,7 @@ public class Intrans {
             },
             {"por encima de la casa ", "por encima de el carro ", "por encima de tu cabeza "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"desde las cinco ", "desde esta mañana ", "desde el año pasado "
             },
@@ -563,12 +563,12 @@ public class Intrans {
             }
     };
     String miraspecial[][] = {
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"desde la casa ", "desde la oficina ", "desde el hospital "
             },
@@ -580,7 +580,7 @@ public class Intrans {
             },
             {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -648,12 +648,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"desde la casa ", "desde la oficina ", "desde el hospital "
             },
@@ -821,12 +821,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -846,7 +846,7 @@ public class Intrans {
             },
             {"sobre el problema ", "sobre el libro ", "sobre la situación ", "sobre ti "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"desde las cinco ", "desde esta mañana ", "desde el año pasado "
             },
@@ -939,7 +939,7 @@ public class Intrans {
             },
             {"por encima de la casa ", "por encima de el carro ", "por encima de tu cabeza "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"desde las cinco ", "desde esta mañana ", "desde el año pasado "
             },
@@ -1076,7 +1076,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1127,18 +1127,18 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
             {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1198,12 +1198,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1215,7 +1215,7 @@ public class Intrans {
             },
             {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1336,7 +1336,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1414,7 +1414,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1477,12 +1477,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1494,7 +1494,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1557,12 +1557,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1574,7 +1574,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1637,12 +1637,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"durante el año ", "durante el dia ", "durante la hora ", "durante el año escolar ", "durante los disturbios "
             },
@@ -1654,7 +1654,7 @@ public class Intrans {
             },
             {"por la casa ", "por la estación ", "por el rio ", "por el parque "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1718,12 +1718,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"de la casa ", "de la oficina ", "de el hospital "
             },
@@ -1739,7 +1739,7 @@ public class Intrans {
             },
             {"sobre la mesa ", "sobre la pared ", "sobre la superficie ", "sobre el techo ", "sobre la ventana "
             },
-            {"entre el carro y la casa ", "entre tu y yo ", "entre dos lugares "
+            {"entre el carro y la casa ", "entre tu y yo.", "entre dos lugares "
             },
             {"por debajo del radar ", "debajo de la cama ", "por debajo de la casa ", "debajo de ti "
             },
@@ -1763,12 +1763,12 @@ public class Intrans {
            "con el maestro ", "con mi amigo ",
            "con mi primo ", "con el papá ", "con la mamá "
     },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
             {"en la casa ", "en el refrigerador ", "en el año ", "en el camion ", "en el carro ", "en el antro "
             }
@@ -1826,12 +1826,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
     };
     String peoplespecialeng[][]= {
@@ -1859,12 +1859,12 @@ public class Intrans {
                    "con el maestro ", "con mi amigo ",
                    "con mi primo ", "con el papá ", "con la mamá "
             },
-            {"en el restaurante (pero no dentro) ",
-                   "en la escuela (pero no dentro) ", "en la casa (pero no dentro) ",
-                   "en el concierto (pero no dentro) ",
-                   "en la tienda (pero no dentro) ", "en la iglesia (pero no dentro) ",
-                   "en el hospital (pero no dentro) ",
-                   "en la oficina (pero no dentro) ", "en la estación (pero no dentro) "
+            {"en el restaurante ",
+                   "en la escuela ", "en la casa ",
+                   "en el concierto ",
+                   "en la tienda ", "en la iglesia ",
+                   "en el hospital ",
+                   "en la oficina ", "en la estación "
             },
     };
     String Oospecialeng[][]= {
@@ -2085,6 +2085,7 @@ public class Intrans {
     String arrayEng;
 
     public void randstarter() {
+
         randvcb = (int) (Math.random() * vcb.length);
         randPV = (int) (Math.random() * PhrasalVerb.length);
         rand = (int) (Math.random() * gen.vib.length);
@@ -4416,14 +4417,7 @@ public class Intrans {
         gen = new Generator();
         randstarter();
         arraySpe();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
 
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg) {
-                    case 0:
                         sp1 = "yo estoy " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I am " + gen.vib3cont[rand] + arrayEng;
                         eng12 = "I'm " + gen.vib3cont[rand] + arrayEng;
@@ -4445,33 +4439,10 @@ public class Intrans {
                         sp7 = "nosotros estamos " + gen.vib3contesp[rand] + arrayEsp;
                         eng7 = "we are " + gen.vib3cont[rand] + arrayEng;
                         eng72 = "we're " + gen.vib3cont[rand] + arrayEng;
-                        break;
-                    case 1:
-                        sp1 = "yo no estoy " + gen.vib3contesp[rand] + arrayEsp;
-                        eng1 = "I am not " + gen.vib3cont[rand] + arrayEng;
-                        eng12 = "I'm not " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no estás " + gen.vib3contesp[rand] + arrayEsp;
-                        eng2 = "you are not " + gen.vib3cont[rand] + arrayEng;
-                        eng22 = "you're not " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él no está " + gen.vib3contesp[rand] + arrayEsp;
-                        eng3 = "he is not " + gen.vib3cont[rand] + arrayEng;
-                        eng32 = "he's not " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella no está " + gen.vib3contesp[rand] + arrayEsp;
-                        eng4 = "she is not " + gen.vib3cont[rand] + arrayEng;
-                        eng42 = "she's not " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso no está " + gen.vib3contesp[rand] + arrayEsp;
-                        eng5 = "it is not " + gen.vib3cont[rand] + arrayEng;
-                        eng52 = "it's not " + gen.vib3cont[rand] + arrayEng;
-                        sp6 = "ellos no están " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they are not " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they're not " + gen.vib3cont[rand] + arrayEng;
-                        sp7 = "nosotros no estamos " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we are not " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we´re not " + gen.vib3cont[rand] + arrayEng;
-                        break;
-                }
-            }
-        }
+
+
+
+
 
     }//PD FEB 2023
     public void GenPresPerf2() {
@@ -4540,7 +4511,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -4672,7 +4643,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -4734,7 +4705,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -4796,7 +4767,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -4843,16 +4814,8 @@ public class Intrans {
     //Futuros
     public void GenFutSimp2() {
         gen = new Generator();
-        randstarter();
-        arraySpe();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
-
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg) {
-                    case 0:
+       int rand = (int)(Math.random()*gen.vib.length);
+       arraySpe();
                         sp1 = "yo " + gen.vib1f[rand] + arrayEsp;
                         eng1 = "I will " + gen.vib[rand] + arrayEng;
                         sp2 = "tú " + gen.vib2f[rand] + arrayEsp;
@@ -4867,26 +4830,6 @@ public class Intrans {
                         eng6 = "they will " + gen.vib[rand] + arrayEng;
                         sp7 = "nosotros " + gen.vibfnos[rand] + arrayEsp;
                         eng7 = "we will " + gen.vib[rand] + arrayEng;
-                        break;
-                    case 1:
-                        sp1 = "yo " + "no " + gen.vib1f[rand] + arrayEsp;
-                        eng1 = "I " + "won't " + gen.vib[rand] + arrayEng;
-                        sp2 = "tú " + "no " + gen.vib2f[rand] + arrayEsp;
-                        eng2 = "you " + "won't " + gen.vib[rand] + arrayEng;
-                        sp3 = "él " + "no " + gen.vib3f[rand] + arrayEsp;
-                        eng3 = "he " + "won't " + gen.vib[rand] + arrayEng;
-                        sp4 = "ella " + "no " + gen.vib3f[rand] + arrayEsp;
-                        eng4 = "she " + "won't " + gen.vib[rand] + arrayEng;
-                        sp5 = "eso " + "no " + gen.vib3f[rand] + arrayEsp;
-                        eng5 = "it " + "won't " + gen.vib[rand] + arrayEng;
-                        sp6 = "ellos " + "no " + gen.vib4f[rand] + arrayEsp;
-                        eng6 = "they " + "won't " + gen.vib[rand] + arrayEng;
-                        sp7 = "nosotros " + "no " + gen.vibfnos[rand] + arrayEsp;
-                        eng7 = "we " + "won't " + gen.vib[rand] + arrayEng;
-                        break;
-                }
-            }
-        }
 
     }//PD FEB 2023
     public void GenFutCont2() {
@@ -4894,7 +4837,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
 
 
         for (String verbs : gen.vib) {
@@ -4907,10 +4850,10 @@ public class Intrans {
                         sp2 = "tú estaras " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you will be " + gen.vib3cont[rand] + arrayEng;
                         eng22 = "you'll be " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él estaré " + gen.vib3contesp[rand] + arrayEsp;
+                        sp3 = "él estará " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he will be " + gen.vib3cont[rand] + arrayEng;
                         eng32 = "he'll be " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella estaré " + gen.vib3contesp[rand] + arrayEsp;
+                        sp4 = "ella estará " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she will be " + gen.vib3cont[rand] + arrayEng;
                         eng32 = "he'll be " + gen.vib3cont[rand] + arrayEng;
                         sp5 = "eso estaré " + gen.vib3contesp[rand] + arrayEsp;
@@ -4955,7 +4898,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5015,14 +4958,7 @@ public class Intrans {
         gen = new Generator();
         randstarter();
         arraySpe();
-        String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
-
-
-        for (String verbs : gen.vib) {
-            if (verbs.equals(temp)) {
-                switch (neg) {
-                    case 0:
+        gen = new Generator();
                         sp1 = "yo habré estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I will have been " + gen.vib3cont[rand] + arrayEng;
                         sp2 = "tú habrás estado " + gen.vib3contesp[rand] + arrayEsp;
@@ -5037,27 +4973,6 @@ public class Intrans {
                         eng6 = "they will have been " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros habremos estado " + gen.vib3contesp[rand] + arrayEsp;
                         eng7 = "we will have been " + gen.vib3cont[rand] + arrayEng;
-                        break;
-                    case 1:
-                        sp1 = "yo no habré estado " + gen.vib3contesp[rand] + arrayEsp;
-                        eng1 = "I won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp2 = "tú no habrás estado " + gen.vib3contesp[rand] + arrayEsp;
-                        eng2 = "you won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp3 = "él no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
-                        eng3 = "he won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp4 = "ella no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
-                        eng4 = "she won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp5 = "eso no habrá estado  " + gen.vib3contesp[rand] + arrayEsp;
-                        eng5 = "it won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp6 = "ellos no habran estado " + gen.vib3contesp[rand] + arrayEsp;
-                        eng6 = "they won't have been " + gen.vib3cont[rand] + arrayEng;
-                        sp7 = "nosotros no habremos estado " + gen.vib3contesp[rand] + arrayEsp;
-                        eng7 = "we won't have been " + gen.vib3cont[rand] + arrayEng;
-                        break;
-                }
-            }
-        }
-
     }//PD FEB 2023
 
     //Would
@@ -5066,7 +4981,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5114,7 +5029,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
 
 
         for (String verbs : gen.vib) {
@@ -5175,7 +5090,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5236,7 +5151,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5286,7 +5201,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5333,7 +5248,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
 
 
         for (String verbs : gen.vib) {
@@ -5394,7 +5309,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5455,7 +5370,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5505,7 +5420,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
 
 
         for (String verbs : gen.vib) {
@@ -5553,7 +5468,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5614,7 +5529,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5675,7 +5590,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5725,7 +5640,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
 
 
         for (String verbs : gen.vib) {
@@ -5772,7 +5687,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5833,7 +5748,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5944,7 +5859,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -5991,7 +5906,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -6053,7 +5968,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         for (String verbs : gen.vib) {
@@ -6162,7 +6077,7 @@ public class Intrans {
         randstarter();
         arraySpe();
         String temp = gen.vib[rand];
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
         for (String verbs : gen.vib) {
             if (verbs.equals(temp)) {
@@ -6236,10 +6151,11 @@ public class Intrans {
         gen = new Generator();
         Pasts pas = new Pasts();
         randstarter();
+        arraySpe();
         String temp = gen.vib[rand];
         int rn1 = (int) (Math.random() * 6);
         int rn2 = (int) (Math.random() * 5);
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
 
         //subject in eng
@@ -6311,6 +6227,7 @@ public class Intrans {
         gen = new Generator();
         Pasts pas = new Pasts();
         randstarter();
+        arraySpe();
         String temp = gen.vib[rand];
         int rn1 = (int) (Math.random() * 6);
         int rn2 = (int) (Math.random() * 5);

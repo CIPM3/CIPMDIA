@@ -24,12 +24,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Login2023 extends AppCompatActivity {
-
     FirebaseAuth mAuth;
     LinearLayout btnlogin,recuperarcontra;
     TextView tvRegisterhere;
     EditText etloginemail,etloginpassword;
-    TextView googlesignin;
     LinearLayout visitante;
 
     @Override
@@ -42,6 +40,7 @@ public class Login2023 extends AppCompatActivity {
         etloginpassword = findViewById(R.id.input_password);
         recuperarcontra =findViewById(R.id.recuperarcontras);
         visitante = findViewById(R.id.visitantebtn);
+        //visitante.setVisibility(View.GONE);
         // email and password
         btnlogin=findViewById(R.id.btnLogin);
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +72,9 @@ public class Login2023 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(Login2023.this,Vocabulary2023.class));
+                            Intent intent = new Intent(Login2023.this, lessonPlan_RecyclerView.class);
+                            intent.putExtra("visitante", true);
+                            startActivity(intent);
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -87,33 +88,6 @@ public class Login2023 extends AppCompatActivity {
 
     }
 
-    /*protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1234) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
-                FirebaseAuth.getInstance().signInWithCredential(credential)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    startActivity(intent);
-
-                                } else {
-                                    Toast.makeText(Login2023.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        });
-
-            } catch (ApiException e) {
-                e.printStackTrace();
-            }
-        }
-    }*/
     @Override
     protected void onStart() {
         super.onStart();
@@ -123,9 +97,8 @@ public class Login2023 extends AppCompatActivity {
             if(user.isAnonymous()){
 
             }else{
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, lessonPlan_RecyclerView.class);
                 startActivity(intent);
-                Toast.makeText(this, "entro en el onstart y no es anonimo", Toast.LENGTH_SHORT).show();
             }
 
         }else {
@@ -153,7 +126,7 @@ public class Login2023 extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(Login2023.this, "Usuario Logeado existosamente", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Login2023.this, ChooseLevel.class ));
+                                startActivity(new Intent(Login2023.this, lessonPlan_RecyclerView.class ));
 
                             }else {
                                 Toast.makeText(Login2023.this, "Usuario o Contraseña incorrectos ", Toast.LENGTH_SHORT).show();

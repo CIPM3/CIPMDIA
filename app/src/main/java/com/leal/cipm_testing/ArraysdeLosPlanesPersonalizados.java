@@ -3,6 +3,9 @@ package com.leal.cipm_testing;
 public class ArraysdeLosPlanesPersonalizados {
 
 
+    public String[] SpIntArray= {"Por Sujeto", "Por Preposición",
+            "Por Objeto","Interferencia Reflexiva",
+            "Interferencia Pasiva"};
     public String[] consciousInterferenciaGratis={
 
              "Steve Jobs 1", "Kot Fishing 1",

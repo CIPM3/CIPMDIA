@@ -1,7 +1,7 @@
 <!-- res/drawable/circle_background.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <solid android:color="#0000FF"/> <!-- Cambia el color según necesites -->
+    <solid android:color="#000000"/> <!-- Cambia el color según necesites -->
     <size
         android:width="70dp"
         android:height="70dp"/> <!-- Ajusta el tamaño según necesites -->

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="1dp">
+
+        <!-- FragmentContainerView here -->
+        <!-- Example of Lesson 1 Button -->
+        <Button
+            android:id="@+id/buttonLesson1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:textColor="#0000FF"
+            android:text="Lesson 1"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circular_button"
+            android:textSize="18dp"/>
+
+        <!-- Title for Lesson 1 -->
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Lesson 1 Title"
+            android:textSize="24sp"
+            android:layout_marginBottom="4dp"/>
+        <!-- Subtitle for Lesson 1 -->
+        <TextView
+            android:id="@+id/subTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+
+            android:text="Subtitle for Lesson 1"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- Description for Lesson 1 -->
+        <TextView
+            android:id="@+id/descriptionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+
+            android:text="This is a brief description of Lesson 1."
+            android:textSize="16sp"
+            android:layout_marginBottom="1dp"/>
+        <TextView
+            android:id="@+id/completedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Completed."
+            android:textSize="16sp"
+
+            />
+        <View
+            android:id="@+id/bottomDivider"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    android:id="@+id/horizontal_viewFrag"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/button_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_lesson"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bgLessonPlanicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cast_for_education"
+                android:orientation="vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Clases de 5 Minutos"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_structure_new"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bgStructureNew"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_structurenew_icon"
+                android:orientation="vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Aprende a Estructurar"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vocabLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgVocabLayout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:orientation="vertical"
+                android:background="@drawable/pluson"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="aprende una palabra"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conectorNuevoLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgConectorNuevo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/linked"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Aprende a Conectar"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/spintlayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgspInt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/psycologyalt"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Para ya no pensar en español"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pragerLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgPrager"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/reading"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Para Recordar Vocab"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/culturalayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgCultura"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/transcribe"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Aprende una frase Cultural"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rachelayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgRachel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/hearing"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mejora tu listening"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/structureViejoLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgOldStructlay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/movie"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Videos de Estructura"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vocabViejoLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgOldVocabLay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/alpha"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Videos de Vocab"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conectorViejoLayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgOldconlay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/shuffle"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Estructuras Conectadas Dificil"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</HorizontalScrollView>

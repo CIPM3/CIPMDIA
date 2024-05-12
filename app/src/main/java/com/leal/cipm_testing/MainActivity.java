@@ -22,6 +22,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -45,7 +52,7 @@ import java.util.Map;
 import im.crisp.client.Crisp;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn,logoutbtn,testest,hamtest;
+    Button logoutbtn,hamtest;
     LinearLayout menu,btn_menu_open,btn_menu_closed;
     TextView txt, tvnameuser;
     FirebaseAuth mAuth;
@@ -56,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String userid;
     DocumentReference rachaDocRef;
-
+    private RewardedAd mRewardedAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +102,9 @@ public class MainActivity extends AppCompatActivity {
             //Give the user all the premium features
             //hide ads if you are showing ads
             txt.setText("Your Subscription is Active");
+/*
             sendIsPremiumToDB(true);
+*/
 
 
         } else if (prefs.getPremium()==0){
@@ -103,7 +112,10 @@ public class MainActivity extends AppCompatActivity {
             //show ads to the user
             txt.setText("No active Subscription");
             Log.d("tag","inside no active suscription");
+
+/*
             sendIsPremiumToDB(false);
+*/
         }
 
         gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -119,25 +131,70 @@ public class MainActivity extends AppCompatActivity {
         });
         dialogueContainer("ok","ok",MainActivity.this);
 
-    }
-    public void starttest(View view){
+        MobileAds.initialize(this, initializationStatus -> {});
+        loadRewardedAd();
 
-        Intent crispIntent = new Intent(this, MainTesting.class);
-        startActivity(crispIntent);
 
-      /*  if(Objects.requireNonNull(mAuth.getCurrentUser()).isAnonymous()){
-            Toast.makeText(this, "Favor de registrarse con email y password para hacer examen", Toast.LENGTH_SHORT).show();
-        }else{
-            startActivity(new Intent(MainActivity.this,MainTesting.class));
-        }                */
     }
-    /* public void createRequest(){
-         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                 .requestIdToken(getString(R.string.default_web_client_id))
-                 .requestEmail()
-                 .build();
-         gsc = GoogleSignIn.getClient(this,gso);
-     }*/
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+
+    // Call this method when the button is clicked.
+    public void showRewardedAd() {
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                // Handle the reward.
+                Log.d("TAG", "The user earned the reward.");
+                Intent intent = new Intent(this, Availability2023.class);
+                startActivity(intent);
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+
     public void logout(View v){
         FirebaseAuth.getInstance().signOut();
         mAuth.signOut();
@@ -187,8 +244,10 @@ public class MainActivity extends AppCompatActivity {
 
     //SCREENS
     public void availability(View vista) {
-        Intent intent = new Intent(this, Availability2023.class);
-        startActivity(intent);
+
+        showRewardedAd();
+        /*Intent intent = new Intent(this, Availability2023.class);
+        startActivity(intent);*/
 
 
 
@@ -216,6 +275,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void myPlan(View vist){
 
+
+
         if(prefs.getPremium()==1){
             Intent intent  = new Intent(MainActivity.this,PlanDeEstudiosChooser.class);
             intent.putExtra("key", user.getUid());
@@ -230,12 +291,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Transiciones(View vista) {
 
-        Intent intento = new Intent(this, Transicion2023.class);
+        Intent intento = new Intent(this, lessonPlan_RecyclerView.class);
+       // intento.putExtra("fromTrans",true);
         startActivity(intento);
 
     }
     public void vocabulary(View vista) {
         Intent intento = new Intent(this, NewVocabRecyclerView.class);
+        intento.putExtra("fromVocab",true);
         startActivity(intento);
 
 
@@ -252,10 +315,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void Form(View v){
-        Intent intento = new Intent(this, FormularioInfo2023.class);
-        startActivity(intento);
-    }
+
 
     public void ConInt(View vista) {
 
@@ -289,17 +349,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //OJO
-    public void TestNuevo(View vist){
 
-
-        Intent intent = new Intent(this, MainTesting.class);
-        startActivity(intent);
-    }
-    public void profile(View vist) {
-
-        Toast.makeText(this, "Bajo construción por el momento", Toast.LENGTH_SHORT).show();
-
-    }
 
     public void chat_maestro(View vist) {
         Intent crispIntent = new Intent(this, ChatMaestro2023.class);
@@ -324,62 +374,7 @@ public class MainActivity extends AppCompatActivity {
         btn_menu_closed.setVisibility(View.GONE);
     }
     UserStats userStatsObject  ;
-/*
-    public void dialogueContainer( String buttonyes, String buttonno,Context context){
-        db= FirebaseFirestore.getInstance();
-        userid = mAuth.getCurrentUser().getUid();
-        rachaDocRef= db.collection(userid).document("users");
-        rachaDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                if(!documentSnapshot.exists()){
 
-                }else {
-                userStatsObject= documentSnapshot.toObject(UserStats.class);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    LayoutInflater inflater = getLayoutInflater();
-
-                    View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
-                    builder.setView(dialogView);
-
-                    TextView textView = dialogView.findViewById(R.id.textodialogo);
-                     textView.setText("Felicidades! has usado el app por "+ String.valueOf(userStatsObject.getUsageCount())+"dias");
-                    String text = "Felicidades! has usado el app por <b>" + String.valueOf(userStatsObject.getUsageCount()) + " días</b>";
-
-                    textView.setText(Html.fromHtml(text));
-                    textView.setTextSize(18); // Set the text size to 18sp (adjust the size as needed)
-                    textView.setTypeface(null, Typeface.BOLD); //
-                    AlertDialog dialog = builder.create();
-
-// Set up the button click listener if needed
-                    Button button = dialogView.findViewById(R.id.buttondialogo1);
-                    button.setText(buttonyes);
-                    button.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog.dismiss();
-
-
-
-                        }
-                    });
-                    Button button2 = dialogView.findViewById(R.id.botondialogo2);
-                    button2.setText(buttonno);
-                    button2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog.dismiss();             }
-                    });
-
-                    dialog.show();
-                }
-            }
-        });
-
-
-
-    }
-*/
 
     public void dialogueContainer(String buttonyes, String buttonno, Context context) {
        SharedPreferences prefs = context.getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
@@ -452,6 +447,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
     DocumentReference isUserPremiumDocRef;
+/*
     private void sendIsPremiumToDB(boolean isPremium) {
         userid = mAuth.getCurrentUser().getUid();
         CollectionReference uid = db.collection(userid);
@@ -467,4 +463,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+*/
 }

@@ -1,15 +1,22 @@
 package com.leal.cipm_testing;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +28,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -106,13 +119,12 @@ public class SpaInt2023 extends AppCompatActivity {
     boolean isCustom;
     boolean personalizedPlan;
     ArrayAdapter<String> adapter;
-    ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
+    ArraysdeLosPlanesPersonalizados arrayGetter ;
     DocumentReference docref ;
     boolean isplanintermedio,isFromListeningPlan;
     boolean isFromListeningPlanDb;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
-    boolean explanation;
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     int condicionparapasar;
     public static final int REC_CODE_SPEECH_INPUT = 100;
@@ -125,11 +137,7 @@ public class SpaInt2023 extends AppCompatActivity {
     double prom;
     int roundedMilliseconds;
     CollectionReference uid;
-    boolean porSujeto = true;
-    boolean porPreposicion = false;
-    boolean porObjeto = true;
-    boolean interferenciaReflexiva = false;
-    boolean interferenciaPasiva = true;
+
     double division,result;
     double one;
     double two;
@@ -138,6 +146,7 @@ public class SpaInt2023 extends AppCompatActivity {
     double five;
     double secondsWithDecimal;
     int counterDB;
+    Intent reciver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -174,6 +183,7 @@ public class SpaInt2023 extends AppCompatActivity {
         btn_check = (Button) findViewById(R.id.btn_check);
 
         answerinput = (EditText) findViewById(R.id.answerinput);
+        answerinput.setVisibility(View.INVISIBLE);
 
         spin = (Spinner) findViewById(R.id.spinuno);
         txt1 = (TextView) findViewById(R.id.textspin1);
@@ -183,7 +193,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
         spin3 = (Spinner) findViewById(R.id.spinest);
         txt3 = (TextView) findViewById(R.id.textspin3);
-
+        arrayGetter= new ArraysdeLosPlanesPersonalizados();
         txteng1 = (TextView) findViewById(R.id.txteng1);
         txteng2 = (TextView) findViewById(R.id.txteng2);
         txteng3 = (TextView) findViewById(R.id.txteng3);
@@ -194,9 +204,7 @@ public class SpaInt2023 extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
-
-        //vv = (VideoView) findViewById(R.id.videoView1);
-        //vf = (LinearLayout) findViewById(R.id.vf);
+        temp= arrayGetter.SpIntArray;
         prefs = new Prefs(this);
         one= 0;
         two =0;
@@ -204,6 +212,7 @@ public class SpaInt2023 extends AppCompatActivity {
         four=0;
         five=0;
         counterDB=0;
+        loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView6, video_player)
@@ -214,14 +223,7 @@ public class SpaInt2023 extends AppCompatActivity {
         uid = db.collection(userid);
         escribirEnelInputTextResultadodeUtterance();
         PremiumAndArrayControler();
-        /*tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if(i==tts.SUCCESS){
-                    int lang = tts.setLanguage(Locale.ENGLISH);
-                }
-            }
-        });*/
+
 
 
     }
@@ -548,12 +550,29 @@ public class SpaInt2023 extends AppCompatActivity {
     }
 
     //EMPIEZA ESTRUCTURA
+    boolean isFromLessonPlan;
+    String[] classFromLesson;
 
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
-        //USUARIO PREMIUM
+        prefs.setHasSeenAd(true);
+        reciver= getIntent();
+         isFromLessonPlan = reciver.getBooleanExtra("typeFromLessonPlan", false);
+        classFromLesson=reciver.getStringArrayExtra("class");
+
+
         if(prefs.getPremium()==1){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Interference, android.R.layout.simple_spinner_item);
+
+            if(isFromLessonPlan){
+
+                 adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classFromLesson);
+
+            }else {
+                temp= arrayGetter.SpIntArray;
+                adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }
+
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -568,8 +587,7 @@ public class SpaInt2023 extends AppCompatActivity {
                 }
             });
 
-
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.InterfrangoPremium, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin2.setAdapter(adapter2);
             spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -584,7 +602,6 @@ public class SpaInt2023 extends AppCompatActivity {
 
                 }
             });
-
 
             ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.estructurasinterferencia, android.R.layout.simple_spinner_item);
             adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -604,7 +621,17 @@ public class SpaInt2023 extends AppCompatActivity {
 
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.InterferenceGratis, android.R.layout.simple_spinner_item);
+
+            if(isFromLessonPlan){
+                prefs.setHasSeenAd(true);
+                reciver= getIntent();
+
+              adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classFromLesson);
+
+            }else {
+                 adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -659,15 +686,13 @@ public class SpaInt2023 extends AppCompatActivity {
     public void spinnerSelected1(){
         selection = spin.getSelectedItem().toString();
         txt1.setText(selection);
-/*
-        VideoPlayer video_player = new VideoPlayer();
-        Bundle args = new Bundle();
-        args.putString("tema", selection);
-        video_player.setArguments(args);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragmentContainerView6, video_player)
-                .commit();*/
+        btns_lay.setVisibility(View.GONE);
+        btn_intent_lay.setVisibility(View.GONE);
+        tdr.setVisibility(View.GONE);
+        tdrnumero.setVisibility(View.GONE);
+
+        answer_pos.setVisibility(View.GONE);
+
 
         if(video_player != null) {
             video_player.updateFragmentStateStructure(selection);
@@ -720,6 +745,7 @@ public class SpaInt2023 extends AppCompatActivity {
         respinc.setVisibility(View.GONE);
         answerinput.setBackgroundColor(Color.parseColor("#FFFFFF"));
         opclay.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
         if(!selection.equals("Tutorial")){
             mostrarlay();
             switch (selection) {
@@ -1308,6 +1334,7 @@ public class SpaInt2023 extends AppCompatActivity {
 
     public void speakdecir(View vista){
         iniciarentradavoz();
+        answerinput.setVisibility(View.VISIBLE);
     }
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
@@ -1332,107 +1359,120 @@ public class SpaInt2023 extends AppCompatActivity {
     }
     public void checkans(View v){
         EditText text = (EditText)findViewById(R.id.answerinput);
-        if (
-                t1.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        t2.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        t3.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        t4.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        t5.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        t6.trim().equalsIgnoreCase(text.getText().toString().trim())||
-                        engtx.getText().toString().trim().equalsIgnoreCase(text.getText().toString().trim()))
-        {
-            //correcto
-            setTimeonScreen();
-            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i == TextToSpeech.SUCCESS) {
-                        ttr.setLanguage(Locale.ENGLISH);
-                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                            @Override
-                            public void onStart(String s) {
-                            }
-                            @Override
-                            public void onDone(String utteranceId) {
+        String userInput = text.getText().toString();
+
+        if (isAnswerCorrect(userInput, t1, t2, t3, t4, t5, t6, engtx.getText().toString())) {
+            {
+                //correcto
+                setTimeonScreen();
+                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if (i == TextToSpeech.SUCCESS) {
+                            ttr.setLanguage(Locale.ENGLISH);
+                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+                                @Override
+                                public void onDone(String utteranceId) {
+
+                                }
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            ttr.speak("answer is correct",TextToSpeech.QUEUE_ADD,null, "one");
+
+                            condicionparapasar++;
+                            if(personalizedPlan ){
+                                if(condicionparapasar>5){
+                                    SubtractSelectionAndSendinfoToDb();
+                                    condicionparapasar=0;
+
+                                }else {
+                                    Toast.makeText(SpaInt2023.this, "otras " +String.valueOf(6-condicionparapasar)+" correctas para pasar a siguiente estructura", Toast.LENGTH_SHORT).show();
+                                }
 
                             }
-                            @Override
-                            public void onError(String s) {
-                            }
-                        });
-                        ttr.speak("answer is correct",TextToSpeech.QUEUE_ADD,null, "one");
 
-                        condicionparapasar++;
-                        if(personalizedPlan ){
-                            if(condicionparapasar>5){
-                                SubtractSelectionAndSendinfoToDb();
-                                condicionparapasar=0;
 
-                            }else {
-                                Toast.makeText(SpaInt2023.this, "otras " +String.valueOf(6-condicionparapasar)+" correctas para pasar a siguiente estructura", Toast.LENGTH_SHORT).show();
-                            }
 
                         }
+                    }
+                });
+                answerinput.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
+                btn_intent_lay.setVisibility(View.VISIBLE);
+                answer_lay.setVisibility(View.GONE);
+                btns_lay.setVisibility(View.GONE);
+                answer_lay.setVisibility(View.GONE);
+                btn_check_lay.setVisibility(View.GONE);
+                answer_pos.setVisibility(View.GONE);
 
+                resppass.setVisibility(View.VISIBLE);
+                respescu.setVisibility(View.GONE);
 
+                respinc.setVisibility(View.GONE);
+                answer_lay.setVisibility(View.GONE);
+
+                double sum;
+                switch (counterDB){
+                    case 0:
+                        one=secondsWithDecimal;
+
+                        break;
+
+                    case 1:
+                        two=secondsWithDecimal;
+
+                        break;
+
+                    case 2:
+                        three=secondsWithDecimal;
+
+                        break;
+
+                    case 3:
+                        four=secondsWithDecimal;
+
+                        break;
+                    case 4:
+                        five=secondsWithDecimal;
+
+                        break;
+
+                }
+                counterDB++;
+                sum = one+two+three+four+five;
+                if(counterDB == 3){
+                    turnTrue(selection,sum);
+                    counterDB=0;
+
+                    if(isFromLessonPlan&&prefs.getPremium()==1){
+                        classSelector(selection);
+                        if(placeHolder[0].equals("Random")){
+                            Intent intent = new Intent(this, Transicion2023.class);
+                            intent.putExtra("typeFromLessonPlan",true);
+                            intent.putExtra("class",placeHolder);
+                            startActivity(intent);
+                        }else {
+                            Intent intent = new Intent(this, SpaInt2023.class);
+                            intent.putExtra("typeFromLessonPlan",true);
+                            intent.putExtra("class",placeHolder);
+                            startActivity(intent);
+
+                        }
+                    }else if(prefs.getPremium()==0){
+                        dialogueShowRewardedAd2("Para Seguir usando hay que ver un anuncio","Cipm Premium","Ver anuncio");
 
                     }
+
+
                 }
-            });
-            answerinput.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
-            btn_intent_lay.setVisibility(View.VISIBLE);
-            answer_lay.setVisibility(View.GONE);
-            btns_lay.setVisibility(View.GONE);
-            answer_lay.setVisibility(View.GONE);
-            btn_check_lay.setVisibility(View.GONE);
-            answer_pos.setVisibility(View.GONE);
-
-            resppass.setVisibility(View.VISIBLE);
-            respescu.setVisibility(View.GONE);
-
-            respinc.setVisibility(View.GONE);
-            answer_lay.setVisibility(View.GONE);
-
-            double sum;
-            switch (counterDB){
-                case 0:
-                    one=secondsWithDecimal;
-                    Toast.makeText(this, "one", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case 1:
-                    two=secondsWithDecimal;
-                    Toast.makeText(this, "two", Toast.LENGTH_SHORT).show();
-
-                    break;
-
-                case 2:
-                    three=secondsWithDecimal;
-                    Toast.makeText(this, "three", Toast.LENGTH_SHORT).show();
-
-                    break;
-
-                case 3:
-                    four=secondsWithDecimal;
-                    Toast.makeText(this, "four", Toast.LENGTH_SHORT).show();
-
-                    break;
-                case 4:
-                    five=secondsWithDecimal;
-                    Toast.makeText(this, "five", Toast.LENGTH_SHORT).show();
-
-                    break;
 
             }
-            counterDB++;
-            sum = one+two+three+four+five;
-            if(counterDB == 5){
-                turnTrue(selection,sum);
-                counterDB=0;
-            }
-
-        }else{
+        } else{
             //incorrecto
             ttr = new TextToSpeech(getApplicationContext(),
                     new TextToSpeech.OnInitListener() {
@@ -1486,6 +1526,7 @@ public class SpaInt2023 extends AppCompatActivity {
             answer_lay.setVisibility(View.VISIBLE);
             btn_intent_lay.setVisibility(View.GONE);
             btn_check_lay.setVisibility(View.VISIBLE);
+            answerinput.setVisibility(View.VISIBLE);
 
             resppass.setVisibility(View.GONE);
             respescu.setVisibility(View.GONE);
@@ -1494,6 +1535,15 @@ public class SpaInt2023 extends AppCompatActivity {
         }
 
 
+
+    }
+    private boolean isAnswerCorrect(String answer, String... possibleAnswers) {
+        for (String possibleAnswer : possibleAnswers) {
+            if (possibleAnswer != null && possibleAnswer.trim().equalsIgnoreCase(answer.trim())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void possibleanswers(View view){
@@ -1668,7 +1718,192 @@ public class SpaInt2023 extends AppCompatActivity {
 
     }
     Map<String, Object> userdb = new HashMap<>();
+    String[] placeHolder = new String[]{"Default value"};
 
+    public void showRewardedAd2() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                if(isFromLessonPlan){
+                   classSelector(selection);
+                    if(placeHolder[0].equals("Random")){
+                        Intent intent = new Intent(this, Transicion2023.class);
+                        intent.putExtra("typeFromLessonPlan",true);
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+                    }else {
+                        Intent intent = new Intent(this, SpaInt2023.class);
+                        intent.putExtra("typeFromLessonPlan",true);
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+
+                    }
+                }else {
+                    prefs.setHasSeenAd(true);
+                    Intent intent = new Intent(this, SpaInt2023.class);
+                    startActivity(intent);
+                }
+
+
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+            prefs.setHasSeenAd(true);
+            Toast.makeText(this, "Quieres la versión sin interrupciones?", Toast.LENGTH_SHORT).show();
+
+            Intent intento = new Intent(SpaInt2023.this,Premium2023.class);
+            startActivity(intento);
+        }
+    }
+
+    private void classSelector(String selection) {
+
+        switch (selection){
+
+            case"Por Sujeto":
+                placeHolder = new String[]{"Por Preposición"};
+
+                break;
+
+
+            case "Por Preposición":
+                placeHolder = new String[]{"Por Objeto"};
+
+
+                break;
+
+
+            case "Por Objeto":
+                placeHolder = new String[]{"Interferencia Reflexiva"};
+
+
+                break;
+
+            case "Interferencia Reflexiva":
+                placeHolder = new String[]{"Interferencia Pasiva"};
+
+                break;
+
+
+            case "Interferencia Pasiva":
+                placeHolder = new String[]{"Random"};
+
+                break;
+
+
+        }
+    }
+
+    private RewardedAd mRewardedAd;
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-9126282069959189/3014125580", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    public void  dialogueShowRewardedAd2(String text, String buttonyes, String buttonno){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+
+                Intent intento = new Intent(SpaInt2023.this,Premium2023.class);
+                startActivity(intento);
+
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd2();
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+
+    }
 
 
 }

@@ -8,18 +8,30 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -114,7 +126,7 @@ public class ConInt2023 extends AppCompatActivity {
         prefs= new Prefs(this);
         uid= db.collection(userid);
         counterDb=0;
-
+        loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
@@ -385,70 +397,142 @@ public class ConInt2023 extends AppCompatActivity {
             .show();}
 
     //EMPIEZA ACTIVIDAD
-
+boolean isFromLessonPlan;
+    String[] classFromLesson= new String[]{"Place holder"};
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
-        //USUARIO PREMIUM
-        if(prefs.getPremium()==1){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
+        Intent reciver= getIntent();
+        isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false );
+        classFromLesson= reciver.getStringArrayExtra("class");
 
-                    explanation = false;
-                    spinnerSelected();
+        if(isFromLessonPlan){
+            if(prefs.getPremium()==1){
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(ConInt2023.this, android.R.layout.simple_list_item_1,classFromLesson);
+
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        explanation = false;
+                        spinnerSelected();
                     /*limpiar_inputs();
                     set_ans();*/
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if(i==tts.SUCCESS){
-                        int lang = tts.setLanguage(Locale.ENGLISH);
                     }
-                }
-            });
-            //USUARIO BASICO
-        } else if(prefs.getPremium()==0){
-            ArrayAdapter<CharSequence > adapter = ArrayAdapter.createFromResource(this, R.array.rachelGratis ,android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection = spin.getSelectedItem().toString();
-                    textspin1.setText(selection);
 
-                    explanation = false;
-                    spinnerSelected();
-               
-                    
-                }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if(i==tts.SUCCESS){
-                        int lang = tts.setLanguage(Locale.ENGLISH);
                     }
-                }
-            });
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+                //USUARIO BASICO
+            } else if(prefs.getPremium()==0){
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(ConInt2023.this, android.R.layout.simple_list_item_1,classFromLesson);
+
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        explanation = false;
+                        spinnerSelected();
+
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+            }
+
+        }else {
+            if(prefs.getPremium()==1){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rachel, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        explanation = false;
+                        spinnerSelected();
+                    /*limpiar_inputs();
+                    set_ans();*/
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+                //USUARIO BASICO
+            } else if(prefs.getPremium()==0){
+                ArrayAdapter<CharSequence > adapter = ArrayAdapter.createFromResource(this, R.array.rachelGratis ,android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection = spin.getSelectedItem().toString();
+                        textspin1.setText(selection);
+
+                        explanation = false;
+                        spinnerSelected();
+
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+                tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if(i==tts.SUCCESS){
+                            int lang = tts.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+            }
+
         }
+        //USUARIO PREMIUM
     }
 
     //EVALUA QUE FUE SELECCIONADO
@@ -667,8 +751,6 @@ public class ConInt2023 extends AppCompatActivity {
             if(counterDb<22){
                 sendInfoOfRegularUseToDb();
                 counterDb++;
-                Toast.makeText(this, "corre", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, String.valueOf(counterDb), Toast.LENGTH_SHORT).show();
             }
 
 
@@ -676,13 +758,26 @@ public class ConInt2023 extends AppCompatActivity {
 
         }else{
 
-            Toast.makeText(this, "has terminado esta clase , elige otra " , Toast.LENGTH_SHORT).show();
-            spin.setSelection(0);
-            posKeyWord=0;
-            if(personalizedPlan){
-                SubtractSelectionAndSendinfoToDb();
+            if(isFromLessonPlan&&prefs.getPremium()==0){
+                dialogueShowRewardedAd("Ver anuncio para Desbloquear siguiente clase","Ver Anuncio","Cipm Premium");
+            }else if(prefs.getPremium()==1&&isFromLessonPlan){
+                classSelector();
 
+                Intent intent = new Intent(this, Availability2023.class);
+                intent.putExtra("typeFromLessonPlan",true );
+                intent.putExtra("class",placeHolder);
+                startActivity(intent);
+            }else {
+                spin.setSelection(0);
+                posKeyWord=0;
+                if(personalizedPlan){
+                    SubtractSelectionAndSendinfoToDb();
+
+                }
+                Intent intento = new Intent(this,ConInt2023.class);
+                startActivity(intento);
             }
+
         }
     }
 
@@ -750,7 +845,157 @@ public class ConInt2023 extends AppCompatActivity {
     }
 
 
+    String[] placeHolder = new String[]{"Default value"};
+    private RewardedAd mRewardedAd;
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-9126282069959189/9607120956", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
 
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    public void showRewardedAd() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                // Handle the reward.
+                classSelector();
+
+                Intent intent = new Intent(this, Availability2023.class);
+                intent.putExtra("typeFromLessonPlan",true );
+                intent.putExtra("class",placeHolder);
+                startActivity(intent);
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+
+    private void classSelector() {
+        switch (selection) {
+            case "Steve Jobs 1":
+                placeHolder = new String[]{"Is America Racist?"};
+                break;
+            case "Kot Fishing 1":
+                placeHolder = new String[]{"Don't Compare Yourself to Others"};
+
+                break;
+            case "Kot Fishing 2":
+                placeHolder = new String[]{"Fix Yourself"};
+
+                break;
+            case "Helicoptero 1":
+                placeHolder = new String[]{"Are Men and Women Different?"};
+
+                break;
+            case "Helicoptero 2":
+                placeHolder = new String[]{"Don't Waste Your Time"};
+                break;
+
+        }
+    }
+
+    public void  dialogueShowRewardedAd(String text, String buttonyes, String buttonno){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd();
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(ConInt2023.this,Premium2023.class);
+                startActivity(intento);
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+
+    }
     String Rachel [][][]={
             //Steve Jobs 1
             {

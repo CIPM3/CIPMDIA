@@ -6,44 +6,152 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewVocabRecyclerView extends AppCompatActivity implements VocabItemAdapter.SpeechInitiator {
+public class NewVocabRecyclerView extends AppCompatActivity implements VocabItemAdapter.SpeechInitiator, VocabItemAdapter.AdListener {
     private RecyclerView recyclerView;
     private List<VocabItem> vocabItemList;
     private VocabItemAdapter vocabItemAdapter;
     private ActivityResultLauncher<Intent> speechRecognitionLauncher;
     private int activeItemPosition = -1;
+    Prefs prefs;
 
-
+    texts text = new texts();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_vocab_recycler_view);
+        loadRewardedAd();
+        Prefs prefs = new Prefs(this);
+
         Intent reciver = getIntent();
+
 
         recyclerView=findViewById(R.id.recyclerViewvocab);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         vocabItemList  = new ArrayList<>();
+
         if(reciver.getBooleanExtra("fromStructures",false)){
-            loadStructureItems();
-        }else {
-            loadVocabItems();
+            loadStructureItemsPremium();
+
+        }
+        else if(reciver.getBooleanExtra("fromVocab",false)){
+            loadVocabItemsPremium();
+
+        }
+        else if(reciver.getBooleanExtra("fromTrans",false)){
+            loadConnector();
+
+        }
+        else if(reciver.getBooleanExtra("visitante",false)){
+            loadVisitanteStructures()   ;
         }
 
-        vocabItemAdapter= new VocabItemAdapter(vocabItemList,this);
+
+            prefs= new Prefs(this);
+        vocabItemAdapter= new VocabItemAdapter(this,vocabItemList,this,prefs,this);
         recyclerView.setAdapter(vocabItemAdapter);
             escribirEnelInputTextResultadodeUtterance();
     }
 
-    private void loadVocabItems()  {
-        texts text= new texts();
+    private void loadConnectorFree() {
+        vocabItemList.add(new VocabItem("And","y",text.andDef,2));
+        vocabItemList.add(new VocabItem("that","que",text.thatConnectorDef,2));
+        vocabItemList.add(new VocabItem("but","pero",text.butDef,2));
+        vocabItemList.add(new VocabItem("or","o",text.orDef,2));
+        vocabItemList.add(new VocabItem("as","como-en lo que",text.asConjunctionDef,2));
+        vocabItemList.add(new VocabItem("if","si",text.ifDef,2));
+        vocabItemList.add(new VocabItem("when","cuando",text.whenAdvDef,2));
+        vocabItemList.add(new VocabItem("because","por que",text.becauseDef,2));
+
+        vocabItemList.add(new VocabItem("Quieres Todas las 21 palabras de coneción?","Versión Premium 5 USD al mes",text.cancelPolicy,3));
+
+    }
+    private void loadVocabItemsFree() {
+        vocabItemList.add(new VocabItem("the","El-La-Los-Las",text.theDef,0));
+        vocabItemList.add(new VocabItem("be","Ser o Estar",text.toBeDef,0));
+        vocabItemList.add(new VocabItem("and","Y",text.andDef,0));
+        vocabItemList.add(new VocabItem("of","de",text.ofDef,0));
+        vocabItemList.add(new VocabItem("a","un-una",text.aDef,0));
+        vocabItemList.add(new VocabItem("in","en-dentro",text.inDef,0));
+        vocabItemList.add(new VocabItem("to(infinitive)","parte de un verbo sin conjugar",text.toInfinitiveDef,0));
+        vocabItemList.add(new VocabItem("have","tener-haber-consumir",text.haveDef,0));
+        vocabItemList.add(new VocabItem("to","a-como preposición ",text.toPrepositionDef,0));
+        vocabItemList.add(new VocabItem("it","eso",text.itDef,0));
+        //10
+        vocabItemList.add(new VocabItem("I","Yo",text.iDef,0));
+        vocabItemList.add(new VocabItem("that","que-para conectar ideas",text.thatConnectorDef,0));
+        vocabItemList.add(new VocabItem("for","por o para",text.forDef,0));
+        vocabItemList.add(new VocabItem("you","tú",text.youDef,0));
+        vocabItemList.add(new VocabItem("he","él",text.heDef,0));
+        vocabItemList.add(new VocabItem("with","con",text.withDef,0));
+        vocabItemList.add(new VocabItem("on","sobre",text.onDef,0));
+        vocabItemList.add(new VocabItem("do","hacer",text.doDef,0));
+        vocabItemList.add(new VocabItem("´s","indica posesión",text.possessiveSDef,0));
+        vocabItemList.add(new VocabItem("say","Decir",text.sayDef,0));
+        //20
+        vocabItemList.add(new VocabItem("they","ellos",text.theyDef,0));
+        vocabItemList.add(new VocabItem("this","esto",text.thisDef,0));
+        vocabItemList.add(new VocabItem("but","pero",text.butDef,0));
+        vocabItemList.add(new VocabItem("at","en",text.atDef,0));
+        vocabItemList.add(new VocabItem("we","nosotros",text.weDef,0));
+        vocabItemList.add(new VocabItem("his","su de él",text.hisDef,0));
+        vocabItemList.add(new VocabItem("from","de-proveniencia",text.fromDef,0));
+        vocabItemList.add(new VocabItem("that (determiner)","eso",text.thatDeterminerDef,0));
+        vocabItemList.add(new VocabItem("Quieres Todas las 500 palabras de vocabulario?","Versión Premium 5 USD al mes",text.cancelPolicy,3));
+
+
+
+    }
+
+    private void loadVisitanteStructures() {
+        vocabItemList.add(new VocabItem("Present Simple","Qué pasa?",text.simplePresentDefinition,1));
+        vocabItemList.add(new VocabItem("Present Continuous","Qué está pasando?",text.presentContinuousDef,1));
+        vocabItemList.add(new VocabItem("Present Perfect","Qué Ha Pasado?",text.presentPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Present Perfect Continuous","Qué ha estado pasando?",text.presentPerfectContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Past Simple","Qué pasó?",text.simplePastExplanation,1));
+
+
+    }
+
+    private void loadStructureItemsFree() {
+        vocabItemList.add(new VocabItem("Present Simple","Qué pasa?",text.simplePresentDefinition,1));
+        vocabItemList.add(new VocabItem("Present Continuous","Qué está pasando?",text.presentContinuousDef,1));
+        vocabItemList.add(new VocabItem("Present Perfect","Qué Ha Pasado?",text.presentPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Present Perfect Continuous","Qué ha estado pasando?",text.presentPerfectContinuousExplanation,1));
+
+        vocabItemList.add(new VocabItem("Past Simple","Qué pasó?",text.simplePastExplanation,1));
+        vocabItemList.add(new VocabItem("Past Continuous","Qué estaba pasando?",text.pastContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Past Perfect","Qué había pasado?",text.pastPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Past Perfect Continuous","Qué había estado pasando?",text.pastPerfectContinuousExplanation,1));
+
+        vocabItemList.add(new VocabItem("Future Simple","Qué pasará?",text.futureSimpleExplanation,1));
+        vocabItemList.add(new VocabItem("Future Continuous","Qué estará pasando?",text.futureContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Future Perfect","Qué habrá pasado?",text.futurePerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Future Perfect Continuous","Qué habrá estado pasando?",text.futurePerfectContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Quieres Todas 66 Estructuras?","Versión Premium 5 USD al mes",text.cancelPolicy,3));
+
+
+    }
+
+    private void loadVocabItemsPremium()  {
+
 
         vocabItemList.add(new VocabItem("the","El-La-Los-Las",text.theDef,0));
         vocabItemList.add(new VocabItem("be","Ser o Estar",text.toBeDef,0));
@@ -169,7 +277,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("one", "uno", text.oneDef, 0));
         vocabItemList.add(new VocabItem("even", "incluso", text.evenDef, 0));
         vocabItemList.add(new VocabItem("her", "su de ella", text.herDef, 0));
-        vocabItemList.add(new VocabItem("back", "espalda", text.backNounDef, 0)); // Assuming "backNounDef" for "espalda" as a noun. If needed as an adverb, replace with "backAdverbDef".
+        vocabItemList.add(new VocabItem("back", "espalda", text.backDef, 0)); // Assuming "backNounDef" for "espalda" as a noun. If needed as an adverb, replace with "backAdverbDef".
         vocabItemList.add(new VocabItem("any", "cualquier", text.anyDef, 0));
 
 
@@ -235,7 +343,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("while", "mientras", text.whileConnectorDef, 0));
         vocabItemList.add(new VocabItem("mean", "significar", text.meanDef, 0));
         vocabItemList.add(new VocabItem("let", "dejar", text.letDef, 0));
-        vocabItemList.add(new VocabItem("why", "por qué", text.whyDef, 0));
+        vocabItemList.add(new VocabItem("why", "por qué", text.whyDef2, 0));
         vocabItemList.add(new VocabItem("president", "presidente", text.presidentDef, 0));
 
 
@@ -288,7 +396,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
 
         //
         vocabItemList.add(new VocabItem("question", "pregunta", text.questionNounDef, 0));
-        vocabItemList.add(new VocabItem("right", "derecho", text.rightAdverbDef, 0));
+        vocabItemList.add(new VocabItem("right", "derecho", text.rightNoundef2, 0));
         vocabItemList.add(new VocabItem("program", "programa", text.programNounDef, 0));
         vocabItemList.add(new VocabItem("work", "verbo-trabajo", text.workDef, 0));
         vocabItemList.add(new VocabItem("run", "correr", text.runVerbDef, 0));
@@ -363,9 +471,10 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("both", "ambos", text.bothDef, 0));
         vocabItemList.add(new VocabItem("little", "pequeño", text.littleDef, 0));
         vocabItemList.add(new VocabItem("yes", "sí", text.yesDef, 0));
-        vocabItemList.add(new VocabItem("after", "después", text.afterDef, 0));
-        vocabItemList.add(new VocabItem("since", "desde", text.sinceDef, 0));
+        vocabItemList.add(new VocabItem("after", "después de que", text.afterDef, 0));
+        vocabItemList.add(new VocabItem("since", "ya que", text.sinceDef, 0));
         vocabItemList.add(new VocabItem("around", "alrededor", text.aroundPrepositionDef, 0));
+        vocabItemList.add(new VocabItem("long", "largo periodo de tiempo", text.longAdverbDef, 0));
         vocabItemList.add(new VocabItem("provide", "proveer", text.provideDef, 0));
         vocabItemList.add(new VocabItem("service", "servicio", text.serviceNounDef, 0));
         vocabItemList.add(new VocabItem("important", "importante", text.importantDef, 0));
@@ -374,7 +483,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
 
         vocabItemList.add(new VocabItem("away", "lejos", text.awayDef, 0));
         vocabItemList.add(new VocabItem("friend", "amigo", text.friendDef, 0));
-        vocabItemList.add(new VocabItem("however", "sin embargo", text.howeverAdverbDef, 0));
+        vocabItemList.add(new VocabItem("however", "sin embargo", text.howeverDef, 0));
         vocabItemList.add(new VocabItem("power", "poder", text.powerNounDef, 0));
         vocabItemList.add(new VocabItem("no", "no", text.noDef, 0));
         vocabItemList.add(new VocabItem("yet", "aún", text.yetDef, 0));
@@ -390,7 +499,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("stand", "estar de pie", text.standVerbDef, 0));
         vocabItemList.add(new VocabItem("among", "entre", text.amongDef, 0));
         vocabItemList.add(new VocabItem("game", "juego", text.gameDef, 0));
-        vocabItemList.add(new VocabItem("ever", "alguna vez", text.everDef, 0));
+        vocabItemList.add(new VocabItem("ever", "alguna vez", text.explanationOfEver, 0));
         vocabItemList.add(new VocabItem("lose", "perder", text.loseDef, 0));
         vocabItemList.add(new VocabItem("bad", "malo", text.badDef, 0));
         vocabItemList.add(new VocabItem("member", "miembro", text.memberDef, 0));
@@ -436,7 +545,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("kid", "niño", text.kidDef, 0));
         vocabItemList.add(new VocabItem("minute", "minuto", text.minuteDef, 0));
         vocabItemList.add(new VocabItem("table", "mesa", text.tableDef, 0));
-        vocabItemList.add(new VocabItem("whether", "si (condicional)", text.whetherDef, 0));
+        vocabItemList.add(new VocabItem("whether", "ya sea que ", text.whetherDef, 0));
         vocabItemList.add(new VocabItem("understand", "entender", text.understandDef, 0));
         vocabItemList.add(new VocabItem("team", "equipo", text.teamDef, 0));
         vocabItemList.add(new VocabItem("back", "espalda", text.backDef, 0)); // Include a note on dual meaning for context
@@ -620,7 +729,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("mind", "mente", text.mindNounDef, 0));
 
 
-        vocabItemList.add(new VocabItem("report", "reportar -verbo", text.reportVerbDef, 0));
+        vocabItemList.add(new VocabItem("report", "reporte sustantivo", text.reportVerbDef, 0));
         vocabItemList.add(new VocabItem("finally", "finalmente", text.finallyDef, 0));
         vocabItemList.add(new VocabItem("drug", "droga", text.drugNounDef, 0));
         vocabItemList.add(new VocabItem("less", "menos", text.lessDef, 0));
@@ -645,12 +754,132 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("price", "precio", text.priceDef, 0));
         vocabItemList.add(new VocabItem("military", "militar", text.militaryDef, 0));
         vocabItemList.add(new VocabItem("federal", "federal", text.federalDef, 0));
+        vocabItemList.add(new VocabItem("break", "romper", text.breakDef, 0));
 
     }
 
-    private void loadStructureItems(){
-        texts text = new texts();
-        vocabItemList.add(new VocabItem("Present Simple","Qué pasa?",text.simplePresentDefinition,0));
+    private void loadStructureItemsPremium(){
+
+        vocabItemList.add(new VocabItem("Present Simple","Qué pasa?",text.simplePresentDefinition,1));
+        vocabItemList.add(new VocabItem("Present Continuous","Qué está pasando?",text.presentContinuousDef,1));
+        vocabItemList.add(new VocabItem("Present Perfect","Qué Ha Pasado?",text.presentPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Present Perfect Continuous","Qué ha estado pasando?",text.presentPerfectContinuousExplanation,1));
+
+        vocabItemList.add(new VocabItem("Past Simple","Qué pasó?",text.simplePastExplanation,1));
+        vocabItemList.add(new VocabItem("Past Continuous","Qué estaba pasando?",text.pastContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Past Perfect","Qué había pasado?",text.pastPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Past Perfect Continuous","Qué había estado pasando?",text.pastPerfectContinuousExplanation,1));
+
+        vocabItemList.add(new VocabItem("Future Simple","Qué pasará?",text.futureSimpleExplanation,1));
+        vocabItemList.add(new VocabItem("Future Continuous","Qué estará pasando?",text.futureContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Future Perfect","Qué habrá pasado?",text.futurePerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Future Perfect Continuous","Qué habrá estado pasando?",text.futurePerfectContinuousExplanation,1));
+
+        vocabItemList.add(new VocabItem("Would Simple","Qué pasaría?",text.wouldVerbExplanation,1));
+        vocabItemList.add(new VocabItem("Would Continuous","Qué estaría pasando?",text.wouldContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Would Perfect","Qué habría pasado?",text.wouldPerfectExplanation,1));
+        vocabItemList.add(new VocabItem("Would Perfect Continuous","Qué habría estado pasando?",text.wouldHaveBeenWorkingExplanation,1));
+
+        vocabItemList.add(new VocabItem("Could Simple","Qué podría pasar?",text.couldVerbExplanation,1));
+        vocabItemList.add(new VocabItem("Could Continuous","Qué podría estar pasando?",text.couldContinuousExplanation,1));
+        vocabItemList.add(new VocabItem("Could Perfect","Qué podría haber pasado?",text.couldHaveParticipleExplanation,1));
+        vocabItemList.add(new VocabItem("Could Perfect Continuous","Qué podría haber estado pasando?",text.couldHaveBeenVerbingExplanation,1));
+
+        vocabItemList.add(new VocabItem("Should Simple","Qué debería pasar?",text.shouldVerbExplanation,1));
+        vocabItemList.add(new VocabItem("Should Continuous","Qué debería estar pasando?",text.shouldBeVerbingExplanation,1));
+        vocabItemList.add(new VocabItem("Should Perfect","Qué debió haber?",text.shouldHaveParticipleExplanation,1));
+        vocabItemList.add(new VocabItem("Should Perfect Continuous","Qué debío haber estado pasando?",text.shouldHaveBeenVerbingExplanation,1));
+
+        vocabItemList.add(new VocabItem("Might Simple","Qué quiza pase?",text.mightDef,1));
+        vocabItemList.add(new VocabItem("Might Continuous","Qué quiza esté pasando?",text.mightContinuousDef,1));
+        vocabItemList.add(new VocabItem("Might Perfect","Qué quiza haya?",text.mightHaveParticipleDef,1));
+        vocabItemList.add(new VocabItem("Might Perfect Continuous","Qué quiza haya estado?",text.mightHaveBeenVerbingDef,1));
+
+        vocabItemList.add(new VocabItem("Can Simple","Qué puede pasar?",text.canVerbDef,1));
+        vocabItemList.add(new VocabItem("Can Continuous","Qué puede estar pasando?",text.canBeVerbingDef,1));
+
+        vocabItemList.add(new VocabItem("Must Simple","Qué debe pasar?",text.mustVerbDef,1));
+        vocabItemList.add(new VocabItem("Must Continuous","Qué debe estar pasando?",text.mustBeVerbingDef,1));
+
+        vocabItemList.add(new VocabItem("Present Simple Passive","que es hecho?",text.isAreParticipleDef,1));
+        vocabItemList.add(new VocabItem("Present Continuous Passive","Qué estado siendo hecho?",text.isAreBeingVerbingDef,1));
+        vocabItemList.add(new VocabItem("Present Perfect Passive","Qué ha sido hecho?",text.haveBeenHasBeenParticipleDef,1));
+
+        vocabItemList.add(new VocabItem("Past Simple Passive","Qué fue hecho?",text.wasWereParticipleDef,1));
+        vocabItemList.add(new VocabItem("Past Continuous Passive","Qué estaba siendo hecho?",text.wasBeingPassive,1));
+        vocabItemList.add(new VocabItem("Past Perfect Passive","Qué había sido hecho?",text.hadBeenPassive,1));
+
+        vocabItemList.add(new VocabItem("Future Simple Passive","Qué será hecho?",text.willBeParticipleDef,1));
+        vocabItemList.add(new VocabItem("Would Simple Passive","Qué sería hecho?",text.objectWouldBeParticipleDef,1));
+
+        //done
+        vocabItemList.add(new VocabItem("For Object To","para que alguien haga que?",text.forNounToVerbExplanation,1));
+        vocabItemList.add(new VocabItem("Be Used To","a que esta acostumbrado alguien?",text.isAreAmUsedToVerbDef,1));
+        vocabItemList.add(new VocabItem("Used To","que solía pasar?",text.subjectUsedToVerbDef,1));
+        vocabItemList.add(new VocabItem("There Be","Qué hay?",text.thereBeDef,1));
+
+        vocabItemList.add(new VocabItem("Have To","Qué tiene que pasar?",text.subjectHaveToVerbDef,1));
+        vocabItemList.add(new VocabItem("Going To Present","Qué va a pasar?",text.goingToDef,1));
+        vocabItemList.add(new VocabItem("Going To Past","Qué iba a pasar?",text.goingToPastDef,1));
+        vocabItemList.add(new VocabItem("Feel like","Qué se tiene ganas de hacer",text.feellikeDef,1));
+        vocabItemList.add(new VocabItem("Supposed To Present","Qué se supone que tiene que pasar?",text.subjectAmAreIsSupposedToVerbDef,1));
+        vocabItemList.add(new VocabItem("Supposed To Past","Qué se suponía que tenía que pasar?",text.subjectWasWereSupposedToDef,1));
+        vocabItemList.add(new VocabItem("Get Structures","se hace, se vuelve, se pone",text.subjectGetObjectToVerbDef,1));
+
+        vocabItemList.add(new VocabItem("P-V-PP","quien le hace que a quien?",text.pvppDef,1));
+        vocabItemList.add(new VocabItem("Reflexive Structures","Qué se hace alguien a si mismo?",text.reflexivoDef,1));
+        vocabItemList.add(new VocabItem("Causative Have","Qué causas que suceda?",text.subjectCausativeHaveObjectVerbDef,1));
+        vocabItemList.add(new VocabItem("Verbos Juntos","verbos como sujeto y objeto",text.verbosJuntosDef,1));
+        vocabItemList.add(new VocabItem("Noun Adjectives","sustantivos como adjetivos",text.nounNounNounDef,1));
+        vocabItemList.add(new VocabItem("Verbal Adjectives","verbos como adjetivos",text.verbalAdjectivesDef,1));
+
+        vocabItemList.add(new VocabItem("Wish + Past Simple","ojala que algo pasara seguido",text.wishPastSimpleDef,1));
+        vocabItemList.add(new VocabItem("Wish + Would Simple","ojalá algo pasara hipotéticamente",text.wishWouldDef,1));
+        vocabItemList.add(new VocabItem("Wish + Past Perfect","ojalá algo hubiera pasado",text.wishHadParticipleDef,1));
+
+        vocabItemList.add(new VocabItem("Comparativos","mas que o menos que",text.comparativoDef,1));
+        vocabItemList.add(new VocabItem("Question Structures","preguntas",text.questionWordAuxSubjectVerbDef,1));
+        vocabItemList.add(new VocabItem("Phrasal Verbs","verbos compuestos",text.phrasalVerbsDef,1));
+
+        vocabItemList.add(new VocabItem("Reported Speech","Quien dijo que",text.discursoReportadoDef,1));
+        vocabItemList.add(new VocabItem("Able To","poder en futuro",text.ableToDef,1));
+        vocabItemList.add(new VocabItem("Incremento Parallelo","entre mas algo mas otra cosa",text.incrementoParaleloDef,1));
+        vocabItemList.add(new VocabItem("Relative Clauses","clausulas de adjetivo",text.clausulasRelativasDef,1));
+        vocabItemList.add(new VocabItem("Just Phrasal Verbs","practica verbos solos",text.phrasalVerbsDef,1));
+        vocabItemList.add(new VocabItem("Want Agent To","El sujeto quiere que el objeto haga algo",text.wantToDef,1));
+
+
+
+
+
+
+    }
+
+    public void loadConnector(){
+        vocabItemList.add(new VocabItem("And","y",text.andDef,2));
+        vocabItemList.add(new VocabItem("that","que",text.thatConnectorDef,2));
+        vocabItemList.add(new VocabItem("but","pero",text.butDef,2));
+        vocabItemList.add(new VocabItem("or","o",text.orDef,2));
+        vocabItemList.add(new VocabItem("as","como-en lo que",text.asConjunctionDef,2));
+        vocabItemList.add(new VocabItem("if","si",text.ifDef,2));
+        vocabItemList.add(new VocabItem("when","cuando",text.whenAdvDef,2));
+        vocabItemList.add(new VocabItem("because","por que",text.becauseDef,2));
+
+        vocabItemList.add(new VocabItem("while","mientras que",text.whileConnectorDef,2));
+        vocabItemList.add(new VocabItem("where","donde",text.whereAdverb,2));
+        vocabItemList.add(new VocabItem("so","asi que",text.soDef,2));
+        vocabItemList.add(new VocabItem("though","aun que",text.thoughDef,2));
+        vocabItemList.add(new VocabItem("after","después de que",text.afterDef,2));
+        vocabItemList.add(new VocabItem("since","desde que",text.sinceDef,2));
+        vocabItemList.add(new VocabItem("until","hasta que",text.untilDef,2));
+        vocabItemList.add(new VocabItem("whether","ya sea que",text.whetherDef,2));
+        vocabItemList.add(new VocabItem("although","aún que",text.althoughDef,2));
+        vocabItemList.add(new VocabItem("even if","incluso si",text.even2Def,2));
+        vocabItemList.add(new VocabItem("once","una vez que",text.onceDef,2));
+        vocabItemList.add(new VocabItem("unless","a menos que",text.unlessDef,2));
+        vocabItemList.add(new VocabItem("now that","ahora que",text.nowthatDef,2));
+        vocabItemList.add(new VocabItem("as long as","siempre y cuando",text.aslongasDef,2));
+
     }
     public void iniciarentradavoz() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -683,9 +912,6 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
                 }
         );
     }
-
-
-
     @Override
     public void startSpeechRecognition(int position) {
         activeItemPosition = position; // Track the item that initiated speech recognition
@@ -702,5 +928,84 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         super.onRestoreInstanceState(savedInstanceState);
         // Restore state
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
+
+    // Method to update RecyclerView
+    public void updateItemInRecyclerView(int position) {
+        VocabItem item = vocabItemList.get(position);
+        item.setAdWatched(true); // Assuming you have set up your model like this
+        vocabItemAdapter.notifyItemChanged(position);
+    }
+    private RewardedAd mRewardedAd;
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-9126282069959189/7168659878", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+
+
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    // Call this method when the button is clicked.
+
+    @Override
+    public void onShowRewardedAd(VocabItemAdapter.VocabItemViewHolder holder,int position) {
+        if (mRewardedAd != null) {
+            mRewardedAd.show((Activity) this, rewardItem -> {
+                // Handle the reward and UI update
+                Toast.makeText(this, "Thanks! :)", Toast.LENGTH_SHORT).show();
+
+                prefs.setHasSeenAd(true);
+                updateItemInRecyclerView(position);
+
+
+
+            });
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+
+
+
 
 }

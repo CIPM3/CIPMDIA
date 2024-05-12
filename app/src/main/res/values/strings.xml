@@ -1,14 +1,7 @@
 <resources>
     <string name="app_name">CIPM3</string>
+
     <string-array name="structuresGratis">
-
-        <item>Present Simple</item>
-        <item>Present Continuous</item>
-
-
-    </string-array>
-    <string-array name="structures">
-
 
         <item>Present Simple</item>
         <item>Present Continuous</item>
@@ -50,58 +43,128 @@
         <item>Must Simple</item>
         <item>Must Continuous</item>
 
-        <item>What Simple</item>
-        <item>What Continuous</item>
-        <item>What Perfect</item>
-        <item>What Modals Simple</item>
-        <item>What Modals Continuous</item>
-        <item>What Modals Perfect</item>
+        <item>Present Simple Passive</item>
+        <item>Present Continuous Passive</item>
+        <item>Present Perfect Passive</item>
 
-        <item>When Simple</item>
-        <item>When Continuous</item>
-        <item>When Perfect</item>
-        <item>When Modals Simple</item>
-        <item>When Modals Continuous</item>
-        <item>When Modals Perfect</item>
+        <item>Past Simple Passive</item>
+        <item>Past Continuous Passive</item>
+        <item>Past Perfect Passive</item>
+        <item>Future Simple Passive</item>
+        <item>Would Simple Passive</item>
 
-        <item>Where Simple</item>
-        <item>Where Continuous</item>
-        <item>Where Perfect</item>
-        <item>Where Modals Simple</item>
-        <item>Where Modals Continuous</item>
-        <item>Where Modals Perfect</item>
-
-        <item>Why Simple</item>
-        <item>Why Continuous</item>
-        <item>Why Perfect</item>
-        <item>Why Modals Simple</item>
-        <item>Why Modals Continuous</item>
-        <item>Why Modals Perfect</item>
-
-        <item>How Simple</item>
-        <item>How Continuous</item>
-        <item>How Perfect</item>
-        <item>How Modals Simple</item>
-        <item>How Modals Continuous</item>
-        <item>How Modals Perfect</item>
-
-        <item>Question Structure</item>
-        <item>Question Structure Modals</item>
-        <!--  <item>Phrasal Verbs</item>-->
-        <!--  <item>Feel Like Simple</item>-->
-        <item>Able To</item>
-        <item>Reported Speech</item>
-        <item>Incremento Paralelo</item>
-        <item>Verbal Adjectives</item>
-        <item>Relative Clause</item>
-
-        //quede aqui
-        <item>Want To</item>
-        <item>For To</item>
-        <item>Supposed To Present</item>
-        <item>Wish Past Perfect</item>
-        <item>Used To</item>
+        <item>For Object To</item>
         <item>Be Used To</item>
+        <item>Used To</item>
+        <item>There Be</item>
+        <item>Have To</item>
+        <item>Going To Present</item>
+        <item>Going To Past</item>
+        <item>Feel like</item>
+        <item>Supposed To</item>
+        <item>Supposed To Past</item>
+        <item>Get Structures</item>
+        <item>P-V-PP</item>
+        <item>Reflexive Structures</item>
+        <item>Causative Have</item>
+        <item>Verbos Juntos</item>
+        <item>Noun Adjectives</item>
+        <item>Verbal Adjectives</item>
+        <item>Wish Past Simple</item>
+        <item>Wish Would Simple</item>
+        <item>Wish Past Perfect</item>
+        <item>Comparativos</item>
+        <item>Question Structures</item>
+        <item>Phrasal Verbs</item>
+        <item>Reported Speech</item>
+        <item>Be Able To</item>
+        <item>Incremento Paralelo</item>
+        <item>Relative Clauses</item>
+        <item>Just Phrasal Verbs</item>
+        <item>Want To</item>
+
+    </string-array>
+    <string-array name="structures">
+
+        <item>Present Simple</item>
+        <item>Present Continuous</item>
+        <item>Present Perfect</item>
+        <item>Present Perfect Continuous</item>
+
+        <item>Past Simple</item>
+        <item>Past Continuous</item>
+        <item>Past Perfect</item>
+        <item>Past Perfect Continuous</item>
+
+        <item>Future Simple</item>
+        <item>Future Continuous</item>
+        <item>Future Perfect</item>
+        <item>Future Perfect Continuous</item>
+
+        <item>Would Simple</item>
+        <item>Would Continuous</item>
+        <item>Would Perfect</item>
+        <item>Would Perfect Continuous</item>
+
+        <item>Could Simple</item>
+        <item>Could Continuous</item>
+        <item>Could Perfect</item>
+        <item>Could Perfect Continuous</item>
+
+        <item>Might Simple</item>
+        <item>Might Continuous</item>
+        <item>Might Perfect</item>
+        <item>Might Perfect Continuous</item>
+
+        <item>Should Simple</item>
+        <item>Should Continuous</item>
+        <item>Should Perfect</item>
+        <item>Should Perfect Continuous</item>
+
+        <item>Can Simple</item>
+        <item>Can Continuous</item>
+        <item>Must Simple</item>
+        <item>Must Continuous</item>
+
+        <item>Present Simple Passive</item>
+        <item>Present Continuous Passive</item>
+        <item>Present Perfect Passive</item>
+
+        <item>Past Simple Passive</item>
+        <item>Past Continuous Passive</item>
+        <item>Past Perfect Passive</item>
+        <item>Future Simple Passive</item>
+        <item>Would Simple Passive</item>
+
+        <item>For Object To</item>
+        <item>Be Used To</item>
+        <item>Used To</item>
+        <item>There Be</item>
+        <item>Have To</item>
+        <item>Going To Present</item>
+        <item>Going To Past</item>
+        <item>Feel like</item>
+        <item>Supposed To Present</item>
+        <item>Supposed To Past</item>
+        <item>Get Structures</item>
+        <item>P-V-PP</item>
+        <item>Reflexive Structures</item>
+        <item>Causative Have</item>
+        <item>Verbos Juntos</item>
+        <item>Noun Adjectives</item>
+        <item>Verbal Adjectives</item>
+        <item>Wish Past Simple</item>
+        <item>Wish Would Simple</item>
+        <item>Wish Past Perfect</item>
+        <item>Comparativos</item>
+        <item>Question Structures</item>
+        <item>Phrasal Verbs</item>
+        <item>Reported Speech</item>
+        <item>Able To</item>
+        <item>Incremento Parallelo</item>
+        <item>Relative Clauses</item>
+        <item>Just Phrasal Verbs</item>
+        <item>Want To</item>
     </string-array>
 
     <string-array name="structurestext">
@@ -148,7 +211,6 @@
         <item>Must Continuous</item>
 
         <item>Question Structure</item>
-        <item>Question Structure Modals</item>
 
         <item>Feel Like Simple</item>
         <item>Reported Speech</item>
@@ -169,6 +231,14 @@
 
 
         <item>0 to 50</item>
+        <item>50 to 100</item>
+        <item>100 to 150</item>
+        <item>150 to 200</item>
+        <item>200 to 250</item>
+        <item>250 to 300</item>
+        <item>300 to 350</item>
+        <item>350 to 400</item>
+        <item>400 to 500</item>
 
 
     </string-array>
@@ -186,48 +256,32 @@
 
     </string-array>
 
-    <string-array name="prager">
 
-        <item>Black Fathers</item>
-        <item>Is America Racist?</item>
-    </string-array>
     <string-array name="Transition">
 
 
         <item>Random</item>
-        <item>Conectores Standar Presente Simple</item>
-        <item>Conectores Standar Presente Continuo</item>
-        <item>Conectores Standar Presente Perfecto</item>
 
-        <item>Conectores Standar Presente Perfecto Continuo</item>
-        <item>Conectores Standar Futuro Simple</item>
-        <item>Conectores Standar Reported Speech</item>
-
-        <item>Conectores Standar Must Simple</item>
-        <item>Conectores Standar Can Simple</item>
-        <item>Conectores Standar Presente Simple X Want To</item>
-        <item>Conectores Standar Presente Simple X Supposed To</item>
-        <item>Conectores Standar Presente Simple X Be Used To</item>
-        <item>Conectores Standar Can Simple X Can Simple</item>
-        <item>Conectores Standar Should Simple X Prensente Simple</item>
-        <item>Conectores Standar Should Simple X Prensente Continuo</item>
-        <item>Conectores Standar Can Simple X Presente Simple</item>
-        <item>Conectores Standar Can Simple X Presente Continuo</item>
-        <item>Conectores Standar Can Simple X Presente Perfecto</item>
-        <item>Conectores Standar Could Simple X Presente Simple</item>
-        <item>Conectores Standar Could Simple X Presente Continuo</item>
-        <item>Conectores Standar Presente Simple X Por Sujeto</item>
-        <item>Conectores Standar Presente Simple X Por Objeto</item>
-        <item>Conectores Standar Presente Simple X Por Preposicion</item>
-        <item>Conectores Standar Presente Simple X Interferencia Reflexiva</item>
     </string-array>
     <string-array name="TransitionGratis">
 
 
-        <item>Conectores Standar Presente Simple</item>
-        <item>Conectores Standar Presente Continuo</item>
+        <item>Random</item>
 
 
+    </string-array>
+    <string-array name="prager">
+
+
+        <item>Black Fathers</item>
+        <item>Is America Racist?</item>
+        <item>Dont Compare Yourself to Others</item>
+        <item>Fix Yourself</item>
+        <item>Are Men and Women Different?</item>
+        <item>Dont Waste Your Time</item>
+        <item>How to Make Our Cities Safer</item>
+        <item>How to End Systemic Racism</item>
+        <item>Should Government Bail Out Big Banks?</item>
     </string-array>
     <string-array name="pragerPremium">
 
@@ -256,7 +310,18 @@
 
         <item>Moonlight</item>
         <item>Rick and Morty</item>
+        <item>Do You Want Pepsi</item>
         <item>Sangre Por Sangre Foodline</item>
+        <item>Sangre Por Sangre Watch El Paisaje</item>
+        <item>Training Day Rabbit Has The Gun</item>
+        <item>Hancock Train</item>
+        <item>Malcom in the Middle Teacher</item>
+        <item>Sangre Por Sangre Comedor</item>
+        <item>Dave Chapelle Man Rape</item>
+        <item>Análisis de cultura Gringa y Frases Coloquiales 2</item>
+        <item>Boys in the Hood</item>
+        <item>Cultura y Fonética</item>
+        <item>Kings of the Hills Drugs</item>
 
     </string-array>
     <!--CULTURA PREMIUM-->
@@ -289,11 +354,13 @@
         <item>300 a 400</item>
         <item>400 a 500</item>
     </string-array>
+    <string-array name="rangoPremiumStructure">
+        <item>0 a 100</item>
+    </string-array>
 
     <string-array name="rachel">
 
         <item>Steve Jobs 1</item>
-        <!--        <item>Steve Jobs 2</item>-->
         <item>Kot Fishing 1</item>
         <item>Kot Fishing 2</item>
         <item>Helicoptero 1</item>
@@ -302,18 +369,14 @@
     <string-array name="rachelGratis">
 
         <item>Steve Jobs 1</item>
-        <!--        <item>Steve Jobs 2</item>-->
+        <item>Kot Fishing 1</item>
+        <item>Kot Fishing 2</item>
+        <item>Helicoptero 1</item>
+        <item>Helicoptero 2</item>
 
     </string-array>
 
-    <string-array name="LevelofAbstraction">
-        <item>Pick a Level</item>
-        <item>Vocabulary</item>
-        <item>Syntax</item>
-        <item>Spanish Interference</item>
-        <item>Conscious Interference</item>
 
-    </string-array>
 
 
     <string-array name="Interference">
@@ -327,14 +390,17 @@
     <string-array name="InterferenceGratis">
 
 
+        <item>Por Sujeto</item>
         <item>Por Preposición</item>
         <item>Por Objeto</item>
+        <item>Interferencia Reflexiva</item>
+        <item>Interferencia Pasiva</item>
 
     </string-array>
 
-    <string-array name="InterfrangoPremium">
+    <string-array name="IntegoPremium">
         <item>0 a 100</item>
-        <item>100 a 200</item>
+
     </string-array>
 
     <string-array name="estructurasinterferencia">

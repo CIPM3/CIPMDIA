@@ -3,28 +3,22 @@ buildscript {
         classpath 'com.google.gms:google-services:4.3.13'
     }
 }
+
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
-}
-task prepareKotlinBuildScriptModel {
-
-}
-task wrapper(type: Wrapper){
-    gradleVersion = '7.2'
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.leal.cipm_testing"
         minSdk 21
         targetSdk 33
-        versionCode 52
-        versionName "10.2"
-
+        versionCode 61
+        versionName "13.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -32,20 +26,22 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
 
-    }
-    buildFeatures{
-        viewBinding true
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    namespace 'com.leal.cipm_testing'
     buildFeatures {
         viewBinding true
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace 'com.leal.cipm_testing'
+
+    packagingOptions {
+        exclude 'androidsupportmultidexversion.txt'
+    }
 }
 
 dependencies {
@@ -58,36 +54,33 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.2.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    implementation 'com.google.firebase:firebase-database:20.0.5'
-    implementation 'com.google.firebase:firebase-inappmessaging-display:20.1.2'
-    implementation 'com.google.firebase:firebase-auth:21.0.6'
-    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-messaging'
     implementation 'androidx.navigation:navigation-fragment:2.5.0'
     implementation 'androidx.navigation:navigation-ui:2.5.0'
-    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.google.android.gms:play-services-auth:21.1.0'
+    implementation 'com.google.android.gms:play-services-ads:23.0.0' // Updated version
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'im.crisp:crisp-sdk:1.0.9'
-    implementation 'androidx.multidex:multidex:2.0.1'
-    dependencies {
-        def billing_version = "5.0.0"
-
-        implementation "com.android.billingclient:billing:$billing_version"
-    }
-    implementation 'com.android.volley:volley:1.2.1'
-    implementation platform('com.google.firebase:firebase-bom:30.3.1')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-firestore'
-    implementation 'com.google.firebase:firebase-messaging'
-    def fragment_version = "1.5.2"
-
-
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.google.firebase:firebase-inappmessaging-display'
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-    implementation'com.google.android.exoplayer:exoplayer:2.19.1'
-    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+    implementation 'im.crisp:crisp-sdk:2.0.0beta1'
+    def billing_version = "5.0.0"
+    implementation "com.android.billingclient:billing:$billing_version"
 }
+
+// Apply Google Services plugin at the end
+apply plugin: 'com.google.gms.google-services'

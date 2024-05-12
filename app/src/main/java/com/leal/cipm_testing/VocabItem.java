@@ -6,17 +6,36 @@ public class VocabItem {
     String definition;
     String description;
     int type;
+    String vidUrl;
+    private boolean isAdWatched = false;
+    // other fields and methods
+
+    public void setAdWatched(boolean watched) {
+        isAdWatched = watched;
+    }
+
+    public boolean isAdWatched() {
+        return isAdWatched;
+    }
+    public String getVidUrl() {
+        return vidUrl;
+    }
+
+    public void setVidUrl(String vidUrl) {
+        this.vidUrl = vidUrl;
+    }
+
     private String userInput; // Add this field
   // Field for storing user input from speech recognition
 
     // Constructor
-    public VocabItem(String title, String definition, String description, int type, String userInput) {
+   /* public VocabItem(String title, String definition, String description, int type, String userInput) {
         this.title = title;
         this.definition = definition;
         this.description = description;
         this.type = type;
         this.userInput = ""; // Initialize userInput with an empty string
-    }
+    }*/
     // Add this method
     public void setUserInput(String userInput) {
         this.userInput = userInput;
@@ -29,7 +48,14 @@ public class VocabItem {
         this.type = type;
 
     }
+    public VocabItem(String title, String definition, String description, int type, String vidUrl) {
+        this.title = title;
+        this.definition = definition;
+        this.description = description;
+        this.type = type;
+        this.vidUrl=vidUrl;
 
+    }
     public int getType() {
         return type;
     }

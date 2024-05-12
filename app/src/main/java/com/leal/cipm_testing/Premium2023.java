@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -53,6 +54,8 @@ public class Premium2023 extends AppCompatActivity {
 
         btn_sub_monthly_price = findViewById(R.id.itemSubPrice);
         cancelPolicy = findViewById(R.id.cancelPolicyTv);
+        cancelPolicy.setMovementMethod(new android.text.method.ScrollingMovementMethod());
+
         //Initialize a BillingClient with PurchasesUpdatedListener onCreate method
         cancelSuscriptionBtn=findViewById(R.id.CancelBtn);
         billingClient = BillingClient.newBuilder(this)
@@ -72,13 +75,13 @@ public class Premium2023 extends AppCompatActivity {
 
         //start the connection after initializing the billing client
         establishConnection();
-      cancelationPolicy= "Con la suscripción acedes a:" +
-            " \n1. Mas estructuras del lenguaje\n " +
-            "2. Mas rango de palabras (practicas las mismas estructuras con palabras menos comunes)\n" +
-            "3. Se cobra una vez al mes - 50 pesos mexicanos \n" +
-            "4. No es necesario estar suscrito para usar el app, pero si es necesaria para acesear a todas sus funciones\n " +
-            "5. Para cancelar presiona el boton de abajo y te llevara a Google Play Suscription Center \n";
-        cancelPolicy.setText(cancelationPolicy);
+       texts text= new texts();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            cancelPolicy.setText(Html.fromHtml(text.pitchOnPremiumPageWithCancellation, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            cancelPolicy.setText(Html.fromHtml(text.pitchOnPremiumPageWithCancellation));
+        }
+
         cancelSuscriptionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +89,7 @@ public class Premium2023 extends AppCompatActivity {
 
             }
         });
-
+/*
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
@@ -94,7 +97,8 @@ public class Premium2023 extends AppCompatActivity {
 
         Bundle args = new Bundle();
         args.putString("tema", selection);
-        video_player.setArguments(args);
+        video_player.setArguments(args);*/
+
 
     }
     void establishConnection() {
@@ -188,7 +192,7 @@ public class Premium2023 extends AppCompatActivity {
     }
     protected void onResume() {
         super.onResume();
-        video_player.updateFragmentStateStructure(selection);
+       // video_player.updateFragmentStateStructure(selection);
         billingClient.queryPurchasesAsync(
                 BillingClient.SkuType.SUBS,
                 new PurchasesResponseListener() {
@@ -198,7 +202,9 @@ public class Premium2023 extends AppCompatActivity {
                             for (Purchase purchase : list) {
                                 if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED && !purchase.isAcknowledged()) {
                                     verifySubPurchase(purchase);
-                                    Toast.makeText(Premium2023.this, "cierra la app y vuelvela a abrir", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                                    startActivity(intent);
+
                                 }
                             }
                         }
