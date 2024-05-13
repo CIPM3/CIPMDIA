@@ -9,13 +9,17 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +30,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -103,7 +113,7 @@ public class Cultura2023 extends AppCompatActivity{
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
         uid= db.collection(userid);
-
+        loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5,fragment)
@@ -115,9 +125,7 @@ public class Cultura2023 extends AppCompatActivity{
         args.putBoolean("explicacion", explanation);
         args.putString("video", (String) KeyWordsObject[posSele][posKeyword][3]);
         fragment.setArguments(args);
-       /* if (fragment != null) {
-            fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
-        }*/
+
         PremiumAndArrayControler();
 
     }
@@ -257,10 +265,7 @@ public class Cultura2023 extends AppCompatActivity{
                             textspin1.setText(selection);
                             PositionOfSelection=i;
                             spinnerSelected();
-                          /*  vf.setVisibility(View.VISIBLE);
-                            vv.setVisibility(View.GONE);
-                            lay_txt.setVisibility(View.GONE);
-                            txt_exp.setVisibility(View.VISIBLE);*/
+
                         }
 
                         @Override
@@ -362,67 +367,130 @@ public class Cultura2023 extends AppCompatActivity{
         }
     }
 
+    boolean isFromLessonPlan;
+    String[] classFromLesson = new String[]{"place holder"}   ;
 
-    //FUNCTIONS
-    //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
-        //USUARIO PREMIUM
-        if(prefs.getPremium()==1){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium2023, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    explanation = false;
-                    spinnerSelected();
-                }
+        Intent reciver= getIntent();
+        isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
+        classFromLesson= reciver.getStringArrayExtra("class");
+       if(isFromLessonPlan){
+           if(prefs.getPremium()==1){
+               ArrayAdapter<String> adapter = new ArrayAdapter<>(Cultura2023.this, android.R.layout.simple_list_item_1,classFromLesson);
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+               adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+               spin.setAdapter(adapter);
+               spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                   @Override
+                   public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                       explanation = false;
+                       spinnerSelected();
+                   }
 
-                }
-            });
+                   @Override
+                   public void onNothingSelected(AdapterView<?> adapterView) {
 
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if(i==tts.SUCCESS){
-                        int lang = tts.setLanguage(Locale.ENGLISH);
-                    }
-                }
-            });
+                   }
+               });
 
-            //USUARIO BASICO
-        } else if (prefs.getPremium()==0){
-            //remove user all the premium features
-            //show ads to the user
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura2023, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    explanation = false;
-                    spinnerSelected();
+               tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                   @Override
+                   public void onInit(int i) {
+                       if(i==tts.SUCCESS){
+                           int lang = tts.setLanguage(Locale.ENGLISH);
+                       }
+                   }
+               });
 
-                }
+               //USUARIO BASICO
+           } else if (prefs.getPremium()==0){
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+               ArrayAdapter<String> adapter = new ArrayAdapter<>(Cultura2023.this, android.R.layout.simple_list_item_1,classFromLesson);
 
-                }
-            });
+               adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+               spin.setAdapter(adapter);
+               spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                   @Override
+                   public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                       explanation = false;
+                       spinnerSelected();
 
-            tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if(i==tts.SUCCESS){
-                        int lang = tts.setLanguage(Locale.ENGLISH);
-                    }
-                }
-            });
-        }
+                   }
+
+                   @Override
+                   public void onNothingSelected(AdapterView<?> adapterView) {
+
+                   }
+               });
+
+               tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                   @Override
+                   public void onInit(int i) {
+                       if(i==tts.SUCCESS){
+                           int lang = tts.setLanguage(Locale.ENGLISH);
+                       }
+                   }
+               });
+           }
+       }else {
+           if(prefs.getPremium()==1){
+               ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.culturaPremium2023, android.R.layout.simple_spinner_item);
+               adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+               spin.setAdapter(adapter);
+               spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                   @Override
+                   public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                       explanation = false;
+                       spinnerSelected();
+                   }
+
+                   @Override
+                   public void onNothingSelected(AdapterView<?> adapterView) {
+
+                   }
+               });
+
+               tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                   @Override
+                   public void onInit(int i) {
+                       if(i==tts.SUCCESS){
+                           int lang = tts.setLanguage(Locale.ENGLISH);
+                       }
+                   }
+               });
+
+               //USUARIO BASICO
+           } else if (prefs.getPremium()==0){
+               //remove user all the premium features
+               //show ads to the user
+               ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cultura2023, android.R.layout.simple_spinner_item);
+               adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+               spin.setAdapter(adapter);
+               spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                   @Override
+                   public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                       explanation = false;
+                       spinnerSelected();
+
+                   }
+
+                   @Override
+                   public void onNothingSelected(AdapterView<?> adapterView) {
+
+                   }
+               });
+
+               tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                   @Override
+                   public void onInit(int i) {
+                       if(i==tts.SUCCESS){
+                           int lang = tts.setLanguage(Locale.ENGLISH);
+                       }
+                   }
+               });
+           }
+       }
+
     }
 
     //EVALUA QUE FUE SELECCIONADO
@@ -449,52 +517,67 @@ public class Cultura2023 extends AppCompatActivity{
         switch (selection){
             case "Moonlight":
                 posSele = 0;
+                posKeyword=0;
                 break;
             case "Rick and Morty":
                 posSele = 1;
+                posKeyword=0;
+
                 break;
 
             case "Do You Want Pepsi":
                 posSele = 2;
+                posKeyword=0;
                 break;
             case "Sangre Por Sangre Foodline":
                 posSele = 3;
+                posKeyword=0;
                 break;
             case "Sangre Por Sangre Watch El Paisaje":
                 posSele = 4;
+                posKeyword=0;
                 break;
             case "Training Day Rabbit Has The Gun":
                 posSele = 5;
+                posKeyword=0;
                 break;
 
             case "Hancock Train":
                 posSele = 6;
+                posKeyword=0;
                 break;
 
             case "Malcom in the Middle Teacher":
                 posSele = 7;
+                posKeyword=0;
                 break;
 
             case "Sangre Por Sangre Comedor":
                 posSele = 8;
+                posKeyword=0;
                 break;
             case "Dave Chapelle Man Rape":
                 posSele = 9;
+                posKeyword=0;
                 break;
             case "Análisis de cultura Gringa y Frases Coloquiales 2":
                 posSele = 10;
+                posKeyword=0;
                 break;
 
             case "Boys in the Hood":
                 posSele = 11;
+                posKeyword=0;
                 break;
 
             case "Cultura y Fonética":
                 posSele = 12;
+                posKeyword=0;
                 break;
 
             case "Kings of the Hills Drugs":
                 posSele = 13;
+                posKeyword=0;
                 break;
         }
 
@@ -581,12 +664,7 @@ public class Cultura2023 extends AppCompatActivity{
 
     //SALTA LA EXPLICACION
     public void saltarExp(Boolean explanation){
-       /* Bundle args2 = new Bundle();
-        args2.putBoolean("explicacion", explanation);
-        args2.putString("tema", selection);
-        args2.putBoolean("explicacion", explanation);
-        args2.putString("video", (String) KeyWordsObject[posSele][posKeyword][3]);
-        fragment.setArguments(args2);*/
+
 
         VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
         if (fragment != null) {
@@ -601,11 +679,7 @@ public class Cultura2023 extends AppCompatActivity{
     public void getpos(View vista)  {
     getposActivated = true;
         switch (selection){
-            case "Tutorial":
-                if(temp.length==1) {
-                    SubtractSelectionAndSendinfoToDb();
-                }
-                break;
+
             case "Moonlight":
                 if(personalizedPlan){
                     condicionParaPasarEs(5);
@@ -629,12 +703,14 @@ public class Cultura2023 extends AppCompatActivity{
                 if(personalizedPlan){
                     condicionParaPasarEs(5);
                 }
+
                 setKeywordAndPosition();
                 break;
             case "Sangre Por Sangre Watch El Paisaje":
                 if(personalizedPlan){
                     condicionParaPasarEs(5);
                 }
+
                 setKeywordAndPosition();
                 break;
             case "Training Day Rabbit Has The Gun":
@@ -702,8 +778,7 @@ public class Cultura2023 extends AppCompatActivity{
         g = (int) fragment.player.getCurrentPosition();
         String keyWord;
         int StartTime,StopTime;
-        // keywordobject -possele- la clase , poskeyword-frase-
-        // el tercer posición es 1. frase, 2. donde empieza 3. donde termina 4. link del video
+
         keyWord = (String) KeyWordsObject[posSele][posKeyword][0];
         StartTime = (int) KeyWordsObject[posSele][posKeyword][1];
         StopTime = (int) KeyWordsObject[posSele][posKeyword][2];
@@ -733,7 +808,36 @@ public class Cultura2023 extends AppCompatActivity{
                 if(posKeyword >= limit-1){
                     speakPass(true);
                     posKeyword=0;
-                    Toast.makeText(this, "felicidades! terminaste esta clase ", Toast.LENGTH_SHORT).show();
+                    if(isFromLessonPlan&&prefs.getPremium()==0){
+                        dialogueShowRewardedAd("Ve Anuncio para Desbloquear Siguiente Clase","Ver Anuncio","Cipm Premium");
+                    }else if(prefs.getPremium()==1){
+                        if(isFromLessonPlan){
+                            classSelector();
+                            if(placeHolder[0].equals("Done")){
+                                Intent intento = new Intent(this,Profile2023.class);
+                                startActivity(intento);
+                            }else if(placeHolder[0].equals("How to Make Our Cities Safer")||placeHolder[0].equals("How to End Systemic Racism")||placeHolder[0].equals("Should Government Bail Out Big Banks?")) {
+                                Intent intent = new Intent(this, Availability2023.class);
+                                intent.putExtra("typeFromLessonPlan",true );
+                                intent.putExtra("class",placeHolder);
+                                startActivity(intent);
+                            }else if(placeHolder[0].equals("Dave Chapelle Man Rape")||placeHolder[0].equals("Análisis de cultura Gringa y Frases Coloquiales 2")||placeHolder[0].equals("Cultura y Fonética")||placeHolder[0].equals("Boys in the Hood")||placeHolder[0].equals("Kings of the Hills Drugs")){
+                                Intent intent = new Intent(this, Cultura2023.class);
+                                intent.putExtra("typeFromLessonPlan",true );
+                                intent.putExtra("class",placeHolder);
+                                startActivity(intent);
+                            }else {
+                                Intent intent = new Intent(this, ConInt2023.class);
+                                intent.putExtra("typeFromLessonPlan",true );
+                                intent.putExtra("class",placeHolder);
+                                startActivity(intent);
+                            }
+
+                        }else {
+                            Toast.makeText(this, "Felicidades! has terminado esta clase", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
                 }else{
                     posKeyword++;
                     intentos = 0;
@@ -756,13 +860,6 @@ public class Cultura2023 extends AppCompatActivity{
     }
 
     //TERMINAS LA PRACTICA Y TE MANDA TUTORIAL
-    public void ResetearPage(){
-        spin.setSelection(0);
-        intentos = 0;
-        text_exp.setText("Seleccione una estructura para continuar con la practica");
-        lay_key_word.setVisibility(View.GONE);
-        lay_btn_get.setVisibility(View.GONE);
-    }
 
 
     public void activaSpinner(View v){
@@ -770,10 +867,6 @@ public class Cultura2023 extends AppCompatActivity{
         mySpinner.performClick();
     }
 
-    public void cultura_new(View vista) {
-        Intent intento = new Intent(this,  Culturalphrases.class);
-        startActivity(intento);
-    }
 
     //OTRA FUNC
     public void DialogueBox(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
@@ -788,43 +881,44 @@ public class Cultura2023 extends AppCompatActivity{
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                    posKeyword = 0;
-                    SubtractSelectionAndSendinfoToDb();
-                    resetCounter();
-                    PremiumAndArrayControler();
+                    if(isFromLessonPlan&&prefs.getPremium()==0){
+
+                          dialogueShowRewardedAd("Ve Anuncio para Desbloquear Siguiente Clase","Ver Anuncio","Cipm Premium");
+
+                    }else if(prefs.getPremium()==1){
+                        classSelector();
+                        if(placeHolder[0].equals("Done")){
+                            Intent intento = new Intent(getApplicationContext(),Profile2023.class);
+                            startActivity(intento);
+                        }else if(placeHolder[0].equals("How to Make Our Cities Safer")||placeHolder[0].equals("How to End Systemic Racism")||placeHolder[0].equals("Should Government Bail Out Big Banks?")) {
+                            Intent intent = new Intent(getApplicationContext(), Availability2023.class);
+                            intent.putExtra("typeFromLessonPlan",true );
+                            intent.putExtra("class",placeHolder);
+                            startActivity(intent);
+                        }else if(placeHolder[0].equals("Dave Chapelle Man Rape")||placeHolder[0].equals("Análisis de cultura Gringa y Frases Coloquiales 2")||placeHolder[0].equals("Cultura y Fonética")||placeHolder[0].equals("Boys in the Hood")||placeHolder[0].equals("Kings of the Hills Drugs")){
+                            Intent intent = new Intent(getApplicationContext(), Cultura2023.class);
+                            intent.putExtra("typeFromLessonPlan",true );
+                            intent.putExtra("class",placeHolder);
+                            startActivity(intent);
+                        }else {
+                            Intent intent = new Intent(getApplicationContext(), ConInt2023.class);
+                            intent.putExtra("typeFromLessonPlan",true );
+                            intent.putExtra("class",placeHolder);
+                            startActivity(intent);
+                        }
+
+                    }else {
+                        posKeyword = 0;
+                        SubtractSelectionAndSendinfoToDb();
+                        resetCounter();
+                        PremiumAndArrayControler();
+                    }
+
 
                 }
             })
 //set negative button
             .setNegativeButton("Seguir en esta clase", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    //set what should happen when negative button is clicked
-
-                }
-            })
-            .show();}
-    public void DialogueBox2(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
-//set icon
-            .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-            .setTitle("Definición: ")
-//set message
-            .setMessage(message)
-//set positive button
-            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i)  {
-                    explanation = true;
-                    clipMuestra = false;
-                    lay_btn_emp.setVisibility(View.GONE);
-                    lay_btn_salt.setVisibility(View.VISIBLE);
-
-                    saltarExp(explanation);
-                }
-            })
-//set negative button
-            .setNegativeButton("No", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //set what should happen when negative button is clicked
@@ -861,32 +955,6 @@ public class Cultura2023 extends AppCompatActivity{
                 }
             })
             .show();}
-    public void DialogueBox4(String message)   {   AlertDialog alertDialog = new AlertDialog.Builder(this)
-//set icon
-            .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-            .setTitle("leer con atencion ")
-//set message
-            .setMessage(message)
-//set positive button
-            .setPositiveButton("seguir a la siguiente frase", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                    Toast.makeText(Cultura2023.this, "siguiente frase ", Toast.LENGTH_SHORT).show();
-                    increaseCounter();
-                }
-            })
-//set negative button
-            .setNegativeButton("Seguir en esta clase", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    //set what should happen when negative button is clicked
-
-                }
-            })
-            .show();}
 
     public void increaseCounter(){
         ++CounterToSubtractSelection;
@@ -916,8 +984,6 @@ public class Cultura2023 extends AppCompatActivity{
             if(counterDb<104){
                 sendInfoOfRegularUseToDb();
                 counterDb++;
-                Toast.makeText(this, "corre", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, String.valueOf(counterDb), Toast.LENGTH_SHORT).show();
             }
 
         }else{
@@ -970,6 +1036,216 @@ public class Cultura2023 extends AppCompatActivity{
         }
 
     }
+    String[] placeHolder = new String[]{"Default value"};
+    private RewardedAd mRewardedAd;
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-9126282069959189/7390438577", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    public void showRewardedAd() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                // Handle the reward.
+                if(isFromLessonPlan){
+                    classSelector();
+                    if(placeHolder[0].equals("Done")){
+                        Intent intento = new Intent(this,Profile2023.class);
+                        startActivity(intento);
+                    }else if(placeHolder[0].equals("How to Make Our Cities Safer")||placeHolder[0].equals("How to End Systemic Racism")||placeHolder[0].equals("Should Government Bail Out Big Banks?")) {
+                        Intent intent = new Intent(this, Availability2023.class);
+                        intent.putExtra("typeFromLessonPlan",true );
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+                    }else if(placeHolder[0].equals("Dave Chapelle Man Rape")||placeHolder[0].equals("Análisis de cultura Gringa y Frases Coloquiales 2")||placeHolder[0].equals("Cultura y Fonética")||placeHolder[0].equals("Boys in the Hood")||placeHolder[0].equals("Kings of the Hills Drugs")){
+                        Intent intent = new Intent(this, Cultura2023.class);
+                        intent.putExtra("typeFromLessonPlan",true );
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+                    }else {
+                        Intent intent = new Intent(this, ConInt2023.class);
+                        intent.putExtra("typeFromLessonPlan",true );
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+                    }
+
+                }else {
+                    Intent intento = new Intent(this,Cultura2023.class);
+                    startActivity(intento);
+                }
+
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+
+    private void classSelector() {
+        switch (selection) {
+            case "Moonlight":
+                placeHolder = new String[]{"Steve Jobs 1"};
+                break;
+            case "Rick and Morty":
+                placeHolder = new String[]{"Kot Fishing 1"};
+
+                break;
+            case "Do You Want Pepsi":
+                placeHolder = new String[]{"Kot Fishing 2"};
+
+                break;
+            case "Sangre Por Sangre Foodline":
+                placeHolder = new String[]{"Helicoptero 1"};
+
+                break;
+            case "Sangre Por Sangre Watch El Paisaje":
+                placeHolder = new String[]{"Helicoptero 2"};
+                break;
+            case "Training Day Rabbit Has The Gun":
+                placeHolder = new String[]{"How to Make Our Cities Safer"};
+
+                break;
+            case "Hancock Train":
+                placeHolder = new String[]{"How to End Systemic Racism"};
+                break;
+            case "Malcom in the Middle Teacher":
+                placeHolder = new String[]{"Should Government Bail Out Big Banks?"};
+
+                break;
+            case "Sangre Por Sangre Comedor":
+                placeHolder = new String[]{"Dave Chapelle Man Rape"};
+
+                break;
+            case "Dave Chapelle Man Rape":
+                placeHolder = new String[]{"Análisis de cultura Gringa y Frases Coloquiales 2"};
+
+                break;
+            case "Análisis de cultura Gringa y Frases Coloquiales 2":
+                placeHolder = new String[]{"Boys in the Hood"};
+
+                break;
+            case "Boys in the Hood":
+                placeHolder = new String[]{"Cultura y Fonética"};
+
+                break;
+            case "Cultura y Fonética":
+                placeHolder = new String[]{"Kings of the Hills Drugs"};
+
+                break;
+            case "Kings of the Hills Drugs":
+                placeHolder = new String[]{"Done"};
+
+                break;
+            default:
+                // Code for undefined case
+                break;
+        }
+    }
+
+    public void  dialogueShowRewardedAd(String text, String buttonyes, String buttonno){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd();
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(Cultura2023.this,Premium2023.class);
+                startActivity(intento);
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+
+    }
+
 
     Object KeyWordsObject [][][] ={
             //Moonlight

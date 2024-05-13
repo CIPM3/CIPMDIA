@@ -12,6 +12,7 @@ public class Abstractos {
            "mantiene ","explica ","enfatiza "
     };
 
+
     String vnb[] = {"know ", "learn ", "understand ", "consider ", "maintain ", "explain ", "emphasize "};
     String vn3[] = {"knows ", "learns ", "understands ", "considers ", "maintains ", "explains ", "emphasizes "};
 
@@ -393,6 +394,7 @@ public class Abstractos {
         }
     }
     public void GenPresCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "estoy " + vnbcs[v] + nnoblesesp[n];
@@ -520,6 +522,7 @@ public class Abstractos {
 
     }
     public void GenPresPerfCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "he estado " + vnbcs[v] + nnoblesesp[n];
@@ -669,6 +672,7 @@ public class Abstractos {
 
     }
     public void GenPastCont2() {
+        int neg=0;
         switch (negg) {
             case 0:
                 ps1 = "yo " + "estaba " + vnbcs[v] + nnoblesesp[n];
@@ -744,6 +748,7 @@ public class Abstractos {
 
     } //PD 2023
     public void GenPastPerf2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "había " + vpsp[v] + nnoblesesp[n];
@@ -809,6 +814,7 @@ public class Abstractos {
 
     }
     public void GenPastPerfCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "había estado " + vnbcs[v] + nnoblesesp[n];
@@ -859,6 +865,7 @@ public class Abstractos {
     }
 
     public void GenFutSimp2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + vn1f[v] + nnoblesesp[n];
@@ -907,6 +914,7 @@ public class Abstractos {
         }
     } // neg
     public void GenFutCont2() {
+        int neg = 0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "estaré " + vnbcs[v] + nnoblesesp[n];
@@ -978,6 +986,7 @@ public class Abstractos {
 
     } //PD 2023
     public void GenFutPerf2() {
+        int neg =0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "habré " + vpsp[v] + nnoblesesp[n];
@@ -1041,6 +1050,7 @@ public class Abstractos {
 
     }  // neg
     public void GenFutPerfCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "habré estado " + vnbcs[v] + nnoblesesp[n];
@@ -1092,6 +1102,7 @@ public class Abstractos {
     } // neg
 
     public void GenWouldSimp2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + vn1w[v] + nnoblesesp[n];
@@ -1140,6 +1151,7 @@ public class Abstractos {
         }
     }  // neg
     public void GenWouldCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "estaría " + vnbcs[v] + nnoblesesp[n];
@@ -1209,6 +1221,7 @@ public class Abstractos {
         }
     } //PD 2023
     public void GenWouldPerf2() {
+        int neg=0;
 
         switch (neg) {
             case 0:
@@ -1272,6 +1285,7 @@ public class Abstractos {
         }
     }   // neg
     public void GenWouldPerfCont2() {
+        int neg=0;
 
         switch (neg) {
             case 0:
@@ -1323,7 +1337,7 @@ public class Abstractos {
     } // neg
 
     public void GenCouldSimp2() {
-
+                int neg =0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "podría " + vnbs[v] + nnoblesesp[n];
@@ -1372,6 +1386,7 @@ public class Abstractos {
         }
     } // neg
     public void GenCouldCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo podría " + "estar " + vnbcs[v] + nnoblesesp[n];
@@ -1448,6 +1463,7 @@ public class Abstractos {
         }
     } //PD 2023
     public void GenCouldPerf2() {
+        int neg=0;
         switch (neg) {
 
             case 0:
@@ -1512,6 +1528,7 @@ public class Abstractos {
 
     }  // neg
     public void GenCouldPerfCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "pude haber estado " + vnbcs[v] + nnoblesesp[n];
@@ -1563,7 +1580,7 @@ public class Abstractos {
 
     // aqui van los del should
     public void GenShouldSimp2() {
-
+            int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "debería " + vnbs[v] + nnoblesesp[n];
@@ -1612,6 +1629,7 @@ public class Abstractos {
         }
     }  // neg
     public void GenShouldCont2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo debería " + "estar " + vnbcs[v] + nnoblesesp[n];
@@ -1683,6 +1701,7 @@ public class Abstractos {
         }
     }//PD 2023
     public void GenShouldPerf2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "debí haber " + vpsp[v] + nnoblesesp[n];
@@ -1799,6 +1818,7 @@ public class Abstractos {
 
     // los del might
     public void GenMightSimp2() {
+        int neg =0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
@@ -1807,7 +1827,7 @@ public class Abstractos {
                 ps2 = "tú " + "quizá " + vn2subj[v] + nnoblesesp[n];
                 ps2eng = "you " + "might " + vnb[v] + nnobles[n];
 
-                ps3 = "él " + "quizá" + vn1y3subj[v] + nnoblesesp[n];
+                ps3 = "él " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
                 ps3eng = "he " + "might " + vnb[v] + nnobles[n];
 
                 ps3ella = "ella " + "quizá " + vn1y3subj[v] + nnoblesesp[n];
@@ -1847,7 +1867,7 @@ public class Abstractos {
         }
     }  // neg
     public void GenMightCont2() {
-
+            int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo quizá " + "esté " + vnbcs[v] + nnoblesesp[n];
@@ -1922,6 +1942,7 @@ public class Abstractos {
         }
     }//PD 2023
     public void GenMightPerf2() {
+        int neg=0;
 
         switch (neg) {
             case 0:
@@ -1985,7 +2006,7 @@ public class Abstractos {
         }
     } // neg
     public void GenMightPerfCont2() {
-
+            int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "quizá haya estado " + vnbcs[v] + nnoblesesp[n];
@@ -2038,6 +2059,7 @@ public class Abstractos {
 
     // aqui van los del can
     public void GenCanSimp2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "puedo " + vnbs[v] + nnoblesesp[n];
@@ -2087,6 +2109,7 @@ public class Abstractos {
 
     }  //neg
     public void GenCanCont2(){
+        int neg=0;
 
         switch (neg) {
             case 0:
@@ -2166,7 +2189,7 @@ public class Abstractos {
 
     // los del must
     public void GenMustSimp2() {
-
+                int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "debo " + vnbs[v] + nnoblesesp[n];
@@ -2294,6 +2317,7 @@ public class Abstractos {
     }//PD 2023
 
     public void GenAbleTo2(){
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "yo " + "soy capaz de " + vnbs[v] + nnoblesesp[n];
@@ -8236,7 +8260,7 @@ public class Abstractos {
 
     //for me to dificultad 2
     public void ForSubTo2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
         //subject in eng
         String ftsj[] = {
@@ -8602,29 +8626,36 @@ public class Abstractos {
 
     //Wish Past Simple Dif 2
     public void WishPastSimpDif2() {
-
+            int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "Ojalá yo " + ps1wish[v] + nnoblesesp[n];
                 ps1eng = "I wish " + "I " + vnbp[v] + nnobles[n];
+                ps1eng2 = "I wish " + "I " + vnb[v] + nnobles[n];
 
                 ps2 = "Ojalá tú " + ps2wish[v] + nnoblesesp[n];
                 ps2eng = "I wish " + "you " + vnbp[v] + nnobles[n];
+                ps2eng2 = "I wish " + "you " + vnb[v] + nnobles[n];
 
                 ps3 = "Ojalá él " + ps3wish[v] + nnoblesesp[n];
                 ps3eng = "I wish " + "he " + vnbp[v] + nnobles[n];
+                ps3eng2 = "I wish " + "he " + vnb[v] + nnobles[n];
 
                 ps3ella = "Ojalá ella " + ps3wish[v] + nnoblesesp[n];
                 ps3she = "I wish " + "she " + vnbp[v] + nnobles[n];
+                ps3she2 = "I wish " + "she " + vnb[v] + nnobles[n];
 
                 ps3eso = "Ojalá eso " + ps3wish[v] + nnoblesesp[n];
                 ps3it = "I wish " + "it " + vnbp[v] + nnobles[n];
+                ps3it2 = "I wish " + "it " + vnb[v] + nnobles[n];
 
                 ps4 = "Ojalá ellos " + ps4wish[v] + nnoblesesp[n];
                 ps4eng = "I wish " + "they " + vnbp[v] + nnobles[n];
+                ps4eng2 = "I wish " + "they " + vnb[v] + nnobles[n];
 
                 ps5 = "Ojalá nosotros " + ps5wish[v] + nnoblesesp[n];
                 ps5eng = "I wish " + "we " + vnbp[v] + nnobles[n];
+                ps5eng2 = "I wish " + "we " + vnb[v] + nnobles[n];
                 break;
             case 1:
                 ps1 = "Ojalá yo no " + ps1wish[v] + nnoblesesp[n];
@@ -8706,6 +8737,7 @@ public class Abstractos {
     }
 
     public void WishWouldDif2() {
+        int neg=0;
 
         switch (neg) {
             case 0:
@@ -8762,6 +8794,7 @@ public class Abstractos {
 
     // USED TO DIF 2
     public void UsedToDif2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "Yo solía " + vnbs[v] + nnoblesesp[n];
@@ -8813,10 +8846,11 @@ public class Abstractos {
 
     // BE USED TO DIF 2
     public void BeUsedToDif2() {
+        int neg=0;
         switch (neg) {
             case 0:
                 ps1 = "Yo estoy acostumbrado a " + vnbs[v] + nnoblesesp[n];
-                ps1eng = "I'm used to " + vnbc[v] + nnobles[n];
+                ps1eng = "I am used to " + vnbc[v] + nnobles[n];
 
                 ps2 = "Tu estás acostumbrado a " + vnbs[v] + nnoblesesp[n];
                 ps2eng = "You are used to " + vnbc[v] + nnobles[n];
@@ -16213,10 +16247,10 @@ public class Abstractos {
                 ps2eng = "the less "+ RsSj[1] + vnb[v] + "the less " + RsS2j[1] + vnb[v2];
 
                 ps3 = "entre menos " + RsSjesp[2] + vnb3[v] + "menos " + vnb3[v2];
-                ps3eng = "the less "+ RsSj[2] + vnb[v] + "the less " + RsS2j[2] + vnb[v2];
+                ps3eng = "the less "+ RsSj[2] + vn3[v] + "the less " + RsS2j[2] + vn3[v2];
 
                 ps3ella = "entre menos " + RsSjesp[3] + vnb3[v] + "menos " + vnb3[v2];
-                ps3she = "the less "+ RsSj[3] + vnb[v] + "the less " + RsS2j[3] + vnb[v2];
+                ps3she = "the less "+ RsSj[3] + vn3[v] + "the less " + RsS2j[3] + vn3[v2];
 
                 ps3eso = "entre menos " + RsSjesp[4] + vnb3[v] + "menos " + vnb3[v2];
                 ps3it = "the less "+ RsSj[4] + vnb[v] + "the less " + RsS2j[4] + vnb[v2];
@@ -16231,16 +16265,22 @@ public class Abstractos {
     }//PD 20/12/2022
 
     public void VerbalAdjectives(){
-        int neg = 0;
 
-        switch (neg) {
-            case 0:
-                ps1 = nnoblesesp[v] + "que " + vb[v];
-                ps1eng = "the " + vnbc[v] + nnoblesW[v];
-                break;
+        int nounRand= (int)(Math.random()*nnoblesesp.length);
+        int verbRand=(int)(Math.random()*vnb.length);
+        String sustantivo= nnoblesesp[nounRand];
+        String noun = nnoblesW[nounRand];
+        boolean isPlural = sustantivo.startsWith("las ") || sustantivo.startsWith("los ");
+        String sustComp;
+        if (isPlural) {
+            sustComp=vn4[verbRand];
+        } else {
+            sustComp=vnb3[verbRand];
         }
+        ps1= sustantivo+"que "+sustComp;
+        ps1eng="The "+vnbc[verbRand]+noun;
 
-    }//PD 28/12/2022
+    }
 
     //What
     public void GenWhatSimp1() {

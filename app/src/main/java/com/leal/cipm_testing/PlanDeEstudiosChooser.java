@@ -34,8 +34,6 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             ,docrefCulture
             ;
      VocabModeloPersistencia vmp = new VocabModeloPersistencia();
-    StudentVocabRestultsModel svrm = new StudentVocabRestultsModel();
-    Student studentObject = new Student();
     boolean isCustom,nonbasics;
      boolean  isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,isInTransition,isInintCons;
      boolean isPlanIntermedioStandard,isPlanBasicRecommended, isCustomPlan100,isListeningPlan,isAdvancedPlan
@@ -54,7 +52,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
             "", "", "", "","",""};
     String[] availavilityArray= {"", "", "", "",
             "", "", "", "","",""};
-    SpanishintStudentModel spintstObject= new SpanishintStudentModel();
+
 
 
 
@@ -73,15 +71,16 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
         docrefVocab= db.collection(userid).document("vocabulary"    );
         docrefSpanishInt=db.collection(userid).document("Interferencias");
         docrefConsiousInt=db.collection(userid).document("Interferencias"  );
+        docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                vmp = documentSnapshot.toObject(VocabModeloPersistencia.class);
+                if (vmp == null){
+                    gotomyplan.setVisibility(View.GONE);
+                }
+            }
+        });
 
-      /*  CreatesCustomStructureArrayAfterTesting();
-        CreatesCustomVocabArrayAfterTesting();
-        CreatesCustomerSpanishIntArrayAfterTesting();*/
-        //getDBState();
-
-
-    /*SendCustomStructuresToDb(structureArray,vocabArray,
-            spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);*/
 
     }
     public boolean isOnPersonalizedPlanMethod() {
@@ -90,224 +89,39 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
     public void setOnPersonalizedPlan(boolean onPersonalizedPlan) {
         isOnPersonalizedPlan = onPersonalizedPlan;
     }
-    public void getDBState(){
+    public void getDBState() {
         docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
-                assert vmp != null;
-                isInVocab=  vmp.isInVocab;
-                isInStructure = vmp.isInStructure  ;
-                isInSpanishInt=vmp.isInSpanishInt;
-                isInTransition=vmp.isInTransition;
-                isInPrager=vmp.isInPrager;
-                isInCulture=vmp.isInCulture;
-                isInintCons= vmp.isInintCon ;
-                isPlanIntermedioStandard=vmp.isPlanIntermedioStandard;
-                isPlanBasicRecommended=vmp.isPlanBasicRecommended;
-                isCustomPlan100 =vmp.isCustomPlan;
-                isListeningPlan=vmp.isListeningPlan;
-                isAdvancedPlan=vmp.isAdvancedPlan;
-                BasicListeningPlan=vmp.isListeningPlan;
+                vmp = documentSnapshot.toObject(VocabModeloPersistencia.class);
+                if (vmp != null) {
+                    // Update your UI or state based on vmp being non-null
+                    isInVocab = vmp.isInVocab;
+                    isInStructure = vmp.isInStructure;
+                    isInSpanishInt = vmp.isInSpanishInt;
+                    isInTransition = vmp.isInTransition;
+                    isInPrager = vmp.isInPrager;
+                    isInCulture = vmp.isInCulture;
+                    isInintCons = vmp.isInintCon;
+                    isPlanIntermedioStandard = vmp.isPlanIntermedioStandard;
+                    isPlanBasicRecommended = vmp.isPlanBasicRecommended;
+                    isCustomPlan100 = vmp.isCustomPlan;
+                    isListeningPlan = vmp.isListeningPlan;
+                    isAdvancedPlan = vmp.isAdvancedPlan;
+                    BasicListeningPlan = vmp.isListeningPlan;
+                } else {
 
 
-
+                }
             }
         });
     }
 
-//--------------------
-    private void CreatesCustomVocabArrayAfterTesting() {
-        docrefVocab.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                svrm=documentSnapshot.toObject(StudentVocabRestultsModel.class);
-                assert svrm!=null;
-                if(svrm.passed0to50){
-                    vocabArray[0]="";
-                }else {
-                    vocabArray[0]="0 to 50";
 
-                }
-                if(svrm.passed50to100){
-                    vocabArray[1]="";
-                }else {
-                    vocabArray[1]="50 to 100";
-                }
-                if(svrm.passed100to150){
-                    vocabArray[2]="";
-                }else {
-                    vocabArray[2]="100 to 150";
-                }
-                if(svrm.passed150to200){
-                    vocabArray[3]="";
-                }else {
-                    vocabArray[3]="150 to 200";
-                }
-                if(svrm.passed200to250){
-                    vocabArray[4]="";
-                }else {
-                    vocabArray[4]="200 to 250";
-                }
-                if(svrm.passed250to300){
-                    vocabArray[5]="";
-                }else {
-                    vocabArray[5]="250 to 300";
-                }
-                if(svrm.passed300to350){
-                    vocabArray[6]="";
-                }else {
-                    vocabArray[6]="300 to 350";
-                }
-                if(svrm.passed350to400){
-                    vocabArray[7]="";
-                }else {
-                    vocabArray[7]="350 to 400";
-                }
-                if(svrm.passed400to450){
-                    vocabArray[8]="";
-                }else {
-                    vocabArray[8]="400 to 450";
-                }
-                if(svrm.passed450to500){
-                    vocabArray[2]="";
-                }else {
-                    vocabArray[2]="450 to 500";
-                }
-                List<String> list = new ArrayList<String>();
-                for(String s : vocabArray) {
-                    if(s != null && s.length() > 0) {
-                        list.add(s);
-                    }
-                }
-                vocabArray = list.toArray(new String[list.size()]);
-                SendCustomStructuresToDb(structureArray,vocabArray,
-                        spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);
-
-            }
-        });
-
-
-    }
-    private void CreatesCustomStructureArrayAfterTesting() {
-        docrefStructure.get().
-                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                studentObject=  documentSnapshot.toObject(Student.class);
-                assert studentObject != null;
-                if(studentObject.presentesimple){
-                    structureArray[0]="";
-                }else {
-                    structureArray[0]="Present Simple";
-
-                }
-                if(studentObject.presenteContinuo){
-                    structureArray[1]="";
-                }else {
-                    structureArray[1]="Present Continuos";
-
-                }
-                if(studentObject.presentePerfecto){
-                    structureArray[2]="";
-                }else {
-                    structureArray[2]="Present Perfect";
-
-                }
-                if(studentObject.presentePerfectoContinuo){
-                    structureArray[3]="";
-                }else {
-                    structureArray[3]="Present Perfect Continuos";
-                }
-                if(studentObject.pastsimple){
-                    structureArray[4]="";
-                }else {
-                    structureArray[4]="Past Simple";
-
-                }
-
-                List<String> list = new ArrayList<String>();
-                for(String s : structureArray) {
-                    if(s != null && s.length() > 0) {
-                        list.add(s);
-                    }
-                }
-
-                structureArray = list.toArray(new String[list.size()]);
-                SendCustomStructuresToDb(structureArray,vocabArray,
-                        spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);
-            }
-        });
-
-    }
-    private void CreatesCustomerSpanishIntArrayAfterTesting(){
-        docrefSpanishInt.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                spintstObject=documentSnapshot.toObject(SpanishintStudentModel.class);
-                assert spintstObject != null;
-                if(spintstObject.porsujeto){
-                    spanishIntArray[0]="";
-                }else {
-                    spanishIntArray[0]="Por Sujeto";
-                }
-                if(spintstObject.porobjeto){
-                    spanishIntArray[1]="";
-                }else {
-                    spanishIntArray[1]="Por Objeto";
-                }
-                if(spintstObject.porprep){
-                    spanishIntArray[2]="";
-                }else {
-                    spanishIntArray[2]="Por Preposición";
-                }
-                if(spintstObject.porrefl){
-                    spanishIntArray[3]="";
-                }else {
-                    spanishIntArray[3]="Interferencia Reflexiva";
-                }
-                if(spintstObject.porpasiva){
-                    spanishIntArray[4]="";
-                }else {
-                    spanishIntArray[4]="Interferencia Pasiva";
-                }
-
-                List<String> list = new ArrayList<String>();
-                for(String s : spanishIntArray) {
-                    if(s != null && s.length() > 0) {
-                        list.add(s);
-                    }
-                }
-
-
-                spanishIntArray = list.toArray(new String[list.size()]);
-                SendCustomStructuresToDb(structureArray,vocabArray,
-                        spanishIntArray,concsiousIntArray,cultureArray,availavilityArray);
-            }
-        }) ;
-    }
-    private void CreatesCustomerAvailabilityArrayAfterTesting(){
-       docrefConsiousInt.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-           @Override
-           public void onSuccess(DocumentSnapshot documentSnapshot) {
-                spintstObject=documentSnapshot.toObject(SpanishintStudentModel.class);
-
-           }
-       });
-    }
+    //--------------------
 
 
 
-    private void SendCustomStructuresToDb(String[] st,String[] vc, String[] spint, String[] conint,
-                                          String[] cult, String[ ] disp) {
-        CollectionReference uid= db.collection(userid);
-        CustomArrayAfterTestingHolder user = new CustomArrayAfterTestingHolder(
-                Arrays.asList(structureArray),Arrays.asList(vocabArray),
-                Arrays.asList(spanishIntArray),Arrays.asList(concsiousIntArray),
-                Arrays.asList(cultureArray),Arrays.asList(availavilityArray)
-        );
-        uid.document("CustomArrayLists").set(user);
-    }
     //------------------------------
 
     public void BasicRecomendedPlan(View vista ){
@@ -326,6 +140,7 @@ public class PlanDeEstudiosChooser extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //no hemos decidido a donde mandarlo todavia despues del examen
                         isPlanBasicRecommended =true;
+
                         Intent intent = new Intent(PlanDeEstudiosChooser.this,Vocabulary2023.class);
                         intent.putExtra("isThePlanPersonalized",isOnPersonalizedPlan);
                         startActivity(intent);

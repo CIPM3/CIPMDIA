@@ -7,14 +7,23 @@ import static com.leal.cipm_testing.R.drawable.ic_rect_ngulo_btncheck;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,6 +33,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -76,7 +91,7 @@ public class Availability2023 extends AppCompatActivity {
     ModeloAvailability mso ;
     CollectionReference uid;
     int counterDb;
-
+    Intent reciver;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_availability2023);
@@ -98,7 +113,17 @@ public class Availability2023 extends AppCompatActivity {
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
         counterDb=0;
+        arrayGetter= new ArraysdeLosPlanesPersonalizados();
+         reciver = getIntent();
+         isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
+         loadRewardedAd();
+        setUpVideoFragmentStart();
+        uid= db.collection(userid);
+        PremiumAndArrayControler();
+        sendInfotoDb();
+    }
 
+    private void setUpVideoFragmentStart() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView5, video_player)
@@ -106,9 +131,6 @@ public class Availability2023 extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
-        uid= db.collection(userid);
-        PremiumAndArrayControler();
-        sendInfotoDb();
     }
 
     //DB FUNC
@@ -328,12 +350,29 @@ public class Availability2023 extends AppCompatActivity {
     String RespuestasCorrectas [][] = {};
     String RespCorrecta;
     //EMPIEZA ESTRUCTURA
+    ArrayAdapter<String> adapter;
+    ArraysdeLosPlanesPersonalizados arrayGetter;
+    boolean isFromLessonPlan;
 
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
+        prefs.setHasSeenAd(true);
+        reciver= getIntent();
+         isFromLessonPlan = reciver.getBooleanExtra("typeFromLessonPlan", false);
+
         //USUARIO PREMIUM
         if(prefs.getPremium()==1){
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pragerPremium, android.R.layout.simple_spinner_item);
+
+            if(isFromLessonPlan){
+                reciver= getIntent();
+                temp= reciver.getStringArrayExtra("class");
+                adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }else {
+                temp= arrayGetter.pragerCompleto;
+                adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spin.setAdapter(adapter);
             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -351,7 +390,16 @@ public class Availability2023 extends AppCompatActivity {
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
 
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.prager, android.R.layout.simple_spinner_item);
+            if(isFromLessonPlan){
+                reciver= getIntent();
+                temp= reciver.getStringArrayExtra("class");
+                adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }else {
+                temp= arrayGetter.pragerCompleto;
+                adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+
+            }
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spin.setAdapter(adapter);
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -8850,6 +8898,14 @@ public class Availability2023 extends AppCompatActivity {
 
     //ACTIVA EL TEST DE AVAILABILITY
     public void availabilityTest(View v){
+        pasarSigNivel.setVisibility(View.GONE);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment videoPlayerFragment = fragmentManager.findFragmentById(R.id.fragmentContainerView5);
+        if (videoPlayerFragment != null) {
+            fragmentManager.beginTransaction()
+                    .remove(videoPlayerFragment)
+                    .commit();
+        }
 
         activarBtns();
         if (pregIndex == 16) {
@@ -8871,22 +8927,35 @@ public class Availability2023 extends AppCompatActivity {
 
     //AMBAS FUNCIONES LIMPIAN EL RESULTADO
     public void btnFinalizarTest(View v){
-      /*  tv.setVisibility(View.VISIBLE);
-        test_view.setVisibility(View.GONE);
-        result_view.setVisibility(View.GONE);
-        LimpiarResultado();*/
+        if(isFromLessonPlan){
+            if(!prefs.getHasSeenAd()||prefs.getPremium()==0){
+                dialogueContainer("Ver anuncio para desbloquear clase","ver anuncio","premium",getApplicationContext());
 
-        double parameter = pregResult;
-     if(parameter > 10){
+            }else if(prefs.getPremium()==1){
+                classSelector(selection);
+                Intent intent = new Intent(this,  Cultura2023.class);
+                intent.putExtra("typeFromLessonPlan",true);
+                intent.putExtra("class",placeHolder);
+                startActivity(intent);
+            }
 
-            SubtractSelectionAndSendinfoToDb();
+
+
+        }else {
+            setUpVideoFragmentStart();
+            double parameter = pregResult;
+            if(parameter > 10){
+                SubtractSelectionAndSendinfoToDb();
+            }
+            tv.setVisibility(View.VISIBLE);
+            test_view.setVisibility(View.GONE);
+            result_view.setVisibility(View.GONE);
+            pregIndex = 0;
+            LimpiarResultado();
+            isInActividadDeComprension=false;
         }
-        tv.setVisibility(View.VISIBLE);
-        test_view.setVisibility(View.GONE);
-        result_view.setVisibility(View.GONE);
-        pregIndex = 0;
-        LimpiarResultado();
-        isInActividadDeComprension=false;
+
+
     }
 
     public void btnFinalizarTest(){
@@ -8912,12 +8981,9 @@ public class Availability2023 extends AppCompatActivity {
         String numeroEnString = Double.toString(pregResult);
         scoreText.setText(numeroEnString);
         isInActividadDeComprension=false;
-        Toast.makeText(this, "corre en ver resultado", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, String.valueOf(counterDb), Toast.LENGTH_SHORT).show();
         if(counterDb<=9 ){
             sendInfoOfRegularUseToDb();
             counterDb++;
-            Toast.makeText(this, "corre en el if", Toast.LENGTH_SHORT).show();
 
         }
         
@@ -9081,5 +9147,174 @@ public class Availability2023 extends AppCompatActivity {
         Dialog d = new Dialog(s);
         d.show(getSupportFragmentManager(), "");
 
+    }
+
+    public void dialogueContainer(String text, String buttonyes, String buttonno, Context contexto){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd();
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(contexto,Premium2023.class  );
+                startActivity(intento);
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+
+    }
+    private RewardedAd mRewardedAd;
+    String[] placeHolder = new String[]{"Default value"};
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    // Call this method when the button is clicked.
+    public void showRewardedAd() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                if(isFromLessonPlan){
+                    // Handle the reward.
+                    classSelector(selection);
+                        Intent intent = new Intent(this,  Cultura2023.class);
+                        intent.putExtra("typeFromLessonPlan",true);
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+
+
+
+                }else {
+
+                    prefs.setHasSeenAd(true);
+                    Intent intent = new Intent(this, Availability2023.class);
+                    startActivity(intent);
+                }
+
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+    private void classSelector(String selected) {
+        switch (selected) {
+            case "Black Fathers":
+                placeHolder = new String[]{"Moonlight"};
+                break;
+            case "Is America Racist?":
+                placeHolder = new String[]{"Rick and Morty"};
+                break;
+            case "Don't Compare Yourself to Others":
+                placeHolder = new String[]{"Do You Want Pepsi"};
+                break;
+            case "Fix Yourself":
+                placeHolder = new String[]{"Sangre Por Sangre Foodline"};
+                break;
+            case "Are Men and Women Different?":
+                placeHolder = new String[]{"Sangre Por Sangre Watch El Paisaje"};
+                break;
+            case "Don't Waste Your Time":
+                placeHolder = new String[]{"Training Day Rabbit Has The Gun"};
+                break;
+            case "How to Make Our Cities Safer":
+                placeHolder = new String[]{"Hancock Train"};
+                break;
+            case "How to End Systemic Racism":
+                placeHolder = new String[]{"Malcom in the Middle Teacher"};
+                break;
+            case "Should Government Bail Out Big Banks?":
+                placeHolder = new String[]{"Sangre Por Sangre Comedor"};
+                break;
+        }
     }
 }

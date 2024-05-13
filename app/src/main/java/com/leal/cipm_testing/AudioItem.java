@@ -2,6 +2,7 @@ package com.leal.cipm_testing;
 
 public class AudioItem {
     private String question;
+    private String title;
     private boolean isRecorded;
     private boolean isRecording;
     private String recordingTimer;
@@ -13,6 +14,13 @@ public class AudioItem {
     private int type;
     private String listeningUrl;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getListeningUrl() {
         return listeningUrl;
@@ -57,7 +65,8 @@ public class AudioItem {
     public AudioItem() {
     }
 
-    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type) {
+    public AudioItem(String title ,String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type) {
+        this.title= title;
         this.question = question;
         this.isRecorded = isRecorded;
         this.recordingTimer = recordingTimer;
@@ -65,7 +74,15 @@ public class AudioItem {
         this.audioFilePath= audioFilePath;
         this.type= type;
     }
-    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type,String listeningUrl) {
+    public AudioItem(String title ,String question, String feedback, int type) {
+        this.title= title;
+        this.question = question;
+        this.feedback = feedback;
+        this.type= type;
+    }
+
+    public AudioItem(String title ,String question, boolean isRecorded, String recordingTimer, String feedback, String audioFilePath,int type,String listeningUrl) {
+        this.title= title;
         this.question = question;
         this.isRecorded = isRecorded;
         this.recordingTimer = recordingTimer;
@@ -74,14 +91,16 @@ public class AudioItem {
         this.type= type;
         this.listeningUrl= listeningUrl;
     }
-    public AudioItem(String question, boolean isRecorded, String recordingTimer, String feedback) {
+    public AudioItem(String title ,String question, boolean isRecorded, String recordingTimer, String feedback) {
+        this.title= title;
         this.question = question;
         this.isRecorded = isRecorded;
         this.recordingTimer = recordingTimer;
         this.feedback = feedback;
 
     }
-    public AudioItem(String audioFilePath){
+    public AudioItem(String title ,String audioFilePath){
+        this.title= title;
         this.audioFilePath= audioFilePath;
     }
 

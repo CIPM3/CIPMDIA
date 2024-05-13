@@ -6558,7 +6558,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenPresCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -6633,6 +6633,7 @@ public class Special {
         int neg = (int) (Math.random() * 2);
         randstarter();
         arraySod();
+        int rand= (int)(Math.random()*verbs.length);
         String temp = verbs[rand];
 
         for (String verb : verbs) {
@@ -6701,7 +6702,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenPresPerfCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -6864,7 +6865,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenPastCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -6935,7 +6936,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenPastPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7007,7 +7008,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenPastPerfCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7067,7 +7068,7 @@ public class Special {
 
     // futuros
     public void GenFutSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7125,7 +7126,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenFutCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7197,7 +7198,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenFutPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7268,15 +7269,9 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenFutPerfCont2() {
-        int neg = (int) (Math.random() * 2);
         randstarter();
         arraySod();
-        String temp = verbs[rand];
 
-        for (String verb : verbs) {
-            if (verb.equals(temp)) {
-                switch (neg) {
-                    case 0:
                         sp1 = "yo habré estado " + verbconti[rand] + arraySodEsp;
                         eng1 = "I will have been " + verbscont[rand] + arraySodEng;
 
@@ -7298,38 +7293,12 @@ public class Special {
                         sp5 = "nosotros habremos estado " + verbconti[rand] + arraySodEsp;
                         eng5 = "we will have been " + verbscont[rand] + arraySodEng;
 
-                        break;
-                    case 1:
-                        sp1 = "yo no habré estado " + verbconti[rand] + arraySodEsp;
-                        eng1 = "I won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp2 = "tú no habrás estado " + verbconti[rand] + arraySodEsp;
-                        eng2 = "you won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp3 = "él no habrá estado " + verbconti[rand] + arraySodEsp;
-                        eng3 = "he won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp3ella = "ella no habrá estado " + verbconti[rand] + arraySodEsp;
-                        eng3she = "she won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp3eso = "eso no habrá estado " + verbconti[rand] + arraySodEsp;
-                        sp3it = "it won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp4 = "ellos no habrán estado " + verbconti[rand] + arraySodEsp;
-                        eng4 = "they won't have been " + verbscont[rand] + arraySodEng;
-
-                        sp5 = "nosotros no habremos estado " + verbconti[rand] + arraySodEsp;
-                        eng5 = "we won't have been " + verbscont[rand] + arraySodEng;
-                        break;
-                }
-            }
-        }
     }//LR FEB 2023
 
     // WOULD
     // dificultad 2
     public void GenWouldSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7387,7 +7356,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenWouldCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7459,7 +7428,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenWouldPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7530,7 +7499,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenWouldPerfCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7590,7 +7559,7 @@ public class Special {
 
     //SHOULD
     public void GenShouldSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7648,7 +7617,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenShouldCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7719,7 +7688,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenShouldPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7851,7 +7820,7 @@ public class Special {
 
     // MIGHT
     public void GenMightSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7909,7 +7878,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenMightCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -7981,7 +7950,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenMightPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8053,7 +8022,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenMightPerfCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8113,7 +8082,7 @@ public class Special {
 
     //COULD
     public void GenCouldSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8171,7 +8140,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenCouldCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8243,7 +8212,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenCouldPerf2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8315,7 +8284,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenCouldPerfCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8375,7 +8344,7 @@ public class Special {
 
     //CAN
     public void GenCanSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8433,7 +8402,7 @@ public class Special {
         }
     }//LR FEB 2023
     public void GenCanCont2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8507,7 +8476,7 @@ public class Special {
 
     //MUST
     public void GenMustSimp2() {
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8638,7 +8607,7 @@ public class Special {
     }//LR FEB 2023
 
     public void GenAbleTo2(){
-        int neg = (int) (Math.random() * 2);
+        int neg =0;
         randstarter();
         arraySod();
         String temp = verbs[rand];
@@ -8717,7 +8686,7 @@ public class Special {
         String temp = verbs[rand];
         int rn1 = (int) (Math.random() * 6);
         int rn2 = (int) (Math.random() * 5);
-        int neg = (int) (Math.random() * 2);
+        int neg = 0;
 
         //subject in eng
         String ftsj[] = {

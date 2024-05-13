@@ -102,7 +102,7 @@ public class cientociencincuenta {
         int v = (int) (Math.random() * verbos.length);
         int a = (int) (Math.random() * adve.length);
         String temp = pronombres[i];
-        switch (temp) {
+        switch (temp)  {
             case "yo ":
                 gens = pronombres[i] + adve[a] + verbos1[v];
                 gene = pronoun[i] + adv[a] + verbs[v];

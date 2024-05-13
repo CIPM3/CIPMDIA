@@ -3,8 +3,10 @@ package com.leal.cipm_testing;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -19,6 +21,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,6 +34,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -38,6 +47,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -98,7 +109,6 @@ public class Estructura2023 extends AppCompatActivity {
     DocumentReference docref;
     VocabModeloPersistencia vmp= new VocabModeloPersistencia();
     ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
-    CustomArrayAfterTestingHolder studentObject;
     boolean isPlanIntermedioStandard,isPlanBasicRecommended,
             isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
     int r;
@@ -123,22 +133,31 @@ public class Estructura2023 extends AppCompatActivity {
     double three;
     double four ;
     double five;
-    boolean presentSimplePassed;
+    boolean isFromLessonPlan;
     CollectionReference uid;
     Map<String, Object> userdb = new HashMap<>();
     DocumentReference scoresStructureDBDocRef;
-
+    Intent reciver;
+    String engAnswer2,engAnswer3,engAnswer4,engAnswer5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estructura2023);
+            loadRewardedAd();
+
+            engAnswer2="no answer";
+            engAnswer3="no answer";
+            engAnswer4="no answer";
+            engAnswer5="no answer";
 
         spin = (Spinner) findViewById(R.id.spinuno);
         txt1 = (TextView) findViewById(R.id.textspin1);
         txteng = (TextView) findViewById(R.id.txteng);
         txteng2 = (TextView) findViewById(R.id.txteng2);
         spin2 = (Spinner) findViewById(R.id.spinrango);
+        spin2.setVisibility(View.INVISIBLE);
         txt2 = (TextView) findViewById(R.id.textspin2);
+        txt2.setVisibility(View.INVISIBLE);
         texto_inicial = (LinearLayout) findViewById(R.id.texto_inicial);
         spanish_lay = (LinearLayout) findViewById(R.id.spanish_lay);
         input_lay = (LinearLayout) findViewById(R.id.input_lay);
@@ -147,26 +166,27 @@ public class Estructura2023 extends AppCompatActivity {
         answer_lay = (LinearLayout) findViewById(R.id.answer_lay);
 
         averageresponetimelayout = findViewById(R.id.averageresponsetime);
-        averageresponetimelayout.setVisibility(View.INVISIBLE);
+        averageresponetimelayout.setVisibility(View.GONE);
 
         tiempopromedioderespuestatexto=findViewById(R.id.actualtimetext);
         tiempopromedioderespuestatexto.setVisibility(View.VISIBLE);
 
         resplay = (LinearLayout) findViewById(R.id.resplay);
-        respescu = (LinearLayout) findViewById(R.id.respescu);
+        //respescu = (LinearLayout) findViewById(R.id.respescu);
         respescu2 = (LinearLayout) findViewById(R.id.respescu2);
-        respinc = (LinearLayout) findViewById(R.id.respinc);
+       // respinc = (LinearLayout) findViewById(R.id.respinc);
         opclay = (LinearLayout) findViewById(R.id.opclay);
         btncheck = (TextView) findViewById(R.id.btncheck);
+
         sptx = (TextView) findViewById(R.id.spanishsentence);
         answerinp = (EditText) findViewById(R.id.answerinput1);
+        answerinp.setVisibility(View.GONE);
         btndif1 = (Button) findViewById(R.id.dif1);
         btndif2 = (Button) findViewById(R.id.dif2);
-
         palabraclave= findViewById(R.id.textextra);
         verboEs=findViewById(R.id.textextra2);
-        palabraclave.setVisibility(View.INVISIBLE);
-        verboEs.setVisibility(View.INVISIBLE);
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
 
         btndif3 = (Button) findViewById(R.id.dif3);
         btndif4 = (Button) findViewById(R.id.dif4);
@@ -191,7 +211,7 @@ public class Estructura2023 extends AppCompatActivity {
         five=0;
 
 
-        Intent reciver = getIntent();
+       reciver = getIntent();
 
         isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
         isBasics=reciver.getBooleanExtra("basicSctructures",false);
@@ -203,12 +223,9 @@ public class Estructura2023 extends AppCompatActivity {
         isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
         iscustom100= reciver.getBooleanExtra("Custom100Plan",false);
 
-
-
-        temp = new String[]{"empty", "array"};
         if(isNonBasics){
             temp= arrayGetter.nonBasicStructures;
-        }else {
+        }else if(isBasics) {
             temp=arrayGetter.basicStructures;
 
         }
@@ -253,11 +270,7 @@ public class Estructura2023 extends AppCompatActivity {
     //DB FUNC
     public void PremiumControler(){
 
-        /* if(isNonBasicsCustom){
-             isBasics=false;
 
-
-         }*/
         if(personalizedPlan){
             if(isCustom){
 
@@ -283,53 +296,6 @@ public class Estructura2023 extends AppCompatActivity {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                     spinnerSelected1();
-                                }
-
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                }
-                            });
-
-                        }
-                    });
-
-                    //espacio.......................................
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin2.setAdapter(adapter2);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection2 = spin2.getSelectedItem().toString();
-                            txt2.setText(selection2);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
-
-                }else if (prefs.getPremium()==0){
-                    //remove user all the premium features
-                    //show ads to the user
-                    docref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            vmp=  documentSnapshot.toObject(VocabModeloPersistencia.class);
-                            assert vmp != null;
-
-                            temp= vmp.getResultArray().toArray(new String[0]);
-                           // temp = new String[]{"empty", "array"};
-                            adapter = new ArrayAdapter<String>(Estructura2023.this, android.R.layout.simple_list_item_1, temp);
-                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin.setAdapter(adapter);
-                            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    spinnerSelected1();
-
                                 }
 
                                 @Override
@@ -388,7 +354,7 @@ public class Estructura2023 extends AppCompatActivity {
                         }
                     });
 
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adapter2);
                     spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -404,41 +370,6 @@ public class Estructura2023 extends AppCompatActivity {
                         }
                     });
 
-
-                } else if (prefs.getPremium()==0){
-                    //remove user all the premium features
-                    //show ads to the user
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                           spinnerSelected1();
-
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
-                    //espacio.......................................
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin2.setAdapter(adapter2);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection2 = spin2.getSelectedItem().toString();
-                            txt2.setText(selection2);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
 
                 }
             }
@@ -467,7 +398,7 @@ public class Estructura2023 extends AppCompatActivity {
                         }
                     });
 
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
+                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adapter2);
                     spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -483,114 +414,11 @@ public class Estructura2023 extends AppCompatActivity {
                         }
                     });
 
-
-                } else if (prefs.getPremium()==0){
-                    //remove user all the premium features
-                    //show ads to the user
-
-/*
-                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
-*/
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin.setAdapter(adapter);
-                    spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            spinnerSelected1();
-
-
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
-                    //espacio.......................................
-                    ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spin2.setAdapter(adapter2);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            selection2 = spin2.getSelectedItem().toString();
-                            txt2.setText(selection2);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        }
-                    });
 
                 }
             }
             // we are putting a lid on custom100 for now
-            else if(iscustom100){
-                // we are going to put a lid on this one for a while
-                Toast.makeText(this, "custom100", Toast.LENGTH_SHORT).show();
-                // aqui tiene que jalar de la base de datos el temp
-                if (prefs.getPremium()==1){
 
-                    docrefStructures.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            studentObject=documentSnapshot.toObject(CustomArrayAfterTestingHolder.class) ;
-                            assert studentObject != null;
-                            temp= studentObject.getStructureArrayAfterTEsting().toArray(new String[0]);
-
-                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Estructura2023.this, R.array.rango, android.R.layout.simple_spinner_item);
-                            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin2.setAdapter(adapter2);
-                            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection2 = spin2.getSelectedItem().toString();
-                                    txt2.setText(selection2);
-                                }
-
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                }
-                            });
-                        }
-                    });
-
-
-
-                } else if (prefs.getPremium()==0){
-                    docrefStructures.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            studentObject=documentSnapshot.toObject(CustomArrayAfterTestingHolder.class) ;
-                            assert studentObject != null;
-                            temp= studentObject.getStructureArrayAfterTEsting().toArray(new String[0]);
-
-                            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Estructura2023.this, R.array.rango, android.R.layout.simple_spinner_item);
-                            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            spin2.setAdapter(adapter2);
-                            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    selection2 = spin2.getSelectedItem().toString();
-                                    txt2.setText(selection2);
-                                }
-
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                }
-                            });
-                        }
-                    });
-
-
-
-                }
-
-            }
         }
         // si no es personalizado pasa a lo normal
         else {
@@ -665,78 +493,167 @@ public class Estructura2023 extends AppCompatActivity {
 
     //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
+        prefs.setHasSeenAd(true);
+        reciver= getIntent();
+        isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
+
         //USUARIO PREMIUM
         if(prefs.getPremium()==1){
-            btndif4.setVisibility(View.GONE);
-            btndif3.setVisibility(View.GONE);
-            btndif2.setVisibility(View.GONE);
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    spinnerSelected1();
-                }
+            if(isFromLessonPlan){
+                reciver= getIntent();
+                temp= reciver.getStringArrayExtra("class");
+                btndif4.setVisibility(View.GONE);
+                btndif3.setVisibility(View.GONE);
+                btndif2.setVisibility(View.GONE);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        spinnerSelected1();
+                    }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                }
-            });
+                    }
+                });
 
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremium, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin2.setAdapter(adapter2);
-            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection2 = spin2.getSelectedItem().toString();
-                    txt2.setText(selection2);
-                }
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin2.setAdapter(adapter2);
+                spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spin2.getSelectedItem().toString();
+                        txt2.setText(selection2);
+                    }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                }
-            });
+                    }
+                });
+            }else {
+
+                btndif4.setVisibility(View.GONE);
+                btndif3.setVisibility(View.GONE);
+                btndif2.setVisibility(View.GONE);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        spinnerSelected1();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin2.setAdapter(adapter2);
+                spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spin2.getSelectedItem().toString();
+                        txt2.setText(selection2);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
+
 
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
-            btndif4.setVisibility(View.GONE);
-            btndif3.setVisibility(View.GONE);
-            btndif2.setVisibility(View.GONE);
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structuresGratis, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin.setAdapter(adapter);
-            spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    spinnerSelected1();
-
+            if(isFromLessonPlan){
+                prefs.setHasSeenAd(true);
+                reciver= getIntent();
+                temp= reciver.getStringArrayExtra("class");
+                btndif4.setVisibility(View.GONE);
+                btndif3.setVisibility(View.GONE);
+                btndif2.setVisibility(View.GONE);
+                if (temp == null) {
+                    temp = new String[0]; // Initialize as empty array if null
                 }
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, temp);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        spinnerSelected1();
+                    }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                }
-            });
-            //espacio.......................................
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rango, android.R.layout.simple_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spin2.setAdapter(adapter2);
-            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    selection2 = spin2.getSelectedItem().toString();
-                    txt2.setText(selection2);
-                }
+                    }
+                });
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin2.setAdapter(adapter2);
+                spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spin2.getSelectedItem().toString();
+                        txt2.setText(selection2);
+                    }
 
-                }
-            });
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }else {
+
+                btndif4.setVisibility(View.GONE);
+                btndif3.setVisibility(View.GONE);
+                btndif2.setVisibility(View.GONE);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin.setAdapter(adapter);
+                spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        spinnerSelected1();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+                ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.rangoPremiumStructure, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin2.setAdapter(adapter2);
+                spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selection2 = spin2.getSelectedItem().toString();
+                        txt2.setText(selection2);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
+
+
+            //USUARIO BASICO
         }
     }
     //EVALUA QUE FUE SELECCIONADO
@@ -779,7 +696,7 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         algosele = "dif2";
         r = 1;
-        practice();
+        practice();      
     }
     public void dificulty3Activation(View vista){
         limpans();
@@ -796,23 +713,28 @@ public class Estructura2023 extends AppCompatActivity {
 
     //ACTIVA LA PRACTICA
     public void practice(){
-        switch(r){
-            case 0:
-                dificulty1();
-                break;
+        if(!prefs.getHasSeenAd()){
+            showDialogueWithAd();
+        }else {
+            switch(r){
+                case 0:
+                    dificulty1();
+                    break;
 
-            case 1:
-                dificulty2();
-                break;
+                case 1:
+                    dificulty2();
+                    break;
 
-            case 2:
-                dificulty3();
-                break;
+                case 2:
+                    dificulty3();
+                    break;
 
-            case 3:
-                dificulty4();
-                break;
+                case 3:
+                    dificulty4();
+                    break;
+            }
         }
+
     }
 
     private void hintPalabraclave(Generator gen1) {
@@ -932,11 +854,2060 @@ public class Estructura2023 extends AppCompatActivity {
                     }
                 });
 
-                Toast.makeText(Estructura2023.this, "Keyword clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }
+    private void initializeTextToSpeech(Generator gen1, String methodName) {
+        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                Locale spanish = new Locale("es", "MX");
+                if (status == TextToSpeech.SUCCESS) {
+                    int lang = tt1.setLanguage(spanish);
+                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                        @Override
+                        public void onStart(String s) {
+                        }
 
+                        @Override
+                        public void onDone(String utteranceId) {
+                            if (timerTask == null) {
+                                startTimer();
+                            }
+                        }
+
+                        @Override
+                        public void onError(String s) {
+                        }
+                    });
+
+                    try {
+                        Method method = gen1.getClass().getMethod(methodName);
+                        method.invoke(gen1);
+                    } catch (NoSuchMethodException | IllegalAccessException |
+                             InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+
+                    sptx.setText(gen1.gens);
+                    txteng.setText(gen1.gene);
+                    if(gen1.gene2!=null){
+                        engAnswer2=gen1.gene2;
+                    }
+                    answerinp.setText("");
+                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                }
+            }
+        });
+    }
+    private void initializeTextToSpeechNewMethods(String spString,String engString,String engString2,String engString3,String engString4,String engString5){
+        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                Locale spanish = new Locale("es", "MX");
+                if (status == TextToSpeech.SUCCESS) {
+                    int lang = tt1.setLanguage(spanish);
+                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                        @Override
+                        public void onStart(String s) {
+                        }
+
+                        @Override
+                        public void onDone(String utteranceId) {
+                            if (timerTask == null) {
+                                startTimer();
+                            }
+                        }
+
+                        @Override
+                        public void onError(String s) {
+                        }
+                    });
+
+
+                    sptx.setText(spString);
+                    txteng.setText(engString);
+                    engAnswer2= engString2;
+                    engAnswer3=engString3;
+                    engAnswer4=engString4;
+                    engAnswer5=engString5;
+                    answerinp.setText("");
+                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                }
+            }
+        });
+    }
+    private void initializeTextToSpeech(Generator2 gen2, String methodName) {
+        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                Locale spanish = new Locale("es", "MX");
+                if (status == TextToSpeech.SUCCESS) {
+                    int lang = tt1.setLanguage(spanish);
+                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                        @Override
+                        public void onStart(String s) {
+                        }
+
+                        @Override
+                        public void onDone(String utteranceId) {
+                            if (timerTask == null) {
+                                startTimer();
+                            }
+                        }
+
+                        @Override
+                        public void onError(String s) {
+                        }
+                    });
+
+                    try {
+                        Method method = gen2.getClass().getMethod(methodName);
+                        method.invoke(gen2);
+                    } catch (NoSuchMethodException | IllegalAccessException |
+                             InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+
+                    sptx.setText(gen2.gens);
+                    txteng.setText(gen2.gene);
+                    answerinp.setText("");
+                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                }
+            }
+        });
+    }
+    private void initializeTextToSpeech(Generator3 gen3, String methodName) {
+        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                Locale spanish = new Locale("es", "MX");
+                if (status == TextToSpeech.SUCCESS) {
+                    int lang = tt1.setLanguage(spanish);
+                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                        @Override
+                        public void onStart(String s) {
+                        }
+
+                        @Override
+                        public void onDone(String utteranceId) {
+                            if (timerTask == null) {
+                                startTimer();
+                            }
+                        }
+
+                        @Override
+                        public void onError(String s) {
+                        }
+                    });
+
+                    try {
+                        Method method = gen3.getClass().getMethod(methodName);
+                        method.invoke(gen3);
+                    } catch (NoSuchMethodException | IllegalAccessException |
+                             InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+
+                    sptx.setText(gen3.gens);
+                    txteng.setText(gen3.gene);
+                    answerinp.setText("");
+                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                }
+            }
+        });
+    }
+    private void initializeTextToSpeech(Generator4 gen4, String methodName) {
+        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                Locale spanish = new Locale("es", "MX");
+                if (status == TextToSpeech.SUCCESS) {
+                    int lang = tt1.setLanguage(spanish);
+                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                        @Override
+                        public void onStart(String s) {
+                        }
+
+                        @Override
+                        public void onDone(String utteranceId) {
+                            if (timerTask == null) {
+                                startTimer();
+                            }
+                        }
+
+                        @Override
+                        public void onError(String s) {
+                        }
+                    });
+
+                    try {
+                        Method method = gen4.getClass().getMethod(methodName);
+                        method.invoke(gen4);
+                    } catch (NoSuchMethodException | IllegalAccessException |
+                             InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+
+                    sptx.setText(gen4.gens);
+                    txteng.setText(gen4.gene);
+                    answerinp.setText("");
+                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                }
+            }
+        });
+    }
+    NewVerbClass object= new NewVerbClass();
+    NewNounClass nouns= new NewNounClass();
+    public void newMethods(String currentStructure){
+    Generator gen1 = new Generator();
+    AuxModalNegator negator = new AuxModalNegator();
+    Nobles n = new Nobles();
+    cerotofifty gen = new cerotofifty();
+    String globalAnswer2 = "null";
+    String globalAnswer;
+    String globalAnswer3 = "null";
+    String sp = "null";
+        switch (currentStructure) {
+
+            case "Present Simple":
+                object.GenPresSimp();
+                initializeTextToSpeechNewMethods(object.gens, object.gene, "blank", "blank", "blank", "blank");
+                break;
+
+            case "Present Continuous":
+                int r2 = (int) (Math.random() * 4);
+                switch (r2) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("am ", "are ", "is ", "estoy ", "estas ", "esta ", "estamos ", "estan ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractPresentContinuousPresent(object.gene);
+
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+                        break;
+                    case 2:
+                    case 3:
+                        object.GenContTenses("am ", "are ", "is ", "estoy ", "estas ", "esta ", "estamos ", "estan ");
+                        // present continuous contracted not negated
+                        String negatedNotContracted = negator.negateFirstAuxOrModal(object.gene);
+                        String negatedContracted = negator.negateFirstAuxOrModalContracted(object.gene);
+                        String contractedToBeAndNegated = negator.negateAndContractPresentContinuous(negatedNotContracted);
+
+                        sp = negator.negateSentenceSpanish(object.gens);
+
+                        globalAnswer = negatedNotContracted;
+                        globalAnswer2 = negatedContracted;
+                        globalAnswer3 = contractedToBeAndNegated;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Present Perfect":
+                int r = (int) (Math.random() * 3);
+                switch (r) {
+                    case 0:
+                        gen1.GenPresPerf2();
+                        initializeTextToSpeechNewMethods(gen1.gens, gen1.gene, gen1.gene2, "blank", "blank", "blank");
+                        break;
+
+                    case 1:
+                        object.GenPerfectTenses("have ", "has ", "he ", "has ", "ha ", "hemos ", "han ");
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractPresentPerfect(object.gene);
+                        initializeTextToSpeechNewMethods(object.gens, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("have ", "has ", "he ", "has ", "ha ", "hemos ", "han ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+
+                        globalAnswer = negator.negateFirstAuxOrModalContracted(object.gene);
+                        globalAnswer2 = negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Present Perfect Continuous":
+                int r3 = (int) (Math.random() * 4);
+                switch (r3) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("have been ", "have been ", "has been ", "he estado ", "has estado ", "ha estado ", "hemos estado ", "han estado ");
+                        sp = object.gens;
+                        //i have been
+                        globalAnswer = object.gene;
+                        //ive been
+                        globalAnswer2 = negator.contractPresentPerfect(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("have been ", "have been ", "has been ", "he estado ", "has estado ", "ha estado ", "hemos estado ", "han estado ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // i have not been
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // i havent been
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        // i ve not been
+                        globalAnswer3 = negator.contractPresentPerfectIncludingNot(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+
+                        break;
+                    case 3:
+                        gen1.GenPresPerfCont2();
+                        sp = negator.negateSentenceSpanish(gen1.gens);
+                        // i have not been
+                        globalAnswer = negator.negateFirstAuxOrModal(gen1.gene);
+                        // i havent been
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(gen1.gene);
+                        // i ve not been
+                        globalAnswer3 = negator.contractPresentPerfectIncludingNot(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+            case "Past Simple":
+                int r4 = (int) (Math.random() * 3);
+                switch (r4) {
+                    case 0:
+                    case 1:
+                        object.GenPastSimp();
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, ".", ".", ".", ".");
+                        break;
+                    case 2:
+                        object.GenPastSimp();
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        globalAnswer = negator.negatePastSimple(object.gene2);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, ".", ".", ".", ".");
+                        break;
+                }
+                break;
+
+            case "Past Continuous":
+                int rpc = (int) (Math.random() * 3);
+                switch (rpc) {
+                    case 0:
+
+                    case 1:
+                        object.GenContTenses("was ", "were ", "was ", "estaba ", "estabas ", "estaba ", "estabamos ", "estaban ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "blank", "blank", "blank", "blank");
+                        break;
+                    case 2:
+                        object.GenContTenses("was ", "were ", "was ", "estaba ", "estabas ", "estaba ", "estabamos ", "estaban ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        //i was not
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // i wasnt
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+                }
+                break;
+            case "Past Perfect":
+                int rpp = (int) (Math.random() * 3);
+                switch (rpp) {
+                    case 0:
+
+                    case 1:
+                        object.GenPerfectTenses("had ", "had ", "había ", "habías ", "había ", "habíamos ", "habían ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractHadOrWould(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("had ", "had ", "había ", "habías ", "había ", "habíamos ", "habían ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // had not
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //hadnt
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Past Perfect Continuous":
+                int rppc = (int) (Math.random() * 3);
+                switch (rppc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("had been ", "had been ", "had been ", "había estado ", "habías estado ", "había estado ", "habíamos estado ", "habían estado ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractHadOrWould(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("had been ", "had been ", "had been ", "había estado ", "habías estado ", "había estado ", "habíamos estado ", "habían estado ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // had not been
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //hadnt beeen
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+
+                        break;
+
+                }
+                break;
+
+            case "Future Simple":
+                int rfs = (int) (Math.random() * 3);
+                switch (rfs) {
+                    case 0:
+                    case 1:
+                        object.GenFuture();
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractWill(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        // will not
+                        object.GenFuture();
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // will not
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //wont
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+            case "Future Continuous":
+                int rfc = (int) (Math.random() * 3);
+                switch (rfc) {
+                    case 0:
+
+                    case 1:
+                        object.GenContTenses("will be ", "will be ", "will be ", "estaré ", "estarás ", "estará ", "estarémos ", "estarán ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // will not be
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //wont be
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("will be ", "will be ", "will be ", "estaré ", "estarás ", "estará ", "estarémos ", "estarán ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractWill(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Future Perfect":
+                int rfp = (int) (Math.random() * 2);
+                switch (rfp) {
+
+                    case 0:
+                        object.GenPerfectTenses("will have ", "will have ", "habré ", "habrás ", "habrá ", "habrémos ", "habrán ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        //will not have
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //wont have
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+
+
+                    case 1:
+                        object.GenPerfectTenses("will have ", "will have ", "habré ", "habrás ", "habrá ", "habrémos ", "habrán ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = ".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+
+                }
+                break;
+
+            case "Future Perfect Continuous":
+                int rfpc = (int) (Math.random() * 4);
+                switch (rfpc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("will have been ", "will have been ", "will have been ", "habré estado ", "habrás estado ", "habrá estado ", "habrémos estado ", "habrán estado ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // will not have been
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //wont have been
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                    case 3:
+                        object.GenContTenses("will have been ", "will have been ", "will have been ", "habré estado ", "habrás estado ", "habrá estado ", "habrémos estado ", "habrán estado ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractWill(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+
+                }
+                break;
+
+            case "Would Simple":
+                int rws = (int) (Math.random() * 4);
+                switch (rws) {
+                    case 0:
+                    case 1:
+                        object.GenWould();
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractHadOrWould(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                    case 3:
+                        object.GenWould();
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        //would not
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        //wouldnt
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Would Continuous":
+                int rwc = (int) (Math.random() * 3);
+                switch (rwc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("would be ", "would be ", "would be ", "estaría ", "estarías ", "estaría ", "estaríamos ", "estarían ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.contractHadOrWould(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+                    case 2:
+                        object.GenContTenses("would be ", "would be ", "would be ", "estaría ", "estarías ", "estaría ", "estaríamos ", "estarían ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        //would not be
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // wouldnt be
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Would Perfect":
+                int rwp = (int) (Math.random() * 3);
+                switch (rwp) {
+                    case 0:
+
+                    case 1:
+                        object.GenPerfectTenses("would have ", "would have ", "habría ", "habrías ", "habría ", "habríamos ", "habrían ");
+                        sp = object.gens;
+                        // would have
+                        globalAnswer = object.gene;
+                        // [d have
+                        globalAnswer2 = negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("would have ", "would have ", "habría ", "habrías ", "habría ", "habríamos ", "habrían ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // would not have
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // wouldnt have
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Would Perfect Continuous":
+                int rwpc = (int) (Math.random() * 3);
+                switch (rwpc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("would have been ", "would have been ", "would have been ", "habría estado ", "habrías estado ", "habría estado ", "habríamos estado ", "habrían estado ");
+                        sp = object.gens;
+                        //would have been
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenContTenses("would have been ", "would have been ", "would have been ", "habría estado ", "habrías estado ", "habría estado ", "habríamos estado ", "habrían estado ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // wouldnot
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // wouldnt have been
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Could Simple":
+                int rcs = (int) (Math.random() * 3);
+                switch (rcs) {
+                    case 0:
+                    case 1:
+                        object.GenPresSimpModals("could ", "podría ", "podrías ", "podría ", "podríamos ", "podrían ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = ".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        gen1.GenCouldSimp2();
+                        sp = negator.negateSentenceSpanish(gen1.gens);
+                        globalAnswer = negator.negateFirstAuxOrModalContracted(gen1.gene);
+                        globalAnswer2 = negator.negateFirstAuxOrModal(gen1.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Could Continuous":
+                int rcc = (int) (Math.random() * 3);
+                switch (rcc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("could be ", "could be ", "could be ", "podría estar ", "podrías estar ", "podría estar ", "podríamos estar ", "podrían estar ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = ".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("could be ", "could be ", "could be ", "podría estar ", "podrías estar ", "podría estar ", "podríamos estar ", "podrían estar ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        globalAnswer = negator.negateFirstAuxOrModalContracted(object.gene);
+                        globalAnswer2 = negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Could Perfect":
+                int rcp = (int) (Math.random() * 3);
+                switch (rcp) {
+                    case 0:
+                    case 1:
+                        object.GenPerfectTenses("could have ", "could have ", "pude haber ", "pudiste haber ", "pudo haber ", "pudimos haber ", "pudieron haber ");
+                        sp = object.gens;
+                        // could have
+                        globalAnswer = object.gene;
+                        // couldve
+                        globalAnswer2 = negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("could have ", "could have ", "pude haber ", "pudiste haber ", "pudo haber ", "pudimos haber ", "pudieron haber ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        //couldnt
+                        globalAnswer = negator.negateFirstAuxOrModalContracted(object.gene);
+                        //could not
+                        globalAnswer2 = negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Could Perfect Continuous":
+                int rcpc = (int) (Math.random() * 3);
+                switch (rcpc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("could have been ", "could have been ", "could have been ", "podría haber estado ", "podrías haber estado ", "podría haber estado ", "podríamos haber estado ", "podrían haber estado ");
+                        sp = object.gens;
+                        globalAnswer = object.gene;
+                        globalAnswer2 = negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenContTenses("could have been ", "could have been ", "could have been ", "podría haber estado ", "podrías haber estado ", "podría haber estado ", "podríamos haber estado ", "podrían haber estado ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        // could have
+                        globalAnswer = negator.negateFirstAuxOrModal(object.gene);
+                        // couldnt have
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                }
+
+                break;
+
+
+            case "Should Simple":
+                int rss = (int)  (Math.random()*3);
+                switch (rss) {
+                    case 0:
+                    case 1:
+                        object.GenPresSimpModals("should ", "debaría ", "deberías ", "debería ", "deberíamos ", "deberían ");
+                        sp= object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenPresSimpModals("should ", "debaría ", "deberías ", "debería ", "deberíamos ", "deberían ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        //should not
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+
+                        //shouldnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Should Continuous":
+                int rsc = (int)  (Math.random()*3);
+                switch (rsc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("should be ","should be ","should be ","debería estar ","deberías estar ","debería estar ","deberíamos estar ","deberían estar ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("should be ","should be ","should be ","debería estar ","deberías estar ","debería estar ","deberíamos estar ","deberían estar ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        //shouldnt be
+                        globalAnswer=negator.negateFirstAuxOrModalContracted(object.gene);
+                        //should not be
+                        globalAnswer2=negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Should Perfect":
+                int rsp = (int)  (Math.random()*3);
+                switch (rsp) {
+                    case 0:
+                    case 1:
+                        object.GenPerfectTenses("should have ","should have ","debí haber ","debíste haber ", "debío haber ", "debímos haber ", "debíeron haber ");
+                        sp=object.gens ;
+                        //should have
+                        globalAnswer=object.gene;
+                        //shouldve
+                        globalAnswer2=negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("should have ","should have ","debí haber ","debíste haber ", "debío haber ", "debímos haber ", "debíeron haber ");
+                        sp =negator.negateSentenceSpanish(object.gens) ;
+                        //shouldnt have
+                        globalAnswer=negator.negateFirstAuxOrModalContracted(object.gene);
+                        //should not have
+                        globalAnswer2=negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Should Perfect Continuous":
+                int r2spc = (int)  (Math.random()*3);
+                switch (r2spc) {
+                    case 0:
+
+                    case 1:
+                        object.GenContTenses("should have been ","should have been ","should have been ","debería haber estado ","deberías haber estado ","debería haber estado ","deberíamos haber estado ","deberían haber estado ");
+                        sp=object.gens ;
+                        globalAnswer=object.gene;
+                        globalAnswer2=negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenContTenses("should have been ","should have been ","should have been ","debería haber estado ","deberías haber estado ","debería haber estado ","deberíamos haber estado ","deberían haber estado ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        //should have been
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // shouldnt have been
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Might Simple":
+                int r2ms = (int)  (Math.random()*3);
+                switch (r2ms) {
+                    case 0:
+                    case 1:
+                        object.GenPresSimpSubjunctive("might ", "quizá ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenPresSimpSubjunctive("might ", "quizá ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Might Continuous":
+                int r2mc = (int)  (Math.random()*3);
+                switch (r2mc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("might be ","might be ","might be ","quiza esté ","quiza estés ","quizá esté ","quiza estemos ","quiza estén ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("might be ","might be ","might be ","quizá esté ","quizá estés ","quizá esté ","quizá estemos ","quizá estén ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Might Perfect":
+                int r2mp= (int)(Math.random()*3);
+                switch (r2mp) {
+                    case 0:
+                    case 1:
+                        object.GenPerfectTenses("might have ","might have ","quizá haya ","quizá hayas ", "quizá haya ", "quizá hayamos ", "quizá hayan ");
+                        sp=object.gens;
+                        //might have
+                        globalAnswer=object.gene;
+
+                        //might have
+                        globalAnswer2=negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenPerfectTenses("might have ","might have ","quizá haya ","quizá hayas ", "quizá haya ", "quizá hayamos ", "quizá hayan ");
+                        sp =negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Might Perfect Continuous":
+                int r2mpc = (int)  (Math.random()*3);
+                switch (r2mpc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("might have been ","might have been ","might have been ","quizá haya estado ","quizá hayas estado ","quizá haya estado  ","quizá hayamos estado  ","quizá hayan estado  ");
+                        sp=object.gens;
+                        // might have
+                        globalAnswer=object.gene;
+                        //mightve
+                        globalAnswer2=negator.applyContractionModalsHave(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenContTenses("might have been ","might have been ","might have been ","quizá haya estado ","quizá hayas estado ","quizá haya estado  ","quizá hayamos estado  ","quizá hayan estado  ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Can Simple":
+                int r2cs = (int)  (Math.random()*3);
+                switch (r2cs) {
+                    case 0:
+                    case 1:
+                        object.GenPresSimpModals("can ", "puedo ", "puedes ", "puede ", "podemos ", "pueden ");
+                        sp= object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+
+                    case 2:
+                        object.GenPresSimpModals("can ", "puedo ", "puedes ", "puede ", "podemos ", "pueden ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+                        break;
+
+                }
+                break;
+
+            case "Can Continuous":
+                int r2cc = (int)  (Math.random()*3);
+                switch (r2cc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("can be ","can be ","can be ","puedo estar ","puedes estar ","puede estar ","podemos estar ","pueden estar ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("can be ","can be ","can be ","puedo estar ","puedes estar ","puede estar ","podemos estar ","pueden estar ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        //cannot
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // can[t be
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Must Simple":
+                int r2mss = (int)  (Math.random()*3);
+                switch (r2mss) {
+                    case 0:
+                    case 1:
+                        object.GenPresSimpModals("must ", "debo ", "debes ", "debe ", "debemos ", "deben ");
+                        sp= object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenPresSimpModals("must ", "debo ", "debes ", "debe ", "debemos ", "deben ");
+                        sp=negator.negateSentenceSpanish(object.gens) ;
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Must Continuous":
+                int r2mcc = (int)  (Math.random()*3);
+                switch (r2mcc) {
+                    case 0:
+                    case 1:
+                        object.GenContTenses("must be ","must be ","must be ","debo estar ","debes estar ","debe estar ","debemos estar ","deben estar ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenContTenses("must be ","must be ","must be ","debo estar ","debes estar ","debe estar ","debemos estar ","deben estar ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "blank", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+
+
+
+            case "Present Simple Passive":
+                int rpassiveps = (int)  (Math.random()*2);
+                switch (rpassiveps){
+                    case 0:
+                        gen.GenPassives("present simple");
+                        sp= gen.gens;
+                        // not contracted he is arrested
+                        globalAnswer=gen.gene;
+                        // contracted hes arrested by ...
+                        globalAnswer2=negator.contractPresentContinuousPresent(gen.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        gen.GenPassives("present simple");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        //not contracted he is not arrested
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        // contracted he isnt arrested
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        // hes not/ to be contracted
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+
+                break;
+
+            case "Present Continuous Passive":
+                int r2ppc = (int)  (Math.random()*2);
+                switch (r2ppc){
+                    case 0:
+                        gen.GenPassives("present continuous");
+                        sp= gen.gens;
+                        globalAnswer=gen.gene;
+                        globalAnswer2=negator.contractPresentContinuousPresent(gen.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                        break;
+
+                    case 1:
+                        gen.GenPassives("present continuous");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                        break;
+
+
+                }
+                break;
+
+            case "Present Perfect Passive":
+                int r2ppp = (int)  (Math.random()*2);
+                switch (r2ppp){
+                    case 0:
+                        gen.GenPassives("present perfect");
+                        sp= gen.gens;
+                        globalAnswer=gen.gene;
+                        globalAnswer2=negator.contractPresentPerfect(gen.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        gen.GenPassives("present perfect");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        globalAnswer3=negator.contractPresentPerfectIncludingNot(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Past Simple Passive":
+                int r2pps = (int)  (Math.random()*2);
+                switch (r2pps){
+                    case 0:
+                        gen.GenPassives("past simple");
+                        sp= gen.gens;
+                        // the girl was
+                        globalAnswer=gen.gene;
+                        // no contraction
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+                        break;
+
+                    case 1:
+                        gen.GenPassives("past simple");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        //was not
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        // wasnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+                        break;
+
+
+                }
+                break;
+
+            case "Past Continuous Passive":
+                int r2ppcc = (int)  (Math.random()*2);
+                switch (r2ppcc){
+                    case 0:
+                        gen.GenPassives("past continuous");
+                        sp= gen.gens;
+                        // was being
+                        globalAnswer=gen.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        gen.GenPassives("past continuous");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        //was not
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Past Perfect Passive":
+                int r2pppp = (int)  (Math.random()*2);
+                switch (r2pppp){
+                    case 0:
+                        gen.GenPassives("past perfect");
+                        sp= gen.gens;
+                        globalAnswer=gen.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                    case 1:
+                        gen.GenPassives("past perfect");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Future Simple Passive":
+                int r2pfs = (int)  (Math.random()*2);
+                switch (r2pfs){
+                    case 0:
+                        gen.GenPassives("future simple");
+                        sp= gen.gens;
+                        globalAnswer=gen.gene;
+                        globalAnswer2=negator.contractWill(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        gen.GenPassives("future simple");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "Would Simple Passive":
+                int r2pws = (int)  (Math.random()*2);
+                switch (r2pws){
+                    case 0:
+                        gen.GenPassives("would simple");
+                        sp= gen.gens;
+                        // he would be
+                        globalAnswer=gen.gene;
+                        // he d be
+                        globalAnswer2=negator.contractHadOrWould(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                    case 1:
+                        gen.GenPassives("would simple");
+                        sp= negator.negateSentenceSpanish(gen.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(gen.gene);
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+
+                }
+                break;
+
+            case "For Object To":
+                int r2forto = (int)  (Math.random()*3);
+                switch (r2forto){
+                    case 0:
+                        gen1.GenForTo2();
+                        sp= gen1.gens ;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "globalAnswer2", "globalAnswer3", "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenForTo();
+                        sp= negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "globalAnswer2", "globalAnswer3", "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenForTo();
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "globalAnswer2", "globalAnswer3", "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Be Used To":
+                int r2but = (int) (Math.random()*4);
+                switch (r2but){
+                    case 0:
+                        gen1.GenBeUsedTo2();
+                        sp= gen1.gens ;
+                        globalAnswer  = gen1.gene;
+                        globalAnswer2 = negator.contractPresentContinuousPresent(gen1.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenBeUsedTo("am used to ", "are used to ","is used to ","are used to ","esoy acostumbrado a ", "estas acostumbrado a ", "está acostumbrado a ","está acostumbrada a ","estamos acostumbrados a ", "estan acostumbrados a ");
+                        sp=object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=negator.contractPresentContinuousPresent(object.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 2:
+                        object.GenBeUsedTo("am used to ", "are used to ","is used to ","are used to ","esoy acostumbrado a ", "estas acostumbrado a ", "está acostumbrado a ","está acostumbrada a ","estamos acostumbrados a ", "estan acostumbrados a ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        // he is not used to
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        //he isnt used to
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        // hes not used to
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 3:
+                        gen1.GenBeUsedTo2();
+                        sp= negator.negateSentenceSpanish(gen1.gens);
+                        globalAnswer  = negator.negateFirstAuxOrModal(gen1.gene);
+                        globalAnswer2 = negator.negateFirstAuxOrModalContracted(gen1.gene);
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+
+                break;
+
+            case "There Be":
+                int r2tb=(int)(Math.random()*2);
+                switch (r2tb){
+                    case 0:
+                        object.GenThereBe();
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenThereBe();
+                        sp = negator.negateThereBeSpanish(object.gens);
+                        globalAnswer2= negator.negateThereBeWithNo(object.gene);
+                        globalAnswer=negator.negateFirstAuxOrModalContracted(object.gene);
+                        globalAnswer3=negator.negateFirstAuxOrModal(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+
+            case "Used To":
+                int r2used = (int) (Math.random()*3);
+                switch (r2used){
+                    case 0:
+                        gen1.GenUsedTo2();
+                        sp= gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenHaveTo("used to ","used to ","solía ", "solías ", "solía ", "solíamos ", "solían ");
+                        sp= object.gens;
+                        globalAnswer=object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenHaveTo("use to ","use to ","solía ", "solías ", "solía ", "solíamos ", "solían ");
+                        sp= negator.negateSentenceSpanish(object.gens );
+                        globalAnswer=negator.negatePastSimple(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Have To":
+                int r2ht = (int) (Math.random()*2);
+                switch (r2ht){
+                    case 0:
+                        object.GenHaveTo("have to ","has to ","tengo que ","tienes que ","tiene que ","tenemos que ","tienen que ");
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "globalAnswer2", "globalAnswer3", "blank", "blank");
+                        break;
+
+                    case 1:
+                        object.GenHaveTo("have to ","have to ","tengo que ","tienes que ","tiene que ","tenemos que ","tienen que ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, "globalAnswer2", "globalAnswer3", "blank", "blank");
+                        break;
+                }
+                break;
+
+            case "Going To":
+                int r2gt = (int) (Math.random()*2);
+                switch (r2gt){
+                    case 0:
+                        object.GenGoingTo("am going to ","are going to ","is going to ","voy a ","vas a ","va a ","vamos a ", "van a ");
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenGoingTo("am going to ","are going to ","is going to ","voy a ","vas a ","va a ","vamos a ", "van a ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        // he is not
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // he isnt going to
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        // hes not going to
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+
+                break;
+
+            case "Going To Past":
+                int r2gtp = (int) (Math.random()*2);
+                switch (r2gtp){
+                    case 0:
+                        object.GenGoingTo("was going to ","were going to ","was going to ","iba a ","ibas a ","iba a ","ibamos a ", "iban a ");
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenGoingTo("was going to ","were going to ","was going to ","iba a ","ibas a ","iba a ","ibamos a ", "iban a ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        // i was not
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // i wasnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Feel like":
+                int r2fl = (int) (Math.random()*2);
+                switch (r2fl){
+                    case 0:
+                        object.GenFeelLike("feel like ","feel like ","feels like ","tengo ganas de ","tienes ganas de ","tiene ganas de ","tenemos ganas de ", "tienen ganas de ");
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenFeelLike("feel like ","feel like ","feels like ","tengo ganas de ","tienes ganas de ","tiene ganas de ","tenemos ganas de ", "tienen ganas de ");
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimple(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Supposed To":
+                int r2sp= (int) (Math.random()*2);
+                int sprand=(int)(Math.random()*3);
+                switch (r2sp){
+                    case 0:
+                        object.GenSupposedTo(false);
+                        switch (sprand){
+                            case 0:
+                                sp=object.gens;
+                                break;
+
+                            case 1:
+                                sp=object.gens2;                                              break;
+
+                            case 2:
+                                sp=object.gens3 ;
+                                break;
+                        }
+
+                        // he is suposed to
+                        globalAnswer=object.gene;
+                        // hes supposed to
+                        globalAnswer2=negator.contractPresentContinuousPresent(object.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenSupposedTo(false);
+                        switch (sprand){
+                            case 0:
+                                sp=negator.negateSentenceSpanishOG(object.gens);
+                                break;
+
+                            case 1:
+                                sp=negator.negateSentenceSpanishOG(object.gens2);
+                                break;
+
+                            case 2:
+                                sp=negator.negateSentenceSpanishOG(object.gens3);
+                                break;
+                        }
+                        // he is not supposed to
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // he isnt supposed to
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        // hes not suppsoed to
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Supposed To Past":
+                int r2stp= (int) (Math.random()*2);
+                int sprand2=(int)(Math.random()*3);
+                switch (r2stp){
+                    case 0:
+                        object.GenSupposedTo(true);
+                        switch (sprand2){
+                            case 0:
+                                sp=object.gens;
+                                break;
+
+                            case 1:
+                                sp=object.gens2;                                              break;
+
+                            case 2:
+                                sp=object.gens3 ;
+                                break;
+                        }
+                        // he was suposed to
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenSupposedTo(true);
+                        switch (sprand2){
+                            case 0:
+                                sp=negator.negateSentenceSpanishOG(object.gens);
+                                break;
+
+                            case 1:
+                                sp=negator.negateSentenceSpanishOG(object.gens2);
+                                break;
+
+                            case 2:
+                                sp=negator.negateSentenceSpanishOG(object.gens3);
+                                break;
+                        }
+                        // he was not supposed to
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // he wasnt supposed to
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        //
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Get Structures":
+                int r2gs= (int) (Math.random()*2);
+                switch (r2gs){
+                    case 0:
+                        object.GenGetStructures();
+                        sp= object.gens.trim();
+                        globalAnswer=object.gene.trim();
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenGetStructures();
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimple(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, "globalAnswer3", "blank", "blank");
+
+                        break;
+                }
+
+                break;
+
+           case "P-V-PP":
+                int r2pvpp= (int)   (Math.random()*2);
+                switch (r2pvpp){
+                    case 0:
+                        object.GenPvpp();
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=object.gene2;
+                        globalAnswer3="/";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenPvpp();
+                        sp=negator.negateSentenceSpanishOG(object.gens);
+                        globalAnswer=negator.negatePresentSimple(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene2);
+                        globalAnswer3=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Reflexive Structure":
+                int r2rs= (int)   (Math.random()*2);
+                switch (r2rs){
+                    case 0:
+                        object.GenReflexives();
+                        sp = object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        object.GenReflexives();
+                        sp=negator.negateReflexiveSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimple(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+
+            case "Causative Have":
+                int r2cah= (int) (Math.random()*2);
+                switch (r2cah){
+                    case 0:
+                        object.GenCausatives();
+                        sp =object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=object.gene2;
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenCausatives();
+                        sp=negator.negateReflexiveSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimpleCausativeHave(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene);
+                        globalAnswer3=negator.negatePresentSimpleContracted(object.gene2);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                }
+                break;
+
+            case "Verbos Juntos":
+                int r2vj=  (int)(Math.random()*2);
+                switch (r2vj){
+                    case 0:
+                        object.GenVerbosJuntos();
+                        sp =object.gens;
+                        // i like to go
+                        globalAnswer=object.gene;
+                        // i like going
+                        globalAnswer2=object.gene2;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenVerbosJuntos();
+                        sp=negator.negateSentenceSpanishOG(object.gens);
+                        // i don like to go
+                        globalAnswer=negator.negatePresentSimpleContracted(object.gene);
+                        // i dont like going
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene2);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                        break;
+
+                }
+                break;
+
+            case "Noun Adjectives":
+                nouns.GenNounAdj();
+                sp = nouns.gens;
+                globalAnswer=nouns.gene;
+                initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                break;
+
+            case "Verbal Adjectives":
+                int r2va = (int)  (Math.random()*2);
+                switch (r2va){
+                    case 0:
+                        gen1.GenVerbalAdjectives();
+                        sp = gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        gen1.GenVerbalAdjectives();
+                        sp = negator.addNoAfterQue(gen1.gens);
+                        globalAnswer=negator.negateVerbalAdjective(gen1.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+
+                break;
+
+            case "Wish Past":
+                int r2wps= (int)(Math.random()*3);
+                switch (r2wps){
+                    case 0:
+                        gen1.GenWishPastSimple2();
+                        sp = gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        nouns.GenWish(0);
+                        sp = nouns.gens;
+                        globalAnswer=nouns.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 2:
+                        nouns.GenWish(0);
+                        sp = negator.negateSentenceSpanish(nouns.gens) ;
+                        globalAnswer=nouns.gene2; // ya esta negada el gene2 del nouns
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+
+                break;
+            case "Wish Would":
+                int r2ww= (int) (Math.random()*3);
+                switch (r2ww){
+                    case 0:
+                        gen1.GenWishWould2();
+                        sp = gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        nouns.GenWish(1);
+                        sp=nouns.gens;
+                        globalAnswer=nouns.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 2:
+                        nouns.GenWish(1);
+                        sp= negator.negateSentenceSpanish(nouns.gens);
+                        globalAnswer=nouns.gene2;//already negated gene2
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+
+                break;
+            case "Wish Past Perfect":
+                int r2wpp= (int)   (Math.random()*3);
+                switch (r2wpp){
+                    case 0:
+                        gen1.GenWishPastPerf2();
+                        sp= gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        nouns.GenWish(2);
+                        sp=nouns.gens;
+                        globalAnswer=nouns.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        nouns.GenWish(2);
+                        sp=negator.negateSentenceSpanish(nouns.gens);
+                        globalAnswer=nouns.gene2;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Comparativos":
+                int r2comp= (int)   (Math.random()*2);
+                switch (r2comp){
+                    case 0:
+                        nouns.GenComparativos();
+                        sp=nouns.gens;
+                        // i am
+                        globalAnswer=nouns.gene;
+                        //im
+                        globalAnswer2=negator.contractPresentContinuousPresent(nouns.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        nouns.GenComparativos();
+                        sp = negator.negateSentenceSpanishComp(nouns.gens);
+                        // he is not
+                        globalAnswer=negator.negateFirstAuxOrModal(nouns.gene);
+                        // he isnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(nouns.gene);
+                        //he s not
+                        globalAnswer3= negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Question Structures":
+                int verbPos=(int)(Math.random()*nouns.verbsTagged.length);
+                int ob2=(int)(Math.random()* object.verbObjectsSpanish[verbPos].length);
+                String tempQuestion= nouns.generateQuestion(verbPos,ob2);
+                sp=nouns.genSpanishQuestion(tempQuestion,verbPos,ob2);
+                globalAnswer=tempQuestion;
+                initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                break;
+
+            case "Phrasal Verbs":
+                int r2pv= (int)   (Math.random()*2);
+                switch (r2pv){
+                    case 0:
+                        object.GenPresSimpPhrasalVerbs();
+                        sp= object.gens;
+                        globalAnswer=object.gene;
+                        globalAnswer2=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                        break;
+                    case 1:
+                        object.GenPresSimpPhrasalVerbs();
+                        sp = negator.negateSentenceSpanish(object.gens);
+                        globalAnswer=negator.negatePresentSimple(object.gene);
+                        globalAnswer2=negator.negatePresentSimpleContracted(object.gene);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                        break;
+                }
+                break;
+
+
+            case "Reported Speech":
+                String reporter="";
+                String reportersp="";
+                int r2rep= (int)(Math.random()*3);
+                switch (r2rep){
+                    case 0:
+                        gen1.GenReportedSpeech1();
+                        sp = gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        int rsrand=(int) (Math.random()*2);
+                        if(rsrand==1){
+                            reporter = "he said that " ;
+                            reportersp = "él dijo que " ;
+                        }else {
+                            reporter = "she said that ";
+                            reportersp = "ella dijo que ";
+                        }
+                        object.GenPastSimp();
+                        sp= reportersp + object.gens;
+                        globalAnswer=reporter+object.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 2:
+                        int rsrand2=(int) (Math.random()*2);
+                        if(rsrand2==1){
+                            reporter = "he said that " ;
+                            reportersp = "él dijo que " ;
+                        }else {
+                            reporter = "she said that ";
+                            reportersp = "ella dijo que ";
+                        }
+                        object.GenPastSimp();
+                        sp= reportersp +negator.negateSentenceSpanishOG(object.gens) ;
+                        globalAnswer=reporter+negator.negatePastSimple(object.gene2);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Be Able To":
+                int r2bat= (int)   (Math.random()*5);
+                switch (r2bat){
+                    case 0:
+                        gen1.GenAbleTo2();
+                        sp = gen1.gens;
+                        //i am
+                        globalAnswer=gen1.gene;
+                        // im
+                        globalAnswer2=negator.contractPresentContinuousPresent(gen1.gene);
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 1:
+                        object.GenGoingTo("will be able to ","will be able to ","will be able to ","podré ","podrás ", "podrá ", "podrémos ", "podrán ");
+                        sp=object.gens;
+                        // i will
+                        globalAnswer=object.gene;
+                        // ill be
+                        globalAnswer2=negator.contractWill(object.gene);
+
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        object.GenGoingTo("am able to ","are able to ","is able to ","soy capaz de ","eres capaz de ", "es capaz de ", "somos capaces de ", "son capaces de ");
+                        sp=object.gens;
+                        //he is
+                        globalAnswer=object.gene;
+                        // hes
+                        globalAnswer2= negator.contractPresentContinuousPresent(object.gene);
+
+                        globalAnswer3=".";
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 3:
+                        object.GenGoingTo("am able to ","are able to ","is able to ","soy capaz de ","eres capaz de ", "es capaz de ", "somos capaces de ", "son capaces de ");
+                        sp=negator.negateSentenceSpanish(object.gens);
+                        // i am not
+                        globalAnswer=negator.negateFirstAuxOrModal(object.gene);
+                        // he isnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(object.gene);
+                        // hes not
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 4:
+                        gen1.GenAbleTo2();
+                        sp = negator.negateSentenceSpanishOG(gen1.gens);
+                        // he is not
+                        globalAnswer=negator.negateFirstAuxOrModal(gen1.gene);
+                        // he isnt
+                        globalAnswer2=negator.negateFirstAuxOrModalContracted(gen1.gene);
+                        // hes not
+                        globalAnswer3=negator.negateAndContractPresentContinuous(globalAnswer);
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+
+                        break;
+                }
+
+                break;
+
+            case "Incremento Paralelo":
+                gen1.GenIncrementoParalelo();
+                sp = gen1.gens;
+                globalAnswer=gen1.gene;
+                initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+                break;
+
+
+            case "Relative Clauses":
+                int r2relcl= (int) (Math.random()*3);
+                switch (r2relcl){
+                    case 0:
+                        nouns.GenRelativeClauses();
+                        sp=nouns.gens;
+                        globalAnswer=nouns.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                    case 1:
+                        gen1.GenRelativeClauses1();
+                        sp= gen1.gens;
+                        globalAnswer=gen1.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+
+                    case 2:
+                        n.GenRelativeClauses1New();
+                        sp=n.gens;
+                        globalAnswer=n.gene;
+                        initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                        break;
+                }
+                break;
+
+            case "Just Phrasal Verbs":
+                nouns.GenJustPhrasalVerbs();
+                sp= nouns.gens;
+                globalAnswer=nouns.gene;
+                initializeTextToSpeechNewMethods(sp, globalAnswer, globalAnswer2, globalAnswer3, "blank", "blank");
+
+                break;
+
+
+        }
+    }
 
     //DIFICULTAD 1
     public void dificulty1() {
@@ -944,50 +2915,15 @@ public class Estructura2023 extends AppCompatActivity {
         checarischeck();
         mostrar_layout();
         btndif1.setText("oración facil");
-
+        Generator gen1 = new Generator();
+        String methName="";
         switch (selection) {
-            case "Tutorial":
-                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
-                break;
+
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(),
-                                new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-                                    answerinp.setText("");
-
-                                     
-                                      tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-                                }
-                            }
-                        });
+                        methName ="GenPresSimp1";
+                       initializeTextToSpeech(gen1,methName);
                         break;
 
                     case "100 a 200":
@@ -1019,7 +2955,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     txteng.setText(gen1.gene);
 
                                     answerinp.setText("");
-                                     
+
                                      tt1.speak("como dirías..." + sptx.getText().toString().trim(),
                                             TextToSpeech.QUEUE_ADD, null, "one");
 
@@ -1057,7 +2993,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     txteng.setText(gen1.gene);
 
                                     answerinp.setText("");
-                                     
+
                                tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
@@ -1094,7 +3030,7 @@ public class Estructura2023 extends AppCompatActivity {
                                     txteng.setText(gen1.gene);
                                     answerinp.setText("");
 
-                                     
+
                                          tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
 
                                 }
@@ -1142,40 +3078,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    hintPalabraclave2(gen1);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-                                }
-                            }
-                        });
+                        methName="GenPresCont1";
+                        initializeTextToSpeech(gen1,methName);
                         break;
 
                     case "100 a 200":
@@ -1291,44 +3195,9 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
 
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                         methName = "GenPresPerf1";
+                        initializeTextToSpeech(gen1, methName);
                         break;
 
                     case "100 a 200":
@@ -1453,43 +3322,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresPerfCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                         methName = "GenPresPerfCont1";
+                        initializeTextToSpeech(gen1, methName);
                         break;
 
                     case "100 a 200":
@@ -1614,43 +3448,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        methName = "GenPastSimp1";
+                        initializeTextToSpeech(gen1, methName);
                         break;
 
                     case "100 a 200":
@@ -1766,44 +3565,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        methName = "GenPastCont1";
+                        initializeTextToSpeech(gen1, methName);
                         break;
 
                     case "100 a 200":
@@ -1921,44 +3684,9 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
+                        methName = "GenPastPerf1";
+                        initializeTextToSpeech(gen1, methName);
 
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
                         break;
 
                     case "100 a 200":
@@ -2076,43 +3804,8 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastPerfCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        methName="GenPastPerfCont1";
+                        initializeTextToSpeech(gen1,methName);
                         break;
 
                     case "100 a 200":
@@ -2251,7 +3944,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -2403,7 +4096,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -2558,7 +4251,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -2713,7 +4406,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -2866,7 +4559,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3018,7 +4711,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3173,7 +4866,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3328,7 +5021,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3481,7 +5174,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3633,7 +5326,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3788,7 +5481,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -3943,7 +5636,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4096,7 +5789,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4248,7 +5941,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4403,7 +6096,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4559,7 +6252,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4712,7 +6405,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -4864,7 +6557,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5019,7 +6712,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5174,7 +6867,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerfCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5327,7 +7020,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5479,7 +7172,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5635,7 +7328,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5787,7 +7480,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustCont1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -5944,7 +7637,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWantYouTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6071,7 +7764,7 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "For To":
+            case "For Object To":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -6097,7 +7790,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenForTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6252,7 +7945,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedToPresente1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6373,7 +8066,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedTopasado1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6469,7 +8162,7 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "Wish Past Simple":
+            case "Wish Past":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -6495,7 +8188,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastSimple1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6618,7 +8311,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastPerf1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6739,7 +8432,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishWould1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6861,7 +8554,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenUsedTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -6959,2897 +8652,6 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "What Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "When Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Where Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWherePerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Why Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhySimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Who Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Much Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Many Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManySimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsSimp1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsCont1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsPerf1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    hintPalabraclave(gen1);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Question Structure":
-                switch (selection2) {
-                    case "0 a 100":
-                        palabraclave.setVisibility(View.INVISIBLE);
-                        verboEs.setVisibility(View.INVISIBLE);
-                        GenQuestionStructure1();
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Question Structure Modals":
-                switch (selection2) {
-                    case "0 a 100":
-                        palabraclave.setVisibility(View.INVISIBLE);
-                        verboEs.setVisibility(View.INVISIBLE);
-                        GenQuestionStructureModals1();
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
             case "Be Used To":
                 switch (selection2) {
                     case "0 a 100":
@@ -9876,7 +8678,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenBeUsedTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10000,7 +8802,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenReportedSpeech1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10058,7 +8860,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenIncrementoParalelo();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10116,7 +8918,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenVerbalAdjectives();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10174,7 +8976,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenRelativeClauses1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10232,7 +9034,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenAbleTo1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10393,7 +9195,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPhrasalVerb1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10451,7 +9253,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenTherebe();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10510,7 +9312,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPreguntasPreposicionales1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10567,7 +9369,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFeelLikeSimp1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -10598,6 +9400,111 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
+            case "Present Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Future Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Would Simple Passive":
+                newMethods(selection);
+                break;
+            case "Have To":
+                newMethods(selection);
+                break;
+
+            case "Going To":
+                newMethods(selection);
+                break;
+
+            case "Going To Past":
+                newMethods(selection);
+                break;
+
+            case "Feel like":
+                newMethods(selection);
+                break;
+
+            case "Supposed To":
+                newMethods(selection);
+                break;
+
+
+
+            case "Get Structures":
+                newMethods(selection);
+                break;
+
+           case "P-V-PP":
+                newMethods(selection);
+                break;
+
+            case "Reflexive Structure":
+                newMethods(selection);
+                break;
+
+            case "Causative Have":
+                newMethods(selection);
+                break;
+
+            case "Verbos Juntos":
+                newMethods(selection);
+                break;
+
+            case "Noun Adjectives":
+                newMethods(selection);
+                break;
+
+            case "Comparativos":
+                newMethods(selection);
+                break;
+
+            case "Question Structures":
+                newMethods(selection);
+                break;
+
+            case "Just Phrasal Verbs":
+                newMethods(selection);
+
+                break;
+
+
+            case "Be Able To":
+                newMethods(selection);
+
+                break;
+
+
+
+            case "Relative Clauses":
+                newMethods(selection);
+
+                break;
+
+
+
         }
     }
     public void dificulty2() {
@@ -10606,47 +9513,22 @@ public class Estructura2023 extends AppCompatActivity {
         mostrar_layout();
         palabraclave.setVisibility(View.GONE);
         verboEs.setVisibility(View.GONE);
-
+        Generator gen1 = new Generator();
+        String methName= "";
         switch (selection) {
-            case "Tutorial":
-                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
-                break;
+
             case "Present Simple":
                 switch (selection2) {
+
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
+                        int r = (int)(Math.random()*2);
+                        if(r==0){
+                            methName = "GenPresSimp2";
+                            initializeTextToSpeech(gen1, methName);
+                        }else {
+                            newMethods(selection);
+                        }
 
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-                                }
-                            }
-                        });
                         break;
 
                     case "100 a 200":
@@ -10758,40 +9640,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    Toast.makeText(Estructura2023.this, gen1.gene2, Toast.LENGTH_SHORT).show();
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-                                }
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -10906,42 +9755,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11065,42 +9879,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Present Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPresPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11225,42 +10004,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11376,43 +10120,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11530,42 +10238,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11683,42 +10356,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Past Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenPastPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11835,42 +10473,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Future Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenFutSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -11986,43 +10589,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Future Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenFutCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12140,42 +10707,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Future Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenFutPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12293,42 +10825,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Future Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenFutPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12445,42 +10942,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Would Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWouldSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12596,43 +11058,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Would Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWouldCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12750,42 +11176,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Would Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWouldPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -12903,42 +11294,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Would Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWouldPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13055,42 +11411,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Could Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCouldSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13206,43 +11527,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Could Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCouldCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13360,42 +11645,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Could Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCouldPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13513,43 +11763,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Could Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(),
-                                new TextToSpeech.OnInitListener() {
-                                    @Override
-                                    public void onInit(int i) {
-                                        Locale spanish = new Locale("es", "MX");
-                                        if (i == TextToSpeech.SUCCESS) {
-                                            int lang = tt1.setLanguage(spanish);
-                                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                                @Override
-                                                public void onStart(String s) {
-                                                }
-
-                                                @Override
-                                                public void onDone(String utteranceId) {
-                                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                                }
-
-                                                @Override
-                                                public void onError(String s) {
-                                                }
-                                            });
-                                            Generator gen1 = new Generator();
-                                            gen1.GenCouldPerfCont2();
-                                            sptx.setText(gen1.gens);
-                                            txteng.setText(gen1.gene);
-
-                                            answerinp.setText("");
-                                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                        }
-
-                                    }
-
-                                });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13666,42 +11880,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Might Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMightSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13817,43 +11996,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Might Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMightCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -13971,42 +12114,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Might Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMightPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14124,42 +12232,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Might Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMightPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14276,42 +12349,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Should Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenShouldSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14427,43 +12465,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Should Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenShouldCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14581,42 +12583,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Should Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenShouldPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14734,42 +12701,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Should Perfect Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenShouldPerfCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -14886,42 +12818,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Can Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCanSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15037,43 +12934,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Can Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenCanCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15192,42 +13053,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Must Simple":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMustSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15343,43 +13169,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Must Continuous":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenMustCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15494,44 +13284,120 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
+            case "Present Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Future Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Would Simple Passive":
+                newMethods(selection);
+                break;
+            case "Have To":
+                newMethods(selection);
+                break;
+
+            case "Going To":
+                newMethods(selection);
+                break;
+
+            case "Going To Past":
+                newMethods(selection);
+                break;
+
+            case "Feel like":
+                newMethods(selection);
+                break;
+
+            case "Supposed To":
+                newMethods(selection);
+                break;
+
+
+
+            case "Get Structures":
+                newMethods(selection);
+                break;
+
+           case "P-V-PP":
+                newMethods(selection);
+                break;
+
+            case "Reflexive Structure":
+                newMethods(selection);
+                break;
+
+            case "Causative Have":
+                newMethods(selection);
+                break;
+
+            case "Verbos Juntos":
+                newMethods(selection);
+                break;
+
+            case "Noun Adjectives":
+                newMethods(selection);
+                break;
+
+            case "Comparativos":
+                newMethods(selection);
+                break;
+
+            case "Question Structures":
+                newMethods(selection);
+                break;
+
+            case "Phrasal Verbs":
+                newMethods(selection);
+
+                break;
+
+
+            case "Be Able To":
+                newMethods(selection);
+
+                break;
+
+
+
+            case "Relative Clauses":
+                newMethods(selection);
+
+                break;
+
+            case "Just Phrasal Verbs":
+                newMethods(selection);
+
+                break;
+
 
             case "Want To":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWantYouTo2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        methName = "GenWantYouTo2";
+                        initializeTextToSpeech(gen1, methName);
                         break;
 
                     case "100 a 200":
@@ -15647,43 +13513,10 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "For To":
+            case "For Object To":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenForTo2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15804,39 +13637,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Supposed To Present":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenSupposedToPresente2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -15923,40 +13724,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Supposed To Past":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenSupposedTopasado2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16041,42 +13809,10 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "Wish Past Simple":
+            case "Wish Past":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWishPastSimple2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16165,40 +13901,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Wish Past Perfect":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWishPastPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16285,40 +13988,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Wish Would":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWishWould2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16406,40 +14076,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Used To":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenUsedTo2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16528,40 +14165,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Be Used To":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenBeUsedTo2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -16648,2882 +14252,10 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "What Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "What Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhatModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "When Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "When Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhenModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Where Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWherePerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Where Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhereModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Why Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhySimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Why Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhyModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Who Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Who Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenWhoModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Much Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Much Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowMuchModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "How Many Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManySimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Simple":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsSimp2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Continuous":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsCont2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "How Many Modals Perfect":
-                switch (selection2) {
-                    case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenHowManyModalsPerf2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-
-
-                                }
-
-                            }
-
-                        });
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
-            case "Question Structure":
-                switch (selection2) {
-                    case "0 a 100":
-                        GenQuestionStructure2();
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-            case "Question Structure Modals":
-                switch (selection2) {
-                    case "0 a 100":
-                        GenQuestionStructureModals2();
-                        break;
-
-                    case "100 a 200":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "200 a 300":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "300 a 400":
-                        Toast.makeText(this, "Opcion no disponible", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    default:
-                        Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                break;
-
             case "Reported Speech":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenReportedSpeech1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19547,40 +14279,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Incremento Paralelo":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenIncrementoParalelo();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19604,40 +14303,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Verbal Adjectives":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenVerbalAdjectives();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19661,40 +14327,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Relative Clause":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenRelativeClauses1();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19718,41 +14351,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "Able To":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenAbleTo2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19878,41 +14477,7 @@ public class Estructura2023 extends AppCompatActivity {
             case "There Be":
                 switch (selection2) {
                     case "0 a 100":
-                        tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                            @Override
-                            public void onInit(int i) {
-                                Locale spanish = new Locale("es", "MX");
-                                if (i == TextToSpeech.SUCCESS) {
-                                    int lang = tt1.setLanguage(spanish);
-                                    tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                        @Override
-                                        public void onStart(String s) {
-                                        }
-
-                                        @Override
-                                        public void onDone(String utteranceId) {
-
-                                            if(timerTask == null){
-                                                startTimer();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onError(String s) {
-                                        }
-                                    });
-                                    Generator gen1 = new Generator();
-                                    gen1.GenTherebe2();
-                                    sptx.setText(gen1.gens);
-                                    txteng.setText(gen1.gene);
-                                    txteng2.setText(gen1.gene2);
-
-                                    answerinp.setText("");
-                                    tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                                }
-
-                            }
-                        });
+                        newMethods(selection);
                         break;
 
                     case "100 a 200":
@@ -19939,12 +14504,12 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-        palabraclave.setVisibility(View.INVISIBLE);
-        verboEs.setVisibility(View.INVISIBLE);
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
+        Generator gen1 = new Generator();
+
         switch (selection) {
-            case "Tutorial":
-                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
-                break;
+
             case "Present Simple":
                 switch (selection2) {
                     case "0 a 100":
@@ -19970,7 +14535,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20113,7 +14678,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20260,7 +14825,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20419,7 +14984,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20579,7 +15144,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20730,7 +15295,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -20884,7 +15449,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21037,7 +15602,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21189,7 +15754,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21340,7 +15905,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21494,7 +16059,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21647,7 +16212,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21799,7 +16364,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -21950,7 +16515,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22104,7 +16669,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22257,7 +16822,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22409,7 +16974,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22560,7 +17125,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22714,7 +17279,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -22867,7 +17432,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23019,7 +17584,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23170,7 +17735,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23324,7 +17889,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23477,7 +18042,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23629,7 +18194,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23780,7 +18345,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -23934,7 +18499,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24087,7 +18652,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerfCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24239,7 +18804,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24390,7 +18955,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24545,7 +19110,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustSimp3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24696,7 +19261,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustCont3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24852,7 +19417,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWantYouTo3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -24978,7 +19543,7 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "For To":
+            case "For Object To":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -25004,7 +19569,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenForTo3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25158,7 +19723,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedToPresente3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25277,7 +19842,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedTopasado3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25372,7 +19937,7 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "Wish Past Simple":
+            case "Wish Past":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -25398,7 +19963,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastSimple3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25519,7 +20084,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastPerf3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25639,7 +20204,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishWould3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25760,7 +20325,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenUsedTo3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -25882,7 +20447,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenBeUsedTo3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26005,7 +20570,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenReportedSpeech1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26062,7 +20627,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenIncrementoParalelo();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26119,7 +20684,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenVerbalAdjectives();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26176,7 +20741,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenRelativeClauses1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26233,7 +20798,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenAbleTo3();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26365,6 +20930,108 @@ public class Estructura2023 extends AppCompatActivity {
                         Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
                         break;
                 }
+                break;
+            case "Present Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Future Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Would Simple Passive":
+                newMethods(selection);
+                break;
+            case "Have To":
+                newMethods(selection);
+                break;
+
+            case "Going To":
+                newMethods(selection);
+                break;
+
+            case "Going To Past":
+                newMethods(selection);
+                break;
+
+            case "Feel like":
+                newMethods(selection);
+                break;
+
+            case "Supposed To":
+                newMethods(selection);
+                break;
+
+
+
+            case "Get Structures":
+                newMethods(selection);
+                break;
+
+           case "P-V-PP":
+                newMethods(selection);
+                break;
+
+            case "Reflexive Structure":
+                newMethods(selection);
+                break;
+
+            case "Causative Have":
+                newMethods(selection);
+                break;
+
+            case "Verbos Juntos":
+                newMethods(selection);
+                break;
+
+            case "Noun Adjectives":
+                newMethods(selection);
+                break;
+
+            case "Comparativos":
+                newMethods(selection);
+                break;
+
+            case "Question Structures":
+                newMethods(selection);
+                break;
+
+            case "Just Phrasal Verbs":
+                newMethods(selection);
+
+                break;
+
+
+            case "Be Able To":
+                newMethods(selection);
+
+                break;
+
+
+
+            case "Relative Clauses":
+                newMethods(selection);
+
                 break;
 
         }
@@ -26373,11 +21040,111 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-        palabraclave.setVisibility(View.INVISIBLE);
-        verboEs.setVisibility(View.INVISIBLE);
+        palabraclave.setVisibility(View.GONE);
+        verboEs.setVisibility(View.GONE);
+        Generator gen1 = new Generator();
         switch (selection) {
-            case "Tutorial":
-                Toast.makeText(this, "elige una estructura, estas en tutorial", Toast.LENGTH_SHORT).show();
+            case "Present Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Present Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Continuous Passive":
+                newMethods(selection);
+                break;
+
+            case "Past Perfect Passive":
+                newMethods(selection);
+                break;
+
+            case "Future Simple Passive":
+                newMethods(selection);
+                break;
+
+            case "Would Simple Passive":
+                newMethods(selection);
+                break;
+            case "Have To":
+                newMethods(selection);
+                break;
+
+            case "Going To":
+                newMethods(selection);
+                break;
+
+            case "Going To Past":
+                newMethods(selection);
+                break;
+
+            case "Feel like":
+                newMethods(selection);
+                break;
+
+            case "Supposed To":
+                newMethods(selection);
+                break;
+
+
+
+            case "Get Structures":
+                newMethods(selection);
+                break;
+
+           case "P-V-PP":
+                newMethods(selection);
+                break;
+
+            case "Reflexive Structure":
+                newMethods(selection);
+                break;
+
+            case "Causative Have":
+                newMethods(selection);
+                break;
+
+            case "Verbos Juntos":
+                newMethods(selection);
+                break;
+
+            case "Noun Adjectives":
+                newMethods(selection);
+                break;
+
+            case "Comparativos":
+                newMethods(selection);
+                break;
+
+            case "Question Structures":
+                newMethods(selection);
+                break;
+
+            case "Just Phrasal Verbs":
+                newMethods(selection);
+
+                break;
+
+
+            case "Be Able To":
+                newMethods(selection);
+
+                break;
+
+
+
+            case "Relative Clauses":
+                newMethods(selection);
+
                 break;
             case "Present Simple":
                 switch (selection2) {
@@ -26404,7 +21171,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26547,7 +21314,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26694,7 +21461,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -26853,7 +21620,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPresPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27013,7 +21780,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27164,7 +21931,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27318,7 +22085,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27471,7 +22238,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenPastPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27623,7 +22390,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27774,7 +22541,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -27928,7 +22695,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28081,7 +22848,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenFutPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28233,7 +23000,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28384,7 +23151,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28538,7 +23305,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28691,7 +23458,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWouldPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28843,7 +23610,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -28994,7 +23761,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29148,7 +23915,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29301,7 +24068,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCouldPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29453,7 +24220,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29604,7 +24371,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29758,7 +24525,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -29911,7 +24678,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMightPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30063,7 +24830,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30214,7 +24981,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30368,7 +25135,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30521,7 +25288,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenShouldPerfCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30673,7 +25440,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30824,7 +25591,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenCanCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -30979,7 +25746,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustSimp4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31130,7 +25897,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenMustCont4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31286,7 +26053,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWantYouTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31412,7 +26179,7 @@ public class Estructura2023 extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "For To":
+            case "For Object To":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -31438,7 +26205,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenForTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31592,7 +26359,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedToPresente4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31711,7 +26478,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenSupposedTopasado4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31806,7 +26573,7 @@ public class Estructura2023 extends AppCompatActivity {
                 }
                 break;
 
-            case "Wish Past Simple":
+            case "Wish Past":
                 switch (selection2) {
                     case "0 a 100":
                         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -31832,7 +26599,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastSimple4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -31953,7 +26720,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishPastPerf4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32073,7 +26840,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenWishWould4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32194,7 +26961,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenUsedTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32316,7 +27083,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenBeUsedTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32438,7 +27205,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenReportedSpeech1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32495,7 +27262,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenIncrementoParalelo();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32552,7 +27319,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenVerbalAdjectives();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32609,7 +27376,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenRelativeClauses1();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32666,7 +27433,7 @@ public class Estructura2023 extends AppCompatActivity {
                                         public void onError(String s) {
                                         }
                                     });
-                                    Generator gen1 = new Generator();
+
                                     gen1.GenAbleTo4();
                                     sptx.setText(gen1.gens);
                                     txteng.setText(gen1.gene);
@@ -32802,6 +27569,7 @@ public class Estructura2023 extends AppCompatActivity {
 
         }
     }
+
     //CHECAR QUE BTN FUE SELECCIONADO
     public void checarischeck(){
         if(!selection.equals("Tutorial")){
@@ -32862,7 +27630,7 @@ public class Estructura2023 extends AppCompatActivity {
             spanish_lay.setVisibility(View.VISIBLE);
 
             input_lay.setVisibility(View.VISIBLE);
-            btn_lay.setVisibility(View.VISIBLE);
+
             btn_cont_lay.setVisibility(View.GONE);
 
         }
@@ -32878,17 +27646,14 @@ public class Estructura2023 extends AppCompatActivity {
             btndif3.setText("mas difícil todavía");
             btndif4.setText("la mas difícil");
         }
-
-
         btndif1.setText("oración facil");
         btndif2.setText(" mas difícil");
-
         String t = txteng.getText().toString().trim().toLowerCase();
         String te2 = txteng2.getText().toString().trim().toLowerCase(); // esta la usariamos para la segunda opcion
         String t2 = answerinp.getText().toString().trim().toLowerCase();
 
         //RESPUESTA CORRECTA
-        if (t.equalsIgnoreCase(t2) || te2.equalsIgnoreCase(t2))
+        if (isAnswerCorrect(t2, t, engAnswer2, engAnswer3, engAnswer4, engAnswer5))
         {
             //ICONOS
             Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
@@ -32936,7 +27701,7 @@ public class Estructura2023 extends AppCompatActivity {
                         ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
                         condicionparapasar++;
                         if(personalizedPlan ){
-                            if(condicionparapasar>5){
+                            if(condicionparapasar>12){
                                 SubtractSelectionAndSendinfoToDb();
                                 condicionparapasar=0;
 
@@ -32950,6 +27715,7 @@ public class Estructura2023 extends AppCompatActivity {
                     }
                 }
             });
+
 
 
 
@@ -32981,10 +27747,30 @@ public class Estructura2023 extends AppCompatActivity {
              }
              counter++;
              sum = one+two+three+four+five;
-            if(counter == 5){
+            if(counter == 3){
+
                  turnTrue(selection,sum);
                  counter=0;
-                // dialogueContainer("Felicidades ! has avanzado 1.3% del curso","ver mi progreso","quedarme",getApplicationContext());
+                 if(prefs.getPremium()==0){
+                     Toast.makeText(this,"enttra",Toast.LENGTH_SHORT).show();
+
+                     showDialogueWithAd();
+                 }else if(prefs.getPremium()==1&&isFromLessonPlan){
+                     classSelector(selection);
+                     if(placeHolder[0].equals("Por Sujeto")){
+                         Intent intent = new Intent(this, SpaInt2023.class);
+                         intent.putExtra("typeFromLessonPlan",true);
+                         intent.putExtra("class",placeHolder);
+                         startActivity(intent);
+                     }else {
+                         Intent intent = new Intent(this, Estructura2023.class);
+                         intent.putExtra("typeFromLessonPlan",true);
+                         intent.putExtra("class",placeHolder);
+                         startActivity(intent);
+
+                     }
+                 }
+
 
              }
 
@@ -33061,6 +27847,14 @@ public class Estructura2023 extends AppCompatActivity {
 
         }
     }
+
+    private void showDialogueWithAd() {
+        if(prefs.getPremium()==0){
+            dialogueContainer("Ver anuncio para desbloquear clase","ver anuncio","premium",getApplicationContext());
+
+        }
+    }
+
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
         ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
@@ -33084,6 +27878,8 @@ public class Estructura2023 extends AppCompatActivity {
     }
     public void speakdecir(View vista){
         iniciarentradavoz();
+        answerinp.setVisibility(View.VISIBLE);
+        btn_lay.setVisibility(View.VISIBLE);
     }
     public void limpans(){
         //RESETEA EL INPUT
@@ -33100,2157 +27896,7 @@ public class Estructura2023 extends AppCompatActivity {
     }
     //ESTRUCTURAS QUE DEBEN IR EN GENERADOR
     //RANDOM GEN
-    public void GenQuestionStructure1(){
-        int tranRand = (int) (Math.random() * 15);
-        switch (tranRand){
-            case 0:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
 
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 1:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 2:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 3:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 4:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 5:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 6:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 7:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 8:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWherePerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 9:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhySimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 10:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 11:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 12:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 13:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 14:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-        }
-    }
-    public void GenQuestionStructureModals1(){
-        int tranRand = (int) (Math.random() * 15);
-        switch (tranRand){
-            case 0:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 1:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 2:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 3:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 4:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 5:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 6:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 7:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 8:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 9:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 10:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 11:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 12:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsSimp1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 13:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsCont1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 14:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsPerf1();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-        }
-    }
-    //RANDOM GEN 2
-    public void GenQuestionStructure2(){
-        int tranRand = (int) (Math.random() * 15);
-        switch (tranRand){
-            case 0:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 1:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 2:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 3:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 4:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 5:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 6:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 7:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 8:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWherePerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 9:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhySimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 10:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 11:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 12:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 13:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-            case 14:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-
-                    }
-                });
-                break;
-        }
-    }
-    public void GenQuestionStructureModals2(){
-        int tranRand = (int) (Math.random() * 15);
-        switch (tranRand){
-            case 0:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 1:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 2:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhatModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 3:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 4:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 5:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhenModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 6:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 7:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 8:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhereModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 9:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 10:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 11:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenWhyModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 12:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsSimp2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 13:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsCont2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                            tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-            case 14:
-                tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        Locale spanish = new Locale("es", "MX");
-                        if (i == TextToSpeech.SUCCESS) {
-                            int lang = tt1.setLanguage(spanish);
-                            tt1.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-                                    if(timerTask == null){
-                                                startTimer();
-                                            }
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            Generator gen1 = new Generator();
-                            gen1.GenHowModalsPerf2();
-                            sptx.setText(gen1.gens);
-                            txteng.setText(gen1.gene);
-
-                            answerinp.setText("");
-                             
-                                         tt1.speak("como dirías..." + sptx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                        }
-                    }
-                });
-                break;
-        }
-    }
     private void startTimer() {
         timerTask = new TimerTask()
         {
@@ -35534,193 +28180,15 @@ public class Estructura2023 extends AppCompatActivity {
                             break;
 
                             //whats
-                        case "What Simple":
-                            if (!mso.WhatSimple) {
-                                updateinfo("WhatSimple");
 
-                            }
-                            break;
-                        case "What Continuous":
-                            if (!mso.WhatContinuous) {
-                                updateinfo("WhatContinuous");
-
-                            }
-                            break;
-                        case "What Perfect":
-                            if (!mso.WhatPerfect) {
-                                updateinfo("WhatPerfect");
-
-                            }
-                            break;
-                        case "What Modals Simple":
-                            if (!mso.WhatModalsSimple) {
-                                updateinfo("WhatModalsSimple");
-                            }
-                            break;
-                        case "What Modals Continuous":
-                            if (!mso.WhatModalsContinuous) {
-                                updateinfo("WhatModalsContinuous");
-
-                            }
-                            break;
-                        case "What Modals Perfect":
-                            if (!mso.WhatModalsPerfect) {
-                                updateinfo("WhatModalsPerfect");
-                            }
-                            break;
-                            // whens
-                        case "When Simple":
-                            if (!mso.WhenSimple) {
-                                updateinfo("WhenSimple");
-
-                            }
-                            break;
-                        case "When Continuous":
-                            if (!mso.WhenContinuous) {
-                                updateinfo("WhenContinuous");
-
-                            }
-                            break;
-                        case "When Perfect":
-                            if (!mso.WhenPerfect) {
-                                updateinfo("WhenPerfect");
-
-                            }
-                            break;
-                        case "When Modals Simple":
-                            if (!mso.WhenModalsSimple) {
-                                updateinfo("WhenModalsSimple");
-                            }
-                            break;
-                        case "When Modals Continuous":
-                            if (!mso.WhenModalsContinuous) {
-                                updateinfo("WhenModalsContinuous");
-
-                            }
-                            break;
-                        case "When Modals Perfect":
-                            if (!mso.WhenModalsPerfect) {
-                                updateinfo("WhenModalsPerfect");
-                            }
-                            break;
-                            // where
-                        case "Where Simple":
-                            if (!mso.WhenSimple) {
-                                updateinfo("WhenSimple");
-
-                            }
-                            break;
-                        case "Where Continuous":
-                            if (!mso.WhenContinuous) {
-                                updateinfo("WhenContinuous");
-
-                            }
-                            break;
-                        case "Where Perfect":
-                            if (!mso.WhenPerfect) {
-                                updateinfo("WhenPerfect");
-
-                            }
-                            break;
-                        case "Where Modals Simple":
-                            if (!mso.WhenModalsSimple) {
-                                updateinfo("WhenModalsSimple");
-                            }
-                            break;
-                        case "Where Modals Continuous":
-                            if (!mso.WhenModalsContinuous) {
-                                updateinfo("WhenModalsContinuous");
-
-                            }
-                            break;
-                        case "Where Modals Perfect":
-                            if (!mso.WhenModalsPerfect) {
-                                updateinfo("WhenModalsPerfect");
-                            }
-                            break;
-                            //why
-                        case "Why Simple":
-                            if (!mso.WhySimple) {
-                                updateinfo("WhySimple");
-
-                            }
-                            break;
-                        case "Why Continuous":
-                            if (!mso.WhyContinuous) {
-                                updateinfo("WhyContinuous");
-
-                            }
-                            break;
-                        case "Why Perfect":
-                            if (!mso.WhyPerfect) {
-                                updateinfo("WhyPerfect");
-
-                            }
-                            break;
-                        case "Why Modals Simple":
-                            if (!mso.WhyModalsSimple) {
-                                updateinfo("WhyModalsSimple");
-                            }
-                            break;
-                        case "Why Modals Continuous":
-                            if (!mso.WhyModalsContinuous) {
-                                updateinfo("WhyModalsContinuous");
-
-                            }
-                            break;
-                        case "Why Modals Perfect":
-                            if (!mso.WhyModalsPerfect) {
-                                updateinfo("WhyModalsPerfect");
-                            }
-                            break;
-                            //hows
-                        case "How Simple":
-                            if (!mso.HowSimple) {
-                                updateinfo("HowSimple");
-
-                            }
-                            break;
-                        case "How Continuous":
-                            if (!mso.HowContinuous) {
-                                updateinfo("HowContinuous");
-
-                            }
-                            break;
-                        case "How Perfect":
-                            if (!mso.HowPerfect) {
-                                updateinfo("HowPerfect");
-
-                            }
-                            break;
-                        case "How Modals Simple":
-                            if (!mso.HowModalsSimple) {
-                                updateinfo("HowModalsSimple");
-                            }
-                            break;
-                        case "How Modals Continuous":
-                            if (!mso.HowModalsContinuous) {
-                                updateinfo("HowModalsContinuous");
-
-                            }
-                            break;
-                        case "How Modals Perfect":
-                            if (!mso.HowModalsPerfect) {
-                                updateinfo("HowModalsPerfect");
-                            }
-                            break;
                             //questions
-                        case "Question Structure":
+                        case "Question Structures":
                             if (!mso.QuestionStructure) {
                                 updateinfo("QuestionStructure");
 
                             }
                             break;
-                        case "Question Structure Modals":
-                            if (!mso.QuestionStructureModals) {
-                                updateinfo("QuestionStructureModals");
-                            }
-                            break;
-                            // nonbasics
+
 
                         case "Able To":
                             if (!mso.AbleTo) {
@@ -35753,7 +28221,7 @@ public class Estructura2023 extends AppCompatActivity {
                                 updateinfo("WantTo");
                             }
                             break;
-                        case "For To":
+                        case "For Object To":
                             if (!mso.ForTo) {
                                 updateinfo("ForTo");
                             }
@@ -35783,11 +28251,6 @@ public class Estructura2023 extends AppCompatActivity {
 
                     }
 
-                 if(prefs.getPremium()==0){
-                     if(mso.PresenteSimple||mso.PresenteContinuo){
-                        dialogueContainer("Quires Mas estructuras? decenas extra por solo 50 pesos al mes","Más info","No Ahora",Estructura2023.this);
-                     }
-                 }
 
                 }
 
@@ -35837,8 +28300,8 @@ public class Estructura2023 extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                gotoURl("https://adrianlealcaldera.com/premiumpromo.mp4");
+                prefs.setHasSeenAd(true);
+                showRewardedAd();
 
 
             }
@@ -35857,18 +28320,336 @@ public class Estructura2023 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(contexto,Premium2023.class  );
+                startActivity(intento);
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
             }
         });
 
         dialog.show();
 
     }
-    private void gotoURl(String s) {
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+
+    private RewardedAd mRewardedAd;
+    String[] placeHolder = new String[]{"Default value"};
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-9126282069959189/7451229891", adRequest,
+                new RewardedAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(RewardedAd rewardedAd) {
+                        mRewardedAd = rewardedAd;
+                        Log.d("TAG", "Ad was loaded.");
+
+                        // Set FullScreenContentCallback
+                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                // Called when ad is shown.
+                                Log.d("TAG", "Ad was shown.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                // Called when ad fails to show.
+                                Log.d("TAG", "Ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                // Called when ad is dismissed.
+                                Log.d("TAG", "Ad was dismissed.");
+
+                                // Reload the ad
+                                mRewardedAd = null;
+                                loadRewardedAd();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle the error.
+                        Log.d("TAG", loadAdError.getMessage());
+                        mRewardedAd = null;
+                    }
+                });
+    }
+    // Call this method when the button is clicked.
+    public void showRewardedAd() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                if(isFromLessonPlan){
+                    // Handle the reward.
+                    classSelector(selection);
+                    if(placeHolder[0].equals("Por Sujeto")){
+                        Intent intent = new Intent(this, SpaInt2023.class);
+                        intent.putExtra("typeFromLessonPlan",true);
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+                    }else {
+                        Intent intent = new Intent(this, Estructura2023.class);
+                        intent.putExtra("typeFromLessonPlan",true);
+                        intent.putExtra("class",placeHolder);
+                        startActivity(intent);
+
+                    }
+
+
+                }else {
+
+                    prefs.setHasSeenAd(true);
+                    Intent intent = new Intent(this, Estructura2023.class);
+                    startActivity(intent);
+                }
+
+            });
+
+        } else {
+
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
+            prefs.setHasSeenAd(true);
+            Toast.makeText(this, "Quieres la versión sin interrupciones?", Toast.LENGTH_SHORT).show();
+
+            Intent intento = new Intent(Estructura2023.this,Premium2023.class);
+            startActivity(intento);
+        }
     }
 
+    private void classSelector(String selected) {
+        switch (selected) {
+            case "Present Simple":
+                placeHolder = new String[]{"Present Continuous"};
+                break;
+            case "Present Continuous":
+                placeHolder = new String[]{"Present Perfect"};
+                break;
+            case "Present Perfect":
+                placeHolder = new String[]{"Present Perfect Continuous"};
+                break;
+            case "Present Perfect Continuous":
+                placeHolder = new String[]{"Past Simple"};
+                break;
+            case "Past Simple":
+                placeHolder = new String[]{"Past Continuous"};
+                break;
+            case "Past Continuous":
+                placeHolder = new String[]{"Past Perfect"};
+                break;
+            case "Past Perfect":
+                placeHolder = new String[]{"Past Perfect Continuous"};
+                break;
+            case "Past Perfect Continuous":
+                placeHolder = new String[]{"Future Simple"};
+                break;
+            case "Future Simple":
+                placeHolder = new String[]{"Future Continuous"};
+                break;
+            case "Future Continuous":
+                placeHolder = new String[]{"Future Perfect"};
+                break;
+            case "Future Perfect":
+                placeHolder = new String[]{"Future Perfect Continuous"};
+                break;
+            case "Future Perfect Continuous":
+                placeHolder = new String[]{"Would Simple"};
+                break;
+            case "Would Simple":
+                placeHolder = new String[]{"Would Continuous"};
+                break;
+            case "Would Continuous":
+                placeHolder = new String[]{"Would Perfect"};
+                break;
+            case "Would Perfect":
+                placeHolder = new String[]{"Would Perfect Continuous"};
+                break;
+            case "Would Perfect Continuous":
+                placeHolder = new String[]{"Could Simple"};
+                break;
+            case "Could Simple":
+                placeHolder = new String[]{"Could Continuous"};
+                break;
+            case "Could Continuous":
+                placeHolder = new String[]{"Could Perfect"};
+                break;
+            case "Could Perfect":
+                placeHolder = new String[]{"Could Perfect Continuous"};
+                break;
+            case "Could Perfect Continuous":
+                placeHolder = new String[]{"Might Simple"};
+                break;
+            case "Might Simple":
+                placeHolder = new String[]{"Might Continuous"};
+                break;
+            case "Might Continuous":
+                placeHolder = new String[]{"Might Perfect"};
+                break;
+            case "Might Perfect":
+                placeHolder = new String[]{"Might Perfect Continuous"};
+                break;
+            case "Might Perfect Continuous":
+                placeHolder = new String[]{"Should Simple"};
+                break;
+            case "Should Simple":
+                placeHolder = new String[]{"Should Continuous"};
+                break;
+            case "Should Continuous":
+                placeHolder = new String[]{"Should Perfect"};
+                break;
+            case "Should Perfect":
+                placeHolder = new String[]{"Should Perfect Continuous"};
+                break;
+            case "Should Perfect Continuous":
+                placeHolder = new String[]{"Can Simple"};
+                break;
+            case "Can Simple":
+                placeHolder = new String[]{"Can Continuous"};
+                break;
+            case "Can Continuous":
+                placeHolder = new String[]{"Must Simple"};
+                break;
+            case "Must Simple":
+                placeHolder = new String[]{"Must Continuous"};
+                break;
+            case "Must Continuous":
+                placeHolder = new String[]{"Present Simple Passive"};
+                break;
+            case "Present Simple Passive":
+                placeHolder = new String[]{"Present Continuous Passive"};
+                break;
+            case "Present Continuous Passive":
+                placeHolder = new String[]{"Present Perfect Passive"};
+                break;
+            case "Present Perfect Passive":
+                placeHolder = new String[]{"Past Simple Passive"};
+                break;
+            case "Past Simple Passive":
+                placeHolder = new String[]{"Past Continuous Passive"};
+                break;
+            case "Past Continuous Passive":
+                placeHolder = new String[]{"Past Perfect Passive"};
+                break;
+            case "Past Perfect Passive":
+                placeHolder = new String[]{"Future Simple Passive"};
+                break;
+            case "Future Simple Passive":
+                placeHolder = new String[]{"Would Simple Passive"};
+                break;
+            case "Would Simple Passive":
+                placeHolder = new String[]{"For Object To"};
+                break;
+            case "For Object To":
+                placeHolder = new String[]{"Be Used To"};
+                break;
+            case "Be Used To":
+                placeHolder = new String[]{"Used To"};
+                break;
+            case "Used To":
+                placeHolder = new String[]{"There Be"};
+                break;
+            case "There Be":
+                placeHolder = new String[]{"Have To"};
+                break;
+            case "Have To":
+                placeHolder = new String[]{"Going To"};
+                break;
+            case "Going To":
+                placeHolder = new String[]{"Going To Past"};
+                break;
+            case "Going To Past":
+                placeHolder = new String[]{"Feel like"};
+                break;
+            case "Feel like":
+                placeHolder = new String[]{"Supposed To"};
+                break;
+            case "Supposed To":
+                placeHolder = new String[]{"Supposed To Past"};
+                break;
+            case "Supposed To Past":
+                placeHolder = new String[]{"Get Structures"};
+                break;
+            case "Get Structures":
+                placeHolder = new String[]{"P-V-PP"};
+                break;
+            case "P-V-PP":
+                placeHolder = new String[]{"Reflexive Structure"};
+                break;
+            case "Reflexive Structure":
+                placeHolder = new String[]{"Causative Have"};
+                break;
+            case "Causative Have":
+                placeHolder = new String[]{"Verbos Juntos"};
+                break;
+            case "Verbos Juntos":
+                placeHolder = new String[]{"Noun Adjectives"};
+                break;
+            case "Noun Adjectives":
+                placeHolder = new String[]{"Verbal Adjectives"};
+                break;
+            case "Verbal Adjectives":
+                placeHolder = new String[]{"Wish Past"};
+                break;
+            case "Wish Past":
+                placeHolder = new String[]{"Wish Would"};
+                break;
+            case "Wish Would":
+                placeHolder = new String[]{"Wish Past Perfect"};
+                break;
+            case "Wish Past Perfect":
+                placeHolder = new String[]{"Comparativos"};
+                break;
+            case "Comparativos":
+                placeHolder = new String[]{"Question Structures"};
+                break;
+            case "Question Structures":
+                placeHolder = new String[]{"Phrasal Verbs"};
+                break;
+            case "Phrasal Verbs":
+                placeHolder = new String[]{"Reported Speech"};
+                break;
+            case "Reported Speech":
+                placeHolder = new String[]{"Be Able To"};
+                break;
+            case "Be Able To":
+                placeHolder = new String[]{"Incremento Paralelo"};
+                break;
+            case "Incremento Paralelo":
+                placeHolder = new String[]{"Relative Clauses"};
+                break;
+            case "Relative Clauses":
+                placeHolder = new String[]{"Just Phrasal Verbs"};
+                break;
+            case "Just Phrasal Verbs":
+                placeHolder = new String[]{"Want To"};
+                break;
+            case "Want To":
+                placeHolder = new String[]{"Por Sujeto"}; // Final placeholder as an empty string
+                break;
+        }
+    }
 
+    private boolean isAnswerCorrect(String answer, String... possibleAnswers) {
+        for (String possibleAnswer : possibleAnswers) {
+            if (possibleAnswer != null && possibleAnswer.trim().equalsIgnoreCase(answer.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public void returnData() {
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("result_key", "Your Result");
+        setResult(Activity.RESULT_OK, returnIntent);
+        finish();
+    }
 }
