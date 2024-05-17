@@ -7,6 +7,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -31,6 +32,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.MediaItem;
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -55,12 +61,13 @@ import java.util.TimerTask;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-public class Vocabulary2023 extends AppCompatActivity {
+public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInteractionListener, PlayerProvider {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     LinearLayout vf;
     LinearLayout opclay;
     LinearLayout resplay;
+    MediaItem mediaItem;
 
     LinearLayout answer_lay, micro;
     LinearLayout spanish_lay;
@@ -117,10 +124,22 @@ public class Vocabulary2023 extends AppCompatActivity {
     double five,six,seven,eight,nine,ten;
     int score=0;
     NewMethods newMeth = new NewMethods();
+
+    private StyledPlayerView playerView;
+    private SimpleExoPlayer player;
+    private boolean playWhenReady = true;
+    private int currentWindow = 0;
+    private long playbackPosition = 0;
+    private boolean isFullScreen = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary2023);
+
+        // Instanciación correcta de SimpleExoPlayer
+        player = new SimpleExoPlayer.Builder(this).build();
+
         loadRewardedAd();
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
@@ -182,12 +201,15 @@ public class Vocabulary2023 extends AppCompatActivity {
         nine=0;
         ten=0;
 
+        Button btnFullScreen = findViewById(R.id.btn_full_screen);
+        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
+
 
         prefs = new Prefs(Vocabulary2023.this);
         condicionparapasar=0;
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView5, video_player)
+                .replace(R.id.video_player_view, video_player)
                 .commit();
 
         Bundle args = new Bundle();
@@ -198,14 +220,88 @@ public class Vocabulary2023 extends AppCompatActivity {
         escribirEnelInputTextResultadodeUtterance();
         PremiumControler();
 
-
-
-
-
     }
 
         boolean lessonPlan;
     //DB FUNC
+    // Método para cambiar el modo de pantalla completa
+    private void toggleFullScreen() {
+        if (!isFullScreen) {
+            // Entrar en modo pantalla completa
+            if (player != null) {
+                // Guardar la posición actual del video
+                playbackPosition = player.getCurrentPosition();
+                playWhenReady = player.getPlayWhenReady();
+
+            }
+
+            openFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            isFullScreen = true;
+        } else {
+            // Salir del modo pantalla completa
+            closeFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            isFullScreen = false;
+
+            if (player != null) {
+                // Restaurar el estado de reproducción del video
+                player.seekTo(playbackPosition);
+                player.setPlayWhenReady(playWhenReady);
+            }
+        }
+    }
+
+
+
+    // Método para abrir el diálogo de pantalla completa
+    private void openFullScreenDialog() {
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            video_player.player.stop();
+        }
+
+        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
+        // Pasar la posición y estado de reproducción al fragmento si es necesario
+        Bundle args = new Bundle();
+        args.putLong("position", playbackPosition);
+        args.putBoolean("playWhenReady", playWhenReady);
+        fullScreenFragment.setArguments(args);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, fullScreenFragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+
+    private void closeFullScreenDialog() {
+        getSupportFragmentManager().popBackStack();
+        // Restaura el estado del reproductor si es necesario
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            video_player.player.play();
+        }
+
+    }
+
+    @Override
+    public void onFragmentDismissed(long playbackPosition, boolean playWhenReady) {
+        player.play();
+    }
+
+    @Override
+    public Player getSharedPlayer() {
+        return player;
+    }
+
+
     private void PremiumControler() {
 
         // info que recive del plan de estudios chooser
@@ -1201,7 +1297,7 @@ if(isfromtest){
 
         }
          answerinputfinal= t2;
-                    
+
     }
     public void checkanswer() {
         //ICONOS
@@ -2187,6 +2283,58 @@ if(isfromtest){
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (player != null) {
+            player.setPlayWhenReady(playWhenReady);
+            player.seekTo(currentWindow, playbackPosition);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (player != null) {
+            playWhenReady = player.getPlayWhenReady();
+            playbackPosition = player.getCurrentPosition();
+            currentWindow = player.getCurrentWindowIndex();
+            player.release();
+            player = null;
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (player != null) {
+            outState.putBoolean("playWhenReady", player.getPlayWhenReady());
+            outState.putInt("currentWindow", player.getCurrentWindowIndex());
+            outState.putLong("playbackPosition", player.getCurrentPosition());
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            playWhenReady = savedInstanceState.getBoolean("playWhenReady");
+            currentWindow = savedInstanceState.getInt("currentWindow");
+            playbackPosition = savedInstanceState.getLong("playbackPosition");
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (player != null) {
+            playWhenReady = player.getPlayWhenReady();
+            playbackPosition = player.getCurrentPosition();
+            currentWindow = player.getCurrentWindowIndex();
+            player.release();
+            player = null;
+        }
+    }
 
     String[] placeHolder = new String[]{"Default value"};
 
@@ -2273,6 +2421,16 @@ if(isfromtest){
 
         } else {
             Log.d("TAG", "The rewarded ad wasn't ready yet.");
+        }
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (player != null) {
+            player.release(); // Asegúrate de liberar el player cuando la actividad es destruida
+            player = null;
         }
     }
 

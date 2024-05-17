@@ -1,0 +1,25 @@
+<!-- fragment_full_screen_video.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/video_player_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btn_exit_full_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="true"
+        android:rotation="90"
+        android:layout_marginTop="20dp"
+        android:text="[]" />
+
+</RelativeLayout>

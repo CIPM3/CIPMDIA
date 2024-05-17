@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,17 +68,41 @@ public class VideoPlayer extends Fragment {
         return view;
     }
 
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+//        super.onViewCreated(view, savedInstanceState);
+//        mAuth= FirebaseAuth.getInstance();
+//
+//        user= mAuth.getCurrentUser();
+//        playerView = view.findViewById(R.id.video_player);
+//        player = new ExoPlayer.Builder(requireContext()).build();
+//        playerView.setPlayer(player);
+//
+//
+//    }
+
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mAuth= FirebaseAuth.getInstance();
-
-        user= mAuth.getCurrentUser();
         playerView = view.findViewById(R.id.video_player);
-        player = new ExoPlayer.Builder(requireContext()).build();
+        if (player == null) {
+            player = new ExoPlayer.Builder(requireContext()).build();
+        }
         playerView.setPlayer(player);
+        if (savedInstanceState != null) {
+            long position = savedInstanceState.getLong("CURRENT_PLAYER_POSITION", 0);
+            player.seekTo(position);
+            player.setPlayWhenReady(savedInstanceState.getBoolean("PLAY_WHEN_READY", true));
+        }
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
 
-
+        // Safe-check before calling SelectUrl
+        if (selection != null) {
+            SelectUrl(); // Ensure that selection is not null before calling
+        } else {
+            Log.e("VideoPlayer", "Selection is null, cannot select URL");
+        }
     }
 
 
@@ -764,6 +789,8 @@ public class VideoPlayer extends Fragment {
         }
 
     }
+
+
     /*@Override
     public void onStart() {
         super.onStart();
@@ -810,6 +837,27 @@ public class VideoPlayer extends Fragment {
             player.release();
         }
     }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (player != null) {
+            outState.putLong("CURRENT_PLAYER_POSITION", player.getCurrentPosition());
+            outState.putBoolean("PLAY_WHEN_READY", player.getPlayWhenReady());
+        }
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null) {
+            long position = savedInstanceState.getLong("player_position", 0);
+            boolean playWhenReady = savedInstanceState.getBoolean("player_play_when_ready", false);
+            player.seekTo(position);
+            player.setPlayWhenReady(playWhenReady);
+        }
+    }
+
 
     public void updateFragmentStateConint2(boolean newexplanation1) {
         explanation = newexplanation1;
