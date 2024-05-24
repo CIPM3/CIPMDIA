@@ -1,6 +1,7 @@
 package com.leal.cipm_testing;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +14,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.exoplayer2.ExoPlayer;
@@ -43,19 +46,24 @@ public class VideoPlayer extends Fragment {
         // Required empty public constructor
     }
 
+    Prefs prefs;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
+
+        prefs = new Prefs(getContext());
+        selection = prefs.getSelection();
+
         if (args != null) {
-            selection = args.getString("tema");
+            selection = prefs.getSelection();
             video = args.getString("video");
             video1 = args.getString("videouno");
             video2 = args.getString("videodos");
             videoShow = args.getBoolean("videoShow");
             explanation = args.getBoolean("explicacion");
         }
-
     }
 
 
@@ -68,18 +76,6 @@ public class VideoPlayer extends Fragment {
         return view;
     }
 
-//    @Override
-//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
-//        super.onViewCreated(view, savedInstanceState);
-//        mAuth= FirebaseAuth.getInstance();
-//
-//        user= mAuth.getCurrentUser();
-//        playerView = view.findViewById(R.id.video_player);
-//        player = new ExoPlayer.Builder(requireContext()).build();
-//        playerView.setPlayer(player);
-//
-//
-//    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -96,7 +92,6 @@ public class VideoPlayer extends Fragment {
         }
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-
         // Safe-check before calling SelectUrl
         if (selection != null) {
             SelectUrl(); // Ensure that selection is not null before calling
@@ -106,11 +101,10 @@ public class VideoPlayer extends Fragment {
     }
 
 
-
-
     public void SelectUrl() {
         String currenttxt = SaberDondeEstoy();
        // Toast.makeText(getContext(), selection, Toast.LENGTH_SHORT).show();
+        Log.d("VIDEO PLAYER", String.valueOf(explanation));
         if (currenttxt.contains("Cultura2023")) {
             // Cambiar el video
             switch (selection){
@@ -768,14 +762,20 @@ public class VideoPlayer extends Fragment {
         }
     }
 
-    public String SaberDondeEstoy(){
-        String txtActivity = "";
-        String cadenaEliminar = "com.leal.cipm_testing.";
-        String txtActivitySinEliminar = getContext().toString();
-        txtActivity = txtActivitySinEliminar.replace(cadenaEliminar,"");
-
-        return txtActivity;
+    public String SaberDondeEstoy() {
+        Context context = getContext();
+        if (context == null) {
+            Log.e("VideoPlayer", "Contexto no disponible en SaberDondeEstoy()");
+            return "Contexto no disponible"; // Usar un valor por defecto o manejar esta situación específica
+        }
+        try {
+            return context.toString().replace("com.leal.cipm_testing.", "");
+        } catch (NullPointerException e) {
+            Log.e("VideoPlayer", "Error al obtener la cadena del contexto", e);
+            return "Error: Contexto nulo"; // Asegurarse de retornar algo que indique el error sin causar más excepciones
+        }
     }
+
     @Override
     public void onStop()  {
 

@@ -27,10 +27,45 @@ public class Prefs {
         editor.apply();
     }
 
+    public int getPremium() {
+        return sharedPreferences.getInt("Premium", 0);
+    }
+
     public void setPremium(int value) {
         editor.putInt("Premium", value);
         editor.apply();
     }
+
+    public String getSelection() { return sharedPreferences.getString("tema","");}
+
+    public void setSelection(String value){
+        editor.putString("tema",value);
+        editor.apply();
+    }
+
+    public String getVideoCultura() { return sharedPreferences.getString("video","");}
+
+    public void setVideoCultura(String value){
+        editor.putString("video",value);
+        editor.apply();
+    }
+
+    public Boolean getExplanation() { return sharedPreferences.getBoolean("explicacion",false);}
+
+    public void setExplanation(boolean value){
+        editor.putBoolean("explicacion",value);
+        editor.apply();
+    }
+
+    public void setLong(String key, long value) {
+        editor.putLong(key, value);
+        editor.apply();
+    }
+
+    public long getLong(String key, long defValue) {
+        return sharedPreferences.getLong(key, defValue);
+    }
+
 
     public void setTypeOfRecycler(int value){
 
@@ -62,9 +97,7 @@ public class Prefs {
         return sharedPreferences.getString(key, def);
     }
 
-    public int getPremium() {
-        return sharedPreferences.getInt("Premium", 0);
-    }
+
     public void setHasSeenAd(boolean value) {
         editor.putBoolean("hasSeenAd", value);
         editor.apply();
@@ -73,6 +106,7 @@ public class Prefs {
     public boolean getHasSeenAd() {
         return sharedPreferences.getBoolean("hasSeenAd", false); // Default to false if not set
     }
+
 
 
 }

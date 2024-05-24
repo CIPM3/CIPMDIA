@@ -8,6 +8,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
@@ -34,6 +35,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -60,7 +64,7 @@ import java.util.TimerTask;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
-public class Estructura2023 extends AppCompatActivity {
+public class Estructura2023 extends AppCompatActivity implements OnFragmentInteractionListener, PlayerProvider {
     private ActivityResultLauncher<Intent> speechRecognitionLauncher;
 
     Spinner spin;
@@ -139,10 +143,20 @@ public class Estructura2023 extends AppCompatActivity {
     DocumentReference scoresStructureDBDocRef;
     Intent reciver;
     String engAnswer2,engAnswer3,engAnswer4,engAnswer5;
+
+    private StyledPlayerView playerView;
+    private SimpleExoPlayer player;
+    private boolean playWhenReady = true;
+    private int currentWindow = 0;
+    private long playbackPosition = 0;
+    private boolean isFullScreen = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estructura2023);
+
+        // Instanciación correcta de SimpleExoPlayer
+        player = new SimpleExoPlayer.Builder(this).build();
             loadRewardedAd();
 
             engAnswer2="no answer";
@@ -237,10 +251,12 @@ public class Estructura2023 extends AppCompatActivity {
         docrefStructures = db.collection(userid).document( "CustomArrayLists");
         uid= db.collection(userid);
 
+        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
+        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView5, video_player)
+                .replace(R.id.video_player_view, video_player)
                 .commit();
         Bundle args = new Bundle();
         args.putString("tema", selection);
@@ -295,6 +311,7 @@ public class Estructura2023 extends AppCompatActivity {
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    prefs.setSelection(spin.getSelectedItem().toString());
                                     spinnerSelected1();
                                 }
 
@@ -343,6 +360,7 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            prefs.setSelection(spin.getSelectedItem().toString());
                            spinnerSelected1();
 
 
@@ -387,6 +405,7 @@ public class Estructura2023 extends AppCompatActivity {
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            prefs.setSelection(spin.getSelectedItem().toString());
                             spinnerSelected1();
 
 
@@ -492,6 +511,143 @@ public class Estructura2023 extends AppCompatActivity {
     //EMPIEZA ESTRUCTURA
 
     //EVALUA SI EL USUARIO ES PREMIUM O NO
+    private void toggleFullScreen() {
+        if (!isFullScreen) {
+            if (player != null) {
+                // Guardar la posición actual del video
+                playbackPosition = player.getCurrentPosition();
+                playWhenReady = player.getPlayWhenReady();
+
+                // Guardar la posición de reproducción en Prefs
+                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
+                prefs.setLong("playbackPosition", playbackPosition);
+                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
+            }
+
+            video_player.player.stop();
+
+            openFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            isFullScreen = true;
+        } else {
+            // Salir del modo pantalla completa
+            closeFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            isFullScreen = false;
+
+            if (player != null) {
+                // Restaurar el estado de reproducción del video
+                player.seekTo(playbackPosition);
+                player.setPlayWhenReady(playWhenReady);
+            }
+        }
+    }
+
+    // Método para abrir el diálogo de pantalla completa
+    private void openFullScreenDialog() {
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            player.stop();
+        }
+
+        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
+        // Pasar la posición y estado de reproducción al fragmento si es necesario
+        Bundle args = new Bundle();
+        args.putLong("position", playbackPosition);
+        args.putBoolean("playWhenReady", playWhenReady);
+        fullScreenFragment.setArguments(args);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, fullScreenFragment)
+                .addToBackStack(null)
+                .commit();
+
+    }
+    private void closeFullScreenDialog() {
+        getSupportFragmentManager().popBackStack();
+        // Restaura el estado del reproductor si es necesario
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            //player.play();
+            video_player.player.play();
+        }
+
+    }
+    @Override
+    public void onFragmentDismissed(long playbackPosition, boolean playWhenReady) {
+        player.play();
+    }
+    @Override
+    public Player getSharedPlayer() {
+        return player;
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (player != null) {
+            player.setPlayWhenReady(playWhenReady);
+            player.seekTo(currentWindow, playbackPosition);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (player != null) {
+            playWhenReady = player.getPlayWhenReady();
+            playbackPosition = player.getCurrentPosition();
+            currentWindow = player.getCurrentWindowIndex();
+            player.release();
+            player = null;
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (player != null) {
+            outState.putBoolean("playWhenReady", player.getPlayWhenReady());
+            outState.putInt("currentWindow", player.getCurrentWindowIndex());
+            outState.putLong("playbackPosition", player.getCurrentPosition());
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            playWhenReady = savedInstanceState.getBoolean("playWhenReady");
+            currentWindow = savedInstanceState.getInt("currentWindow");
+            playbackPosition = savedInstanceState.getLong("playbackPosition");
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (player != null) {
+            playWhenReady = player.getPlayWhenReady();
+            playbackPosition = player.getCurrentPosition();
+            currentWindow = player.getCurrentWindowIndex();
+            player.release();
+            player = null;
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (player != null) {
+            player.release(); // Asegúrate de liberar el player cuando la actividad es destruida
+            player = null;
+        }
+    }
+
+
     public void checkPremiun(){
         prefs.setHasSeenAd(true);
         reciver= getIntent();
@@ -511,6 +667,7 @@ public class Estructura2023 extends AppCompatActivity {
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        prefs.setSelection(spin.getSelectedItem().toString());
                         spinnerSelected1();
                     }
 
@@ -546,6 +703,7 @@ public class Estructura2023 extends AppCompatActivity {
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        prefs.setSelection(spin.getSelectedItem().toString());
                         spinnerSelected1();
                     }
 
@@ -591,6 +749,7 @@ public class Estructura2023 extends AppCompatActivity {
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        prefs.setSelection(spin.getSelectedItem().toString());
                         spinnerSelected1();
                     }
 
@@ -626,6 +785,7 @@ public class Estructura2023 extends AppCompatActivity {
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        prefs.setSelection(spin.getSelectedItem().toString());
                         spinnerSelected1();
                     }
 
@@ -662,9 +822,9 @@ public class Estructura2023 extends AppCompatActivity {
 
         selection = spin.getSelectedItem().toString();
         txt1.setText(selection);
-        if(video_player  != null ){
-            video_player.updateFragmentStateStructure(selection);
-        }
+        prefs.setSelection(selection); // Guarda la selección en Prefs
+
+
         if(!selection.equals("Tutorial")){
             flashingAnimation.start();
             btndif1.setText("Empezar a Practicar");

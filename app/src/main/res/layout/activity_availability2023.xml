@@ -58,24 +58,37 @@
         </LinearLayout>
 
         <!--Video View-->
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/content_vertical_video"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="30dp"
-            >
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView5"
-                android:name="com.leal.cipm_testing.VideoPlayer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_video_player"
-                android:layout_weight="1"
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/video_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 />
-        </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/btn_full_screen"
+                android:layout_margin="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="true"
+                android:rotation="90"
+                android:background="@drawable/verticalvideo"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:backgroundTint="@color/white"
+                />
+        </RelativeLayout>
 
         <!--Spinner-->
         <LinearLayout

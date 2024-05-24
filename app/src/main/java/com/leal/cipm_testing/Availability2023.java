@@ -429,6 +429,7 @@ public class Availability2023 extends AppCompatActivity {
         }else {
             selection = spin.getSelectedItem().toString();
             textspin1.setText(selection);
+            prefs.setSelection(selection);
 
             selectPraggerText();
             video_player.updateFragmentStateStructure(selection);

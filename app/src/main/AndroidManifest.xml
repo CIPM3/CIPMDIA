@@ -65,6 +65,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Estructura2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -77,6 +78,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Cultura2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -102,6 +104,7 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".SpaInt2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

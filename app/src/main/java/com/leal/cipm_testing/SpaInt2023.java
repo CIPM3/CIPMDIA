@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -23,11 +24,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -147,6 +151,13 @@ public class SpaInt2023 extends AppCompatActivity {
     double secondsWithDecimal;
     int counterDB;
     Intent reciver;
+
+    private StyledPlayerView playerView;
+    private SimpleExoPlayer player;
+    private boolean playWhenReady = true;
+    private int currentWindow = 0;
+    private long playbackPosition = 0;
+    private boolean isFullScreen = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -213,10 +224,15 @@ public class SpaInt2023 extends AppCompatActivity {
         five=0;
         counterDB=0;
         loadRewardedAd();
+
+        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
+        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
+
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView6, video_player)
+                .replace(R.id.video_player_view, video_player)
                 .commit();
+
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
@@ -225,6 +241,70 @@ public class SpaInt2023 extends AppCompatActivity {
         PremiumAndArrayControler();
 
 
+
+    }
+
+    private void toggleFullScreen() {
+        if (!isFullScreen) {
+            if (player != null) {
+                // Guardar la posición actual del video
+                playbackPosition = player.getCurrentPosition();
+                playWhenReady = player.getPlayWhenReady();
+
+                // Guardar la posición de reproducción en Prefs
+                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
+                prefs.setLong("playbackPosition", playbackPosition);
+                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
+            }
+
+            openFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            isFullScreen = true;
+        } else {
+            // Salir del modo pantalla completa
+            closeFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            isFullScreen = false;
+
+            if (player != null) {
+                // Restaurar el estado de reproducción del video
+                player.seekTo(playbackPosition);
+                player.setPlayWhenReady(playWhenReady);
+            }
+        }
+    }
+    private void openFullScreenDialog() {
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            video_player.player.stop();
+        }
+        video_player.player.stop();
+
+        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
+        // Pasar la posición y estado de reproducción al fragmento si es necesario
+        Bundle args = new Bundle();
+        args.putLong("position", playbackPosition);
+        args.putBoolean("playWhenReady", playWhenReady);
+        fullScreenFragment.setArguments(args);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, fullScreenFragment)
+                .addToBackStack(null)
+                .commit();
+    }
+    private void closeFullScreenDialog() {
+        getSupportFragmentManager().popBackStack();
+        // Restaura el estado del reproductor si es necesario
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            video_player.player.play();
+        }
 
     }
 
@@ -692,11 +772,10 @@ public class SpaInt2023 extends AppCompatActivity {
         tdrnumero.setVisibility(View.GONE);
 
         answer_pos.setVisibility(View.GONE);
+        prefs.setSelection(selection); // Guarda la selección en Prefs
 
-
-        if(video_player != null) {
+        if (video_player != null) {
             video_player.updateFragmentStateStructure(selection);
-
         }
 
         if(selection.equals("Tutorial")){

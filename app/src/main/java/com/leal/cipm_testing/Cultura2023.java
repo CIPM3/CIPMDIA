@@ -108,6 +108,9 @@ public class Cultura2023 extends AppCompatActivity{
         explanation = false;
         clipMuestra = true;
 
+        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
+        btnFullScreen.setOnClickListener(view -> {});
+
         prefs = new Prefs(this);
         CounterToSubtractSelection=1;
         userid = mAuth.getCurrentUser().getUid();
@@ -116,7 +119,7 @@ public class Cultura2023 extends AppCompatActivity{
         loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView5,fragment)
+                .replace(R.id.video_player_view,fragment)
                 .commit();
 
         Bundle args = new Bundle();
@@ -498,6 +501,7 @@ public class Cultura2023 extends AppCompatActivity{
 
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
+        prefs.setSelection(selection);
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura para continuar con la practica");
             ocultartodo();
@@ -582,11 +586,11 @@ public class Cultura2023 extends AppCompatActivity{
         }
 
 
-        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
-
-        if (fragment != null) {
-            fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
-        }
+//        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
+//
+//        if (fragment != null) {
+//            fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
+//        }
 
 
     }
@@ -666,7 +670,7 @@ public class Cultura2023 extends AppCompatActivity{
     public void saltarExp(Boolean explanation){
 
 
-        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
+        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.video_player_view); // Use the actual container ID
         if (fragment != null) {
             fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
         }

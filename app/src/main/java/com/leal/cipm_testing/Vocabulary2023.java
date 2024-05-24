@@ -201,7 +201,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         nine=0;
         ten=0;
 
-        Button btnFullScreen = findViewById(R.id.btn_full_screen);
+        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
         btnFullScreen.setOnClickListener(view -> toggleFullScreen());
 
 
@@ -227,12 +227,15 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     // Método para cambiar el modo de pantalla completa
     private void toggleFullScreen() {
         if (!isFullScreen) {
-            // Entrar en modo pantalla completa
             if (player != null) {
                 // Guardar la posición actual del video
                 playbackPosition = player.getCurrentPosition();
                 playWhenReady = player.getPlayWhenReady();
 
+                // Guardar la posición de reproducción en Prefs
+                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
+                prefs.setLong("playbackPosition", playbackPosition);
+                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
             }
 
             openFullScreenDialog();
@@ -251,10 +254,6 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
             }
         }
     }
-
-
-
-    // Método para abrir el diálogo de pantalla completa
     private void openFullScreenDialog() {
         if (player != null) {
             playbackPosition = player.getCurrentPosition();
@@ -263,6 +262,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
             // Pausar el video antes de abrir la pantalla completa
             video_player.player.stop();
         }
+        video_player.player.stop();
 
         FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
         // Pasar la posición y estado de reproducción al fragmento si es necesario
@@ -276,8 +276,6 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
                 .addToBackStack(null)
                 .commit();
     }
-
-
     private void closeFullScreenDialog() {
         getSupportFragmentManager().popBackStack();
         // Restaura el estado del reproductor si es necesario
@@ -544,19 +542,21 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     }
 
     //EVALUA QUE FUE SELECCIONADO
-    public void spinnerSelected1(){
+    public void spinnerSelected1() {
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
-        if(video_player != null) {
-            video_player.updateFragmentStateStructure(selection);
+        prefs.setSelection(selection); // Guarda la selección en Prefs
 
+        if (video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
         }
-        if(selection.equals("Tutorial")){
+
+        if (selection.equals("Tutorial")) {
             spa_sent.setText("Seleccione una estructura y rango para continuar con la practica");
             btn_emp_lay.setVisibility(View.GONE);
             txt_exp.setVisibility(View.VISIBLE);
             ocultartodo();
-        }else {
+        } else {
             btn_emp_lay.setVisibility(View.VISIBLE);
             videoPlayer();
         }
@@ -564,6 +564,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     public void spinnerSelected1(String selectionp){
         selection = selectionp;
         textspin1.setText(selection);
+        prefs.setSelection(selection);
         if(video_player != null) {
             video_player.updateFragmentStateStructure(selection);
 
