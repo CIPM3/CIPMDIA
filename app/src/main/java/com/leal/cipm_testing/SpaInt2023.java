@@ -18,6 +18,8 @@ import android.speech.tts.UtteranceProgressListener;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -158,6 +160,9 @@ public class SpaInt2023 extends AppCompatActivity {
     private int currentWindow = 0;
     private long playbackPosition = 0;
     private boolean isFullScreen = false;
+
+    private boolean hasOrientationChanged = false;
+    private OrientationEventListener orientationEventListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -224,6 +229,39 @@ public class SpaInt2023 extends AppCompatActivity {
         five=0;
         counterDB=0;
         loadRewardedAd();
+
+        orientationEventListener = new OrientationEventListener(this) {
+            @Override
+            public void onOrientationChanged(int orientation) {
+                if (orientation == ORIENTATION_UNKNOWN) {
+                    return;
+                }
+
+                // Determina la orientación
+                int rotation = getWindowManager().getDefaultDisplay().getRotation();
+
+                if((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270)){
+                    toggleFullScreen();
+                }
+
+                if ((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)) {
+                    // Modo Portrait
+                    if(hasOrientationChanged){
+                        toggleFullScreen();
+                    }else{
+                        hasOrientationChanged = true;
+                    }
+                }
+            }
+        };
+
+        // Habilita OrientationEventListener
+        if (orientationEventListener.canDetectOrientation()) {
+            orientationEventListener.enable();
+
+        } else {
+            orientationEventListener.disable();
+        }
 
         LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
         btnFullScreen.setOnClickListener(view -> toggleFullScreen());

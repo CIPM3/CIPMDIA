@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -24,6 +25,8 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,6 +36,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -92,6 +97,15 @@ public class Availability2023 extends AppCompatActivity {
     CollectionReference uid;
     int counterDb;
     Intent reciver;
+
+    private StyledPlayerView playerView;
+    private SimpleExoPlayer player;
+    private boolean playWhenReady = true;
+    private int currentWindow = 0;
+    private long playbackPosition = 0;
+    private boolean isFullScreen = false;
+    private boolean hasOrientationChanged = false;
+    private OrientationEventListener orientationEventListener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_availability2023);
@@ -117,16 +131,121 @@ public class Availability2023 extends AppCompatActivity {
          reciver = getIntent();
          isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
          loadRewardedAd();
+
+        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
+        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
+
+        orientationEventListener = new OrientationEventListener(this) {
+            @Override
+            public void onOrientationChanged(int orientation) {
+                if (orientation == ORIENTATION_UNKNOWN) {
+                    return;
+                }
+
+                // Determina la orientación
+                int rotation = getWindowManager().getDefaultDisplay().getRotation();
+
+                if((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270)){
+                    toggleFullScreen();
+                }
+
+                if ((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)) {
+                    // Modo Portrait
+                    if(hasOrientationChanged){
+                        toggleFullScreen();
+                    }else{
+                        hasOrientationChanged = true;
+                    }
+                }
+            }
+        };
+
+        // Habilita OrientationEventListener
+        if (orientationEventListener.canDetectOrientation()) {
+            orientationEventListener.enable();
+
+        } else {
+            orientationEventListener.disable();
+        }
+
         setUpVideoFragmentStart();
         uid= db.collection(userid);
         PremiumAndArrayControler();
         sendInfotoDb();
     }
 
+    private void toggleFullScreen() {
+        if (!isFullScreen) {
+            if (player != null) {
+                // Guardar la posición actual del video
+                playbackPosition = player.getCurrentPosition();
+                playWhenReady = player.getPlayWhenReady();
+
+                // Guardar la posición de reproducción en Prefs
+                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
+                prefs.setLong("playbackPosition", playbackPosition);
+                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
+            }
+
+            video_player.player.stop();
+
+            openFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            isFullScreen = true;
+        } else {
+            // Salir del modo pantalla completa
+            closeFullScreenDialog();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            isFullScreen = false;
+
+            if (player != null) {
+                // Restaurar el estado de reproducción del video
+                player.seekTo(playbackPosition);
+                player.setPlayWhenReady(playWhenReady);
+            }
+        }
+    }
+
+    // Método para abrir el diálogo de pantalla completa
+    private void openFullScreenDialog() {
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            player.stop();
+        }
+
+        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
+        // Pasar la posición y estado de reproducción al fragmento si es necesario
+        Bundle args = new Bundle();
+        args.putLong("position", playbackPosition);
+        args.putBoolean("playWhenReady", playWhenReady);
+        fullScreenFragment.setArguments(args);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, fullScreenFragment)
+                .addToBackStack(null)
+                .commit();
+
+    }
+    private void closeFullScreenDialog() {
+        getSupportFragmentManager().popBackStack();
+        // Restaura el estado del reproductor si es necesario
+        if (player != null) {
+            playbackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
+
+            // Pausar el video antes de abrir la pantalla completa
+            //player.play();
+            video_player.player.play();
+        }
+
+    }
+
     private void setUpVideoFragmentStart() {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView5, video_player)
+                .replace(R.id.video_player_view, video_player)
                 .commit();
         Bundle args = new Bundle();
         args.putString("tema", selection);
@@ -8901,7 +9020,7 @@ public class Availability2023 extends AppCompatActivity {
     public void availabilityTest(View v){
         pasarSigNivel.setVisibility(View.GONE);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment videoPlayerFragment = fragmentManager.findFragmentById(R.id.fragmentContainerView5);
+        Fragment videoPlayerFragment = fragmentManager.findFragmentById(R.id.video_player_view);
         if (videoPlayerFragment != null) {
             fragmentManager.beginTransaction()
                     .remove(videoPlayerFragment)

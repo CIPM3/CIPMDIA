@@ -75,7 +75,7 @@
                 />
 
             <LinearLayout
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/btn_full_screen"
                 android:layout_margin="10dp"
                 android:layout_width="15dp"

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -46,7 +48,6 @@ public class FullScreenVideoFragment extends Fragment {
             videoShow = args.getBoolean("videoShow");
             explanation = args.getBoolean("explicacion");
         }
-
 
     }
 
@@ -130,7 +131,7 @@ public class FullScreenVideoFragment extends Fragment {
     }
 
 
-    private void exitFullScreen() {
+    public void exitFullScreen() {
         if (getActivity() != null) {
             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             getActivity().getSupportFragmentManager().popBackStack();
@@ -679,6 +680,7 @@ public class FullScreenVideoFragment extends Fragment {
 //                    }else {
 //                        Url = "https://adrianlealcaldera.com/vocablowq.mp4";
 //                    }
+                    Url = "https://adrianlealcaldera.com/vocablowq.mp4";
 
                     break;
                 case "50 to 100":

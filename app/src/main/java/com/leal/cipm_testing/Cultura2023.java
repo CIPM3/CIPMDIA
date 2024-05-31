@@ -84,6 +84,7 @@ public class Cultura2023 extends AppCompatActivity{
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
             isInTransition,isinIntcon;
 
+    VideoPlayer video_player = new VideoPlayer();
     int posKeyword = 0,posSele = 0;
     boolean explanation,clipMuestra;
     VideoPlayer fragment = new VideoPlayer();
@@ -501,7 +502,11 @@ public class Cultura2023 extends AppCompatActivity{
 
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
-        prefs.setSelection(selection);
+        prefs.setSelection(selection); // Guarda la selección en Prefs
+
+        if (video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
+        }
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura para continuar con la practica");
             ocultartodo();

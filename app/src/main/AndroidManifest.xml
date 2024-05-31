@@ -66,14 +66,15 @@
         <activity
             android:name=".Estructura2023"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name=".Premium2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Availability2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -91,10 +92,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Transicion2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ConInt2023"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

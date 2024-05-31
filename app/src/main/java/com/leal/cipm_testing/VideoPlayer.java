@@ -53,11 +53,11 @@ public class VideoPlayer extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
 
-        prefs = new Prefs(getContext());
+        prefs = new Prefs(requireContext());
         selection = prefs.getSelection();
+        Log.d("VideoPlayer", "Initial selection: " + selection);
 
         if (args != null) {
-            selection = prefs.getSelection();
             video = args.getString("video");
             video1 = args.getString("videouno");
             video2 = args.getString("videodos");
@@ -80,6 +80,10 @@ public class VideoPlayer extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        prefs = new Prefs(getContext());
+
+        selection = prefs.getSelection();
         playerView = view.findViewById(R.id.video_player);
         if (player == null) {
             player = new ExoPlayer.Builder(requireContext()).build();
@@ -103,8 +107,9 @@ public class VideoPlayer extends Fragment {
 
     public void SelectUrl() {
         String currenttxt = SaberDondeEstoy();
-       // Toast.makeText(getContext(), selection, Toast.LENGTH_SHORT).show();
-        Log.d("VIDEO PLAYER", String.valueOf(explanation));
+        Log.d("video player", "SELECCION "+ selection);
+
+        //Log.d("VIDEO PLAYER", String.valueOf(explanation));
         if (currenttxt.contains("Cultura2023")) {
             // Cambiar el video
             switch (selection){
@@ -780,6 +785,7 @@ public class VideoPlayer extends Fragment {
     public void onStop()  {
 
         super.onStop();
+        prefs.setSelection("");
         if(player == null){
             return;
         }else {
@@ -833,6 +839,7 @@ public class VideoPlayer extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        prefs.setSelection("");
         if (player != null) {
             player.release();
         }

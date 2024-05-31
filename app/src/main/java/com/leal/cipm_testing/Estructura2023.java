@@ -24,6 +24,8 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -93,6 +95,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
     TextToSpeech tts;
     TextToSpeech ttr;
     TextToSpeech tt1;
+
     Prefs prefs;
     String algosele = "";
     ArrayAdapter<String> adapter;
@@ -150,10 +153,14 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
     private int currentWindow = 0;
     private long playbackPosition = 0;
     private boolean isFullScreen = false;
+    private boolean hasOrientationChanged = false;
+    private OrientationEventListener orientationEventListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estructura2023);
+        prefs = new Prefs(this);
 
         // Instanciación correcta de SimpleExoPlayer
         player = new SimpleExoPlayer.Builder(this).build();
@@ -263,6 +270,44 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
         video_player.setArguments(args);
 
 
+        prefs.setSelection(selection);
+
+        // Configura OrientationEventListener
+        orientationEventListener = new OrientationEventListener(this) {
+            @Override
+            public void onOrientationChanged(int orientation) {
+                if (orientation == ORIENTATION_UNKNOWN) {
+                    return;
+                }
+
+                // Determina la orientación
+                int rotation = getWindowManager().getDefaultDisplay().getRotation();
+
+                if((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270)){
+                    toggleFullScreen();
+                }
+
+                if ((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)) {
+                    // Modo Portrait
+                    if(hasOrientationChanged){
+                        toggleFullScreen();
+                    }else{
+                        hasOrientationChanged = true;
+                    }
+                }
+            }
+        };
+
+        // Habilita OrientationEventListener
+        if (orientationEventListener.canDetectOrientation()) {
+            orientationEventListener.enable();
+
+        } else {
+            orientationEventListener.disable();
+        }
+
+
+
         flashingAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_flash_animation);
         btndif1.setBackground(flashingAnimation);
 
@@ -311,7 +356,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                             spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    prefs.setSelection(spin.getSelectedItem().toString());
+
                                     spinnerSelected1();
                                 }
 
@@ -360,7 +405,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            prefs.setSelection(spin.getSelectedItem().toString());
+
                            spinnerSelected1();
 
 
@@ -405,7 +450,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            prefs.setSelection(spin.getSelectedItem().toString());
+
                             spinnerSelected1();
 
 
@@ -578,6 +623,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
         }
 
     }
+
     @Override
     public void onFragmentDismissed(long playbackPosition, boolean playWhenReady) {
         player.play();
@@ -653,6 +699,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
         reciver= getIntent();
         isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
 
+        prefs.setSelection("");
         //USUARIO PREMIUM
         if(prefs.getPremium()==1){
             if(isFromLessonPlan){
@@ -667,7 +714,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        prefs.setSelection(spin.getSelectedItem().toString());
+
                         spinnerSelected1();
                     }
 
@@ -703,7 +750,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        prefs.setSelection(spin.getSelectedItem().toString());
+
                         spinnerSelected1();
                     }
 
@@ -749,7 +796,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        prefs.setSelection(spin.getSelectedItem().toString());
+
                         spinnerSelected1();
                     }
 
@@ -785,7 +832,7 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
                 spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        prefs.setSelection(spin.getSelectedItem().toString());
+
                         spinnerSelected1();
                     }
 
@@ -818,12 +865,14 @@ public class Estructura2023 extends AppCompatActivity implements OnFragmentInter
     }
     //EVALUA QUE FUE SELECCIONADO
     public void spinnerSelected1(){
-
-
         selection = spin.getSelectedItem().toString();
         txt1.setText(selection);
+
         prefs.setSelection(selection); // Guarda la selección en Prefs
 
+        if (video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
+        }
 
         if(!selection.equals("Tutorial")){
             flashingAnimation.start();

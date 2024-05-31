@@ -2,6 +2,7 @@ package com.leal.cipm_testing;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 public class Prefs {
 
@@ -36,12 +37,22 @@ public class Prefs {
         editor.apply();
     }
 
-    public String getSelection() { return sharedPreferences.getString("tema","");}
-
-    public void setSelection(String value){
-        editor.putString("tema",value);
-        editor.apply();
+    public String getSelection() {
+        String value = sharedPreferences.getString("tema", "");
+        Log.d("SharedPreferences", "Get selection: " + value);
+        return value;
     }
+
+    public void setSelection(String value) {
+        if (value != null && !value.isEmpty()) {
+            editor.putString("tema", value);
+            editor.apply();
+            Log.d("SharedPreferences", "Set selection: " + value);
+        } else {
+            Log.d("SharedPreferences", "Attempted to set empty or null selection");
+        }
+    }
+
 
     public String getVideoCultura() { return sharedPreferences.getString("video","");}
 
